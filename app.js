@@ -2,16 +2,21 @@
 
 class WrestlingDataLoader {
     constructor() {
-        this.dataUrl = 'data/wrestling_data.json';
+        // Add cache buster to force fresh data
+        this.dataUrl = 'data/wrestling_data.json?v=' + new Date().getTime();
         this.data = null;
     }
 
     async loadData() {
         try {
-            const response = await fetch(this.dataUrl);
+            const response = await fetch(this.dataUrl, {
+                cache: 'no-store'  // Force no caching
+            });
+            
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
+            
             this.data = await response.json();
             this.renderAll();
         } catch (error) {
@@ -37,7 +42,8 @@ class WrestlingDataLoader {
                 year: 'numeric',
                 hour: 'numeric',
                 minute: '2-digit',
-                hour12: true
+                hour12: true,
+                timeZone: 'America/New_York'  // EST timezone
             });
         } else {
             lastUpdatedEl.textContent = 'Unknown';
@@ -81,7 +87,7 @@ class WrestlingDataLoader {
             const resultClass = this.getResultClass(match.result);
             return `
                 <tr>
-                    <td>${this.formatDate(match.date)}</td>
+                    <td>${this.escapeHtml(match.date)}</td>
                     <td><strong>${this.escapeHtml(match.opponent)}</strong></td>
                     <td>${this.escapeHtml(match.location)}</td>
                     <td>${this.escapeHtml(match.time)}</td>
@@ -94,7 +100,7 @@ class WrestlingDataLoader {
     renderResults() {
         const tbody = document.querySelector('#resultsTable tbody');
         
-        if (!this.data || !this.data.results || this.data.results.length === 0) {
+        if (!this.data || !this.results || this.data.results.length === 0) {
             tbody.innerHTML = '<tr><td colspan="5" class="no-data">No results available yet. Check back after matches begin!</td></tr>';
             return;
         }
@@ -103,7 +109,7 @@ class WrestlingDataLoader {
             const resultClass = this.getResultClass(result.result);
             return `
                 <tr>
-                    <td>${this.formatDate(result.date)}</td>
+                    <td>${this.escapeHtml(result.date)}</td>
                     <td><strong>${this.escapeHtml(result.opponent)}</strong></td>
                     <td>${this.escapeHtml(result.score)}</td>
                     <td class="${resultClass}">${this.escapeHtml(result.result)}</td>
@@ -123,28 +129,6 @@ class WrestlingDataLoader {
             return 'result-loss';
         }
         return 'result-tbd';
-    }
-
-    formatDate(dateStr) {
-        if (!dateStr) return 'TBD';
-        
-        try {
-            // Try to parse the date
-            const date = new Date(dateStr);
-            if (isNaN(date.getTime())) {
-                // If parsing fails, return original string
-                return dateStr;
-            }
-            
-            return date.toLocaleDateString('en-US', {
-                weekday: 'short',
-                month: 'short',
-                day: 'numeric',
-                year: 'numeric'
-            });
-        } catch (e) {
-            return dateStr;
-        }
     }
 
     escapeHtml(text) {
