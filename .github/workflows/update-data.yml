@@ -4,15 +4,10 @@ on:
   schedule:
     # Run daily at 6 AM EST (11 AM UTC)
     - cron: '0 11 * * *'
-  workflow_dispatch:  # Allow manual trigger
-  push:
-    branches: [ main ]
-    paths:
-      - 'scraper.py'
-      - '.github/workflows/update-data.yml'
+  workflow_dispatch:  # Allow manual triggering
 
 jobs:
-  scrape-and-update:
+  update-data:
     runs-on: ubuntu-latest
     
     steps:
@@ -31,11 +26,23 @@ jobs:
         
     - name: Run scraper
       run: |
-        python scraper.py
+        python scraper_frame.py
         
-    - name: Commit and push if changes
+    - name: Check for changes
+      id: git-check
+      run: |
+        git diff --exit-code data/wrestling_data.json || echo "changed=true" >> $GITHUB_OUTPUT
+        
+    - name: Commit and push if changed
+      if: steps.git-check.outputs.changed == 'true'
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add data/
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Update wrestling data - $(date +'%Y-%m-%d %H:%M')" && git push)
+        git add data/wrestling_data.json
+        git commit -m "Update wrestling data - $(date +'%Y-%m-%d %H:%M')"
+        git push
+        
+    - name: No changes
+      if: steps.git-check.outputs.changed != 'true'
+      run: |
+        echo "No changes to wrestling data"
