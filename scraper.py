@@ -1,214 +1,208 @@
 #!/usr/bin/env python3
 """
-TrackWrestling Scraper for Shawnee High School Wrestling
-Scrapes roster, schedule, and results data from TrackWrestling
+Shawnee Wrestling Scraper - Based on Working Method
+Uses Selenium + direct AJAX calls to TrackWrestling
 """
 
 import json
+import os
 import time
+import re
 from datetime import datetime
-from typing import Dict, List, Optional
-import requests
-from bs4 import BeautifulSoup
+from typing import Dict, List
 import logging
+import requests
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
-# Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-class TrackWrestlingScraper:
-    """Scraper for TrackWrestling team data"""
-    
-    def __init__(self, team_id: str, season_id: str):
-        self.team_id = team_id
-        self.season_id = season_id
-        self.base_url = "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp"
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-        })
-    
-    def _fetch_page(self, page_name: str) -> Optional[str]:
-        """Fetch a page from TrackWrestling"""
-        params = {
-            'seasonId': self.season_id,
-            'gbId': '36',
-            'pageName': page_name,
-            'teamId': self.team_id
-        }
-        
-        try:
-            # First request to LoadBalance to get redirected
-            response = self.session.get(self.base_url, params=params, allow_redirects=True)
-            response.raise_for_status()
-            
-            # The actual content is at the final URL after redirect
-            logger.info(f"Fetched {page_name}, final URL: {response.url}")
-            return response.text
-        except requests.RequestException as e:
-            logger.error(f"Error fetching {page_name}: {e}")
-            return None
-    
-    def scrape_roster(self) -> List[Dict]:
-        """Scrape team roster"""
-        logger.info("Scraping roster...")
-        html = self._fetch_page("TeamRoster.jsp")
-        
-        if not html:
-            return []
-        
-        soup = BeautifulSoup(html, 'html.parser')
-        roster = []
-        
-        # Find roster table - TrackWrestling uses various table structures
-        tables = soup.find_all('table')
-        
-        for table in tables:
-            rows = table.find_all('tr')
-            
-            for row in rows[1:]:  # Skip header
-                cols = row.find_all('td')
-                
-                if len(cols) >= 3:
-                    wrestler = {
-                        'name': cols[0].get_text(strip=True),
-                        'weight_class': cols[1].get_text(strip=True),
-                        'grade': cols[2].get_text(strip=True) if len(cols) > 2 else '',
-                        'record': cols[3].get_text(strip=True) if len(cols) > 3 else ''
-                    }
-                    
-                    if wrestler['name']:  # Only add if name exists
-                        roster.append(wrestler)
-        
-        logger.info(f"Found {len(roster)} wrestlers")
-        return roster
-    
-    def scrape_schedule(self) -> List[Dict]:
-        """Scrape team schedule"""
-        logger.info("Scraping schedule...")
-        html = self._fetch_page("TeamSchedule.jsp")
-        
-        if not html:
-            return []
-        
-        soup = BeautifulSoup(html, 'html.parser')
-        schedule = []
-        
-        tables = soup.find_all('table')
-        
-        for table in tables:
-            rows = table.find_all('tr')
-            
-            for row in rows[1:]:  # Skip header
-                cols = row.find_all('td')
-                
-                if len(cols) >= 4:
-                    match = {
-                        'date': cols[0].get_text(strip=True),
-                        'opponent': cols[1].get_text(strip=True),
-                        'location': cols[2].get_text(strip=True),
-                        'time': cols[3].get_text(strip=True) if len(cols) > 3 else '',
-                        'result': cols[4].get_text(strip=True) if len(cols) > 4 else 'TBD'
-                    }
-                    
-                    if match['date']:  # Only add if date exists
-                        schedule.append(match)
-        
-        logger.info(f"Found {len(schedule)} matches")
-        return schedule
-    
-    def scrape_results(self) -> List[Dict]:
-        """Scrape match results"""
-        logger.info("Scraping results...")
-        html = self._fetch_page("TeamResults.jsp")
-        
-        if not html:
-            return []
-        
-        soup = BeautifulSoup(html, 'html.parser')
-        results = []
-        
-        # Results parsing will be similar to schedule
-        # This structure may need adjustment based on actual page layout
-        tables = soup.find_all('table')
-        
-        for table in tables:
-            rows = table.find_all('tr')
-            
-            for row in rows[1:]:
-                cols = row.find_all('td')
-                
-                if len(cols) >= 5:
-                    result = {
-                        'date': cols[0].get_text(strip=True),
-                        'opponent': cols[1].get_text(strip=True),
-                        'score': cols[2].get_text(strip=True),
-                        'result': cols[3].get_text(strip=True),
-                        'location': cols[4].get_text(strip=True) if len(cols) > 4 else ''
-                    }
-                    
-                    if result['date']:
-                        results.append(result)
-        
-        logger.info(f"Found {len(results)} results")
-        return results
-    
-    def scrape_all(self) -> Dict:
-        """Scrape all data and return as dictionary"""
-        logger.info(f"Starting scrape for team {self.team_id}, season {self.season_id}")
-        
-        data = {
-            'metadata': {
-                'team_id': self.team_id,
-                'season_id': self.season_id,
-                'last_updated': datetime.now().isoformat(),
-                'team_name': 'Shawnee High School'
-            },
-            'roster': self.scrape_roster(),
-            'schedule': self.scrape_schedule(),
-            'results': self.scrape_results()
-        }
-        
-        return data
+# Configuration
+TEAM_ID = "768996150"
+SEASON_ID = "1560212138"
+MAX_RETRIES = 3
+INITIAL_PAUSE = 1
 
+def get_current_season_id():
+    """Get current season ID from TrackWrestling (optional - we already have it)"""
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    
+    driver = webdriver.Chrome(options=chrome_options)
+    
+    try:
+        driver.get("https://www.trackwrestling.com/FetchMenu.jsp?TIM=596595&twSessionId=blnnxnsbfd&menuName=seasons&myTrackId=&myTrackPW=")
+        element = driver.find_element(By.XPATH, '//a[contains(@href, "javascript:displayMenu") and contains(text(), "High School Boys")]')
+        text = element.get_attribute('href')
+        match = re.search(r"OrganizeBy_(\d+)", text)
+        if match:
+            season_id = match.group(1)
+            logger.info(f"Found season ID: {season_id}")
+            return season_id
+    except Exception as e:
+        logger.warning(f"Could not get season ID dynamically: {e}")
+    finally:
+        driver.quit()
+    
+    return SEASON_ID
+
+def scrape_team_schedule(team_id: str, season_id: str) -> List[Dict]:
+    """Scrape schedule using TrackWrestling AJAX endpoint"""
+    
+    logger.info("="*60)
+    logger.info(f"Scraping schedule for Team ID: {team_id}")
+    logger.info(f"Season ID: {season_id}")
+    logger.info("="*60)
+    
+    schedule = []
+    retries = 0
+    pause = INITIAL_PAUSE
+    
+    while retries < MAX_RETRIES:
+        try:
+            # Use the AJAX endpoint that TrackWrestling uses
+            # This is the same pattern from your working scraper
+            url = f"https://www.trackwrestling.com/tw/seasons/AjaxFunctions.jsp?TIM={int(time.time()*1000)}&twSessionId=kmgthfvfkl&function=getTeamSchedule&teamId={team_id}&seasonId={season_id}"
+            
+            logger.info(f"Fetching: {url}")
+            
+            response = requests.get(url, timeout=30)
+            
+            if response.status_code == 200:
+                data = response.text
+                logger.info(f"Got response: {len(data)} bytes")
+                
+                # The response might be wrapped in quotes, remove them
+                if data.startswith('"') and data.endswith('"'):
+                    data = data[1:-1]
+                
+                # Parse the JSON
+                import json
+                schedule_data = json.loads(data)
+                
+                logger.info(f"Parsed {len(schedule_data)} schedule entries")
+                
+                # Convert to our format
+                for entry in schedule_data:
+                    # Extract fields from TrackWrestling format
+                    # You'll need to adjust indices based on actual data structure
+                    try:
+                        event_name = entry[2] if len(entry) > 2 else ""
+                        date_str = entry[3] if len(entry) > 3 else ""
+                        time_str = entry[4] if len(entry) > 4 else ""
+                        home_away = entry[12] if len(entry) > 12 else ""
+                        location = entry[16] if len(entry) > 16 else ""
+                        opponent = entry[19] if len(entry) > 19 else ""
+                        
+                        # Format date
+                        if date_str and len(date_str) == 8:
+                            year = date_str[0:4]
+                            month = date_str[4:6]
+                            day = date_str[6:8]
+                            months = ['', 'January', 'February', 'March', 'April', 'May', 'June',
+                                     'July', 'August', 'September', 'October', 'November', 'December']
+                            formatted_date = f"{months[int(month)]} {int(day)}, {year}"
+                        else:
+                            formatted_date = date_str
+                        
+                        # Format time
+                        if time_str and len(time_str) >= 4:
+                            hour = int(time_str[0:2])
+                            minute = time_str[2:4]
+                            am_pm = "AM" if hour < 12 else "PM"
+                            if hour > 12:
+                                hour -= 12
+                            elif hour == 0:
+                                hour = 12
+                            formatted_time = f"{hour}:{minute} {am_pm}"
+                        else:
+                            formatted_time = "TBD"
+                        
+                        match = {
+                            'date': formatted_date,
+                            'opponent': opponent if opponent else event_name,
+                            'location': "Shawnee High School" if home_away == "H" else (location or "TBD"),
+                            'time': formatted_time,
+                            'result': 'TBD'
+                        }
+                        
+                        schedule.append(match)
+                        logger.info(f"  ✓ {formatted_date} - {match['opponent']}")
+                        
+                    except Exception as e:
+                        logger.warning(f"Error parsing entry: {e}")
+                        continue
+                
+                logger.info(f"Successfully got {len(schedule)} matches")
+                return schedule
+                
+            else:
+                logger.error(f"Bad status code: {response.status_code}")
+                raise Exception(f"Status code {response.status_code}")
+                
+        except Exception as e:
+            retries += 1
+            if retries < MAX_RETRIES:
+                logger.warning(f"Error: {e}. Retrying in {pause} seconds... (Attempt {retries}/{MAX_RETRIES})")
+                time.sleep(pause)
+                pause *= 2
+            else:
+                logger.error(f"Failed after {MAX_RETRIES} attempts: {e}")
+                return []
+    
+    return []
 
 def main():
-    """Main scraper function"""
-    # Import season configuration
-    try:
-        from season_config import TEAM_ID, SEASON_ID, CURRENT_SEASON
-        print(f"Using season configuration: {CURRENT_SEASON}")
-    except ImportError:
-        # Fallback to hardcoded values if config file doesn't exist
-        TEAM_ID = "768996150"
-        SEASON_ID = "1560212138"
-        CURRENT_SEASON = "2025-26"
-        print(f"Using default configuration: {CURRENT_SEASON}")
+    """Main function"""
     
-    scraper = TrackWrestlingScraper(TEAM_ID, SEASON_ID)
-    data = scraper.scrape_all()
+    logger.info("Starting Shawnee Wrestling Scraper")
+    logger.info(f"Current date: {datetime.now()}")
     
-    # Save to JSON file
+    # Get schedule
+    schedule = scrape_team_schedule(TEAM_ID, SEASON_ID)
+    
+    # Create data structure
+    data = {
+        'metadata': {
+            'team_id': TEAM_ID,
+            'season_id': SEASON_ID,
+            'last_updated': datetime.now().isoformat(),
+            'team_name': 'Shawnee High School'
+        },
+        'roster': [],
+        'schedule': schedule,
+        'results': []
+    }
+    
+    # Save to JSON
     output_file = 'data/wrestling_data.json'
-    
-    import os
     os.makedirs('data', exist_ok=True)
     
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
     
-    logger.info(f"Data saved to {output_file}")
+    logger.info("="*60)
+    logger.info("COMPLETE")
+    logger.info("="*60)
+    logger.info(f"Saved to: {output_file}")
+    logger.info(f"Schedule entries: {len(schedule)}")
+    logger.info("="*60)
     
-    # Print summary
-    print(f"\n{'='*50}")
-    print(f"Scrape Complete!")
-    print(f"{'='*50}")
-    print(f"Roster: {len(data['roster'])} wrestlers")
-    print(f"Schedule: {len(data['schedule'])} matches")
-    print(f"Results: {len(data['results'])} completed matches")
-    print(f"Last Updated: {data['metadata']['last_updated']}")
-    print(f"{'='*50}\n")
-
+    if schedule:
+        print("\n✓ SUCCESS - Schedule populated!")
+        print(f"\nFirst 5 matches:")
+        for match in schedule[:5]:
+            print(f"  {match['date']}")
+            print(f"    vs {match['opponent']}")
+            print(f"    @ {match['location']}, {match['time']}")
+            print()
+    else:
+        print("\n✗ NO SCHEDULE DATA")
+        print("Check logs above for errors")
 
 if __name__ == "__main__":
     main()
