@@ -174,9 +174,9 @@ class TrackWrestlingScraper:
 
 def main():
     """Main scraper function"""
-    # 2025 Season configuration
-    TEAM_ID_2025 = "768996150"
-    SEASON_ID_2025 = "1560212138"
+    # 2025-26 Season configuration
+    TEAM_ID = "768996150"
+    SEASON_ID = "1560212138"
     
     scraper = TrackWrestlingScraper(TEAM_ID_2025, SEASON_ID_2025)
     data = scraper.scrape_all()
