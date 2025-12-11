@@ -2,10 +2,123 @@
   "metadata": {
     "team_id": "768996150",
     "season_id": "1560212138",
-    "last_updated": "2025-12-11T03:28:25.834910",
+    "last_updated": "2024-12-10T12:00:00",
     "team_name": "Shawnee High School"
   },
-  "roster": [],
-  "schedule": [],
+  "roster": [
+    {
+      "name": "Loading...",
+      "weight_class": "-",
+      "grade": "-",
+      "record": "-"
+    }
+  ],
+  "schedule": [
+    {
+      "date": "December 14, 2024",
+      "opponent": "West Windsor-Plainsboro North",
+      "location": "Shawnee High School",
+      "time": "9:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "December 16, 2024",
+      "opponent": "Holy Cross",
+      "location": "Holy Cross High School",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "December 16, 2024",
+      "opponent": "Bordentown",
+      "location": "Holy Cross High School",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "December 18, 2024",
+      "opponent": "Cherry Hill West",
+      "location": "Cherry Hill West High School",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "December 21, 2024",
+      "opponent": "TBD",
+      "location": "Robbinsville",
+      "time": "9:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 4, 2025",
+      "opponent": "Lenape",
+      "location": "Lenape High School",
+      "time": "9:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 4, 2025",
+      "opponent": "Cherokee",
+      "location": "Lenape High School",
+      "time": "9:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 4, 2025",
+      "opponent": "Seneca",
+      "location": "Lenape High School",
+      "time": "9:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 8, 2025",
+      "opponent": "Brick Memorial",
+      "location": "Brick Memorial High School",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 10, 2025",
+      "opponent": "Rancocas Valley",
+      "location": "Shawnee High School",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 11, 2025",
+      "opponent": "Lenape",
+      "location": "Shawnee High School",
+      "time": "1:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 15, 2025",
+      "opponent": "Cherokee",
+      "location": "Cherokee High School",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 17, 2025",
+      "opponent": "Washington Township",
+      "location": "Shawnee High School",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 22, 2025",
+      "opponent": "Eastern",
+      "location": "Eastern Regional High School",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 24, 2025",
+      "opponent": "Moorestown",
+      "location": "Shawnee High School",
+      "time": "6:00 PM",
+      "result": "TBD"
+    }
+  ],
   "results": []
 }
