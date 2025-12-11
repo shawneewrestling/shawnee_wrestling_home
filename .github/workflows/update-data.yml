@@ -40,6 +40,7 @@ jobs:
         git config --local user.name "github-actions[bot]"
         git add data/wrestling_data.json
         git commit -m "Update wrestling data - $(date +'%Y-%m-%d %H:%M')"
+        git pull --rebase origin main
         git push
         
     - name: No changes
