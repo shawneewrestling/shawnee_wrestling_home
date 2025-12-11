@@ -69,13 +69,28 @@ https://shawneewrestling.github.io/shawnee_wrestling_home/
 
 ### Update Season/Team IDs
 
-To change the season or team being tracked, edit `scraper.py`:
-
-```python
-# Find these lines in the main() function:
-TEAM_ID_2025 = "768996150"      # Your team ID
-SEASON_ID_2025 = "1560212138"   # Your season ID
+**Easy Method (Recommended):**
+Run the interactive update script:
+```bash
+python update_season.py
 ```
+
+**Manual Method:**
+Edit `season_config.py`:
+```python
+CURRENT_SEASON = "2025-26"
+TEAM_ID = "new_team_id"
+SEASON_ID = "new_season_id"
+```
+
+Then commit and push:
+```bash
+git add season_config.py
+git commit -m "Update to 2025-26 season"
+git push origin main
+```
+
+See `SEASON_UPDATE_GUIDE.md` for detailed instructions on finding new IDs.
 
 ### Change Update Schedule
 

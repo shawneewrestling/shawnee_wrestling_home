@@ -174,11 +174,18 @@ class TrackWrestlingScraper:
 
 def main():
     """Main scraper function"""
-    # 2025-26 Season configuration
-    TEAM_ID = "768996150"
-    SEASON_ID = "1560212138"
+    # Import season configuration
+    try:
+        from season_config import TEAM_ID, SEASON_ID, CURRENT_SEASON
+        print(f"Using season configuration: {CURRENT_SEASON}")
+    except ImportError:
+        # Fallback to hardcoded values if config file doesn't exist
+        TEAM_ID = "768996150"
+        SEASON_ID = "1560212138"
+        CURRENT_SEASON = "2025-26"
+        print(f"Using default configuration: {CURRENT_SEASON}")
     
-    scraper = TrackWrestlingScraper(TEAM_ID_2025, SEASON_ID_2025)
+    scraper = TrackWrestlingScraper(TEAM_ID, SEASON_ID)
     data = scraper.scrape_all()
     
     # Save to JSON file
