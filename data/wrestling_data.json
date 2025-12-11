@@ -2,10 +2,137 @@
   "metadata": {
     "team_id": "768996150",
     "season_id": "1560212138",
-    "last_updated": "2025-12-11T05:36:28.307237",
+    "last_updated": "2025-12-11T06:02:01.707164",
     "team_name": "Shawnee High School"
   },
   "roster": [],
-  "schedule": [],
+  "schedule": [
+    {
+      "date": "December 13, 2025",
+      "opponent": "Shawnee Tri-Match",
+      "location": "Shawnee",
+      "time": "9:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "December 17, 2025",
+      "opponent": "Cherry Hill  West",
+      "location": "Shawnee High School",
+      "time": "5:30 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "December 20, 2025",
+      "opponent": "2025 TCNJ Pride",
+      "location": "Shawnee",
+      "time": "TBD",
+      "result": "TBD"
+    },
+    {
+      "date": "December 20, 2025",
+      "opponent": "Beast of the East 2025",
+      "location": "Shawnee",
+      "time": "8:30 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "December 27, 2025",
+      "opponent": "2025 Hunterdon Central Invitational",
+      "location": "Shawnee",
+      "time": "TBD",
+      "result": "TBD"
+    },
+    {
+      "date": "January 3, 2026",
+      "opponent": "LRHSD Quad",
+      "location": "Shawnee",
+      "time": "9:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 6, 2026",
+      "opponent": "Shawnee",
+      "location": "Northern  Burlington ( Columbus)",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 9, 2026",
+      "opponent": "Tri Match @ Camden Catholic",
+      "location": "Shawnee",
+      "time": "5:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 14, 2026",
+      "opponent": "Moorestown",
+      "location": "Shawnee High School",
+      "time": "5:30 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 21, 2026",
+      "opponent": "Shawnee",
+      "location": "Paul Vi",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 24, 2026",
+      "opponent": "Pine Barrens Dual Tournament",
+      "location": "Shawnee",
+      "time": "9:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 28, 2026",
+      "opponent": "Eastern",
+      "location": "Shawnee High School",
+      "time": "5:30 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 31, 2026",
+      "opponent": "Quad @ Shawnee w/Absegami, Cinnaminson & Collingswood",
+      "location": "Shawnee",
+      "time": "9:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "February 4, 2026",
+      "opponent": "Shawnee",
+      "location": "Cherry Hill  East",
+      "time": "5:30 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "February 6, 2026",
+      "opponent": "Shawnee",
+      "location": "Haddonfield High Schol",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "February 7, 2026",
+      "opponent": "Quad @ Delran vs Lacey, TRN, Shawnee",
+      "location": "Shawnee",
+      "time": "11:00 AM",
+      "result": "TBD"
+    },
+    {
+      "date": "February 11, 2026",
+      "opponent": "Shawnee",
+      "location": "Robbinsville",
+      "time": "6:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "February 13, 2026",
+      "opponent": "St. Joes (Hamm) Tri-Match",
+      "location": "Shawnee",
+      "time": "4:00 PM",
+      "result": "TBD"
+    }
+  ],
   "results": []
 }
