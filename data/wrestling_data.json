@@ -2,10 +2,353 @@
   "metadata": {
     "team_id": "768996150",
     "season_id": "1560212138",
-    "last_updated": "2025-12-11T11:33:55.755433",
+    "last_updated": "2025-12-11T08:13:25.238881-05:00",
     "team_name": "Shawnee High School"
   },
-  "roster": [],
+  "roster": [
+    {
+      "name": "Charles Pulaski",
+      "weight_class": "",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Trevor Sieben",
+      "weight_class": "",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "Daniel Fitzpatrick",
+      "weight_class": "106",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Logan Reice",
+      "weight_class": "106",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Logan Sloan",
+      "weight_class": "106",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Jadiel Esquivel",
+      "weight_class": "113",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Matt Hart",
+      "weight_class": "113",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Benjamin Pollock",
+      "weight_class": "113",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Anthony Blahut",
+      "weight_class": "120",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Sean Bradley",
+      "weight_class": "120",
+      "grade": "Sr.",
+      "record": ""
+    },
+    {
+      "name": "Romeo Cline",
+      "weight_class": "120",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Ranger Fest",
+      "weight_class": "120",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Noah Meisner",
+      "weight_class": "120",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Luke Velasco",
+      "weight_class": "120",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Gino Gonzalez",
+      "weight_class": "126",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Jordan Segal",
+      "weight_class": "126",
+      "grade": "Sr.",
+      "record": ""
+    },
+    {
+      "name": "Logan Curiale",
+      "weight_class": "132",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Cole Hoguet",
+      "weight_class": "132",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Nathan Hunnewell",
+      "weight_class": "132",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "Brayden Inman",
+      "weight_class": "132",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Leeland Rogers",
+      "weight_class": "132",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Cooper Stauss",
+      "weight_class": "132",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Garrett Borlaug",
+      "weight_class": "138",
+      "grade": "Sr.",
+      "record": ""
+    },
+    {
+      "name": "Landon Caffery",
+      "weight_class": "138",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Michael Hart",
+      "weight_class": "138",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "Owen Siena",
+      "weight_class": "138",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Jack Caldwell",
+      "weight_class": "144",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Ryan Hoerst",
+      "weight_class": "144",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "Walter Johnson",
+      "weight_class": "144",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Rhys Pritchard",
+      "weight_class": "144",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "Brian Reice",
+      "weight_class": "144",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Max Shectman",
+      "weight_class": "144",
+      "grade": "Sr.",
+      "record": ""
+    },
+    {
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "weight_class": "144",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Colin Dowd",
+      "weight_class": "150",
+      "grade": "Sr.",
+      "record": ""
+    },
+    {
+      "name": "Ashton Hayden",
+      "weight_class": "150",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "Domenico Incollingo",
+      "weight_class": "150",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Kellan McDonough",
+      "weight_class": "150",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Arjun Shah",
+      "weight_class": "150",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Gabriel Evans",
+      "weight_class": "157",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "William Mays",
+      "weight_class": "157",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Jack Potter",
+      "weight_class": "157",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "Tyler Davis",
+      "weight_class": "165",
+      "grade": "Sr.",
+      "record": ""
+    },
+    {
+      "name": "Brodie Regan",
+      "weight_class": "165",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Eli Sauler",
+      "weight_class": "165",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Max Spitznas",
+      "weight_class": "165",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "Joseph Augusta",
+      "weight_class": "175",
+      "grade": "Sr.",
+      "record": ""
+    },
+    {
+      "name": "Anthony Birney",
+      "weight_class": "175",
+      "grade": "Sr.",
+      "record": ""
+    },
+    {
+      "name": "Logan Cino",
+      "weight_class": "175",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Giovanni Lopez",
+      "weight_class": "190",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Andrik Orenyo",
+      "weight_class": "190",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Jacobs Rodriguez",
+      "weight_class": "190",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Jack Gleeson",
+      "weight_class": "215",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Robert Lane",
+      "weight_class": "215",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "William (Liam) McSorley",
+      "weight_class": "215",
+      "grade": "Jr.",
+      "record": ""
+    },
+    {
+      "name": "Rowan Nix",
+      "weight_class": "215",
+      "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Veliz-Velasquez Carlos",
+      "weight_class": "285",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Collin McHugh",
+      "weight_class": "285",
+      "grade": "Jr.",
+      "record": ""
+    }
+  ],
   "schedule": [
     {
       "date": "December 13, 2025",
