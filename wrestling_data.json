@@ -1,0 +1,75 @@
+{
+  "metadata": {
+    "team_id": "768996150",
+    "season_id": "1560212138",
+    "last_updated": "2024-12-11T00:00:00",
+    "team_name": "Shawnee High School",
+    "season": "2025-26"
+  },
+  "roster": [],
+  "schedule": [
+    {
+      "date": "December 14, 2024",
+      "opponent": "OPPONENT NAME HERE",
+      "location": "LOCATION HERE",
+      "time": "TIME HERE",
+      "result": "TBD"
+    }
+  ],
+  "results": []
+}
+
+INSTRUCTIONS TO FILL THIS IN:
+================================
+
+1. Copy the match template:
+   {
+     "date": "Month Day, Year",
+     "opponent": "Opponent Name",
+     "location": "Location Name",
+     "time": "Time",
+     "result": "TBD"
+   }
+
+2. For each match in your schedule, add a copy of the template
+
+3. Separate each match with a comma
+
+4. Example of 3 matches:
+   "schedule": [
+     {
+       "date": "December 14, 2024",
+       "opponent": "West Windsor",
+       "location": "Shawnee HS",
+       "time": "9:00 AM",
+       "result": "TBD"
+     },
+     {
+       "date": "December 16, 2024",
+       "opponent": "Holy Cross",
+       "location": "Holy Cross HS",
+       "time": "6:00 PM",
+       "result": "TBD"
+     },
+     {
+       "date": "December 18, 2024",
+       "opponent": "Cherry Hill West",
+       "location": "Cherry Hill West HS",
+       "time": "6:00 PM",
+       "result": "TBD"
+     }
+   ]
+
+5. Save as: wrestling_data.json
+6. Upload to GitHub at: data/wrestling_data.json
+
+================================
+
+OR - EASIER OPTION:
+Send me the list of matches with dates/opponents/locations/times
+and I'll create the correct JSON file for you!
+
+Just provide the info in any format like:
+- Dec 14: vs West Windsor at Shawnee HS, 9am
+- Dec 16: @ Holy Cross, 6pm
+etc.
