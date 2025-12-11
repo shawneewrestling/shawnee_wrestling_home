@@ -12,9 +12,6 @@ from datetime import datetime
 from typing import Dict, List
 import logging
 import requests
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.by import By
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -24,31 +21,6 @@ TEAM_ID = "768996150"
 SEASON_ID = "1560212138"
 MAX_RETRIES = 3
 INITIAL_PAUSE = 1
-
-def get_current_season_id():
-    """Get current season ID from TrackWrestling (optional - we already have it)"""
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--no-sandbox')
-    chrome_options.add_argument('--disable-dev-shm-usage')
-    
-    driver = webdriver.Chrome(options=chrome_options)
-    
-    try:
-        driver.get("https://www.trackwrestling.com/FetchMenu.jsp?TIM=596595&twSessionId=blnnxnsbfd&menuName=seasons&myTrackId=&myTrackPW=")
-        element = driver.find_element(By.XPATH, '//a[contains(@href, "javascript:displayMenu") and contains(text(), "High School Boys")]')
-        text = element.get_attribute('href')
-        match = re.search(r"OrganizeBy_(\d+)", text)
-        if match:
-            season_id = match.group(1)
-            logger.info(f"Found season ID: {season_id}")
-            return season_id
-    except Exception as e:
-        logger.warning(f"Could not get season ID dynamically: {e}")
-    finally:
-        driver.quit()
-    
-    return SEASON_ID
 
 def scrape_team_schedule(team_id: str, season_id: str) -> List[Dict]:
     """Scrape schedule using TrackWrestling AJAX endpoint"""
