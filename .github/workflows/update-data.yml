@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch all history
       
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -22,28 +24,49 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install requests
         
     - name: Run scraper
       run: |
-        python scraper_frame.py
+        python scraper_ajax_method.py
         
-    - name: Check for changes
-      id: git-check
+    - name: Check if file was created
       run: |
-        git diff --exit-code data/wrestling_data.json || echo "changed=true" >> $GITHUB_OUTPUT
+        if [ -f "data/wrestling_data.json" ]; then
+          echo "✓ File exists"
+          echo "File size: $(wc -c < data/wrestling_data.json) bytes"
+          echo "First 500 characters:"
+          head -c 500 data/wrestling_data.json
+        else
+          echo "✗ File NOT created!"
+          exit 1
+        fi
         
-    - name: Commit and push if changed
-      if: steps.git-check.outputs.changed == 'true'
+    - name: Show git status
+      run: |
+        git status
+        git diff data/wrestling_data.json || echo "No existing file to diff"
+        
+    - name: Configure git
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add data/wrestling_data.json
-        git commit -m "Update wrestling data - $(date +'%Y-%m-%d %H:%M')"
-        git pull --rebase origin main
-        git push
         
-    - name: No changes
-      if: steps.git-check.outputs.changed != 'true'
+    - name: Commit and push changes
       run: |
-        echo "No changes to wrestling data"
+        git add data/wrestling_data.json
+        
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Update wrestling data - $(date +'%Y-%m-%d %H:%M')"
+          
+          # Pull with rebase in case there were any changes
+          git pull --rebase origin main || true
+          
+          # Push changes
+          git push origin main
+          
+          echo "✓ Changes committed and pushed"
+        fi
