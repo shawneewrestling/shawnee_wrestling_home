@@ -100,7 +100,7 @@ class WrestlingDataLoader {
     renderResults() {
         const tbody = document.querySelector('#resultsTable tbody');
         
-        if (!this.data || !this.results || this.data.results.length === 0) {
+        if (!this.data || !this.data.results || this.data.results.length === 0) {
             tbody.innerHTML = '<tr><td colspan="5" class="no-data">No results available yet. Check back after matches begin!</td></tr>';
             return;
         }
