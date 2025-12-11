@@ -131,7 +131,7 @@ def scrape_team_schedule(team_id: str, season_id: str) -> List[Dict]:
     return []
 
 def scrape_team_roster(team_id: str, season_id: str) -> List[Dict]:
-    """Scrape roster using TrackWrestling AJAX endpoint"""
+    """Scrape roster using direct AJAX endpoint"""
     
     logger.info("="*60)
     logger.info(f"Scraping roster for Team ID: {team_id}")
@@ -143,8 +143,8 @@ def scrape_team_roster(team_id: str, season_id: str) -> List[Dict]:
     
     while retries < MAX_RETRIES:
         try:
-            # Use the roster AJAX endpoint
-            url = f"https://www.trackwrestling.com/tw/seasons/AjaxFunctions.jsp?TIM={int(time.time()*1000)}&twSessionId=kmgthfvfkl&function=getTeamRoster&teamId={team_id}&seasonId={season_id}"
+            # Direct AJAX call - no Selenium needed!
+            url = f"https://www.trackwrestling.com/seasons/AjaxFunctions.jsp?TIM={int(time.time()*1000)}&twSessionId=agcbbyaghq&function=getWrestlers&seasonId={season_id}&orderBy=wc.order_number%2C%20t.team_name%2C%20w.last_name%2C%20w.first_name%2C%20w.gender%2C%20g.order_number%2C%20l.order_number%2C%2020%2C%2018%2C%20w.eligible&gbId=36&firstName=&lastName=&teamName=Shawnee&gender=&gradeId=&phyClearance=&levelId=&leagueId=&limit=250&eligible=&RANDOM={int(time.time()*1000) % 100000}"
             
             logger.info(f"Fetching: {url}")
             
@@ -158,20 +158,23 @@ def scrape_team_roster(team_id: str, season_id: str) -> List[Dict]:
                 if data.startswith('"') and data.endswith('"'):
                     data = data[1:-1]
                 
-                # Parse JSON
+                # Parse JSON array directly
                 roster_data = json.loads(data)
                 logger.info(f"Parsed {len(roster_data)} roster entries")
                 
-                # Convert to our format
-                for entry in roster_data:
+                # Parse roster entries
+                # entry[2] = first name
+                # entry[3] = last name
+                # entry[9] = weight class
+                # entry[11] = grade
+                
+                for idx, entry in enumerate(roster_data):
                     try:
-                        # Adjust indices based on actual TrackWrestling data structure
                         first_name = entry[2] if len(entry) > 2 else ""
-                        last_name = entry[1] if len(entry) > 1 else ""
-                        weight_class = entry[5] if len(entry) > 5 else ""
+                        last_name = entry[3] if len(entry) > 3 else ""
+                        weight_class = entry[9] if len(entry) > 9 else ""
                         grade = entry[11] if len(entry) > 11 else ""
                         
-                        # Combine first and last name
                         full_name = f"{first_name} {last_name}".strip()
                         
                         if full_name:
@@ -179,14 +182,14 @@ def scrape_team_roster(team_id: str, season_id: str) -> List[Dict]:
                                 'name': full_name,
                                 'weight_class': str(weight_class) if weight_class else '',
                                 'grade': str(grade) if grade else '',
-                                'record': ''  # Records come from match data
+                                'record': ''
                             }
                             
                             roster.append(wrestler)
-                            logger.info(f"  ✓ {full_name} - {weight_class} lbs")
+                            logger.info(f"  {idx+1}. {full_name} - {weight_class} lbs - {grade}")
                     
                     except Exception as e:
-                        logger.warning(f"Error parsing roster entry: {e}")
+                        logger.warning(f"Error parsing roster entry {idx}: {e}")
                         continue
                 
                 logger.info(f"Successfully got {len(roster)} wrestlers")
@@ -225,7 +228,7 @@ def main():
         'metadata': {
             'team_id': TEAM_ID,
             'season_id': SEASON_ID,
-            'last_updated': datetime.now().isoformat(),
+            'last_updated': datetime.now(EST).isoformat(),
             'team_name': 'Shawnee High School'
         },
         'roster': roster,
