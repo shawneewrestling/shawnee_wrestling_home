@@ -12,6 +12,7 @@ from datetime import datetime
 from typing import Dict, List
 import logging
 import requests
+from zoneinfo import ZoneInfo  # Python 3.9+
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -21,6 +22,7 @@ TEAM_ID = "768996150"
 SEASON_ID = "1560212138"
 MAX_RETRIES = 3
 INITIAL_PAUSE = 1
+EST = ZoneInfo("America/New_York")
 
 def scrape_team_schedule(team_id: str, season_id: str) -> List[Dict]:
     """Scrape schedule using TrackWrestling AJAX endpoint"""
@@ -128,6 +130,84 @@ def scrape_team_schedule(team_id: str, season_id: str) -> List[Dict]:
     
     return []
 
+def scrape_team_roster(team_id: str, season_id: str) -> List[Dict]:
+    """Scrape roster using TrackWrestling AJAX endpoint"""
+    
+    logger.info("="*60)
+    logger.info(f"Scraping roster for Team ID: {team_id}")
+    logger.info("="*60)
+    
+    roster = []
+    retries = 0
+    pause = INITIAL_PAUSE
+    
+    while retries < MAX_RETRIES:
+        try:
+            # Use the roster AJAX endpoint
+            url = f"https://www.trackwrestling.com/tw/seasons/AjaxFunctions.jsp?TIM={int(time.time()*1000)}&twSessionId=kmgthfvfkl&function=getTeamRoster&teamId={team_id}&seasonId={season_id}"
+            
+            logger.info(f"Fetching: {url}")
+            
+            response = requests.get(url, timeout=30)
+            
+            if response.status_code == 200:
+                data = response.text
+                logger.info(f"Got response: {len(data)} bytes")
+                
+                # Remove wrapping quotes if present
+                if data.startswith('"') and data.endswith('"'):
+                    data = data[1:-1]
+                
+                # Parse JSON
+                roster_data = json.loads(data)
+                logger.info(f"Parsed {len(roster_data)} roster entries")
+                
+                # Convert to our format
+                for entry in roster_data:
+                    try:
+                        # Adjust indices based on actual TrackWrestling data structure
+                        first_name = entry[2] if len(entry) > 2 else ""
+                        last_name = entry[1] if len(entry) > 1 else ""
+                        weight_class = entry[5] if len(entry) > 5 else ""
+                        grade = entry[11] if len(entry) > 11 else ""
+                        
+                        # Combine first and last name
+                        full_name = f"{first_name} {last_name}".strip()
+                        
+                        if full_name:
+                            wrestler = {
+                                'name': full_name,
+                                'weight_class': str(weight_class) if weight_class else '',
+                                'grade': str(grade) if grade else '',
+                                'record': ''  # Records come from match data
+                            }
+                            
+                            roster.append(wrestler)
+                            logger.info(f"  ✓ {full_name} - {weight_class} lbs")
+                    
+                    except Exception as e:
+                        logger.warning(f"Error parsing roster entry: {e}")
+                        continue
+                
+                logger.info(f"Successfully got {len(roster)} wrestlers")
+                return roster
+                
+            else:
+                logger.error(f"Bad status code: {response.status_code}")
+                raise Exception(f"Status code {response.status_code}")
+                
+        except Exception as e:
+            retries += 1
+            if retries < MAX_RETRIES:
+                logger.warning(f"Error: {e}. Retrying in {pause} seconds... (Attempt {retries}/{MAX_RETRIES})")
+                time.sleep(pause)
+                pause *= 2
+            else:
+                logger.error(f"Failed after {MAX_RETRIES} attempts: {e}")
+                return []
+    
+    return []
+
 def main():
     """Main function"""
     
@@ -137,6 +217,9 @@ def main():
     # Get schedule
     schedule = scrape_team_schedule(TEAM_ID, SEASON_ID)
     
+    # Get roster
+    roster = scrape_team_roster(TEAM_ID, SEASON_ID)
+    
     # Create data structure
     data = {
         'metadata': {
@@ -145,7 +228,7 @@ def main():
             'last_updated': datetime.now().isoformat(),
             'team_name': 'Shawnee High School'
         },
-        'roster': [],
+        'roster': roster,
         'schedule': schedule,
         'results': []
     }
@@ -161,19 +244,21 @@ def main():
     logger.info("COMPLETE")
     logger.info("="*60)
     logger.info(f"Saved to: {output_file}")
+    logger.info(f"Roster entries: {len(roster)}")
     logger.info(f"Schedule entries: {len(schedule)}")
     logger.info("="*60)
     
-    if schedule:
-        print("\n✓ SUCCESS - Schedule populated!")
-        print(f"\nFirst 5 matches:")
-        for match in schedule[:5]:
-            print(f"  {match['date']}")
-            print(f"    vs {match['opponent']}")
-            print(f"    @ {match['location']}, {match['time']}")
-            print()
+    if schedule or roster:
+        print("\n✓ SUCCESS!")
+        if roster:
+            print(f"\nRoster: {len(roster)} wrestlers")
+        if schedule:
+            print(f"Schedule: {len(schedule)} matches")
+            print(f"\nFirst 3 matches:")
+            for match in schedule[:3]:
+                print(f"  {match['date']} vs {match['opponent']}")
     else:
-        print("\n✗ NO SCHEDULE DATA")
+        print("\n✗ NO DATA")
         print("Check logs above for errors")
 
 if __name__ == "__main__":
