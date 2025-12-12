@@ -2,16 +2,10 @@
   "metadata": {
     "team_id": "768996150",
     "season_id": "1560212138",
-    "last_updated": "2025-12-11T08:13:25.238881-05:00",
+    "last_updated": "2025-12-12T06:34:46.606844-05:00",
     "team_name": "Shawnee High School"
   },
   "roster": [
-    {
-      "name": "Charles Pulaski",
-      "weight_class": "",
-      "grade": "Fr.",
-      "record": ""
-    },
     {
       "name": "Trevor Sieben",
       "weight_class": "",
@@ -122,6 +116,12 @@
     },
     {
       "name": "Brayden Inman",
+      "weight_class": "132",
+      "grade": "Fr.",
+      "record": ""
+    },
+    {
+      "name": "Charles Pulaski",
       "weight_class": "132",
       "grade": "Fr.",
       "record": ""
@@ -238,6 +238,12 @@
       "name": "Gabriel Evans",
       "weight_class": "157",
       "grade": "So.",
+      "record": ""
+    },
+    {
+      "name": "Brandon Kelly",
+      "weight_class": "157",
+      "grade": "Fr.",
       "record": ""
     },
     {
