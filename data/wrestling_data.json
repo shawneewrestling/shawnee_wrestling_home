@@ -2,7 +2,7 @@
   "metadata": {
     "team_id": "768996150",
     "season_id": "1560212138",
-    "last_updated": "2026-01-09T06:13:40.816374-05:00",
+    "last_updated": "2026-01-10T06:11:33.786723-05:00",
     "team_name": "Shawnee High School"
   },
   "roster": [
@@ -417,6 +417,13 @@
       "opponent": "Moorestown",
       "location": "Shawnee High School",
       "time": "5:30 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "January 17, 2026",
+      "opponent": "ESCAPE THE ROCK",
+      "location": "Shawnee",
+      "time": "8:00 AM",
       "result": "TBD"
     },
     {
