@@ -2,7 +2,7 @@
   "metadata": {
     "team_id": "768996150",
     "season_id": "1560212138",
-    "last_updated": "2026-01-22T06:17:51.874970-05:00",
+    "last_updated": "2026-01-23T06:14:59.118789-05:00",
     "team_name": "Shawnee High School"
   },
   "roster": [
@@ -494,6 +494,13 @@
       "opponent": "St. Joes (Hamm) Tri-Match",
       "location": "Shawnee",
       "time": "4:00 PM",
+      "result": "TBD"
+    },
+    {
+      "date": "February 28, 2026",
+      "opponent": "NJSIAA District 28",
+      "location": "Shawnee",
+      "time": "TBD",
       "result": "TBD"
     }
   ],
