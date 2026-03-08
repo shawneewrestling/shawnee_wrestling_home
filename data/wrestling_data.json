@@ -2,7 +2,7 @@
   "metadata": {
     "team_id": "768996150",
     "season_id": "1560212138",
-    "last_updated": "2026-03-07T06:13:43.385817-05:00",
+    "last_updated": "2026-03-08T07:14:29.766958-04:00",
     "team_name": "Shawnee High School"
   },
   "roster": [
@@ -513,6 +513,13 @@
     {
       "date": "March 6, 2026",
       "opponent": "NJSIAA Region 7",
+      "location": "Shawnee",
+      "time": "TBD",
+      "result": "TBD"
+    },
+    {
+      "date": "March 12, 2026",
+      "opponent": "NJSIAA State Championships",
       "location": "Shawnee",
       "time": "TBD",
       "result": "TBD"
