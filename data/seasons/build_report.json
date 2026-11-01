@@ -24,11 +24,6 @@
       "nj_com_duals": "11-14"
     },
     {
-      "season": "2014-15",
-      "coaching_history": "6-21",
-      "nj_com_duals": "6-20"
-    },
-    {
       "season": "2011-12",
       "coaching_history": "18-6",
       "nj_com_duals": "14-5"
@@ -42,7 +37,7 @@
   "gaps": [
     "2016-17: standings reconstructed (no NJ.com Olympic table)",
     "2015-16: standings reconstructed (no NJ.com Olympic table)",
-    "2014-15: standings reconstructed (no NJ.com Olympic table)",
+    "2014-15: standings reconstructed from TW duals (no NJ.com Olympic table); duals from Trackwrestling (6-21)",
     "2013-14: standings reconstructed (no NJ.com Olympic table)",
     "2012-13: standings reconstructed (no NJ.com Olympic table)",
     "2011-12: standings reconstructed (no NJ.com Olympic table)",
@@ -50,6 +45,7 @@
   ],
   "notes": [
     "2020-21 duals replaced with Trackwrestling capture (5-7, PF 422, PA 457); coaching mismatch cleared",
-    "2019-20 duals replaced with Trackwrestling capture (14-11, PF 1004, PA 767); coaching mismatch cleared"
+    "2019-20 duals replaced with Trackwrestling capture (14-11, PF 1004, PA 767); coaching mismatch cleared",
+    "2014-15 duals replaced with Trackwrestling capture (6-21, PF 737, PA 1099); coaching mismatch cleared; Bishop Eustace unscored dual omitted"
   ]
 }

@@ -285,5 +285,45 @@
   "winslow": {
     "local": "assets/logos/winslow-initials.png",
     "source": "initials-badge"
+  },
+  "holy-spirit": {
+    "local": "assets/logos/holy-spirit-initials.png",
+    "source": "initials-badge"
+  },
+  "mainland-regional": {
+    "local": "assets/logos/mainland-regional-initials.png",
+    "source": "initials-badge"
+  },
+  "long-branch": {
+    "local": "assets/logos/long-branch-initials.png",
+    "source": "initials-badge"
+  },
+  "st-peters-prep": {
+    "local": "assets/logos/st-peters-prep-initials.png",
+    "source": "initials-badge"
+  },
+  "bishop-hendricken": {
+    "local": "assets/logos/bishop-hendricken-initials.png",
+    "source": "initials-badge"
+  },
+  "bergen-catholic": {
+    "local": "assets/logos/bergen-catholic-initials.png",
+    "source": "initials-badge"
+  },
+  "jackson-liberty": {
+    "local": "assets/logos/jackson-liberty-initials.png",
+    "source": "initials-badge"
+  },
+  "toms-river-east": {
+    "local": "assets/logos/toms-river-east-initials.png",
+    "source": "initials-badge"
+  },
+  "hopewell-valley": {
+    "local": "assets/logos/hopewell-valley-initials.png",
+    "source": "initials-badge"
+  },
+  "montgomery": {
+    "local": "assets/logos/montgomery-initials.png",
+    "source": "initials-badge"
   }
 }

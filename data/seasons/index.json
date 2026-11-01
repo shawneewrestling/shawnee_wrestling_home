@@ -1,6 +1,6 @@
 {
   "default": "2025-26",
-  "generated_at": "2026-11-01T11:24:16-05:00",
+  "generated_at": "2026-11-01T11:27:23-05:00",
   "seasons": [
     {
       "id": "2025-26",
@@ -90,11 +90,6 @@
       "nj_com_duals": "11-14"
     },
     {
-      "season": "2014-15",
-      "coaching_history": "6-21",
-      "nj_com_duals": "6-20"
-    },
-    {
       "season": "2011-12",
       "coaching_history": "18-6",
       "nj_com_duals": "14-5"
@@ -108,7 +103,7 @@
   "gaps": [
     "2016-17: standings reconstructed (no NJ.com Olympic table)",
     "2015-16: standings reconstructed (no NJ.com Olympic table)",
-    "2014-15: standings reconstructed (no NJ.com Olympic table)",
+    "2014-15: standings reconstructed from TW duals (no NJ.com Olympic table); duals from Trackwrestling (6-21)",
     "2013-14: standings reconstructed (no NJ.com Olympic table)",
     "2012-13: standings reconstructed (no NJ.com Olympic table)",
     "2011-12: standings reconstructed (no NJ.com Olympic table)",
