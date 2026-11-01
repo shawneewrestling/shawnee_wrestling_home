@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "through_season": "2024-25",
+  "through_season_end_year": 2025,
+  "source": "history/career_through_2025.csv (Jeff paste t101u)",
+  "notes": [
+    "Totals through 2024-25 only; already includes that season \u2014 do not add 2024-25 season_stats on top.",
+    "Rows with fewer than 14 career wins omitted upstream as irrelevant to Career Wins (~70) / Career Pins (42) floors.",
+    "Duplicate row 'Max Vandoren (dup)' omitted.",
+    "w_fall is career pins. Some older high-win wrestlers have w_fall=0 (missing fall breakdown) \u2014 do not overwrite known awards pins with 0."
+  ],
+  "count": 50,
+  "wrestlers": [
+    {
+      "seasons": 4,
+      "name": "Matt Higgins",
+      "win": 126,
+      "loss": 30,
+      "w_fall": 63
+    },
+    {
+      "seasons": 4,
+      "name": "Austin Wetterau",
+      "win": 120,
+      "loss": 24,
+      "w_fall": 0
+    },
+    {
+      "seasons": 4,
+      "name": "Connor Muli",
+      "win": 114,
+      "loss": 18,
+      "w_fall": 0
+    },
+    {
+      "seasons": 4,
+      "name": "Luke Sherlock",
+      "win": 115,
+      "loss": 23,
+      "w_fall": 65
+    },
+    {
+      "seasons": 4,
+      "name": "Chris Ahrens",
+      "win": 115,
+      "loss": 36,
+      "w_fall": 67
+    },
+    {
+      "seasons": 4,
+      "name": "Nick Cottone",
+      "win": 104,
+      "loss": 31,
+      "w_fall": 54
+    },
+    {
+      "seasons": 4,
+      "name": "Jake Hastings",
+      "win": 93,
+      "loss": 33,
+      "w_fall": 51
+    },
+    {
+      "seasons": 4,
+      "name": "Isaac Dean",
+      "win": 92,
+      "loss": 28,
+      "w_fall": 39
+    },
+    {
+      "seasons": 4,
+      "name": "Griffin Hastings",
+      "win": 75,
+      "loss": 47,
+      "w_fall": 28
+    },
+    {
+      "seasons": 3,
+      "name": "Jordan Segal",
+      "win": 78,
+      "loss": 18,
+      "w_fall": 26
+    },
+    {
+      "seasons": 3,
+      "name": "Isaiah Bryant",
+      "win": 75,
+      "loss": 34,
+      "w_fall": 22
+    },
+    {
+      "seasons": 3,
+      "name": "Ethan Staples",
+      "win": 73,
+      "loss": 19,
+      "w_fall": 20
+    },
+    {
+      "seasons": 4,
+      "name": "Ed Moriarty",
+      "win": 72,
+      "loss": 30,
+      "w_fall": 24
+    },
+    {
+      "seasons": 4,
+      "name": "Jackson Harris",
+      "win": 70,
+      "loss": 36,
+      "w_fall": 51
+    },
+    {
+      "seasons": 4,
+      "name": "Bryce Dunleavy",
+      "win": 69,
+      "loss": 39,
+      "w_fall": 27
+    },
+    {
+      "seasons": 4,
+      "name": "Alex Pfeifer",
+      "win": 67,
+      "loss": 54,
+      "w_fall": 41
+    },
+    {
+      "seasons": 4,
+      "name": "Anthony Duarte",
+      "win": 66,
+      "loss": 33,
+      "w_fall": 14
+    },
+    {
+      "seasons": 3,
+      "name": "Mark Gross",
+      "win": 65,
+      "loss": 36,
+      "w_fall": 34
+    },
+    {
+      "seasons": 4,
+      "name": "Jaylen Horsley",
+      "win": 61,
+      "loss": 42,
+      "w_fall": 27
+    },
+    {
+      "seasons": 3,
+      "name": "Richard (RJ) Hunnewell",
+      "win": 59,
+      "loss": 45,
+      "w_fall": 30
+    },
+    {
+      "seasons": 3,
+      "name": "Riley Tufts",
+      "win": 58,
+      "loss": 44,
+      "w_fall": 9
+    },
+    {
+      "seasons": 4,
+      "name": "Brett Balzan",
+      "win": 57,
+      "loss": 29,
+      "w_fall": 17
+    },
+    {
+      "seasons": 3,
+      "name": "Lucas Estevez",
+      "win": 44,
+      "loss": 48,
+      "w_fall": 23
+    },
+    {
+      "seasons": 4,
+      "name": "Jay Stokes",
+      "win": 41,
+      "loss": 34,
+      "w_fall": 27
+    },
+    {
+      "seasons": 2,
+      "name": "Matthew Quinn",
+      "win": 36,
+      "loss": 20,
+      "w_fall": 23
+    },
+    {
+      "seasons": 3,
+      "name": "Aaron Bill",
+      "win": 34,
+      "loss": 27,
+      "w_fall": 20
+    },
+    {
+      "seasons": 4,
+      "name": "James Moriarty",
+      "win": 33,
+      "loss": 40,
+      "w_fall": 19
+    },
+    {
+      "seasons": 3,
+      "name": "Joseph Hart",
+      "win": 34,
+      "loss": 25,
+      "w_fall": 14
+    },
+    {
+      "seasons": 3,
+      "name": "Ethan Greenberg",
+      "win": 30,
+      "loss": 38,
+      "w_fall": 9
+    },
+    {
+      "seasons": 2,
+      "name": "Trevor Sieben",
+      "win": 29,
+      "loss": 37,
+      "w_fall": 18
+    },
+    {
+      "seasons": 2,
+      "name": "Mark Finelli",
+      "win": 25,
+      "loss": 20,
+      "w_fall": 12
+    },
+    {
+      "seasons": 2,
+      "name": "Dylan Feimer",
+      "win": 23,
+      "loss": 34,
+      "w_fall": 13
+    },
+    {
+      "seasons": 2,
+      "name": "Garrett Borlaug",
+      "win": 26,
+      "loss": 36,
+      "w_fall": 14
+    },
+    {
+      "seasons": 2,
+      "name": "Max Spitznas",
+      "win": 26,
+      "loss": 38,
+      "w_fall": 20
+    },
+    {
+      "seasons": 4,
+      "name": "Caleb Pietrafitta",
+      "win": 22,
+      "loss": 34,
+      "w_fall": 14
+    },
+    {
+      "seasons": 1,
+      "name": "Dalton Short",
+      "win": 21,
+      "loss": 11,
+      "w_fall": 2
+    },
+    {
+      "seasons": 3,
+      "name": "Dominic Harris",
+      "win": 21,
+      "loss": 27,
+      "w_fall": 14
+    },
+    {
+      "seasons": 1,
+      "name": "Connor Coolihan",
+      "win": 19,
+      "loss": 12,
+      "w_fall": 6
+    },
+    {
+      "seasons": 1,
+      "name": "Leeland Rogers",
+      "win": 21,
+      "loss": 14,
+      "w_fall": 15
+    },
+    {
+      "seasons": 3,
+      "name": "Drew Lapinski",
+      "win": 18,
+      "loss": 50,
+      "w_fall": 4
+    },
+    {
+      "seasons": 2,
+      "name": "Brett Strohm",
+      "win": 16,
+      "loss": 7,
+      "w_fall": 7
+    },
+    {
+      "seasons": 1,
+      "name": "Aidan Higgins",
+      "win": 15,
+      "loss": 20,
+      "w_fall": 7
+    },
+    {
+      "seasons": 4,
+      "name": "Tyler Aschim",
+      "win": 15,
+      "loss": 38,
+      "w_fall": 10
+    },
+    {
+      "seasons": 1,
+      "name": "Nathaniel Alvarado",
+      "win": 15,
+      "loss": 11,
+      "w_fall": 5
+    },
+    {
+      "seasons": 3,
+      "name": "Max VanDoren",
+      "win": 15,
+      "loss": 17,
+      "w_fall": 9
+    },
+    {
+      "seasons": 1,
+      "name": "Robert Lane",
+      "win": 14,
+      "loss": 15,
+      "w_fall": 6
+    },
+    {
+      "seasons": 2,
+      "name": "Alexander Kokolis",
+      "win": 14,
+      "loss": 21,
+      "w_fall": 11
+    },
+    {
+      "seasons": 1,
+      "name": "Matt Wolfe",
+      "win": 14,
+      "loss": 7,
+      "w_fall": 10
+    },
+    {
+      "seasons": 3,
+      "name": "Max Germain",
+      "win": 14,
+      "loss": 24,
+      "w_fall": 6
+    },
+    {
+      "seasons": 2,
+      "name": "Sean Bradley",
+      "win": 14,
+      "loss": 13,
+      "w_fall": 4
+    }
+  ],
+  "updated_at": "2026-11-01T10:48:36-05:00"
+}
