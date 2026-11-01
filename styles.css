@@ -170,6 +170,7 @@ tr:hover td { background: #eef5fb; }
 .badge.w { background: #d9f5e3; color: var(--win); }
 .badge.l { background: #fde0e6; color: var(--loss); }
 .badge.ev { background: #e8eef8; color: var(--navy); }
+.badge.final { background: #e6f0ff; color: var(--navy); border: 1px solid #b8c9e8; }
 
 .opp {
   display: flex; align-items: center; gap: .55rem;

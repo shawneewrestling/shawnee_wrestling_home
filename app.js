@@ -38,6 +38,13 @@
   function resultBadge(m) {
     if (m.result === 'W') return `<span class="badge w">W ${esc(m.score_display || '')}</span>`;
     if (m.result === 'L') return `<span class="badge l">L ${esc(m.score_display || '')}</span>`;
+    if (m.result === 'T') return `<span class="badge ev">T ${esc(m.score_display || '')}</span>`;
+    if (m.status === 'final' || m.completed || m.result_label === 'Final') {
+      if (m.results_unavailable) {
+        return `<span class="badge final" title="${esc(m.result_note || 'Bout cards unavailable')}">Final</span>`;
+      }
+      return `<span class="badge final">Final</span>`;
+    }
     if (m.home_away === 'event' || m.event_kind) return `<span class="badge ev">Event</span>`;
     return '—';
   }
@@ -359,17 +366,23 @@
   function renderSchedule(data) {
     const rec = data.metadata?.dual_record || data.dual_scores?.record;
     const conf = data.metadata?.conference_record || data.dual_scores?.conference_record;
+    const seasonFinal = (data.metadata?.status || data.metadata?.season_status) === 'final';
+    const statusChip = seasonFinal
+      ? `<span><strong>Season</strong> Final · 2025-2026 Season</span>`
+      : `<span><strong>Season</strong> 2025-2026 Season</span>`;
     document.getElementById('schedMeta').innerHTML = `<span><strong>Dual record</strong> ${esc(rec)}</span>
       <span><strong>Conference</strong> ${esc(conf || '—')}</span>
-      <span><strong>Listings</strong> ${(data.schedule || []).length}</span>`;
+      <span><strong>Listings</strong> ${(data.schedule || []).length}</span>
+      ${statusChip}`;
     const body = document.querySelector('#scheduleTable tbody');
     body.innerHTML = (data.schedule || []).map((m) => {
       const expand = m.expandable ? `<button type="button" class="expand-btn" data-eid="${esc(m.tournament_key || m.event_id)}" aria-expanded="false">Details</button>` : '';
+      const timeLabel = m.time || ((m.status === 'final' || m.completed || seasonFinal) ? '—' : 'TBD');
       const main = `<tr class="sched-row" data-eid="${esc(m.event_id || '')}">
         <td>${esc(m.date_iso || m.date)}</td>
         <td>${oppCell(m)}</td>
         <td>${esc(m.home_away === 'home' ? 'Home' : m.home_away === 'away' ? 'Away' : (m.location || 'Event'))}</td>
-        <td>${esc(m.time || 'TBD')} ${expand}</td>
+        <td>${esc(timeLabel)} ${expand}</td>
         <td>${resultBadge(m)}</td>
       </tr>`;
       // Pre-render collapsed panel as hidden sibling; toggled by button
@@ -394,10 +407,11 @@
     if (noteEl) noteEl.textContent = s.note || '';
     const ds = data.dual_scores || {};
     const meta = document.getElementById('resultsMeta');
+    const seasonFinal = (data.metadata?.status || data.metadata?.season_status || s.status) === 'final';
     if (meta) meta.innerHTML =
       `<span><strong>Shawnee duals</strong> ${esc(s.shawnee_dual_record || ds.record)}</span>
        <span><strong>Conference</strong> ${esc(s.conference_record || ds.conference_record || '—')}</span>
-       <span><strong>Source</strong> ${esc(s.source || 'results ledger')}</span>`;
+       <span><strong>Season</strong> ${seasonFinal ? 'Final · 2025-2026 Season' : '2025-2026 Season'}</span>`;
     const rows = (s.rows && s.rows.length) ? s.rows : (ds.duals || []).map((d) => ({
       opponent: d.opponent, score: d.score_display || `${d.shawnee}-${d.opp}`, result: d.result,
       opponent_logo_local: d.opponent_logo_local, opponent_logo: d.opponent_logo,
@@ -415,7 +429,7 @@
     const host = document.getElementById('resultsTournaments');
     if (host) {
       const trMap = data.tournament_results || {};
-      const events = (data.schedule || []).filter((m) => m.expandable || m.tournament_key || (m.event_kind === 'tournament'));
+      const events = (data.schedule || []).filter((m) => m.expandable || m.tournament_key || m.event_kind === 'tournament' || m.event_kind === 'I' || m.display_as_event || m.results_unavailable);
       const seen = new Set();
       const blocks = [];
       for (const m of events) {
@@ -431,10 +445,10 @@
           const cards = match ? match[0] : panel;
           blocks.push(`<section class="results-tournament-block"><h3>${title} <span class="muted">${date}</span></h3>${cards}</section>`);
         } else {
-          blocks.push(`<section class="results-tournament-block"><h3>${title} <span class="muted">${date}</span></h3><p class="muted">Bout cards not yet available.</p></section>`);
+          blocks.push(`<section class="results-tournament-block"><h3>${title} <span class="muted">${date}</span></h3><p class="muted">${seasonFinal ? 'Bout cards unavailable for this event.' : 'Bout cards not yet available.'}</p></section>`);
         }
       }
-      host.innerHTML = blocks.length ? blocks.join('') : '<p class="muted">No tournament results yet.</p>';
+      host.innerHTML = blocks.length ? blocks.join('') : `<p class="muted">${seasonFinal ? 'No tournament bout cards on file.' : 'No tournament results yet.'}</p>`;
     }
   }
 
@@ -448,9 +462,10 @@
     }
     const meta = document.getElementById('standingsMeta');
     if (meta) {
+      const final = (doc.status || doc.season_status) === 'final';
       meta.innerHTML =
         `<span><strong>Conference</strong> ${esc(doc.conference || 'Olympic')}</span>
-         <span><strong>Season</strong> ${esc(doc.season || '2025-2026')}</span>
+         <span><strong>Season</strong> ${final ? 'Final · 2025-2026 Season' : esc(doc.title || doc.season || '2025-2026 Season')}</span>
          <span><strong>Source</strong> ${esc(doc.source || '—')}</span>
          <span><strong>As of</strong> ${esc(doc.as_of || '—')}</span>`;
     }
@@ -744,7 +759,7 @@
     const meta = data.meta?.njsiaa_placements_2025_26;
     document.getElementById('awardsMeta').innerHTML =
       `<strong>${awards.length}</strong> award rows (${data.seed_count || 0} historical seed + ${data.derived_2025_26_count || 0} auto-derived for 2025-26).
-       ${meta ? `<br/><em>NJSIAA 2025-26 placements:</em> ${esc(meta.status)} — ${esc(meta.note)}` : ''}`;
+       ${meta ? `<br/><em>NJSIAA 2025-2026 placements:</em> ${esc(meta.status)} — ${esc(meta.note)}` : ''}`;
 
     // Group into cards
     const byName = {};

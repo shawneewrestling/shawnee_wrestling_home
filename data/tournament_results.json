@@ -57,7 +57,7 @@
       },
       {
         "wrestler": "Anthony Blahut",
-        "weight": "113",
+        "weight": "120",
         "record": "1-1",
         "wins": 1,
         "losses": 1,
@@ -87,7 +87,7 @@
       },
       {
         "wrestler": "Sean Bradley",
-        "weight": "113",
+        "weight": "120",
         "record": "1-1",
         "wins": 1,
         "losses": 1,
@@ -116,28 +116,8 @@
         ]
       },
       {
-        "wrestler": "Gino Gonzalez",
-        "weight": "126",
-        "record": "0-1",
-        "wins": 0,
-        "losses": 1,
-        "placement": null,
-        "bouts": [
-          {
-            "weight": "126",
-            "round": null,
-            "result": "L",
-            "win_type": "Tech. Fall",
-            "fall_seconds": 167,
-            "opponent_wrestler": "Ryan McConaghy",
-            "opponent_team": "West Deptford",
-            "score": "Fall 2:47"
-          }
-        ]
-      },
-      {
         "wrestler": "Brayden Inman",
-        "weight": "132",
+        "weight": "126",
         "record": "2-0",
         "wins": 2,
         "losses": 0,
@@ -166,8 +146,28 @@
         ]
       },
       {
+        "wrestler": "Gino Gonzalez",
+        "weight": "126",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "L",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 167,
+            "opponent_wrestler": "Ryan McConaghy",
+            "opponent_team": "West Deptford",
+            "score": "Fall 2:47"
+          }
+        ]
+      },
+      {
         "wrestler": "Garrett Borlaug",
-        "weight": "132",
+        "weight": "138",
         "record": "1-1",
         "wins": 1,
         "losses": 1,
@@ -246,36 +246,6 @@
         ]
       },
       {
-        "wrestler": "Oleksandr `Sasha` Yurovskyi",
-        "weight": "150",
-        "record": "2-0",
-        "wins": 2,
-        "losses": 0,
-        "placement": null,
-        "bouts": [
-          {
-            "weight": "150",
-            "round": null,
-            "result": "W",
-            "win_type": "Fall",
-            "fall_seconds": 108,
-            "opponent_wrestler": "Ashutosh Tripathi",
-            "opponent_team": "West Windsor-Plainsboro North",
-            "score": "Fall 1:48"
-          },
-          {
-            "weight": "157",
-            "round": null,
-            "result": "W",
-            "win_type": "Fall",
-            "fall_seconds": 26,
-            "opponent_wrestler": "Joshua Teasdale",
-            "opponent_team": "West Deptford",
-            "score": "Fall 0:26"
-          }
-        ]
-      },
-      {
         "wrestler": "Ryan Hoerst",
         "weight": "150",
         "record": "1-0",
@@ -326,28 +296,38 @@
         ]
       },
       {
-        "wrestler": "Eli Sauler",
-        "weight": "175",
-        "record": "1-0",
-        "wins": 1,
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "157",
+        "record": "2-0",
+        "wins": 2,
         "losses": 0,
         "placement": null,
         "bouts": [
           {
-            "weight": "175",
+            "weight": "150",
             "round": null,
             "result": "W",
-            "win_type": "Forfeit",
-            "fall_seconds": null,
-            "opponent_wrestler": null,
-            "opponent_team": null,
-            "score": "Forfeit"
+            "win_type": "Fall",
+            "fall_seconds": 108,
+            "opponent_wrestler": "Ashutosh Tripathi",
+            "opponent_team": "West Windsor-Plainsboro North",
+            "score": "Fall 1:48"
+          },
+          {
+            "weight": "157",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 26,
+            "opponent_wrestler": "Joshua Teasdale",
+            "opponent_team": "West Deptford",
+            "score": "Fall 0:26"
           }
         ]
       },
       {
         "wrestler": "Tyler Davis",
-        "weight": "175",
+        "weight": "165",
         "record": "2-0",
         "wins": 2,
         "losses": 0,
@@ -372,6 +352,26 @@
             "opponent_wrestler": "Colton Sabo",
             "opponent_team": "West Deptford",
             "score": "Fall 4:30"
+          }
+        ]
+      },
+      {
+        "wrestler": "Eli Sauler",
+        "weight": "175",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "W",
+            "win_type": "Forfeit",
+            "fall_seconds": null,
+            "opponent_wrestler": null,
+            "opponent_team": null,
+            "score": "Forfeit"
           }
         ]
       },
@@ -466,7 +466,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 28
+    "shawnee_bout_count": 28,
+    "status": "final",
+    "completed": true
   },
   "8706927132": {
     "event_id": "8706927132",
@@ -963,7 +965,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 28
+    "shawnee_bout_count": 28,
+    "status": "final",
+    "completed": true
   },
   "8714376132": {
     "event_id": "8714376132",
@@ -1214,7 +1218,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 11
+    "shawnee_bout_count": 11,
+    "status": "final",
+    "completed": true
   },
   "8719713132": {
     "event_id": "8719713132",
@@ -1973,7 +1979,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 50
+    "shawnee_bout_count": 50,
+    "status": "final",
+    "completed": true
   },
   "8724258132": {
     "event_id": "8724258132",
@@ -2046,36 +2054,6 @@
             "opponent_wrestler": "Greyson Ruhland",
             "opponent_team": "Seneca",
             "score": "Fall 2:47"
-          }
-        ]
-      },
-      {
-        "wrestler": "Logan Reice",
-        "weight": "113",
-        "record": "0-2",
-        "wins": 0,
-        "losses": 2,
-        "placement": null,
-        "bouts": [
-          {
-            "weight": "150",
-            "round": null,
-            "result": "L",
-            "win_type": "Fall",
-            "fall_seconds": 40,
-            "opponent_wrestler": "Mark Finelli",
-            "opponent_team": "Seneca",
-            "score": "Fall 0:40"
-          },
-          {
-            "weight": "113",
-            "round": null,
-            "result": "L",
-            "win_type": "Fall",
-            "fall_seconds": 45,
-            "opponent_wrestler": "Eric LaGrotta",
-            "opponent_team": "Lenape",
-            "score": "Fall 0:45"
           }
         ]
       },
@@ -2340,6 +2318,36 @@
         ]
       },
       {
+        "wrestler": "Logan Reice",
+        "weight": "150",
+        "record": "0-2",
+        "wins": 0,
+        "losses": 2,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 40,
+            "opponent_wrestler": "Mark Finelli",
+            "opponent_team": "Seneca",
+            "score": "Fall 0:40"
+          },
+          {
+            "weight": "113",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 45,
+            "opponent_wrestler": "Eric LaGrotta",
+            "opponent_team": "Lenape",
+            "score": "Fall 0:45"
+          }
+        ]
+      },
+      {
         "wrestler": "Oleksandr `Sasha` Yurovskyi",
         "weight": "157",
         "record": "2-1",
@@ -2600,7 +2608,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 42
+    "shawnee_bout_count": 42,
+    "status": "final",
+    "completed": true
   },
   "8729716132": {
     "event_id": "8729716132",
@@ -2770,7 +2780,7 @@
       },
       {
         "wrestler": "Jordan Segal",
-        "weight": "132",
+        "weight": "138",
         "record": "1-1",
         "wins": 1,
         "losses": 1,
@@ -2909,28 +2919,8 @@
         ]
       },
       {
-        "wrestler": "Trevor Sieben",
-        "weight": "165",
-        "record": "0-1",
-        "wins": 0,
-        "losses": 1,
-        "placement": null,
-        "bouts": [
-          {
-            "weight": "165",
-            "round": null,
-            "result": "L",
-            "win_type": "Fall",
-            "fall_seconds": 87,
-            "opponent_wrestler": "Raymond Miller",
-            "opponent_team": "Rancocas Valley Regional",
-            "score": "Fall 1:27"
-          }
-        ]
-      },
-      {
         "wrestler": "Max Spitznas",
-        "weight": "175",
+        "weight": "165",
         "record": "0-2",
         "wins": 0,
         "losses": 2,
@@ -2955,6 +2945,26 @@
             "opponent_wrestler": "Carter Robles",
             "opponent_team": "Rancocas Valley Regional",
             "score": "4-7"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "165",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 87,
+            "opponent_wrestler": "Raymond Miller",
+            "opponent_team": "Rancocas Valley Regional",
+            "score": "Fall 1:27"
           }
         ]
       },
@@ -3069,7 +3079,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 28
+    "shawnee_bout_count": 28,
+    "status": "final",
+    "completed": true
   },
   "8715071132": {
     "event_id": "8715071132",
@@ -3287,7 +3299,7 @@
       },
       {
         "wrestler": "Brayden Inman",
-        "weight": "132",
+        "weight": "126",
         "record": "2-2",
         "wins": 2,
         "losses": 2,
@@ -3826,7 +3838,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 56
+    "shawnee_bout_count": 56,
+    "status": "final",
+    "completed": true
   },
   "8715056132": {
     "event_id": "8715056132",
@@ -4433,7 +4447,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 42
+    "shawnee_bout_count": 42,
+    "status": "final",
+    "completed": true
   },
   "8733369132": {
     "event_id": "8733369132",
@@ -5070,7 +5086,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 41
+    "shawnee_bout_count": 41,
+    "status": "final",
+    "completed": true
   },
   "8773919132": {
     "event_id": "8773919132",
@@ -5130,7 +5148,7 @@
       },
       {
         "wrestler": "Anthony Blahut",
-        "weight": "113",
+        "weight": "120",
         "record": "2-0",
         "wins": 2,
         "losses": 0,
@@ -5160,7 +5178,7 @@
       },
       {
         "wrestler": "Sean Bradley",
-        "weight": "113",
+        "weight": "120",
         "record": "1-1",
         "wins": 1,
         "losses": 1,
@@ -5509,7 +5527,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 27
+    "shawnee_bout_count": 27,
+    "status": "final",
+    "completed": true
   },
   "8978282132": {
     "event_id": "8978282132",
@@ -6096,7 +6116,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 37
+    "shawnee_bout_count": 37,
+    "status": "final",
+    "completed": true
   },
   "8978292132": {
     "event_id": "8978292132",
@@ -6303,7 +6325,9 @@
         ]
       }
     ],
-    "shawnee_bout_count": 10
+    "shawnee_bout_count": 10,
+    "status": "final",
+    "completed": true
   },
   "8978305132": {
     "event_id": "8978305132",
@@ -6380,6 +6404,8 @@
         ]
       }
     ],
-    "shawnee_bout_count": 3
+    "shawnee_bout_count": 3,
+    "status": "final",
+    "completed": true
   }
 }

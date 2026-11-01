@@ -16,15 +16,19 @@
       "awards_seed": "shawneewrestling.com awards banners (historical)"
     },
     "gaps": [
-      "Pins / tech falls / major decisions not present on getWrestlers \u2014 null in stats",
+      "Pins / tech falls / major decisions not present on roster feed \u2014 null in stats",
       "NJSIAA individual placements not scraped \u2014 see awards meta",
-      "Official OC division standings table not from TW \u2014 derived dual slice only",
       "Home-dual Ajax opponent field often a score fragment; dual_scores overlay applied",
-      "Missing GoBound logos: Northern Burlington, Haddonfield, Robbinsville"
+      "Missing GoBound logos: Northern Burlington, Haddonfield, Robbinsville",
+      "Individual-event bout cards unavailable: Cherokee Annual JV Tournament, ESCAPE THE ROCK"
     ],
     "conference_record": "2-3",
     "home_record": "10-11",
-    "away_record": "2-3"
+    "away_record": "2-3",
+    "title": "2025-2026 Season",
+    "status": "final",
+    "season_status": "final",
+    "finalized_at": "2026-11-01T10:53:48-05:00"
   },
   "roster": [
     {
@@ -918,7 +922,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8715034132",
-      "filter_opponent": "West Deptford"
+      "filter_opponent": "West Deptford",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715034132",
@@ -946,7 +952,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8715034132",
-      "filter_opponent": "West Windsor-Plainsboro North"
+      "filter_opponent": "West Windsor-Plainsboro North",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715041132",
@@ -967,7 +975,9 @@
       "opponent_slug": "cherry-hill-west",
       "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/9cf0882c-28ac-405f-83fe-7701aa59a120/CherryHillWest-NJ-Small.png",
       "opponent_logo_local": "assets/logos/cherry-hill-west.png",
-      "logo_source": "oc"
+      "logo_source": "oc",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8706927132",
@@ -990,7 +1000,10 @@
       "opponent_logo_local": null,
       "expandable": true,
       "tournament_key": "8706927132",
-      "display_as_event": true
+      "display_as_event": true,
+      "status": "final",
+      "completed": true,
+      "result_label": "Final"
     },
     {
       "event_id": "8714376132",
@@ -1013,7 +1026,10 @@
       "opponent_logo_local": null,
       "expandable": true,
       "tournament_key": "8714376132",
-      "display_as_event": true
+      "display_as_event": true,
+      "status": "final",
+      "completed": true,
+      "result_label": "Final"
     },
     {
       "event_id": "8719713132",
@@ -1036,7 +1052,10 @@
       "opponent_logo_local": null,
       "expandable": true,
       "tournament_key": "8719713132",
-      "display_as_event": true
+      "display_as_event": true,
+      "status": "final",
+      "completed": true,
+      "result_label": "Final"
     },
     {
       "event_id": "8724258132",
@@ -1064,7 +1083,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8724258132",
-      "filter_opponent": "Cherokee"
+      "filter_opponent": "Cherokee",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8724258132",
@@ -1092,7 +1113,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8724258132",
-      "filter_opponent": "Lenape"
+      "filter_opponent": "Lenape",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8724258132",
@@ -1120,7 +1143,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8724258132",
-      "filter_opponent": "Seneca"
+      "filter_opponent": "Seneca",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715992132",
@@ -1141,7 +1166,9 @@
       "opponent_slug": "northern-burlington",
       "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/f0096a19-9fc3-433b-a567-2cf78c85e0be/NorthernBurlingtonGreyhoundsSmall.png",
       "opponent_logo_local": "assets/logos/northern-burlington.png",
-      "logo_source": "gobound"
+      "logo_source": "gobound",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8729716132",
@@ -1169,7 +1196,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8729716132",
-      "filter_opponent": "Camden Catholic"
+      "filter_opponent": "Camden Catholic",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8729716132",
@@ -1197,7 +1226,9 @@
       "logo_source": "oc",
       "expandable": true,
       "tournament_key": "8729716132",
-      "filter_opponent": "Rancocas Valley"
+      "filter_opponent": "Rancocas Valley",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715046132",
@@ -1218,7 +1249,9 @@
       "opponent_slug": "moorestown",
       "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/665a5d9c-d27e-4961-82bc-e33c059eddef/Moorestown-NJ-Small.png",
       "opponent_logo_local": "assets/logos/moorestown.png",
-      "logo_source": "oc"
+      "logo_source": "oc",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8708390132",
@@ -1238,7 +1271,12 @@
       "score_display": null,
       "opponent_slug": null,
       "opponent_logo": null,
-      "opponent_logo_local": null
+      "opponent_logo_local": null,
+      "status": "final",
+      "completed": true,
+      "result_label": "Final",
+      "results_unavailable": true,
+      "result_note": "Bout cards unavailable"
     },
     {
       "event_id": "8926560132",
@@ -1258,7 +1296,12 @@
       "score_display": null,
       "opponent_slug": null,
       "opponent_logo": null,
-      "opponent_logo_local": null
+      "opponent_logo_local": null,
+      "status": "final",
+      "completed": true,
+      "result_label": "Final",
+      "results_unavailable": true,
+      "result_note": "Bout cards unavailable"
     },
     {
       "event_id": "8733355132",
@@ -1279,7 +1322,9 @@
       "opponent_slug": "paul-vi",
       "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/4c578ccd-89bc-4f32-b173-04323a51d07a/paulVI-nj-small.png",
       "opponent_logo_local": "assets/logos/paul-vi.png",
-      "logo_source": "oc"
+      "logo_source": "oc",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715071132",
@@ -1307,7 +1352,9 @@
       "logo_source": "initials-badge",
       "expandable": true,
       "tournament_key": "8715071132",
-      "filter_opponent": "High Point Regional"
+      "filter_opponent": "High Point Regional",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715071132",
@@ -1335,7 +1382,9 @@
       "logo_source": "initials-badge",
       "expandable": true,
       "tournament_key": "8715071132",
-      "filter_opponent": "Peddie School"
+      "filter_opponent": "Peddie School",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715071132",
@@ -1363,7 +1412,9 @@
       "logo_source": "initials-badge",
       "expandable": true,
       "tournament_key": "8715071132",
-      "filter_opponent": "St. Peter's Prep"
+      "filter_opponent": "St. Peter's Prep",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715049132",
@@ -1384,7 +1435,9 @@
       "opponent_slug": "eastern",
       "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/b7b4d777-1d7c-45ee-90c8-42a29d2eea1d/EasternRegional-NJ-Small.png",
       "opponent_logo_local": "assets/logos/eastern.png",
-      "logo_source": "oc"
+      "logo_source": "oc",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715056132",
@@ -1412,7 +1465,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8715056132",
-      "filter_opponent": "Absegami"
+      "filter_opponent": "Absegami",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715056132",
@@ -1440,7 +1495,9 @@
       "logo_source": "search",
       "expandable": true,
       "tournament_key": "8715056132",
-      "filter_opponent": "Cinnaminson"
+      "filter_opponent": "Cinnaminson",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8715056132",
@@ -1468,7 +1525,9 @@
       "logo_source": "search",
       "expandable": true,
       "tournament_key": "8715056132",
-      "filter_opponent": "Collingswood"
+      "filter_opponent": "Collingswood",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8733359132",
@@ -1489,7 +1548,9 @@
       "opponent_slug": "cherry-hill-east",
       "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/d53b41d2-9d36-45a8-b1a4-4e034e2c8540/CherryHillEastCougarsSmall.png",
       "opponent_logo_local": "assets/logos/cherry-hill-east.png",
-      "logo_source": "oc"
+      "logo_source": "oc",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8733362132",
@@ -1510,7 +1571,9 @@
       "opponent_slug": "haddonfield",
       "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/00bbe6f5-a667-4e92-a661-e763872e9fc8/haddonfieldmemorial-nj-small.png",
       "opponent_logo_local": "assets/logos/haddonfield.png",
-      "logo_source": "gobound"
+      "logo_source": "gobound",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8733369132",
@@ -1538,7 +1601,9 @@
       "logo_source": "search",
       "expandable": true,
       "tournament_key": "8733369132",
-      "filter_opponent": "Delran"
+      "filter_opponent": "Delran",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8733369132",
@@ -1566,7 +1631,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8733369132",
-      "filter_opponent": "Lacey Township"
+      "filter_opponent": "Lacey Township",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8733369132",
@@ -1594,7 +1661,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8733369132",
-      "filter_opponent": "Toms River North"
+      "filter_opponent": "Toms River North",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8736380132",
@@ -1615,7 +1684,9 @@
       "opponent_slug": "robbinsville",
       "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/5a115fa4-1c4c-4590-9c05-7ebf6053e894/RobbinsvilleRavensSmall.png",
       "opponent_logo_local": "assets/logos/robbinsville.png",
-      "logo_source": "gobound"
+      "logo_source": "gobound",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8773919132",
@@ -1643,7 +1714,9 @@
       "logo_source": "gobound",
       "expandable": true,
       "tournament_key": "8773919132",
-      "filter_opponent": "Pennsauken"
+      "filter_opponent": "Pennsauken",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8773919132",
@@ -1671,36 +1744,18 @@
       "logo_source": "initials-badge",
       "expandable": true,
       "tournament_key": "8773919132",
-      "filter_opponent": "St. Joseph (Hammonton)"
+      "filter_opponent": "St. Joseph (Hammonton)",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "9000835132",
       "date": "February 16, 2026",
       "date_iso": "2026-02-16",
       "time": "11:00 AM",
-      "time_raw": "1100",
-      "opponent": null,
-      "event_name": "NJSIAA South Group 4 Sectional Quarters/Semis",
-      "location": "Shawnee",
-      "home_away": "event",
-      "level": "Varsity",
-      "event_kind": "D",
-      "result": null,
-      "score_shawnee": null,
-      "score_opp": null,
-      "score_display": null,
-      "opponent_slug": null,
-      "opponent_logo": null,
-      "opponent_logo_local": null
-    },
-    {
-      "event_id": "9000835132",
-      "date": null,
-      "date_iso": "2026-02-16",
-      "time": null,
       "opponent": "Toms River South",
       "event_name": "NJSIAA South Group 4 Sectional Quarters/Semis",
-      "location": null,
+      "location": "Shawnee",
       "home_away": "event",
       "level": "Varsity",
       "event_kind": "D",
@@ -1713,7 +1768,9 @@
       "opponent_logo_local": "assets/logos/toms-river-south-initials.png",
       "split": false,
       "split_note": "Team dual from sectionals (external-validated)",
-      "source": "external_ref_gapfill"
+      "source": "external_ref_gapfill",
+      "status": "final",
+      "completed": true
     },
     {
       "event_id": "8978282132",
@@ -1736,7 +1793,10 @@
       "opponent_logo_local": null,
       "expandable": true,
       "tournament_key": "8978282132",
-      "display_as_event": true
+      "display_as_event": true,
+      "status": "final",
+      "completed": true,
+      "result_label": "Final"
     },
     {
       "event_id": "8978292132",
@@ -1759,7 +1819,10 @@
       "opponent_logo_local": null,
       "expandable": true,
       "tournament_key": "8978292132",
-      "display_as_event": true
+      "display_as_event": true,
+      "status": "final",
+      "completed": true,
+      "result_label": "Final"
     },
     {
       "event_id": "8978305132",
@@ -1782,7 +1845,10 @@
       "opponent_logo_local": null,
       "expandable": true,
       "tournament_key": "8978305132",
-      "display_as_event": true
+      "display_as_event": true,
+      "status": "final",
+      "completed": true,
+      "result_label": "Final"
     }
   ],
   "dual_scores": {
@@ -2254,7 +2320,8 @@
         "source": "external_ref_gapfill",
         "validation": "external_gapfill"
       }
-    ]
+    ],
+    "status": "final"
   },
   "stats": [
     {
@@ -2781,8 +2848,8 @@
     }
   ],
   "standings": {
-    "source": "results ledger (all dual listings)",
-    "note": "Overall dual record 12-15 from 27 duals (including multi-meet splits). Olympic\u2013American conference slice: 2-3. Canonical list: data/results_ledger.json.",
+    "source": "results ledger",
+    "note": "Overall dual record 12-15 from 27 duals (including multi-meet splits). Olympic\u2013American conference slice: 2-3.",
     "division": "Olympic Conference (Shawnee dual slice)",
     "shawnee_dual_record": "12-15",
     "rows": [
@@ -3111,7 +3178,8 @@
         "source": "external_ref_gapfill"
       }
     ],
-    "conference_record": "2-3"
+    "conference_record": "2-3",
+    "status": "final"
   },
   "tournament_results": {
     "8715034132": {
@@ -3581,7 +3649,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 28
+      "shawnee_bout_count": 28,
+      "status": "final",
+      "completed": true
     },
     "8706927132": {
       "event_id": "8706927132",
@@ -4078,7 +4148,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 28
+      "shawnee_bout_count": 28,
+      "status": "final",
+      "completed": true
     },
     "8714376132": {
       "event_id": "8714376132",
@@ -4329,7 +4401,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 11
+      "shawnee_bout_count": 11,
+      "status": "final",
+      "completed": true
     },
     "8719713132": {
       "event_id": "8719713132",
@@ -5088,7 +5162,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 50
+      "shawnee_bout_count": 50,
+      "status": "final",
+      "completed": true
     },
     "8724258132": {
       "event_id": "8724258132",
@@ -5715,7 +5791,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 42
+      "shawnee_bout_count": 42,
+      "status": "final",
+      "completed": true
     },
     "8729716132": {
       "event_id": "8729716132",
@@ -6184,7 +6262,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 28
+      "shawnee_bout_count": 28,
+      "status": "final",
+      "completed": true
     },
     "8715071132": {
       "event_id": "8715071132",
@@ -6941,7 +7021,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 56
+      "shawnee_bout_count": 56,
+      "status": "final",
+      "completed": true
     },
     "8715056132": {
       "event_id": "8715056132",
@@ -7548,7 +7630,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 42
+      "shawnee_bout_count": 42,
+      "status": "final",
+      "completed": true
     },
     "8733369132": {
       "event_id": "8733369132",
@@ -8185,7 +8269,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 41
+      "shawnee_bout_count": 41,
+      "status": "final",
+      "completed": true
     },
     "8773919132": {
       "event_id": "8773919132",
@@ -8624,7 +8710,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 27
+      "shawnee_bout_count": 27,
+      "status": "final",
+      "completed": true
     },
     "8978282132": {
       "event_id": "8978282132",
@@ -9211,7 +9299,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 37
+      "shawnee_bout_count": 37,
+      "status": "final",
+      "completed": true
     },
     "8978292132": {
       "event_id": "8978292132",
@@ -9418,7 +9508,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 10
+      "shawnee_bout_count": 10,
+      "status": "final",
+      "completed": true
     },
     "8978305132": {
       "event_id": "8978305132",
@@ -9495,7 +9587,9 @@
           ]
         }
       ],
-      "shawnee_bout_count": 3
+      "shawnee_bout_count": 3,
+      "status": "final",
+      "completed": true
     }
   },
   "enrichment": {

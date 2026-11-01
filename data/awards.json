@@ -12,10 +12,11 @@
   },
   "meta": {
     "njsiaa_placements_2025_26": {
-      "status": "unavailable",
-      "note": "District 28 / Region 7 / State bout placements were not recoverable from TW in the 2025-26 replay (TeamResults 404; event page scraps empty). Auto-award rules for tournament placers are documented in docs/AUTO_AWARDS.md; entries will populate once the bout feed or manual Jeff list is available."
+      "status": "partial",
+      "note": "District 28 / Region 7 / State bout placements were not fully recoverable for the 2025-2026 closeout. Auto-award rules for tournament placers are documented in docs/AUTO_AWARDS.md; remaining placements can be added from a Jeff-approved list."
     },
-    "seed_source": "/workspace/shawnee/awards_seed.json"
+    "seed_source": "/workspace/shawnee/awards_seed.json",
+    "season_status": "final"
   },
   "awards": [
     {

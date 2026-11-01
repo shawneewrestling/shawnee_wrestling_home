@@ -3,7 +3,7 @@
   "conference": "Olympic",
   "sport": "wrestling",
   "generated_at": "2026-11-01T09:57:03-05:00",
-  "as_of": "2026-11-01",
+  "as_of": "2026-03-12",
   "source": "NJ.com",
   "source_url": "https://highschoolsports.nj.com/wrestling/standings/season/2025-2026?conference=Olympic",
   "sources_tried": [
@@ -39,9 +39,7 @@
       "ok": true
     }
   ],
-  "gaps": [
-    "GoBound boys wrestling 2025-26 standings blocked (401/403); OC hub ok"
-  ],
+  "gaps": [],
   "validation": {
     "ok": true,
     "shawnee_row": {
@@ -241,5 +239,9 @@
       ]
     }
   ],
-  "policy": "Conference standings for all Olympic wrestling teams by division. Shawnee dual schedule remains Trackwrestling-sourced via results_ledger; peer records from GoBound when available, else NJ.com."
+  "policy": "Final Olympic Conference wrestling standings by division. Shawnee dual schedule remains schedule-feed sourced via results_ledger; peer records from NJ.com (GoBound when available).",
+  "title": "2025-2026 Season",
+  "status": "final",
+  "season_status": "final",
+  "finalized_at": "2026-11-01T10:53:48-05:00"
 }

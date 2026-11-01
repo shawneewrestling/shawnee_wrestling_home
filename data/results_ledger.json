@@ -1,7 +1,7 @@
 {
   "season": "2025-2026",
   "generated_at": "2026-11-01T09:45:49-05:00",
-  "policy": "Canonical dual record is the count of ALL scored dual listings, including duals split from tri/quad/dual-tournament meets. Individual tournaments are not duals. Trackwrestling is the schedule source; external refs (NJ.com / GoBound) are validation only.",
+  "policy": "Canonical dual record is the count of ALL scored dual listings, including duals split from tri/quad/dual-tournament meets. Individual tournaments are not duals. Schedule feed is the schedule source; external refs (NJ.com / GoBound) are validation only.",
   "summary": {
     "overall": {
       "wins": 12,
@@ -1230,5 +1230,9 @@
         "needs_tw_score"
       ]
     }
-  ]
+  ],
+  "status": "final",
+  "season_status": "final",
+  "title": "2025-2026 Season",
+  "finalized_at": "2026-11-01T10:53:48-05:00"
 }
