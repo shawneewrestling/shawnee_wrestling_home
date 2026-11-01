@@ -201,8 +201,8 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{esc(name)} · Shawnee Renegades Wrestling</title>
-  <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../roster.css" />
+  <link rel="stylesheet" href="../styles.css?v=568b45b" />
+  <link rel="stylesheet" href="../roster.css?v=568b45b" />
 </head>
 <body>
   <header class="site-header">
