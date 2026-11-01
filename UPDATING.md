@@ -14,7 +14,9 @@ Branch note: `site-v2-2025-26-closeout` is a **preview** of the 2025-26 closeout
 | Season IDs | `season_config.py` | `TEAM_ID`, `SEASON_ID`, `CURRENT_SEASON`, `GB_ID`. |
 | Opponent logos | `assets/logos/*.png` + `data/logos.json` | Sourced from GoBound; schedule stays on Trackwrestling. |
 
-### Awards JSON shape (chevron cards)
+### Awards
+> **Locked:** Award chevron chrome (`AWARDS_CHEVRON_CHROME_LOCKED` in `styles.css`: Graduate titles, fixed navy tip angle/size, Shawnee S in `assets/img/shawnee-s.png`, Graduate in `assets/fonts/`) is locked to match live banners — do not change in automation or data refresh pipelines.
+ JSON shape (chevron cards)
 
 Each award row needs at least: `id`, `award_name`, `award_category`, `season`, and usually `wrestler` / `weight` / `placement` / `value`.  
 **District Champions** are auto-grouped **one card per decade** in `awards.html` — add a row with `award_name: "District Champions"` (or `award_category: "district"`) and the correct `season` year; do not hand-build decade HTML.
@@ -52,7 +54,7 @@ Docs for rules: `docs/AUTO_AWARDS.md`, `docs/CAREER.md`, `docs/PRESTIGE.md`, `do
 ```bash
 python -m http.server 8080
 # open http://127.0.0.1:8080/index.html
-# pages: roster.html full-roster.html players/*.html schedule.html standings.html stats.html awards.html
+# pages: roster.html full-roster.html players/*.html schedule.html results.html standings.html stats.html awards.html
 ```
 
 Static only — no WordPress. Colors: navy `#000080`, accent `#7EB6D9`.
@@ -109,7 +111,7 @@ See `docs/AUTO_AWARDS.md` for idempotent IDs and override rules.
 - Career **baseline** upload at 2026-27 start  
 - Hostinger Git vs SFTP secrets  
 - Approving first merge of site-v2 to the live deploy branch  
-- Official Olympic Conference standings source (TW unavailable → derived dual slice for now)  
+- (resolved) Olympic Conference standings: `data/standings.json` via NJ.com / GoBound — see below  
 - NJSIAA placements until bout feed works (2025-26 replay: unavailable)
 
 
@@ -175,4 +177,26 @@ python update_site_data.py --skip-scrape  # full pipeline incl. ledger gate
 `data/results_external_ref.json` holds the published overall/league records and per-dual scores used for cross-check (NJ.com Shawnee 2025–26). Conference opponents for Olympic–American are listed there. When TW has no scored dual yet (e.g. a sectional), the ledger gap-fills from this ref and flags `needs_tw_score`.
 
 ### Pages
-Home, Schedule/Results, and Standings all read the ledger-backed `dual_scores` / `standings` / `metadata` fields. Do not reintroduce a `!split` filter on the home dual table.
+Home, Schedule/Results, and **Results** (`results.html`) all read the ledger-backed `dual_scores` / `standings` / `metadata` fields. Do not reintroduce a `!split` filter on the home dual table.
+
+## Olympic Conference standings
+
+**Standings** (`standings.html`) shows every Olympic Conference wrestling team by division (American / National) with logo, division record, and overall record for the active season. Data: `data/standings.json` (source + as-of date). Sorted by division win%.
+
+**Results** (`results.html`) is Shawnee dual W–L + tournament bout cards (former Standings page).
+
+### Pipeline (`update_site_data.py`)
+After the results ledger gate:
+
+1. Try GoBound OC wrestling standings (often HTTP 401/403 for 2025-26 from this server; hub page may still 200).
+2. Fall back to [NJ.com Olympic standings](https://highschoolsports.nj.com/wrestling/standings/season/2025-2026?conference=Olympic).
+3. Group American / National, sort by division win%, attach logos (`school_aliases` + `data/logos.json`).
+4. Validate Shawnee overall (and division) against `data/results_ledger.json` — mismatch → exit 2.
+5. Sync `results_external_ref.json` `conference_opponents` to American peers (excl. Shawnee).
+
+Trackwrestling returns HTTP 406 here — use GoBound/NJ.com for peer records. Gaps are recorded in `standings.json`.
+
+```bash
+python conference_standings.py            # refresh data/standings.json
+python update_site_data.py --skip-scrape  # full pipeline including standings
+```

@@ -46,12 +46,17 @@ SCHOOLS: Dict[str, Dict[str, Any]] = {
     "toms-river-north": {"name": "Toms River North", "aliases": [
         "toms river north", "toms river  north", "tr north", "t.r. north",
     ]},
+    "toms-river-south": {"name": "Toms River South", "aliases": [
+        "toms river south", "tr south", "t.r. south",
+    ]},
     "camden-catholic": {"name": "Camden Catholic", "aliases": ["camden catholic", "camden catholic hs"]},
+    "camden": {"name": "Camden", "aliases": ["camden high", "camden hs", "camden high school"]},
     "west-deptford": {"name": "West Deptford", "aliases": ["west deptford", "west deptford hs", "westdeptford"]},
     "west-windsor-plainsboro-north": {"name": "West Windsor-Plainsboro North", "aliases": [
         "west windsor-plainsboro north", "west windsor plainsboro north", "wwpn", "ww-p north",
     ]},
     "seneca": {"name": "Seneca", "aliases": ["seneca", "seneca hs"]},
+    "winslow": {"name": "Winslow", "aliases": ["winslow", "winslow township", "winslow township hs"]},
     "cherokee": {"name": "Cherokee", "aliases": ["cherokee", "cherokee hs"]},
     "lenape": {"name": "Lenape", "aliases": ["lenape", "lenape hs"]},
     "st-joseph-hammonton": {"name": "St. Joseph (Hammonton)", "aliases": [
@@ -116,11 +121,12 @@ def resolve_school(name: str) -> Tuple[Optional[str], Optional[str]]:
     if n in _ALIAS_TO_SLUG:
         slug = _ALIAS_TO_SLUG[n]
         return slug, SCHOOLS[slug]["name"]
-    # fuzzy contains / startswith on alias keys (longest first)
+    # fuzzy: alias contained in the input (longest first). Do NOT match a short
+    # query inside a longer alias ("Camden" must not resolve to Camden Catholic).
     for alias in sorted(_ALIAS_TO_SLUG.keys(), key=len, reverse=True):
         if len(alias) < 4:
             continue
-        if alias in n or n in alias:
+        if alias == n or (len(n) >= len(alias) and alias in n):
             slug = _ALIAS_TO_SLUG[alias]
             return slug, SCHOOLS[slug]["name"]
     # special: TRN in multi-meet context means Toms River North (not Triton)
@@ -194,11 +200,11 @@ def lookup_logo(
     display = display or name_or_slug
     info = logos_map.get(slug)
     if not info:
-        # fuzzy key match
+        # Prefer exact slug; only accept a logos key that is a prefix/suffix of the
+        # resolved slug (not the reverse — "camden" must not steal camden-catholic).
         for k, v in logos_map.items():
-            if k in slug or slug in k:
+            if k == slug or (len(slug) >= len(k) and (slug.startswith(k + "-") or slug.endswith("-" + k))):
                 info = v
-                slug = k
                 break
     local = None
     url = None

@@ -5,6 +5,7 @@
   const VARSITY_URL = 'data/varsity.json';
   const VARSITY_ASSIGN_URL = 'data/varsity_assignments.json';
   const PLAYERS_INDEX_URL = 'data/players_index.json';
+  const STANDINGS_URL = 'data/standings.json';
   const PLACEHOLDER_PHOTO = 'assets/img/wrestler-silhouette.svg';
 
   async function loadJson(url) {
@@ -65,10 +66,15 @@
       renderFullRosterSearchable(data, index);
       return;
     }
+    if (page === 'Standings') {
+      const standings = await loadJson(STANDINGS_URL);
+      renderConferenceStandings(standings);
+      return;
+    }
     const data = await loadJson(DATA_URL);
     if (page === 'Home') renderHome(data);
     else if (page === 'Schedule / Results') renderSchedule(data);
-    else if (page === 'Standings') renderStandings(data);
+    else if (page === 'Results') renderResults(data);
     else if (page === 'Stats') renderStats(data);
   } catch (e) {
     console.error(e);
@@ -296,11 +302,13 @@
     });
   }
 
-  function renderStandings(data) {
+  function renderResults(data) {
     const s = data.standings || {};
-    document.getElementById('standingsNote').textContent = s.note || '';
+    const noteEl = document.getElementById('resultsNote');
+    if (noteEl) noteEl.textContent = s.note || '';
     const ds = data.dual_scores || {};
-    document.getElementById('standingsMeta').innerHTML =
+    const meta = document.getElementById('resultsMeta');
+    if (meta) meta.innerHTML =
       `<span><strong>Shawnee duals</strong> ${esc(s.shawnee_dual_record || ds.record)}</span>
        <span><strong>Conference</strong> ${esc(s.conference_record || ds.conference_record || '—')}</span>
        <span><strong>Source</strong> ${esc(s.source || 'results ledger')}</span>`;
@@ -309,12 +317,78 @@
       opponent_logo_local: d.opponent_logo_local, opponent_logo: d.opponent_logo,
       conference_dual: d.conference,
     }));
-    document.querySelector('#standingsTable tbody').innerHTML = rows.map((r) => `
+    const dualBody = document.querySelector('#resultsDualsTable tbody');
+    if (dualBody) dualBody.innerHTML = rows.map((r) => `
       <tr>
         <td><div class="opp">${logoImg(r.opponent_logo_local, r.opponent_logo, r.opponent)}<span>${esc(r.opponent)}${r.conference_dual ? ' <em class="conf-tag">conf</em>' : ''}</span></div></td>
         <td>${esc(r.score)}</td>
         <td><span class="badge ${r.result === 'W' ? 'w' : 'l'}">${esc(r.result)}</span></td>
       </tr>`).join('');
+
+    // Tournament bout cards (same payload schedule expand uses)
+    const host = document.getElementById('resultsTournaments');
+    if (host) {
+      const trMap = data.tournament_results || {};
+      const events = (data.schedule || []).filter((m) => m.expandable || m.tournament_key || (m.event_kind === 'tournament'));
+      const seen = new Set();
+      const blocks = [];
+      for (const m of events) {
+        const key = m.tournament_key || m.event_id;
+        if (!key || seen.has(key)) continue;
+        seen.add(key);
+        const tr = trMap[key];
+        const title = esc(m.event_name || m.opponent || key);
+        const date = esc(m.date || '');
+        if (tr && (tr.wrestlers || []).length) {
+          const panel = tournamentPanel({ ...m, tournament_key: key, expandable: true }, data);
+          const match = panel.match(/<div class="tournament-panel">[\s\S]*<\/div>/);
+          const cards = match ? match[0] : panel;
+          blocks.push(`<section class="results-tournament-block"><h3>${title} <span class="muted">${date}</span></h3>${cards}</section>`);
+        } else {
+          blocks.push(`<section class="results-tournament-block"><h3>${title} <span class="muted">${date}</span></h3><p class="muted">Bout cards not yet available.</p></section>`);
+        }
+      }
+      host.innerHTML = blocks.length ? blocks.join('') : '<p class="muted">No tournament results yet.</p>';
+    }
+  }
+
+  function renderConferenceStandings(doc) {
+    const noteEl = document.getElementById('standingsNote');
+    const gaps = (doc.gaps || []).filter((g) => typeof g === 'string' || g.type === 'validation');
+    const gapText = gaps.map((g) => typeof g === 'string' ? g : (g.issues || []).join('; ')).filter(Boolean).join(' · ');
+    if (noteEl) {
+      noteEl.textContent = gapText || '';
+      noteEl.style.display = gapText ? '' : 'none';
+    }
+    const meta = document.getElementById('standingsMeta');
+    if (meta) {
+      meta.innerHTML =
+        `<span><strong>Conference</strong> ${esc(doc.conference || 'Olympic')}</span>
+         <span><strong>Season</strong> ${esc(doc.season || '2025-2026')}</span>
+         <span><strong>Source</strong> ${esc(doc.source || '—')}</span>
+         <span><strong>As of</strong> ${esc(doc.as_of || '—')}</span>`;
+    }
+    const host = document.getElementById('conferenceStandings');
+    if (!host) return;
+    const divisions = doc.divisions || [];
+    host.innerHTML = divisions.map((div) => {
+      const rows = (div.teams || []).map((t) => {
+        const cls = t.is_shawnee ? ' class="shawnee-row"' : '';
+        return `<tr${cls}>
+          <td class="rank">${esc(t.rank)}</td>
+          <td><div class="opp">${logoImg(t.logo_local, t.logo, t.team)}<span>${esc(t.team)}${t.is_shawnee ? ' <em class="conf-tag">us</em>' : ''}</span></div></td>
+          <td>${esc(t.division_record)}</td>
+          <td>${esc(t.overall_record)}</td>
+        </tr>`;
+      }).join('');
+      return `<section class="division-block">
+        <h2 class="section-title">${esc(div.name)} Division</h2>
+        <div class="table-wrap"><table class="standings-table">
+          <thead><tr><th>#</th><th>Team</th><th>Division</th><th>Overall</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table></div>
+      </section>`;
+    }).join('') || '<p class="muted">Standings unavailable.</p>';
   }
 
   function renderStats(data) {
@@ -584,6 +658,7 @@
           <div class="chevron-card-inner">
             <div class="title">${formatChevronTitle(card.title)}</div>
             <div class="body">${body}</div>
+            <!-- AWARDS_CHEVRON_CHROME_LOCKED: identical tip + S on every card -->
             <div class="foot"><img class="s-logo" src="assets/img/shawnee-s.png" alt="Shawnee S" width="58" height="58" /></div>
           </div>
         </article>`;

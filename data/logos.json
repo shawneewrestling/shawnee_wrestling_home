@@ -277,5 +277,13 @@
     "logo_url": null,
     "local": "assets/logos/st-joseph-hammonton-initials.png",
     "source": "initials-badge"
+  },
+  "camden": {
+    "local": "assets/logos/camden-initials.png",
+    "source": "initials-badge"
+  },
+  "winslow": {
+    "local": "assets/logos/winslow-initials.png",
+    "source": "initials-badge"
   }
 }

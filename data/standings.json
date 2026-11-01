@@ -1,0 +1,245 @@
+{
+  "season": "2025-2026",
+  "conference": "Olympic",
+  "sport": "wrestling",
+  "generated_at": "2026-11-01T09:57:03-05:00",
+  "as_of": "2026-11-01",
+  "source": "NJ.com",
+  "source_url": "https://highschoolsports.nj.com/wrestling/standings/season/2025-2026?conference=Olympic",
+  "sources_tried": [
+    {
+      "name": "GoBound",
+      "http": [
+        {
+          "url": "https://www.gobound.com/nj/conferences/oc",
+          "http": 200,
+          "bytes": 333749
+        },
+        {
+          "url": "https://www.gobound.com/nj/conferences/oc/sports/bwr/2025-26/standings",
+          "http": 401,
+          "bytes": 1574
+        },
+        {
+          "url": "https://www.gobound.com/nj/conferences/oc/sports/bwr/2025-2026/standings",
+          "http": 404,
+          "bytes": 8059
+        },
+        {
+          "url": "https://www.gobound.com/nj/conferences/oc/sports/bwr/standings",
+          "http": 200,
+          "bytes": 8059
+        }
+      ],
+      "ok": false
+    },
+    {
+      "name": "NJ.com",
+      "http": 200,
+      "ok": true
+    }
+  ],
+  "gaps": [
+    "GoBound boys wrestling 2025-26 standings blocked (401/403); OC hub ok"
+  ],
+  "validation": {
+    "ok": true,
+    "shawnee_row": {
+      "team": "Shawnee",
+      "division": "American",
+      "overall_record": "12-15",
+      "overall_pct": 0.444,
+      "division_record": "2-3",
+      "division_pct": 0.4,
+      "team_slug": "shawnee",
+      "logo_local": "assets/logos/shawnee.png",
+      "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/20ea89fe-3c81-4d75-a449-04e57cbe2ba9/Shawnee-NJ-small.png",
+      "is_shawnee": true,
+      "rank": 5
+    },
+    "issues": [],
+    "ledger_overall": "12-15"
+  },
+  "divisions": [
+    {
+      "name": "American",
+      "teams": [
+        {
+          "team": "Lenape",
+          "division": "American",
+          "overall_record": "16-5",
+          "overall_pct": 0.762,
+          "division_record": "5-0",
+          "division_pct": 1.0,
+          "team_slug": "lenape",
+          "logo_local": "assets/logos/lenape.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/b1742091-eef5-41fe-b3d1-a66a60960c28/Lenape-NJ-Small.png",
+          "is_shawnee": false,
+          "rank": 1
+        },
+        {
+          "team": "Rancocas Valley",
+          "division": "American",
+          "overall_record": "17-6",
+          "overall_pct": 0.739,
+          "division_record": "4-1",
+          "division_pct": 0.8,
+          "team_slug": "rancocas-valley",
+          "logo_local": "assets/logos/rancocas-valley.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/68837cf2-36eb-4928-8a4a-2caf424abaa6/RancocasValleyRedDevilsSmall.png",
+          "is_shawnee": false,
+          "rank": 2
+        },
+        {
+          "team": "Eastern Regional",
+          "division": "American",
+          "overall_record": "19-9",
+          "overall_pct": 0.679,
+          "division_record": "2-3",
+          "division_pct": 0.4,
+          "team_slug": "eastern",
+          "logo_local": "assets/logos/eastern.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/b7b4d777-1d7c-45ee-90c8-42a29d2eea1d/EasternRegional-NJ-Small.png",
+          "is_shawnee": false,
+          "rank": 3
+        },
+        {
+          "team": "Cherokee",
+          "division": "American",
+          "overall_record": "14-15",
+          "overall_pct": 0.483,
+          "division_record": "2-3",
+          "division_pct": 0.4,
+          "team_slug": "cherokee",
+          "logo_local": "assets/logos/cherokee.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/35e5ef27-d07a-4724-9dc0-f0d250325cb3/Cherokee-NJ-Small.png",
+          "is_shawnee": false,
+          "rank": 4
+        },
+        {
+          "team": "Shawnee",
+          "division": "American",
+          "overall_record": "12-15",
+          "overall_pct": 0.444,
+          "division_record": "2-3",
+          "division_pct": 0.4,
+          "team_slug": "shawnee",
+          "logo_local": "assets/logos/shawnee.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/20ea89fe-3c81-4d75-a449-04e57cbe2ba9/Shawnee-NJ-small.png",
+          "is_shawnee": true,
+          "rank": 5
+        },
+        {
+          "team": "Cherry Hill East",
+          "division": "American",
+          "overall_record": "13-16",
+          "overall_pct": 0.448,
+          "division_record": "0-5",
+          "division_pct": 0.0,
+          "team_slug": "cherry-hill-east",
+          "logo_local": "assets/logos/cherry-hill-east.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/d53b41d2-9d36-45a8-b1a4-4e034e2c8540/CherryHillEastCougarsSmall.png",
+          "is_shawnee": false,
+          "rank": 6
+        }
+      ]
+    },
+    {
+      "name": "National",
+      "teams": [
+        {
+          "team": "Camden Catholic",
+          "division": "National",
+          "overall_record": "17-0",
+          "overall_pct": 1.0,
+          "division_record": "6-0",
+          "division_pct": 1.0,
+          "team_slug": "camden-catholic",
+          "logo_local": "assets/logos/camden-catholic.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/745ec2fd-ad17-4248-96c0-6294c6279094/camdencatholic-nj-Small.png",
+          "is_shawnee": false,
+          "rank": 1
+        },
+        {
+          "team": "Seneca",
+          "division": "National",
+          "overall_record": "24-4",
+          "overall_pct": 0.857,
+          "division_record": "5-1",
+          "division_pct": 0.833,
+          "team_slug": "seneca",
+          "logo_local": "assets/logos/seneca.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/a8f6f4f2-07c6-45cd-980f-0477650f8512/seneca-nj-small.png",
+          "is_shawnee": false,
+          "rank": 2
+        },
+        {
+          "team": "Moorestown",
+          "division": "National",
+          "overall_record": "14-15",
+          "overall_pct": 0.483,
+          "division_record": "4-2",
+          "division_pct": 0.667,
+          "team_slug": "moorestown",
+          "logo_local": "assets/logos/moorestown.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/665a5d9c-d27e-4961-82bc-e33c059eddef/Moorestown-NJ-Small.png",
+          "is_shawnee": false,
+          "rank": 3
+        },
+        {
+          "team": "Cherry Hill West",
+          "division": "National",
+          "overall_record": "18-15",
+          "overall_pct": 0.545,
+          "division_record": "3-3",
+          "division_pct": 0.5,
+          "team_slug": "cherry-hill-west",
+          "logo_local": "assets/logos/cherry-hill-west.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/9cf0882c-28ac-405f-83fe-7701aa59a120/CherryHillWest-NJ-Small.png",
+          "is_shawnee": false,
+          "rank": 4
+        },
+        {
+          "team": "Paul VI",
+          "division": "National",
+          "overall_record": "10-11",
+          "overall_pct": 0.476,
+          "division_record": "2-4",
+          "division_pct": 0.333,
+          "team_slug": "paul-vi",
+          "logo_local": "assets/logos/paul-vi.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/4c578ccd-89bc-4f32-b173-04323a51d07a/paulVI-nj-small.png",
+          "is_shawnee": false,
+          "rank": 5
+        },
+        {
+          "team": "Winslow",
+          "division": "National",
+          "overall_record": "10-13",
+          "overall_pct": 0.435,
+          "division_record": "1-5",
+          "division_pct": 0.167,
+          "team_slug": "winslow",
+          "logo_local": "assets/logos/winslow-initials.png",
+          "logo": null,
+          "is_shawnee": false,
+          "rank": 6
+        },
+        {
+          "team": "Camden",
+          "division": "National",
+          "overall_record": "5-21",
+          "overall_pct": 0.192,
+          "division_record": "0-6",
+          "division_pct": 0.0,
+          "team_slug": "camden",
+          "logo_local": "assets/logos/camden-initials.png",
+          "logo": null,
+          "is_shawnee": false,
+          "rank": 7
+        }
+      ]
+    }
+  ],
+  "policy": "Conference standings for all Olympic wrestling teams by division. Shawnee dual schedule remains Trackwrestling-sourced via results_ledger; peer records from GoBound when available, else NJ.com."
+}

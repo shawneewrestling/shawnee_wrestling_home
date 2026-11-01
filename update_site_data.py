@@ -47,6 +47,11 @@ from results_ledger import (  # noqa: E402
     LedgerConsistencyError,
     LEDGER_PATH,
 )
+from conference_standings import (  # noqa: E402
+    build_standings,
+    sync_external_ref_conference_opponents,
+    StandingsConsistencyError,
+)
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("update_site_data")
@@ -92,7 +97,8 @@ def main():
     # Enrich schedule: split multi-team duals, logos, tournament bout cards
     attach_tournament_results(data)
     data = enrich_schedule(data)
-    # Canonical results ledger + consistency gate (fails loudly on W-L mismatches)
+    # Rebuild canonical results ledger (all dual listings) and fail loudly if
+    # overall / conference / dual-count disagree with external validation refs.
     try:
         ledger, data = build_and_apply(data, write=True, strict=True)
         assert_consistent(LEDGER_PATH)
@@ -104,6 +110,7 @@ def main():
             ledger["validation"]["discrepancy_count"],
         )
     except LedgerConsistencyError as e:
+        # Persist whatever we have so the failure is inspectable, then abort.
         data_path.write_text(json.dumps(data, indent=2) + "\n")
         (ROOT / "wrestling_data.json").write_text(json.dumps(data, indent=2) + "\n")
         logger.error("RESULTS LEDGER CONSISTENCY FAILED — refusing to continue update")
@@ -122,6 +129,24 @@ def main():
         (data.get("dual_scores") or {}).get("record"),
     )
 
+    # Olympic Conference standings (all OC teams by division). GoBound preferred;
+    # NJ.com fallback when GoBound bwr standings are blocked. Validates Shawnee vs ledger.
+    try:
+        standings_doc = build_standings(write=True, strict=True)
+        sync_external_ref_conference_opponents(standings_doc)
+        logger.info(
+            "Conference standings: source=%s as_of=%s shawnee=%s/%s gaps=%s",
+            standings_doc.get("source"),
+            standings_doc.get("as_of"),
+            (standings_doc.get("validation") or {}).get("shawnee_row", {}).get("overall_record"),
+            (standings_doc.get("validation") or {}).get("shawnee_row", {}).get("division_record"),
+            standings_doc.get("gaps"),
+        )
+    except StandingsConsistencyError as e:
+        logger.error("CONFERENCE STANDINGS VALIDATION FAILED — refusing to continue update")
+        logger.error("%s", e)
+        raise SystemExit(2) from e
+
     seed_path = Path(args.seed)
     if seed_path.exists():
         seed_doc = json.loads(seed_path.read_text())
@@ -134,6 +159,7 @@ def main():
     derived = detect_season_awards(data)
     awards_doc = merge_awards(seed, derived, seed_source=str(seed_path))
     awards_path = ROOT / "data" / "awards.json"
+    # AWARDS_CHEVRON_CHROME_LOCKED: never write styles.css / awards header chrome here.
     awards_path.write_text(json.dumps(awards_doc, indent=2) + "\n")
     logger.info("Awards: %d total (%d seed + %d derived)", awards_doc["seed_count"] + awards_doc["derived_2025_26_count"], awards_doc["seed_count"], awards_doc["derived_2025_26_count"])
 
@@ -192,6 +218,9 @@ def main():
         "dual_record": (data.get("dual_scores") or {}).get("record") or data.get("metadata", {}).get("dual_record"),
         "conference_record": (data.get("dual_scores") or {}).get("conference_record"),
         "ledger_duals": len((data.get("dual_scores") or {}).get("duals") or []),
+        "ledger_discrepancies": (json.loads((ROOT / "data" / "results_ledger.json").read_text()).get("validation") or {}).get("discrepancy_count") if (ROOT / "data" / "results_ledger.json").exists() else None,
+        "conference_standings_source": (json.loads((ROOT / "data" / "standings.json").read_text()).get("source") if (ROOT / "data" / "standings.json").exists() else None),
+        "conference_standings_as_of": (json.loads((ROOT / "data" / "standings.json").read_text()).get("as_of") if (ROOT / "data" / "standings.json").exists() else None),
         "ids": {
             "team_id": data.get("metadata", {}).get("team_id"),
             "season_id": data.get("metadata", {}).get("season_id"),
