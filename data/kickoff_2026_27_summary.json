@@ -1,0 +1,33 @@
+{
+  "kickoff": "2026-27",
+  "applied_at": "2026-11-01T13:20:08-05:00",
+  "roster_count": 50,
+  "schedule_events": 15,
+  "first_event": {
+    "event_id": "10979561132",
+    "date": "December 12, 2026",
+    "date_iso": "2026-12-12",
+    "time": "9:00 AM",
+    "time_raw": "0900",
+    "opponent": null,
+    "event_name": "Bishop Eustace TRI",
+    "location": "Shawnee",
+    "home_away": "event",
+    "level": "Varsity",
+    "event_kind": "Y",
+    "result": null,
+    "score_shawnee": null,
+    "score_opp": null,
+    "score_display": null,
+    "opponent_slug": null,
+    "status": "scheduled",
+    "completed": false,
+    "filter_opponent": "Bishop Eustace TRI"
+  },
+  "archived_season": "2025-26",
+  "ids": {
+    "season_id": "95515140",
+    "team_id": "1912611150",
+    "gb_id": "36"
+  }
+}

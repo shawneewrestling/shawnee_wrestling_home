@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "season": "2025-2026",
-  "updated_at": "2026-11-01T12:32:34-05:00",
-  "source_note": "Home roster shows 2025-26 varsity starters (varsity_assignments) with WP gallery photos matched by name.",
+  "season": "2026-2027",
+  "updated_at": "2026-11-01T13:20:08-05:00",
+  "source_note": "Kickoff test: season label advanced to 2026-27. Varsity starter cards still show 2025-26 assignments as a placeholder until coach sets 2026-27 starters / photos.",
   "counts": {
     "starters": 14,
     "with_photo": 8,
@@ -293,5 +293,6 @@
       "career_losses": 34,
       "seasons_on_record": 2
     }
-  ]
+  ],
+  "prior_season_cards": "2025-26"
 }

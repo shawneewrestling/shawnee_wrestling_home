@@ -14,7 +14,7 @@ from typing import Any, Dict, Optional
 ROOT = Path(__file__).resolve().parent
 SEASONS_DIR = ROOT / "data" / "seasons"
 
-CURRENT_SEASON = "2025-26"
+CURRENT_SEASON = "2026-27"
 GB_ID = "36"
 
 _FALLBACK = {

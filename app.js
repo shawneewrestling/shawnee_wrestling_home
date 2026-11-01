@@ -579,7 +579,7 @@
       <span><strong>Filled</strong> ${c.filled ?? 0} / ${c.weight_classes ?? 14}</span>
       <span><strong>Vacant</strong> ${c.vacant ?? 0}</span>
       <span><strong>Full roster</strong> ${c.full_roster ?? (data.roster || []).length}</span>
-      <span><strong>Season</strong> 2025-2026 Season</span>`;
+      <span><strong>Season</strong> ${esc(((data.metadata && data.metadata.season) || assign.season || '').toString().replace(/\s*Season$/i,'') || '—')} Season</span>`;
     const grid = document.getElementById('varsityGrid');
     if (!grid) return;
     const slots = assign.slots || [];

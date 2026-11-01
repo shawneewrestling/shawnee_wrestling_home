@@ -52,14 +52,23 @@ def _clean_opp(name: Optional[str]) -> Optional[str]:
 
 
 def _scores_from_dual_row(entry: List[Any], home_away: str) -> Optional[Dict[str, Any]]:
-    """Home: col18=Shawnee, col21=opp. Away: col18=opp, col21=Shawnee."""
+    """Home: col18=Shawnee, col21=opp. Away: col18=opp, col21=Shawnee.
+
+    TW often stores 0/0 on unpublished future duals. Treat blank or mutual-zero
+    as unscored so preseason schedules do not become fake ties.
+    """
     try:
         a = entry[18] if len(entry) > 18 else None
         b = entry[21] if len(entry) > 21 else None
         if a is None or b is None:
             return None
-        sa, sb = int(str(a)), int(str(b))
+        sa_raw, sb_raw = str(a).strip(), str(b).strip()
+        if sa_raw == "" or sb_raw == "":
+            return None
+        sa, sb = int(sa_raw), int(sb_raw)
     except (TypeError, ValueError):
+        return None
+    if sa == 0 and sb == 0:
         return None
     if home_away == "away":
         shawnee, opp = sb, sa

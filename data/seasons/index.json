@@ -1,11 +1,18 @@
 {
-  "default": "2025-26",
-  "generated_at": "2026-11-01T11:27:23-05:00",
+  "default": "2026-27",
+  "generated_at": "2026-11-01T13:20:08-05:00",
   "seasons": [
+    {
+      "id": "2026-27",
+      "label": "2026-2027 Season",
+      "path": "data/seasons/2026-27",
+      "status": "preseason"
+    },
     {
       "id": "2025-26",
       "label": "2025-2026 Season",
-      "path": "data/seasons/2025-26"
+      "path": "data/seasons/2025-26",
+      "status": "final"
     },
     {
       "id": "2024-25",

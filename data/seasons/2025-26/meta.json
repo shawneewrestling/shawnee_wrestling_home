@@ -17,5 +17,10 @@
   },
   "event_count": 35,
   "dual_count": 27,
-  "source": "site export + NJ.com standings when available"
+  "source": "site export + NJ.com standings when available",
+  "season_status": "final",
+  "archived_at": "2026-11-01T13:20:08-05:00",
+  "kickoff_note": "Frozen at 2026-27 kickoff test; not overwritten by new season data.",
+  "team_id": "768996150",
+  "season_id": "1560212138"
 }
