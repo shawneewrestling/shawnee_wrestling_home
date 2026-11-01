@@ -10,9 +10,9 @@ against the latest Trackwrestling scrape and merges rows into `data/awards.json`
 
 | Trigger | Source | Award card | Notes |
 |--------|--------|------------|-------|
-| District placement 1st | Tournament placement feed | **District Champions** | Decade-grouped at render time |
+| District placement 1st | Tournament placement feed | **District Champions** | Decade-grouped at render time; rows sorted year then weight asc (HWT/285 last) |
 | District placement 2–6 | Tournament placement feed | **District Place Winner** | Until feed exists, Jeff can paste a list |
-| Region placement 1st / 2–6 | Tournament placement feed | **Region Champions** / **Region Place Winner** | |
+| Region placement 1st / 2–6 | Tournament placement feed | **Region Champions** / **Region Place Winner** | Champions sorted year then weight asc (HWT/285 last) |
 | State placement 1st / 2–8 | Tournament placement feed | **State Champions** / **State Place Winner** | |
 | Career wins cross 100 | `career.py` rollups | **Career Wins** milestone | Requires Jeff baseline + season aggregates |
 
@@ -38,3 +38,9 @@ Jeff to add manually to the seed / awards JSON after the tournament.
 
 Jeff can delete or edit an auto row in `data/awards.json` (set `auto_detected` false and adjust).
 Prefer fixing the rule if a class of awards is wrong.
+
+## Sort order (District / Region Champions)
+
+`auto_awards.sort_district_region_champions()` runs on every merge into `data/awards.json`:
+entries are ordered by **season (year) ascending**, then **weight class ascending**
+(numeric; `HWT` / `285` last). The awards page uses the same key when rendering.

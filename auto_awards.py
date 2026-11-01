@@ -14,6 +14,7 @@ Returns award row dicts with auto_detected=True for merge into awards.json.
 
 from __future__ import annotations
 
+import re
 from datetime import datetime
 from typing import Any, Dict, List
 from zoneinfo import ZoneInfo
@@ -25,6 +26,56 @@ def now_est() -> str:
     t = datetime.now(EST)
     s = t.strftime("%Y-%m-%dT%H:%M:%S%z")
     return s[:-2] + ":" + s[-2:]
+
+
+
+def weight_sort_key(weight: Any) -> int:
+    """Ascending weight-class order; HWT / 285 last among known classes."""
+    s = str(weight or "").strip().upper()
+    if not s:
+        return 997
+    if s in {"HWT", "HW", "HEAVY", "HEAVYWEIGHT", "HEAVY WEIGHT"}:
+        return 285
+    m = re.search(r"\d+", s)
+    if not m:
+        return 998
+    n = int(m.group())
+    # Treat bare 285 as heavyweight (last)
+    return n
+
+
+def district_region_champ_sort_key(row: Dict[str, Any]) -> tuple:
+    return (
+        str(row.get("season") or ""),
+        weight_sort_key(row.get("weight")),
+        str(row.get("wrestler") or ""),
+        str(row.get("id") or ""),
+    )
+
+
+def sort_district_region_champions(awards: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Year asc, then weight asc within year — District / Region Champions only.
+
+    Other award rows keep their relative positions; champ slots are refilled from
+    a globally sorted champ list so automation + seed stay data-driven.
+    """
+    champ_names = {"District Champions", "Region Champions"}
+    by_name = {
+        name: sorted(
+            [a for a in awards if (a.get("award_name") or "") == name],
+            key=district_region_champ_sort_key,
+        )
+        for name in champ_names
+    }
+    iters = {name: iter(rows) for name, rows in by_name.items()}
+    out: List[Dict[str, Any]] = []
+    for a in awards:
+        name = a.get("award_name") or ""
+        if name in iters:
+            out.append(next(iters[name]))
+        else:
+            out.append(a)
+    return out
 
 
 def detect_season_awards(season_data: Dict[str, Any], placements: List[Dict] | None = None) -> List[Dict]:
@@ -91,7 +142,7 @@ def merge_awards(seed: List[Dict], derived: List[Dict], seed_source: str = "") -
             },
             "seed_source": seed_source or "awards_seed.json",
         },
-        "awards": historical + derived,
+        "awards": sort_district_region_champions(historical + derived),
         "seed_count": len(historical),
         "derived_2025_26_count": len(derived),
     }

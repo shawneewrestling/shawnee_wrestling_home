@@ -159,6 +159,20 @@ def main():
     derived = detect_season_awards(data)
     awards_doc = merge_awards(seed, derived, seed_source=str(seed_path))
     awards_path = ROOT / "data" / "awards.json"
+    # Preserve locked layout keys if present on disk (card_rows / card_order).
+    if awards_path.exists():
+        try:
+            prev = json.loads(awards_path.read_text())
+            for k in ("card_rows", "card_order", "card_template"):
+                if k in prev and prev[k]:
+                    if k == "card_template" and isinstance(prev[k], dict):
+                        base = dict(awards_doc.get("card_template") or {})
+                        base.update(prev[k])
+                        awards_doc["card_template"] = base
+                    else:
+                        awards_doc[k] = prev[k]
+        except Exception:
+            pass
     # AWARDS_CHEVRON_CHROME_LOCKED: never write styles.css / awards header chrome here.
     awards_path.write_text(json.dumps(awards_doc, indent=2) + "\n")
     logger.info("Awards: %d total (%d seed + %d derived)", awards_doc["seed_count"] + awards_doc["derived_2025_26_count"], awards_doc["seed_count"], awards_doc["derived_2025_26_count"])

@@ -2315,17 +2315,6 @@
       "notes": "NJSIAA District 28 2025-02-22; final DEC 5-0 over Peyton Reese (Seneca); NJ.com bracket 9565; Jeff-approved 2026-11-01"
     },
     {
-      "id": "district-champ-2026-jordan-segal-138",
-      "award_name": "District Champions",
-      "award_category": "district",
-      "season": "2026",
-      "wrestler": "Jordan Segal",
-      "weight": "138",
-      "placement": "1st",
-      "confidence": "high",
-      "notes": "NJSIAA District 28 2026-02-28; TW event 8978282132; 1st Place Match Fall over Landan Riddell (Immaculata); Jeff-approved 2026-11-01"
-    },
-    {
       "id": "district-champ-2025-chris-ahrens-150",
       "award_name": "District Champions",
       "award_category": "district",
@@ -2335,6 +2324,17 @@
       "placement": "1st",
       "confidence": "high",
       "notes": "NJSIAA District 28 2025; 1st place match over Joseph Tete (Lenape), Inj. 3:40; Jeff-provided result, approved 2026-11-01"
+    },
+    {
+      "id": "district-champ-2026-jordan-segal-138",
+      "award_name": "District Champions",
+      "award_category": "district",
+      "season": "2026",
+      "wrestler": "Jordan Segal",
+      "weight": "138",
+      "placement": "1st",
+      "confidence": "high",
+      "notes": "NJSIAA District 28 2026-02-28; TW event 8978282132; 1st Place Match Fall over Landan Riddell (Immaculata); Jeff-approved 2026-11-01"
     }
   ],
   "seed_count": 210,

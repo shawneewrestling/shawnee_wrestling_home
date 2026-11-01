@@ -494,6 +494,15 @@
     return m ? Number(m[1]) : 99;
   }
 
+  function weightSortKey(w) {
+    const s = String(w || '').trim().toUpperCase();
+    if (!s) return 997;
+    if (s === 'HWT' || s === 'HW' || s === 'HEAVY' || s === 'HEAVYWEIGHT' || s === 'HEAVY WEIGHT') return 285;
+    const m = s.match(/(\d+)/);
+    if (!m) return 998;
+    return Number(m[1]);
+  }
+
   function isStateChampionCard(card) {
     return (card.title || '') === 'State Champions' ||
       ((card.kind === 'state' || card.rows[0]?.award_category === 'state') &&
@@ -641,6 +650,14 @@
         if (isStatePlaceWinnerCard(card)) {
           const pd = placeSortKey(a.placement) - placeSortKey(b.placement);
           if (pd) return pd;
+        }
+        // District / Region Champions: year asc, then weight asc (HWT/285 last) — matches auto_awards.py
+        if (card.kind === 'district' || card.kind === 'region') {
+          const sy = String(a.season || '').localeCompare(String(b.season || ''));
+          if (sy) return sy;
+          const dw = weightSortKey(a.weight) - weightSortKey(b.weight);
+          if (dw) return dw;
+          return String(a.wrestler || '').localeCompare(String(b.wrestler || ''));
         }
         return String(a.season || '').localeCompare(String(b.season || ''))
           || String(a.wrestler || '').localeCompare(String(b.wrestler || ''));
