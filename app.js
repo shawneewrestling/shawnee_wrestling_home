@@ -294,6 +294,7 @@
         <div class="body">
           <div class="name">${esc(r.name)}</div>
           ${meta}
+          ${careerLine(r)}
         </div>
       </${tag}>`;
     }).join('');
@@ -302,6 +303,12 @@
 
   function photoSrc(photo) {
     return photo || PLACEHOLDER_PHOTO;
+  }
+
+  function careerLine(r) {
+    if (!r || !r.show_career) return '';
+    if (r.career_wins == null || r.career_losses == null) return '';
+    return `<div class="meta career">Career ${esc(`${r.career_wins}-${r.career_losses}`)}</div>`;
   }
 
   function renderVarsityCards(assign, data) {
@@ -340,6 +347,7 @@
         <div class="body">
           <div class="name">${esc(s.name)}</div>
           <div class="meta">${esc(s.grade || '')} · ${esc(rec)}</div>
+          ${careerLine(s)}
         </div>
       </a>`;
     }).join('') || '<p>No assignments</p>';
@@ -430,6 +438,7 @@
           <div class="body">
             <div class="name">${esc(r.name)}</div>
             ${meta}
+            ${careerLine(r)}
           </div>
         </${tag}>`;
       }).join('') || '<p>No matches</p>';

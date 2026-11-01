@@ -171,6 +171,24 @@
       "source": "career_best_placement",
       "recognitions": [
         {
+          "season": "2026",
+          "award_name": "District Champions",
+          "award_category": "district",
+          "placement": "1st",
+          "weight": "138",
+          "counts_for_prestige": false,
+          "reason": "current_season"
+        },
+        {
+          "season": "2025",
+          "award_name": "District Champions",
+          "award_category": "district",
+          "placement": "1st",
+          "weight": "113",
+          "counts_for_prestige": false,
+          "reason": "current_season"
+        },
+        {
           "season": "2024",
           "award_name": "State Place Winner",
           "award_category": "state",

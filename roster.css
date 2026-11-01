@@ -162,3 +162,9 @@ a.wrestler-tile:hover {
   .player-hero { grid-template-columns: 1fr; }
   .player-photo { width: 160px; height: 192px; }
 }
+
+.wrestler-tile .meta.career {
+  color: var(--navy, #000080);
+  font-weight: 700;
+  font-size: 0.82rem;
+}

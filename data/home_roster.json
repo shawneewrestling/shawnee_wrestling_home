@@ -22,7 +22,11 @@
       "weights_wrestled": [
         "106"
       ],
-      "matched": false
+      "matched": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "name": "Matt Hart",
@@ -37,7 +41,11 @@
       "weights_wrestled": [
         "113"
       ],
-      "matched": false
+      "matched": false,
+      "show_career": true,
+      "career_wins": 14,
+      "career_losses": 22,
+      "seasons_on_record": 2
     },
     {
       "name": "Sean Bradley",
@@ -52,7 +60,11 @@
       "weights_wrestled": [
         "120"
       ],
-      "matched": true
+      "matched": true,
+      "show_career": true,
+      "career_wins": 35,
+      "career_losses": 29,
+      "seasons_on_record": 3
     },
     {
       "name": "Jordan Segal",
@@ -67,7 +79,11 @@
       "weights_wrestled": [
         "126"
       ],
-      "matched": true
+      "matched": true,
+      "show_career": true,
+      "career_wins": 107,
+      "career_losses": 25,
+      "seasons_on_record": 4
     },
     {
       "name": "Brayden Inman",
@@ -82,7 +98,11 @@
       "weights_wrestled": [
         "132"
       ],
-      "matched": false
+      "matched": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "name": "Garrett Borlaug",
@@ -97,7 +117,11 @@
       "weights_wrestled": [
         "138"
       ],
-      "matched": true
+      "matched": true,
+      "show_career": true,
+      "career_wins": 30,
+      "career_losses": 47,
+      "seasons_on_record": 3
     },
     {
       "name": "Oleksandr `Sasha` Yurovskyi",
@@ -112,7 +136,11 @@
       "weights_wrestled": [
         "144"
       ],
-      "matched": true
+      "matched": true,
+      "show_career": true,
+      "career_wins": 31,
+      "career_losses": 29,
+      "seasons_on_record": 2
     },
     {
       "name": "Kellan McDonough",
@@ -127,7 +155,11 @@
       "weights_wrestled": [
         "150"
       ],
-      "matched": false
+      "matched": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "name": "Gabriel Evans",
@@ -142,7 +174,11 @@
       "weights_wrestled": [
         "157"
       ],
-      "matched": false
+      "matched": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "name": "Max Spitznas",
@@ -157,7 +193,11 @@
       "weights_wrestled": [
         "165"
       ],
-      "matched": true
+      "matched": true,
+      "show_career": true,
+      "career_wins": 53,
+      "career_losses": 44,
+      "seasons_on_record": 3
     },
     {
       "name": "Joseph Augusta",
@@ -172,7 +212,11 @@
       "weights_wrestled": [
         "175"
       ],
-      "matched": true
+      "matched": true,
+      "show_career": true,
+      "career_wins": 13,
+      "career_losses": 22,
+      "seasons_on_record": 3
     },
     {
       "name": "Jacobs Rodriguez",
@@ -187,7 +231,11 @@
       "weights_wrestled": [
         "190"
       ],
-      "matched": false
+      "matched": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "name": "William (Liam) McSorley",
@@ -202,7 +250,11 @@
       "weights_wrestled": [
         "215"
       ],
-      "matched": true
+      "matched": true,
+      "show_career": true,
+      "career_wins": 22,
+      "career_losses": 28,
+      "seasons_on_record": 2
     },
     {
       "name": "Collin McHugh",
@@ -217,7 +269,11 @@
       "weights_wrestled": [
         "285"
       ],
-      "matched": true
+      "matched": true,
+      "show_career": true,
+      "career_wins": 27,
+      "career_losses": 34,
+      "seasons_on_record": 2
     }
   ]
 }

@@ -39,7 +39,11 @@
       "player_page": "players/daniel-fitzpatrick-300132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "assigned_weight": "113",
@@ -53,7 +57,11 @@
       "player_page": "players/matt-hart-235132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": true,
+      "career_wins": 14,
+      "career_losses": 22,
+      "seasons_on_record": 2
     },
     {
       "assigned_weight": "120",
@@ -67,7 +75,11 @@
       "player_page": "players/sean-bradley-197132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": true,
+      "career_wins": 35,
+      "career_losses": 29,
+      "seasons_on_record": 3
     },
     {
       "assigned_weight": "126",
@@ -86,7 +98,11 @@
         "season": "2024",
         "inferred": false
       },
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": true,
+      "career_wins": 107,
+      "career_losses": 25,
+      "seasons_on_record": 4
     },
     {
       "assigned_weight": "132",
@@ -100,7 +116,11 @@
       "player_page": "players/brayden-inman-388132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "assigned_weight": "138",
@@ -114,7 +134,11 @@
       "player_page": "players/garrett-borlaug-199132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": true,
+      "career_wins": 30,
+      "career_losses": 47,
+      "seasons_on_record": 3
     },
     {
       "assigned_weight": "144",
@@ -128,7 +152,11 @@
       "player_page": "players/oleksandr-sasha-yurovskyi-221132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": true,
+      "career_wins": 31,
+      "career_losses": 29,
+      "seasons_on_record": 2
     },
     {
       "assigned_weight": "150",
@@ -142,7 +170,11 @@
       "player_page": "players/kellan-mcdonough-397132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "assigned_weight": "157",
@@ -156,7 +188,11 @@
       "player_page": "players/gabriel-evans-512132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "assigned_weight": "165",
@@ -170,7 +206,11 @@
       "player_page": "players/max-spitznas-208132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": true,
+      "career_wins": 53,
+      "career_losses": 44,
+      "seasons_on_record": 3
     },
     {
       "assigned_weight": "175",
@@ -184,7 +224,11 @@
       "player_page": "players/joseph-augusta-202132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": true,
+      "career_wins": 13,
+      "career_losses": 22,
+      "seasons_on_record": 3
     },
     {
       "assigned_weight": "190",
@@ -198,7 +242,11 @@
       "player_page": "players/jacobs-rodriguez-217132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
     },
     {
       "assigned_weight": "215",
@@ -212,7 +260,11 @@
       "player_page": "players/william-liam-mcsorley-205132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": true,
+      "career_wins": 22,
+      "career_losses": 28,
+      "seasons_on_record": 2
     },
     {
       "assigned_weight": "285",
@@ -226,7 +278,11 @@
       "player_page": "players/collin-mchugh-230132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed"
+      "source": "auto_seed",
+      "show_career": true,
+      "career_wins": 27,
+      "career_losses": 34,
+      "seasons_on_record": 2
     }
   ]
 }

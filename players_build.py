@@ -49,7 +49,7 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
     losses = w.get("losses") or 0
     prest = ctx["prestige"].get(wid) or {}
     recognitions = prest.get("recognitions") or []
-    prior = ctx["prior_stats"].get(wid)
+    career = ctx["career"].get(wid) or ctx["career"].get((name or "").strip().lower()) or {}
 
     if recognitions:
         items = []
@@ -66,24 +66,12 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
             if r.get("counts_for_prestige") and r.get("prestige_points"):
                 badge = f'<span class="prest-badge">{esc(r.get("prestige_points"))} pts</span>'
             items.append(f"<li>{' · '.join(bits)}{badge}</li>")
-        recog_html = '<ul class="recog-list">' + "".join(items) + "</ul>"
-    else:
-        recog_html = (
-            '<p class="empty-state">No district / region / state placements on file yet.</p>'
-        )
-
-    if prior:
-        prior_html = (
-            '<div class="stat-card"><div class="label">Prior seasons</div>'
-            f'<div class="value">{esc(prior.get("wins", 0))}-{esc(prior.get("losses", 0))}</div>'
-            f'<div class="sub">{esc(prior.get("note") or "")}</div></div>'
+        recog_section = (
+            '<h2 class="section-title">Recognitions</h2>\n'
+            '    <ul class="recog-list">' + "".join(items) + "</ul>"
         )
     else:
-        prior_html = (
-            '<div class="callout">Prior-season stats will appear here after the career '
-            "baseline upload (planned for 2026-27 kickoff) and as archived seasons are "
-            "backfilled.</div>"
-        )
+        recog_section = ""
 
     if prest.get("has_prestige"):
         adv = esc(prest.get("advancement") or "")
@@ -96,11 +84,19 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
             "</div>"
         )
     else:
-        prest_block = (
+        prest_block = ""
+
+    career_block = ""
+    if career.get("show_career"):
+        cw = career.get("career_wins")
+        cl = career.get("career_losses")
+        seasons = career.get("seasons_on_record")
+        sub = f'{esc(seasons)} seasons' if seasons else "Career"
+        career_block = (
             '<div class="stat-card">'
-            '<div class="label">NJSIAA prestige</div>'
-            '<div class="value">0</div>'
-            '<div class="sub">No prior placement on file</div>'
+            '<div class="label">Career</div>'
+            f'<div class="value">{esc(cw)}-{esc(cl)}</div>'
+            f'<div class="sub">{sub}</div>'
             "</div>"
         )
 
@@ -150,16 +146,13 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
             <div class="value">{esc(wins)}-{esc(losses)}</div>
             <div class="sub">Current season record</div>
           </div>
+          {career_block}
           {prest_block}
         </div>
       </div>
     </div>
 
-    <h2 class="section-title">Recognitions</h2>
-    {recog_html}
-
-    <h2 class="section-title">Prior seasons</h2>
-    {prior_html}
+    {recog_section}
   </main>
   <footer class="site-footer">
     Shawnee High School Wrestling · 2025-2026 Season
@@ -167,6 +160,7 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
 </body>
 </html>
 """
+
 
 
 def build_players(
@@ -185,16 +179,20 @@ def build_players(
         if slot.get("wrestler_id") and not slot.get("vacant"):
             assigned[str(slot["wrestler_id"])] = str(slot["assigned_weight"])
 
-    prior_stats: Dict[str, Any] = {}
-    career = career or {}
-    for row in career.get("baseline") or []:
+    career_doc = career or {}
+    career_by: Dict[str, Any] = {}
+    for row in career_doc.get("wrestlers") or []:
+        entry = {
+            "show_career": bool(row.get("show_career")),
+            "career_wins": row.get("career_wins"),
+            "career_losses": row.get("career_losses"),
+            "seasons_on_record": row.get("seasons_on_record") or 0,
+        }
         wid = str(row.get("wrestler_id") or "")
         if wid:
-            prior_stats[wid] = {
-                "wins": row.get("wins") or row.get("career_wins") or 0,
-                "losses": row.get("losses") or row.get("career_losses") or 0,
-                "note": "Career baseline",
-            }
+            career_by[wid] = entry
+        if row.get("name"):
+            career_by[str(row["name"]).strip().lower()] = entry
 
     if PLAYERS_DIR.exists():
         for p in PLAYERS_DIR.glob("*.html"):
@@ -203,7 +201,7 @@ def build_players(
         PLAYERS_DIR.mkdir(parents=True, exist_ok=True)
 
     index = []
-    ctx = {"assigned": assigned, "prestige": prest, "prior_stats": prior_stats}
+    ctx = {"assigned": assigned, "prestige": prest, "career": career_by}
     for w in roster:
         wid = str(w.get("wrestler_id") or "")
         if not wid:
@@ -211,6 +209,7 @@ def build_players(
         s = slug(w.get("name") or "", wid)
         (PLAYERS_DIR / f"{s}.html").write_text(player_html(w, ctx))
         p = prest.get(wid) or {}
+        c = career_by.get(wid) or career_by.get(str(w.get("name") or "").strip().lower()) or {}
         index.append({
             "wrestler_id": wid,
             "name": w.get("name"),
@@ -223,6 +222,10 @@ def build_players(
             "player_page": f"players/{s}.html",
             "prestige_points": p.get("prestige_points") or 0,
             "has_prestige": bool(p.get("has_prestige")),
+            "show_career": bool(c.get("show_career")),
+            "career_wins": c.get("career_wins"),
+            "career_losses": c.get("career_losses"),
+            "seasons_on_record": c.get("seasons_on_record") or 0,
             "search_text": " ".join(
                 filter(
                     None,
@@ -265,9 +268,10 @@ def main():
     else:
         assignments = json.loads(assignments_path.read_text())
     career = {}
-    cp = ROOT / "data" / "career.json"
-    if cp.exists():
-        career = json.loads(cp.read_text())
+    for cp in (ROOT / "data" / "career_records.json", ROOT / "data" / "career.json"):
+        if cp.exists():
+            career = json.loads(cp.read_text())
+            break
     doc = build_players(wd, awards, assignments, career)
     print(f"Wrote {doc['count']} player pages → {PLAYERS_DIR}")
 
