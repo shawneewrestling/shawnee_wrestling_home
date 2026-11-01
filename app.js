@@ -154,14 +154,20 @@
     return t ? `${w}-${l}-${t}` : `${w}-${l}`;
   }
 
-  function resultBadge(m, data, running) {
+  function dualScoreText(m) {
+    if (!m) return '';
+    const disp = String(m.score_display || '').trim();
+    if (disp) return disp;
+    if (m.shawnee != null && m.opp != null) return `${m.shawnee}-${m.opp}`;
+    if (m.shawnee_score != null && m.opp_score != null) return `${m.shawnee_score}-${m.opp_score}`;
+    return '';
+  }
+
+  function resultBadge(m, data) {
     if (!m) return '—';
     if (m.result === 'W' || m.result === 'L' || m.result === 'T') {
       const cls = m.result === 'W' ? 'w' : (m.result === 'L' ? 'l' : 'ev');
-      const score = (m.score_display || '').trim();
-      const core = score ? `${m.result} ${score}` : m.result;
-      const withRec = running ? `${core} (${running})` : core;
-      return `<span class="badge ${cls}">${esc(withRec)}</span>`;
+      return `<span class="badge ${cls}">${esc(m.result)}</span>`;
     }
     if (m.status === 'final' || m.completed || m.result_label === 'Final') {
       const summary = tournamentSummary(m, data);
@@ -474,9 +480,10 @@
     const duals = homeDualsForDisplay(data);
     if (!tb) return;
     const parts = [];
+    let hw = 0, hl = 0, ht = 0;
     duals.forEach((d) => {
       const match = scheduleMatchForDual(d, data);
-      const panelHtml = match ? tournamentPanel(match, data, 3) : '';
+      const panelHtml = match ? tournamentPanel(match, data, 4) : '';
       const canExpand = !!panelHtml;
       const anchor = dualAnchorId(match || d);
       const href = canExpand && anchor ? `schedule.html#${anchor}` : '';
@@ -485,10 +492,19 @@
       const dataAttrs = canExpand
         ? ` data-can-expand="1"${anchor ? ` data-dual-id="${esc(anchor)}"` : ''}${href ? ` data-schedule-href="${esc(href)}"` : ''}`
         : '';
+      if (d.result === 'W') hw += 1;
+      else if (d.result === 'L') hl += 1;
+      else if (d.result === 'T') ht += 1;
+      const running = ['W', 'L', 'T'].includes(d.result) ? formatRunningRecord(hw, hl, ht) : '';
+      // Prefer season cumulative from dual payload when present (home list may be windowed).
+      const recordText = d.cumulative_record || running;
+      const cls = d.result === 'W' ? 'w' : (d.result === 'T' ? 'ev' : 'l');
+      const scoreText = dualScoreText(d) || ((d.shawnee != null && d.opp != null) ? `${d.shawnee}-${d.opp}` : '');
       parts.push(`<tr class="${trClass}"${title}${dataAttrs}>
         <td><div class="opp">${logoImg(d.opponent_logo_local, d.opponent_logo, d.opponent)}<span>${esc(d.opponent)}</span></div></td>
-        <td>${d.shawnee}-${d.opp}</td>
-        <td><span class="badge ${d.result === 'W' ? 'w' : (d.result === 'T' ? 'ev' : 'l')}">${esc(d.result)}</span></td>
+        <td class="result-letter"><span class="badge ${cls}">${esc(d.result || '')}</span></td>
+        <td class="score-cell">${esc(scoreText)}</td>
+        <td class="record-cell">${esc(recordText)}</td>
       </tr>`);
       if (panelHtml) {
         parts.push(panelHtml.replace('class="expand-row"', 'class="expand-row home-dual-expand hidden"'));
@@ -810,7 +826,7 @@
         return String(a.weight).localeCompare(String(b.weight)) || String(a.wrestler).localeCompare(String(b.wrestler));
       });
       const items = rows.map((r) => boutLine(r.bout, r.wrestler, r.weight)).join('');
-      const cols = colspan || 6;
+      const cols = colspan || 8;
       return `<tr class="expand-row"><td colspan="${cols}"><div class="tournament-panel dual-bouts"><ul class="bouts">${items}</ul></div></td></tr>`;
     }
     const cards = wrestlers.map((w) => {
@@ -821,7 +837,7 @@
         <ul class="bouts">${items}</ul>
       </details>`;
     }).join('');
-    const cols = colspan || 6;
+    const cols = colspan || 8;
     return `<tr class="expand-row"><td colspan="${cols}"><div class="tournament-panel">${cards}</div></td></tr>`;
   }
 
@@ -878,7 +894,9 @@
         running = formatRunningRecord(w, l, t);
       }
       const timeLabel = m.time || ((m.status === 'final' || m.completed || seasonFinal) ? '—' : 'TBD');
-      const resultCell = resultBadge(m, data, running);
+      const resultCell = resultBadge(m, data);
+      const scoreCell = completedDual ? esc(dualScoreText(m)) : '';
+      const recordCell = running ? esc(running) : '';
       const detailsCell = expand || '';
       const anchor = dualAnchorId(m);
       const idAttr = anchor ? ` id="${esc(anchor)}"` : '';
@@ -887,7 +905,9 @@
         <td>${oppCell(m)}</td>
         <td>${esc(siteCell(m))}</td>
         <td>${esc(timeLabel)}</td>
-        <td>${resultCell}</td>
+        <td class="result-letter">${resultCell}</td>
+        <td class="score-cell">${scoreCell}</td>
+        <td class="record-cell">${recordCell}</td>
         <td class="details-cell">${detailsCell}</td>
       </tr>`);
       if (canExpand) {

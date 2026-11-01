@@ -871,3 +871,21 @@ tr:hover td { background: #eef5fb; }
 #homeDuals tr.home-dual-expand td {
   background: #f8fafc;
 }
+
+#scheduleTable td.result-letter,
+#homeDuals td.result-letter {
+  white-space: nowrap;
+  width: 1%;
+}
+#scheduleTable td.score-cell,
+#homeDuals td.score-cell {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  width: 1%;
+}
+#scheduleTable td.record-cell,
+#homeDuals td.record-cell {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+  width: 1%;
+}
