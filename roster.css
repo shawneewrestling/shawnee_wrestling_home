@@ -1,0 +1,164 @@
+/* Varsity / full-roster / player cards — navy #002060, sky #88b4e8 */
+:root {
+  --roster-navy: #002060;
+  --roster-sky: #88b4e8;
+}
+
+.roster-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.roster-toolbar input[type="search"],
+.roster-toolbar select {
+  border: 1px solid var(--border, #d0d7e2);
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  min-width: 12rem;
+  background: #fff;
+}
+.roster-toolbar .count {
+  color: var(--muted, #555);
+  font-size: 0.9rem;
+}
+
+.varsity-grid,
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.wrestler-tile {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #d0d7e2;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 16, 64, 0.06);
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-decoration: none;
+}
+a.wrestler-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 32, 96, 0.14);
+  color: inherit;
+}
+.wrestler-tile .photo-wrap {
+  background: linear-gradient(160deg, #e8eef8 0%, #d5e4f6 100%);
+  aspect-ratio: 5 / 6;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+.wrestler-tile .photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.wrestler-tile .wt-chip {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: var(--roster-navy);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.wrestler-tile .prest-chip {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: var(--roster-sky);
+  color: var(--roster-navy);
+  font-weight: 800;
+  font-size: 0.72rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+}
+.wrestler-tile .body {
+  padding: 0.7rem 0.75rem 0.85rem;
+  border-top: 3px solid var(--roster-navy);
+}
+.wrestler-tile .name {
+  font-weight: 700;
+  color: var(--roster-navy);
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+.wrestler-tile .meta {
+  color: #556;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+}
+.wrestler-tile.vacant {
+  opacity: 0.72;
+  border-style: dashed;
+}
+.wrestler-tile.vacant .name { color: #668; font-weight: 600; }
+
+.section-title {
+  color: var(--roster-navy);
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 1.5rem 0 0.65rem;
+}
+
+.player-hero {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.25rem;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+.player-photo {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 3px solid var(--roster-navy);
+  background: #e8eef8;
+}
+.player-stats .stat-card.prestige .value { color: var(--roster-navy); }
+.player-stats .stat-card .sub { color: #667; font-size: 0.8rem; margin-top: 0.2rem; }
+.recog-list {
+  list-style: none;
+  background: #fff;
+  border: 1px solid #d0d7e2;
+  border-radius: 12px;
+  padding: 0.35rem 0;
+}
+.recog-list li {
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid #eef2f7;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: center;
+}
+.recog-list li:last-child { border-bottom: none; }
+.prest-badge {
+  margin-left: auto;
+  background: #e8eef8;
+  color: var(--roster-navy);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+.empty-state { color: #667; font-style: italic; }
+
+@media (max-width: 640px) {
+  .player-hero { grid-template-columns: 1fr; }
+  .player-photo { width: 160px; height: 192px; }
+}

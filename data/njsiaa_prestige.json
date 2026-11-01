@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "title": "NJSIAA District Pre-Seed Chart — Prestige Points (Own Merit)",
+  "source_url": "https://www.njsiaa.org/sites/default/files/documents/2025-11/wrestling-boys-individual-regs-2025-26.pdf",
+  "source_label": "NJSIAA 2025-2026 Boys Wrestling Individual Championships regulations (District Pre-Seed Chart)",
+  "notes": [
+    "Prestige Points are the points a wrestler starts the season with by virtue of their best past performance in a previous NJSIAA State Tournament series (districts → regions → states).",
+    "Shawnee site rule (Jeff 2026-11-01): use the wrestler's highest CAREER placement across all prior seasons on record, not only the immediately prior year.",
+    "Per-match caliber / prestige tracking against opponents is out of scope for now.",
+    "Current-season placements are excluded from prestige (prestige is carried into the season)."
+  ],
+  "table": [
+    {"advancement": "State Champ", "prestige_points": 125, "caliber_points": 62.5, "level": "state", "place": 1},
+    {"advancement": "2nd in States", "prestige_points": 115, "caliber_points": 57.5, "level": "state", "place": 2},
+    {"advancement": "3rd in States", "prestige_points": 110, "caliber_points": 55, "level": "state", "place": 3},
+    {"advancement": "4th in States", "prestige_points": 105, "caliber_points": 52.5, "level": "state", "place": 4},
+    {"advancement": "5th in States", "prestige_points": 100, "caliber_points": 50, "level": "state", "place": 5},
+    {"advancement": "6th in States", "prestige_points": 95, "caliber_points": 47.5, "level": "state", "place": 6},
+    {"advancement": "7th in States", "prestige_points": 90, "caliber_points": 45, "level": "state", "place": 7},
+    {"advancement": "8th in States", "prestige_points": 85, "caliber_points": 42.5, "level": "state", "place": 8},
+    {"advancement": "WB4 in States", "prestige_points": 80, "caliber_points": 40, "level": "state", "place": "WB4"},
+    {"advancement": "WB3 in States", "prestige_points": 75, "caliber_points": 37.5, "level": "state", "place": "WB3"},
+    {"advancement": "WB2 in States", "prestige_points": 70, "caliber_points": 35, "level": "state", "place": "WB2"},
+    {"advancement": "WB1 in States", "prestige_points": 65, "caliber_points": 32.5, "level": "state", "place": "WB1"},
+    {"advancement": "5th in Regions", "prestige_points": 50, "caliber_points": 25, "level": "region", "place": 5},
+    {"advancement": "6th in Regions", "prestige_points": 45, "caliber_points": 22.5, "level": "region", "place": 6},
+    {"advancement": "WB1 in Regions", "prestige_points": 40, "caliber_points": 20, "level": "region", "place": "WB1"},
+    {"advancement": "2v3 in Regions", "prestige_points": 35, "caliber_points": 17.5, "level": "region", "place": "2v3"},
+    {"advancement": "4th in Districts", "prestige_points": 15, "caliber_points": 7.5, "level": "district", "place": 4},
+    {"advancement": "Quarters in Districts", "prestige_points": 10, "caliber_points": 5, "level": "district", "place": "quarters"},
+    {"advancement": "Prelim in Districts", "prestige_points": 5, "caliber_points": 2.5, "level": "district", "place": "prelim"},
+    {"advancement": "Never in Districts", "prestige_points": 0, "caliber_points": 2, "level": "none", "place": null}
+  ],
+  "inferred_floors": {
+    "region_qualifier_1_to_4": {
+      "prestige_points": 65,
+      "advancement": "WB1 in States (inferred: region 1st–4th advance to states)",
+      "note": "When awards record region 1–4 but no state row, treat as state-tournament entry floor."
+    },
+    "district_qualifier_1_to_3": {
+      "prestige_points": 40,
+      "advancement": "WB1 in Regions (inferred: district 1st–3rd advance to regions)",
+      "note": "When awards record district 1–3 but no region/state row, treat as region-tournament entry floor."
+    }
+  }
+}

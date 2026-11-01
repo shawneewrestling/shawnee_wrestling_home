@@ -3,6 +3,9 @@
   const DATA_URL = 'data/wrestling_data.json';
   const AWARDS_URL = 'data/awards.json';
   const VARSITY_URL = 'data/varsity.json';
+  const VARSITY_ASSIGN_URL = 'data/varsity_assignments.json';
+  const PLAYERS_INDEX_URL = 'data/players_index.json';
+  const PLACEHOLDER_PHOTO = 'assets/img/wrestler-silhouette.svg';
 
   async function loadJson(url) {
     const r = await fetch(url);
@@ -53,13 +56,17 @@
     }
 
     if (page === 'Roster') {
-      const [data, varsity] = await Promise.all([loadJson(DATA_URL), loadJson(VARSITY_URL)]);
-      renderVarsity(varsity, data);
+      const [data, assign] = await Promise.all([loadJson(DATA_URL), loadJson(VARSITY_ASSIGN_URL)]);
+      renderVarsityCards(assign, data);
+      return;
+    }
+    if (page === 'Full Roster') {
+      const [data, index] = await Promise.all([loadJson(DATA_URL), loadJson(PLAYERS_INDEX_URL).catch(() => null)]);
+      renderFullRosterSearchable(data, index);
       return;
     }
     const data = await loadJson(DATA_URL);
     if (page === 'Home') renderHome(data);
-    else if (page === 'Full Roster') renderRoster(data);
     else if (page === 'Schedule / Results') renderSchedule(data);
     else if (page === 'Standings') renderStandings(data);
     else if (page === 'Stats') renderStats(data);
@@ -93,38 +100,128 @@
   }
 
 
-  function renderVarsity(varsity, data) {
-    const note = document.getElementById('varsityNote');
-    if (note) note.textContent = varsity.derivation_note || '';
-    const c = varsity.counts || {};
-    document.getElementById('varsityMeta').innerHTML = `
-      <span><strong>Varsity</strong> ${c.total ?? (varsity.wrestlers||[]).length}</span>
-      <span><strong>Full roster</strong> ${c.full_roster ?? (data.roster||[]).length}</span>
-      <span><strong>Derivation</strong> ${esc(varsity.derivation || '—')}</span>
-      <span><strong>Season</strong> ${esc(varsity.season || '')}</span>`;
-    const rows = (varsity.wrestlers || []).slice();
-    document.querySelector('#varsityTable tbody').innerHTML = rows.map((w) => `
-      <tr>
-        <td>${esc(w.weight || '—')}</td>
-        <td>${esc(w.name)}</td>
-        <td>${esc(w.grade || '—')}</td>
-        <td>${esc((w.wins ?? 0) + '-' + (w.losses ?? 0))}</td>
-        <td>${w.starter ? '★' : ''}</td>
-      </tr>`).join('') || '<tr><td colspan="5">No varsity wrestlers</td></tr>';
+  function photoSrc(photo) {
+    return photo || PLACEHOLDER_PHOTO;
   }
 
-  function renderRoster(data) {
-    const rows = (data.roster || []).slice().sort((a, b) => {
-      const aw = parseInt(a.weight, 10) || 999, bw = parseInt(b.weight, 10) || 999;
-      return aw - bw || (a.last_name || '').localeCompare(b.last_name || '');
+  function renderVarsityCards(assign, data) {
+    const note = document.getElementById('varsityNote');
+    if (note) note.textContent = assign.derivation_note || '';
+    const c = assign.counts || {};
+    const meta = document.getElementById('varsityMeta');
+    if (meta) meta.innerHTML = `
+      <span><strong>Filled</strong> ${c.filled ?? 0} / ${c.weight_classes ?? 14}</span>
+      <span><strong>Vacant</strong> ${c.vacant ?? 0}</span>
+      <span><strong>Full roster</strong> ${c.full_roster ?? (data.roster || []).length}</span>
+      <span><strong>Season</strong> 2025-2026 Season</span>`;
+    const grid = document.getElementById('varsityGrid');
+    const slots = assign.slots || [];
+    grid.innerHTML = slots.map((s) => {
+      if (s.vacant) {
+        return `<div class="wrestler-tile vacant">
+          <div class="photo-wrap">
+            <span class="wt-chip">${esc(s.assigned_weight)}</span>
+            <img src="${PLACEHOLDER_PHOTO}" alt="" />
+          </div>
+          <div class="body">
+            <div class="name">Vacant</div>
+            <div class="meta">NJSIAA ${esc(s.assigned_weight)}</div>
+          </div>
+        </div>`;
+      }
+      const href = s.player_page || '#';
+      const prest = s.prestige_points ? `<span class="prest-chip">${esc(s.prestige_points)} pts</span>` : '';
+      const rec = `${s.wins ?? 0}-${s.losses ?? 0}`;
+      return `<a class="wrestler-tile" href="${esc(href)}">
+        <div class="photo-wrap">
+          <span class="wt-chip">${esc(s.assigned_weight)}</span>
+          ${prest}
+          <img src="${esc(photoSrc(s.photo))}" alt="${esc(s.name)}" loading="lazy"
+               onerror="this.src='${PLACEHOLDER_PHOTO}'" />
+        </div>
+        <div class="body">
+          <div class="name">${esc(s.name)}</div>
+          <div class="meta">${esc(s.grade || '')} · ${esc(rec)}</div>
+        </div>
+      </a>`;
+    }).join('') || '<p>No assignments</p>';
+  }
+
+  function renderFullRosterSearchable(data, index) {
+    const fromIndex = (index && index.wrestlers) || null;
+    const rows = fromIndex || (data.roster || []).map((w) => ({
+      wrestler_id: w.wrestler_id,
+      name: w.name,
+      grade: w.grade,
+      roster_weight: w.weight,
+      wins: w.wins || 0,
+      losses: w.losses || 0,
+      photo: w.photo,
+      player_page: null,
+      prestige_points: 0,
+      search_text: [w.name, w.grade, w.weight].filter(Boolean).join(' ').toLowerCase(),
+    }));
+    rows.sort((a, b) => {
+      const aw = parseInt(a.roster_weight || a.assigned_weight, 10) || 999;
+      const bw = parseInt(b.roster_weight || b.assigned_weight, 10) || 999;
+      return aw - bw || String(a.name || '').localeCompare(String(b.name || ''));
     });
-    document.querySelector('#rosterTable tbody').innerHTML = rows.map((w) => `
-      <tr>
-        <td>${esc(w.name)}</td>
-        <td>${esc(w.weight || '—')}</td>
-        <td>${esc(w.grade || '—')}</td>
-        <td>${esc((w.wins ?? 0) + '-' + (w.losses ?? 0))}</td>
-      </tr>`).join('');
+
+    const weightSel = document.getElementById('rosterWeight');
+    const weights = [...new Set(rows.map((r) => String(r.roster_weight || r.assigned_weight || '')).filter(Boolean))]
+      .sort((a, b) => (parseInt(a, 10) || 0) - (parseInt(b, 10) || 0));
+    if (weightSel && weightSel.options.length <= 1) {
+      weights.forEach((wt) => {
+        const opt = document.createElement('option');
+        opt.value = wt;
+        opt.textContent = wt;
+        weightSel.appendChild(opt);
+      });
+    }
+
+    const grid = document.getElementById('rosterGrid');
+    const countEl = document.getElementById('rosterCount');
+    const qEl = document.getElementById('rosterSearch');
+    const gEl = document.getElementById('rosterGrade');
+
+    function paint() {
+      const q = (qEl && qEl.value || '').trim().toLowerCase();
+      const g = gEl && gEl.value || '';
+      const wt = weightSel && weightSel.value || '';
+      const filtered = rows.filter((r) => {
+        if (g && r.grade !== g) return false;
+        if (wt && String(r.roster_weight || r.assigned_weight) !== wt) return false;
+        if (q && !(r.search_text || '').includes(q) && !(r.name || '').toLowerCase().includes(q)) return false;
+        return true;
+      });
+      if (countEl) countEl.textContent = `${filtered.length} wrestler${filtered.length === 1 ? '' : 's'}`;
+      grid.innerHTML = filtered.map((r) => {
+        const href = r.player_page || '#';
+        const tag = href === '#' ? 'div' : 'a';
+        const hrefAttr = href === '#' ? '' : ` href="${esc(href)}"`;
+        const prest = r.prestige_points ? `<span class="prest-chip">${esc(r.prestige_points)} pts</span>` : '';
+        const wtLabel = r.assigned_weight || r.roster_weight || '—';
+        return `<${tag} class="wrestler-tile"${hrefAttr}>
+          <div class="photo-wrap">
+            <span class="wt-chip">${esc(wtLabel)}</span>
+            ${prest}
+            <img src="${esc(photoSrc(r.photo))}" alt="${esc(r.name)}" loading="lazy"
+                 onerror="this.src='${PLACEHOLDER_PHOTO}'" />
+          </div>
+          <div class="body">
+            <div class="name">${esc(r.name)}</div>
+            <div class="meta">${esc(r.grade || '')} · ${esc((r.wins ?? 0) + '-' + (r.losses ?? 0))}</div>
+          </div>
+        </${tag}>`;
+      }).join('') || '<p>No matches</p>';
+    }
+
+    ['input', 'change'].forEach((ev) => {
+      qEl && qEl.addEventListener(ev, paint);
+      gEl && gEl.addEventListener(ev, paint);
+      weightSel && weightSel.addEventListener(ev, paint);
+    });
+    paint();
   }
 
   function boutLine(b) {
@@ -222,15 +319,21 @@
   }
 
   function formatChevronTitle(title) {
-    // Match live banners: stacked varsity words, optional decade subtitle.
+    // Match live banners: stacked varsity words, optional decade / division subtitle.
     let main = String(title || 'Award');
     let sub = '';
+    // Preserve NCAA division tag as subtitle before stripping other parens
+    const ncaaDiv = main.match(/\((D1\/D2\/D3\/J)\)/i);
     const m = main.match(/^(.*?)\s*[—–]\s*(.+)$/); // em/en dash only (keep hyphens in All-American)
     if (m) { main = m[1].trim(); sub = m[2].trim(); }
     main = main.replace(/\s*\(.*?\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+    if (ncaaDiv && !sub) sub = '(' + ncaaDiv[1].toUpperCase() + ')';
     const up = main.toUpperCase();
     let lines;
-    if (/\bCHAMPIONS$/.test(up) && up.includes(' ')) {
+    if (/TEAM CHAMPIONSHIP$/.test(up) && up.includes(' ')) {
+      const i = up.lastIndexOf(' TEAM CHAMPIONSHIP');
+      lines = [up.slice(0, i).trim(), 'TEAM CHAMPIONSHIP'];
+    } else if (/\bCHAMPIONS$/.test(up) && up.includes(' ')) {
       const i = up.lastIndexOf(' CHAMPIONS');
       lines = [up.slice(0, i).trim(), 'CHAMPIONS'];
     } else if (/\bCHAMPIONSHIP$/.test(up) && up.includes(' ')) {
@@ -238,6 +341,8 @@
       lines = [up.slice(0, i).trim(), 'CHAMPIONSHIP'];
     } else if (up === 'NCAA ALL-AMERICAN') {
       lines = ['NCAA', 'ALL-AMERICAN'];
+    } else if (up === 'STATE PLACE WINNER') {
+      lines = ['STATE', 'PLACE WINNER'];
     } else if (up.length > 14 && up.includes(' ')) {
       const parts = up.split(' ');
       const mid = Math.ceil(parts.length / 2);
@@ -269,21 +374,62 @@
         rowClass: 'row',
       };
     }
-    if (kind === 'team' || a.award_category === 'team') {
-      return {
-        left: a.season || '',
-        mid: a.details || name || 'Team title',
-        right: a.placement || '',
-        rowClass: 'row',
-      };
-    }
-    // district / region / state / college / default: year | wrestler | weight/placement
+    // district / region / state-place / default: year | wrestler | weight/placement
     return {
       left: a.season || '',
       mid: name,
       right: a.weight || a.placement || (a.value != null ? String(a.value) : ''),
       rowClass: 'row',
     };
+  }
+
+  function isStateChampionCard(card) {
+    return (card.title || '') === 'State Champions' ||
+      ((card.kind === 'state' || card.rows[0]?.award_category === 'state') &&
+        /^State Champions$/i.test(card.title || ''));
+  }
+
+  function isNcaaCard(card) {
+    return (card.kind === 'college') || /^NCAA/i.test(card.title || '');
+  }
+
+  function isTeamCard(card) {
+    return card.kind === 'team' || (card.rows[0] && card.rows[0].award_category === 'team');
+  }
+
+  function renderTeamBody(card, rows) {
+    // Team acknowledgements: years only (or a single note). No blank "Team title" / "1st" columns.
+    const noteOnly = rows.every((a) => !a.season && (a.details || a.value != null));
+    if (noteOnly || /dual record/i.test(card.title || '')) {
+      const text = rows.map((a) => a.details || a.value || a.season || '').filter(Boolean).join(' · ');
+      return `<div class="team-note">${esc(text)}</div>`;
+    }
+    const years = rows.map((a) => a.season).filter(Boolean);
+    if (years.length <= 4) {
+      return `<div class="years-stack">${years.map((y) => `<div>${esc(y)}</div>`).join('')}</div>`;
+    }
+    return `<div class="year-grid">${years.map((y) => `<div>${esc(y)}</div>`).join('')}</div>`;
+  }
+
+  function renderNcaaBody(rows) {
+    // Prestigious centered entries: year · NAME · place · school
+    return rows.map((a) => `
+      <div class="prestige-entry">
+        <div class="year">${esc(a.season || '')}</div>
+        <div class="name">${esc(a.wrestler || '')}</div>
+        <div class="place">${esc(a.placement || '')}</div>
+        ${a.details ? `<div class="school">${esc(a.details)}</div>` : ''}
+      </div>`).join('');
+  }
+
+  function renderStateChampBody(rows) {
+    // Featured champion plaque: large name, year, note
+    return rows.map((a) => `
+      <div class="prestige-entry state-champ">
+        <div class="name">${esc((a.wrestler || '').toUpperCase())}</div>
+        <div class="year">${esc(a.season || '')}</div>
+        ${a.details ? `<div class="school">${esc(a.details)}</div>` : ''}
+      </div>`).join('');
   }
 
   function renderAwards(data) {
@@ -330,19 +476,35 @@
           return String(a.season || '').localeCompare(String(b.season || ''))
             || String(a.wrestler || '').localeCompare(String(b.wrestler || ''));
         });
-        let prevSeason = null;
-        const body = rows.map((a) => {
-          const cells = awardRowCells(a, card.kind);
-          // Live district/region banners omit repeated year labels
-          let left = cells.left;
-          if ((card.kind === 'district' || card.kind === 'region' || card.kind === 'state') && left && left === prevSeason) {
-            left = '';
-          } else if (cells.left) {
-            prevSeason = cells.left;
-          }
-          return `<div class="${cells.rowClass}"><span>${esc(left)}</span><span>${esc(cells.mid)}</span><span>${esc(cells.right)}</span></div>`;
-        }).join('');
-        return `<article class="chevron-card" data-kind="${esc(card.kind)}">
+
+        const prestigeNcaa = isNcaaCard(card);
+        const prestigeState = isStateChampionCard(card);
+        const team = isTeamCard(card);
+        let body;
+        let extraClass = '';
+        if (team) {
+          body = renderTeamBody(card, rows);
+          extraClass = ' team';
+        } else if (prestigeNcaa) {
+          body = renderNcaaBody(rows);
+          extraClass = ' prestige ncaa';
+        } else if (prestigeState) {
+          body = renderStateChampBody(rows);
+          extraClass = ' prestige state-champ';
+        } else {
+          let prevSeason = null;
+          body = rows.map((a) => {
+            const cells = awardRowCells(a, card.kind);
+            let left = cells.left;
+            if ((card.kind === 'district' || card.kind === 'region' || card.kind === 'state') && left && left === prevSeason) {
+              left = '';
+            } else if (cells.left) {
+              prevSeason = cells.left;
+            }
+            return `<div class="${cells.rowClass}"><span>${esc(left)}</span><span>${esc(cells.mid)}</span><span>${esc(cells.right)}</span></div>`;
+          }).join('');
+        }
+        return `<article class="chevron-card${extraClass}" data-kind="${esc(card.kind)}">
           <div class="chevron-card-inner">
             <div class="title">${formatChevronTitle(card.title)}</div>
             <div class="body">${body}</div>

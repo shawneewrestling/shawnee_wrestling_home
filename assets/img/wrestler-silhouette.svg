@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" role="img" aria-label="Wrestler placeholder">
+  <rect width="200" height="240" fill="#e8eef8"/>
+  <circle cx="100" cy="70" r="36" fill="#002060"/>
+  <path d="M40 220v-18c0-36 27-58 60-58s60 22 60 58v18z" fill="#002060"/>
+  <path d="M70 118c-18 8-30 24-34 44" stroke="#88b4e8" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M130 118c18 8 30 24 34 44" stroke="#88b4e8" stroke-width="8" fill="none" stroke-linecap="round"/>
+</svg>

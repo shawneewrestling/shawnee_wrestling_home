@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-01T09:39:01-05:00",
+  "weight_classes": [
+    "106",
+    "113",
+    "120",
+    "126",
+    "132",
+    "138",
+    "144",
+    "150",
+    "157",
+    "165",
+    "175",
+    "190",
+    "215",
+    "285"
+  ],
+  "options": [
+    {
+      "wrestler_id": "35008202132",
+      "name": "Joseph Augusta",
+      "grade": "Sr.",
+      "roster_weight": "175",
+      "label": "Joseph Augusta (Sr.)"
+    },
+    {
+      "wrestler_id": "35497540132",
+      "name": "Anthony Birney",
+      "grade": "Sr.",
+      "roster_weight": "175",
+      "label": "Anthony Birney (Sr.)"
+    },
+    {
+      "wrestler_id": "35008213132",
+      "name": "Anthony Blahut",
+      "grade": "So.",
+      "roster_weight": "120",
+      "label": "Anthony Blahut (So.)"
+    },
+    {
+      "wrestler_id": "35008199132",
+      "name": "Garrett Borlaug",
+      "grade": "Sr.",
+      "roster_weight": "138",
+      "label": "Garrett Borlaug (Sr.)"
+    },
+    {
+      "wrestler_id": "35008197132",
+      "name": "Sean Bradley",
+      "grade": "Sr.",
+      "roster_weight": "120",
+      "label": "Sean Bradley (Sr.)"
+    },
+    {
+      "wrestler_id": "35008236132",
+      "name": "Landon Caffery",
+      "grade": "So.",
+      "roster_weight": "138",
+      "label": "Landon Caffery (So.)"
+    },
+    {
+      "wrestler_id": "35008237132",
+      "name": "Jack Caldwell",
+      "grade": "So.",
+      "roster_weight": "144",
+      "label": "Jack Caldwell (So.)"
+    },
+    {
+      "wrestler_id": "35556025132",
+      "name": "Veliz-Velasquez Carlos",
+      "grade": "Fr.",
+      "roster_weight": "285",
+      "label": "Veliz-Velasquez Carlos (Fr.)"
+    },
+    {
+      "wrestler_id": "35497360132",
+      "name": "Logan Cino",
+      "grade": "Fr.",
+      "roster_weight": "175",
+      "label": "Logan Cino (Fr.)"
+    },
+    {
+      "wrestler_id": "35217751132",
+      "name": "Romeo Cline",
+      "grade": "So.",
+      "roster_weight": "120",
+      "label": "Romeo Cline (So.)"
+    },
+    {
+      "wrestler_id": "35497376132",
+      "name": "Logan Curiale",
+      "grade": "Fr.",
+      "roster_weight": "132",
+      "label": "Logan Curiale (Fr.)"
+    },
+    {
+      "wrestler_id": "35008198132",
+      "name": "Tyler Davis",
+      "grade": "Sr.",
+      "roster_weight": "165",
+      "label": "Tyler Davis (Sr.)"
+    },
+    {
+      "wrestler_id": "35008232132",
+      "name": "Colin Dowd",
+      "grade": "Sr.",
+      "roster_weight": "150",
+      "label": "Colin Dowd (Sr.)"
+    },
+    {
+      "wrestler_id": "35008214132",
+      "name": "Jadiel Esquivel",
+      "grade": "So.",
+      "roster_weight": "113",
+      "label": "Jadiel Esquivel (So.)"
+    },
+    {
+      "wrestler_id": "35217512132",
+      "name": "Gabriel Evans",
+      "grade": "So.",
+      "roster_weight": "157",
+      "label": "Gabriel Evans (So.)"
+    },
+    {
+      "wrestler_id": "35217521132",
+      "name": "Ranger Fest",
+      "grade": "So.",
+      "roster_weight": "120",
+      "label": "Ranger Fest (So.)"
+    },
+    {
+      "wrestler_id": "35217300132",
+      "name": "Daniel Fitzpatrick",
+      "grade": "Fr.",
+      "roster_weight": "106",
+      "label": "Daniel Fitzpatrick (Fr.)"
+    },
+    {
+      "wrestler_id": "35217322132",
+      "name": "Jack Gleeson",
+      "grade": "Fr.",
+      "roster_weight": "215",
+      "label": "Jack Gleeson (Fr.)"
+    },
+    {
+      "wrestler_id": "35217363132",
+      "name": "Gino Gonzalez",
+      "grade": "Fr.",
+      "roster_weight": "126",
+      "label": "Gino Gonzalez (Fr.)"
+    },
+    {
+      "wrestler_id": "35008235132",
+      "name": "Matt Hart",
+      "grade": "So.",
+      "roster_weight": "113",
+      "label": "Matt Hart (So.)"
+    },
+    {
+      "wrestler_id": "35008203132",
+      "name": "Michael Hart",
+      "grade": "Jr.",
+      "roster_weight": "138",
+      "label": "Michael Hart (Jr.)"
+    },
+    {
+      "wrestler_id": "35008228132",
+      "name": "Ashton Hayden",
+      "grade": "Jr.",
+      "roster_weight": "150",
+      "label": "Ashton Hayden (Jr.)"
+    },
+    {
+      "wrestler_id": "35008209132",
+      "name": "Ryan Hoerst",
+      "grade": "Jr.",
+      "roster_weight": "144",
+      "label": "Ryan Hoerst (Jr.)"
+    },
+    {
+      "wrestler_id": "35217370132",
+      "name": "Cole Hoguet",
+      "grade": "Fr.",
+      "roster_weight": "132",
+      "label": "Cole Hoguet (Fr.)"
+    },
+    {
+      "wrestler_id": "35008210132",
+      "name": "Nathan Hunnewell",
+      "grade": "Jr.",
+      "roster_weight": "132",
+      "label": "Nathan Hunnewell (Jr.)"
+    },
+    {
+      "wrestler_id": "35217378132",
+      "name": "Domenico Incollingo",
+      "grade": "Fr.",
+      "roster_weight": "150",
+      "label": "Domenico Incollingo (Fr.)"
+    },
+    {
+      "wrestler_id": "35217388132",
+      "name": "Brayden Inman",
+      "grade": "Fr.",
+      "roster_weight": "132",
+      "label": "Brayden Inman (Fr.)"
+    },
+    {
+      "wrestler_id": "35557421132",
+      "name": "Walter Johnson",
+      "grade": "So.",
+      "roster_weight": "144",
+      "label": "Walter Johnson (So.)"
+    },
+    {
+      "wrestler_id": "36450248132",
+      "name": "Brandon Kelly",
+      "grade": "Fr.",
+      "roster_weight": "157",
+      "label": "Brandon Kelly (Fr.)"
+    },
+    {
+      "wrestler_id": "35008204132",
+      "name": "Robert Lane",
+      "grade": "Jr.",
+      "roster_weight": "215",
+      "label": "Robert Lane (Jr.)"
+    },
+    {
+      "wrestler_id": "35217400132",
+      "name": "Giovanni Lopez",
+      "grade": "Fr.",
+      "roster_weight": "190",
+      "label": "Giovanni Lopez (Fr.)"
+    },
+    {
+      "wrestler_id": "35555998132",
+      "name": "William Mays",
+      "grade": "So.",
+      "roster_weight": "157",
+      "label": "William Mays (So.)"
+    },
+    {
+      "wrestler_id": "35497397132",
+      "name": "Kellan McDonough",
+      "grade": "Fr.",
+      "roster_weight": "150",
+      "label": "Kellan McDonough (Fr.)"
+    },
+    {
+      "wrestler_id": "35008230132",
+      "name": "Collin McHugh",
+      "grade": "Jr.",
+      "roster_weight": "285",
+      "label": "Collin McHugh (Jr.)"
+    },
+    {
+      "wrestler_id": "35008205132",
+      "name": "William (Liam) McSorley",
+      "grade": "Jr.",
+      "roster_weight": "215",
+      "label": "William (Liam) McSorley (Jr.)"
+    },
+    {
+      "wrestler_id": "35217406132",
+      "name": "Noah Meisner",
+      "grade": "Fr.",
+      "roster_weight": "120",
+      "label": "Noah Meisner (Fr.)"
+    },
+    {
+      "wrestler_id": "35008219132",
+      "name": "Rowan Nix",
+      "grade": "So.",
+      "roster_weight": "215",
+      "label": "Rowan Nix (So.)"
+    },
+    {
+      "wrestler_id": "35008215132",
+      "name": "Andrik Orenyo",
+      "grade": "So.",
+      "roster_weight": "190",
+      "label": "Andrik Orenyo (So.)"
+    },
+    {
+      "wrestler_id": "35217444132",
+      "name": "Benjamin Pollock",
+      "grade": "Fr.",
+      "roster_weight": "113",
+      "label": "Benjamin Pollock (Fr.)"
+    },
+    {
+      "wrestler_id": "35497529132",
+      "name": "Jack Potter",
+      "grade": "Jr.",
+      "roster_weight": "157",
+      "label": "Jack Potter (Jr.)"
+    },
+    {
+      "wrestler_id": "35008211132",
+      "name": "Rhys Pritchard",
+      "grade": "Jr.",
+      "roster_weight": "144",
+      "label": "Rhys Pritchard (Jr.)"
+    },
+    {
+      "wrestler_id": "35497452132",
+      "name": "Charles Pulaski",
+      "grade": "Fr.",
+      "roster_weight": "132",
+      "label": "Charles Pulaski (Fr.)"
+    },
+    {
+      "wrestler_id": "35217539132",
+      "name": "Brodie Regan",
+      "grade": "So.",
+      "roster_weight": "165",
+      "label": "Brodie Regan (So.)"
+    },
+    {
+      "wrestler_id": "35008220132",
+      "name": "Brian Reice",
+      "grade": "So.",
+      "roster_weight": "144",
+      "label": "Brian Reice (So.)"
+    },
+    {
+      "wrestler_id": "35217452132",
+      "name": "Logan Reice",
+      "grade": "Fr.",
+      "roster_weight": "106",
+      "label": "Logan Reice (Fr.)"
+    },
+    {
+      "wrestler_id": "35008217132",
+      "name": "Jacobs Rodriguez",
+      "grade": "So.",
+      "roster_weight": "190",
+      "label": "Jacobs Rodriguez (So.)"
+    },
+    {
+      "wrestler_id": "35008225132",
+      "name": "Leeland Rogers",
+      "grade": "So.",
+      "roster_weight": "132",
+      "label": "Leeland Rogers (So.)"
+    },
+    {
+      "wrestler_id": "35008226132",
+      "name": "Eli Sauler",
+      "grade": "So.",
+      "roster_weight": "165",
+      "label": "Eli Sauler (So.)"
+    },
+    {
+      "wrestler_id": "35008201132",
+      "name": "Jordan Segal",
+      "grade": "Sr.",
+      "roster_weight": "126",
+      "label": "Jordan Segal (Sr.)"
+    },
+    {
+      "wrestler_id": "35217455132",
+      "name": "Arjun Shah",
+      "grade": "Fr.",
+      "roster_weight": "150",
+      "label": "Arjun Shah (Fr.)"
+    },
+    {
+      "wrestler_id": "35008200132",
+      "name": "Max Shectman",
+      "grade": "Sr.",
+      "roster_weight": "144",
+      "label": "Max Shectman (Sr.)"
+    },
+    {
+      "wrestler_id": "35008207132",
+      "name": "Trevor Sieben",
+      "grade": "Jr.",
+      "roster_weight": "165",
+      "label": "Trevor Sieben (Jr.)"
+    },
+    {
+      "wrestler_id": "35008223132",
+      "name": "Owen Siena",
+      "grade": "So.",
+      "roster_weight": "138",
+      "label": "Owen Siena (So.)"
+    },
+    {
+      "wrestler_id": "35876936132",
+      "name": "Logan Sloan",
+      "grade": "Fr.",
+      "roster_weight": "106",
+      "label": "Logan Sloan (Fr.)"
+    },
+    {
+      "wrestler_id": "35008208132",
+      "name": "Max Spitznas",
+      "grade": "Jr.",
+      "roster_weight": "165",
+      "label": "Max Spitznas (Jr.)"
+    },
+    {
+      "wrestler_id": "35008238132",
+      "name": "Cooper Stauss",
+      "grade": "So.",
+      "roster_weight": "132",
+      "label": "Cooper Stauss (So.)"
+    },
+    {
+      "wrestler_id": "35217460132",
+      "name": "Luke Velasco",
+      "grade": "Fr.",
+      "roster_weight": "120",
+      "label": "Luke Velasco (Fr.)"
+    },
+    {
+      "wrestler_id": "35008221132",
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "grade": "So.",
+      "roster_weight": "144",
+      "label": "Oleksandr `Sasha` Yurovskyi (So.)"
+    }
+  ],
+  "jotform_note": "Rebuild this file on every roster scrape. Point each weight-class dropdown at options[].label (store wrestler_id in a hidden field or parse from submission)."
+}

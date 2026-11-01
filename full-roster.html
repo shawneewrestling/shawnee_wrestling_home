@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Full Roster · Shawnee Renegades Wrestling</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="roster.css" />
 </head>
 <body>
   <header class="site-header">
@@ -17,21 +18,34 @@
         </div>
       </div>
       <nav class="nav">
-        <a href="index.html" class="">Home</a>
-        <a href="roster.html" class="">Roster</a>
+        <a href="index.html">Home</a>
+        <a href="roster.html">Roster</a>
         <a href="full-roster.html" class="active">Full Roster</a>
-        <a href="schedule.html" class="">Schedule / Results</a>
-        <a href="standings.html" class="">Standings</a>
-        <a href="stats.html" class="">Stats</a>
-        <a href="awards.html" class="">Awards</a>
+        <a href="schedule.html">Schedule / Results</a>
+        <a href="standings.html">Standings</a>
+        <a href="stats.html">Stats</a>
+        <a href="awards.html">Awards</a>
       </nav>
     </div>
   </header>
   <main>
     <h1 class="page-title">Full Team Roster</h1>
-    <p class="page-sub">Every wrestler on the team roster. The public <a href="roster.html">Roster</a> page shows Varsity only.</p>
-    <div class="table-wrap"><table id="rosterTable"><thead><tr><th>Name</th><th>Wt</th><th>Grade</th><th>Record</th></tr></thead><tbody><tr><td colspan="4">Loading…</td></tr></tbody></table></div>
-
+    <p class="page-sub">Search by name, grade, or weight. The public <a href="roster.html">Roster</a> page shows Varsity starters by NJSIAA weight class.</p>
+    <div class="roster-toolbar">
+      <input type="search" id="rosterSearch" placeholder="Search name, grade, weight…" autocomplete="off" />
+      <select id="rosterGrade">
+        <option value="">All grades</option>
+        <option value="Fr.">Fr.</option>
+        <option value="So.">So.</option>
+        <option value="Jr.">Jr.</option>
+        <option value="Sr.">Sr.</option>
+      </select>
+      <select id="rosterWeight">
+        <option value="">All weights</option>
+      </select>
+      <span class="count" id="rosterCount"></span>
+    </div>
+    <div class="roster-grid" id="rosterGrid"><p>Loading…</p></div>
   </main>
   <footer class="site-footer">
     Shawnee High School Wrestling · 2025-2026 Season

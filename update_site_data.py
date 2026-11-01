@@ -5,7 +5,8 @@ Single update script for Shawnee Wrestling site-v2.
 1) Run hybrid TW scraper → data/wrestling_data.json (+ root mirror)
 2) Detect auto-awards from season data → merge into data/awards.json
 3) Append season-aggregate career events with source_event_id dedupe
-4) Write data/build_summary.json
+4) Varsity assignments (one per NJSIAA weight) + Jotform options + prestige + player pages
+5) Write data/build_summary.json
 
 Does NOT deploy, does NOT touch main. Safe to run on a feature branch.
 
@@ -32,6 +33,12 @@ sys.path.insert(0, str(ROOT))
 from career import apply_season_aggregate, load_career, save_career  # noqa: E402
 from auto_awards import detect_season_awards, merge_awards  # noqa: E402
 from varsity import build_varsity  # noqa: E402
+from varsity_assignments import (  # noqa: E402
+    build_varsity_assignments,
+    build_jotform_options,
+)
+from players_build import build_players  # noqa: E402
+from prestige import build_prestige_index  # noqa: E402
 from schedule_enrich import enrich_schedule  # noqa: E402
 from tournament_results import attach_tournament_results  # noqa: E402
 
@@ -119,9 +126,30 @@ def main():
     (ROOT / "data" / "varsity.json").write_text(json.dumps(varsity_doc, indent=2) + "\n")
     logger.info("Varsity: %d (%s)", varsity_doc.get("counts", {}).get("total"), varsity_doc.get("derivation"))
 
+    # One-per-weight assignments + Jotform dropdown options + player pages
+    jot = {}
+    jot_path = ROOT / "data" / "varsity_jotform_overrides.json"
+    if jot_path.exists():
+        jot = json.loads(jot_path.read_text())
+    assign_doc = build_varsity_assignments(data, appearances, overrides, awards_doc, jot or None)
+    (ROOT / "data" / "varsity_assignments.json").write_text(json.dumps(assign_doc, indent=2) + "\n")
+    logger.info(
+        "Varsity assignments: %d filled / %d vacant",
+        assign_doc.get("counts", {}).get("filled"),
+        assign_doc.get("counts", {}).get("vacant"),
+    )
+    opts = build_jotform_options(data.get("roster") or [])
+    (ROOT / "data" / "jotform_roster_options.json").write_text(json.dumps(opts, indent=2) + "\n")
+    season_label = (data.get("metadata") or {}).get("season")
+    prest_doc = build_prestige_index(data.get("roster") or [], awards_doc, season_label)
+    (ROOT / "data" / "prestige.json").write_text(json.dumps(prest_doc, indent=2) + "\n")
+
     career = load_career(ROOT / "data" / "career.json")
     career = apply_season_aggregate(career, data)
     save_career(ROOT / "data" / "career.json", career)
+
+    players_index = build_players(data, awards_doc, assign_doc, career)
+    logger.info("Player pages: %d", players_index.get("count"))
 
     summary = {
         "built_at": now_est(),
@@ -134,6 +162,8 @@ def main():
             "awards_derived_2025_26": awards_doc.get("derived_2025_26_count"),
             "logos": len(json.loads((ROOT / "data" / "logos.json").read_text())) if (ROOT / "data" / "logos.json").exists() else 0,
             "varsity": (varsity_doc.get("counts") or {}).get("total"),
+            "varsity_assignments_filled": (assign_doc.get("counts") or {}).get("filled"),
+            "player_pages": players_index.get("count"),
         },
         "dual_record": (data.get("dual_scores") or {}).get("record") or data.get("metadata", {}).get("dual_record"),
         "ids": {

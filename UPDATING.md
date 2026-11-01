@@ -40,17 +40,19 @@ What it does:
 
 1. Hybrid scrape → `data/wrestling_data.json` (+ root `wrestling_data.json` mirror)
 2. Auto-awards from season W-L / dual record / (later) TW placements → merge into `data/awards.json`
-3. Career season-aggregate event with `source_event_id` dedupe → `data/career.json`
-4. Writes `data/build_summary.json`
+3. Varsity list + **one-per-weight assignments** + Jotform options + prestige index
+4. Career season-aggregate event with `source_event_id` dedupe → `data/career.json`
+5. Generate static `players/*.html` + `data/players_index.json`
+6. Writes `data/build_summary.json`
 
-Docs for rules: `docs/AUTO_AWARDS.md`, `docs/CAREER.md`.
+Docs for rules: `docs/AUTO_AWARDS.md`, `docs/CAREER.md`, `docs/PRESTIGE.md`, `docs/VARSITY_JOTFORM.md`.
 
 ### Preview locally
 
 ```bash
 python -m http.server 8080
 # open http://127.0.0.1:8080/index.html
-# pages: roster.html schedule.html standings.html stats.html awards.html
+# pages: roster.html full-roster.html players/*.html schedule.html standings.html stats.html awards.html
 ```
 
 Static only — no WordPress. Colors: navy `#000080`, accent `#7EB6D9`.
@@ -115,22 +117,33 @@ See `docs/AUTO_AWARDS.md` for idempotent IDs and override rules.
 
 ## Varsity roster (main Roster page)
 
-The public **Roster** page is **Varsity only**. Full TW team list lives on **Full Roster**.
+The public **Roster** page shows **one starter per NJSIAA weight class** as image cards (photo / silhouette, name, weight, prestige). Click a card → static **player page**. Full TW team list (searchable) lives on **Full Roster**.
 
 | File | Role |
 |------|------|
-| `data/dual_appearances.json` | Bout-level Varsity dual lines (`wrestler_id`, `weight`, `event_id`, …). Preferred auto source. |
-| `data/varsity_overrides.json` | Coach include / exclude / weight / starters — **always wins** over auto. |
-| `data/varsity.json` | Generated output consumed by `roster.html`. |
+| `data/varsity_assignments.json` | One wrestler per NJSIAA class (106–285). Consumed by `roster.html`. |
+| `data/jotform_roster_options.json` | Active roster names/ids for Jotform dropdowns (rebuild every scrape). |
+| `data/varsity_jotform_overrides.json` | Optional coach map from Jotform ingestion (created when form exists). |
+| `data/dual_appearances.json` | Bout-level Varsity dual lines — preferred auto seed source. |
+| `data/varsity_overrides.json` | Coach include / exclude / weight / `starters` — still applied. |
+| `data/varsity.json` | Broader “appeared in varsity” list (not one-per-weight). |
+| `data/prestige.json` | Per-wrestler career-best NJSIAA prestige points. |
+| `data/players_index.json` | Index for Full Roster search + card links. |
+| `players/*.html` | Generated static player pages. |
 
-Auto rule: wrestled **≥ 1 Varsity dual bout** this season; **weight = most frequent** weight in those bouts.  
-**2025-26 closeout:** bout feed unavailable → `season_record_proxy` (W+L ≥ 1 from getWrestlers; roster weight). Fill `dual_appearances.json` later to switch to true dual-bout derivation. Rebuild with `python varsity.py` or `python update_site_data.py --skip-scrape`.
+**NJSIAA weight classes (base):** 106, 113, 120, 126, 132, 138, 144, 150, 157, 165, 175, 190, 215, 285.  
+(After Jan 1 growth allowance, weigh-in labels read 108–287; we store the base class.) Assigned class is **independent** of weights wrestled.
+
+Auto seed: most Varsity dual appearances at that weight. **2025-26:** bout feed empty → season-record proxy by roster weight. Rebuild: `python update_site_data.py --skip-scrape` (or `python varsity_assignments.py` then `python players_build.py`).
+
+### Prestige points
+
+Career-best prior placement (not current season; not “prior year only”). Table + rules: `docs/PRESTIGE.md`, `data/njsiaa_prestige.json`. Official source cited in that doc only — never on public pages. Per-match prestige is out of scope.
 
 ### Planned coach-input path (Jotform) — do not create the form yet
 
-1. Build a **Jotform** that lists the **full roster** (from `wrestling_data.json` / Full Roster).
-2. Each wrestler row: **Varsity checkbox**, **weight dropdown** (106–285), optional **starter** flag / notes.
-3. Daily Nov–Mar routine (or post-submit webhook): read new Jotform submissions → merge into `data/varsity_overrides.json` (`include` / `exclude` / `weight_overrides` / `starters`).
-4. Run `update_site_data.py --skip-scrape` (or `varsity.py`) → commit `varsity.json` → Hostinger deploy when live.
+See `docs/VARSITY_JOTFORM.md`. Stub: `varsity_assignments.ingest_jotform_submission(submission, roster)`.
 
-Until the form exists, edit `varsity_overrides.json` by hand on the branch.
+1. Build a **Jotform** with one dropdown per NJSIAA weight, options from `jotform_roster_options.json`.
+2. On submit / daily routine: ingest → `data/varsity_jotform_overrides.json` → `update_site_data.py --skip-scrape` → commit assignments + player pages.
+3. Until the form exists, set `varsity_overrides.json` → `starters` `{ "126": "<wrestler_id>", … }` by hand.
