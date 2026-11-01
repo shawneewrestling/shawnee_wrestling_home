@@ -187,22 +187,27 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
     if recognitions:
         items = []
         for r in recognitions:
-            bits = [
-                esc(r.get("season")),
-                esc(r.get("award_name") or r.get("award_category")),
-            ]
+            has_award = bool(r.get("award_name") or r.get("award_category") or r.get("placement") or r.get("weight"))
+            has_prest = bool(r.get("counts_for_prestige") and r.get("prestige_points"))
+            if not has_award and not has_prest:
+                continue
+            bits = [esc(r.get("season"))]
+            if r.get("award_name") or r.get("award_category"):
+                bits.append(esc(r.get("award_name") or r.get("award_category")))
+            elif r.get("advancement"):
+                bits.append(esc(r.get("advancement")))
             if r.get("placement"):
                 bits.append(esc(r.get("placement")))
             if r.get("weight"):
                 bits.append(esc(r.get("weight")) + " lb")
-            badge = ""
-            if r.get("counts_for_prestige") and r.get("prestige_points"):
-                badge = f'<span class="prest-badge">{esc(r.get("prestige_points"))} pts</span>'
-            items.append(f"<li>{' · '.join(bits)}{badge}</li>")
+            label = " · ".join(b for b in bits if b)
+            if has_prest:
+                label = f'{label} <span class="prest-badge">{esc(r.get("prestige_points"))} pts</span>'
+            items.append(f"<li>{label}</li>")
         recog_section = (
             '<h2 class="section-title">Recognitions</h2>\n'
             '    <ul class="recog-list">' + "".join(items) + "</ul>"
-        )
+        ) if items else ""
     else:
         recog_section = ""
 

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "season": "2025-2026",
-  "updated_at": "2026-11-01T12:32:34-05:00",
+  "updated_at": "2026-11-01T13:58:54-05:00",
   "weight_classes": [
     "106",
     "113",
@@ -39,14 +39,7 @@
       "player_page": "players/daniel-fitzpatrick-300132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed",
-      "show_career": false,
-      "career_wins": null,
-      "career_losses": null,
-      "seasons_on_record": 1,
-      "weights_wrestled": [
-        "106"
-      ]
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "113",
@@ -58,17 +51,14 @@
       "losses": 20,
       "photo": null,
       "player_page": "players/matt-hart-235132.html",
-      "prestige_points": 0,
-      "prestige": null,
-      "source": "auto_seed",
-      "show_career": true,
-      "career_wins": 14,
-      "career_losses": 22,
-      "seasons_on_record": 2,
-      "weights_wrestled": [
-        "106",
-        "113"
-      ]
+      "prestige_points": 10,
+      "prestige": {
+        "points": 10,
+        "advancement": "Quarters in Districts",
+        "season": "2025-26",
+        "inferred": false
+      },
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "120",
@@ -80,17 +70,14 @@
       "losses": 16,
       "photo": "assets/img/roster/sean-bradley.jpg",
       "player_page": "players/sean-bradley-197132.html",
-      "prestige_points": 0,
-      "prestige": null,
-      "source": "auto_seed",
-      "show_career": true,
-      "career_wins": 35,
-      "career_losses": 29,
-      "seasons_on_record": 3,
-      "weights_wrestled": [
-        "113",
-        "120"
-      ]
+      "prestige_points": 45,
+      "prestige": {
+        "points": 45,
+        "advancement": "6th in Regions",
+        "season": "2025-26",
+        "inferred": false
+      },
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "126",
@@ -106,20 +93,10 @@
       "prestige": {
         "points": 105,
         "advancement": "4th in States",
-        "season": "2024",
+        "season": "2023-24",
         "inferred": false
       },
-      "source": "auto_seed",
-      "show_career": true,
-      "career_wins": 107,
-      "career_losses": 25,
-      "seasons_on_record": 4,
-      "weights_wrestled": [
-        "126",
-        "132",
-        "138",
-        "144"
-      ]
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "132",
@@ -133,15 +110,7 @@
       "player_page": "players/brayden-inman-388132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed",
-      "show_career": false,
-      "career_wins": null,
-      "career_losses": null,
-      "seasons_on_record": 1,
-      "weights_wrestled": [
-        "126",
-        "132"
-      ]
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "138",
@@ -153,19 +122,14 @@
       "losses": 11,
       "photo": "assets/img/roster/garrett-borlaug.jpg",
       "player_page": "players/garrett-borlaug-199132.html",
-      "prestige_points": 0,
-      "prestige": null,
-      "source": "auto_seed",
-      "show_career": true,
-      "career_wins": 30,
-      "career_losses": 47,
-      "seasons_on_record": 3,
-      "weights_wrestled": [
-        "126",
-        "132",
-        "138",
-        "144"
-      ]
+      "prestige_points": 15,
+      "prestige": {
+        "points": 15,
+        "advancement": "4th in Districts",
+        "season": "2024-25",
+        "inferred": false
+      },
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "144",
@@ -177,18 +141,14 @@
       "losses": 14,
       "photo": "assets/img/roster/oleksandr-sasha-yurovskyi.jpg",
       "player_page": "players/oleksandr-sasha-yurovskyi-221132.html",
-      "prestige_points": 0,
-      "prestige": null,
-      "source": "auto_seed",
-      "show_career": true,
-      "career_wins": 31,
-      "career_losses": 29,
-      "seasons_on_record": 2,
-      "weights_wrestled": [
-        "144",
-        "150",
-        "157"
-      ]
+      "prestige_points": 10,
+      "prestige": {
+        "points": 10,
+        "advancement": "Quarters in Districts",
+        "season": "2025-26",
+        "inferred": false
+      },
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "150",
@@ -202,15 +162,7 @@
       "player_page": "players/kellan-mcdonough-397132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed",
-      "show_career": false,
-      "career_wins": null,
-      "career_losses": null,
-      "seasons_on_record": 1,
-      "weights_wrestled": [
-        "150",
-        "157"
-      ]
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "157",
@@ -224,14 +176,7 @@
       "player_page": "players/gabriel-evans-512132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed",
-      "show_career": false,
-      "career_wins": null,
-      "career_losses": null,
-      "seasons_on_record": 1,
-      "weights_wrestled": [
-        "157"
-      ]
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "165",
@@ -243,18 +188,14 @@
       "losses": 6,
       "photo": "assets/img/roster/max-spitznas.jpg",
       "player_page": "players/max-spitznas-208132.html",
-      "prestige_points": 0,
-      "prestige": null,
-      "source": "auto_seed",
-      "show_career": true,
-      "career_wins": 53,
-      "career_losses": 44,
-      "seasons_on_record": 3,
-      "weights_wrestled": [
-        "157",
-        "165",
-        "175"
-      ]
+      "prestige_points": 15,
+      "prestige": {
+        "points": 15,
+        "advancement": "4th in Districts",
+        "season": "2024-25",
+        "inferred": false
+      },
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "175",
@@ -266,18 +207,14 @@
       "losses": 12,
       "photo": "assets/img/roster/joseph-augusta.jpg",
       "player_page": "players/joseph-augusta-202132.html",
-      "prestige_points": 0,
-      "prestige": null,
-      "source": "auto_seed",
-      "show_career": true,
-      "career_wins": 13,
-      "career_losses": 22,
-      "seasons_on_record": 3,
-      "weights_wrestled": [
-        "165",
-        "175",
-        "190"
-      ]
+      "prestige_points": 10,
+      "prestige": {
+        "points": 10,
+        "advancement": "Quarters in Districts",
+        "season": "2025-26",
+        "inferred": false
+      },
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "190",
@@ -291,14 +228,7 @@
       "player_page": "players/jacobs-rodriguez-217132.html",
       "prestige_points": 0,
       "prestige": null,
-      "source": "auto_seed",
-      "show_career": false,
-      "career_wins": null,
-      "career_losses": null,
-      "seasons_on_record": 1,
-      "weights_wrestled": [
-        "190"
-      ]
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "215",
@@ -310,17 +240,14 @@
       "losses": 15,
       "photo": "assets/img/roster/william-liam-mcsorley.jpg",
       "player_page": "players/william-liam-mcsorley-205132.html",
-      "prestige_points": 0,
-      "prestige": null,
-      "source": "auto_seed",
-      "show_career": true,
-      "career_wins": 22,
-      "career_losses": 28,
-      "seasons_on_record": 2,
-      "weights_wrestled": [
-        "215",
-        "285"
-      ]
+      "prestige_points": 35,
+      "prestige": {
+        "points": 35,
+        "advancement": "2v3 in Regions",
+        "season": "2025-26",
+        "inferred": false
+      },
+      "source": "auto_seed"
     },
     {
       "assigned_weight": "285",
@@ -332,17 +259,14 @@
       "losses": 14,
       "photo": "assets/img/roster/collin-mchugh.jpg",
       "player_page": "players/collin-mchugh-230132.html",
-      "prestige_points": 0,
-      "prestige": null,
-      "source": "auto_seed",
-      "show_career": true,
-      "career_wins": 27,
-      "career_losses": 34,
-      "seasons_on_record": 2,
-      "weights_wrestled": [
-        "215",
-        "285"
-      ]
+      "prestige_points": 15,
+      "prestige": {
+        "points": 15,
+        "advancement": "4th in Districts",
+        "season": "2025-26",
+        "inferred": false
+      },
+      "source": "auto_seed"
     }
   ]
 }
