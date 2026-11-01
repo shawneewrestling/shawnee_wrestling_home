@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "source_url": "https://www.njsiaa.org/sites/default/files/documents/2025-11/wrestling-boys-individual-regs-2025-26.pdf",
   "rule": "career_best_njsiaa_finish",
   "current_season": "2025-2026",
@@ -15,7 +15,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217452132": {
       "wrestler_id": "35217452132",
@@ -28,7 +42,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35876936132": {
       "wrestler_id": "35876936132",
@@ -41,7 +69,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008214132": {
       "wrestler_id": "35008214132",
@@ -54,7 +96,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008235132": {
       "wrestler_id": "35008235132",
@@ -81,7 +138,40 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2025-26",
+          "grade": "So",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 106,
+          "event": "2026 NJSIAA District 28 - 106",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 106,
+              "grade": null
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 10,
+      "eligible_advancement": "Quarters Dis",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_matthart_shawnee",
+      "match_reason": "single_season",
+      "confidence": "high"
     },
     "35217444132": {
       "wrestler_id": "35217444132",
@@ -94,7 +184,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008213132": {
       "wrestler_id": "35008213132",
@@ -107,7 +211,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008197132": {
       "wrestler_id": "35008197132",
@@ -135,7 +254,43 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Sr",
+      "grade_2026_27": "Grad",
+      "status_2026_27": "graduated",
+      "eligible_seasons_count": 0,
+      "eligible_seasons": [],
+      "season_history": [
+        {
+          "season": "2025-26",
+          "grade": "Sr",
+          "code": "R6place",
+          "advancement": "R6place",
+          "prestige_points": 45,
+          "weight": 113,
+          "event": "2026 NJSIAA Region 7 - 113",
+          "entries": [
+            {
+              "code": "R6place",
+              "level": "region",
+              "weight": 113,
+              "grade": "Sr"
+            },
+            {
+              "code": "D3",
+              "level": "district",
+              "weight": 113,
+              "grade": "Sr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 45,
+      "eligible_advancement": "R6place",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_seanbradley_shawnee",
+      "match_reason": "single_season",
+      "confidence": "high"
     },
     "35217751132": {
       "wrestler_id": "35217751132",
@@ -148,7 +303,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217521132": {
       "wrestler_id": "35217521132",
@@ -161,7 +331,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217406132": {
       "wrestler_id": "35217406132",
@@ -174,7 +359,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217460132": {
       "wrestler_id": "35217460132",
@@ -187,7 +386,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217363132": {
       "wrestler_id": "35217363132",
@@ -200,7 +413,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008201132": {
       "wrestler_id": "35008201132",
@@ -277,7 +504,124 @@
           "region": null,
           "state": null
         }
-      ]
+      ],
+      "grade_2025_26": "Sr",
+      "grade_2026_27": "Grad",
+      "status_2026_27": "graduated",
+      "eligible_seasons_count": 0,
+      "eligible_seasons": [],
+      "season_history": [
+        {
+          "season": "2022-23",
+          "grade": "Fr",
+          "code": "swb1",
+          "advancement": "swb1",
+          "prestige_points": 65,
+          "weight": 106,
+          "event": "2023 NJSIAA State Wrestling Championships - 106",
+          "entries": [
+            {
+              "code": "swb1",
+              "level": "state",
+              "weight": 106,
+              "grade": "Fr"
+            },
+            {
+              "code": "R4place",
+              "level": "region",
+              "weight": 106,
+              "grade": "Fr"
+            },
+            {
+              "code": "D1",
+              "level": "district",
+              "weight": 106,
+              "grade": "Fr"
+            }
+          ]
+        },
+        {
+          "season": "2023-24",
+          "grade": "So",
+          "code": "S4 Place",
+          "advancement": "S4 Place",
+          "prestige_points": 105,
+          "weight": 106,
+          "event": "2024 NJSIAA State Wrestling Championships - 106",
+          "entries": [
+            {
+              "code": "S4 Place",
+              "level": "state",
+              "weight": 106,
+              "grade": "So"
+            },
+            {
+              "code": "R2place",
+              "level": "region",
+              "weight": 106,
+              "grade": "So"
+            },
+            {
+              "code": "D2",
+              "level": "district",
+              "weight": 106,
+              "grade": "So"
+            }
+          ]
+        },
+        {
+          "season": "2024-25",
+          "grade": "Jr",
+          "code": "D1",
+          "advancement": "D1",
+          "prestige_points": 40,
+          "weight": 113,
+          "event": "2025 NJSIAA District 28 - 113",
+          "entries": [
+            {
+              "code": "D1",
+              "level": "district",
+              "weight": 113,
+              "grade": "Jr"
+            }
+          ]
+        },
+        {
+          "season": "2025-26",
+          "grade": "Sr",
+          "code": "swb2",
+          "advancement": "swb2",
+          "prestige_points": 70,
+          "weight": 138,
+          "event": "2026 NJSIAA State Wrestling Championships - 138",
+          "entries": [
+            {
+              "code": "swb2",
+              "level": "state",
+              "weight": 138,
+              "grade": "Sr"
+            },
+            {
+              "code": "R2place",
+              "level": "region",
+              "weight": 138,
+              "grade": "Sr"
+            },
+            {
+              "code": "D1",
+              "level": "district",
+              "weight": 138,
+              "grade": "Sr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 105,
+      "eligible_advancement": "S4 Place",
+      "eligible_advancement_season": "2023-24",
+      "athlete_id": "ath_jordansegal_shawnee",
+      "match_reason": "name_and_school",
+      "confidence": "high"
     },
     "35497376132": {
       "wrestler_id": "35497376132",
@@ -290,7 +634,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217370132": {
       "wrestler_id": "35217370132",
@@ -303,7 +661,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008210132": {
       "wrestler_id": "35008210132",
@@ -330,7 +702,41 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2025-26",
+          "grade": "Jr",
+          "code": "Prelim Dis",
+          "advancement": "Prelim Dis",
+          "prestige_points": 5,
+          "weight": 120,
+          "event": "2026 NJSIAA District 28 - 120",
+          "entries": [
+            {
+              "code": "Prelim Dis",
+              "level": "district",
+              "weight": 120,
+              "grade": "Jr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 5,
+      "eligible_advancement": "Prelim Dis",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_nathanhunnewell_shawnee",
+      "match_reason": "single_season",
+      "confidence": "high"
     },
     "35217388132": {
       "wrestler_id": "35217388132",
@@ -365,7 +771,39 @@
           "region": null,
           "state": null
         }
-      ]
+      ],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2025-26",
+          "grade": "Fr",
+          "code": "D3",
+          "advancement": "D3",
+          "prestige_points": 40,
+          "weight": 132,
+          "event": "2026 NJSIAA District 28 - 132",
+          "entries": [
+            {
+              "code": "D3",
+              "level": "district",
+              "weight": 132,
+              "grade": null
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 40,
+      "eligible_advancement": "D3",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_braydeninman_shawnee",
+      "match_reason": "single_season",
+      "confidence": "high"
     },
     "35497452132": {
       "wrestler_id": "35497452132",
@@ -378,7 +816,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008225132": {
       "wrestler_id": "35008225132",
@@ -406,7 +858,46 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2024-25",
+          "grade": "Fr",
+          "code": "2v3 in Regions",
+          "advancement": "2v3 in Regions",
+          "prestige_points": 35,
+          "weight": 126,
+          "event": "2025 NJSIAA Region 7 - 126",
+          "entries": [
+            {
+              "code": "2v3 in Regions",
+              "level": "region",
+              "weight": 126,
+              "grade": "Fr"
+            },
+            {
+              "code": "D3",
+              "level": "district",
+              "weight": 126,
+              "grade": "Fr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 35,
+      "eligible_advancement": "2v3 in Regions",
+      "eligible_advancement_season": "2024-25",
+      "athlete_id": "ath_leelandrogers_shawnee",
+      "match_reason": "single_season",
+      "confidence": "high"
     },
     "35008238132": {
       "wrestler_id": "35008238132",
@@ -419,7 +910,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008199132": {
       "wrestler_id": "35008199132",
@@ -446,7 +952,54 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Sr",
+      "grade_2026_27": "Grad",
+      "status_2026_27": "graduated",
+      "eligible_seasons_count": 0,
+      "eligible_seasons": [],
+      "season_history": [
+        {
+          "season": "2023-24",
+          "grade": "So",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 120,
+          "event": "2024 NJSIAA District 27 - 120",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 120,
+              "grade": "So"
+            }
+          ]
+        },
+        {
+          "season": "2024-25",
+          "grade": "Jr",
+          "code": "D4",
+          "advancement": "D4",
+          "prestige_points": 15,
+          "weight": 120,
+          "event": "2025 NJSIAA District 28 - 120",
+          "entries": [
+            {
+              "code": "D4",
+              "level": "district",
+              "weight": 120,
+              "grade": "Jr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 15,
+      "eligible_advancement": "D4",
+      "eligible_advancement_season": "2024-25",
+      "athlete_id": "ath_garrettborlaug_shawnee",
+      "match_reason": "name_and_school",
+      "confidence": "high"
     },
     "35008236132": {
       "wrestler_id": "35008236132",
@@ -459,7 +1012,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008203132": {
       "wrestler_id": "35008203132",
@@ -486,7 +1054,41 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2025-26",
+          "grade": "Jr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 126,
+          "event": "2026 NJSIAA District 28 - 126",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 126,
+              "grade": "Jr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 10,
+      "eligible_advancement": "Quarters Dis",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_michaelhart_shawnee",
+      "match_reason": "single_season",
+      "confidence": "high"
     },
     "35008223132": {
       "wrestler_id": "35008223132",
@@ -499,7 +1101,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008237132": {
       "wrestler_id": "35008237132",
@@ -512,7 +1129,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008209132": {
       "wrestler_id": "35008209132",
@@ -552,7 +1184,75 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2023-24",
+          "grade": "Fr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 132,
+          "event": "2024 NJSIAA District 27 - 132",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 132,
+              "grade": "Fr"
+            }
+          ]
+        },
+        {
+          "season": "2024-25",
+          "grade": "So",
+          "code": "D4",
+          "advancement": "D4",
+          "prestige_points": 15,
+          "weight": 138,
+          "event": "2025 NJSIAA District 28 - 138",
+          "entries": [
+            {
+              "code": "D4",
+              "level": "district",
+              "weight": 138,
+              "grade": "So"
+            }
+          ]
+        },
+        {
+          "season": "2025-26",
+          "grade": "Jr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 144,
+          "event": "2026 NJSIAA District 28 - 144",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 144,
+              "grade": "Jr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 15,
+      "eligible_advancement": "D4",
+      "eligible_advancement_season": "2024-25",
+      "athlete_id": "ath_ryanhoerst_shawnee",
+      "match_reason": "name_and_school",
+      "confidence": "high"
     },
     "35557421132": {
       "wrestler_id": "35557421132",
@@ -565,7 +1265,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008211132": {
       "wrestler_id": "35008211132",
@@ -578,7 +1293,23 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008220132": {
       "wrestler_id": "35008220132",
@@ -591,7 +1322,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008200132": {
       "wrestler_id": "35008200132",
@@ -604,7 +1350,19 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Sr",
+      "grade_2026_27": "Grad",
+      "status_2026_27": "graduated",
+      "eligible_seasons_count": 0,
+      "eligible_seasons": [],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008221132": {
       "wrestler_id": "35008221132",
@@ -631,7 +1389,40 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2025-26",
+          "grade": "So",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 150,
+          "event": "2026 NJSIAA District 28 - 150",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 150,
+              "grade": "So"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 10,
+      "eligible_advancement": "Quarters Dis",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_oleksandrsashayurovs_shawnee",
+      "match_reason": "single_season",
+      "confidence": "high"
     },
     "35008232132": {
       "wrestler_id": "35008232132",
@@ -644,7 +1435,19 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Sr",
+      "grade_2026_27": "Grad",
+      "status_2026_27": "graduated",
+      "eligible_seasons_count": 0,
+      "eligible_seasons": [],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008228132": {
       "wrestler_id": "35008228132",
@@ -657,7 +1460,23 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217378132": {
       "wrestler_id": "35217378132",
@@ -670,7 +1489,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35497397132": {
       "wrestler_id": "35497397132",
@@ -683,7 +1516,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217455132": {
       "wrestler_id": "35217455132",
@@ -696,7 +1543,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217512132": {
       "wrestler_id": "35217512132",
@@ -709,7 +1570,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "36450248132": {
       "wrestler_id": "36450248132",
@@ -722,7 +1598,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35555998132": {
       "wrestler_id": "35555998132",
@@ -735,7 +1625,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35497529132": {
       "wrestler_id": "35497529132",
@@ -748,7 +1653,23 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008198132": {
       "wrestler_id": "35008198132",
@@ -775,7 +1696,54 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Sr",
+      "grade_2026_27": "Grad",
+      "status_2026_27": "graduated",
+      "eligible_seasons_count": 0,
+      "eligible_seasons": [],
+      "season_history": [
+        {
+          "season": "2024-25",
+          "grade": "Jr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 157,
+          "event": "2025 NJSIAA District 28 - 157",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 157,
+              "grade": "Jr"
+            }
+          ]
+        },
+        {
+          "season": "2025-26",
+          "grade": "Sr",
+          "code": "D4",
+          "advancement": "D4",
+          "prestige_points": 15,
+          "weight": 165,
+          "event": "2026 NJSIAA District 12 - 165",
+          "entries": [
+            {
+              "code": "D4",
+              "level": "district",
+              "weight": 165,
+              "grade": "Sr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 15,
+      "eligible_advancement": "D4",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_tylerdavis_randolph",
+      "match_reason": "name_school_change_grade_plus_one",
+      "confidence": "high"
     },
     "35217539132": {
       "wrestler_id": "35217539132",
@@ -788,7 +1756,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008226132": {
       "wrestler_id": "35008226132",
@@ -801,7 +1784,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008207132": {
       "wrestler_id": "35008207132",
@@ -841,7 +1839,75 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2023-24",
+          "grade": "Fr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 138,
+          "event": "2024 NJSIAA District 27 - 138",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 138,
+              "grade": "Fr"
+            }
+          ]
+        },
+        {
+          "season": "2024-25",
+          "grade": "So",
+          "code": "D4",
+          "advancement": "D4",
+          "prestige_points": 15,
+          "weight": 144,
+          "event": "2025 NJSIAA District 28 - 144",
+          "entries": [
+            {
+              "code": "D4",
+              "level": "district",
+              "weight": 144,
+              "grade": "So"
+            }
+          ]
+        },
+        {
+          "season": "2025-26",
+          "grade": "Jr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 175,
+          "event": "2026 NJSIAA District 28 - 175",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 175,
+              "grade": "Jr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 15,
+      "eligible_advancement": "D4",
+      "eligible_advancement_season": "2024-25",
+      "athlete_id": "ath_trevorsieben_shawnee",
+      "match_reason": "name_and_school",
+      "confidence": "high"
     },
     "35008208132": {
       "wrestler_id": "35008208132",
@@ -881,7 +1947,75 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2023-24",
+          "grade": "Fr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 144,
+          "event": "2024 NJSIAA District 27 - 144",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 144,
+              "grade": "Fr"
+            }
+          ]
+        },
+        {
+          "season": "2024-25",
+          "grade": "So",
+          "code": "D4",
+          "advancement": "D4",
+          "prestige_points": 15,
+          "weight": 175,
+          "event": "2025 NJSIAA District 28 - 175",
+          "entries": [
+            {
+              "code": "D4",
+              "level": "district",
+              "weight": 175,
+              "grade": "So"
+            }
+          ]
+        },
+        {
+          "season": "2025-26",
+          "grade": "Jr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 157,
+          "event": "2026 NJSIAA District 28 - 157",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 157,
+              "grade": "Jr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 15,
+      "eligible_advancement": "D4",
+      "eligible_advancement_season": "2024-25",
+      "athlete_id": "ath_maxspitznas_shawnee",
+      "match_reason": "name_and_school",
+      "confidence": "high"
     },
     "35008202132": {
       "wrestler_id": "35008202132",
@@ -908,7 +2042,54 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Sr",
+      "grade_2026_27": "Grad",
+      "status_2026_27": "graduated",
+      "eligible_seasons_count": 0,
+      "eligible_seasons": [],
+      "season_history": [
+        {
+          "season": "2022-23",
+          "grade": "Fr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 138,
+          "event": "2023 NJSIAA District 27 - 138",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 138,
+              "grade": "Fr"
+            }
+          ]
+        },
+        {
+          "season": "2025-26",
+          "grade": "Sr",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 165,
+          "event": "2026 NJSIAA District 28 - 165",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 165,
+              "grade": "Sr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 10,
+      "eligible_advancement": "Quarters Dis",
+      "eligible_advancement_season": "2022-23",
+      "athlete_id": "ath_josephaugusta_palmyra",
+      "match_reason": "name_school_change_grade_plus_one",
+      "confidence": "high"
     },
     "35497540132": {
       "wrestler_id": "35497540132",
@@ -921,7 +2102,19 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Sr",
+      "grade_2026_27": "Grad",
+      "status_2026_27": "graduated",
+      "eligible_seasons_count": 0,
+      "eligible_seasons": [],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35497360132": {
       "wrestler_id": "35497360132",
@@ -934,7 +2127,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217400132": {
       "wrestler_id": "35217400132",
@@ -947,7 +2154,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008215132": {
       "wrestler_id": "35008215132",
@@ -960,7 +2181,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008217132": {
       "wrestler_id": "35008217132",
@@ -973,7 +2209,22 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35217322132": {
       "wrestler_id": "35217322132",
@@ -986,7 +2237,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008204132": {
       "wrestler_id": "35008204132",
@@ -999,7 +2264,47 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2023-24",
+          "grade": "Fr",
+          "code": "2v3 in Regions",
+          "advancement": "2v3 in Regions",
+          "prestige_points": 35,
+          "weight": 190,
+          "event": "2024 NJSIAA Region 7 - 190",
+          "entries": [
+            {
+              "code": "2v3 in Regions",
+              "level": "region",
+              "weight": 190,
+              "grade": "Fr"
+            },
+            {
+              "code": "D3",
+              "level": "district",
+              "weight": 190,
+              "grade": "Fr"
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 35,
+      "eligible_advancement": "2v3 in Regions",
+      "eligible_advancement_season": "2023-24",
+      "athlete_id": "ath_robertlane_shawnee",
+      "match_reason": "single_season",
+      "confidence": "high"
     },
     "35008205132": {
       "wrestler_id": "35008205132",
@@ -1027,7 +2332,64 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2024-25",
+          "grade": "So",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 215,
+          "event": "2025 NJSIAA District 28 - 215",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 215,
+              "grade": null
+            }
+          ]
+        },
+        {
+          "season": "2025-26",
+          "grade": "Jr",
+          "code": "2v3 in Regions",
+          "advancement": "2v3 in Regions",
+          "prestige_points": 35,
+          "weight": 215,
+          "event": "2026 NJSIAA Region 7 - 215",
+          "entries": [
+            {
+              "code": "2v3 in Regions",
+              "level": "region",
+              "weight": 215,
+              "grade": null
+            },
+            {
+              "code": "D3",
+              "level": "district",
+              "weight": 215,
+              "grade": null
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 35,
+      "eligible_advancement": "2v3 in Regions",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_williamliammcsorley_shawnee",
+      "match_reason": "name_and_school",
+      "confidence": "high"
     },
     "35008219132": {
       "wrestler_id": "35008219132",
@@ -1054,7 +2416,40 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "So",
+      "grade_2026_27": "Jr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 2,
+      "eligible_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2025-26",
+          "grade": "So",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 190,
+          "event": "2026 NJSIAA District 28 - 190",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 190,
+              "grade": null
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 10,
+      "eligible_advancement": "Quarters Dis",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_rowannix_shawnee",
+      "match_reason": "single_season",
+      "confidence": "high"
     },
     "35556025132": {
       "wrestler_id": "35556025132",
@@ -1067,7 +2462,21 @@
       "source": "career_best_njsiaa",
       "recognitions": [],
       "has_prestige": false,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Fr",
+      "grade_2026_27": "So",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 1,
+      "eligible_seasons": [
+        "2025-26"
+      ],
+      "season_history": [],
+      "eligible_prestige_points": 0,
+      "eligible_advancement": null,
+      "eligible_advancement_season": null,
+      "athlete_id": null,
+      "match_reason": null,
+      "confidence": null
     },
     "35008230132": {
       "wrestler_id": "35008230132",
@@ -1107,7 +2516,58 @@
         }
       ],
       "has_prestige": true,
-      "unknown_seasons": []
+      "unknown_seasons": [],
+      "grade_2025_26": "Jr",
+      "grade_2026_27": "Sr",
+      "status_2026_27": "active",
+      "eligible_seasons_count": 3,
+      "eligible_seasons": [
+        "2023-24",
+        "2024-25",
+        "2025-26"
+      ],
+      "season_history": [
+        {
+          "season": "2024-25",
+          "grade": "So",
+          "code": "Quarters Dis",
+          "advancement": "Quarters Dis",
+          "prestige_points": 10,
+          "weight": 285,
+          "event": "2025 NJSIAA District 28 - 285",
+          "entries": [
+            {
+              "code": "Quarters Dis",
+              "level": "district",
+              "weight": 285,
+              "grade": null
+            }
+          ]
+        },
+        {
+          "season": "2025-26",
+          "grade": "Jr",
+          "code": "D2",
+          "advancement": "D2",
+          "prestige_points": 40,
+          "weight": 285,
+          "event": "2026 NJSIAA District 28 - 285",
+          "entries": [
+            {
+              "code": "D2",
+              "level": "district",
+              "weight": 285,
+              "grade": null
+            }
+          ]
+        }
+      ],
+      "eligible_prestige_points": 40,
+      "eligible_advancement": "D2",
+      "eligible_advancement_season": "2025-26",
+      "athlete_id": "ath_collinmchugh_shawnee",
+      "match_reason": "name_and_school",
+      "confidence": "high"
     }
   },
   "by_name": {
@@ -8044,5 +9504,22 @@
       "region": 1,
       "state": null
     }
-  ]
+  ],
+  "eligible_window": {
+    "target_season": "2026-27",
+    "note": "Prestige carried into 2026-27 uses prior seasons only; window length by grade in 2026-27 (Sr=3, Jr=2, So=1, Fr=0). Site display fields (prestige_points/advancement) unchanged; see eligible_* and season_history.",
+    "eligible_prior_by_grade": {
+      "Sr": 3,
+      "Jr": 2,
+      "So": 1,
+      "Fr": 0
+    },
+    "prior_pool": [
+      "2022-23",
+      "2023-24",
+      "2024-25",
+      "2025-26"
+    ],
+    "source": "data/opponent_advancement.json linked athlete records"
+  }
 }
