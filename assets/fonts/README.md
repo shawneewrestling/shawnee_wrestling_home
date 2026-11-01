@@ -1,10 +1,10 @@
-# Award chevron title fonts
+# Award chevron fonts
 
-## Alumni Sans Collegiate One
-- File: `AlumniSansCollegiateOne-Regular.woff2`
-- Designer: Robert Leuschke / The Alumni Sans Collegiate Project Authors
-- License: SIL Open Font License 1.1 (`OFL.txt`) — free for commercial use and web embedding
-- Source: https://github.com/googlefonts/alumni-sans-collegiate
-- Why: Collegiate/varsity block display face with built-in outline channel, matching the light-blue inline/outline look on Shawnee award banners better than Graduate.
+## Graduate (LOCKED — award card titles only)
+- File: `Graduate-Regular.woff2`
+- Designer: Eduardo Rodríguez Tunni
+- License: SIL Open Font License 1.1 (`OFL.txt`) — web embedding allowed
+- Source: https://github.com/etunni/graduate
 
-Body text on award cards remains system Arial/Helvetica (unchanged).
+**Do not swap this font in automation.** Chevron chrome (title face + identical
+navy tip + Shawnee S) is locked in `styles.css` under `AWARDS_CHEVRON_CHROME_LOCKED`.

@@ -1,13 +1,14 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-01T08:57:32-05:00",
+  "updated_at": "2026-11-01T15:04:27Z",
   "card_template": {
     "layout": "chevron",
     "title": "top",
     "body": "rows",
     "logo": "shawnee_s_bottom",
     "district_grouping": "by_decade",
-    "card_order": "data.awards.json card_order (prefix match; District Champions expands to decade cards)"
+    "card_order": "flattened card_rows (prefix match)",
+    "card_rows": "data.awards.json card_rows (explicit page rows; District Champions expands to decade cards)"
   },
   "meta": {
     "njsiaa_placements_2025_26": {
@@ -2290,6 +2291,50 @@
       "years_active": "2021-2022",
       "source_image": "season-pins-2024.png",
       "confidence": "high"
+    },
+    {
+      "id": "district-champ-2025-jordan-segal-113",
+      "award_name": "District Champions",
+      "award_category": "district",
+      "season": "2025",
+      "wrestler": "Jordan Segal",
+      "weight": "113",
+      "placement": "1st",
+      "confidence": "high",
+      "notes": "NJSIAA District 28 Feb 2025; public NJ.com / JerseyWrestling; Jeff-approved 2026-11-01"
+    },
+    {
+      "id": "district-champ-2025-luke-sherlock-132",
+      "award_name": "District Champions",
+      "award_category": "district",
+      "season": "2025",
+      "wrestler": "Luke Sherlock",
+      "weight": "132",
+      "placement": "1st",
+      "confidence": "high",
+      "notes": "NJSIAA District 28 2025-02-22; final DEC 5-0 over Peyton Reese (Seneca); NJ.com bracket 9565; Jeff-approved 2026-11-01"
+    },
+    {
+      "id": "district-champ-2026-jordan-segal-138",
+      "award_name": "District Champions",
+      "award_category": "district",
+      "season": "2026",
+      "wrestler": "Jordan Segal",
+      "weight": "138",
+      "placement": "1st",
+      "confidence": "high",
+      "notes": "NJSIAA District 28 2026-02-28; TW event 8978282132; 1st Place Match Fall over Landan Riddell (Immaculata); Jeff-approved 2026-11-01"
+    },
+    {
+      "id": "district-champ-2025-chris-ahrens-150",
+      "award_name": "District Champions",
+      "award_category": "district",
+      "season": "2025",
+      "wrestler": "Chris Ahrens",
+      "weight": "150",
+      "placement": "1st",
+      "confidence": "high",
+      "notes": "NJSIAA District 28 2025; 1st place match over Joseph Tete (Lenape), Inj. 3:40; Jeff-provided result, approved 2026-11-01"
     }
   ],
   "seed_count": 210,
@@ -2305,5 +2350,29 @@
     "Career Wins",
     "Career Pins",
     "Season Pins"
+  ],
+  "card_rows": [
+    [
+      "NCAA All-American"
+    ],
+    [
+      "State Champions",
+      "State Place Winner"
+    ],
+    [
+      "Region Champions"
+    ],
+    [
+      "District Champions"
+    ],
+    [
+      "Sectional Team Championship",
+      "District Team Championship"
+    ],
+    [
+      "Career Wins",
+      "Career Pins",
+      "Season Pins"
+    ]
   ]
 }

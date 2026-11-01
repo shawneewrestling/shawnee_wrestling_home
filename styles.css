@@ -1,9 +1,9 @@
 /* Shawnee Renegades Wrestling — 2025-2026 Season */
 
-/* Self-hosted collegiate title face for award chevrons (OFL-1.1) */
+/* AWARDS_CHEVRON_CHROME_LOCKED — self-hosted Graduate (OFL-1.1) for award titles */
 @font-face {
-  font-family: "Alumni Sans Collegiate One";
-  src: url("assets/fonts/AlumniSansCollegiateOne-Regular.woff2") format("woff2");
+  font-family: "Graduate";
+  src: url("assets/fonts/Graduate-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -183,22 +183,37 @@ tr:hover td { background: #eef5fb; }
 .callout.warn { background: #fff8e8; border-left-color: #e6a100; }
 
 /* Awards chevrons — matched to live shawneewrestling.com award banners */
+/* AWARDS_CHEVRON_CHROME_LOCKED — explicit rows from awards.json card_rows */
 .awards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
-  gap: 2.25rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
   margin-top: 1.25rem;
-  align-items: start;
-  justify-items: center;
 }
+.awards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.25rem 1.75rem;
+}
+/* AWARDS_CHEVRON_CHROME_LOCKED
+   - Font: Graduate (self-hosted OFL) — titles only; do not swap
+   - Tip: IDENTICAL on every card — fixed --cw/--cv/--cb; navy triangle with
+     centered Shawnee S (assets/img/shawnee-s.png) via .foot / .s-logo
+   - Rows: awards.json card_rows → .awards-row (NCAA | State+Place | Region |
+     District decades | Team | Career/Season individuals)
+   Pipelines must not rewrite this block, swap the font, or override --cw/--cv.
+*/
 .chevron-card {
-  /* Geometry: ~120° tip ⇒ V-height ≈ 0.29 × width */
+  /* Geometry locked: same tip size/angle on every card regardless of content */
   --cw: 252px;
-  --cv: 74px;
-  --cb: 6px;
+  --cv: 74px;   /* navy triangle height — identical on every card */
+  --cb: 6px;    /* border + title separator thickness */
   --navy: #002060;
   --navy-deep: #001848;
   --sky: #88b4e8;
+  --s-logo: 58px; /* Shawnee S size inside tip — locked */
   position: relative;
   width: var(--cw);
   max-width: 100%;
@@ -239,37 +254,35 @@ tr:hover td { background: #eef5fb; }
 .chevron-card .title {
   background: #fff;
   color: var(--navy);
-  /* Alumni Sans Collegiate One: OFL collegiate block with built-in outline channel */
-  font-family: "Alumni Sans Collegiate One", "Arial Black", Impact, sans-serif;
+  /* AWARDS_CHEVRON_CHROME_LOCKED — Graduate tuned to award_refs */
+  font-family: Graduate, "Arial Black", Impact, serif;
   font-weight: 400;
-  font-size: 1.72rem;
-  letter-spacing: 0.02em;
+  font-size: 1.5rem;
+  letter-spacing: -0.035em;
   text-align: center;
   text-transform: uppercase;
-  line-height: 0.95;
+  line-height: 0.9;
   padding: 0.85rem 0.35rem 0.65rem;
-  border-bottom: var(--cb) solid var(--navy);
-  /* Light-blue outer rim like original varsity banners; font supplies inner outline */
-  -webkit-text-stroke: 1.1px var(--sky);
+  border-bottom: var(--cb) solid var(--navy); /* 6px navy separator = original bar */
+  -webkit-text-stroke: 0.9px var(--navy);
   paint-order: stroke fill;
   text-shadow:
-    0 0 0.5px var(--sky),
-    0.5px 0 0 var(--sky),
-    -0.5px 0 0 var(--sky),
-    0 0.5px 0 var(--sky),
-    0 -0.5px 0 var(--sky);
+    0 1px 0 var(--sky),
+    0 0 1px var(--sky),
+    0.6px 0.6px 0 var(--sky),
+    -0.4px 0.4px 0 var(--sky);
 }
 .chevron-card .title .sub {
   display: block;
-  margin-top: 0.3rem;
-  font-family: "Alumni Sans Collegiate One", "Arial Black", Impact, sans-serif;
-  font-size: 1.05rem;
+  margin-top: 0.28rem;
+  font-family: Graduate, "Arial Black", Impact, serif;
+  font-size: 0.92rem;
   font-weight: 400;
-  letter-spacing: 0.06em;
-  -webkit-text-stroke: 0.85px var(--sky);
+  letter-spacing: -0.02em;
+  -webkit-text-stroke: 0.7px var(--navy);
   paint-order: stroke fill;
   color: var(--navy);
-  text-shadow: 0 0 0.4px var(--sky);
+  text-shadow: 0 1px 0 var(--sky), 0 0 0.6px var(--sky);
 }
 .chevron-card .body {
   padding: 0.45rem 0.5rem 0.15rem;
@@ -313,30 +326,28 @@ tr:hover td { background: #eef5fb; }
   font-variant-numeric: tabular-nums;
   padding-left: 0.2rem;
 }
+/* AWARDS_CHEVRON_CHROME_LOCKED — identical navy tip + centered S on every card */
 .chevron-card .foot {
   margin-top: auto;
   height: calc(var(--cv) - var(--cb));
+  min-height: calc(var(--cv) - var(--cb));
+  max-height: calc(var(--cv) - var(--cb));
   background: var(--navy);
   display: flex;
   align-items: center;
   justify-content: center;
-  /* Optical center in the triangle */
-  padding: 0 0 8px;
+  padding: 0 0 10px;
   flex-shrink: 0;
+  flex-grow: 0;
+  box-sizing: border-box;
 }
 .chevron-card .s-logo {
-  width: 58px;
-  height: 58px;
+  width: var(--s-logo);
+  height: var(--s-logo);
   object-fit: contain;
   display: block;
   background: transparent;
-  border: none;
-  border-radius: 0;
-  position: static;
-  left: auto;
-  bottom: auto;
-  transform: none;
-  font-size: 0;
+  flex-shrink: 0;
 }
 
 /* Team acknowledgement cards — years only, no placeholder columns */
@@ -402,8 +413,7 @@ tr:hover td { background: #eef5fb; }
 
 /* Prestigious NCAA / State Champion featured cards */
 .chevron-card.prestige {
-  --cw: 270px;
-  --cv: 78px;
+  /* AWARDS_CHEVRON_CHROME_LOCKED: do not override --cw/--cv — tip must match all cards */
   --gold: #c4a035;
   --gold-soft: #e8d59a;
 }
@@ -477,9 +487,8 @@ tr:hover td { background: #eef5fb; }
   color: #444;
   line-height: 1.25;
 }
-.chevron-card.prestige.state-champ {
-  --cw: 280px;
-}
+/* AWARDS_CHEVRON_CHROME_LOCKED: state-champ must not override --cw */
+
 .chevron-card.prestige.state-champ .body {
   min-height: 140px;
 }

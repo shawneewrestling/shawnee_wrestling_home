@@ -579,27 +579,50 @@
         (byName[name] ||= { title: name, kind: a.award_category || 'other', rows: [] }).rows.push(a);
       }
     }
-    // Config-driven page order from awards.json card_order (prefix match).
-    // District Champions expands to decade cards; unmatched titles follow at end.
-    const configuredOrder = (data.card_order || []).slice();
+    // AWARDS_CHEVRON_CHROME_LOCKED — config-driven rows from awards.json card_rows
+    // (fallback: flattened card_order). District Champions expands to decade cards.
+    // Do not invent new award entries here.
+    const configuredRows = (data.card_rows && data.card_rows.length)
+      ? data.card_rows.map((r) => r.slice())
+      : (data.card_order || []).map((k) => [k]);
+    const configuredOrder = configuredRows.flat();
+    function titleMatchesKey(title, key) {
+      if (title === key || title.startsWith(key)) return true;
+      if (key.startsWith('NCAA') && title.startsWith('NCAA')) return true;
+      return false;
+    }
     function cardOrderRank(title) {
       for (let i = 0; i < configuredOrder.length; i++) {
-        const key = configuredOrder[i];
-        if (title === key || title.startsWith(key)) return i;
-        // NCAA title includes division subtitle
-        if (key.startsWith('NCAA') && title.startsWith('NCAA')) return i;
+        if (titleMatchesKey(title, configuredOrder[i])) return i;
       }
-      return 1000; // leftovers after configured list
+      return 1000;
     }
-    const order = Object.keys(byName).sort((a, b) => {
+    const usedTitles = new Set();
+    const rowTitleLists = configuredRows.map((keys) => {
+      const titles = [];
+      for (const key of keys) {
+        const matches = Object.keys(byName).filter((t) => titleMatchesKey(t, key) && !usedTitles.has(t));
+        matches.sort((a, b) => {
+          if (a.startsWith('District Champions') && b.startsWith('District Champions')) {
+            return a.localeCompare(b);
+          }
+          return a.localeCompare(b);
+        });
+        for (const t of matches) {
+          usedTitles.add(t);
+          titles.push(t);
+        }
+      }
+      return titles;
+    }).filter((titles) => titles.length);
+    // Leftovers (should be empty when card_rows covers all rendered cards)
+    const leftovers = Object.keys(byName).filter((t) => !usedTitles.has(t)).sort((a, b) => {
       const ra = cardOrderRank(a), rb = cardOrderRank(b);
       if (ra !== rb) return ra - rb;
-      // Decade district cards: chronological by decade label
-      if (a.startsWith('District Champions') && b.startsWith('District Champions')) {
-        return a.localeCompare(b);
-      }
       return a.localeCompare(b);
     });
+    if (leftovers.length) rowTitleLists.push(leftovers);
+    const order = rowTitleLists.flat();
 
     const filters = document.getElementById('awardFilters');
     const kinds = ['all', ...new Set(Object.values(byName).map((c) => c.kind))];
@@ -608,53 +631,52 @@
     ).join('');
 
     const grid = document.getElementById('awardsGrid');
-    function paint(kind) {
-      grid.innerHTML = order.filter((t) => kind === 'all' || byName[t].kind === kind).map((t) => {
-        const card = byName[t];
-        const rows = card.rows.slice().sort((a, b) => {
-          if (card.kind === 'leaderboard') {
-            const av = Number(a.value), bv = Number(b.value);
-            if (!Number.isNaN(av) && !Number.isNaN(bv) && bv !== av) return bv - av;
-          }
-          if (isStatePlaceWinnerCard(card)) {
-            const pd = placeSortKey(a.placement) - placeSortKey(b.placement);
-            if (pd) return pd;
-          }
-          return String(a.season || '').localeCompare(String(b.season || ''))
-            || String(a.wrestler || '').localeCompare(String(b.wrestler || ''));
-        });
-
-        const prestigeNcaa = isNcaaCard(card);
-        const prestigeState = isStateChampionCard(card);
-        const team = isTeamCard(card);
-        let body;
-        let extraClass = '';
-        if (team) {
-          body = renderTeamBody(card, rows);
-          extraClass = ' team';
-        } else if (prestigeNcaa) {
-          body = renderNcaaBody(rows);
-          extraClass = ' prestige ncaa';
-        } else if (prestigeState) {
-          body = renderStateChampBody(rows);
-          extraClass = ' prestige state-champ';
-        } else {
-          let prevSeason = null;
-          const placeCard = isStatePlaceWinnerCard(card);
-          body = rows.map((a) => {
-            const cells = awardRowCells(a, card.kind);
-            let left = cells.left;
-            // Blank repeated seasons for district/region only — never for State Place Winner
-            // (place is left col; year must stay visible per entry, e.g. Luke Sherlock 2024).
-            if (!placeCard && (card.kind === 'district' || card.kind === 'region') && left && left === prevSeason) {
-              left = '';
-            } else if (cells.left) {
-              prevSeason = cells.left;
-            }
-            return `<div class="${cells.rowClass}"><span>${esc(left)}</span><span>${esc(cells.mid)}</span><span>${esc(cells.right)}</span></div>`;
-          }).join('');
+    function renderCardHtml(t) {
+      const card = byName[t];
+      const rows = card.rows.slice().sort((a, b) => {
+        if (card.kind === 'leaderboard') {
+          const av = Number(a.value), bv = Number(b.value);
+          if (!Number.isNaN(av) && !Number.isNaN(bv) && bv !== av) return bv - av;
         }
-        return `<article class="chevron-card${extraClass}" data-kind="${esc(card.kind)}">
+        if (isStatePlaceWinnerCard(card)) {
+          const pd = placeSortKey(a.placement) - placeSortKey(b.placement);
+          if (pd) return pd;
+        }
+        return String(a.season || '').localeCompare(String(b.season || ''))
+          || String(a.wrestler || '').localeCompare(String(b.wrestler || ''));
+      });
+
+      const prestigeNcaa = isNcaaCard(card);
+      const prestigeState = isStateChampionCard(card);
+      const team = isTeamCard(card);
+      let body;
+      let extraClass = '';
+      if (team) {
+        body = renderTeamBody(card, rows);
+        extraClass = ' team';
+      } else if (prestigeNcaa) {
+        body = renderNcaaBody(rows);
+        extraClass = ' prestige ncaa';
+      } else if (prestigeState) {
+        body = renderStateChampBody(rows);
+        extraClass = ' prestige state-champ';
+      } else {
+        let prevSeason = null;
+        const placeCard = isStatePlaceWinnerCard(card);
+        body = rows.map((a) => {
+          const cells = awardRowCells(a, card.kind);
+          let left = cells.left;
+          // Blank repeated seasons for district/region only — never for State Place Winner
+          // (place is left col; year must stay visible per entry, e.g. Luke Sherlock 2024).
+          if (!placeCard && (card.kind === 'district' || card.kind === 'region') && left && left === prevSeason) {
+            left = '';
+          } else if (cells.left) {
+            prevSeason = cells.left;
+          }
+          return `<div class="${cells.rowClass}"><span>${esc(left)}</span><span>${esc(cells.mid)}</span><span>${esc(cells.right)}</span></div>`;
+        }).join('');
+      }
+      return `<article class="chevron-card${extraClass}" data-kind="${esc(card.kind)}">
           <div class="chevron-card-inner">
             <div class="title">${formatChevronTitle(card.title)}</div>
             <div class="body">${body}</div>
@@ -662,7 +684,15 @@
             <div class="foot"><img class="s-logo" src="assets/img/shawnee-s.png" alt="Shawnee S" width="58" height="58" /></div>
           </div>
         </article>`;
-      }).join('');
+    }
+    function paint(kind) {
+      if (kind !== 'all') {
+        grid.innerHTML = `<div class="awards-row">${order.filter((t) => byName[t].kind === kind).map(renderCardHtml).join('')}</div>`;
+        return;
+      }
+      grid.innerHTML = rowTitleLists.map((titles) =>
+        `<div class="awards-row">${titles.map(renderCardHtml).join('')}</div>`
+      ).join('');
     }
     paint('all');
     filters.addEventListener('click', (e) => {

@@ -15,7 +15,7 @@ Branch note: `site-v2-2025-26-closeout` is a **preview** of the 2025-26 closeout
 | Opponent logos | `assets/logos/*.png` + `data/logos.json` | Sourced from GoBound; schedule stays on Trackwrestling. |
 
 ### Awards
-> **Locked:** Award chevron chrome (`AWARDS_CHEVRON_CHROME_LOCKED` in `styles.css`: Graduate titles, fixed navy tip angle/size, Shawnee S in `assets/img/shawnee-s.png`, Graduate in `assets/fonts/`) is locked to match live banners — do not change in automation or data refresh pipelines.
+> **Locked:** Award chevron chrome (`AWARDS_CHEVRON_CHROME_LOCKED` in `styles.css` / `app.js`: Graduate titles, identical navy tip + Shawnee S, explicit `card_rows` layout in `data/awards.json`) is locked to match live banners — do not change in automation or data refresh pipelines. Do not add award entries without Jeff approval.
  JSON shape (chevron cards)
 
 Each award row needs at least: `id`, `award_name`, `award_category`, `season`, and usually `wrestler` / `weight` / `placement` / `value`.  
