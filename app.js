@@ -303,6 +303,39 @@
     return dt;
   }
 
+
+  function dualAnchorId(m) {
+    if (!m) return '';
+    const eid = m.tournament_key || m.event_id || m.parent_event_id || '';
+    const opp = String(m.filter_opponent || m.opponent || m.opponent_slug || '')
+      .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    if (!eid && !opp) return '';
+    return `dual-${eid}${opp ? '-' + opp : ''}`;
+  }
+
+  function scheduleMatchForDual(d, data) {
+    if (!d || !data) return null;
+    const rows = data.schedule || [];
+    const eid = String(d.event_id || d.tournament_key || '');
+    const opp = String(d.opponent || '').trim().toLowerCase();
+    const day = String(d.date_iso || d.date || '').slice(0, 10);
+    let best = null;
+    let bestScore = 0;
+    for (const m of rows) {
+      if (!m || !['W', 'L', 'T'].includes(m.result)) continue;
+      const ao = String(m.filter_opponent || m.opponent || '').trim().toLowerCase();
+      const ae = String(m.tournament_key || m.event_id || m.parent_event_id || '');
+      const ad = String(m.date_iso || m.date || '').slice(0, 10);
+      let s = 0;
+      if (eid && ae === eid) s += 3;
+      if (opp && ao === opp) s += 3;
+      if (opp && ao && (ao.includes(opp.slice(0, 6)) || opp.includes(ao.slice(0, 6)))) s += 1;
+      if (day && ad === day) s += 2;
+      if (s > bestScore) { best = m; bestScore = s; }
+    }
+    return bestScore >= 5 ? best : (bestScore >= 3 ? best : null);
+  }
+
   function homeDualsForDisplay(data) {
     const duals = (data.dual_scores && data.dual_scores.duals) || [];
     if (seasonIsComplete(data)) return duals.slice();
@@ -439,12 +472,44 @@
 
     const tb = document.querySelector('#homeDuals tbody');
     const duals = homeDualsForDisplay(data);
-    setHtml(tb, duals.map((d) => `
-      <tr>
+    if (!tb) return;
+    const parts = [];
+    duals.forEach((d) => {
+      const match = scheduleMatchForDual(d, data);
+      const panelHtml = match ? tournamentPanel(match, data, 3) : '';
+      const canExpand = !!panelHtml;
+      const anchor = dualAnchorId(match || d);
+      const href = canExpand && anchor ? `schedule.html#${anchor}` : '';
+      const trClass = canExpand ? 'home-dual-row is-clickable' : 'home-dual-row';
+      const title = canExpand ? ' title="View bout-by-bout details"' : '';
+      const dataAttrs = canExpand
+        ? ` data-can-expand="1"${anchor ? ` data-dual-id="${esc(anchor)}"` : ''}${href ? ` data-schedule-href="${esc(href)}"` : ''}`
+        : '';
+      parts.push(`<tr class="${trClass}"${title}${dataAttrs}>
         <td><div class="opp">${logoImg(d.opponent_logo_local, d.opponent_logo, d.opponent)}<span>${esc(d.opponent)}</span></div></td>
         <td>${d.shawnee}-${d.opp}</td>
-        <td><span class="badge ${d.result === 'W' ? 'w' : 'l'}">${esc(d.result)}</span></td>
-      </tr>`).join(''));
+        <td><span class="badge ${d.result === 'W' ? 'w' : (d.result === 'T' ? 'ev' : 'l')}">${esc(d.result)}</span></td>
+      </tr>`);
+      if (panelHtml) {
+        parts.push(panelHtml.replace('class="expand-row"', 'class="expand-row home-dual-expand hidden"'));
+      }
+    });
+    setHtml(tb, parts.join(''));
+    tb.querySelectorAll('tr.home-dual-row.is-clickable').forEach((row) => {
+      row.setAttribute('aria-expanded', 'false');
+      row.addEventListener('click', (ev) => {
+        if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) {
+          const href = row.getAttribute('data-schedule-href');
+          if (href) window.location.href = href;
+          return;
+        }
+        const panel = row.nextElementSibling;
+        if (!panel || !panel.classList.contains('expand-row')) return;
+        const open = panel.classList.toggle('hidden') === false;
+        row.classList.toggle('is-open', open);
+        row.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
   }
 
   function renderHomeRoster(homeRoster) {
@@ -707,7 +772,7 @@
     return `<li>${esc(boutTwText(b, shawneeWrestler, weight))}</li>`;
   }
 
-  function tournamentPanel(m, data) {
+  function tournamentPanel(m, data, colspan) {
     if (!m || !data) return '';
     const key = m.tournament_key || m.event_id;
     if (!key) return '';
@@ -745,7 +810,8 @@
         return String(a.weight).localeCompare(String(b.weight)) || String(a.wrestler).localeCompare(String(b.wrestler));
       });
       const items = rows.map((r) => boutLine(r.bout, r.wrestler, r.weight)).join('');
-      return `<tr class="expand-row"><td colspan="6"><div class="tournament-panel dual-bouts"><ul class="bouts">${items}</ul></div></td></tr>`;
+      const cols = colspan || 6;
+      return `<tr class="expand-row"><td colspan="${cols}"><div class="tournament-panel dual-bouts"><ul class="bouts">${items}</ul></div></td></tr>`;
     }
     const cards = wrestlers.map((w) => {
       const place = w.placement ? `<span class="place">${esc(w.placement)}</span>` : '';
@@ -755,7 +821,8 @@
         <ul class="bouts">${items}</ul>
       </details>`;
     }).join('');
-    return `<tr class="expand-row"><td colspan="6"><div class="tournament-panel">${cards}</div></td></tr>`;
+    const cols = colspan || 6;
+    return `<tr class="expand-row"><td colspan="${cols}"><div class="tournament-panel">${cards}</div></td></tr>`;
   }
 
   function siteCell(m) {
@@ -813,7 +880,9 @@
       const timeLabel = m.time || ((m.status === 'final' || m.completed || seasonFinal) ? '—' : 'TBD');
       const resultCell = resultBadge(m, data, running);
       const detailsCell = expand || '';
-      parts.push(`<tr class="sched-row" data-eid="${esc(m.event_id || '')}">
+      const anchor = dualAnchorId(m);
+      const idAttr = anchor ? ` id="${esc(anchor)}"` : '';
+      parts.push(`<tr class="sched-row" data-eid="${esc(m.event_id || '')}"${idAttr}>
         <td>${esc(m.date_iso || m.date || '')}</td>
         <td>${oppCell(m)}</td>
         <td>${esc(siteCell(m))}</td>
@@ -836,6 +905,25 @@
         btn.textContent = open ? 'Hide' : 'Details';
       });
     });
+    const hash = (location.hash || '').replace(/^#/, '');
+    if (hash) {
+      let target = null;
+      try {
+        target = body.querySelector('tr.sched-row#' + CSS.escape(hash));
+      } catch (e) {
+        target = body.querySelector('tr.sched-row[id="' + hash.replace(/"/g, '') + '"]');
+      }
+      if (target) {
+        const btn = target.querySelector('.expand-btn');
+        const panel = target.nextElementSibling;
+        if (btn && panel && panel.classList.contains('expand-row')) {
+          panel.classList.remove('hidden');
+          btn.setAttribute('aria-expanded', 'true');
+          btn.textContent = 'Hide';
+          target.scrollIntoView({ block: 'center' });
+        }
+      }
+    }
   }
 
   function isShawneeVenue(loc) {

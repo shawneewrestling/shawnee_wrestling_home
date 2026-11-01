@@ -858,3 +858,16 @@ tr:hover td { background: #eef5fb; }
   font-variant-numeric: tabular-nums;
 }
 .tournament-panel.dual-bouts ul.bouts li:last-child { border-bottom: 0; }
+
+#homeDuals tr.home-dual-row.is-clickable {
+  cursor: pointer;
+}
+#homeDuals tr.home-dual-row.is-clickable:hover {
+  background: #f3f6fb;
+}
+#homeDuals tr.home-dual-row.is-open {
+  background: #eef3fa;
+}
+#homeDuals tr.home-dual-expand td {
+  background: #f8fafc;
+}
