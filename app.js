@@ -162,6 +162,71 @@
     }).join('');
   }
 
+  function formatChevronTitle(title) {
+    // Match live banners: stacked varsity words, optional decade subtitle.
+    let main = String(title || 'Award');
+    let sub = '';
+    const m = main.match(/^(.*?)\s*[—–]\s*(.+)$/); // em/en dash only (keep hyphens in All-American)
+    if (m) { main = m[1].trim(); sub = m[2].trim(); }
+    main = main.replace(/\s*\(.*?\)\s*/g, ' ').replace(/\s+/g, ' ').trim();
+    const up = main.toUpperCase();
+    let lines;
+    if (/\bCHAMPIONS$/.test(up) && up.includes(' ')) {
+      const i = up.lastIndexOf(' CHAMPIONS');
+      lines = [up.slice(0, i).trim(), 'CHAMPIONS'];
+    } else if (/\bCHAMPIONSHIP$/.test(up) && up.includes(' ')) {
+      const i = up.lastIndexOf(' CHAMPIONSHIP');
+      lines = [up.slice(0, i).trim(), 'CHAMPIONSHIP'];
+    } else if (up === 'NCAA ALL-AMERICAN') {
+      lines = ['NCAA', 'ALL-AMERICAN'];
+    } else if (up.length > 14 && up.includes(' ')) {
+      const parts = up.split(' ');
+      const mid = Math.ceil(parts.length / 2);
+      lines = [parts.slice(0, mid).join(' '), parts.slice(mid).join(' ')];
+    } else {
+      lines = [up];
+    }
+    const lineHtml = lines.map((l) => esc(l)).join('<br />');
+    const subHtml = sub ? `<span class="sub">${esc(sub.toUpperCase())}</span>` : '';
+    return lineHtml + subHtml;
+  }
+
+  function awardRowCells(a, kind) {
+    const name = a.wrestler || a.details || '';
+    if (kind === 'leaderboard' || a.award_category === 'leaderboard') {
+      // Live Career Wins / Pins: value | name | years
+      return {
+        left: a.value != null ? String(a.value) : '',
+        mid: name,
+        right: a.years_active || a.details || a.season || '',
+        rowClass: 'row leaderboard',
+      };
+    }
+    if (kind === 'season_milestone' || a.award_category === 'season_milestone') {
+      return {
+        left: a.value != null ? String(a.value) : (a.season || ''),
+        mid: name,
+        right: a.weight || a.details || '',
+        rowClass: 'row',
+      };
+    }
+    if (kind === 'team' || a.award_category === 'team') {
+      return {
+        left: a.season || '',
+        mid: a.details || name || 'Team title',
+        right: a.placement || '',
+        rowClass: 'row',
+      };
+    }
+    // district / region / state / college / default: year | wrestler | weight/placement
+    return {
+      left: a.season || '',
+      mid: name,
+      right: a.weight || a.placement || (a.value != null ? String(a.value) : ''),
+      rowClass: 'row',
+    };
+  }
+
   function renderAwards(data) {
     const awards = data.awards || [];
     const meta = data.meta?.njsiaa_placements_2025_26;
@@ -170,7 +235,6 @@
        ${meta ? `<br/><em>NJSIAA 2025-26 placements:</em> ${esc(meta.status)} — ${esc(meta.note)}` : ''}`;
 
     // Group into cards
-    const cards = [];
     const byName = {};
     for (const a of awards) {
       const name = a.award_name || 'Award';
@@ -199,17 +263,32 @@
     function paint(kind) {
       grid.innerHTML = order.filter((t) => kind === 'all' || byName[t].kind === kind).map((t) => {
         const card = byName[t];
-        const rows = card.rows.slice().sort((a, b) => String(a.season).localeCompare(String(b.season)) || String(a.wrestler || '').localeCompare(String(b.wrestler || '')));
+        const rows = card.rows.slice().sort((a, b) => {
+          if (card.kind === 'leaderboard') {
+            const av = Number(a.value), bv = Number(b.value);
+            if (!Number.isNaN(av) && !Number.isNaN(bv) && bv !== av) return bv - av;
+          }
+          return String(a.season || '').localeCompare(String(b.season || ''))
+            || String(a.wrestler || '').localeCompare(String(b.wrestler || ''));
+        });
+        let prevSeason = null;
         const body = rows.map((a) => {
-          const left = esc(a.season || '');
-          const mid = esc(a.wrestler || a.details || '');
-          const right = esc(a.weight || a.placement || a.value || '');
-          return `<div class="row"><span>${left}</span><span>${mid}</span><span>${right}</span></div>`;
+          const cells = awardRowCells(a, card.kind);
+          // Live district/region banners omit repeated year labels
+          let left = cells.left;
+          if ((card.kind === 'district' || card.kind === 'region' || card.kind === 'state') && left && left === prevSeason) {
+            left = '';
+          } else if (cells.left) {
+            prevSeason = cells.left;
+          }
+          return `<div class="${cells.rowClass}"><span>${esc(left)}</span><span>${esc(cells.mid)}</span><span>${esc(cells.right)}</span></div>`;
         }).join('');
         return `<article class="chevron-card" data-kind="${esc(card.kind)}">
-          <div class="title">${esc(card.title)}</div>
-          <div class="body">${body}</div>
-          <div class="s-logo" title="Shawnee">S</div>
+          <div class="chevron-card-inner">
+            <div class="title">${formatChevronTitle(card.title)}</div>
+            <div class="body">${body}</div>
+            <div class="foot"><img class="s-logo" src="assets/img/shawnee-s.png" alt="Shawnee S" width="58" height="58" /></div>
+          </div>
         </article>`;
       }).join('');
     }

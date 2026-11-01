@@ -173,59 +173,148 @@ tr:hover td { background: #eef5fb; }
 }
 .callout.warn { background: #fff8e8; border-left-color: #e6a100; }
 
-/* Awards chevrons */
+/* Awards chevrons — matched to live shawneewrestling.com award banners */
 .awards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem 1.25rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  gap: 2.25rem 1.75rem;
+  margin-top: 1.25rem;
+  align-items: start;
+  justify-items: center;
 }
 .chevron-card {
+  /* Geometry: ~120° tip ⇒ V-height ≈ 0.29 × width */
+  --cw: 252px;
+  --cv: 74px;
+  --cb: 6px;
+  --navy: #002060;
+  --navy-deep: #001848;
+  --sky: #88b4e8;
   position: relative;
+  width: var(--cw);
+  max-width: 100%;
+  filter: drop-shadow(0 6px 12px rgba(0, 16, 64, 0.22));
+}
+/* Navy silhouette (acts as outer border + tip fill) */
+.chevron-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--navy);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--cv)),
+    50% 100%,
+    0 calc(100% - var(--cv))
+  );
+  z-index: 0;
+}
+.chevron-card-inner {
+  position: relative;
+  z-index: 1;
+  margin: var(--cb);
   background: #fff;
-  border: 3px solid var(--navy);
-  color: var(--text);
-  clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 100%, 0 78%);
-  padding: 0 0 3.2rem;
-  min-height: 280px;
-  box-shadow: 0 4px 14px rgba(0,0,80,.12);
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - calc(var(--cv) - var(--cb))),
+    50% 100%,
+    0 calc(100% - calc(var(--cv) - var(--cb)))
+  );
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  color: #111;
 }
 .chevron-card .title {
-  background: linear-gradient(180deg, var(--accent) 0%, #a8d0ea 100%);
+  background: #fff;
   color: var(--navy);
-  font-family: Impact, "Arial Narrow", sans-serif;
-  font-size: 1.05rem;
-  letter-spacing: .04em;
+  font-family: "Graduate", "Arial Black", Impact, serif;
+  font-weight: 400;
+  font-size: 1.42rem;
+  letter-spacing: -0.01em;
   text-align: center;
-  padding: .55rem .5rem;
-  border-bottom: 2px solid var(--navy);
   text-transform: uppercase;
+  line-height: 0.96;
+  padding: 1rem 0.4rem 0.75rem;
+  border-bottom: var(--cb) solid var(--navy);
+  /* Bulk strokes to approach varsity letter weight on Graduate */
+  -webkit-text-stroke: 1.35px var(--navy);
+  paint-order: stroke fill;
+  filter: drop-shadow(0 0 0.35px var(--sky));
+}
+.chevron-card .title .sub {
+  display: block;
+  margin-top: 0.35rem;
+  font-family: "Graduate", "Arial Black", Impact, serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  -webkit-text-stroke: 0.8px var(--navy);
+  paint-order: stroke fill;
+  color: var(--navy);
 }
 .chevron-card .body {
-  padding: .65rem .75rem 0;
-  font-size: .82rem;
-  max-height: 180px;
-  overflow-y: auto;
+  padding: 0.45rem 0.5rem 0.15rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.12;
+  flex: 1 1 auto;
+  overflow: visible;
+  max-height: none;
 }
 .chevron-card .body .row {
   display: grid;
-  grid-template-columns: 3.2rem 1fr auto;
-  gap: .35rem;
-  padding: .18rem 0;
-  border-bottom: 1px dotted #ccd;
+  grid-template-columns: 2.45rem minmax(0, 1fr) auto;
+  gap: 0.15rem 0.35rem;
+  padding: 0.02rem 0;
+  border-bottom: none;
+  align-items: baseline;
+}
+.chevron-card .body .row.leaderboard {
+  grid-template-columns: 2.2rem minmax(0, 1fr) auto;
+}
+.chevron-card .body .row span:nth-child(1) {
+  font-weight: 700;
+  color: #111;
+  font-variant-numeric: tabular-nums;
+}
+.chevron-card .body .row span:nth-child(2) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.chevron-card .body .row span:nth-child(3) {
+  text-align: right;
+  color: #222;
+  font-variant-numeric: tabular-nums;
+  padding-left: 0.2rem;
+}
+.chevron-card .foot {
+  margin-top: auto;
+  height: calc(var(--cv) - var(--cb));
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Optical center in the triangle */
+  padding: 0 0 8px;
+  flex-shrink: 0;
 }
 .chevron-card .s-logo {
-  position: absolute;
-  left: 50%;
-  bottom: 1.1rem;
-  transform: translateX(-50%);
-  width: 36px; height: 36px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: var(--accent);
-  display: grid; place-items: center;
-  font-weight: 900; font-size: 1.1rem;
-  border: 2px solid var(--accent);
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  position: static;
+  left: auto;
+  bottom: auto;
+  transform: none;
+  font-size: 0;
 }
 .award-filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
 .award-filters button {
@@ -235,9 +324,9 @@ tr:hover td { background: #eef5fb; }
   border-radius: 999px;
   cursor: pointer;
   font-weight: 600;
-  color: var(--navy);
+  color: #002060;
 }
-.award-filters button.active { background: var(--navy); color: #fff; }
+.award-filters button.active { background: #002060; color: #fff; }
 
 .site-footer {
   background: var(--navy);
