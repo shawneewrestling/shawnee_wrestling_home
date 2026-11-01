@@ -1,10 +1,11 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-01T15:35:26Z",
+  "updated_at": "2026-11-01T15:45:09Z",
   "notes": [
     "Win% = W / (W+L+T), computed in code.",
     "2024-25 overall is 12-14-0 (corrected from historic sheet 12-13).",
     "Sectional titles sourced from awards.json Sectional Team Championship + Jeff confirmation (2021-22, 2022-23).",
+    "District 1985-86 (Roger Pullen) flagged after Jeff confirmed 1986 District team title (already on awards banner).",
     "Never display Trackwrestling or internal IDs on the page."
   ],
   "team_all_time": {
@@ -43,7 +44,7 @@
       "win_pct": 64.1104294479,
       "titles": {
         "league": 2,
-        "districts": 3,
+        "districts": 4,
         "sectional": 0
       }
     },
@@ -541,7 +542,7 @@
       },
       "championships": {
         "league": false,
-        "districts": false,
+        "districts": true,
         "sectional": false
       }
     },
@@ -1690,7 +1691,6 @@
     },
     "team_matches_expected": true,
     "awards_cross_check": [
-      "District Team years in awards.json but not flagged in coaching history: [1986]",
       "awards.json has no League/Conference team championship entries; coaching history League flags (end years): [1973, 1974, 1989, 1990, 2012, 2013, 2023, 2024]"
     ],
     "results_ledger_2025_26": "matches results_ledger overall 12-15",

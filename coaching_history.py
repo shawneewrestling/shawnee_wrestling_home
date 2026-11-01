@@ -43,7 +43,7 @@ RAW_SEASONS: List[Tuple[str, str, int, int, int, bool, bool]] = [
     ("1982-83", "Roger Pullen", 11, 4, 1, False, True),
     ("1983-84", "Roger Pullen", 8, 4, 0, False, True),
     ("1984-85", "Roger Pullen", 8, 4, 1, False, False),
-    ("1985-86", "Roger Pullen", 10, 4, 0, False, False),
+    ("1985-86", "Roger Pullen", 10, 4, 0, False, True),  # Jeff: 1986 District team title confirmed
     ("1986-87", "Roger Pullen", 10, 5, 0, False, False),
     ("1987-88", "Roger Pullen", 10, 6, 0, False, False),
     ("1988-89", "Roger Pullen", 9, 7, 0, True, False),
@@ -362,6 +362,7 @@ def build(awards_doc: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
             "Win% = W / (W+L+T), computed in code.",
             "2024-25 overall is 12-14-0 (corrected from historic sheet 12-13).",
             "Sectional titles sourced from awards.json Sectional Team Championship + Jeff confirmation (2021-22, 2022-23).",
+            "District 1985-86 (Roger Pullen) flagged after Jeff confirmed 1986 District team title (already on awards banner).",
             "Never display Trackwrestling or internal IDs on the page.",
         ],
         "team_all_time": {
