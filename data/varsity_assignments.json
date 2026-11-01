@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "season": "2025-2026",
-  "updated_at": "2026-11-01T10:40:37-05:00",
+  "updated_at": "2026-11-01T12:32:34-05:00",
   "weight_classes": [
     "106",
     "113",
@@ -43,7 +43,10 @@
       "show_career": false,
       "career_wins": null,
       "career_losses": null,
-      "seasons_on_record": 1
+      "seasons_on_record": 1,
+      "weights_wrestled": [
+        "106"
+      ]
     },
     {
       "assigned_weight": "113",
@@ -61,7 +64,11 @@
       "show_career": true,
       "career_wins": 14,
       "career_losses": 22,
-      "seasons_on_record": 2
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "106",
+        "113"
+      ]
     },
     {
       "assigned_weight": "120",
@@ -79,7 +86,11 @@
       "show_career": true,
       "career_wins": 35,
       "career_losses": 29,
-      "seasons_on_record": 3
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "113",
+        "120"
+      ]
     },
     {
       "assigned_weight": "126",
@@ -102,7 +113,13 @@
       "show_career": true,
       "career_wins": 107,
       "career_losses": 25,
-      "seasons_on_record": 4
+      "seasons_on_record": 4,
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ]
     },
     {
       "assigned_weight": "132",
@@ -120,7 +137,11 @@
       "show_career": false,
       "career_wins": null,
       "career_losses": null,
-      "seasons_on_record": 1
+      "seasons_on_record": 1,
+      "weights_wrestled": [
+        "126",
+        "132"
+      ]
     },
     {
       "assigned_weight": "138",
@@ -138,7 +159,13 @@
       "show_career": true,
       "career_wins": 30,
       "career_losses": 47,
-      "seasons_on_record": 3
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ]
     },
     {
       "assigned_weight": "144",
@@ -156,7 +183,12 @@
       "show_career": true,
       "career_wins": 31,
       "career_losses": 29,
-      "seasons_on_record": 2
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "144",
+        "150",
+        "157"
+      ]
     },
     {
       "assigned_weight": "150",
@@ -174,7 +206,11 @@
       "show_career": false,
       "career_wins": null,
       "career_losses": null,
-      "seasons_on_record": 1
+      "seasons_on_record": 1,
+      "weights_wrestled": [
+        "150",
+        "157"
+      ]
     },
     {
       "assigned_weight": "157",
@@ -192,7 +228,10 @@
       "show_career": false,
       "career_wins": null,
       "career_losses": null,
-      "seasons_on_record": 1
+      "seasons_on_record": 1,
+      "weights_wrestled": [
+        "157"
+      ]
     },
     {
       "assigned_weight": "165",
@@ -210,7 +249,12 @@
       "show_career": true,
       "career_wins": 53,
       "career_losses": 44,
-      "seasons_on_record": 3
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "157",
+        "165",
+        "175"
+      ]
     },
     {
       "assigned_weight": "175",
@@ -228,7 +272,12 @@
       "show_career": true,
       "career_wins": 13,
       "career_losses": 22,
-      "seasons_on_record": 3
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "165",
+        "175",
+        "190"
+      ]
     },
     {
       "assigned_weight": "190",
@@ -246,7 +295,10 @@
       "show_career": false,
       "career_wins": null,
       "career_losses": null,
-      "seasons_on_record": 1
+      "seasons_on_record": 1,
+      "weights_wrestled": [
+        "190"
+      ]
     },
     {
       "assigned_weight": "215",
@@ -264,7 +316,11 @@
       "show_career": true,
       "career_wins": 22,
       "career_losses": 28,
-      "seasons_on_record": 2
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "215",
+        "285"
+      ]
     },
     {
       "assigned_weight": "285",
@@ -282,7 +338,11 @@
       "show_career": true,
       "career_wins": 27,
       "career_losses": 34,
-      "seasons_on_record": 2
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "215",
+        "285"
+      ]
     }
   ]
 }

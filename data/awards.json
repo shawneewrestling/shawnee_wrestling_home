@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-01T15:04:27Z",
+  "updated_at": "2026-11-01T12:32:14-05:00",
   "card_template": {
     "layout": "chevron",
     "title": "top",
@@ -1875,6 +1875,50 @@
       "confidence": "high"
     },
     {
+      "id": "district-champ-2025-jordan-segal-113",
+      "award_name": "District Champions",
+      "award_category": "district",
+      "season": "2025",
+      "wrestler": "Jordan Segal",
+      "weight": "113",
+      "placement": "1st",
+      "confidence": "high",
+      "notes": "NJSIAA District 28 Feb 2025; public NJ.com / JerseyWrestling; Jeff-approved 2026-11-01"
+    },
+    {
+      "id": "district-champ-2025-luke-sherlock-132",
+      "award_name": "District Champions",
+      "award_category": "district",
+      "season": "2025",
+      "wrestler": "Luke Sherlock",
+      "weight": "132",
+      "placement": "1st",
+      "confidence": "high",
+      "notes": "NJSIAA District 28 2025-02-22; final DEC 5-0 over Peyton Reese (Seneca); NJ.com bracket 9565; Jeff-approved 2026-11-01"
+    },
+    {
+      "id": "district-champ-2025-chris-ahrens-150",
+      "award_name": "District Champions",
+      "award_category": "district",
+      "season": "2025",
+      "wrestler": "Chris Ahrens",
+      "weight": "150",
+      "placement": "1st",
+      "confidence": "high",
+      "notes": "NJSIAA District 28 2025; 1st place match over Joseph Tete (Lenape), Inj. 3:40; Jeff-provided result, approved 2026-11-01"
+    },
+    {
+      "id": "district-champ-2026-jordan-segal-138",
+      "award_name": "District Champions",
+      "award_category": "district",
+      "season": "2026",
+      "wrestler": "Jordan Segal",
+      "weight": "138",
+      "placement": "1st",
+      "confidence": "high",
+      "notes": "NJSIAA District 28 2026-02-28; TW event 8978282132; 1st Place Match Fall over Landan Riddell (Immaculata); Jeff-approved 2026-11-01"
+    },
+    {
       "id": "career-wins-matt-higgins",
       "award_name": "Career Wins",
       "award_category": "leaderboard",
@@ -1895,12 +1939,42 @@
       "confidence": "high"
     },
     {
+      "id": "career-wins-chris-ahrens",
+      "award_name": "Career Wins",
+      "award_category": "leaderboard",
+      "wrestler": "Chris Ahrens",
+      "value": 115,
+      "years_active": "2022-2025",
+      "source_image": "wins-1.png",
+      "confidence": "high"
+    },
+    {
+      "id": "career-wins-luke-sherlock",
+      "award_name": "Career Wins",
+      "award_category": "leaderboard",
+      "wrestler": "Luke Sherlock",
+      "value": 115,
+      "years_active": "2022-2025",
+      "source_image": "wins-1.png",
+      "confidence": "high"
+    },
+    {
       "id": "career-wins-connor-muli",
       "award_name": "Career Wins",
       "award_category": "leaderboard",
       "wrestler": "Connor Muli",
       "value": 114,
       "years_active": "2010-2014",
+      "source_image": "wins-1.png",
+      "confidence": "high"
+    },
+    {
+      "id": "career-wins-jordan-segal",
+      "award_name": "Career Wins",
+      "award_category": "leaderboard",
+      "wrestler": "Jordan Segal",
+      "value": 107,
+      "years_active": "2023-2026",
       "source_image": "wins-1.png",
       "confidence": "high"
     },
@@ -2026,6 +2100,16 @@
       "notes": "Spelling confirmed as published by Jeff 2026-11-01"
     },
     {
+      "id": "career-wins-griffin-hastings",
+      "award_name": "Career Wins",
+      "award_category": "leaderboard",
+      "wrestler": "Griffin Hastings",
+      "value": 75,
+      "years_active": "2014-2018",
+      "source_image": "wins-1.png",
+      "confidence": "high"
+    },
+    {
       "id": "career-wins-isaiah-bryant",
       "award_name": "Career Wins",
       "award_category": "leaderboard",
@@ -2056,12 +2140,12 @@
       "confidence": "high"
     },
     {
-      "id": "career-wins-griffin-hastings",
+      "id": "career-wins-ethan-staples",
       "award_name": "Career Wins",
       "award_category": "leaderboard",
-      "wrestler": "Griffin Hastings",
+      "wrestler": "Ethan Staples",
       "value": 73,
-      "years_active": "2014-2018",
+      "years_active": "2022-2023",
       "source_image": "wins-1.png",
       "confidence": "high"
     },
@@ -2086,6 +2170,16 @@
       "confidence": "high"
     },
     {
+      "id": "career-wins-jackson-harris",
+      "award_name": "Career Wins",
+      "award_category": "leaderboard",
+      "wrestler": "Jackson Harris",
+      "value": 70,
+      "years_active": "2021-2023",
+      "source_image": "wins-1.png",
+      "confidence": "high"
+    },
+    {
       "id": "career-wins-randy-worrell",
       "award_name": "Career Wins",
       "award_category": "leaderboard",
@@ -2093,6 +2187,26 @@
       "value": 70,
       "years_active": "1981-1985",
       "source_image": "wins-1.png",
+      "confidence": "high"
+    },
+    {
+      "id": "career-pins-chris-ahrens",
+      "award_name": "Career Pins",
+      "award_category": "leaderboard",
+      "wrestler": "Chris Ahrens",
+      "value": 67,
+      "years_active": "2022-2025",
+      "source_image": "pins-1.png",
+      "confidence": "high"
+    },
+    {
+      "id": "career-pins-luke-sherlock",
+      "award_name": "Career Pins",
+      "award_category": "leaderboard",
+      "wrestler": "Luke Sherlock",
+      "value": 65,
+      "years_active": "2022-2025",
+      "source_image": "pins-1.png",
       "confidence": "high"
     },
     {
@@ -2146,6 +2260,16 @@
       "confidence": "high"
     },
     {
+      "id": "career-pins-jackson-harris",
+      "award_name": "Career Pins",
+      "award_category": "leaderboard",
+      "wrestler": "Jackson Harris",
+      "value": 51,
+      "years_active": "2021-2023",
+      "source_image": "pins-1.png",
+      "confidence": "high"
+    },
+    {
       "id": "career-pins-jake-hastings",
       "award_name": "Career Pins",
       "award_category": "leaderboard",
@@ -2176,6 +2300,16 @@
       "confidence": "high"
     },
     {
+      "id": "career-pins-dave-webb",
+      "award_name": "Career Pins",
+      "award_category": "leaderboard",
+      "wrestler": "Dave Webb",
+      "value": 42,
+      "years_active": "1995-1999",
+      "source_image": "pins-1.png",
+      "confidence": "high"
+    },
+    {
       "id": "career-pins-mike-sferra",
       "award_name": "Career Pins",
       "award_category": "leaderboard",
@@ -2196,16 +2330,6 @@
       "confidence": "high"
     },
     {
-      "id": "career-pins-dave-webb",
-      "award_name": "Career Pins",
-      "award_category": "leaderboard",
-      "wrestler": "Dave Webb",
-      "value": 42,
-      "years_active": "1995-1999",
-      "source_image": "pins-1.png",
-      "confidence": "high"
-    },
-    {
       "id": "season-pins-2023-jackson-harris",
       "award_name": "Season Pins",
       "award_category": "leaderboard",
@@ -2217,6 +2341,17 @@
       "confidence": "high"
     },
     {
+      "id": "season-pins-2025-chris-ahrens",
+      "award_name": "Season Pins",
+      "award_category": "leaderboard",
+      "wrestler": "Chris Ahrens",
+      "value": 24,
+      "years_active": "2024-2025",
+      "source_image": "season-pins-2024.png",
+      "confidence": "high",
+      "season": "2025"
+    },
+    {
       "id": "season-pins-2024-luke-sherlock",
       "award_name": "Season Pins",
       "award_category": "leaderboard",
@@ -2224,17 +2359,6 @@
       "wrestler": "Luke Sherlock",
       "value": 23,
       "years_active": "2023-2024",
-      "source_image": "season-pins-2024.png",
-      "confidence": "high"
-    },
-    {
-      "id": "season-pins-1996-brad-rohner",
-      "award_name": "Season Pins",
-      "award_category": "leaderboard",
-      "season": "1996",
-      "wrestler": "Brad Rohner",
-      "value": 22,
-      "years_active": "1995-1996",
       "source_image": "season-pins-2024.png",
       "confidence": "high"
     },
@@ -2250,6 +2374,17 @@
       "confidence": "high"
     },
     {
+      "id": "season-pins-1996-brad-rohner",
+      "award_name": "Season Pins",
+      "award_category": "leaderboard",
+      "season": "1996",
+      "wrestler": "Brad Rohner",
+      "value": 22,
+      "years_active": "1995-1996",
+      "source_image": "season-pins-2024.png",
+      "confidence": "high"
+    },
+    {
       "id": "season-pins-1974-dave-miller",
       "award_name": "Season Pins",
       "award_category": "leaderboard",
@@ -2257,28 +2392,6 @@
       "wrestler": "Dave Miller",
       "value": 21,
       "years_active": "1973-1974",
-      "source_image": "season-pins-2024.png",
-      "confidence": "high"
-    },
-    {
-      "id": "season-pins-2018-matt-higgins",
-      "award_name": "Season Pins",
-      "award_category": "leaderboard",
-      "season": "2018",
-      "wrestler": "Matt Higgins",
-      "value": 20,
-      "years_active": "2017-2018",
-      "source_image": "season-pins-2024.png",
-      "confidence": "high"
-    },
-    {
-      "id": "season-pins-2022-nick-cottone",
-      "award_name": "Season Pins",
-      "award_category": "leaderboard",
-      "season": "2022",
-      "wrestler": "Nick Cottone",
-      "value": 20,
-      "years_active": "2021-2022",
       "source_image": "season-pins-2024.png",
       "confidence": "high"
     },
@@ -2294,51 +2407,29 @@
       "confidence": "high"
     },
     {
-      "id": "district-champ-2025-jordan-segal-113",
-      "award_name": "District Champions",
-      "award_category": "district",
-      "season": "2025",
-      "wrestler": "Jordan Segal",
-      "weight": "113",
-      "placement": "1st",
-      "confidence": "high",
-      "notes": "NJSIAA District 28 Feb 2025; public NJ.com / JerseyWrestling; Jeff-approved 2026-11-01"
+      "id": "season-pins-2022-nick-cottone",
+      "award_name": "Season Pins",
+      "award_category": "leaderboard",
+      "season": "2022",
+      "wrestler": "Nick Cottone",
+      "value": 20,
+      "years_active": "2021-2022",
+      "source_image": "season-pins-2024.png",
+      "confidence": "high"
     },
     {
-      "id": "district-champ-2025-luke-sherlock-132",
-      "award_name": "District Champions",
-      "award_category": "district",
-      "season": "2025",
-      "wrestler": "Luke Sherlock",
-      "weight": "132",
-      "placement": "1st",
-      "confidence": "high",
-      "notes": "NJSIAA District 28 2025-02-22; final DEC 5-0 over Peyton Reese (Seneca); NJ.com bracket 9565; Jeff-approved 2026-11-01"
-    },
-    {
-      "id": "district-champ-2025-chris-ahrens-150",
-      "award_name": "District Champions",
-      "award_category": "district",
-      "season": "2025",
-      "wrestler": "Chris Ahrens",
-      "weight": "150",
-      "placement": "1st",
-      "confidence": "high",
-      "notes": "NJSIAA District 28 2025; 1st place match over Joseph Tete (Lenape), Inj. 3:40; Jeff-provided result, approved 2026-11-01"
-    },
-    {
-      "id": "district-champ-2026-jordan-segal-138",
-      "award_name": "District Champions",
-      "award_category": "district",
-      "season": "2026",
-      "wrestler": "Jordan Segal",
-      "weight": "138",
-      "placement": "1st",
-      "confidence": "high",
-      "notes": "NJSIAA District 28 2026-02-28; TW event 8978282132; 1st Place Match Fall over Landan Riddell (Immaculata); Jeff-approved 2026-11-01"
+      "id": "season-pins-2018-matt-higgins",
+      "award_name": "Season Pins",
+      "award_category": "leaderboard",
+      "season": "2018",
+      "wrestler": "Matt Higgins",
+      "value": 20,
+      "years_active": "2017-2018",
+      "source_image": "season-pins-2024.png",
+      "confidence": "high"
     }
   ],
-  "seed_count": 210,
+  "seed_count": 223,
   "derived_2025_26_count": 0,
   "card_order": [
     "NCAA All-American",

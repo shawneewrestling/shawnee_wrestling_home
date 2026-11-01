@@ -1,0 +1,1373 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-01T12:32:14-05:00",
+  "current_season": "2025-26",
+  "current_weights": {
+    "Daniel Fitzpatrick": [
+      "106"
+    ],
+    "Logan Reice": [
+      "106",
+      "113",
+      "150"
+    ],
+    "Logan Sloan": [
+      "106"
+    ],
+    "Jadiel Esquivel": [
+      "113"
+    ],
+    "Matt Hart": [
+      "106",
+      "113"
+    ],
+    "Benjamin Pollock": [
+      "113"
+    ],
+    "Anthony Blahut": [
+      "113",
+      "120"
+    ],
+    "Sean Bradley": [
+      "113",
+      "120"
+    ],
+    "Romeo Cline": [
+      "120"
+    ],
+    "Ranger Fest": [
+      "120"
+    ],
+    "Noah Meisner": [
+      "120"
+    ],
+    "Luke Velasco": [
+      "120"
+    ],
+    "Gino Gonzalez": [
+      "120",
+      "126"
+    ],
+    "Jordan Segal": [
+      "126",
+      "132",
+      "138",
+      "144"
+    ],
+    "Logan Curiale": [
+      "132"
+    ],
+    "Cole Hoguet": [
+      "132"
+    ],
+    "Nathan Hunnewell": [
+      "120",
+      "126",
+      "132"
+    ],
+    "Brayden Inman": [
+      "126",
+      "132"
+    ],
+    "Charles Pulaski": [
+      "132"
+    ],
+    "Leeland Rogers": [
+      "132",
+      "138",
+      "144"
+    ],
+    "Cooper Stauss": [
+      "132"
+    ],
+    "Garrett Borlaug": [
+      "126",
+      "132",
+      "138",
+      "144"
+    ],
+    "Landon Caffery": [
+      "138"
+    ],
+    "Michael Hart": [
+      "126",
+      "132",
+      "138",
+      "144"
+    ],
+    "Owen Siena": [
+      "132",
+      "138"
+    ],
+    "Jack Caldwell": [
+      "144",
+      "150"
+    ],
+    "Ryan Hoerst": [
+      "138",
+      "144",
+      "150"
+    ],
+    "Walter Johnson": [
+      "144"
+    ],
+    "Rhys Pritchard": [
+      "144"
+    ],
+    "Brian Reice": [
+      "144",
+      "150"
+    ],
+    "Max Shectman": [
+      "144"
+    ],
+    "Oleksandr `Sasha` Yurovskyi": [
+      "144",
+      "150",
+      "157"
+    ],
+    "Colin Dowd": [
+      "150"
+    ],
+    "Ashton Hayden": [
+      "150"
+    ],
+    "Domenico Incollingo": [
+      "150"
+    ],
+    "Kellan McDonough": [
+      "150",
+      "157"
+    ],
+    "Arjun Shah": [
+      "150"
+    ],
+    "Gabriel Evans": [
+      "157"
+    ],
+    "Brandon Kelly": [
+      "157"
+    ],
+    "William Mays": [
+      "157"
+    ],
+    "Jack Potter": [
+      "157"
+    ],
+    "Tyler Davis": [
+      "165",
+      "175"
+    ],
+    "Brodie Regan": [
+      "165"
+    ],
+    "Eli Sauler": [
+      "165",
+      "175"
+    ],
+    "Trevor Sieben": [
+      "157",
+      "165",
+      "175"
+    ],
+    "Max Spitznas": [
+      "157",
+      "165",
+      "175"
+    ],
+    "Joseph Augusta": [
+      "165",
+      "175",
+      "190"
+    ],
+    "Anthony Birney": [
+      "175"
+    ],
+    "Logan Cino": [
+      "175"
+    ],
+    "Giovanni Lopez": [
+      "190"
+    ],
+    "Andrik Orenyo": [
+      "190"
+    ],
+    "Jacobs Rodriguez": [
+      "190"
+    ],
+    "Jack Gleeson": [
+      "215"
+    ],
+    "Robert Lane": [
+      "190",
+      "215"
+    ],
+    "William (Liam) McSorley": [
+      "215",
+      "285"
+    ],
+    "Rowan Nix": [
+      "190",
+      "215"
+    ],
+    "Veliz-Velasquez Carlos": [
+      "285"
+    ],
+    "Collin McHugh": [
+      "215",
+      "285"
+    ]
+  },
+  "career_by_key": {
+    "asherharrington": {
+      "name": "Asher Harrington",
+      "all_weights": [
+        "106",
+        "120"
+      ],
+      "by_season": {
+        "2020-21": [
+          "106"
+        ],
+        "2021-22": [
+          "106"
+        ],
+        "2022-23": [
+          "120"
+        ]
+      }
+    },
+    "nickcottone": {
+      "name": "Nick Cottone",
+      "all_weights": [
+        "113",
+        "126",
+        "132"
+      ],
+      "by_season": {
+        "2020-21": [
+          "113"
+        ],
+        "2021-22": [
+          "126",
+          "132"
+        ]
+      }
+    },
+    "brettbalzan": {
+      "name": "Brett Balzan",
+      "all_weights": [
+        "120",
+        "126",
+        "132"
+      ],
+      "by_season": {
+        "2020-21": [
+          "120"
+        ],
+        "2021-22": [
+          "120",
+          "126"
+        ],
+        "2022-23": [
+          "126",
+          "132"
+        ]
+      }
+    },
+    "jakehastings": {
+      "name": "Jake Hastings",
+      "all_weights": [
+        "126",
+        "138",
+        "144",
+        "132"
+      ],
+      "by_season": {
+        "2020-21": [
+          "126"
+        ],
+        "2021-22": [
+          "138",
+          "144",
+          "132"
+        ]
+      }
+    },
+    "anthonyduarte": {
+      "name": "Anthony Duarte",
+      "all_weights": [
+        "132",
+        "138",
+        "144"
+      ],
+      "by_season": {
+        "2020-21": [
+          "132"
+        ],
+        "2021-22": [
+          "132",
+          "138",
+          "144"
+        ]
+      }
+    },
+    "lucashunter": {
+      "name": "Lucas Hunter",
+      "all_weights": [
+        "126",
+        "120"
+      ],
+      "by_season": {
+        "2020-21": [
+          "126"
+        ],
+        "2021-22": [
+          "120"
+        ]
+      }
+    },
+    "jamesmoriarty": {
+      "name": "James Moriarty",
+      "all_weights": [
+        "138",
+        "132",
+        "126",
+        "144"
+      ],
+      "by_season": {
+        "2020-21": [
+          "138"
+        ],
+        "2021-22": [
+          "132",
+          "126"
+        ],
+        "2022-23": [
+          "132",
+          "138",
+          "144"
+        ]
+      }
+    },
+    "nathanielrose": {
+      "name": "Nathaniel Rose",
+      "all_weights": [
+        "138"
+      ],
+      "by_season": {
+        "2020-21": [
+          "138"
+        ]
+      }
+    },
+    "calebpietrafitta": {
+      "name": "Caleb Pietrafitta",
+      "all_weights": [
+        "145"
+      ],
+      "by_season": {
+        "2020-21": [
+          "145"
+        ]
+      }
+    },
+    "rjhunnewell": {
+      "name": "RJ Hunnewell",
+      "all_weights": [
+        "152"
+      ],
+      "by_season": {
+        "2020-21": [
+          "152"
+        ]
+      }
+    },
+    "maxgermain": {
+      "name": "Max Germain",
+      "all_weights": [
+        "160"
+      ],
+      "by_season": {
+        "2020-21": [
+          "160"
+        ]
+      }
+    },
+    "mattquinn": {
+      "name": "Matt Quinn",
+      "all_weights": [
+        "152"
+      ],
+      "by_season": {
+        "2020-21": [
+          "152"
+        ]
+      }
+    },
+    "isaacdean": {
+      "name": "Isaac Dean",
+      "all_weights": [
+        "182"
+      ],
+      "by_season": {
+        "2020-21": [
+          "182"
+        ]
+      }
+    },
+    "elijahkodran": {
+      "name": "Elijah Kodran",
+      "all_weights": [
+        "182",
+        "157"
+      ],
+      "by_season": {
+        "2020-21": [
+          "182"
+        ],
+        "2021-22": [
+          "157"
+        ]
+      }
+    },
+    "jaystokes": {
+      "name": "Jay Stokes",
+      "all_weights": [
+        "170",
+        "175",
+        "190",
+        "215"
+      ],
+      "by_season": {
+        "2020-21": [
+          "170"
+        ],
+        "2021-22": [
+          "175",
+          "190",
+          "215"
+        ]
+      }
+    },
+    "jasontorres": {
+      "name": "Jason Torres",
+      "all_weights": [
+        "160"
+      ],
+      "by_season": {
+        "2020-21": [
+          "160"
+        ]
+      }
+    },
+    "adametzel": {
+      "name": "Adam Etzel",
+      "all_weights": [
+        "195"
+      ],
+      "by_season": {
+        "2020-21": [
+          "195"
+        ]
+      }
+    },
+    "tyleraschim": {
+      "name": "Tyler Aschim",
+      "all_weights": [
+        "220",
+        "215",
+        "190"
+      ],
+      "by_season": {
+        "2020-21": [
+          "220"
+        ],
+        "2021-22": [
+          "215"
+        ],
+        "2022-23": [
+          "190",
+          "215"
+        ],
+        "2023-24": [
+          "215",
+          "190"
+        ]
+      }
+    },
+    "jacksonharris": {
+      "name": "Jackson Harris",
+      "all_weights": [
+        "220",
+        "215",
+        "285"
+      ],
+      "by_season": {
+        "2020-21": [
+          "220"
+        ],
+        "2021-22": [
+          "215"
+        ],
+        "2022-23": [
+          "285"
+        ]
+      }
+    },
+    "josephhart": {
+      "name": "Joseph Hart",
+      "all_weights": [
+        "113",
+        "106"
+      ],
+      "by_season": {
+        "2021-22": [
+          "113"
+        ],
+        "2023-24": [
+          "106",
+          "113"
+        ],
+        "2024-25": [
+          "113",
+          "106"
+        ]
+      }
+    },
+    "ethanstaples": {
+      "name": "Ethan Staples",
+      "all_weights": [
+        "106",
+        "113",
+        "120",
+        "126"
+      ],
+      "by_season": {
+        "2021-22": [
+          "106",
+          "113"
+        ],
+        "2022-23": [
+          "113",
+          "120",
+          "126"
+        ]
+      }
+    },
+    "lukesherlock": {
+      "name": "Luke Sherlock",
+      "all_weights": [
+        "113",
+        "106",
+        "120",
+        "126",
+        "138",
+        "132",
+        "121"
+      ],
+      "by_season": {
+        "2021-22": [
+          "113",
+          "106"
+        ],
+        "2022-23": [
+          "120",
+          "126",
+          "113"
+        ],
+        "2023-24": [
+          "120",
+          "126",
+          "138",
+          "132",
+          "121"
+        ],
+        "2024-25": [
+          "138",
+          "132"
+        ]
+      }
+    },
+    "chrisahrens": {
+      "name": "Chris Ahrens",
+      "all_weights": [
+        "138",
+        "144",
+        "150",
+        "157",
+        "175",
+        "165",
+        "152"
+      ],
+      "by_season": {
+        "2021-22": [
+          "138",
+          "144",
+          "150"
+        ],
+        "2022-23": [
+          "144",
+          "150",
+          "138"
+        ],
+        "2023-24": [
+          "157",
+          "175",
+          "165",
+          "150"
+        ],
+        "2024-25": [
+          "165",
+          "175",
+          "157",
+          "150",
+          "152"
+        ]
+      }
+    },
+    "richardhunnewell": {
+      "name": "Richard John (RJ) Hunnewell",
+      "all_weights": [
+        "150",
+        "157",
+        "165",
+        "175",
+        "190"
+      ],
+      "by_season": {
+        "2021-22": [
+          "150",
+          "157",
+          "165"
+        ],
+        "2022-23": [
+          "165",
+          "175",
+          "190"
+        ],
+        "2023-24": [
+          "175",
+          "190"
+        ]
+      }
+    },
+    "codygates": {
+      "name": "Cody Gates",
+      "all_weights": [
+        "150",
+        "144"
+      ],
+      "by_season": {
+        "2021-22": [
+          "150",
+          "144"
+        ]
+      }
+    },
+    "matthewquinn": {
+      "name": "Matthew Quinn",
+      "all_weights": [
+        "157",
+        "165",
+        "150",
+        "144"
+      ],
+      "by_season": {
+        "2021-22": [
+          "157",
+          "165",
+          "150"
+        ],
+        "2022-23": [
+          "150",
+          "157",
+          "144"
+        ]
+      }
+    },
+    "tomsanson": {
+      "name": "Tom Sanson",
+      "all_weights": [
+        "175"
+      ],
+      "by_season": {
+        "2021-22": [
+          "175"
+        ]
+      }
+    },
+    "maximiliangermain": {
+      "name": "Maximilian Germain",
+      "all_weights": [
+        "165",
+        "175"
+      ],
+      "by_season": {
+        "2021-22": [
+          "165",
+          "175"
+        ]
+      }
+    },
+    "elijahmcgee": {
+      "name": "Elijah McGee",
+      "all_weights": [
+        "190"
+      ],
+      "by_season": {
+        "2021-22": [
+          "190"
+        ]
+      }
+    },
+    "dylanfeimer": {
+      "name": "Dylan Feimer",
+      "all_weights": [
+        "190",
+        "215"
+      ],
+      "by_season": {
+        "2021-22": [
+          "190",
+          "215"
+        ]
+      }
+    },
+    "alexanderkokolis": {
+      "name": "Alexander Kokolis",
+      "all_weights": [
+        "215",
+        "190"
+      ],
+      "by_season": {
+        "2021-22": [
+          "215"
+        ],
+        "2022-23": [
+          "190",
+          "215"
+        ]
+      }
+    },
+    "nathanielalvarado": {
+      "name": "Nathaniel Alvarado",
+      "all_weights": [
+        "285"
+      ],
+      "by_season": {
+        "2021-22": [
+          "285"
+        ]
+      }
+    },
+    "markfinelli": {
+      "name": "Mark Finelli",
+      "all_weights": [
+        "106",
+        "113",
+        "126",
+        "132"
+      ],
+      "by_season": {
+        "2022-23": [
+          "106",
+          "113"
+        ],
+        "2023-24": [
+          "126",
+          "132"
+        ]
+      }
+    },
+    "jordansegal": {
+      "name": "Jordan Segal",
+      "all_weights": [
+        "106",
+        "113",
+        "120",
+        "107"
+      ],
+      "by_season": {
+        "2022-23": [
+          "106",
+          "113"
+        ],
+        "2023-24": [
+          "106",
+          "120",
+          "113",
+          "107"
+        ],
+        "2024-25": [
+          "120",
+          "106",
+          "113"
+        ]
+      }
+    },
+    "jacksonoconnor": {
+      "name": "Jackson O`Connor",
+      "all_weights": [
+        "132",
+        "138"
+      ],
+      "by_season": {
+        "2022-23": [
+          "132",
+          "138"
+        ]
+      }
+    },
+    "aloysiusfitzpatrick": {
+      "name": "Aloysius FitzPatrick",
+      "all_weights": [
+        "132"
+      ],
+      "by_season": {
+        "2022-23": [
+          "132"
+        ]
+      }
+    },
+    "dominicfitzpatrick": {
+      "name": "Dominic FitzPatrick",
+      "all_weights": [
+        "132"
+      ],
+      "by_season": {
+        "2022-23": [
+          "132"
+        ]
+      }
+    },
+    "alexanderpollock": {
+      "name": "Alexander Pollock",
+      "all_weights": [
+        "138",
+        "144"
+      ],
+      "by_season": {
+        "2022-23": [
+          "138",
+          "144"
+        ]
+      }
+    },
+    "dominicharris": {
+      "name": "Dominic Harris",
+      "all_weights": [
+        "150",
+        "165",
+        "190",
+        "215",
+        "175"
+      ],
+      "by_season": {
+        "2022-23": [
+          "150"
+        ],
+        "2023-24": [
+          "150",
+          "165"
+        ],
+        "2024-25": [
+          "190",
+          "215",
+          "175"
+        ]
+      }
+    },
+    "averyrubano": {
+      "name": "Avery Rubano",
+      "all_weights": [
+        "157",
+        "150"
+      ],
+      "by_season": {
+        "2022-23": [
+          "157",
+          "150"
+        ]
+      }
+    },
+    "lucasestevez": {
+      "name": "Lucas Estevez",
+      "all_weights": [
+        "165",
+        "175",
+        "157"
+      ],
+      "by_season": {
+        "2022-23": [
+          "165",
+          "175"
+        ],
+        "2023-24": [
+          "165",
+          "157",
+          "175"
+        ],
+        "2024-25": [
+          "157",
+          "165"
+        ]
+      }
+    },
+    "brettstrohm": {
+      "name": "Brett Strohm",
+      "all_weights": [
+        "157",
+        "150",
+        "165"
+      ],
+      "by_season": {
+        "2022-23": [
+          "157"
+        ],
+        "2023-24": [
+          "150",
+          "157",
+          "165"
+        ]
+      }
+    },
+    "travishoskins": {
+      "name": "Travis Hoskins",
+      "all_weights": [
+        "175"
+      ],
+      "by_season": {
+        "2022-23": [
+          "175"
+        ],
+        "2023-24": [
+          "175"
+        ]
+      }
+    },
+    "cadenmchenry": {
+      "name": "Caden Mobley-McHenry",
+      "all_weights": [
+        "285"
+      ],
+      "by_season": {
+        "2022-23": [
+          "285"
+        ]
+      }
+    },
+    "christianpinto": {
+      "name": "Christian Pinto",
+      "all_weights": [
+        "285"
+      ],
+      "by_season": {
+        "2022-23": [
+          "285"
+        ]
+      }
+    },
+    "colinwall": {
+      "name": "Colin Wall",
+      "all_weights": [
+        "285"
+      ],
+      "by_season": {
+        "2022-23": [
+          "285"
+        ]
+      }
+    },
+    "robertlane": {
+      "name": "Robert Lane",
+      "all_weights": [
+        "190",
+        "215"
+      ],
+      "by_season": {
+        "2023-24": [
+          "190",
+          "215"
+        ]
+      }
+    },
+    "garrettborlaug": {
+      "name": "Garrett Borlaug",
+      "all_weights": [
+        "113",
+        "120",
+        "126"
+      ],
+      "by_season": {
+        "2023-24": [
+          "113",
+          "120"
+        ],
+        "2024-25": [
+          "120",
+          "126"
+        ]
+      }
+    },
+    "trevorsieben": {
+      "name": "Trevor Sieben",
+      "all_weights": [
+        "138",
+        "144"
+      ],
+      "by_season": {
+        "2023-24": [
+          "138"
+        ],
+        "2024-25": [
+          "144",
+          "138"
+        ]
+      }
+    },
+    "maxspitznas": {
+      "name": "Max Spitznas",
+      "all_weights": [
+        "144",
+        "175",
+        "190"
+      ],
+      "by_season": {
+        "2023-24": [
+          "144"
+        ],
+        "2024-25": [
+          "175",
+          "190"
+        ]
+      }
+    },
+    "joeleto": {
+      "name": "Joe Leto",
+      "all_weights": [
+        "285",
+        "215"
+      ],
+      "by_season": {
+        "2023-24": [
+          "285",
+          "215"
+        ]
+      }
+    },
+    "seanbradley": {
+      "name": "Sean Bradley",
+      "all_weights": [
+        "113",
+        "120"
+      ],
+      "by_season": {
+        "2023-24": [
+          "113"
+        ],
+        "2024-25": [
+          "113",
+          "120"
+        ]
+      }
+    },
+    "michaelhart": {
+      "name": "Michael Hart",
+      "all_weights": [
+        "113"
+      ],
+      "by_season": {
+        "2023-24": [
+          "113"
+        ]
+      }
+    },
+    "ryanhoerst": {
+      "name": "Ryan Hoerst",
+      "all_weights": [
+        "132",
+        "138"
+      ],
+      "by_season": {
+        "2023-24": [
+          "132"
+        ],
+        "2024-25": [
+          "132",
+          "138"
+        ]
+      }
+    },
+    "eriksullivan": {
+      "name": "Erik Sullivan",
+      "all_weights": [
+        "285",
+        "215"
+      ],
+      "by_season": {
+        "2023-24": [
+          "285",
+          "215"
+        ],
+        "2024-25": [
+          "285",
+          "215"
+        ]
+      }
+    },
+    "maxshectman": {
+      "name": "Max Shectman",
+      "all_weights": [
+        "126"
+      ],
+      "by_season": {
+        "2023-24": [
+          "126"
+        ]
+      }
+    },
+    "justindavenport": {
+      "name": "Justin Davenport",
+      "all_weights": [
+        "190",
+        "215"
+      ],
+      "by_season": {
+        "2023-24": [
+          "190",
+          "215"
+        ]
+      }
+    },
+    "jarredkelly": {
+      "name": "Jarred Kelly",
+      "all_weights": [
+        "285"
+      ],
+      "by_season": {
+        "2023-24": [
+          "285"
+        ]
+      }
+    },
+    "josephaugusta": {
+      "name": "Joseph Augusta",
+      "all_weights": [
+        "150",
+        "157"
+      ],
+      "by_season": {
+        "2023-24": [
+          "150"
+        ],
+        "2024-25": [
+          "150",
+          "157"
+        ]
+      }
+    },
+    "tylerdavis": {
+      "name": "Tyler Davis",
+      "all_weights": [
+        "165",
+        "157",
+        "150"
+      ],
+      "by_season": {
+        "2023-24": [
+          "165",
+          "157"
+        ],
+        "2024-25": [
+          "165",
+          "157",
+          "150"
+        ]
+      }
+    },
+    "masondavenport": {
+      "name": "Mason Davenport",
+      "all_weights": [
+        "175",
+        "165"
+      ],
+      "by_season": {
+        "2023-24": [
+          "175",
+          "165"
+        ]
+      }
+    },
+    "landoncaffery": {
+      "name": "Landon Caffery",
+      "all_weights": [
+        "120"
+      ],
+      "by_season": {
+        "2024-25": [
+          "120"
+        ]
+      }
+    },
+    "leelandrogers": {
+      "name": "Leeland Rogers",
+      "all_weights": [
+        "126",
+        "132",
+        "120"
+      ],
+      "by_season": {
+        "2024-25": [
+          "126",
+          "132",
+          "120"
+        ]
+      }
+    },
+    "oleksandryurovskyi": {
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "all_weights": [
+        "138",
+        "144"
+      ],
+      "by_season": {
+        "2024-25": [
+          "138",
+          "144"
+        ]
+      }
+    },
+    "matthart": {
+      "name": "Matt Hart",
+      "all_weights": [
+        "106"
+      ],
+      "by_season": {
+        "2024-25": [
+          "106"
+        ]
+      }
+    },
+    "tylernickles": {
+      "name": "Tyler Nickles",
+      "all_weights": [
+        "150",
+        "157"
+      ],
+      "by_season": {
+        "2024-25": [
+          "150",
+          "157"
+        ]
+      }
+    },
+    "nathanhunnewell": {
+      "name": "Nathan Hunnewell",
+      "all_weights": [
+        "132",
+        "126"
+      ],
+      "by_season": {
+        "2024-25": [
+          "132",
+          "126"
+        ]
+      }
+    },
+    "jacksonartman": {
+      "name": "Jackson Artman",
+      "all_weights": [
+        "144"
+      ],
+      "by_season": {
+        "2024-25": [
+          "144"
+        ]
+      }
+    },
+    "anthonyblahut": {
+      "name": "Anthony Blahut",
+      "all_weights": [
+        "113"
+      ],
+      "by_season": {
+        "2024-25": [
+          "113"
+        ]
+      }
+    },
+    "thomascox": {
+      "name": "Thomas Cox",
+      "all_weights": [
+        "132"
+      ],
+      "by_season": {
+        "2024-25": [
+          "132"
+        ]
+      }
+    },
+    "rhyspritchard": {
+      "name": "Rhys Pritchard",
+      "all_weights": [
+        "126"
+      ],
+      "by_season": {
+        "2024-25": [
+          "126"
+        ]
+      }
+    },
+    "rowannix": {
+      "name": "Rowan Nix",
+      "all_weights": [
+        "190"
+      ],
+      "by_season": {
+        "2024-25": [
+          "190"
+        ]
+      }
+    },
+    "andrikorenyo": {
+      "name": "Andrik Orenyo",
+      "all_weights": [
+        "175",
+        "190"
+      ],
+      "by_season": {
+        "2024-25": [
+          "175",
+          "190"
+        ]
+      }
+    },
+    "collinmchugh": {
+      "name": "Collin McHugh",
+      "all_weights": [
+        "285",
+        "215"
+      ],
+      "by_season": {
+        "2024-25": [
+          "285",
+          "215"
+        ]
+      }
+    },
+    "williammcsorley": {
+      "name": "William (Liam) McSorley",
+      "all_weights": [
+        "215",
+        "285"
+      ],
+      "by_season": {
+        "2024-25": [
+          "215",
+          "285"
+        ]
+      }
+    }
+  }
+}

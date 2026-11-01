@@ -354,8 +354,9 @@
   }
 
   function renderFullRosterSearchable(data, index) {
-    const fromIndex = (index && index.wrestlers) || null;
-    const rows = fromIndex || (data.roster || []).map((w) => ({
+    // Roster cards: current wrestlers only (current-season weights). Alumni live on player pages.
+    const fromIndex = ((index && index.wrestlers) || []).filter((w) => w.status !== 'alumni');
+    const rows = (fromIndex.length ? fromIndex : null) || (data.roster || []).map((w) => ({
       wrestler_id: w.wrestler_id,
       name: w.name,
       grade: w.grade,

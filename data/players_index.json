@@ -1,8 +1,10 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "season": "2025-2026",
-  "updated_at": "2026-11-01T12:26:46-05:00",
-  "count": 58,
+  "updated_at": "2026-11-01T12:32:55-05:00",
+  "count": 101,
+  "current_count": 58,
+  "alumni_count": 43,
   "wrestlers": [
     {
       "wrestler_id": "35217300132",
@@ -10,6 +12,9 @@
       "grade": "Fr.",
       "roster_weight": "106",
       "assigned_weight": "106",
+      "weights_wrestled": [
+        "106"
+      ],
       "wins": 3,
       "losses": 1,
       "photo": null,
@@ -20,7 +25,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "daniel fitzpatrick daniel fitzpatrick fr. 106 106"
+      "status": "current",
+      "search_text": "daniel fitzpatrick daniel fitzpatrick fr. 106 106 106"
     },
     {
       "wrestler_id": "35217452132",
@@ -28,6 +34,11 @@
       "grade": "Fr.",
       "roster_weight": "106",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "106",
+        "113",
+        "150"
+      ],
       "wins": 1,
       "losses": 3,
       "photo": null,
@@ -38,7 +49,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "logan reice logan reice fr. 106"
+      "status": "current",
+      "search_text": "logan reice logan reice fr. 106 106 113 150"
     },
     {
       "wrestler_id": "35876936132",
@@ -46,6 +58,9 @@
       "grade": "Fr.",
       "roster_weight": "106",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "106"
+      ],
       "wins": 0,
       "losses": 1,
       "photo": null,
@@ -56,7 +71,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "logan sloan logan sloan fr. 106"
+      "status": "current",
+      "search_text": "logan sloan logan sloan fr. 106 106"
     },
     {
       "wrestler_id": "35008214132",
@@ -64,6 +80,9 @@
       "grade": "So.",
       "roster_weight": "113",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "113"
+      ],
       "wins": 1,
       "losses": 2,
       "photo": null,
@@ -74,7 +93,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "jadiel esquivel jadiel esquivel so. 113"
+      "status": "current",
+      "search_text": "jadiel esquivel jadiel esquivel so. 113 113"
     },
     {
       "wrestler_id": "35008235132",
@@ -82,6 +102,10 @@
       "grade": "So.",
       "roster_weight": "113",
       "assigned_weight": "113",
+      "weights_wrestled": [
+        "106",
+        "113"
+      ],
       "wins": 12,
       "losses": 20,
       "photo": null,
@@ -92,7 +116,8 @@
       "career_wins": 14,
       "career_losses": 22,
       "seasons_on_record": 2,
-      "search_text": "matt hart matt hart so. 113 113"
+      "status": "current",
+      "search_text": "matt hart matt hart so. 113 113 106 113"
     },
     {
       "wrestler_id": "35217444132",
@@ -100,6 +125,9 @@
       "grade": "Fr.",
       "roster_weight": "113",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "113"
+      ],
       "wins": 1,
       "losses": 1,
       "photo": null,
@@ -110,7 +138,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "benjamin pollock benjamin pollock fr. 113"
+      "status": "current",
+      "search_text": "benjamin pollock benjamin pollock fr. 113 113"
     },
     {
       "wrestler_id": "35008213132",
@@ -118,6 +147,10 @@
       "grade": "So.",
       "roster_weight": "120",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "113",
+        "120"
+      ],
       "wins": 6,
       "losses": 17,
       "photo": null,
@@ -128,7 +161,8 @@
       "career_wins": 6,
       "career_losses": 20,
       "seasons_on_record": 2,
-      "search_text": "anthony blahut anthony blahut so. 120"
+      "status": "current",
+      "search_text": "anthony blahut anthony blahut so. 120 113 120"
     },
     {
       "wrestler_id": "35008197132",
@@ -136,6 +170,10 @@
       "grade": "Sr.",
       "roster_weight": "120",
       "assigned_weight": "120",
+      "weights_wrestled": [
+        "113",
+        "120"
+      ],
       "wins": 21,
       "losses": 16,
       "photo": "assets/img/roster/sean-bradley.jpg",
@@ -146,7 +184,8 @@
       "career_wins": 35,
       "career_losses": 29,
       "seasons_on_record": 3,
-      "search_text": "sean bradley sean bradley sr. 120 120"
+      "status": "current",
+      "search_text": "sean bradley sean bradley sr. 120 120 113 120"
     },
     {
       "wrestler_id": "35217751132",
@@ -154,6 +193,9 @@
       "grade": "So.",
       "roster_weight": "120",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "120"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -164,7 +206,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "romeo cline romeo cline so. 120"
+      "status": "current",
+      "search_text": "romeo cline romeo cline so. 120 120"
     },
     {
       "wrestler_id": "35217521132",
@@ -172,6 +215,9 @@
       "grade": "So.",
       "roster_weight": "120",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "120"
+      ],
       "wins": 1,
       "losses": 1,
       "photo": null,
@@ -182,7 +228,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "ranger fest ranger fest so. 120"
+      "status": "current",
+      "search_text": "ranger fest ranger fest so. 120 120"
     },
     {
       "wrestler_id": "35217406132",
@@ -190,6 +237,9 @@
       "grade": "Fr.",
       "roster_weight": "120",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "120"
+      ],
       "wins": 1,
       "losses": 1,
       "photo": null,
@@ -200,7 +250,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "noah meisner noah meisner fr. 120"
+      "status": "current",
+      "search_text": "noah meisner noah meisner fr. 120 120"
     },
     {
       "wrestler_id": "35217460132",
@@ -208,6 +259,9 @@
       "grade": "Fr.",
       "roster_weight": "120",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "120"
+      ],
       "wins": 0,
       "losses": 1,
       "photo": null,
@@ -218,7 +272,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "luke velasco luke velasco fr. 120"
+      "status": "current",
+      "search_text": "luke velasco luke velasco fr. 120 120"
     },
     {
       "wrestler_id": "35217363132",
@@ -226,6 +281,10 @@
       "grade": "Fr.",
       "roster_weight": "126",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "120",
+        "126"
+      ],
       "wins": 3,
       "losses": 6,
       "photo": null,
@@ -236,7 +295,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "gino gonzalez gino gonzalez fr. 126"
+      "status": "current",
+      "search_text": "gino gonzalez gino gonzalez fr. 126 120 126"
     },
     {
       "wrestler_id": "35008201132",
@@ -244,6 +304,12 @@
       "grade": "Sr.",
       "roster_weight": "126",
       "assigned_weight": "126",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
       "wins": 29,
       "losses": 7,
       "photo": "assets/img/roster/jordan-segal.jpg",
@@ -254,7 +320,8 @@
       "career_wins": 107,
       "career_losses": 25,
       "seasons_on_record": 4,
-      "search_text": "jordan segal jordan segal sr. 126 126"
+      "status": "current",
+      "search_text": "jordan segal jordan segal sr. 126 126 126 132 138 144"
     },
     {
       "wrestler_id": "35497376132",
@@ -262,6 +329,9 @@
       "grade": "Fr.",
       "roster_weight": "132",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "132"
+      ],
       "wins": 1,
       "losses": 1,
       "photo": null,
@@ -272,7 +342,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "logan curiale logan curiale fr. 132"
+      "status": "current",
+      "search_text": "logan curiale logan curiale fr. 132 132"
     },
     {
       "wrestler_id": "35217370132",
@@ -280,6 +351,9 @@
       "grade": "Fr.",
       "roster_weight": "132",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "132"
+      ],
       "wins": 0,
       "losses": 1,
       "photo": null,
@@ -290,7 +364,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "cole hoguet cole hoguet fr. 132"
+      "status": "current",
+      "search_text": "cole hoguet cole hoguet fr. 132 132"
     },
     {
       "wrestler_id": "35008210132",
@@ -298,6 +373,11 @@
       "grade": "Jr.",
       "roster_weight": "132",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "120",
+        "126",
+        "132"
+      ],
       "wins": 12,
       "losses": 11,
       "photo": null,
@@ -308,7 +388,8 @@
       "career_wins": 12,
       "career_losses": 15,
       "seasons_on_record": 2,
-      "search_text": "nathan hunnewell nathan hunnewell jr. 132"
+      "status": "current",
+      "search_text": "nathan hunnewell nathan hunnewell jr. 132 120 126 132"
     },
     {
       "wrestler_id": "35217388132",
@@ -316,6 +397,10 @@
       "grade": "Fr.",
       "roster_weight": "132",
       "assigned_weight": "132",
+      "weights_wrestled": [
+        "126",
+        "132"
+      ],
       "wins": 14,
       "losses": 12,
       "photo": null,
@@ -326,7 +411,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "brayden inman brayden inman fr. 132 132"
+      "status": "current",
+      "search_text": "brayden inman brayden inman fr. 132 132 126 132"
     },
     {
       "wrestler_id": "35497452132",
@@ -334,6 +420,9 @@
       "grade": "Fr.",
       "roster_weight": "132",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "132"
+      ],
       "wins": 0,
       "losses": 1,
       "photo": null,
@@ -344,7 +433,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "charles pulaski charles pulaski fr. 132"
+      "status": "current",
+      "search_text": "charles pulaski charles pulaski fr. 132 132"
     },
     {
       "wrestler_id": "35008225132",
@@ -352,6 +442,11 @@
       "grade": "So.",
       "roster_weight": "132",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "132",
+        "138",
+        "144"
+      ],
       "wins": 11,
       "losses": 6,
       "photo": "assets/img/roster/leeland-rogers.jpg",
@@ -362,7 +457,8 @@
       "career_wins": 32,
       "career_losses": 20,
       "seasons_on_record": 2,
-      "search_text": "leeland rogers leeland rogers so. 132"
+      "status": "current",
+      "search_text": "leeland rogers leeland rogers so. 132 132 138 144"
     },
     {
       "wrestler_id": "35008238132",
@@ -370,6 +466,9 @@
       "grade": "So.",
       "roster_weight": "132",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "132"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -380,7 +479,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "cooper stauss cooper stauss so. 132"
+      "status": "current",
+      "search_text": "cooper stauss cooper stauss so. 132 132"
     },
     {
       "wrestler_id": "35008199132",
@@ -388,6 +488,12 @@
       "grade": "Sr.",
       "roster_weight": "138",
       "assigned_weight": "138",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
       "wins": 4,
       "losses": 11,
       "photo": "assets/img/roster/garrett-borlaug.jpg",
@@ -398,7 +504,8 @@
       "career_wins": 30,
       "career_losses": 47,
       "seasons_on_record": 3,
-      "search_text": "garrett borlaug garrett borlaug sr. 138 138"
+      "status": "current",
+      "search_text": "garrett borlaug garrett borlaug sr. 138 138 126 132 138 144"
     },
     {
       "wrestler_id": "35008236132",
@@ -406,6 +513,9 @@
       "grade": "So.",
       "roster_weight": "138",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "138"
+      ],
       "wins": 0,
       "losses": 1,
       "photo": null,
@@ -416,7 +526,8 @@
       "career_wins": 0,
       "career_losses": 3,
       "seasons_on_record": 2,
-      "search_text": "landon caffery landon caffery so. 138"
+      "status": "current",
+      "search_text": "landon caffery landon caffery so. 138 138"
     },
     {
       "wrestler_id": "35008203132",
@@ -424,6 +535,12 @@
       "grade": "Jr.",
       "roster_weight": "138",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
       "wins": 6,
       "losses": 5,
       "photo": null,
@@ -434,7 +551,8 @@
       "career_wins": 8,
       "career_losses": 5,
       "seasons_on_record": 2,
-      "search_text": "michael hart michael hart jr. 138"
+      "status": "current",
+      "search_text": "michael hart michael hart jr. 138 126 132 138 144"
     },
     {
       "wrestler_id": "35008223132",
@@ -442,6 +560,10 @@
       "grade": "So.",
       "roster_weight": "138",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "132",
+        "138"
+      ],
       "wins": 2,
       "losses": 5,
       "photo": null,
@@ -452,7 +574,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "owen siena owen siena so. 138"
+      "status": "current",
+      "search_text": "owen siena owen siena so. 138 132 138"
     },
     {
       "wrestler_id": "35008237132",
@@ -460,6 +583,10 @@
       "grade": "So.",
       "roster_weight": "144",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "144",
+        "150"
+      ],
       "wins": 2,
       "losses": 7,
       "photo": null,
@@ -470,7 +597,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "jack caldwell jack caldwell so. 144"
+      "status": "current",
+      "search_text": "jack caldwell jack caldwell so. 144 144 150"
     },
     {
       "wrestler_id": "35008209132",
@@ -478,6 +606,11 @@
       "grade": "Jr.",
       "roster_weight": "144",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "138",
+        "144",
+        "150"
+      ],
       "wins": 17,
       "losses": 14,
       "photo": "assets/img/roster/ryan-hoerst.jpg",
@@ -488,7 +621,8 @@
       "career_wins": 30,
       "career_losses": 40,
       "seasons_on_record": 3,
-      "search_text": "ryan hoerst ryan hoerst jr. 144"
+      "status": "current",
+      "search_text": "ryan hoerst ryan hoerst jr. 144 138 144 150"
     },
     {
       "wrestler_id": "35557421132",
@@ -496,6 +630,9 @@
       "grade": "So.",
       "roster_weight": "144",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "144"
+      ],
       "wins": 0,
       "losses": 1,
       "photo": null,
@@ -506,7 +643,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "walter johnson walter johnson so. 144"
+      "status": "current",
+      "search_text": "walter johnson walter johnson so. 144 144"
     },
     {
       "wrestler_id": "35008211132",
@@ -514,6 +652,9 @@
       "grade": "Jr.",
       "roster_weight": "144",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "144"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -524,7 +665,8 @@
       "career_wins": 0,
       "career_losses": 2,
       "seasons_on_record": 2,
-      "search_text": "rhys pritchard rhys pritchard jr. 144"
+      "status": "current",
+      "search_text": "rhys pritchard rhys pritchard jr. 144 144"
     },
     {
       "wrestler_id": "35008220132",
@@ -532,6 +674,10 @@
       "grade": "So.",
       "roster_weight": "144",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "144",
+        "150"
+      ],
       "wins": 3,
       "losses": 4,
       "photo": null,
@@ -542,7 +688,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "brian reice brian reice so. 144"
+      "status": "current",
+      "search_text": "brian reice brian reice so. 144 144 150"
     },
     {
       "wrestler_id": "35008200132",
@@ -550,6 +697,9 @@
       "grade": "Sr.",
       "roster_weight": "144",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "144"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -560,7 +710,8 @@
       "career_wins": 1,
       "career_losses": 0,
       "seasons_on_record": 2,
-      "search_text": "max shectman max shectman sr. 144"
+      "status": "current",
+      "search_text": "max shectman max shectman sr. 144 144"
     },
     {
       "wrestler_id": "35008221132",
@@ -568,6 +719,11 @@
       "grade": "So.",
       "roster_weight": "144",
       "assigned_weight": "144",
+      "weights_wrestled": [
+        "144",
+        "150",
+        "157"
+      ],
       "wins": 21,
       "losses": 14,
       "photo": "assets/img/roster/oleksandr-sasha-yurovskyi.jpg",
@@ -578,7 +734,8 @@
       "career_wins": 31,
       "career_losses": 29,
       "seasons_on_record": 2,
-      "search_text": "oleksandr `sasha` yurovskyi oleksandr `sasha` yurovskyi so. 144 144"
+      "status": "current",
+      "search_text": "oleksandr `sasha` yurovskyi oleksandr `sasha` yurovskyi so. 144 144 144 150 157"
     },
     {
       "wrestler_id": "35008232132",
@@ -586,6 +743,9 @@
       "grade": "Sr.",
       "roster_weight": "150",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "150"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -596,7 +756,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "colin dowd colin dowd sr. 150"
+      "status": "current",
+      "search_text": "colin dowd colin dowd sr. 150 150"
     },
     {
       "wrestler_id": "35008228132",
@@ -604,6 +765,9 @@
       "grade": "Jr.",
       "roster_weight": "150",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "150"
+      ],
       "wins": 0,
       "losses": 1,
       "photo": null,
@@ -614,7 +778,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "ashton hayden ashton hayden jr. 150"
+      "status": "current",
+      "search_text": "ashton hayden ashton hayden jr. 150 150"
     },
     {
       "wrestler_id": "35217378132",
@@ -622,6 +787,9 @@
       "grade": "Fr.",
       "roster_weight": "150",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "150"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -632,7 +800,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "domenico incollingo domenico incollingo fr. 150"
+      "status": "current",
+      "search_text": "domenico incollingo domenico incollingo fr. 150 150"
     },
     {
       "wrestler_id": "35497397132",
@@ -640,6 +809,10 @@
       "grade": "Fr.",
       "roster_weight": "150",
       "assigned_weight": "150",
+      "weights_wrestled": [
+        "150",
+        "157"
+      ],
       "wins": 2,
       "losses": 2,
       "photo": null,
@@ -650,7 +823,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "kellan mcdonough kellan mcdonough fr. 150 150"
+      "status": "current",
+      "search_text": "kellan mcdonough kellan mcdonough fr. 150 150 150 157"
     },
     {
       "wrestler_id": "35217455132",
@@ -658,6 +832,9 @@
       "grade": "Fr.",
       "roster_weight": "150",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "150"
+      ],
       "wins": 0,
       "losses": 1,
       "photo": null,
@@ -668,7 +845,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "arjun shah arjun shah fr. 150"
+      "status": "current",
+      "search_text": "arjun shah arjun shah fr. 150 150"
     },
     {
       "wrestler_id": "35217512132",
@@ -676,6 +854,9 @@
       "grade": "So.",
       "roster_weight": "157",
       "assigned_weight": "157",
+      "weights_wrestled": [
+        "157"
+      ],
       "wins": 1,
       "losses": 1,
       "photo": null,
@@ -686,7 +867,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "gabriel evans gabriel evans so. 157 157"
+      "status": "current",
+      "search_text": "gabriel evans gabriel evans so. 157 157 157"
     },
     {
       "wrestler_id": "36450248132",
@@ -694,6 +876,9 @@
       "grade": "Fr.",
       "roster_weight": "157",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "157"
+      ],
       "wins": 0,
       "losses": 1,
       "photo": null,
@@ -704,7 +889,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "brandon kelly brandon kelly fr. 157"
+      "status": "current",
+      "search_text": "brandon kelly brandon kelly fr. 157 157"
     },
     {
       "wrestler_id": "35555998132",
@@ -712,6 +898,9 @@
       "grade": "So.",
       "roster_weight": "157",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "157"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -722,7 +911,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "william mays william mays so. 157"
+      "status": "current",
+      "search_text": "william mays william mays so. 157 157"
     },
     {
       "wrestler_id": "35497529132",
@@ -730,6 +920,9 @@
       "grade": "Jr.",
       "roster_weight": "157",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "157"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -740,7 +933,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "jack potter jack potter jr. 157"
+      "status": "current",
+      "search_text": "jack potter jack potter jr. 157 157"
     },
     {
       "wrestler_id": "35008198132",
@@ -748,6 +942,10 @@
       "grade": "Sr.",
       "roster_weight": "165",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "165",
+        "175"
+      ],
       "wins": 3,
       "losses": 13,
       "photo": null,
@@ -758,7 +956,8 @@
       "career_wins": 10,
       "career_losses": 33,
       "seasons_on_record": 3,
-      "search_text": "tyler davis tyler davis sr. 165"
+      "status": "current",
+      "search_text": "tyler davis tyler davis sr. 165 165 175"
     },
     {
       "wrestler_id": "35217539132",
@@ -766,6 +965,9 @@
       "grade": "So.",
       "roster_weight": "165",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "165"
+      ],
       "wins": 0,
       "losses": 2,
       "photo": null,
@@ -776,7 +978,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "brodie regan brodie regan so. 165"
+      "status": "current",
+      "search_text": "brodie regan brodie regan so. 165 165"
     },
     {
       "wrestler_id": "35008226132",
@@ -784,6 +987,10 @@
       "grade": "So.",
       "roster_weight": "165",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "165",
+        "175"
+      ],
       "wins": 1,
       "losses": 1,
       "photo": null,
@@ -794,7 +1001,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "eli sauler eli sauler so. 165"
+      "status": "current",
+      "search_text": "eli sauler eli sauler so. 165 165 175"
     },
     {
       "wrestler_id": "35008207132",
@@ -802,6 +1010,11 @@
       "grade": "Jr.",
       "roster_weight": "165",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "157",
+        "165",
+        "175"
+      ],
       "wins": 14,
       "losses": 11,
       "photo": "assets/img/roster/trevor-sieben.jpg",
@@ -812,7 +1025,8 @@
       "career_wins": 43,
       "career_losses": 48,
       "seasons_on_record": 3,
-      "search_text": "trevor sieben trevor sieben jr. 165"
+      "status": "current",
+      "search_text": "trevor sieben trevor sieben jr. 165 157 165 175"
     },
     {
       "wrestler_id": "35008208132",
@@ -820,6 +1034,11 @@
       "grade": "Jr.",
       "roster_weight": "165",
       "assigned_weight": "165",
+      "weights_wrestled": [
+        "157",
+        "165",
+        "175"
+      ],
       "wins": 27,
       "losses": 6,
       "photo": "assets/img/roster/max-spitznas.jpg",
@@ -830,7 +1049,8 @@
       "career_wins": 53,
       "career_losses": 44,
       "seasons_on_record": 3,
-      "search_text": "max spitznas max spitznas jr. 165 165"
+      "status": "current",
+      "search_text": "max spitznas max spitznas jr. 165 165 157 165 175"
     },
     {
       "wrestler_id": "35008202132",
@@ -838,6 +1058,11 @@
       "grade": "Sr.",
       "roster_weight": "175",
       "assigned_weight": "175",
+      "weights_wrestled": [
+        "165",
+        "175",
+        "190"
+      ],
       "wins": 9,
       "losses": 12,
       "photo": "assets/img/roster/joseph-augusta.jpg",
@@ -848,7 +1073,8 @@
       "career_wins": 13,
       "career_losses": 22,
       "seasons_on_record": 3,
-      "search_text": "joseph augusta joseph augusta sr. 175 175"
+      "status": "current",
+      "search_text": "joseph augusta joseph augusta sr. 175 175 165 175 190"
     },
     {
       "wrestler_id": "35497540132",
@@ -856,6 +1082,9 @@
       "grade": "Sr.",
       "roster_weight": "175",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "175"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -866,7 +1095,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "anthony birney anthony birney sr. 175"
+      "status": "current",
+      "search_text": "anthony birney anthony birney sr. 175 175"
     },
     {
       "wrestler_id": "35497360132",
@@ -874,6 +1104,9 @@
       "grade": "Fr.",
       "roster_weight": "175",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "175"
+      ],
       "wins": 3,
       "losses": 2,
       "photo": null,
@@ -884,7 +1117,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "logan cino logan cino fr. 175"
+      "status": "current",
+      "search_text": "logan cino logan cino fr. 175 175"
     },
     {
       "wrestler_id": "35217400132",
@@ -892,6 +1126,9 @@
       "grade": "Fr.",
       "roster_weight": "190",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "190"
+      ],
       "wins": 1,
       "losses": 1,
       "photo": null,
@@ -902,7 +1139,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "giovanni lopez giovanni lopez fr. 190"
+      "status": "current",
+      "search_text": "giovanni lopez giovanni lopez fr. 190 190"
     },
     {
       "wrestler_id": "35008215132",
@@ -910,6 +1148,9 @@
       "grade": "So.",
       "roster_weight": "190",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "190"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -920,7 +1161,8 @@
       "career_wins": 0,
       "career_losses": 2,
       "seasons_on_record": 2,
-      "search_text": "andrik orenyo andrik orenyo so. 190"
+      "status": "current",
+      "search_text": "andrik orenyo andrik orenyo so. 190 190"
     },
     {
       "wrestler_id": "35008217132",
@@ -928,6 +1170,9 @@
       "grade": "So.",
       "roster_weight": "190",
       "assigned_weight": "190",
+      "weights_wrestled": [
+        "190"
+      ],
       "wins": 4,
       "losses": 4,
       "photo": null,
@@ -938,7 +1183,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "jacobs rodriguez jacobs rodriguez so. 190 190"
+      "status": "current",
+      "search_text": "jacobs rodriguez jacobs rodriguez so. 190 190 190"
     },
     {
       "wrestler_id": "35217322132",
@@ -946,6 +1192,9 @@
       "grade": "Fr.",
       "roster_weight": "215",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "215"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -956,7 +1205,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "jack gleeson jack gleeson fr. 215"
+      "status": "current",
+      "search_text": "jack gleeson jack gleeson fr. 215 215"
     },
     {
       "wrestler_id": "35008204132",
@@ -964,6 +1214,10 @@
       "grade": "Jr.",
       "roster_weight": "215",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "190",
+        "215"
+      ],
       "wins": 3,
       "losses": 1,
       "photo": null,
@@ -974,7 +1228,8 @@
       "career_wins": 17,
       "career_losses": 16,
       "seasons_on_record": 2,
-      "search_text": "robert lane robert lane jr. 215"
+      "status": "current",
+      "search_text": "robert lane robert lane jr. 215 190 215"
     },
     {
       "wrestler_id": "35008205132",
@@ -982,6 +1237,10 @@
       "grade": "Jr.",
       "roster_weight": "215",
       "assigned_weight": "215",
+      "weights_wrestled": [
+        "215",
+        "285"
+      ],
       "wins": 15,
       "losses": 15,
       "photo": "assets/img/roster/william-liam-mcsorley.jpg",
@@ -992,7 +1251,8 @@
       "career_wins": 22,
       "career_losses": 28,
       "seasons_on_record": 2,
-      "search_text": "william (liam) mcsorley william (liam) mcsorley jr. 215 215"
+      "status": "current",
+      "search_text": "william (liam) mcsorley william (liam) mcsorley jr. 215 215 215 285"
     },
     {
       "wrestler_id": "35008219132",
@@ -1000,6 +1260,10 @@
       "grade": "So.",
       "roster_weight": "215",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "190",
+        "215"
+      ],
       "wins": 13,
       "losses": 14,
       "photo": null,
@@ -1010,7 +1274,8 @@
       "career_wins": 13,
       "career_losses": 15,
       "seasons_on_record": 2,
-      "search_text": "rowan nix rowan nix so. 215"
+      "status": "current",
+      "search_text": "rowan nix rowan nix so. 215 190 215"
     },
     {
       "wrestler_id": "35556025132",
@@ -1018,6 +1283,9 @@
       "grade": "Fr.",
       "roster_weight": "285",
       "assigned_weight": null,
+      "weights_wrestled": [
+        "285"
+      ],
       "wins": 0,
       "losses": 0,
       "photo": null,
@@ -1028,7 +1296,8 @@
       "career_wins": null,
       "career_losses": null,
       "seasons_on_record": 1,
-      "search_text": "veliz-velasquez carlos veliz-velasquez carlos fr. 285"
+      "status": "current",
+      "search_text": "veliz-velasquez carlos veliz-velasquez carlos fr. 285 285"
     },
     {
       "wrestler_id": "35008230132",
@@ -1036,6 +1305,10 @@
       "grade": "Jr.",
       "roster_weight": "285",
       "assigned_weight": "285",
+      "weights_wrestled": [
+        "215",
+        "285"
+      ],
       "wins": 22,
       "losses": 14,
       "photo": "assets/img/roster/collin-mchugh.jpg",
@@ -1046,7 +1319,1309 @@
       "career_wins": 27,
       "career_losses": 34,
       "seasons_on_record": 2,
-      "search_text": "collin mchugh collin mchugh jr. 285 285"
+      "status": "current",
+      "search_text": "collin mchugh collin mchugh jr. 285 285 215 285"
+    },
+    {
+      "wrestler_id": "alum96c0e6d3",
+      "name": "Matt Higgins",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/matt-higgins-c0e6d3.html",
+      "prestige_points": 40,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 126,
+      "career_losses": 30,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "matt higgins alumni"
+    },
+    {
+      "wrestler_id": "alume7596b73",
+      "name": "Austin Wetterau",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/austin-wetterau-596b73.html",
+      "prestige_points": 85,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 120,
+      "career_losses": 24,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "austin wetterau alumni"
+    },
+    {
+      "wrestler_id": "alum06c7accf",
+      "name": "Connor Muli",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/connor-muli-c7accf.html",
+      "prestige_points": 65,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 114,
+      "career_losses": 18,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "connor muli alumni"
+    },
+    {
+      "wrestler_id": "alum1d7859c5",
+      "name": "Luke Sherlock",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "113",
+        "106",
+        "120",
+        "126",
+        "138",
+        "132",
+        "121"
+      ],
+      "weights_by_season": {
+        "2021-22": [
+          "113",
+          "106"
+        ],
+        "2022-23": [
+          "120",
+          "126",
+          "113"
+        ],
+        "2023-24": [
+          "120",
+          "126",
+          "138",
+          "132",
+          "121"
+        ],
+        "2024-25": [
+          "138",
+          "132"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/luke-sherlock-7859c5.html",
+      "prestige_points": 90,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 115,
+      "career_losses": 23,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "luke sherlock alumni 113 106 120 126 138 132 121"
+    },
+    {
+      "wrestler_id": "alum07fa070a",
+      "name": "Chris Ahrens",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "138",
+        "144",
+        "150",
+        "157",
+        "175",
+        "165",
+        "152"
+      ],
+      "weights_by_season": {
+        "2021-22": [
+          "138",
+          "144",
+          "150"
+        ],
+        "2022-23": [
+          "144",
+          "150",
+          "138"
+        ],
+        "2023-24": [
+          "157",
+          "175",
+          "165",
+          "150"
+        ],
+        "2024-25": [
+          "165",
+          "175",
+          "157",
+          "150",
+          "152"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/chris-ahrens-fa070a.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 115,
+      "career_losses": 36,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "chris ahrens alumni 138 144 150 157 175 165 152"
+    },
+    {
+      "wrestler_id": "alumbd431bad",
+      "name": "Nick Cottone",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "113",
+        "126",
+        "132"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "113"
+        ],
+        "2021-22": [
+          "126",
+          "132"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/nick-cottone-431bad.html",
+      "prestige_points": 40,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 104,
+      "career_losses": 31,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "nick cottone alumni 113 126 132"
+    },
+    {
+      "wrestler_id": "aluma07f92d7",
+      "name": "Jake Hastings",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "126",
+        "138",
+        "144",
+        "132"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "126"
+        ],
+        "2021-22": [
+          "138",
+          "144",
+          "132"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/jake-hastings-7f92d7.html",
+      "prestige_points": 40,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 93,
+      "career_losses": 33,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "jake hastings alumni 126 138 144 132"
+    },
+    {
+      "wrestler_id": "alum0b93c2fe",
+      "name": "Isaac Dean",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "182"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "182"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/isaac-dean-93c2fe.html",
+      "prestige_points": 115,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 92,
+      "career_losses": 28,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "isaac dean alumni 182"
+    },
+    {
+      "wrestler_id": "alum04fb8bab",
+      "name": "Griffin Hastings",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/griffin-hastings-fb8bab.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 75,
+      "career_losses": 47,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "griffin hastings alumni"
+    },
+    {
+      "wrestler_id": "alum277819aa",
+      "name": "Isaiah Bryant",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/isaiah-bryant-7819aa.html",
+      "prestige_points": 40,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 75,
+      "career_losses": 34,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "isaiah bryant alumni"
+    },
+    {
+      "wrestler_id": "alum359e7fe3",
+      "name": "Ethan Staples",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "106",
+        "113",
+        "120",
+        "126"
+      ],
+      "weights_by_season": {
+        "2021-22": [
+          "106",
+          "113"
+        ],
+        "2022-23": [
+          "113",
+          "120",
+          "126"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/ethan-staples-9e7fe3.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 73,
+      "career_losses": 19,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "ethan staples alumni 106 113 120 126"
+    },
+    {
+      "wrestler_id": "alum72462322",
+      "name": "Ed Moriarty",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/ed-moriarty-462322.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 72,
+      "career_losses": 30,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "ed moriarty alumni"
+    },
+    {
+      "wrestler_id": "alumf3176642",
+      "name": "Jackson Harris",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "220",
+        "215",
+        "285"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "220"
+        ],
+        "2021-22": [
+          "215"
+        ],
+        "2022-23": [
+          "285"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/jackson-harris-176642.html",
+      "prestige_points": 40,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 70,
+      "career_losses": 36,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "jackson harris alumni 220 215 285"
+    },
+    {
+      "wrestler_id": "alumbabe6b1e",
+      "name": "Bryce Dunleavy",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/bryce-dunleavy-be6b1e.html",
+      "prestige_points": 40,
+      "has_prestige": true,
+      "show_career": true,
+      "career_wins": 69,
+      "career_losses": 39,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "bryce dunleavy alumni"
+    },
+    {
+      "wrestler_id": "alum1aa63185",
+      "name": "Alex Pfeifer",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/alex-pfeifer-a63185.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 67,
+      "career_losses": 54,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "alex pfeifer alumni"
+    },
+    {
+      "wrestler_id": "alumafd04a14",
+      "name": "Anthony Duarte",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "132",
+        "138",
+        "144"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "132"
+        ],
+        "2021-22": [
+          "132",
+          "138",
+          "144"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/anthony-duarte-d04a14.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 66,
+      "career_losses": 33,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "anthony duarte alumni 132 138 144"
+    },
+    {
+      "wrestler_id": "alum609a57a7",
+      "name": "Mark Gross",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/mark-gross-9a57a7.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 65,
+      "career_losses": 36,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "mark gross alumni"
+    },
+    {
+      "wrestler_id": "alum7f2900d6",
+      "name": "Jaylen Horsley",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/jaylen-horsley-2900d6.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 61,
+      "career_losses": 42,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "jaylen horsley alumni"
+    },
+    {
+      "wrestler_id": "aluma40b100c",
+      "name": "Richard (RJ) Hunnewell",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "150",
+        "157",
+        "165",
+        "175",
+        "190"
+      ],
+      "weights_by_season": {
+        "2021-22": [
+          "150",
+          "157",
+          "165"
+        ],
+        "2022-23": [
+          "165",
+          "175",
+          "190"
+        ],
+        "2023-24": [
+          "175",
+          "190"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/richard-rj-hunnewell-0b100c.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 59,
+      "career_losses": 45,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "richard (rj) hunnewell alumni 150 157 165 175 190"
+    },
+    {
+      "wrestler_id": "alum81d07189",
+      "name": "Riley Tufts",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/riley-tufts-d07189.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 58,
+      "career_losses": 44,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "riley tufts alumni"
+    },
+    {
+      "wrestler_id": "alume0fe32a2",
+      "name": "Brett Balzan",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "120",
+        "126",
+        "132"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "120"
+        ],
+        "2021-22": [
+          "120",
+          "126"
+        ],
+        "2022-23": [
+          "126",
+          "132"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/brett-balzan-fe32a2.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 57,
+      "career_losses": 29,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "brett balzan alumni 120 126 132"
+    },
+    {
+      "wrestler_id": "alum1c5fbc2d",
+      "name": "Lucas Estevez",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "165",
+        "175",
+        "157"
+      ],
+      "weights_by_season": {
+        "2022-23": [
+          "165",
+          "175"
+        ],
+        "2023-24": [
+          "165",
+          "157",
+          "175"
+        ],
+        "2024-25": [
+          "157",
+          "165"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/lucas-estevez-5fbc2d.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 44,
+      "career_losses": 48,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "lucas estevez alumni 165 175 157"
+    },
+    {
+      "wrestler_id": "alum563d0c1e",
+      "name": "Jay Stokes",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "170",
+        "175",
+        "190",
+        "215"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "170"
+        ],
+        "2021-22": [
+          "175",
+          "190",
+          "215"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/jay-stokes-3d0c1e.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 41,
+      "career_losses": 34,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "jay stokes alumni 170 175 190 215"
+    },
+    {
+      "wrestler_id": "alumfc8c7564",
+      "name": "Matthew Quinn",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "157",
+        "165",
+        "150",
+        "144"
+      ],
+      "weights_by_season": {
+        "2021-22": [
+          "157",
+          "165",
+          "150"
+        ],
+        "2022-23": [
+          "150",
+          "157",
+          "144"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/matthew-quinn-8c7564.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 36,
+      "career_losses": 20,
+      "seasons_on_record": 2,
+      "status": "alumni",
+      "search_text": "matthew quinn alumni 157 165 150 144"
+    },
+    {
+      "wrestler_id": "alume74ca47a",
+      "name": "Aaron Bill",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/aaron-bill-4ca47a.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 34,
+      "career_losses": 27,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "aaron bill alumni"
+    },
+    {
+      "wrestler_id": "alumfc0092f2",
+      "name": "James Moriarty",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "138",
+        "132",
+        "126",
+        "144"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "138"
+        ],
+        "2021-22": [
+          "132",
+          "126"
+        ],
+        "2022-23": [
+          "132",
+          "138",
+          "144"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/james-moriarty-0092f2.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 33,
+      "career_losses": 40,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "james moriarty alumni 138 132 126 144"
+    },
+    {
+      "wrestler_id": "aluma38e69d7",
+      "name": "Joseph Hart",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "113",
+        "106"
+      ],
+      "weights_by_season": {
+        "2021-22": [
+          "113"
+        ],
+        "2023-24": [
+          "106",
+          "113"
+        ],
+        "2024-25": [
+          "113",
+          "106"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/joseph-hart-8e69d7.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 34,
+      "career_losses": 25,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "joseph hart alumni 113 106"
+    },
+    {
+      "wrestler_id": "alumf33aab20",
+      "name": "Ethan Greenberg",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/ethan-greenberg-3aab20.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 30,
+      "career_losses": 38,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "ethan greenberg alumni"
+    },
+    {
+      "wrestler_id": "alum61eb99cf",
+      "name": "Mark Finelli",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "106",
+        "113",
+        "126",
+        "132"
+      ],
+      "weights_by_season": {
+        "2022-23": [
+          "106",
+          "113"
+        ],
+        "2023-24": [
+          "126",
+          "132"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/mark-finelli-eb99cf.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 25,
+      "career_losses": 20,
+      "seasons_on_record": 2,
+      "status": "alumni",
+      "search_text": "mark finelli alumni 106 113 126 132"
+    },
+    {
+      "wrestler_id": "alum0338d39a",
+      "name": "Dylan Feimer",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "190",
+        "215"
+      ],
+      "weights_by_season": {
+        "2021-22": [
+          "190",
+          "215"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/dylan-feimer-38d39a.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 23,
+      "career_losses": 34,
+      "seasons_on_record": 2,
+      "status": "alumni",
+      "search_text": "dylan feimer alumni 190 215"
+    },
+    {
+      "wrestler_id": "alum5d20adbb",
+      "name": "Caleb Pietrafitta",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "145"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "145"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/caleb-pietrafitta-20adbb.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 22,
+      "career_losses": 34,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "caleb pietrafitta alumni 145"
+    },
+    {
+      "wrestler_id": "alum0e2aa629",
+      "name": "Dalton Short",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/dalton-short-2aa629.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": 21,
+      "career_losses": 11,
+      "seasons_on_record": 1,
+      "status": "alumni",
+      "search_text": "dalton short alumni"
+    },
+    {
+      "wrestler_id": "alumb4d7584f",
+      "name": "Dominic Harris",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "150",
+        "165",
+        "190",
+        "215",
+        "175"
+      ],
+      "weights_by_season": {
+        "2022-23": [
+          "150"
+        ],
+        "2023-24": [
+          "150",
+          "165"
+        ],
+        "2024-25": [
+          "190",
+          "215",
+          "175"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/dominic-harris-d7584f.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 21,
+      "career_losses": 27,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "dominic harris alumni 150 165 190 215 175"
+    },
+    {
+      "wrestler_id": "alum6705c875",
+      "name": "Connor Coolihan",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/connor-coolihan-05c875.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": 19,
+      "career_losses": 12,
+      "seasons_on_record": 1,
+      "status": "alumni",
+      "search_text": "connor coolihan alumni"
+    },
+    {
+      "wrestler_id": "alum2d681926",
+      "name": "Drew Lapinski",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/drew-lapinski-681926.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 18,
+      "career_losses": 50,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "drew lapinski alumni"
+    },
+    {
+      "wrestler_id": "alum06e51342",
+      "name": "Brett Strohm",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "157",
+        "150",
+        "165"
+      ],
+      "weights_by_season": {
+        "2022-23": [
+          "157"
+        ],
+        "2023-24": [
+          "150",
+          "157",
+          "165"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/brett-strohm-e51342.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 16,
+      "career_losses": 7,
+      "seasons_on_record": 2,
+      "status": "alumni",
+      "search_text": "brett strohm alumni 157 150 165"
+    },
+    {
+      "wrestler_id": "alum659a2b5c",
+      "name": "Aidan Higgins",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/aidan-higgins-9a2b5c.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": 15,
+      "career_losses": 20,
+      "seasons_on_record": 1,
+      "status": "alumni",
+      "search_text": "aidan higgins alumni"
+    },
+    {
+      "wrestler_id": "alum6f152883",
+      "name": "Tyler Aschim",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "220",
+        "215",
+        "190"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "220"
+        ],
+        "2021-22": [
+          "215"
+        ],
+        "2022-23": [
+          "190",
+          "215"
+        ],
+        "2023-24": [
+          "215",
+          "190"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/tyler-aschim-152883.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 15,
+      "career_losses": 38,
+      "seasons_on_record": 4,
+      "status": "alumni",
+      "search_text": "tyler aschim alumni 220 215 190"
+    },
+    {
+      "wrestler_id": "alum3c1c30d8",
+      "name": "Nathaniel Alvarado",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "285"
+      ],
+      "weights_by_season": {
+        "2021-22": [
+          "285"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/nathaniel-alvarado-1c30d8.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": 15,
+      "career_losses": 11,
+      "seasons_on_record": 1,
+      "status": "alumni",
+      "search_text": "nathaniel alvarado alumni 285"
+    },
+    {
+      "wrestler_id": "alum031b6913",
+      "name": "Max VanDoren",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/max-vandoren-1b6913.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 15,
+      "career_losses": 17,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "max vandoren alumni"
+    },
+    {
+      "wrestler_id": "alum1e82ea95",
+      "name": "Alexander Kokolis",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "215",
+        "190"
+      ],
+      "weights_by_season": {
+        "2021-22": [
+          "215"
+        ],
+        "2022-23": [
+          "190",
+          "215"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/alexander-kokolis-82ea95.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 14,
+      "career_losses": 21,
+      "seasons_on_record": 2,
+      "status": "alumni",
+      "search_text": "alexander kokolis alumni 215 190"
+    },
+    {
+      "wrestler_id": "alum98255180",
+      "name": "Matt Wolfe",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [],
+      "weights_by_season": {},
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/matt-wolfe-255180.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": 14,
+      "career_losses": 7,
+      "seasons_on_record": 1,
+      "status": "alumni",
+      "search_text": "matt wolfe alumni"
+    },
+    {
+      "wrestler_id": "alum24a5b57e",
+      "name": "Max Germain",
+      "grade": "Alumni",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "career_weights": [
+        "160"
+      ],
+      "weights_by_season": {
+        "2020-21": [
+          "160"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/max-germain-a5b57e.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": true,
+      "career_wins": 14,
+      "career_losses": 24,
+      "seasons_on_record": 3,
+      "status": "alumni",
+      "search_text": "max germain alumni 160"
     }
   ]
 }
