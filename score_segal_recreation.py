@@ -37,11 +37,12 @@ NJSIAA_KNOWN_OPP_CODES = {
     ("trentonlandell", "cherokee"): "D4",
 }
 
-# Pre-seed form season — opponent prestige uses ONLY the prior 3 seasons
-# (Jeff 2026-11-01 correction: never 2025-26 results on a 2025-26 form).
+# Pre-seed form season — opponent prestige uses prior HS-eligible seasons only
+# (Jeff 2026-11-01: never 2025-26 results on a 2025-26 form; include 2021-22 so a
+# senior's frosh finish is visible).
 FORM_SEASON = "2025-26"
-OPP_SEASONS = prior_seasons_for(FORM_SEASON)  # ["2024-25", "2023-24", "2022-23"]
-# Primary: career-best code within the prior-3 window; most_recent is the alt.
+OPP_SEASONS = prior_seasons_for(FORM_SEASON)  # ["2024-25", "2023-24", "2022-23", "2021-22"]
+# Primary: career-best code within the eligible window; most_recent is the alt.
 PRIMARY_POLICY = "best"
 ALT_POLICY = "most_recent"
 
@@ -229,11 +230,11 @@ def render_md(
     lines.append("# Jordan Segal — NJSIAA 2025-26 pre-seed recreation")
     lines.append("")
     lines.append("Recreated from Shawnee `tw_capture/2025-26/segal_full_matches.txt` (38 TW rows) + statewide")
-    lines.append("`data/opponent_advancement.json` (nj.com brackets, 2022-23…2025-26), scored with")
+    lines.append("`data/opponent_advancement.json` (nj.com brackets, 2021-22…2025-26), scored with")
     lines.append("`caliber.py` under official NJSIAA rules (Jeff steering 2026-11-01).")
     lines.append("")
     lines.append(
-        f"**Opponent prestige window:** prior 3 seasons only for form `{FORM_SEASON}` → "
+        f"**Opponent prestige window:** prior eligible seasons only for form `{FORM_SEASON}` → "
         f"`{OPP_SEASONS}` (Jeff correction 2026-11-01: never use `{FORM_SEASON}` postseason "
         f"results on a `{FORM_SEASON}` pre-seed). "
         f"**Primary policy:** `{PRIMARY_POLICY}` (career-best code inside that window). "
@@ -257,7 +258,7 @@ def render_md(
         f"{total - official['total']:.2f} |"
     )
     lines.append(
-        f"| Alt: `{ALT_POLICY}` within same prior-3 window | {prestige:.1f} | {alt['alt_top20']:.1f} | "
+        f"| Alt: `{ALT_POLICY}` within same prior-eligible window | {prestige:.1f} | {alt['alt_top20']:.1f} | "
         f"{alt['alt_all']:.1f} | {prestige + alt['alt_top20']:.2f} |"
     )
     lines.append("")
@@ -352,7 +353,7 @@ def render_md(
     lines.append("### What explains the gap (rule / data citations)")
     lines.append("")
     lines.append(
-        f"- **Prior-3 season window (Jeff correction):** opponent codes for a `{FORM_SEASON}` form "
+        f"- **Prior-eligible season window (Jeff correction):** opponent codes for a `{FORM_SEASON}` form "
         f"come only from {OPP_SEASONS} — `{FORM_SEASON}` postseason finishes are excluded. "
         f"Primary `{PRIMARY_POLICY}` top-20 **{top20:.1f}** (Δ {top20 - official['caliber_top20']:+.1f} vs 317). "
         f"Alt `{ALT_POLICY}` top-20 **{alt['alt_top20']:.1f}** "
@@ -439,7 +440,7 @@ def render_md(
     )
     lines.append(
         f"- Form season `{FORM_SEASON}`; opponent seasons {OPP_SEASONS} "
-        f"(via `prior_seasons_for`); primary=`{PRIMARY_POLICY}`, alt=`{ALT_POLICY}`"
+        f"(via `prior_seasons_for`, n=4); primary=`{PRIMARY_POLICY}`, alt=`{ALT_POLICY}`"
     )
     lines.append(f"- Bouts: `{SEGAL_FULL_MATCHES}` (fallback `{BOUTS_HIST}`)")
     lines.append(f"- Scorer: `caliber.py` + `score_segal_recreation.py`")
@@ -509,11 +510,11 @@ def main() -> int:
     print(f"Wrote {OUT_MD}")
     print(f"Wrote {OUT_JSON}")
     print(
-        f"PRIMARY {PRIMARY_POLICY} (prior 3 only): Prestige {prestige} + top20 {top20} = "
+        f"PRIMARY {PRIMARY_POLICY} (prior eligible): Prestige {prestige} + top20 {top20} = "
         f"{prestige + top20} (NJSIAA {NJSIAA_OFFICIAL['total']}; all {all_sum})"
     )
     print(
-        f"ALT {ALT_POLICY} (prior 3 only): top20 {alt_top20} all {alt_all} "
+        f"ALT {ALT_POLICY} (prior eligible): top20 {alt_top20} all {alt_all} "
         f"total {prestige + alt_top20}"
     )
     from caliber import lookup_opponent_code

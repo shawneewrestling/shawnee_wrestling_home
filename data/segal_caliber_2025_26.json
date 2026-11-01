@@ -9,7 +9,8 @@
   "opponent_seasons": [
     "2024-25",
     "2023-24",
-    "2022-23"
+    "2022-23",
+    "2021-22"
   ],
   "alt_policy": {
     "season_policy": "most_recent",
@@ -51,7 +52,7 @@
       "rules": [
         "win = opponent caliber"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "decision",
       "in_top20": true
     },
@@ -107,7 +108,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -163,7 +164,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -220,7 +221,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": false
     },
@@ -248,7 +249,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -275,7 +276,7 @@
       "rules": [
         "non-decision loss = 0"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -303,7 +304,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -331,7 +332,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -359,7 +360,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": false
     },
@@ -386,7 +387,7 @@
       "rules": [
         "non-decision loss = 0"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": false
     },
@@ -471,7 +472,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -498,7 +499,7 @@
       "rules": [
         "win = opponent caliber"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "decision",
       "in_top20": true
     },
@@ -526,7 +527,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -554,7 +555,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -582,7 +583,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -610,7 +611,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -638,7 +639,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -666,7 +667,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -694,7 +695,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -722,7 +723,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -750,7 +751,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -778,7 +779,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "no finish in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -806,7 +807,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -852,7 +853,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -880,7 +881,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "tech",
       "in_top20": false
     },
@@ -907,7 +908,7 @@
       "rules": [
         "decision loss = 20% caliber (chart)"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "decision",
       "in_top20": true
     },
@@ -953,7 +954,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -980,7 +981,7 @@
       "rules": [
         "win = opponent caliber"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "decision",
       "in_top20": true
     },
@@ -1007,7 +1008,7 @@
       "rules": [
         "non-decision loss = 0"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -1035,7 +1036,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "major",
       "in_top20": true
     },
@@ -1062,12 +1063,12 @@
       "rules": [
         "decision loss = 20% caliber (chart)"
       ],
-      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23', '2021-22']",
       "normalized_win_type": "decision",
       "in_top20": true
     }
   ],
-  "adv_count": 8999,
-  "adv_generated": "2026-11-01T19:40:01Z",
-  "note": "Opponent prestige for 2025-26 uses only ['2024-25', '2023-24', '2022-23']; 2025-26 postseason finishes are excluded."
+  "adv_count": 10560,
+  "adv_generated": "2026-11-01T14:50:37",
+  "note": "Opponent prestige for 2025-26 uses only ['2024-25', '2023-24', '2022-23', '2021-22']; 2025-26 postseason finishes are excluded."
 }

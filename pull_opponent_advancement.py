@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Pull statewide NJSIAA individual postseason advancement (last 4 seasons).
+"""Pull statewide NJSIAA individual postseason advancement (last 5 seasons).
 
 Source: highschoolsports.nj.com public brackets (Districts 1–32, Regions 1–8,
-State Championships × 14 weights) for seasons 2022-23 … 2025-26.
+State Championships × 14 weights) for seasons 2021-22 … 2025-26.
 
 Writes data/opponent_advancement.json keyed by athlete_id with linked season
 entries, career-best NJSIAA advancement code, and match metadata.
@@ -35,6 +35,7 @@ OUT_PATH = ROOT / "data" / "opponent_advancement.json"
 CACHE_DIR = ROOT / "data" / "cache" / "njcom_brackets"
 
 SEASONS = [
+    ("2021-2022", "2021-22", 2022),
     ("2022-2023", "2022-23", 2023),
     ("2023-2024", "2023-24", 2024),
     ("2024-2025", "2024-25", 2025),

@@ -292,12 +292,12 @@ def format_season(start_year: int) -> str:
     return f"{start_year}-{yy:02d}"
 
 
-def prior_seasons_for(season: str, n: int = 3) -> List[str]:
+def prior_seasons_for(season: str, n: int = 4) -> List[str]:
     """Prior *n* seasons for a pre-seed form in `season`, newest first.
 
-    For a 2025-26 pre-seed the window is exclusively 2024-25, 2023-24, 2022-23 —
-    never the current season (those results happen after / during the season the
-    form is for).
+    Default n=4 covers a senior's full HS lookback (frosh through prior year).
+    For a 2025-26 pre-seed that is 2024-25 … 2021-22 — never the current season
+    (those results happen after / during the season the form is for).
     """
     start = parse_season_start_year(season)
     return [format_season(start - i) for i in range(1, n + 1)]
