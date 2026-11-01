@@ -505,10 +505,25 @@
         (byName[name] ||= { title: name, kind: a.award_category || 'other', rows: [] }).rows.push(a);
       }
     }
+    // Config-driven page order from awards.json card_order (prefix match).
+    // District Champions expands to decade cards; unmatched titles follow at end.
+    const configuredOrder = (data.card_order || []).slice();
+    function cardOrderRank(title) {
+      for (let i = 0; i < configuredOrder.length; i++) {
+        const key = configuredOrder[i];
+        if (title === key || title.startsWith(key)) return i;
+        // NCAA title includes division subtitle
+        if (key.startsWith('NCAA') && title.startsWith('NCAA')) return i;
+      }
+      return 1000; // leftovers after configured list
+    }
     const order = Object.keys(byName).sort((a, b) => {
-      const da = a.startsWith('District Champions') ? 1 : 0;
-      const db = b.startsWith('District Champions') ? 1 : 0;
-      if (da !== db) return da - db;
+      const ra = cardOrderRank(a), rb = cardOrderRank(b);
+      if (ra !== rb) return ra - rb;
+      // Decade district cards: chronological by decade label
+      if (a.startsWith('District Champions') && b.startsWith('District Champions')) {
+        return a.localeCompare(b);
+      }
       return a.localeCompare(b);
     });
 

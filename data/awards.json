@@ -6,7 +6,8 @@
     "title": "top",
     "body": "rows",
     "logo": "shawnee_s_bottom",
-    "district_grouping": "by_decade"
+    "district_grouping": "by_decade",
+    "card_order": "data.awards.json card_order (prefix match; District Champions expands to decade cards)"
   },
   "meta": {
     "njsiaa_placements_2025_26": {
@@ -2292,5 +2293,17 @@
     }
   ],
   "seed_count": 210,
-  "derived_2025_26_count": 0
+  "derived_2025_26_count": 0,
+  "card_order": [
+    "NCAA All-American",
+    "State Champions",
+    "State Place Winner",
+    "Region Champions",
+    "District Champions",
+    "Sectional Team Championship",
+    "District Team Championship",
+    "Career Wins",
+    "Career Pins",
+    "Season Pins"
+  ]
 }
