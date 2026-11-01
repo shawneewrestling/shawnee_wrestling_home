@@ -62,6 +62,7 @@
       // Shape expected by renderSchedule / renderResults
       view: {
         schedule: schedule.schedule || [],
+        tournament_results: schedule.tournament_results || {},
         metadata: {
           season: schedule.season || schedule.title,
           title: schedule.title,
@@ -105,11 +106,7 @@
     const sub = document.querySelector('main .page-sub');
     if (!sub) return;
     const page = document.body && document.querySelector('.nav a.active')?.textContent?.trim();
-    if (page === 'Schedule / Results') {
-      sub.textContent = `Duals, tournaments, and multi-team events for the ${label.replace(/ Season$/, ' season')}.`;
-    } else if (page === 'Results') {
-      sub.textContent = `Shawnee dual-meet results (including tri/quad splits) · ${label}.`;
-    } else if (page === 'Standings') {
+    if (page === 'Standings') {
       sub.textContent = `${label} wrestling · Olympic Conference`;
     }
   }
@@ -134,11 +131,33 @@
     return `<div class="opp">${img}<span>${esc(name)}${note}</span></div>`;
   }
 
-  function resultBadge(m) {
+  function tournamentSummary(m, data) {
+    const key = m && (m.tournament_key || m.event_id);
+    if (!key || !data) return '';
+    const tr = (data.tournament_results || {})[key];
+    if (!tr) return '';
+    const places = [];
+    for (const w of (tr.wrestlers || [])) {
+      if (w && w.placement) places.push(String(w.placement));
+    }
+    if (!places.length) return '';
+    // Prefer unique placements in place-order (1st, 2nd, …)
+    const rank = (p) => {
+      const n = parseInt(String(p), 10);
+      return Number.isFinite(n) ? n : 99;
+    };
+    const uniq = [...new Set(places)].sort((a, b) => rank(a) - rank(b) || a.localeCompare(b));
+    return uniq.slice(0, 4).join(', ') + (uniq.length > 4 ? '…' : '');
+  }
+
+  function resultBadge(m, data) {
+    if (!m) return '—';
     if (m.result === 'W') return `<span class="badge w">W ${esc(m.score_display || '')}</span>`;
     if (m.result === 'L') return `<span class="badge l">L ${esc(m.score_display || '')}</span>`;
     if (m.result === 'T') return `<span class="badge ev">T ${esc(m.score_display || '')}</span>`;
     if (m.status === 'final' || m.completed || m.result_label === 'Final') {
+      const summary = tournamentSummary(m, data);
+      if (summary) return `<span class="badge final">${esc(summary)}</span>`;
       if (m.results_unavailable) {
         return `<span class="badge final" title="${esc(m.result_note || 'Bout cards unavailable')}">Final</span>`;
       }
@@ -180,7 +199,7 @@
       return;
     }
 
-    if (page === 'Standings' || page === 'Schedule / Results' || page === 'Results') {
+    if (page === 'Standings' || page === 'Schedule & Results') {
       const index = await loadSeasonsIndex();
       const seasons = index.seasons || [];
       const defaultId = index.default || (seasons[0] && seasons[0].id) || '2025-26';
@@ -197,8 +216,7 @@
         const label = seasonLabel(seasonId, seasons);
         updateSeasonChrome(seasonId, label);
         const bundle = await loadSeasonBundle(seasonId);
-        if (page === 'Schedule / Results') renderSchedule(bundle.view);
-        else if (page === 'Results') renderResults(bundle.view);
+        if (page === 'Schedule & Results') renderSchedule(bundle.view);
         else if (page === 'Standings') renderConferenceStandings(bundle.standingsDoc);
       }
 
@@ -617,23 +635,25 @@
   }
 
   function tournamentPanel(m, data) {
+    if (!m || !data) return '';
     const key = m.tournament_key || m.event_id;
+    if (!key) return '';
     const tr = (data.tournament_results || {})[key];
     if (!tr || !(tr.wrestlers || []).length) return '';
     let wrestlers = tr.wrestlers || [];
     if (m.filter_opponent) {
       const want = String(m.filter_opponent).toLowerCase();
       wrestlers = wrestlers.map((w) => {
-        const bouts = (w.bouts || []).filter((b) => String(b.opponent_team || '').toLowerCase().includes(want.split('(')[0].trim()) || want.includes(String(b.opponent_team || '').toLowerCase().slice(0, 8)));
-        // softer match: resolve by slug-ish containment
         const bouts2 = (w.bouts || []).filter((b) => {
           const ot = String(b.opponent_team || '').toLowerCase();
           return ot && (want.includes(ot.slice(0, 6)) || ot.includes(want.slice(0, 6)));
         });
-        return { ...w, bouts: bouts2.length ? bouts2 : bouts };
+        return { ...w, bouts: bouts2 };
       }).filter((w) => (w.bouts || []).length);
     }
     if (!wrestlers.length) return '';
+    const hasAnyBouts = wrestlers.some((w) => (w.bouts || []).length);
+    if (!hasAnyBouts) return '';
     const cards = wrestlers.map((w) => {
       const place = w.placement ? `<span class="place">${esc(w.placement)}</span>` : '';
       return `<details class="wrestler-card">
@@ -641,37 +661,76 @@
         <ul class="bouts">${(w.bouts || []).map(boutLine).join('') || '<li>No bouts</li>'}</ul>
       </details>`;
     }).join('');
-    return `<tr class="expand-row"><td colspan="5"><div class="tournament-panel">${cards}</div></td></tr>`;
+    return `<tr class="expand-row"><td colspan="6"><div class="tournament-panel">${cards}</div></td></tr>`;
+  }
+
+  function siteCell(m) {
+    if (!m) return '';
+    if (m.home_away === 'home') {
+      const venue = String(m.location || '').replace(/\s+/g, ' ').trim();
+      return venue && venue.toLowerCase() !== 'shawnee' ? `Home · ${venue}` : 'Home';
+    }
+    if (m.home_away === 'away') {
+      const venue = String(m.location || '').replace(/\s+/g, ' ').trim();
+      return venue ? `Away · ${venue}` : 'Away';
+    }
+    return String(m.location || 'Event').replace(/\s+/g, ' ').trim() || 'Event';
   }
 
   function renderSchedule(data) {
-    const rec = data.metadata?.dual_record || data.dual_scores?.record;
-    const conf = data.metadata?.conference_record || data.dual_scores?.conference_record;
-    const seasonFinal = (data.metadata?.status || data.metadata?.season_status) === 'final';
-    const seasonLabelText = data.metadata?.title || data.metadata?.season || 'Season';
+    data = data || {};
+    const meta = data.metadata || {};
+    const ds = data.dual_scores || {};
+    const rows = Array.isArray(data.schedule) ? data.schedule : [];
+    const rec = meta.dual_record || ds.record || '—';
+    const conf = meta.conference_record || ds.conference_record || '—';
+    const seasonFinal = (meta.status || meta.season_status) === 'final';
+    const seasonLabelText = meta.title || meta.season || 'Season';
     const statusChip = seasonFinal
       ? `<span><strong>Season</strong> Final · ${esc(seasonLabelText)}</span>`
       : `<span><strong>Season</strong> ${esc(seasonLabelText)}</span>`;
-    setHtml(document.getElementById('schedMeta'), `<span><strong>Dual record</strong> ${esc(rec)}</span>
-      <span><strong>Conference</strong> ${esc(conf || '—')}</span>
-      <span><strong>Listings</strong> ${(data.schedule || []).length}</span>
+    const metaEl = document.getElementById('schedMeta');
+    if (metaEl) {
+      setHtml(metaEl, `<span><strong>Dual record</strong> ${esc(rec)}</span>
+      <span><strong>Conference</strong> ${esc(conf)}</span>
+      <span><strong>Listings</strong> ${rows.length}</span>
       ${statusChip}`);
+    }
     const body = document.querySelector('#scheduleTable tbody');
     if (!body) return;
-    body.innerHTML = (data.schedule || []).map((m) => {
-      const expand = m.expandable ? `<button type="button" class="expand-btn" data-eid="${esc(m.tournament_key || m.event_id)}" aria-expanded="false">Details</button>` : '';
+
+    let w = 0, l = 0, t = 0;
+    const parts = [];
+    rows.forEach((m, idx) => {
+      if (!m) return;
+      const panelHtml = tournamentPanel(m, data);
+      const canExpand = !!panelHtml;
+      const expand = canExpand
+        ? `<button type="button" class="expand-btn" data-eid="${esc(m.tournament_key || m.event_id || idx)}" aria-expanded="false">Details</button>`
+        : '';
+      const completedDual = ['W', 'L', 'T'].includes(m.result);
+      let running = '';
+      if (completedDual) {
+        if (m.result === 'W') w += 1;
+        else if (m.result === 'L') l += 1;
+        else t += 1;
+        running = `${w}-${l}` + (t ? `-${t}` : '');
+      }
       const timeLabel = m.time || ((m.status === 'final' || m.completed || seasonFinal) ? '—' : 'TBD');
-      const main = `<tr class="sched-row" data-eid="${esc(m.event_id || '')}">
-        <td>${esc(m.date_iso || m.date)}</td>
+      const resultCell = `${resultBadge(m, data)}${expand ? ' ' + expand : ''}`;
+      parts.push(`<tr class="sched-row" data-eid="${esc(m.event_id || '')}">
+        <td>${esc(m.date_iso || m.date || '')}</td>
         <td>${oppCell(m)}</td>
-        <td>${esc(m.home_away === 'home' ? 'Home' : m.home_away === 'away' ? 'Away' : (m.location || 'Event'))}</td>
-        <td>${esc(timeLabel)} ${expand}</td>
-        <td>${resultBadge(m)}</td>
-      </tr>`;
-      // Pre-render collapsed panel as hidden sibling; toggled by button
-      const panel = m.expandable ? tournamentPanel(m, data).replace('class="expand-row"', 'class="expand-row hidden"') : '';
-      return main + panel;
-    }).join('');
+        <td>${esc(siteCell(m))}</td>
+        <td>${esc(timeLabel)}</td>
+        <td>${resultCell}</td>
+        <td class="num">${esc(running)}</td>
+      </tr>`);
+      if (canExpand) {
+        parts.push(panelHtml.replace('class="expand-row"', 'class="expand-row hidden"'));
+      }
+    });
+    body.innerHTML = parts.join('');
     body.querySelectorAll('.expand-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
         const tr = btn.closest('tr');
