@@ -226,7 +226,10 @@
       renderHome(data, homeRoster);
       return;
     }
-    else if (page === 'Stats') renderStats(data);
+    else if (page === 'Stats') {
+      const index = await loadJson(PLAYERS_INDEX_URL).catch(() => null);
+      renderStats(data, index);
+    }
   } catch (e) {
     console.error(e);
     const main = document.querySelector('main');
@@ -698,13 +701,29 @@
     }).join('') || '<p class="muted">Standings unavailable.</p>';
   }
 
-  function renderStats(data) {
+  function playerPageMap(index) {
+    const map = Object.create(null);
+    for (const w of (index && index.wrestlers) || []) {
+      const href = w.player_page || '';
+      if (!href) continue;
+      if (w.wrestler_id) map['id:' + String(w.wrestler_id)] = href;
+      if (w.name) map['name:' + String(w.name).trim().toLowerCase()] = href;
+    }
+    return map;
+  }
+
+  function renderStats(data, index) {
+    const pages = playerPageMap(index);
     const rows = (data.stats || data.roster || []).slice().sort((a, b) => (b.wins || 0) - (a.wins || 0) || (a.losses || 0) - (b.losses || 0));
     document.querySelector('#statsTable tbody').innerHTML = rows.map((w) => {
       const wins = w.wins || 0, losses = w.losses || 0;
       const pct = (wins + losses) ? ((wins / (wins + losses)) * 100).toFixed(1) + '%' : '—';
+      const href = pages['id:' + String(w.wrestler_id || '')] || pages['name:' + String(w.name || '').trim().toLowerCase()] || '';
+      const nameCell = href
+        ? `<a href="${esc(href)}">${esc(w.name)}</a>`
+        : esc(w.name);
       return `<tr>
-        <td>${esc(w.name)}</td>
+        <td>${nameCell}</td>
         <td>${esc(w.weight || '—')}</td>
         <td>${esc(w.grade || '—')}</td>
         <td>${wins}</td><td>${losses}</td><td>${pct}</td>

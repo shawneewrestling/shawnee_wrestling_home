@@ -1,399 +1,223 @@
 {
   "schema_version": 1,
   "season": "2025-2026",
-  "updated_at": "2026-11-01T10:40:38-05:00",
-  "source_note": "Home roster merges live shawneewrestling.com gallery with 2025-26 season roster data.",
+  "updated_at": "2026-11-01T12:23:43-05:00",
+  "source_note": "Home roster shows 2025-26 varsity starters (varsity_assignments) with WP gallery photos matched by name.",
   "counts": {
-    "wp_gallery": 18,
-    "tw_roster": 58,
-    "matched": 12,
-    "unmatched_wp": 6,
-    "unmatched_tw": 46,
-    "home_cards": 18,
-    "photos_saved": 11
-  },
-  "match_report": {
-    "matched": [
-      {
-        "wp_name": "Jordan Segal",
-        "tw_name": "Jordan Segal",
-        "display_weight": "106"
-      },
-      {
-        "wp_name": "Matt Hart",
-        "tw_name": "Matt Hart",
-        "display_weight": "106"
-      },
-      {
-        "wp_name": "Sean Bradley",
-        "tw_name": "Sean Bradley",
-        "display_weight": "113"
-      },
-      {
-        "wp_name": "Garret Borlaug",
-        "tw_name": "Garrett Borlaug",
-        "display_weight": "120"
-      },
-      {
-        "wp_name": "Leeland Rogers",
-        "tw_name": "Leeland Rogers",
-        "display_weight": "126"
-      },
-      {
-        "wp_name": "Ryan Hoerst",
-        "tw_name": "Ryan Hoerst",
-        "display_weight": "132"
-      },
-      {
-        "wp_name": "Oleksandr \"Sasha\" Yurovskyi",
-        "tw_name": "Oleksandr `Sasha` Yurovskyi",
-        "display_weight": "138"
-      },
-      {
-        "wp_name": "Trevor Sieben",
-        "tw_name": "Trevor Sieben",
-        "display_weight": "144"
-      },
-      {
-        "wp_name": "Joseph Augusta",
-        "tw_name": "Joseph Augusta",
-        "display_weight": "150"
-      },
-      {
-        "wp_name": "Max Spitznas",
-        "tw_name": "Max Spitznas",
-        "display_weight": "175"
-      },
-      {
-        "wp_name": "Liam McSorley",
-        "tw_name": "William (Liam) McSorley",
-        "display_weight": "215"
-      },
-      {
-        "wp_name": "Collin McHugh",
-        "tw_name": "Collin McHugh",
-        "display_weight": "215"
-      }
-    ],
-    "unmatched_wp": [
-      "Joseph Hart",
-      "Luke Sherlock",
-      "Chris Ahrens",
-      "Lucas Estevez",
-      "Dominick Harris",
-      "Erik Sullivan"
-    ],
-    "unmatched_tw": [
-      "Daniel Fitzpatrick",
-      "Logan Reice",
-      "Logan Sloan",
-      "Jadiel Esquivel",
-      "Benjamin Pollock",
-      "Anthony Blahut",
-      "Romeo Cline",
-      "Ranger Fest",
-      "Noah Meisner",
-      "Luke Velasco",
-      "Gino Gonzalez",
-      "Logan Curiale",
-      "Cole Hoguet",
-      "Nathan Hunnewell",
-      "Brayden Inman",
-      "Charles Pulaski",
-      "Cooper Stauss",
-      "Landon Caffery",
-      "Michael Hart",
-      "Owen Siena",
-      "Jack Caldwell",
-      "Walter Johnson",
-      "Rhys Pritchard",
-      "Brian Reice",
-      "Max Shectman",
-      "Colin Dowd",
-      "Ashton Hayden",
-      "Domenico Incollingo",
-      "Kellan McDonough",
-      "Arjun Shah",
-      "Gabriel Evans",
-      "Brandon Kelly",
-      "William Mays",
-      "Jack Potter",
-      "Tyler Davis",
-      "Brodie Regan",
-      "Eli Sauler",
-      "Anthony Birney",
-      "Logan Cino",
-      "Giovanni Lopez",
-      "Andrik Orenyo",
-      "Jacobs Rodriguez",
-      "Jack Gleeson",
-      "Robert Lane",
-      "Rowan Nix",
-      "Veliz-Velasquez Carlos"
-    ]
+    "starters": 14,
+    "with_photo": 8,
+    "weight_classes": 14
   },
   "wrestlers": [
     {
-      "name": "Jordan Segal",
-      "wp_name": "Jordan Segal",
+      "name": "Daniel Fitzpatrick",
+      "wrestler_id": "35217300132",
       "display_weight": "106",
-      "grade": "Sr.",
-      "wins": 29,
-      "losses": 7,
-      "photo": "assets/img/roster/jordan-segal.jpg",
-      "player_page": "players/jordan-segal-201132.html",
+      "assigned_weight": "106",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/daniel-fitzpatrick-300132.html",
       "weights_wrestled": [
-        "126",
-        "132",
-        "138",
-        "144"
+        "106"
       ],
-      "matched": true
+      "matched": false
     },
     {
       "name": "Matt Hart",
-      "wp_name": "Matt Hart",
-      "display_weight": "106",
+      "wrestler_id": "35008235132",
+      "display_weight": "113",
+      "assigned_weight": "113",
       "grade": "So.",
       "wins": 12,
       "losses": 20,
       "photo": null,
       "player_page": "players/matt-hart-235132.html",
       "weights_wrestled": [
-        "106",
         "113"
       ],
-      "matched": true
-    },
-    {
-      "name": "Joseph Hart",
-      "wp_name": "Joseph Hart",
-      "display_weight": "113",
-      "grade": null,
-      "wins": null,
-      "losses": null,
-      "photo": "assets/img/roster/wp-joseph-hart.jpg",
-      "player_page": null,
-      "weights_wrestled": [],
       "matched": false
     },
     {
       "name": "Sean Bradley",
-      "wp_name": "Sean Bradley",
-      "display_weight": "113",
+      "wrestler_id": "35008197132",
+      "display_weight": "120",
+      "assigned_weight": "120",
       "grade": "Sr.",
       "wins": 21,
       "losses": 16,
       "photo": "assets/img/roster/sean-bradley.jpg",
       "player_page": "players/sean-bradley-197132.html",
       "weights_wrestled": [
-        "113",
         "120"
       ],
       "matched": true
     },
     {
+      "name": "Jordan Segal",
+      "wrestler_id": "35008201132",
+      "display_weight": "126",
+      "assigned_weight": "126",
+      "grade": "Sr.",
+      "wins": 29,
+      "losses": 7,
+      "photo": "assets/img/roster/jordan-segal.jpg",
+      "player_page": "players/jordan-segal-201132.html",
+      "weights_wrestled": [
+        "126"
+      ],
+      "matched": true
+    },
+    {
+      "name": "Brayden Inman",
+      "wrestler_id": "35217388132",
+      "display_weight": "132",
+      "assigned_weight": "132",
+      "grade": "Fr.",
+      "wins": 14,
+      "losses": 12,
+      "photo": null,
+      "player_page": "players/brayden-inman-388132.html",
+      "weights_wrestled": [
+        "132"
+      ],
+      "matched": false
+    },
+    {
       "name": "Garrett Borlaug",
-      "wp_name": "Garret Borlaug",
-      "display_weight": "120",
+      "wrestler_id": "35008199132",
+      "display_weight": "138",
+      "assigned_weight": "138",
       "grade": "Sr.",
       "wins": 4,
       "losses": 11,
       "photo": "assets/img/roster/garrett-borlaug.jpg",
       "player_page": "players/garrett-borlaug-199132.html",
       "weights_wrestled": [
-        "126",
-        "132",
-        "138",
-        "144"
+        "138"
       ],
       "matched": true
-    },
-    {
-      "name": "Leeland Rogers",
-      "wp_name": "Leeland Rogers",
-      "display_weight": "126",
-      "grade": "So.",
-      "wins": 11,
-      "losses": 6,
-      "photo": "assets/img/roster/leeland-rogers.jpg",
-      "player_page": "players/leeland-rogers-225132.html",
-      "weights_wrestled": [
-        "132",
-        "138",
-        "144"
-      ],
-      "matched": true
-    },
-    {
-      "name": "Ryan Hoerst",
-      "wp_name": "Ryan Hoerst",
-      "display_weight": "132",
-      "grade": "Jr.",
-      "wins": 17,
-      "losses": 14,
-      "photo": "assets/img/roster/ryan-hoerst.jpg",
-      "player_page": "players/ryan-hoerst-209132.html",
-      "weights_wrestled": [
-        "138",
-        "144",
-        "150"
-      ],
-      "matched": true
-    },
-    {
-      "name": "Luke Sherlock",
-      "wp_name": "Luke Sherlock",
-      "display_weight": "138",
-      "grade": null,
-      "wins": null,
-      "losses": null,
-      "photo": "assets/img/roster/wp-luke-sherlock.jpg",
-      "player_page": null,
-      "weights_wrestled": [],
-      "matched": false
     },
     {
       "name": "Oleksandr `Sasha` Yurovskyi",
-      "wp_name": "Oleksandr \"Sasha\" Yurovskyi",
-      "display_weight": "138",
+      "wrestler_id": "35008221132",
+      "display_weight": "144",
+      "assigned_weight": "144",
       "grade": "So.",
       "wins": 21,
       "losses": 14,
       "photo": "assets/img/roster/oleksandr-sasha-yurovskyi.jpg",
       "player_page": "players/oleksandr-sasha-yurovskyi-221132.html",
       "weights_wrestled": [
-        "144",
-        "150",
-        "157"
+        "144"
       ],
       "matched": true
     },
     {
-      "name": "Trevor Sieben",
-      "wp_name": "Trevor Sieben",
-      "display_weight": "144",
-      "grade": "Jr.",
-      "wins": 14,
-      "losses": 11,
-      "photo": "assets/img/roster/trevor-sieben.jpg",
-      "player_page": "players/trevor-sieben-207132.html",
-      "weights_wrestled": [
-        "157",
-        "165",
-        "175"
-      ],
-      "matched": true
-    },
-    {
-      "name": "Joseph Augusta",
-      "wp_name": "Joseph Augusta",
+      "name": "Kellan McDonough",
+      "wrestler_id": "35497397132",
       "display_weight": "150",
-      "grade": "Sr.",
-      "wins": 9,
-      "losses": 12,
-      "photo": "assets/img/roster/joseph-augusta.jpg",
-      "player_page": "players/joseph-augusta-202132.html",
+      "assigned_weight": "150",
+      "grade": "Fr.",
+      "wins": 2,
+      "losses": 2,
+      "photo": null,
+      "player_page": "players/kellan-mcdonough-397132.html",
       "weights_wrestled": [
-        "165",
-        "175",
-        "190"
+        "150"
       ],
-      "matched": true
-    },
-    {
-      "name": "Chris Ahrens",
-      "wp_name": "Chris Ahrens",
-      "display_weight": "157",
-      "grade": null,
-      "wins": null,
-      "losses": null,
-      "photo": "assets/img/roster/wp-chris-ahrens.jpg",
-      "player_page": null,
-      "weights_wrestled": [],
       "matched": false
     },
     {
-      "name": "Lucas Estevez",
-      "wp_name": "Lucas Estevez",
-      "display_weight": "165",
-      "grade": null,
-      "wins": null,
-      "losses": null,
-      "photo": "assets/img/roster/wp-lucas-estevez.jpg",
-      "player_page": null,
-      "weights_wrestled": [],
+      "name": "Gabriel Evans",
+      "wrestler_id": "35217512132",
+      "display_weight": "157",
+      "assigned_weight": "157",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/gabriel-evans-512132.html",
+      "weights_wrestled": [
+        "157"
+      ],
       "matched": false
     },
     {
       "name": "Max Spitznas",
-      "wp_name": "Max Spitznas",
-      "display_weight": "175",
+      "wrestler_id": "35008208132",
+      "display_weight": "165",
+      "assigned_weight": "165",
       "grade": "Jr.",
       "wins": 27,
       "losses": 6,
       "photo": "assets/img/roster/max-spitznas.jpg",
       "player_page": "players/max-spitznas-208132.html",
       "weights_wrestled": [
-        "157",
-        "165",
+        "165"
+      ],
+      "matched": true
+    },
+    {
+      "name": "Joseph Augusta",
+      "wrestler_id": "35008202132",
+      "display_weight": "175",
+      "assigned_weight": "175",
+      "grade": "Sr.",
+      "wins": 9,
+      "losses": 12,
+      "photo": "assets/img/roster/joseph-augusta.jpg",
+      "player_page": "players/joseph-augusta-202132.html",
+      "weights_wrestled": [
         "175"
       ],
       "matched": true
     },
     {
-      "name": "Dominick Harris",
-      "wp_name": "Dominick Harris",
+      "name": "Jacobs Rodriguez",
+      "wrestler_id": "35008217132",
       "display_weight": "190",
-      "grade": null,
-      "wins": null,
-      "losses": null,
-      "photo": "assets/img/roster/wp-dominick-harris.jpg",
-      "player_page": null,
-      "weights_wrestled": [],
+      "assigned_weight": "190",
+      "grade": "So.",
+      "wins": 4,
+      "losses": 4,
+      "photo": null,
+      "player_page": "players/jacobs-rodriguez-217132.html",
+      "weights_wrestled": [
+        "190"
+      ],
       "matched": false
     },
     {
-      "name": "Collin McHugh",
-      "wp_name": "Collin McHugh",
-      "display_weight": "215",
-      "grade": "Jr.",
-      "wins": 22,
-      "losses": 14,
-      "photo": "assets/img/roster/collin-mchugh.jpg",
-      "player_page": "players/collin-mchugh-230132.html",
-      "weights_wrestled": [
-        "215",
-        "285"
-      ],
-      "matched": true
-    },
-    {
       "name": "William (Liam) McSorley",
-      "wp_name": "Liam McSorley",
+      "wrestler_id": "35008205132",
       "display_weight": "215",
+      "assigned_weight": "215",
       "grade": "Jr.",
       "wins": 15,
       "losses": 15,
       "photo": "assets/img/roster/william-liam-mcsorley.jpg",
       "player_page": "players/william-liam-mcsorley-205132.html",
       "weights_wrestled": [
-        "215",
-        "285"
+        "215"
       ],
       "matched": true
     },
     {
-      "name": "Erik Sullivan",
-      "wp_name": "Erik Sullivan",
+      "name": "Collin McHugh",
+      "wrestler_id": "35008230132",
       "display_weight": "285",
-      "grade": null,
-      "wins": null,
-      "losses": null,
-      "photo": "assets/img/roster/wp-erik-sullivan.jpg",
-      "player_page": null,
-      "weights_wrestled": [],
-      "matched": false
+      "assigned_weight": "285",
+      "grade": "Jr.",
+      "wins": 22,
+      "losses": 14,
+      "photo": "assets/img/roster/collin-mchugh.jpg",
+      "player_page": "players/collin-mchugh-230132.html",
+      "weights_wrestled": [
+        "285"
+      ],
+      "matched": true
     }
   ]
 }

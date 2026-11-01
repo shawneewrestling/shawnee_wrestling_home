@@ -32,6 +32,16 @@
   </header>
   <main>
     <h1 class="page-title">2025-2026 Season</h1>
+    <section class="team-photo-section" aria-label="2025-2026 Team">
+      <div class="team-photo-frame">
+        <img class="team-photo-img" src="assets/img/team-photo.jpg" alt="2025-2026 Team"
+             onerror="this.classList.add('is-missing'); this.removeAttribute('src');" />
+        <div class="team-photo-fallback">
+          <span class="tp-title">Team Photo</span>
+          <span class="tp-season">2025-2026 Team</span>
+        </div>
+      </div>
+    </section>
     <div class="meta-bar" id="homeMeta">Loading…</div>
     <div class="cards" id="homeCards"></div>
     <h2 class="page-title" style="font-size:1.25rem;margin-top:1.5rem">Team Roster</h2>
