@@ -493,7 +493,7 @@
 
     // Group into cards
     const byName = {};
-    const SKIP_AWARDS = new Set(['Season Win Leaders', 'Season 20+ Wins']);
+    const SKIP_AWARDS = new Set(['Season Win Leaders', 'Season 20+ Wins', 'Varsity Dual Record']);
     for (const a of awards) {
       const name = a.award_name || 'Award';
       if (SKIP_AWARDS.has(name)) continue;

@@ -275,6 +275,12 @@ tr:hover td { background: #eef5fb; }
 .chevron-card .body .row.leaderboard {
   grid-template-columns: 2.2rem minmax(0, 1fr) auto;
 }
+.chevron-card .body .row.state-place {
+  grid-template-columns: 2.3rem minmax(0, 1fr) auto;
+}
+.chevron-card .body .row.state-place span:nth-child(1) {
+  font-weight: 800;
+}
 .chevron-card .body .row span:nth-child(1) {
   font-weight: 700;
   color: #111;
@@ -316,6 +322,173 @@ tr:hover td { background: #eef5fb; }
   transform: none;
   font-size: 0;
 }
+
+/* Team acknowledgement cards — years only, no placeholder columns */
+.chevron-card.team .title {
+  font-size: 1.12rem;
+  line-height: 1.02;
+  padding: 0.85rem 0.35rem 0.65rem;
+}
+.chevron-card.team .body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 0.55rem 0.35rem;
+}
+.chevron-card.team .year-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.4rem 0.55rem;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  color: #111;
+}
+.chevron-card.team .decade-cols {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 4), minmax(0, 1fr));
+  gap: 0.35rem 0.65rem;
+  width: 100%;
+  align-items: start;
+  justify-items: center;
+}
+.chevron-card.team .decade-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.88rem;
+  font-variant-numeric: tabular-nums;
+  color: #111;
+}
+.chevron-card.team .decade-col .yr { line-height: 1.2; }
+.chevron-card.team .years-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  font-variant-numeric: tabular-nums;
+  color: #111;
+  padding: 0.35rem 0;
+}
+.chevron-card.team .team-note {
+  text-align: center;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: #222;
+  padding: 0.5rem 0.35rem;
+}
+
+/* Prestigious NCAA / State Champion featured cards */
+.chevron-card.prestige {
+  --cw: 270px;
+  --cv: 78px;
+  --gold: #c4a035;
+  --gold-soft: #e8d59a;
+}
+.chevron-card.prestige .title {
+  position: relative;
+  font-size: 1.35rem;
+  padding: 1.05rem 0.45rem 0.85rem;
+  border-bottom-color: var(--navy);
+}
+.chevron-card.prestige .title::after {
+  content: "";
+  display: block;
+  height: 3px;
+  margin: 0.55rem auto 0;
+  width: 42%;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  border-radius: 2px;
+}
+.chevron-card.prestige .title .sub {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  -webkit-text-stroke: 0;
+  margin-top: 0.4rem;
+  color: var(--navy);
+}
+.chevron-card.prestige .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.05rem;
+  padding: 1rem 0.7rem 0.55rem;
+  text-align: center;
+}
+.chevron-card.prestige .prestige-entry {
+  padding: 0.35rem 0.2rem 0.55rem;
+  border-bottom: 1px solid rgba(0, 32, 96, 0.12);
+}
+.chevron-card.prestige .prestige-entry:last-child {
+  border-bottom: none;
+  padding-bottom: 0.2rem;
+}
+.chevron-card.prestige .prestige-entry .year {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--navy);
+  letter-spacing: 0.04em;
+}
+.chevron-card.prestige .prestige-entry .name {
+  margin-top: 0.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+}
+.chevron-card.prestige.state-champ .prestige-entry .name {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.chevron-card.prestige .prestige-entry .place {
+  margin-top: 0.2rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: #111;
+}
+.chevron-card.prestige .prestige-entry .school {
+  margin-top: 0.15rem;
+  font-size: 0.78rem;
+  color: #444;
+  line-height: 1.25;
+}
+.chevron-card.prestige.state-champ {
+  --cw: 280px;
+}
+.chevron-card.prestige.state-champ .body {
+  min-height: 140px;
+}
+.chevron-card.prestige.state-champ .prestige-entry {
+  border-bottom: none;
+  padding: 0.75rem 0.25rem;
+}
+.chevron-card.prestige.state-champ .prestige-entry .name {
+  font-size: 1.35rem;
+  text-shadow: 0 0 0.5px var(--gold-soft);
+}
+.chevron-card.prestige.state-champ .prestige-entry .year {
+  margin-top: 0.55rem;
+  font-size: 1rem;
+}
+.chevron-card.prestige.state-champ .prestige-entry .school {
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+  color: var(--navy);
+  font-style: italic;
+}
+.chevron-card.prestige.ncaa .prestige-entry .name {
+  font-size: 1.12rem;
+}
+
 .award-filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
 .award-filters button {
   border: 1px solid var(--border);
@@ -404,3 +577,6 @@ tr:hover td { background: #eef5fb; }
   padding: 0;
   font-size: 0.85rem;
 }
+
+.conf-tag { font-style: normal; font-size: 0.7em; opacity: 0.7; margin-left: 0.35rem; text-transform: uppercase; letter-spacing: 0.04em; }
+

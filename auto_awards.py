@@ -3,11 +3,11 @@
 In-season auto-award detection from Trackwrestling season data.
 
 Rules (documented in docs/AUTO_AWARDS.md):
-  - Season 20+ Wins from getWrestlers W-L
-  - Season Win Leaders (top 3 by wins)
-  - Varsity Dual Record from scored duals
   - Tournament placers (district / region / state) when bout/placement feed exists
   - 100-win career milestones when career rollups available
+
+Note: Season 20+ Wins, Season Win Leaders, and Varsity Dual Record are intentionally
+not auto-generated or shown on the awards page.
 
 Returns award row dicts with auto_detected=True for merge into awards.json.
 """
@@ -31,65 +31,10 @@ def detect_season_awards(season_data: Dict[str, Any], placements: List[Dict] | N
     meta = season_data.get("metadata") or {}
     season_label = meta.get("season") or "unknown"
     roster = season_data.get("roster") or season_data.get("stats") or []
-    dual = season_data.get("dual_scores") or {}
     derived: List[Dict] = []
 
-    for w in roster:
-        wins = w.get("wins") or 0
-        losses = w.get("losses") or 0
-        if wins >= 20:
-            derived.append({
-                "id": f"auto-{season_label}-wins20-{w.get('wrestler_id')}",
-                "award_name": "Season 20+ Wins",
-                "award_category": "season_milestone",
-                "season": season_label,
-                "wrestler": w.get("name"),
-                "weight": w.get("weight"),
-                "placement": None,
-                "details": f"{wins}-{losses} in {season_label}",
-                "value": wins,
-                "source": "trackwrestling_getWrestlers",
-                "confidence": "high",
-                "auto_detected": True,
-            })
 
-    rec = dual.get("record") or meta.get("dual_record")
-    if rec:
-        derived.append({
-            "id": f"auto-{season_label}-dual-record",
-            "award_name": "Varsity Dual Record",
-            "award_category": "team",
-            "season": season_label,
-            "wrestler": None,
-            "weight": None,
-            "placement": None,
-            "details": f"{season_label} dual record {rec} (scored duals from TW Schedule UI)",
-            "value": None,
-            "source": "trackwrestling_schedule_scores",
-            "confidence": "high",
-            "auto_detected": True,
-        })
 
-    ranked = sorted(roster, key=lambda w: (-(w.get("wins") or 0), (w.get("losses") or 0)))
-    for i, w in enumerate(ranked[:3], 1):
-        wins = w.get("wins") or 0
-        losses = w.get("losses") or 0
-        if wins <= 0:
-            continue
-        derived.append({
-            "id": f"auto-{season_label}-topline-{i}-{w.get('wrestler_id')}",
-            "award_name": "Season Win Leaders",
-            "award_category": "season_milestone",
-            "season": season_label,
-            "wrestler": w.get("name"),
-            "weight": w.get("weight"),
-            "placement": str(i),
-            "details": f"{wins}-{losses}",
-            "value": wins,
-            "source": "trackwrestling_getWrestlers",
-            "confidence": "high",
-            "auto_detected": True,
-        })
 
     # Tournament placements — only when feed present
     for p in placements or []:

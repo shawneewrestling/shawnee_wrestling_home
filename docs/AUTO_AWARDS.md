@@ -1,5 +1,7 @@
 # Auto-award detection (in-season)
 
+> Removed from awards page and auto-generation: **Season 20+ Wins**, **Season Win Leaders**, and **Varsity Dual Record**.
+
 During the season the `update_site_data.py` pipeline runs `auto_awards.detect_season_awards()`
 against the latest Trackwrestling scrape and merges rows into `data/awards.json` with
 `auto_detected: true`. Historical seed rows (Jeff-confirmed) are never overwritten.
@@ -8,9 +10,6 @@ against the latest Trackwrestling scrape and merges rows into `data/awards.json`
 
 | Trigger | Source | Award card | Notes |
 |--------|--------|------------|-------|
-| Wrestler season wins ≥ 20 | `getWrestlers` W-L | **Season 20+ Wins** | One row per wrestler per season |
-| Top 3 by season wins | `getWrestlers` | **Season Win Leaders** | Ties broken by fewer losses |
-| Scored dual W-L | Schedule UI Event-label scores | **Varsity Dual Record** | Team card; tris/quads/NJSIAA excluded when no dual score |
 | District placement 1st | Tournament placement feed | **District Champions** | Decade-grouped at render time |
 | District placement 2–6 | Tournament placement feed | **District Place Winner** | Until feed exists, Jeff can paste a list |
 | Region placement 1st / 2–6 | Tournament placement feed | **Region Champions** / **Region Place Winner** | |
