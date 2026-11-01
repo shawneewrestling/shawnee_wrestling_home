@@ -8,6 +8,7 @@
   const STANDINGS_URL = 'data/standings.json';
   const COACH_HISTORY_URL = 'data/coaching_history.json';
   const HOME_ROSTER_URL = 'data/home_roster.json';
+  const CAREER_STATS_URL = 'data/career_stats.json';
   const SEASONS_INDEX_URL = 'data/seasons/index.json';
   const PLACEHOLDER_PHOTO = 'assets/img/wrestler-silhouette.svg';
 
@@ -191,6 +192,11 @@
   const page = document.body && document.querySelector('.nav a.active')?.textContent?.trim();
 
   try {
+    if (page === 'Career Stats') {
+      const [careerDoc] = await Promise.all([loadJson(CAREER_STATS_URL)]);
+      renderCareerStats(careerDoc);
+      return;
+    }
     if (page === 'Awards') {
       const awardsData = await loadJson(AWARDS_URL);
       renderAwards(awardsData);
@@ -1155,6 +1161,141 @@
       if (w.name) map['name:' + String(w.name).trim().toLowerCase()] = href;
     }
     return map;
+  }
+
+
+  function dashNum(v) {
+    return (v === null || v === undefined || v === '') ? '—' : String(v);
+  }
+
+  function fmtPctCareer(v) {
+    if (v === null || v === undefined || v === '') return '—';
+    const n = Number(v);
+    if (!Number.isFinite(n)) return '—';
+    return n.toFixed(1) + '%';
+  }
+
+  function renderCareerStats(doc) {
+    const tbody = document.querySelector('#careerStatsTable tbody');
+    if (!tbody) return;
+    const all = (doc && doc.wrestlers) || [];
+    let sortKey = 'win';
+    let sortDir = -1; // desc by default for wins
+    let query = '';
+
+    const cols = [
+      'name','seasons_label','grad_year','win','loss','win_pct',
+      'w_fall','w_tech','w_maj','w_dec','w_sv','w_tb','w_ff','w_inj','w_dq',
+      'l_fall','l_tech','l_maj','l_dec','l_sv','l_tb','l_ff','l_inj','l_dq',
+      'team_points','fall_pct','bonus_pct'
+    ];
+
+    function cmp(a, b, key) {
+      let av = a[key], bv = b[key];
+      if (key === 'name' || key === 'seasons_label') {
+        av = (av || '').toString().toLowerCase();
+        bv = (bv || '').toString().toLowerCase();
+        if (av < bv) return -1;
+        if (av > bv) return 1;
+        return 0;
+      }
+      // nulls sort last regardless of direction
+      const aNull = av === null || av === undefined || av === '';
+      const bNull = bv === null || bv === undefined || bv === '';
+      if (aNull && bNull) return 0;
+      if (aNull) return 1;
+      if (bNull) return -1;
+      const an = Number(av), bn = Number(bv);
+      if (Number.isFinite(an) && Number.isFinite(bn)) return an - bn;
+      const as = String(av), bs = String(bv);
+      return as < bs ? -1 : as > bs ? 1 : 0;
+    }
+
+    function filtered() {
+      const q = query.trim().toLowerCase();
+      let rows = all;
+      if (q) {
+        rows = rows.filter((w) => String(w.name || '').toLowerCase().includes(q));
+      }
+      rows = rows.slice().sort((a, b) => {
+        const c = cmp(a, b, sortKey) * sortDir;
+        if (c) return c;
+        return cmp(a, b, 'name');
+      });
+      return rows;
+    }
+
+    function paint() {
+      const rows = filtered();
+      const countEl = document.getElementById('careerCount');
+      if (countEl) {
+        countEl.textContent = rows.length === all.length
+          ? `${rows.length} wrestlers`
+          : `${rows.length} of ${all.length}`;
+      }
+      tbody.innerHTML = rows.map((w) => {
+        const href = w.player_page || '';
+        const nameCell = href
+          ? `<a href="${esc(href)}">${esc(w.name)}</a>`
+          : esc(w.name);
+        return `<tr>
+          <td class="name">${nameCell}</td>
+          <td>${esc(w.seasons_label || '—')}</td>
+          <td class="num">${dashNum(w.grad_year)}</td>
+          <td class="num">${dashNum(w.win)}</td>
+          <td class="num">${dashNum(w.loss)}</td>
+          <td class="num">${fmtPctCareer(w.win_pct)}</td>
+          <td class="num">${dashNum(w.w_fall)}</td>
+          <td class="num">${dashNum(w.w_tech)}</td>
+          <td class="num">${dashNum(w.w_maj)}</td>
+          <td class="num">${dashNum(w.w_dec)}</td>
+          <td class="num">${dashNum(w.w_sv)}</td>
+          <td class="num">${dashNum(w.w_tb)}</td>
+          <td class="num">${dashNum(w.w_ff)}</td>
+          <td class="num">${dashNum(w.w_inj)}</td>
+          <td class="num">${dashNum(w.w_dq)}</td>
+          <td class="num">${dashNum(w.l_fall)}</td>
+          <td class="num">${dashNum(w.l_tech)}</td>
+          <td class="num">${dashNum(w.l_maj)}</td>
+          <td class="num">${dashNum(w.l_dec)}</td>
+          <td class="num">${dashNum(w.l_sv)}</td>
+          <td class="num">${dashNum(w.l_tb)}</td>
+          <td class="num">${dashNum(w.l_ff)}</td>
+          <td class="num">${dashNum(w.l_inj)}</td>
+          <td class="num">${dashNum(w.l_dq)}</td>
+          <td class="num">${dashNum(w.team_points)}</td>
+          <td class="num">${fmtPctCareer(w.fall_pct)}</td>
+          <td class="num">${fmtPctCareer(w.bonus_pct)}</td>
+        </tr>`;
+      }).join('');
+
+      document.querySelectorAll('#careerStatsTable thead th.sortable').forEach((th) => {
+        th.classList.toggle('sorted-asc', th.dataset.sort === sortKey && sortDir === 1);
+        th.classList.toggle('sorted-desc', th.dataset.sort === sortKey && sortDir === -1);
+      });
+    }
+
+    document.querySelectorAll('#careerStatsTable thead th.sortable').forEach((th) => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (!key) return;
+        if (sortKey === key) sortDir = -sortDir;
+        else {
+          sortKey = key;
+          sortDir = (key === 'name' || key === 'seasons_label') ? 1 : -1;
+        }
+        paint();
+      });
+    });
+
+    const search = document.getElementById('careerSearch');
+    if (search) {
+      search.addEventListener('input', () => {
+        query = search.value || '';
+        paint();
+      });
+    }
+    paint();
   }
 
   function renderStats(data, index) {

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Career Stats · Shawnee Renegades Wrestling</title>
+  <link rel="stylesheet" href="styles.css?v=c7a55a1" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <div class="brand">
+        <div class="brand-mark"><img src="assets/img/shawnee-s.png?v=c7a55a1" alt="Shawnee" width="56" height="56" /></div>
+        <div>
+          <h1>Shawnee Renegades</h1>
+          <div class="tag">Wrestling · 2025-2026 Season</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="">Home</a>
+        <a href="roster.html" class="">Roster</a>
+        <a href="full-roster.html" class="">Full Roster</a>
+        <a href="schedule.html" class="">Schedule &amp; Results</a>
+        <a href="standings.html" class="">Standings</a>
+        <a href="stats.html" class="">Stats</a>
+        <a href="career-stats.html" class="active">Career Stats</a>
+        <a href="coach-stats.html" class="">Coach Stats</a>
+        <a href="awards.html" class="">Awards</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 class="page-title">Career Stats</h1>
+    <p class="page-sub">Career totals by wrestler. Click a name for season-by-season detail.</p>
+    <div class="season-toolbar career-toolbar" id="careerToolbar">
+      <label for="careerSearch">Search</label>
+      <input id="careerSearch" type="search" placeholder="Name…" aria-label="Search wrestlers" />
+      <span class="career-count" id="careerCount"></span>
+    </div>
+    <div class="table-wrap career-stats-wrap">
+      <table id="careerStatsTable" class="career-stats-table">
+        <thead>
+          <tr>
+            <th data-sort="name" class="sortable">Name</th>
+            <th data-sort="seasons_label" class="sortable">Seasons</th>
+            <th data-sort="grad_year" class="sortable num">Grad</th>
+            <th data-sort="win" class="sortable num">W</th>
+            <th data-sort="loss" class="sortable num">L</th>
+            <th data-sort="win_pct" class="sortable num">Win%</th>
+            <th data-sort="w_fall" class="sortable num">Fall</th>
+            <th data-sort="w_tech" class="sortable num">TF</th>
+            <th data-sort="w_maj" class="sortable num">Maj</th>
+            <th data-sort="w_dec" class="sortable num">Dec</th>
+            <th data-sort="w_sv" class="sortable num">SV</th>
+            <th data-sort="w_tb" class="sortable num">TB</th>
+            <th data-sort="w_ff" class="sortable num">FF</th>
+            <th data-sort="w_inj" class="sortable num">INJ</th>
+            <th data-sort="w_dq" class="sortable num">DQ</th>
+            <th data-sort="l_fall" class="sortable num">L-Fall</th>
+            <th data-sort="l_tech" class="sortable num">L-TF</th>
+            <th data-sort="l_maj" class="sortable num">L-Maj</th>
+            <th data-sort="l_dec" class="sortable num">L-Dec</th>
+            <th data-sort="l_sv" class="sortable num">L-SV</th>
+            <th data-sort="l_tb" class="sortable num">L-TB</th>
+            <th data-sort="l_ff" class="sortable num">L-FF</th>
+            <th data-sort="l_inj" class="sortable num">L-INJ</th>
+            <th data-sort="l_dq" class="sortable num">L-DQ</th>
+            <th data-sort="team_points" class="sortable num">Team Pts</th>
+            <th data-sort="fall_pct" class="sortable num">Fall%</th>
+            <th data-sort="bonus_pct" class="sortable num">Bonus%</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <footer class="site-footer">
+    Shawnee High School Wrestling · 2025-2026 Season
+  </footer>
+  <script src="app.js?v=c7a55a1"></script>
+</body>
+</html>

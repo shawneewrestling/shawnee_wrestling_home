@@ -895,3 +895,33 @@ tr:hover td { background: #eef5fb; }
   padding-left: .35rem;
   padding-right: .35rem;
 }
+
+/* Career Stats */
+.career-toolbar { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; margin: 0 0 1rem; }
+.career-toolbar input[type="search"] {
+  min-width: 14rem; padding: .45rem .7rem; border: 1px solid var(--border, #ccc);
+  border-radius: 6px; background: var(--card, #fff); color: inherit;
+}
+.career-count { opacity: .7; font-size: .9rem; }
+.career-stats-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.career-stats-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.career-stats-table th, .career-stats-table td {
+  padding: .4rem .45rem; border-bottom: 1px solid var(--border, #e2e2e2); white-space: nowrap;
+}
+.career-stats-table th.sortable { cursor: pointer; user-select: none; }
+.career-stats-table th.sortable:hover { color: var(--accent, #8b1e1e); }
+.career-stats-table th.sorted-asc::after { content: " ▲"; font-size: .7em; }
+.career-stats-table th.sorted-desc::after { content: " ▼"; font-size: .7em; }
+.career-stats-table td.num, .career-stats-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.career-stats-table td.name { font-weight: 600; white-space: normal; min-width: 9rem; }
+.career-stats-table tbody tr:hover { background: rgba(139, 30, 30, 0.04); }
+
+/* Player page season-by-season */
+.player-season-wrap { margin: 1rem 0 1.5rem; }
+.player-season-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.player-season-table th, .player-season-table td {
+  padding: .45rem .55rem; border-bottom: 1px solid var(--border, #e2e2e2);
+}
+.player-season-table td.num, .player-season-table th.num {
+  text-align: right; font-variant-numeric: tabular-nums;
+}

@@ -83,6 +83,72 @@ def _season_weights_block(by_season: Dict[str, List[str]]) -> str:
     )
 
 
+def _dash(v: Any) -> str:
+    return "—" if v is None else esc(v)
+
+
+def _season_title(sid: str) -> str:
+    m = re.match(r"^(\d{4})-(\d{2})$", str(sid or ""))
+    if m:
+        y1 = int(m.group(1))
+        return f"{y1}-{y1 + 1} Season"
+    return str(sid or "")
+
+
+def _season_stats_block(season_rows: List[Dict[str, Any]]) -> str:
+    """Season-by-season W-L table for the player page (career breakdown lives here)."""
+    rows = [r for r in (season_rows or []) if r]
+    if not rows:
+        return ""
+
+    def sk(r: Dict[str, Any]) -> int:
+        m = re.match(r"^(\d{4})", str(r.get("season") or ""))
+        return int(m.group(1)) if m else 0
+
+    rows = sorted(rows, key=sk, reverse=True)
+    body: List[str] = []
+    for r in rows:
+        has_bd = bool(r.get("has_breakdown"))
+
+        def cell(key: str) -> str:
+            if key in ("win", "loss"):
+                return _dash(r.get(key))
+            if r.get(key) is not None:
+                return esc(r.get(key))
+            if not has_bd:
+                return "—"
+            return "—"
+
+        tp = r.get("team_points")
+        tp_cell = "—" if tp is None else esc(tp)
+        body.append(
+            "<tr>"
+            f"<td>{esc(_season_title(r.get('season')))}</td>"
+            f'<td class="num">{cell("win")}</td>'
+            f'<td class="num">{cell("loss")}</td>'
+            f'<td class="num">{cell("w_fall")}</td>'
+            f'<td class="num">{cell("w_tech")}</td>'
+            f'<td class="num">{cell("w_maj")}</td>'
+            f'<td class="num">{cell("w_dec")}</td>'
+            f'<td class="num">{cell("w_ff")}</td>'
+            f'<td class="num">{tp_cell}</td>'
+            "</tr>"
+        )
+    return (
+        '<h2 class="section-title">Season-by-season</h2>\n'
+        '    <div class="table-wrap player-season-wrap">\n'
+        '      <table class="player-season-table">\n'
+        '        <thead><tr>'
+        '<th>Season</th><th class="num">W</th><th class="num">L</th>'
+        '<th class="num">Fall</th><th class="num">TF</th><th class="num">Maj</th>'
+        '<th class="num">Dec</th><th class="num">FF</th><th class="num">Team Pts</th>'
+        '</tr></thead>\n'
+        '        <tbody>' + "".join(body) + '</tbody>\n'
+        '      </table>\n'
+        '    </div>'
+    )
+
+
 def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
     wid = str(w.get("wrestler_id") or "")
     name = w.get("name") or "Wrestler"
@@ -108,6 +174,11 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
         career = ctx["career"].get((name or "").strip().lower()) or {}
     if not career:
         career = ctx["career"].get(name_key(name)) or {}
+
+    season_rows = []
+    cs = ctx.get("career_stats_by") or {}
+    cs_row = cs.get(name_key(name)) or cs.get((name or "").strip().lower()) or {}
+    season_rows = cs_row.get("season_rows") or []
 
     weights_current = [str(x) for x in (w.get("weights_wrestled") or []) if x]
     weights_all = [str(x) for x in (w.get("career_weights") or []) if x]
@@ -195,20 +266,22 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
             '<a href="../full-roster.html">Full Roster</a></p>'
         )
 
+    season_section = _season_stats_block(season_rows)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{esc(name)} · Shawnee Renegades Wrestling</title>
-  <link rel="stylesheet" href="../styles.css?v=d1e64c8" />
-  <link rel="stylesheet" href="../roster.css?v=d1e64c8" />
+  <link rel="stylesheet" href="../styles.css?v=c7a55a1" />
+  <link rel="stylesheet" href="../roster.css?v=c7a55a1" />
 </head>
 <body>
   <header class="site-header">
     <div class="inner">
       <div class="brand">
-        <div class="brand-mark"><img src="../assets/img/shawnee-s.png?v=d1e64c8" alt="Shawnee" width="56" height="56" /></div>
+        <div class="brand-mark"><img src="../assets/img/shawnee-s.png?v=c7a55a1" alt="Shawnee" width="56" height="56" /></div>
         <div>
           <h1>Shawnee Renegades</h1>
           <div class="tag">Wrestling · 2025-2026 Season</div>
@@ -221,6 +294,7 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
         <a href="../schedule.html">Schedule &amp; Results</a>
         <a href="../standings.html">Standings</a>
         <a href="../stats.html">Stats</a>
+        <a href="../career-stats.html">Career Stats</a>
         <a href="../coach-stats.html">Coach Stats</a>
         <a href="../awards.html">Awards</a>
       </nav>
@@ -244,6 +318,7 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
     </div>
 
     {weights_section}
+    {season_section}
     {recog_section}
   </main>
   <footer class="site-footer">
@@ -288,6 +363,7 @@ def build_players(
     career: Optional[Dict[str, Any]] = None,
     weights_history: Optional[Dict[str, Any]] = None,
     career_baseline: Optional[Dict[str, Any]] = None,
+    career_stats: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     roster = wrestling_data.get("roster") or []
     season = (wrestling_data.get("metadata") or {}).get("season") or "2025-2026"
@@ -362,11 +438,21 @@ def build_players(
         PLAYERS_DIR.mkdir(parents=True, exist_ok=True)
 
     index: List[Dict[str, Any]] = []
+    career_stats_by: Dict[str, Any] = {}
+    for row in (career_stats or {}).get("wrestlers") or []:
+        if not row.get("name"):
+            continue
+        career_stats_by[name_key(row["name"])] = row
+        career_stats_by[str(row["name"]).strip().lower()] = row
+        if row.get("name_key"):
+            career_stats_by[row["name_key"]] = row
+
     ctx = {
         "assigned": assigned,
         "prestige": prest,
         "prestige_by_name": prest_by_name,
         "career": career_by,
+        "career_stats_by": career_stats_by,
     }
 
     current_keys = set()
@@ -485,6 +571,99 @@ def build_players(
         )
         alumni_count += 1
 
+    # Also emit alumni pages for career_stats / weights_history names not yet covered
+    # (1-season alumni often absent from career_baseline.json)
+    existing_keys = set(current_keys)
+    for w in index:
+        existing_keys.add(name_key(w.get("name") or ""))
+
+    extra_names: Dict[str, str] = {}
+    for key, row in career_stats_by.items():
+        # career_stats_by has both name_key and lower-name entries; prefer rows with season_rows
+        if not isinstance(row, dict) or not row.get("name"):
+            continue
+        nk = name_key(row["name"])
+        if not nk or nk in existing_keys:
+            continue
+        if row.get("season_rows") or (row.get("win") or 0) or (row.get("loss") or 0):
+            extra_names[nk] = row["name"]
+    for key, v in wh_by_key.items():
+        nm = (v.get("name") if isinstance(v, dict) else None) or ""
+        nk = name_key(nm)
+        if nk and nk not in existing_keys:
+            extra_names.setdefault(nk, nm)
+
+    for nk, name in sorted(extra_names.items(), key=lambda x: x[1].lower()):
+        if nk in existing_keys:
+            continue
+        wh_row = wh_by_key.get(nk) or {}
+        all_wts = list(wh_row.get("all_weights") or [])
+        by_season = dict(wh_row.get("by_season") or {})
+        cs_row = career_stats_by.get(nk) or {}
+        c = career_by.get(nk) or career_by.get(name.lower()) or {}
+        seasons = int(
+            c.get("seasons_on_record")
+            or cs_row.get("seasons_count")
+            or len(cs_row.get("seasons") or [])
+            or len(by_season)
+            or 0
+        )
+        if seasons > 1:
+            c = dict(c)
+            c["show_career"] = True
+        if c.get("career_wins") is None and cs_row.get("win") is not None:
+            c = dict(c)
+            c["career_wins"] = cs_row.get("win")
+            c["career_losses"] = cs_row.get("loss")
+            c["seasons_on_record"] = seasons
+            if seasons > 1:
+                c["show_career"] = True
+        alum_id = "alum" + hashlib.sha1(nk.encode()).hexdigest()[:8]
+        s = slug(name, alum_id)
+        w_page = {
+            "wrestler_id": alum_id,
+            "name": name,
+            "grade": "Alumni",
+            "weight": None,
+            "wins": 0,
+            "losses": 0,
+            "photo": None,
+            "alumni": True,
+            "status": "alumni",
+            "career_weights": all_wts,
+            "weights_by_season": by_season,
+        }
+        (PLAYERS_DIR / f"{s}.html").write_text(player_html(w_page, ctx))
+        p = prest_by_name.get(nk) or {}
+        index.append(
+            {
+                "wrestler_id": alum_id,
+                "name": name,
+                "grade": "Alumni",
+                "roster_weight": None,
+                "assigned_weight": None,
+                "weights_wrestled": [],
+                "career_weights": all_wts,
+                "weights_by_season": by_season,
+                "wins": 0,
+                "losses": 0,
+                "photo": None,
+                "player_page": f"players/{s}.html",
+                "prestige_points": p.get("prestige_points") or 0,
+                "has_prestige": bool(p.get("has_prestige")),
+                "show_career": bool(c.get("show_career")) or seasons > 1,
+                "career_wins": c.get("career_wins"),
+                "career_losses": c.get("career_losses"),
+                "seasons_on_record": seasons,
+                "status": "alumni",
+                "search_text": " ".join(
+                    filter(None, [name, "alumni", " ".join(all_wts)])
+                ).lower(),
+            }
+        )
+        alumni_count += 1
+        existing_keys.add(nk)
+
     index_doc = {
         "schema_version": 2,
         "season": season,
@@ -523,7 +702,11 @@ def main():
     if bp.exists():
         baseline = json.loads(bp.read_text())
     weights_history = _load_weights_history()
-    doc = build_players(wd, awards, assignments, career, weights_history, baseline)
+    career_stats = {}
+    csp = ROOT / "data" / "career_stats.json"
+    if csp.exists():
+        career_stats = json.loads(csp.read_text())
+    doc = build_players(wd, awards, assignments, career, weights_history, baseline, career_stats)
     print(
         f"Wrote {doc['count']} player pages "
         f"({doc.get('current_count')} current, {doc.get('alumni_count')} alumni) → {PLAYERS_DIR}"
