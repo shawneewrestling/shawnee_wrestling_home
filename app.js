@@ -102,7 +102,8 @@
       el.textContent = `Wrestling · ${label}`;
     });
     document.querySelectorAll('.site-footer').forEach((el) => {
-      el.textContent = `Shawnee High School Wrestling · ${label}`;
+      // Keep stealth seeding link (same pattern as history.js)
+      el.innerHTML = `Shawnee High School <a class="footer-stealth" href="/seeding-af11147f5304/" rel="nofollow">Wrestling</a> · ${esc(label)}`;
     });
     const sub = document.querySelector('main .page-sub');
     if (!sub) return;
