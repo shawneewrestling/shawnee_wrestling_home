@@ -2,8 +2,9 @@
 """Enrich Shawnee schedule: split multi-team meets into dual rows, attach logos.
 
 Trackwrestling remains the sole schedule source. This module only reshapes
-parsed TW events + EventMatches bout grids (via tournament_results) and looks
-up logos from data/logos.json / assets/logos.
+parsed TW events + EventMatches bout grids / pipe-format dual .txt captures
+(via tournament_results.index_captures) and looks up logos from data/logos.json
+/ assets/logos. Prefer merge_dual_captures.py for one-off dual merges.
 """
 from __future__ import annotations
 

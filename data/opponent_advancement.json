@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated": "2026-11-01T14:14:31",
+  "generated": "2026-11-01T19:40:01Z",
   "source": {
     "name": "NJ.com High School Sports wrestling brackets",
     "base": "https://highschoolsports.nj.com",
@@ -443,7 +443,34 @@
         215,
         285
       ]
-    }
+    },
+    "manual_bracket_patches": [
+      {
+        "date": "2026-11-01",
+        "files": [
+          "D6_120.txt",
+          "D7_144.txt",
+          "D7_150.txt"
+        ],
+        "note": "2023-24 district placers 1-4 only from tw_capture/brackets_2023-24",
+        "added": [
+          "ath_giovannicassilli_cedargrove"
+        ],
+        "updated": [
+          "ath_owengarriques_phillipsburg",
+          "ath_ryderstambach_morrisknolls",
+          "ath_josephcastro_lenapevalley",
+          "ath_yashpullamvalappil_randolph",
+          "ath_rafatalkardali_waynevalley",
+          "ath_stephenhayek_mountolive",
+          "ath_suhaibabuawad_boonton",
+          "ath_andrewmucci_morrishills",
+          "ath_tannerperez_mountolive",
+          "ath_adamsuzay_passaictech",
+          "ath_phoenixlacorte_boonton"
+        ]
+      }
+    ]
   },
   "link_stats": {
     "season_person_rows": 14414,
@@ -74160,6 +74187,20 @@
               "event": "2024 NJSIAA Region 2 - 150",
               "detail": "Third Place winner",
               "grade": "Jr"
+            },
+            {
+              "code": "D1",
+              "level": "district",
+              "weight": 150,
+              "event": "2024 NJSIAA District 7 - 150",
+              "detail": "Final Round winner",
+              "grade": null,
+              "name": "Tanner Perez",
+              "school": "Mount Olive",
+              "url": null,
+              "event_number": 7,
+              "source_capture": "brackets_2023-24/D7_150.txt",
+              "tw_event_id": "7935624132"
             }
           ]
         },
@@ -96581,6 +96622,20 @@
               "event": "2024 NJSIAA Region 2 - 144",
               "detail": "Fifth Place winner",
               "grade": "Sr"
+            },
+            {
+              "code": "D1",
+              "level": "district",
+              "weight": 144,
+              "event": "2024 NJSIAA District 7 - 144",
+              "detail": "Final Round winner",
+              "grade": null,
+              "name": "Rafat Al-Kardali",
+              "school": "Wayne Valley",
+              "url": null,
+              "event_number": 7,
+              "source_capture": "brackets_2023-24/D7_144.txt",
+              "tw_event_id": "7935624132"
             }
           ]
         }
@@ -167168,6 +167223,20 @@
               "event": "2024 NJSIAA Region 2 - 150",
               "detail": "Fifth Place loser",
               "grade": "Jr"
+            },
+            {
+              "code": "D2",
+              "level": "district",
+              "weight": 150,
+              "event": "2024 NJSIAA District 7 - 150",
+              "detail": "Final Round loser",
+              "grade": null,
+              "name": "Adam Suzay",
+              "school": "Wayne Valley",
+              "url": null,
+              "event_number": 7,
+              "source_capture": "brackets_2023-24/D7_150.txt",
+              "tw_event_id": "7935624132"
             }
           ]
         },
@@ -235551,6 +235620,20 @@
               "event": "2024 NJSIAA Region 2 - 144",
               "detail": "region first-round exit",
               "grade": "So"
+            },
+            {
+              "code": "D2",
+              "level": "district",
+              "weight": 144,
+              "event": "2024 NJSIAA District 7 - 144",
+              "detail": "Final Round loser",
+              "grade": null,
+              "name": "Stephen Hayek",
+              "school": "Mount Olive",
+              "url": null,
+              "event_number": 7,
+              "source_capture": "brackets_2023-24/D7_144.txt",
+              "tw_event_id": "7935624132"
             }
           ]
         },
@@ -292714,6 +292797,20 @@
               "event": "2024 NJSIAA Region 2 - 120",
               "detail": "Final Round loser",
               "grade": "Fr"
+            },
+            {
+              "code": "D1",
+              "level": "district",
+              "weight": 120,
+              "event": "2024 NJSIAA District 6 - 120",
+              "detail": "Final Round winner",
+              "grade": null,
+              "name": "Owen Garriques",
+              "school": "Phillipsburg",
+              "url": null,
+              "event_number": 6,
+              "source_capture": "brackets_2023-24/D6_120.txt",
+              "tw_event_id": "7935654132"
             }
           ]
         },
@@ -301789,6 +301886,20 @@
               "event": "2024 NJSIAA Region 2 - 120",
               "detail": "Fifth Place winner",
               "grade": "Jr"
+            },
+            {
+              "code": "D2",
+              "level": "district",
+              "weight": 120,
+              "event": "2024 NJSIAA District 6 - 120",
+              "detail": "Final Round loser",
+              "grade": null,
+              "name": "Ryder Stambach",
+              "school": "Morris Knolls",
+              "url": null,
+              "event_number": 6,
+              "source_capture": "brackets_2023-24/D6_120.txt",
+              "tw_event_id": "7935654132"
             }
           ]
         },
@@ -301913,6 +302024,20 @@
               "event": "2024 NJSIAA Region 2 - 120",
               "detail": "region wrestleback",
               "grade": "Fr"
+            },
+            {
+              "code": "D3",
+              "level": "district",
+              "weight": 120,
+              "event": "2024 NJSIAA District 6 - 120",
+              "detail": "Third Place winner",
+              "grade": null,
+              "name": "Joseph Castro",
+              "school": "Lenape Valley",
+              "url": null,
+              "event_number": 6,
+              "source_capture": "brackets_2023-24/D6_120.txt",
+              "tw_event_id": "7935654132"
             }
           ]
         }
@@ -303802,6 +303927,20 @@
               "event": "2024 NJSIAA Region 2 - 144",
               "detail": "region first-round exit",
               "grade": "Jr"
+            },
+            {
+              "code": "D3",
+              "level": "district",
+              "weight": 144,
+              "event": "2024 NJSIAA District 7 - 144",
+              "detail": "Third Place winner",
+              "grade": null,
+              "name": "Suhaib Abuawad",
+              "school": "Boonton",
+              "url": null,
+              "event_number": 7,
+              "source_capture": "brackets_2023-24/D7_144.txt",
+              "tw_event_id": "7935624132"
             }
           ]
         },
@@ -303940,6 +304079,20 @@
               "event": "2024 NJSIAA Region 2 - 150",
               "detail": "region first-round exit",
               "grade": "So"
+            },
+            {
+              "code": "D3",
+              "level": "district",
+              "weight": 150,
+              "event": "2024 NJSIAA District 7 - 150",
+              "detail": "Third Place winner",
+              "grade": null,
+              "name": "Phoenix LaCorte",
+              "school": "Boonton",
+              "url": null,
+              "event_number": 7,
+              "source_capture": "brackets_2023-24/D7_150.txt",
+              "tw_event_id": "7935624132"
             }
           ]
         },
@@ -489159,6 +489312,36 @@
               "grade": "Sr"
             }
           ]
+        },
+        "2023-24": {
+          "code": "D4",
+          "level": "district",
+          "weight": 144,
+          "event": "2024 NJSIAA District 7 - 144",
+          "detail": "Third Place loser",
+          "grade": null,
+          "name": "Andrew Mucci",
+          "school": "Morris Hills",
+          "url": null,
+          "event_number": 7,
+          "source_capture": "brackets_2023-24/D7_144.txt",
+          "tw_event_id": "7935624132",
+          "entries": [
+            {
+              "code": "D4",
+              "level": "district",
+              "weight": 144,
+              "event": "2024 NJSIAA District 7 - 144",
+              "detail": "Third Place loser",
+              "grade": null,
+              "name": "Andrew Mucci",
+              "school": "Morris Hills",
+              "url": null,
+              "event_number": 7,
+              "source_capture": "brackets_2023-24/D7_144.txt",
+              "tw_event_id": "7935624132"
+            }
+          ]
         }
       },
       "career_best": "R5place",
@@ -490849,6 +491032,36 @@
               "event": "2025 NJSIAA District 9 - 120",
               "detail": "Third Place loser",
               "grade": "Sr"
+            }
+          ]
+        },
+        "2023-24": {
+          "code": "D4",
+          "level": "district",
+          "weight": 120,
+          "event": "2024 NJSIAA District 6 - 120",
+          "detail": "Third Place loser",
+          "grade": null,
+          "name": "Yash Pullamvalappil",
+          "school": "Randolph",
+          "url": null,
+          "event_number": 6,
+          "source_capture": "brackets_2023-24/D6_120.txt",
+          "tw_event_id": "7935654132",
+          "entries": [
+            {
+              "code": "D4",
+              "level": "district",
+              "weight": 120,
+              "event": "2024 NJSIAA District 6 - 120",
+              "detail": "Third Place loser",
+              "grade": null,
+              "name": "Yash Pullamvalappil",
+              "school": "Randolph",
+              "url": null,
+              "event_number": 6,
+              "source_capture": "brackets_2023-24/D6_120.txt",
+              "tw_event_id": "7935654132"
             }
           ]
         }
@@ -604647,6 +604860,53 @@
       "career_best_season": "2025-26",
       "career_best_rank": 10,
       "career_best_prestige_points": 10
+    },
+    "ath_giovannicassilli_cedargrove": {
+      "athlete_id": "ath_giovannicassilli_cedargrove",
+      "name": "Giovanni Cassilli",
+      "school": "Cedar Grove",
+      "name_key": "giovannicassilli",
+      "school_key": "cedar grove",
+      "names": [
+        "Giovanni Cassilli"
+      ],
+      "schools": [
+        "Cedar Grove"
+      ],
+      "match_reason": "bracket_capture_2023-24",
+      "confidence": "high",
+      "seasons": {
+        "2023-24": {
+          "code": "D4",
+          "level": "district",
+          "weight": 150,
+          "event": "2024 NJSIAA District 7 - 150",
+          "detail": "Third Place loser",
+          "grade": null,
+          "name": "Giovanni Cassilli",
+          "school": "Cedar Grove",
+          "url": null,
+          "event_number": 7,
+          "source_capture": "brackets_2023-24/D7_150.txt",
+          "tw_event_id": "7935624132",
+          "entries": [
+            {
+              "code": "D4",
+              "level": "district",
+              "weight": 150,
+              "event": "2024 NJSIAA District 7 - 150",
+              "detail": "Third Place loser",
+              "grade": null,
+              "name": "Giovanni Cassilli",
+              "school": "Cedar Grove",
+              "url": null,
+              "event_number": 7,
+              "source_capture": "brackets_2023-24/D7_150.txt",
+              "tw_event_id": "7935624132"
+            }
+          ]
+        }
+      }
     }
   },
   "index": {
@@ -613726,7 +613986,8 @@
     "stevenwilliams|cumberland": "ath_stevenwilliams_cumberland",
     "memphisrosales|egg harbor": "ath_memphisrosales_eggharbor",
     "antoniogreen|clearview": "ath_antoniogreen_clearview",
-    "zaviyonveney|penns grove": "ath_zaviyonveney_pennsgrove"
+    "zaviyonveney|penns grove": "ath_zaviyonveney_pennsgrove",
+    "giovannicassilli|cedar grove": "ath_giovannicassilli_cedargrove"
   },
   "by_name_school": {
     "anthonysantaniello|brick memorial": {
@@ -626508,7 +626769,7 @@
     "adamsuzay|wayne valley": {
       "athlete_id": "ath_adamsuzay_passaictech",
       "name": "Adam Suzay",
-      "school": "Wayne Valley",
+      "school": "Passaic Tech",
       "career_best": "swb1",
       "career_best_prestige_points": 65,
       "career_best_season": "2024-25"
@@ -686328,8 +686589,16 @@
       "career_best": "Quarters Dis",
       "career_best_prestige_points": 10,
       "career_best_season": "2025-26"
+    },
+    "giovannicassilli|cedar grove": {
+      "athlete_id": "ath_giovannicassilli_cedargrove",
+      "name": "Giovanni Cassilli",
+      "school": "Cedar Grove",
+      "career_best": "D4",
+      "career_best_prestige_points": 15,
+      "career_best_season": "2023-24"
     }
   },
-  "count": 8998,
+  "count": 8999,
   "raw_entry_count": 21514
 }

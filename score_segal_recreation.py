@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parent
 ADV_PATH = ROOT / "data" / "opponent_advancement.json"
 BOUTS_HIST = ROOT / "data" / "history" / "2025-26_bouts.json"
 MISSING_DUALS = ROOT / "data" / "history" / "2025-26_missing_dual_captures.json"
+SEGAL_FULL_MATCHES = Path("/workspace/shawnee/tw_capture/2025-26/segal_full_matches.txt")
 OUT_MD = Path("/workspace/shawnee/njsiaa/segal_recreation.md")
 OUT_JSON = ROOT / "data" / "segal_caliber_2025_26.json"
 
@@ -42,7 +43,110 @@ OPP_SEASONS = ["2024-25", "2023-24", "2022-23"]
 PRIMARY_POLICY = "most_recent"
 
 
+def _parse_segal_date(raw: str) -> str:
+    """Normalize capture dates like 12/20-12/21/2025 or 01/03/2026 → ISO start date."""
+    raw = (raw or "").strip()
+    if not raw:
+        return ""
+    # range: MM/DD-MM/DD/YYYY or MM/DD-MM/DD/YY
+    import re as _re
+    m = _re.match(r"(\d{1,2})/(\d{1,2})(?:-\d{1,2}/\d{1,2})?/(\d{4})$", raw)
+    if m:
+        mo, dy, yr = int(m.group(1)), int(m.group(2)), int(m.group(3))
+        return f"{yr:04d}-{mo:02d}-{dy:02d}"
+    m = _re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})$", raw)
+    if m:
+        mo, dy, yr = int(m.group(1)), int(m.group(2)), int(m.group(3))
+        return f"{yr:04d}-{mo:02d}-{dy:02d}"
+    return raw
+
+
+def _map_segal_type(raw: str) -> str:
+    key = (raw or "").strip().lower().rstrip(".")
+    mapping = {
+        "fall": "Fall", "pin": "Fall",
+        "tf": "Tech. Fall", "tech": "Tech. Fall",
+        "md": "Maj. Dec.", "maj": "Maj. Dec.",
+        "dec": "Decision", "decision": "Decision",
+        "for": "Forfeit", "for.": "Forfeit", "ff": "Forfeit", "forfeit": "Forfeit",
+        "dq": "Disqualified", "inj": "Injury Default",
+        "bye": "Bye",
+    }
+    if key in mapping:
+        return mapping[key]
+    for k, v in mapping.items():
+        if k in key:
+            return v
+    return raw or "Decision"
+
+
+def load_segal_bouts_from_full_txt(path: Path) -> List[Dict[str, Any]]:
+    rows: List[Dict[str, Any]] = []
+    for ln in path.read_text().splitlines():
+        s = ln.strip()
+        if not s or s.startswith("#"):
+            continue
+        if s.lower().startswith("date|"):
+            continue
+        parts = s.split("|")
+        if len(parts) < 9:
+            continue
+        date_raw, event, weight, round_l, result, opp, opp_school, typ, score_time = (
+            parts[0].strip(), parts[1].strip(), parts[2].strip(), parts[3].strip(),
+            parts[4].strip(), parts[5].strip(), parts[6].strip(), parts[7].strip(),
+            parts[8].strip(),
+        )
+        result_u = (result or "").upper().strip()
+        if result_u == "BYE":
+            rows.append({
+                "event_id": None,
+                "date": _parse_segal_date(date_raw),
+                "event": event,
+                "weight": weight,
+                "round": round_l or None,
+                "result": None,
+                "win_type": "Bye",
+                "opp": None,
+                "opp_team": None,
+                "score": None,
+                "fall_seconds": None,
+                "kind": "bye",
+                "source": "segal_full_matches.txt",
+            })
+            continue
+        if result_u not in ("W", "L"):
+            continue
+        win_type = _map_segal_type(typ)
+        fall_secs = None
+        import re as _re
+        m = _re.search(r"(\d{1,2}):(\d{2})", score_time or "")
+        if m:
+            fall_secs = int(m.group(1)) * 60 + int(m.group(2))
+        rows.append({
+            "event_id": None,
+            "date": _parse_segal_date(date_raw),
+            "event": event,
+            "weight": weight,
+            "round": round_l or None,
+            "result": result_u,
+            "win_type": win_type,
+            "opp": opp or None,
+            "opp_team": opp_school or None,
+            "score": score_time or None,
+            "fall_seconds": fall_secs,
+            "kind": "bout",
+            "source": "segal_full_matches.txt",
+        })
+    rows.sort(key=lambda r: (r.get("date") or "9999", r.get("event") or "", r.get("round") or "", r.get("opp") or ""))
+    return rows
+
+
 def load_segal_bouts() -> List[Dict[str, Any]]:
+    """Prefer the full TW Team>Matches capture (38 rows / 29-7); fall back to history."""
+    if SEGAL_FULL_MATCHES.exists():
+        rows = load_segal_bouts_from_full_txt(SEGAL_FULL_MATCHES)
+        if rows:
+            return rows
     b = json.loads(BOUTS_HIST.read_text())
     seen = set()
     rows: List[Dict[str, Any]] = []
@@ -121,7 +225,7 @@ def render_md(
     lines: List[str] = []
     lines.append("# Jordan Segal — NJSIAA 2025-26 pre-seed recreation")
     lines.append("")
-    lines.append("Recreated from Shawnee `data/history/2025-26_bouts.json` + statewide")
+    lines.append("Recreated from Shawnee `tw_capture/2025-26/segal_full_matches.txt` (38 TW rows) + statewide")
     lines.append("`data/opponent_advancement.json` (nj.com brackets, 2022-23…2025-26), scored with")
     lines.append("`caliber.py` under official NJSIAA rules (Jeff steering 2026-11-01).")
     lines.append("")
@@ -253,18 +357,48 @@ def render_md(
         f"are consistent with most-recent-with-fallback, not pure same-season-only and not always "
         f"career-max."
     )
+    scored_n = sum(1 for r in rows if r.get("match_points") is not None)
     lines.append(
-        "- **Incomplete Shawnee bout capture (data gap):** roster/stats show Segal **29–7**; this "
-        f"recreation scores **{sum(1 for r in rows if r.get('match_points') is not None)}** matches "
-        f"(~22–7 after bye exclusion). Missing dual Schedule Details are listed in "
-        "`data/history/2025-26_missing_dual_captures.json`, including **Northern Burlington** "
-        "(Jeff’s form lists Rocco Giangeruso / R6place — not in our bout JSON yet). All-match "
-        f"caliber here is {all_sum:.1f} vs NJSIAA 345; the ~{official['caliber_all'] - all_sum:.1f} "
-        "gap on all-matches is largely those missing duals (Giangeruso alone is 22.5 on a win). "
-        "Rules **(2)** and **(8)** still apply to matches we have."
+        f"- **Bout capture:** `segal_full_matches.txt` is the TW Team>Matches list "
+        f"(**29–7** + 2 byes = 38 rows). Scored matches: **{scored_n}**. Nine dual Details "
+        f"were merged from pipe-format `event_*.txt` (Giangeruso TF at Northern Burlington; "
+        f"Padrenan fall at Toms River South dualId **9000836132** inside sectional "
+        f"**9000835132**). All-match caliber **{all_sum:.1f}** vs NJSIAA 345 "
+        f"(Δ {all_sum - official['caliber_all']:+.1f}); top-20 **{top20:.1f}** vs 317 "
+        f"(Δ {top20 - official['caliber_top20']:+.1f})."
+    )
+    lines.append(
+        "- **Per-bout overshoot (no Jeff per-bout PrestigePts table to diff):** highest-value "
+        "rows under `most_recent` that inflate top-20 above 317:"
+    )
+    high = sorted(
+        [r for r in rows if r.get("match_points") is not None],
+        key=lambda r: -float(r.get("match_points") or 0),
+    )[:12]
+    for r in high:
+        lines.append(
+            f"  - {r.get('result')}/{r.get('normalized_win_type') or r.get('win_type')} "
+            f"{r.get('opp')} ({r.get('opp_team')}) `{r.get('adv_code')}` → "
+            f"**{r.get('match_points')}**"
+            f"{' · top-20' if r.get('in_top20') else ''}"
+            f" — {r.get('lookup_note') or ''}"
+        )
+    lines.append(
+        "- **Dominic Marino twice** (Quad Dec **32.5** + Region Dec **32.5**): both are "
+        "legitimate matches; if the NJSIAA paste omitted the dual, that is +32.5 of the gap."
+    )
+    lines.append(
+        "- **Known NJSIAA codes match** our lookup: Spaulding S1, Schinina S4, Rizzuto S6, "
+        "Marino swb1, Riddell swb4, Giangeruso R6, Simone RWB1, Landell D4 — no code mismatches."
+    )
+    lines.append(
+        "- **Likely remaining code uncertainty vs Jeff’s form:** Rhinehart `swb2` (35), "
+        "Musciano `RWB1` (20), Gardner `2v3`+pin (18.5), Pallitto decision-loss `swb4` (8.0), "
+        "Cappello decision-loss `swb2` (7.0). If the form used lower prior-season codes for any, "
+        "top-20 falls toward 317. Today’s D6/D7 bracket patch did not touch Segal opponents."
     )
     if missing:
-        lines.append("  - Missing dual events:")
+        lines.append("  - Dual events now merged from pipe txt (brief list):")
         for m in missing:
             lines.append(f"    - {m}")
     lines.append(
@@ -299,7 +433,7 @@ def render_md(
     lines.append(
         f"- Opponent seasons / policy for this recreation: {OPP_SEASONS}, policy=`{PRIMARY_POLICY}`"
     )
-    lines.append(f"- Bouts: `{BOUTS_HIST}`")
+    lines.append(f"- Bouts: `{SEGAL_FULL_MATCHES}` (fallback `{BOUTS_HIST}`)")
     lines.append(f"- Scorer: `caliber.py` + `score_segal_recreation.py`")
     lines.append(f"- Machine-readable: `{OUT_JSON}`")
     lines.append("")

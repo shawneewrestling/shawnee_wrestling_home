@@ -8,7 +8,7 @@
       "date_iso": "2025-12-17",
       "opponent": "Cherry Hill West",
       "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1560212138&gbId=36&pageName=EventMatches.jsp;eventId=8715041132;teamId=768996150",
-      "save_as": "tw_capture/2025-26/missing_duals/event_8715041132.html",
+      "save_as": "tw_capture/2025-26/missing_duals/event_8715041132.txt",
       "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures."
     },
     {
@@ -16,7 +16,7 @@
       "date_iso": "2026-01-06",
       "opponent": "Northern Burlington",
       "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1560212138&gbId=36&pageName=EventMatches.jsp;eventId=8715992132;teamId=768996150",
-      "save_as": "tw_capture/2025-26/missing_duals/event_8715992132.html",
+      "save_as": "tw_capture/2025-26/missing_duals/event_8715992132.txt",
       "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures."
     },
     {
@@ -24,7 +24,7 @@
       "date_iso": "2026-01-14",
       "opponent": "Moorestown",
       "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1560212138&gbId=36&pageName=EventMatches.jsp;eventId=8715046132;teamId=768996150",
-      "save_as": "tw_capture/2025-26/missing_duals/event_8715046132.html",
+      "save_as": "tw_capture/2025-26/missing_duals/event_8715046132.txt",
       "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures."
     },
     {
@@ -32,7 +32,7 @@
       "date_iso": "2026-01-21",
       "opponent": "Paul VI",
       "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1560212138&gbId=36&pageName=EventMatches.jsp;eventId=8733355132;teamId=768996150",
-      "save_as": "tw_capture/2025-26/missing_duals/event_8733355132.html",
+      "save_as": "tw_capture/2025-26/missing_duals/event_8733355132.txt",
       "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures."
     },
     {
@@ -40,7 +40,7 @@
       "date_iso": "2026-01-28",
       "opponent": "Eastern Regional",
       "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1560212138&gbId=36&pageName=EventMatches.jsp;eventId=8715049132;teamId=768996150",
-      "save_as": "tw_capture/2025-26/missing_duals/event_8715049132.html",
+      "save_as": "tw_capture/2025-26/missing_duals/event_8715049132.txt",
       "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures."
     },
     {
@@ -48,7 +48,7 @@
       "date_iso": "2026-02-04",
       "opponent": "Cherry Hill East",
       "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1560212138&gbId=36&pageName=EventMatches.jsp;eventId=8733359132;teamId=768996150",
-      "save_as": "tw_capture/2025-26/missing_duals/event_8733359132.html",
+      "save_as": "tw_capture/2025-26/missing_duals/event_8733359132.txt",
       "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures."
     },
     {
@@ -56,7 +56,7 @@
       "date_iso": "2026-02-06",
       "opponent": "Haddonfield",
       "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1560212138&gbId=36&pageName=EventMatches.jsp;eventId=8733362132;teamId=768996150",
-      "save_as": "tw_capture/2025-26/missing_duals/event_8733362132.html",
+      "save_as": "tw_capture/2025-26/missing_duals/event_8733362132.txt",
       "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures."
     },
     {
@@ -64,7 +64,7 @@
       "date_iso": "2026-02-11",
       "opponent": "Robbinsville",
       "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1560212138&gbId=36&pageName=EventMatches.jsp;eventId=8736380132;teamId=768996150",
-      "save_as": "tw_capture/2025-26/missing_duals/event_8736380132.html",
+      "save_as": "tw_capture/2025-26/missing_duals/event_8736380132.txt",
       "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures."
     },
     {
@@ -72,8 +72,12 @@
       "date_iso": "2026-02-16",
       "opponent": "Toms River South",
       "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1560212138&gbId=36&pageName=EventMatches.jsp;eventId=9000835132;teamId=768996150",
-      "save_as": "tw_capture/2025-26/missing_duals/event_9000835132.html",
-      "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures."
+      "save_as": "tw_capture/2025-26/missing_duals/event_9000835132.txt",
+      "success_criteria": "Saved HTML contains initDataGrid(...) with bout rows (Fall/Dec/etc). Shell-only LoadBalance pages without initDataGrid are failures.",
+      "dual_id": "9000836132"
     }
-  ]
+  ],
+  "status": "merged_2026-11-01",
+  "format": "pipe_txt",
+  "toms_river_south_dual_id": "9000836132"
 }

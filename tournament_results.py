@@ -208,10 +208,240 @@ def parse_event_html(html: str) -> List[Dict[str, Any]]:
     return out
 
 
+
+PIPE_RESULT_TYPES = {
+    "fall": "Fall",
+    "pin": "Fall",
+    "tf": "Tech. Fall",
+    "tech": "Tech. Fall",
+    "tech. fall": "Tech. Fall",
+    "technical fall": "Tech. Fall",
+    "md": "Maj. Dec.",
+    "maj": "Maj. Dec.",
+    "maj. dec.": "Maj. Dec.",
+    "major decision": "Maj. Dec.",
+    "dec": "Decision",
+    "dec.": "Decision",
+    "decision": "Decision",
+    "for": "Forfeit",
+    "for.": "Forfeit",
+    "ff": "Forfeit",
+    "forfeit": "Forfeit",
+    "inj": "Injury Default",
+    "injury": "Injury Default",
+    "injury default": "Injury Default",
+    "dq": "Disqualified",
+    "default": "Default",
+    "sv": "Sudden Victory",
+    "tb": "Tie Breaker",
+    "utb": "Ultimate Tie Breaker",
+}
+
+
+def _map_pipe_result_type(raw: Optional[str]) -> str:
+    key = (raw or "").strip().lower().rstrip(".")
+    if key in PIPE_RESULT_TYPES:
+        return PIPE_RESULT_TYPES[key]
+    # strip trailing punctuation variants like "For."
+    key2 = key.rstrip(".")
+    if key2 in PIPE_RESULT_TYPES:
+        return PIPE_RESULT_TYPES[key2]
+    for k, v in PIPE_RESULT_TYPES.items():
+        if k in key:
+            return v
+    return (raw or "").strip() or "Decision"
+
+
+def _parse_score_time(score_time: Optional[str], win_type: str) -> Tuple[Optional[int], Optional[str], Optional[str]]:
+    """Return (fall_seconds, score_w1_display, score_w2_display-ish)."""
+    st = (score_time or "").strip()
+    if not st:
+        return None, None, None
+    # time like 1:55 or 0:58 or 5:47
+    m_time = re.search(r"(\d{1,2}):(\d{2})", st)
+    fall_secs = None
+    if m_time:
+        fall_secs = int(m_time.group(1)) * 60 + int(m_time.group(2))
+    # score like 15-11 or 24-9
+    m_score = re.search(r"(\d+)\s*-\s*(\d+)", st)
+    s1 = s2 = None
+    if m_score:
+        s1, s2 = m_score.group(1), m_score.group(2)
+    wt = win_type.lower()
+    if "fall" in wt or "pin" in wt:
+        # fall time is primary; keep score parts None
+        return fall_secs, s1, s2
+    if "tech" in wt:
+        return fall_secs, s1, s2
+    return fall_secs, s1, s2
+
+
+def _repair_pipe_name_team(loser: str, loser_team: str) -> Tuple[str, str]:
+    """Fix captures that split \"William (Liam) McSorley|Shawnee\" into
+    William|Liam) McSorley (Shawnee."""
+    m = re.match(r"^(.+)\) (.+) \((.+)$", (loser_team or "").strip())
+    if m and loser and " " not in loser.strip():
+        return f"{loser.strip()} ({m.group(1)}) {m.group(2)}", m.group(3).rstrip(")")
+    # also: loser_team ends with school and name leaked
+    if loser_team and "Shawnee" in loser_team and not is_shawnee(loser_team):
+        m2 = re.search(r"\(([^)]+)\)\s*$", loser_team)
+        if m2 and is_shawnee(m2.group(1)):
+            name_part = loser_team[: m2.start()].strip(" (")
+            return f"{loser} {name_part}".strip(), m2.group(1)
+    return loser, loser_team
+
+
+def parse_pipe_dual_txt(text: str) -> List[Dict[str, Any]]:
+    """Parse pipe-format dual captures:
+    weight|winner|winner_team|loser|loser_team|result_type|score_time
+    """
+    lines = [ln.rstrip("\n") for ln in text.splitlines()]
+    # skip comments / blank / header
+    rows = []
+    for ln in lines:
+        s = ln.strip()
+        if not s or s.startswith("#"):
+            continue
+        if s.lower().startswith("weight|"):
+            continue
+        parts = s.split("|")
+        if len(parts) < 7:
+            # try to tolerate extra pipes inside names by taking first 3 + last 3 + middle join
+            if len(parts) > 7:
+                weight = parts[0]
+                winner = parts[1]
+                winner_team = parts[2]
+                score_time = parts[-1]
+                result_type = parts[-2]
+                # remaining middle: loser ... loser_team — assume last of middle is team if Shawnee/known
+                mid = parts[3:-2]
+                if len(mid) >= 2:
+                    loser_team = mid[-1]
+                    loser = "|".join(mid[:-1])
+                else:
+                    continue
+                parts = [weight, winner, winner_team, loser, loser_team, result_type, score_time]
+            else:
+                continue
+        weight, winner, winner_team, loser, loser_team, result_type, score_time = (
+            parts[0].strip(),
+            parts[1].strip(),
+            parts[2].strip(),
+            parts[3].strip(),
+            parts[4].strip(),
+            parts[5].strip(),
+            parts[6].strip(),
+        )
+        loser, loser_team = _repair_pipe_name_team(loser, loser_team)
+        # also repair winner side symmetrically
+        winner, winner_team = _repair_pipe_name_team(winner, winner_team)
+        win_type = _map_pipe_result_type(result_type)
+        fall_secs, s1, s2 = _parse_score_time(score_time, win_type)
+
+        w_win = {
+            "first": None,
+            "last": None,
+            "team": winner_team,
+            "abbr": None,
+            "name": winner or None,
+        }
+        w_lose = {
+            "first": None,
+            "last": None,
+            "team": loser_team,
+            "abbr": None,
+            "name": loser or None,
+        }
+        # Put winner as w1 for consistency with winner_side=1
+        w1, w2 = w_win, w_lose
+        shawnee_is_w1 = is_shawnee(w1["team"])
+        shawnee_is_w2 = is_shawnee(w2["team"])
+        if shawnee_is_w1 or shawnee_is_w2:
+            shawnee_side = "w1" if shawnee_is_w1 else "w2"
+            result = "W" if shawnee_is_w1 else "L"
+        else:
+            shawnee_side = None
+            result = None
+        shawnee_wrestler = opp_team = opp_wrestler = None
+        if shawnee_is_w1:
+            shawnee_wrestler = w1["name"]
+            opp_team = w2["team"]
+            opp_wrestler = w2["name"]
+        elif shawnee_is_w2:
+            shawnee_wrestler = w2["name"]
+            opp_team = w1["team"]
+            opp_wrestler = w1["name"]
+
+        rows.append({
+            "match_id": None,
+            "weight": weight,
+            "bout": "",
+            "win_type": win_type,
+            "win_type_abbr": result_type,
+            "winner_side": "1",
+            "score_w1": s1,
+            "score_w2": s2,
+            "fall_seconds": fall_secs,
+            "round": None,
+            "w1": w1,
+            "w2": w2,
+            "winner_name": winner or None,
+            "winner_team": winner_team,
+            "loser_name": loser or None,
+            "loser_team": loser_team,
+            "shawnee_side": shawnee_side,
+            "result": result,
+            "shawnee_wrestler": shawnee_wrestler,
+            "opponent_team": opp_team,
+            "opponent_wrestler": opp_wrestler,
+            "dual_points": points_for_win_type(win_type),
+            "score_time_raw": score_time,
+        })
+    return rows
+
+
+def parse_dual_header_meta(text: str) -> Dict[str, Any]:
+    """Extract dualId / parent eventId / score line from leading # comments."""
+    meta: Dict[str, Any] = {}
+    for ln in text.splitlines()[:5]:
+        if not ln.startswith("#"):
+            continue
+        m = re.search(r"dualId\s*=?\s*(\d{8,})", ln, re.I)
+        if m:
+            # Prefer explicit "(dualId N, within event M)" over trailing source dualId=
+            m_within = re.search(
+                r"\(dualId\s+(\d{8,})\s*,\s*within\s+event\s+(\d{8,})",
+                ln,
+                re.I,
+            )
+            if m_within:
+                meta["dual_id"] = m_within.group(1)
+                meta["parent_event_id"] = m_within.group(2)
+            elif "dual_id" not in meta:
+                meta["dual_id"] = m.group(1)
+        m_eid = re.search(r"event[_ ]?Id[= ](\d{8,})", ln, re.I)
+        if m_eid and "parent_event_id" not in meta:
+            meta.setdefault("file_event_id", m_eid.group(1))
+        m_score = re.search(
+            r"(Shawnee|Toms River South|NBC|CHW|CHE|Eastern|Moorestown|Haddonfield|Robbinsville|Paul VI)"
+            r"[^|]*?(\d+)\s*[-–]\s*(\d+)",
+            ln,
+            re.I,
+        )
+        if m_score:
+            meta["header_score"] = ln.strip("# ").split("|")[0].strip()
+    return meta
+
+
 def load_capture(path: Path) -> List[Dict[str, Any]]:
     if not path.exists():
         return []
-    return parse_event_html(path.read_text(errors="ignore"))
+    raw = path.read_text(errors="ignore")
+    if path.suffix.lower() == ".txt" or (
+        "weight|winner|winner_team|loser|loser_team" in raw[:2000]
+    ):
+        return parse_pipe_dual_txt(raw)
+    return parse_event_html(raw)
 
 
 def infer_placement(bouts: List[Dict[str, Any]], wrestler: str) -> Optional[str]:
@@ -287,15 +517,25 @@ def wrestler_cards(bouts: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 def _bout_score_display(r: Dict[str, Any]) -> Optional[str]:
     wt = str(r.get("win_type") or "").lower()
-    if "fall" in wt or "pin" in wt:
+    # Check tech BEFORE fall — "Tech. Fall" contains the substring "fall"
+    if "tech" in wt:
+        s1, s2 = r.get("score_w1"), r.get("score_w2")
+        secs = r.get("fall_seconds")
+        score = f"{s1}-{s2}" if s1 not in (None, "") and s2 not in (None, "") else ""
+        if secs and score:
+            return f"TF {score} {secs // 60}:{secs % 60:02d}"
+        if score:
+            return f"TF {score}"
+        if secs:
+            return f"TF {secs // 60}:{secs % 60:02d}"
+        return "TF"
+    if ("fall" in wt or "pin" in wt) and "tech" not in wt:
         secs = r.get("fall_seconds")
         if secs:
             return f"Fall {secs // 60}:{secs % 60:02d}"
         return "Fall"
     if "forfeit" in wt:
         return "Forfeit"
-    if "tech" in wt:
-        return f"TF {r.get('score_w1')}-{r.get('score_w2')}"
     s1, s2 = r.get("score_w1"), r.get("score_w2")
     if s1 not in (None, "", "0") or s2 not in (None, "", "0"):
         # orient score with Shawnee first when possible
@@ -368,19 +608,32 @@ def build_event_results(event_id: str, html_or_bouts) -> Dict[str, Any]:
 
 
 def index_captures(capture_dir: Path | None = None) -> Dict[str, Path]:
+    """Index HTML EventMatches and pipe-format dual .txt captures by event/dual id.
+
+    For sectional duals saved under the parent event id (e.g. Toms River South
+    dual 9000836132 inside sectional 9000835132), both ids map to the same file.
+    """
     capture_dir = capture_dir or DEFAULT_CAPTURE_DIR
     out: Dict[str, Path] = {}
     if not capture_dir.exists():
         return out
-    for p in capture_dir.glob("*.html"):
+    patterns = ("*.html", "*.txt")
+    files: List[Path] = []
+    for pat in patterns:
+        files.extend(sorted(capture_dir.glob(pat)))
+    for p in files:
         m = re.search(r"(\d{8,})", p.stem)
         if m:
             out[m.group(1)] = p
-        # also read eventId from file
         head = p.read_text(errors="ignore")[:4000]
         m2 = re.search(r"eventId=(\d+)", head)
         if m2:
             out[m2.group(1)] = p
+        meta = parse_dual_header_meta(head)
+        if meta.get("dual_id"):
+            out[str(meta["dual_id"])] = p
+        if meta.get("parent_event_id"):
+            out[str(meta["parent_event_id"])] = p
     return out
 
 
