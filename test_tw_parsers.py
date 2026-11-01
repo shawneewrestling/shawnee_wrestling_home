@@ -119,12 +119,17 @@ def test_placements_lines():
 
 
 def test_season_config_load():
-    from season_config import load_season, SEASON_ID, TEAM_ID
+    from season_config import load_season, SEASON_ID, TEAM_ID, CURRENT_SEASON
     cfg = load_season("2025-26")
     assert cfg["season_id"] == "1560212138"
     assert cfg["team_id"] == "768996150"
-    assert SEASON_ID == "1560212138"
-    assert TEAM_ID == "768996150"
+    # Module aliases track the live/current season (2026-27 after rollover)
+    assert CURRENT_SEASON == "2026-27"
+    assert SEASON_ID == "95515140"
+    assert TEAM_ID == "1912611150"
+    cur = load_season("2026-27")
+    assert cur["season_id"] == SEASON_ID
+    assert cur["team_id"] == TEAM_ID
 
 
 def main():

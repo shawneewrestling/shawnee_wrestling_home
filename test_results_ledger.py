@@ -23,8 +23,14 @@ from results_ledger import (  # noqa: E402
 
 
 def test_standings_rows_location_and_running_record():
-    """Results duals: date order, Home/Away (+ venue when known), cumulative ends 12-15."""
-    wd = json.loads((ROOT / "data" / "wrestling_data.json").read_text(encoding="utf-8"))
+    """Results duals: date order, Home/Away (+ venue when known), cumulative ends 12-15.
+
+    After the 2026-27 rollover, live wrestling_data.json is preseason; the closed
+    2025-26 season snapshot is wrestling_data_final.json.
+    """
+    final = ROOT / "data" / "seasons" / "2025-26" / "wrestling_data_final.json"
+    src = final if final.exists() else ROOT / "data" / "wrestling_data.json"
+    wd = json.loads(src.read_text(encoding="utf-8"))
     rows = (wd.get("standings") or {}).get("rows") or []
     assert len(rows) == 27
     dates = [r.get("date_iso") for r in rows]
