@@ -26,7 +26,8 @@
       "branch": "season-2026-27-kickoff-test",
       "applied_at": "2026-11-01T13:20:08-05:00",
       "prior_season_archived": "2025-26"
-    }
+    },
+    "roster_count": 50
   },
   "roster": [
     {
@@ -282,7 +283,8 @@
       "pins": null,
       "tech_falls": null,
       "major_decisions": null,
-      "decisions": null
+      "decisions": null,
+      "photo": "assets/img/roster/ryan-hoerst.jpg"
     },
     {
       "wrestler_id": "41527132132",
@@ -447,7 +449,8 @@
       "pins": null,
       "tech_falls": null,
       "major_decisions": null,
-      "decisions": null
+      "decisions": null,
+      "photo": "assets/img/roster/collin-mchugh.jpg"
     },
     {
       "wrestler_id": "41527107132",
@@ -462,7 +465,8 @@
       "pins": null,
       "tech_falls": null,
       "major_decisions": null,
-      "decisions": null
+      "decisions": null,
+      "photo": "assets/img/roster/william-liam-mcsorley.jpg"
     },
     {
       "wrestler_id": "41527136132",
@@ -642,7 +646,8 @@
       "pins": null,
       "tech_falls": null,
       "major_decisions": null,
-      "decisions": null
+      "decisions": null,
+      "photo": "assets/img/roster/leeland-rogers.jpg"
     },
     {
       "wrestler_id": "41527122132",
@@ -687,7 +692,8 @@
       "pins": null,
       "tech_falls": null,
       "major_decisions": null,
-      "decisions": null
+      "decisions": null,
+      "photo": "assets/img/roster/trevor-sieben.jpg"
     },
     {
       "wrestler_id": "41527120132",
@@ -732,7 +738,8 @@
       "pins": null,
       "tech_falls": null,
       "major_decisions": null,
-      "decisions": null
+      "decisions": null,
+      "photo": "assets/img/roster/max-spitznas.jpg"
     },
     {
       "wrestler_id": "41527128132",
@@ -777,7 +784,8 @@
       "pins": null,
       "tech_falls": null,
       "major_decisions": null,
-      "decisions": null
+      "decisions": null,
+      "photo": "assets/img/roster/oleksandr-sasha-yurovskyi.jpg"
     }
   ],
   "schedule": [

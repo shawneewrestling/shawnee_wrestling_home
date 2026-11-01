@@ -1,0 +1,45 @@
+{
+  "current_season": "2026-27",
+  "prior_season": "2025-26",
+  "graduate_keys": [
+    "anthonybirney",
+    "colindowd",
+    "garrettborlaug",
+    "jordansegal",
+    "josephaugusta",
+    "maxshectman",
+    "seanbradley",
+    "tylerdavis"
+  ],
+  "graduates_removed_from_home": [
+    "Garrett Borlaug",
+    "Jordan Segal",
+    "Joseph Augusta",
+    "Sean Bradley"
+  ],
+  "sanitize": {
+    "removed_graduates": [],
+    "grade_fixes": 0,
+    "record_fixes": 0,
+    "roster_count": 50
+  },
+  "home_starters": 10,
+  "home_vacant": 4,
+  "roster_count": 50,
+  "alumni_from_prior_seniors": [
+    "Sean Bradley",
+    "Jordan Segal",
+    "Garrett Borlaug",
+    "Max Shectman",
+    "Colin Dowd",
+    "Tyler Davis",
+    "Joseph Augusta",
+    "Anthony Birney"
+  ],
+  "removed_detail": [
+    "Sean Bradley",
+    "Jordan Segal",
+    "Garrett Borlaug",
+    "Joseph Augusta"
+  ]
+}

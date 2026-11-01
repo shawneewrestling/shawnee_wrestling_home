@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "graduated_after": "2025-26",
+  "current_season": "2026-27",
+  "updated_at": "2026-11-01T14:50:20-05:00",
+  "count": 8,
+  "wrestlers": [
+    {
+      "wrestler_id": "35008197132",
+      "name": "Sean Bradley",
+      "grade": "Alumni",
+      "weight": "120",
+      "wins": 0,
+      "losses": 0,
+      "photo": "assets/img/roster/sean-bradley.jpg",
+      "alumni": true,
+      "status": "alumni",
+      "graduated_after": "2025-26",
+      "career_weights": [
+        "113",
+        "120"
+      ],
+      "weights_by_season": {
+        "2023-24": [
+          "113"
+        ],
+        "2024-25": [
+          "113",
+          "120"
+        ]
+      },
+      "show_career": true,
+      "career_wins": 35,
+      "career_losses": 29,
+      "seasons_on_record": 3
+    },
+    {
+      "wrestler_id": "35008201132",
+      "name": "Jordan Segal",
+      "grade": "Alumni",
+      "weight": "126",
+      "wins": 0,
+      "losses": 0,
+      "photo": "assets/img/roster/jordan-segal.jpg",
+      "alumni": true,
+      "status": "alumni",
+      "graduated_after": "2025-26",
+      "career_weights": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
+      "weights_by_season": {
+        "2022-23": [
+          "106",
+          "113"
+        ],
+        "2023-24": [
+          "106",
+          "120",
+          "113",
+          "107"
+        ],
+        "2024-25": [
+          "120",
+          "106",
+          "113"
+        ]
+      },
+      "show_career": true,
+      "career_wins": 107,
+      "career_losses": 25,
+      "seasons_on_record": 4
+    },
+    {
+      "wrestler_id": "35008199132",
+      "name": "Garrett Borlaug",
+      "grade": "Alumni",
+      "weight": "138",
+      "wins": 0,
+      "losses": 0,
+      "photo": "assets/img/roster/garrett-borlaug.jpg",
+      "alumni": true,
+      "status": "alumni",
+      "graduated_after": "2025-26",
+      "career_weights": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
+      "weights_by_season": {
+        "2023-24": [
+          "113",
+          "120"
+        ],
+        "2024-25": [
+          "120",
+          "126"
+        ]
+      },
+      "show_career": true,
+      "career_wins": 30,
+      "career_losses": 47,
+      "seasons_on_record": 3
+    },
+    {
+      "wrestler_id": "35008200132",
+      "name": "Max Shectman",
+      "grade": "Alumni",
+      "weight": "144",
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "alumni": true,
+      "status": "alumni",
+      "graduated_after": "2025-26",
+      "career_weights": [
+        "144"
+      ],
+      "weights_by_season": {
+        "2023-24": [
+          "126"
+        ]
+      },
+      "show_career": true,
+      "career_wins": 1,
+      "career_losses": 0,
+      "seasons_on_record": 2
+    },
+    {
+      "wrestler_id": "35008232132",
+      "name": "Colin Dowd",
+      "grade": "Alumni",
+      "weight": "150",
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "alumni": true,
+      "status": "alumni",
+      "graduated_after": "2025-26",
+      "career_weights": [
+        "150"
+      ],
+      "weights_by_season": {},
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
+    },
+    {
+      "wrestler_id": "35008198132",
+      "name": "Tyler Davis",
+      "grade": "Alumni",
+      "weight": "165",
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "alumni": true,
+      "status": "alumni",
+      "graduated_after": "2025-26",
+      "career_weights": [
+        "165",
+        "175"
+      ],
+      "weights_by_season": {
+        "2023-24": [
+          "165",
+          "157"
+        ],
+        "2024-25": [
+          "165",
+          "157",
+          "150"
+        ]
+      },
+      "show_career": true,
+      "career_wins": 10,
+      "career_losses": 33,
+      "seasons_on_record": 3
+    },
+    {
+      "wrestler_id": "35008202132",
+      "name": "Joseph Augusta",
+      "grade": "Alumni",
+      "weight": "175",
+      "wins": 0,
+      "losses": 0,
+      "photo": "assets/img/roster/joseph-augusta.jpg",
+      "alumni": true,
+      "status": "alumni",
+      "graduated_after": "2025-26",
+      "career_weights": [
+        "165",
+        "175",
+        "190"
+      ],
+      "weights_by_season": {
+        "2023-24": [
+          "150"
+        ],
+        "2024-25": [
+          "150",
+          "157"
+        ]
+      },
+      "show_career": true,
+      "career_wins": 13,
+      "career_losses": 22,
+      "seasons_on_record": 3
+    },
+    {
+      "wrestler_id": "35497540132",
+      "name": "Anthony Birney",
+      "grade": "Alumni",
+      "weight": "175",
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "alumni": true,
+      "status": "alumni",
+      "graduated_after": "2025-26",
+      "career_weights": [
+        "175"
+      ],
+      "weights_by_season": {},
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1
+    }
+  ]
+}

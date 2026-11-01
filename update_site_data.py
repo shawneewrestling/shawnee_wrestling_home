@@ -39,6 +39,7 @@ from varsity_assignments import (  # noqa: E402
 )
 from players_build import build_players  # noqa: E402
 from prestige import build_prestige_index  # noqa: E402
+from season_roster import apply_kickoff_roster_hygiene  # noqa: E402
 from schedule_enrich import enrich_schedule  # noqa: E402
 from tournament_results import attach_tournament_results  # noqa: E402
 from results_ledger import (  # noqa: E402
@@ -156,6 +157,23 @@ def main():
         seed = json.loads((ROOT / "data" / "awards.json").read_text()).get("awards", [])
         seed = [a for a in seed if not a.get("auto_detected")]
 
+    # Kickoff / preseason hygiene: drop concluded-season seniors, advance stuck
+    # grades, force 0-0 records, rebuild home_roster + varsity from returners.
+    meta = data.get("metadata") or {}
+    if meta.get("season_status") == "preseason" or meta.get("mode") == "preseason":
+        hygiene = apply_kickoff_roster_hygiene(
+            current_season=meta.get("season_short") or meta.get("season"),
+            force_zero_record=True,
+            write=True,
+        )
+        data = hygiene["wrestling_data"]
+        logger.info(
+            "Kickoff roster hygiene: roster=%s removed_home=%s alumni=%s",
+            hygiene.get("roster_count"),
+            hygiene.get("graduates_removed_from_home"),
+            hygiene.get("alumni_from_prior_seniors"),
+        )
+
     derived = detect_season_awards(data)
     awards_doc = merge_awards(seed, derived, seed_source=str(seed_path))
     awards_path = ROOT / "data" / "awards.json"
@@ -195,8 +213,20 @@ def main():
     jot_path = ROOT / "data" / "varsity_jotform_overrides.json"
     if jot_path.exists():
         jot = json.loads(jot_path.read_text())
-    assign_doc = build_varsity_assignments(data, appearances, overrides, awards_doc, jot or None)
-    (ROOT / "data" / "varsity_assignments.json").write_text(json.dumps(assign_doc, indent=2) + "\n")
+    meta = data.get("metadata") or {}
+    preseason = meta.get("season_status") == "preseason" or meta.get("mode") == "preseason"
+    if preseason and (ROOT / "data" / "varsity_assignments.json").exists():
+        # Keep kickoff returner cards (graduates already removed). Auto-seed would
+        # be empty/noise with no duals and blank TW weights.
+        assign_doc = json.loads((ROOT / "data" / "varsity_assignments.json").read_text())
+        logger.info(
+            "Preseason: keeping kickoff varsity/home (%s filled / %s vacant)",
+            (assign_doc.get("counts") or {}).get("filled"),
+            (assign_doc.get("counts") or {}).get("vacant"),
+        )
+    else:
+        assign_doc = build_varsity_assignments(data, appearances, overrides, awards_doc, jot or None)
+        (ROOT / "data" / "varsity_assignments.json").write_text(json.dumps(assign_doc, indent=2) + "\n")
     logger.info(
         "Varsity assignments: %d filled / %d vacant",
         assign_doc.get("counts", {}).get("filled"),

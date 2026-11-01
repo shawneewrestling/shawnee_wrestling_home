@@ -180,15 +180,16 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
             f'<p class="page-sub" style="margin-bottom:.75rem">'
             f"Grade {esc(grade)} · Assigned {esc(assigned_disp)} · Roster wt {esc(roster_wt)}</p>"
         )
+        season_label = ctx.get("season_long") or "Season"
         season_card = (
             '<div class="stat-card">'
-            '<div class="label">2025-2026 Season</div>'
+            f'<div class="label">{esc(season_label)} Season</div>'
             f'<div class="value">{esc(wins)}-{esc(losses)}</div>'
             '<div class="sub">Current season record</div>'
             "</div>"
         )
         # Current wrestlers: current-season weights only
-        weights_line = _weights_line(weights_current, "2025-2026 weights")
+        weights_line = _weights_line(weights_current, f"{season_label} weights")
         weights_section = ""
         back_link = (
             '<p class="page-sub"><a href="../roster.html">← Varsity Roster</a> · '
@@ -211,7 +212,7 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
         <div class="brand-mark"><img src="../assets/img/shawnee-s.png?v=d1e64c8" alt="Shawnee" width="56" height="56" /></div>
         <div>
           <h1>Shawnee Renegades</h1>
-          <div class="tag">Wrestling · 2025-2026 Season</div>
+          <div class="tag">Wrestling · {esc(ctx.get("season_long") or "Season")} Season</div>
         </div>
       </div>
       <nav class="nav">
@@ -247,7 +248,7 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
     {recog_section}
   </main>
   <footer class="site-footer">
-    Shawnee High School Wrestling · 2025-2026 Season
+    Shawnee High School Wrestling · {esc(ctx.get("season_long") or "Season")} Season
   </footer>
 </body>
 </html>
@@ -276,7 +277,7 @@ def _prestige_by_name(awards_doc: Dict[str, Any]) -> Dict[str, Dict[str, Any]]:
         key = name_key(nm)
         names.setdefault(key, nm)
     for key, nm in names.items():
-        best = best_career_prestige(nm, awards, current_season="2025-2026")
+        best = best_career_prestige(nm, awards, current_season=None)
         out[key] = best
     return out
 
@@ -290,7 +291,14 @@ def build_players(
     career_baseline: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     roster = wrestling_data.get("roster") or []
-    season = (wrestling_data.get("metadata") or {}).get("season") or "2025-2026"
+    meta = wrestling_data.get("metadata") or {}
+    season = meta.get("season") or "2026-2027"
+    season_long = season if len(str(season)) > 7 else (
+        f"{str(season)[:4]}-20{str(season)[5:]}" if len(str(season)) == 7 else str(season)
+    )
+    season_short = meta.get("season_short") or (
+        f"{str(season_long)[:4]}-{str(season_long)[-2:]}" if len(str(season_long)) >= 7 else str(season)
+    )
     prestige_doc = build_prestige_index(roster, awards_doc, season)
     prest = prestige_doc.get("wrestlers") or {}
     prest_by_name = _prestige_by_name(awards_doc)
@@ -367,6 +375,8 @@ def build_players(
         "prestige": prest,
         "prestige_by_name": prest_by_name,
         "career": career_by,
+        "season_long": season_long,
+        "season_short": season_short,
     }
 
     current_keys = set()
@@ -423,8 +433,86 @@ def build_players(
             }
         )
 
-    # Graduated wrestlers: baseline names with no current-season roster record
     alumni_count = 0
+
+    # Recent graduates from the concluded season (kickoff hygiene)
+    recent_path = ROOT / "data" / "recent_graduates.json"
+    if recent_path.exists():
+        recent_doc = json.loads(recent_path.read_text())
+        for row in recent_doc.get("wrestlers") or []:
+            name = (row.get("name") or "").strip()
+            key = name_key(name)
+            if not key or key in current_keys:
+                continue
+            # Skip if already added via baseline
+            if any(name_key(x.get("name") or "") == key for x in index if x.get("status") == "alumni"):
+                continue
+            wh_row = wh_by_key.get(key) or {}
+            all_wts = list(row.get("career_weights") or wh_row.get("all_weights") or [])
+            by_season = dict(row.get("weights_by_season") or wh_row.get("by_season") or {})
+            wid = str(row.get("wrestler_id") or "")
+            if not wid:
+                alum_id = "alum" + hashlib.sha1(key.encode()).hexdigest()[:8]
+            else:
+                alum_id = wid
+            s = slug(name, alum_id)
+            c = career_by.get(key) or career_by.get(name.lower()) or {
+                "show_career": row.get("show_career"),
+                "career_wins": row.get("career_wins"),
+                "career_losses": row.get("career_losses"),
+                "seasons_on_record": row.get("seasons_on_record") or 0,
+            }
+            seasons = int(c.get("seasons_on_record") or row.get("seasons_on_record") or 0)
+            if seasons > 1:
+                c = dict(c)
+                c["show_career"] = True
+            photo = row.get("photo")
+            w_page = {
+                "wrestler_id": alum_id,
+                "name": name,
+                "grade": "Alumni",
+                "weight": row.get("weight"),
+                "wins": 0,
+                "losses": 0,
+                "photo": photo,
+                "alumni": True,
+                "status": "alumni",
+                "career_weights": all_wts,
+                "weights_by_season": by_season,
+            }
+            (PLAYERS_DIR / f"{s}.html").write_text(player_html(w_page, ctx))
+            p = prest_by_name.get(key) or {}
+            index.append(
+                {
+                    "wrestler_id": alum_id,
+                    "name": name,
+                    "grade": "Alumni",
+                    "roster_weight": None,
+                    "assigned_weight": None,
+                    "weights_wrestled": [],
+                    "career_weights": all_wts,
+                    "weights_by_season": by_season,
+                    "wins": 0,
+                    "losses": 0,
+                    "photo": photo,
+                    "player_page": f"players/{s}.html",
+                    "prestige_points": p.get("prestige_points") or 0,
+                    "has_prestige": bool(p.get("has_prestige")),
+                    "show_career": bool(c.get("show_career")) or seasons > 1,
+                    "career_wins": c.get("career_wins"),
+                    "career_losses": c.get("career_losses"),
+                    "seasons_on_record": seasons,
+                    "status": "alumni",
+                    "graduated_after": row.get("graduated_after"),
+                    "search_text": " ".join(
+                        filter(None, [name, "alumni", " ".join(all_wts)])
+                    ).lower(),
+                }
+            )
+            alumni_count += 1
+            current_keys.add(key)
+
+    # Graduated wrestlers: baseline names with no current-season roster record
     for row in baseline.get("wrestlers") or []:
         name = (row.get("name") or "").strip()
         key = name_key(name)
