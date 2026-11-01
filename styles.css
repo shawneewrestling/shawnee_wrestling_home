@@ -838,10 +838,4 @@ tr:hover td { background: #eef5fb; }
   color: var(--navy-deep, #001a4d);
 }
 
-#scheduleTable td.num, #scheduleTable th:last-child {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-  width: 4.5rem;
-}
 #scheduleTable .expand-btn { margin-left: .4rem; }

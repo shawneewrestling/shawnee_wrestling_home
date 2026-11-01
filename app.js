@@ -150,11 +150,19 @@
     return uniq.slice(0, 4).join(', ') + (uniq.length > 4 ? '…' : '');
   }
 
-  function resultBadge(m, data) {
+  function formatRunningRecord(w, l, t) {
+    return t ? `${w}-${l}-${t}` : `${w}-${l}`;
+  }
+
+  function resultBadge(m, data, running) {
     if (!m) return '—';
-    if (m.result === 'W') return `<span class="badge w">W ${esc(m.score_display || '')}</span>`;
-    if (m.result === 'L') return `<span class="badge l">L ${esc(m.score_display || '')}</span>`;
-    if (m.result === 'T') return `<span class="badge ev">T ${esc(m.score_display || '')}</span>`;
+    if (m.result === 'W' || m.result === 'L' || m.result === 'T') {
+      const cls = m.result === 'W' ? 'w' : (m.result === 'L' ? 'l' : 'ev');
+      const score = (m.score_display || '').trim();
+      const core = score ? `${m.result} ${score}` : m.result;
+      const withRec = running ? `${core} (${running})` : core;
+      return `<span class="badge ${cls}">${esc(withRec)}</span>`;
+    }
     if (m.status === 'final' || m.completed || m.result_label === 'Final') {
       const summary = tournamentSummary(m, data);
       if (summary) return `<span class="badge final">${esc(summary)}</span>`;
@@ -661,7 +669,7 @@
         <ul class="bouts">${(w.bouts || []).map(boutLine).join('') || '<li>No bouts</li>'}</ul>
       </details>`;
     }).join('');
-    return `<tr class="expand-row"><td colspan="6"><div class="tournament-panel">${cards}</div></td></tr>`;
+    return `<tr class="expand-row"><td colspan="5"><div class="tournament-panel">${cards}</div></td></tr>`;
   }
 
   function siteCell(m) {
@@ -714,17 +722,16 @@
         if (m.result === 'W') w += 1;
         else if (m.result === 'L') l += 1;
         else t += 1;
-        running = `${w}-${l}` + (t ? `-${t}` : '');
+        running = formatRunningRecord(w, l, t);
       }
       const timeLabel = m.time || ((m.status === 'final' || m.completed || seasonFinal) ? '—' : 'TBD');
-      const resultCell = `${resultBadge(m, data)}${expand ? ' ' + expand : ''}`;
+      const resultCell = `${resultBadge(m, data, running)}${expand ? ' ' + expand : ''}`;
       parts.push(`<tr class="sched-row" data-eid="${esc(m.event_id || '')}">
         <td>${esc(m.date_iso || m.date || '')}</td>
         <td>${oppCell(m)}</td>
         <td>${esc(siteCell(m))}</td>
         <td>${esc(timeLabel)}</td>
         <td>${resultCell}</td>
-        <td class="num">${esc(running)}</td>
       </tr>`);
       if (canExpand) {
         parts.push(panelHtml.replace('class="expand-row"', 'class="expand-row hidden"'));
