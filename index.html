@@ -32,25 +32,28 @@
   </header>
   <main>
     <h1 class="page-title">2025-2026 Season</h1>
-    <section class="team-photo-section" aria-label="2024-2025 Team">
+    <section class="team-photo-section" aria-label="2024-2025 Team Photo">
       <figure class="team-photo-figure">
         <div class="team-photo-frame">
           <img class="team-photo-img" src="assets/img/team-photo.jpg" alt="2024-2025 Shawnee Renegades Wrestling Team"
                onerror="this.classList.add('is-missing'); this.removeAttribute('src');" />
-          <div class="team-photo-fallback">
-            <span class="tp-title">Team Photo</span>
-            <span class="tp-season">2024-2025 Team</span>
-          </div>
+          <div class="team-photo-fallback" aria-hidden="true"></div>
         </div>
-        <figcaption class="team-photo-caption">2024-2025 Team</figcaption>
+        <figcaption class="team-photo-caption">2024-2025 Team Photo</figcaption>
       </figure>
     </section>
     <div class="meta-bar" id="homeMeta">Loading…</div>
     <div class="cards" id="homeCards"></div>
+    <section id="upcomingSection" class="upcoming-section" hidden>
+      <h2 class="page-title" style="font-size:1.25rem;margin-top:1.5rem">Upcoming Events</h2>
+      <div class="upcoming-countdown" id="upcomingCountdown" aria-live="polite"></div>
+      <div class="table-wrap"><table id="upcomingTable"><thead><tr><th>Date</th><th>Event</th><th>Location</th><th>Time</th></tr></thead><tbody></tbody></table></div>
+    </section>
+
     <h2 class="page-title" style="font-size:1.25rem;margin-top:1.5rem">Team Roster</h2>
     <div class="roster-grid" id="homeRosterGrid"><p>Loading…</p></div>
 
-    <h2 class="page-title" style="font-size:1.25rem;margin-top:1.5rem">Recent dual results</h2>
+    <h2 class="page-title" style="font-size:1.25rem;margin-top:1.5rem">Recent Dual Results</h2>
     <div class="table-wrap"><table id="homeDuals"><thead><tr><th>Opponent</th><th>Score</th><th>Result</th></tr></thead><tbody></tbody></table></div>
 
   </main>

@@ -766,6 +766,9 @@ tr:hover td { background: #eef5fb; }
 .team-photo-img.is-missing {
   display: none;
 }
+.team-photo-frame:has(.team-photo-img:not(.is-missing)) .team-photo-fallback {
+  display: none;
+}
 .team-photo-fallback {
   position: absolute;
   inset: 0;
@@ -808,4 +811,29 @@ tr:hover td { background: #eef5fb; }
   text-transform: uppercase;
   font-size: 0.85rem;
   color: var(--navy);
+}
+
+
+.upcoming-section[hidden] { display: none !important; }
+.upcoming-countdown {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.65rem 1.1rem;
+  margin: 0 0 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 64, 0.12);
+  background: linear-gradient(135deg, #f4f7fc 0%, #eef3fa 100%);
+}
+.upcoming-countdown .countdown-label {
+  font-weight: 700;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+.upcoming-countdown .countdown-value {
+  font-family: Graduate, "Arial Black", Impact, serif;
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  letter-spacing: 0.08em;
+  color: var(--navy-deep, #001a4d);
 }

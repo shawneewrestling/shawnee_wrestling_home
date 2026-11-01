@@ -236,35 +236,189 @@
     if (main) main.insertAdjacentHTML('afterbegin', `<div class="callout warn">${esc(e.message)}</div>`);
   }
 
+  function setHtml(el, html) {
+    if (!el) return;
+    el.innerHTML = html;
+  }
+
+  function seasonIsComplete(data) {
+    const m = data.metadata || {};
+    const ds = data.dual_scores || {};
+    const status = String(m.status || m.season_status || ds.status || '').toLowerCase();
+    return status === 'final' || status === 'closed' || status === 'complete' || status === 'completed';
+  }
+
+  function parseEventStart(ev) {
+    const iso = String(ev.date_iso || ev.date || '').trim();
+    if (!iso) return null;
+    const day = iso.length >= 10 ? iso.slice(0, 10) : iso;
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(day)) return null;
+    const raw = String(ev.time || ev.time_raw || '').trim();
+    let hours = 0, minutes = 0;
+    if (raw) {
+      const m = raw.match(/^(\d{1,2}):(\d{2})\s*([AaPp][Mm])?$/);
+      if (m) {
+        hours = parseInt(m[1], 10);
+        minutes = parseInt(m[2], 10);
+        const ap = (m[3] || '').toUpperCase();
+        if (ap === 'PM' && hours < 12) hours += 12;
+        if (ap === 'AM' && hours === 12) hours = 0;
+      } else {
+        const m24 = raw.match(/^(\d{1,2}):(\d{2})$/);
+        if (m24) {
+          hours = parseInt(m24[1], 10);
+          minutes = parseInt(m24[2], 10);
+        }
+      }
+    }
+    const dt = new Date(`${day}T00:00:00`);
+    if (Number.isNaN(dt.getTime())) return null;
+    dt.setHours(hours, minutes, 0, 0);
+    return dt;
+  }
+
+  function homeDualsForDisplay(data) {
+    const duals = (data.dual_scores && data.dual_scores.duals) || [];
+    if (seasonIsComplete(data)) return duals.slice();
+    const start = new Date();
+    start.setHours(0, 0, 0, 0);
+    start.setDate(start.getDate() - 14);
+    const end = new Date();
+    end.setHours(23, 59, 59, 999);
+    return duals.filter((d) => {
+      const iso = String(d.date_iso || d.date || '').slice(0, 10);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(iso)) return false;
+      const dt = new Date(`${iso}T00:00:00`);
+      return !Number.isNaN(dt.getTime()) && dt >= start && dt <= end;
+    });
+  }
+
+  function upcomingEventsFromSchedule(data, now) {
+    const stamp = now || new Date();
+    const rows = data.schedule || [];
+    const seen = new Set();
+    const upcoming = [];
+    for (const ev of rows) {
+      const start = parseEventStart(ev);
+      if (!start || start.getTime() < stamp.getTime()) continue;
+      const key = String(
+        ev.parent_event_id || ev.tournament_key || ev.event_id
+        || `${String(ev.date_iso || '').slice(0, 10)}|${ev.event_name || ev.opponent || ''}`
+      );
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const title = (ev.multi_meet || !ev.opponent)
+        ? (ev.event_name || ev.opponent || 'Event')
+        : (ev.opponent || ev.event_name || 'Event');
+      const loc = ev.home_away === 'home' ? 'Home'
+        : ev.home_away === 'away' ? 'Away'
+        : (ev.location || 'Event');
+      upcoming.push({
+        start,
+        title,
+        location: loc,
+        time: ev.time || '—',
+        dateLabel: ev.date || String(ev.date_iso || '').slice(0, 10),
+        dateIso: String(ev.date_iso || '').slice(0, 10),
+      });
+    }
+    upcoming.sort((a, b) => a.start - b.start || a.title.localeCompare(b.title));
+    return upcoming;
+  }
+
+  function pickUpcomingList(upcoming, now) {
+    if (!upcoming.length) return [];
+    const stamp = now || new Date();
+    const weekEnd = new Date(stamp.getTime() + 7 * 24 * 60 * 60 * 1000);
+    const inWeek = upcoming.filter((e) => e.start <= weekEnd);
+    if (inWeek.length >= 2) return inWeek;
+    return upcoming.slice(0, 2);
+  }
+
+  function formatCountdown(ms) {
+    if (ms <= 0) return '0d 0h 0m';
+    const totalMin = Math.floor(ms / 60000);
+    const days = Math.floor(totalMin / (60 * 24));
+    const hours = Math.floor((totalMin % (60 * 24)) / 60);
+    const mins = totalMin % 60;
+    return `${days}d ${hours}h ${mins}m`;
+  }
+
+  var upcomingTimer = null;
+
+  function renderUpcomingEvents(data) {
+    const section = document.getElementById('upcomingSection');
+    const countdownEl = document.getElementById('upcomingCountdown');
+    const body = document.querySelector('#upcomingTable tbody');
+    if (!section || !countdownEl || !body) return;
+
+    if (upcomingTimer) {
+      clearInterval(upcomingTimer);
+      upcomingTimer = null;
+    }
+
+    function paint() {
+      const now = new Date();
+      const upcoming = upcomingEventsFromSchedule(data, now);
+      const list = pickUpcomingList(upcoming, now);
+      if (!list.length) {
+        section.hidden = true;
+        setHtml(countdownEl, '');
+        setHtml(body, '');
+        if (upcomingTimer) {
+          clearInterval(upcomingTimer);
+          upcomingTimer = null;
+        }
+        return;
+      }
+      section.hidden = false;
+      const next = list[0];
+      setHtml(countdownEl, `<div class="countdown-label">${esc(next.title)}</div>
+        <div class="countdown-value" data-next-start="${esc(next.start.toISOString())}">${esc(formatCountdown(next.start - now))}</div>`);
+      setHtml(body, list.map((e) => `
+        <tr>
+          <td>${esc(e.dateLabel)}</td>
+          <td>${esc(e.title)}</td>
+          <td>${esc(e.location)}</td>
+          <td>${esc(e.time)}</td>
+        </tr>`).join(''));
+    }
+
+    paint();
+    if (!section.hidden) {
+      upcomingTimer = setInterval(paint, 30000);
+    }
+  }
+
   function renderHome(data, homeRoster) {
     const m = data.metadata || {};
     const ds = data.dual_scores || {};
     const dualRec = m.dual_record || ds.record || '—';
     const confRec = m.conference_record || ds.conference_record || '—';
-    document.getElementById('homeMeta').innerHTML = `
+    setHtml(document.getElementById('homeMeta'), `
       <span><strong>Season</strong> ${esc(m.season)}</span>
       <span><strong>Dual record</strong> ${esc(dualRec)}</span>
       <span><strong>Conference</strong> ${esc(confRec)}</span>
       <span><strong>Roster</strong> ${(data.roster || []).length}</span>
       <span><strong>Events</strong> ${(data.schedule || []).length}</span>
-      <span><strong>Updated</strong> ${esc(m.generated_at)}</span>`;
-    document.getElementById('homeCards').innerHTML = `
+      <span><strong>Updated</strong> ${esc(m.generated_at)}</span>`);
+    setHtml(document.getElementById('homeCards'), `
       <div class="stat-card"><div class="label">Dual record</div><div class="value">${esc(dualRec)}</div></div>
       <div class="stat-card"><div class="label">Conference</div><div class="value">${esc(confRec)}</div></div>
       <div class="stat-card"><div class="label">Home / Away</div><div class="value">${esc((m.home_record || ds.home_record || '—') + ' / ' + (m.away_record || ds.away_record || '—'))}</div></div>
-      <div class="stat-card"><div class="label">Scored duals</div><div class="value">${(ds.duals || []).length}</div></div>`;
+      <div class="stat-card"><div class="label">Scored duals</div><div class="value">${(ds.duals || []).length}</div></div>`);
 
+    renderUpcomingEvents(data);
     renderHomeRoster(homeRoster);
 
     const tb = document.querySelector('#homeDuals tbody');
-    // Ledger: every dual, including splits from tri/quad meets
-    const duals = data.dual_scores?.duals || [];
-    tb.innerHTML = duals.map((d) => `
+    const duals = homeDualsForDisplay(data);
+    setHtml(tb, duals.map((d) => `
       <tr>
         <td><div class="opp">${logoImg(d.opponent_logo_local, d.opponent_logo, d.opponent)}<span>${esc(d.opponent)}</span></div></td>
         <td>${d.shawnee}-${d.opp}</td>
         <td><span class="badge ${d.result === 'W' ? 'w' : 'l'}">${esc(d.result)}</span></td>
-      </tr>`).join('');
+      </tr>`).join(''));
   }
 
   function renderHomeRoster(homeRoster) {
@@ -320,6 +474,7 @@
       <span><strong>Full roster</strong> ${c.full_roster ?? (data.roster || []).length}</span>
       <span><strong>Season</strong> 2025-2026 Season</span>`;
     const grid = document.getElementById('varsityGrid');
+    if (!grid) return;
     const slots = assign.slots || [];
     grid.innerHTML = slots.map((s) => {
       if (s.vacant) {
@@ -393,6 +548,7 @@
     }
 
     const grid = document.getElementById('rosterGrid');
+    if (!grid) return;
     const countEl = document.getElementById('rosterCount');
     const qEl = document.getElementById('rosterSearch');
     const gEl = document.getElementById('rosterGrade');
@@ -496,11 +652,12 @@
     const statusChip = seasonFinal
       ? `<span><strong>Season</strong> Final · ${esc(seasonLabelText)}</span>`
       : `<span><strong>Season</strong> ${esc(seasonLabelText)}</span>`;
-    document.getElementById('schedMeta').innerHTML = `<span><strong>Dual record</strong> ${esc(rec)}</span>
+    setHtml(document.getElementById('schedMeta'), `<span><strong>Dual record</strong> ${esc(rec)}</span>
       <span><strong>Conference</strong> ${esc(conf || '—')}</span>
       <span><strong>Listings</strong> ${(data.schedule || []).length}</span>
-      ${statusChip}`;
+      ${statusChip}`);
     const body = document.querySelector('#scheduleTable tbody');
+    if (!body) return;
     body.innerHTML = (data.schedule || []).map((m) => {
       const expand = m.expandable ? `<button type="button" class="expand-btn" data-eid="${esc(m.tournament_key || m.event_id)}" aria-expanded="false">Details</button>` : '';
       const timeLabel = m.time || ((m.status === 'final' || m.completed || seasonFinal) ? '—' : 'TBD');
@@ -724,8 +881,10 @@
 
   function renderStats(data, index) {
     const pages = playerPageMap(index);
+    const tbody = document.querySelector('#statsTable tbody');
+    if (!tbody) return;
     const rows = (data.stats || data.roster || []).slice().sort((a, b) => (b.wins || 0) - (a.wins || 0) || (a.losses || 0) - (b.losses || 0));
-    document.querySelector('#statsTable tbody').innerHTML = rows.map((w) => {
+    tbody.innerHTML = rows.map((w) => {
       const wins = w.wins || 0, losses = w.losses || 0;
       const pct = (wins + losses) ? ((wins / (wins + losses)) * 100).toFixed(1) + '%' : '—';
       const href = pages['id:' + String(w.wrestler_id || '')] || pages['name:' + String(w.name || '').trim().toLowerCase()] || '';
@@ -1052,12 +1211,13 @@
     const order = rowTitleLists.flat();
 
     const filters = document.getElementById('awardFilters');
+    const grid = document.getElementById('awardsGrid');
+    if (!filters || !grid) return;
     const kinds = ['all', ...new Set(Object.values(byName).map((c) => c.kind))];
     filters.innerHTML = kinds.map((k) =>
       `<button type="button" data-kind="${esc(k)}" class="${k === 'all' ? 'active' : ''}">${esc(k)}</button>`
     ).join('');
 
-    const grid = document.getElementById('awardsGrid');
     function renderCardHtml(t) {
       const card = byName[t];
       const rows = card.rows.slice().sort((a, b) => {
