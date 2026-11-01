@@ -424,7 +424,7 @@
         <td>${esc(r.score)}</td>
         <td><span class="badge ${r.result === 'W' ? 'w' : 'l'}">${esc(r.result)}</span></td>
       </tr>`).join('');
-
+  }
 
   function renderConferenceStandings(doc) {
     const noteEl = document.getElementById('standingsNote');
