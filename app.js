@@ -962,10 +962,6 @@
 
   function renderAwards(data) {
     const awards = data.awards || [];
-    const meta = data.meta?.njsiaa_placements_2025_26;
-    document.getElementById('awardsMeta').innerHTML =
-      `<strong>${awards.length}</strong> award rows (${data.seed_count || 0} historical seed + ${data.derived_2025_26_count || 0} auto-derived for 2025-26).
-       ${meta ? `<br/><em>NJSIAA 2025-2026 placements:</em> ${esc(meta.status)} — ${esc(meta.note)}` : ''}`;
 
     // Group into cards
     const byName = {};
