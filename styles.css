@@ -1,4 +1,13 @@
 /* Shawnee Renegades Wrestling — 2025-2026 Season */
+
+/* Self-hosted collegiate title face for award chevrons (OFL-1.1) */
+@font-face {
+  font-family: "Alumni Sans Collegiate One";
+  src: url("assets/fonts/AlumniSansCollegiateOne-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --navy: #000080;
   --navy-deep: #000066;
@@ -230,30 +239,37 @@ tr:hover td { background: #eef5fb; }
 .chevron-card .title {
   background: #fff;
   color: var(--navy);
-  font-family: "Graduate", "Arial Black", Impact, serif;
+  /* Alumni Sans Collegiate One: OFL collegiate block with built-in outline channel */
+  font-family: "Alumni Sans Collegiate One", "Arial Black", Impact, sans-serif;
   font-weight: 400;
-  font-size: 1.42rem;
-  letter-spacing: -0.01em;
+  font-size: 1.72rem;
+  letter-spacing: 0.02em;
   text-align: center;
   text-transform: uppercase;
-  line-height: 0.96;
-  padding: 1rem 0.4rem 0.75rem;
+  line-height: 0.95;
+  padding: 0.85rem 0.35rem 0.65rem;
   border-bottom: var(--cb) solid var(--navy);
-  /* Bulk strokes to approach varsity letter weight on Graduate */
-  -webkit-text-stroke: 1.35px var(--navy);
+  /* Light-blue outer rim like original varsity banners; font supplies inner outline */
+  -webkit-text-stroke: 1.1px var(--sky);
   paint-order: stroke fill;
-  filter: drop-shadow(0 0 0.35px var(--sky));
+  text-shadow:
+    0 0 0.5px var(--sky),
+    0.5px 0 0 var(--sky),
+    -0.5px 0 0 var(--sky),
+    0 0.5px 0 var(--sky),
+    0 -0.5px 0 var(--sky);
 }
 .chevron-card .title .sub {
   display: block;
-  margin-top: 0.35rem;
-  font-family: "Graduate", "Arial Black", Impact, serif;
-  font-size: 0.95rem;
+  margin-top: 0.3rem;
+  font-family: "Alumni Sans Collegiate One", "Arial Black", Impact, sans-serif;
+  font-size: 1.05rem;
   font-weight: 400;
-  letter-spacing: 0.08em;
-  -webkit-text-stroke: 0.8px var(--navy);
+  letter-spacing: 0.06em;
+  -webkit-text-stroke: 0.85px var(--sky);
   paint-order: stroke fill;
   color: var(--navy);
+  text-shadow: 0 0 0.4px var(--sky);
 }
 .chevron-card .body {
   padding: 0.45rem 0.5rem 0.15rem;
