@@ -425,32 +425,6 @@
         <td><span class="badge ${r.result === 'W' ? 'w' : 'l'}">${esc(r.result)}</span></td>
       </tr>`).join('');
 
-    // Tournament bout cards (same payload schedule expand uses)
-    const host = document.getElementById('resultsTournaments');
-    if (host) {
-      const trMap = data.tournament_results || {};
-      const events = (data.schedule || []).filter((m) => m.expandable || m.tournament_key || m.event_kind === 'tournament' || m.event_kind === 'I' || m.display_as_event || m.results_unavailable);
-      const seen = new Set();
-      const blocks = [];
-      for (const m of events) {
-        const key = m.tournament_key || m.event_id;
-        if (!key || seen.has(key)) continue;
-        seen.add(key);
-        const tr = trMap[key];
-        const title = esc(m.event_name || m.opponent || key);
-        const date = esc(m.date || '');
-        if (tr && (tr.wrestlers || []).length) {
-          const panel = tournamentPanel({ ...m, tournament_key: key, expandable: true }, data);
-          const match = panel.match(/<div class="tournament-panel">[\s\S]*<\/div>/);
-          const cards = match ? match[0] : panel;
-          blocks.push(`<section class="results-tournament-block"><h3>${title} <span class="muted">${date}</span></h3>${cards}</section>`);
-        } else {
-          blocks.push(`<section class="results-tournament-block"><h3>${title} <span class="muted">${date}</span></h3><p class="muted">${seasonFinal ? 'Bout cards unavailable for this event.' : 'Bout cards not yet available.'}</p></section>`);
-        }
-      }
-      host.innerHTML = blocks.length ? blocks.join('') : `<p class="muted">${seasonFinal ? 'No tournament bout cards on file.' : 'No tournament results yet.'}</p>`;
-    }
-  }
 
   function renderConferenceStandings(doc) {
     const noteEl = document.getElementById('standingsNote');
