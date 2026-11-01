@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "season": "2025-2026",
-  "updated_at": "2026-11-01T12:32:55-05:00",
-  "count": 101,
+  "updated_at": "2026-11-01T13:29:30-05:00",
+  "count": 105,
   "current_count": 58,
-  "alumni_count": 43,
+  "alumni_count": 47,
   "wrestlers": [
     {
       "wrestler_id": "35217300132",
@@ -1746,7 +1746,7 @@
       "prestige_points": 40,
       "has_prestige": true,
       "show_career": true,
-      "career_wins": 69,
+      "career_wins": 73,
       "career_losses": 39,
       "seasons_on_record": 4,
       "status": "alumni",
@@ -2622,6 +2622,153 @@
       "seasons_on_record": 3,
       "status": "alumni",
       "search_text": "max germain alumni 160"
+    },
+    {
+      "wrestler_id": "29798039132",
+      "name": "Erik Sullivan",
+      "grade": "Sr.",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [
+        "215"
+      ],
+      "career_weights": [
+        "215"
+      ],
+      "weights_by_season": {
+        "2024-25": [
+          "215"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-110-of-17-XL-300x300.jpg",
+      "player_page": "players/erik-sullivan-039132.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1,
+      "status": "alumni",
+      "search_text": "erik sullivan alumni 215",
+      "history_season_records": {
+        "2024-25": {
+          "wins": 0,
+          "losses": 7
+        }
+      }
+    },
+    {
+      "wrestler_id": "30293485132",
+      "name": "Jackson Artman",
+      "grade": "Jr.",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [
+        "144"
+      ],
+      "career_weights": [
+        "144"
+      ],
+      "weights_by_season": {
+        "2024-25": [
+          "144"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/jackson-artman-485132.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1,
+      "status": "alumni",
+      "search_text": "jackson artman alumni 144",
+      "history_season_records": {
+        "2024-25": {
+          "wins": 0,
+          "losses": 1
+        }
+      }
+    },
+    {
+      "wrestler_id": "histe674e6c2",
+      "name": "Thomas Cox",
+      "grade": "Fr.",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [
+        "132"
+      ],
+      "career_weights": [
+        "132"
+      ],
+      "weights_by_season": {
+        "2024-25": [
+          "132"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/thomas-cox-74e6c2.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1,
+      "status": "alumni",
+      "search_text": "thomas cox alumni 132",
+      "history_season_records": {
+        "2024-25": {
+          "wins": 0,
+          "losses": 1
+        }
+      }
+    },
+    {
+      "wrestler_id": "hist36d18325",
+      "name": "Tyler Nickles",
+      "grade": "Jr.",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [
+        "150",
+        "157"
+      ],
+      "career_weights": [
+        "150",
+        "157"
+      ],
+      "weights_by_season": {
+        "2024-25": [
+          "150",
+          "157"
+        ]
+      },
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/tyler-nickles-d18325.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1,
+      "status": "alumni",
+      "search_text": "tyler nickles alumni 150 157",
+      "history_season_records": {
+        "2024-25": {
+          "wins": 1,
+          "losses": 1
+        }
+      }
     }
   ]
 }

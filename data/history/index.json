@@ -1,0 +1,34 @@
+{
+  "default": "2025-26",
+  "generated_at": "2026-11-01T13:29:35-05:00",
+  "seasons": [
+    {
+      "id": "2025-26",
+      "label": "2025-2026 Season",
+      "roster": true,
+      "stats": true,
+      "bouts": true,
+      "roster_path": "data/history/2025-26_roster.json",
+      "stats_path": "data/history/2025-26_stats.json",
+      "bouts_path": "data/history/2025-26_bouts.json"
+    },
+    {
+      "id": "2024-25",
+      "label": "2024-2025 Season",
+      "roster": true,
+      "stats": true,
+      "bouts": false,
+      "roster_path": "data/history/2024-25_roster.json",
+      "stats_path": "data/history/2024-25_stats.json",
+      "bouts_path": "data/history/2024-25_bouts.json"
+    }
+  ],
+  "bouts_summary": {
+    "with_bouts": [
+      "2025-26"
+    ],
+    "without_bouts": [
+      "2024-25"
+    ]
+  }
+}

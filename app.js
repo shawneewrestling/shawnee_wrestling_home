@@ -198,6 +198,8 @@
     }
 
     if (page === 'Roster') {
+      // history.js owns season dropdown when #seasonSelect is present
+      if (document.getElementById('seasonSelect')) return;
       const [data, assign] = await Promise.all([loadJson(DATA_URL), loadJson(VARSITY_ASSIGN_URL)]);
       renderVarsityCards(assign, data);
       return;
@@ -259,6 +261,8 @@
       return;
     }
     else if (page === 'Stats') {
+      // history.js owns season dropdown when #seasonSelect is present
+      if (document.getElementById('seasonSelect')) return;
       const index = await loadJson(PLAYERS_INDEX_URL).catch(() => null);
       renderStats(data, index);
     }
