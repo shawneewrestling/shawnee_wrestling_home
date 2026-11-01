@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "source": "https://shawneewrestling.com/",
+  "fetched_at": "2026-11-01T10:40:37-05:00",
+  "count": 18,
+  "wrestlers": [
+    {
+      "name": "Jordan Segal",
+      "display_weight": "106",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-112-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/jordan-segal/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Matt Hart",
+      "display_weight": "106",
+      "photo_url": null,
+      "player_url": "https://shawneewrestling.com/index.php/player/matt-hart/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Joseph Hart",
+      "display_weight": "113",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2023/12/boys-wrestling-group-and-ind-shots-6-of-22-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/joseph-hart/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Sean Bradley",
+      "display_weight": "113",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-102-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/sean-bradley/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Garret Borlaug",
+      "display_weight": "120",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2023/12/boys-wrestling-group-and-ind-shots-7-of-22-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/garret-borlaug/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Leeland Rogers",
+      "display_weight": "126",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-104-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/leeland-rogers/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Ryan Hoerst",
+      "display_weight": "132",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-111-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/ryan-hoerst/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Luke Sherlock",
+      "display_weight": "138",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-116-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/luke-sherlock/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Oleksandr \"Sasha\" Yurovskyi",
+      "display_weight": "138",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-106-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/oleksandr-sasha-yurovskyi/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Trevor Sieben",
+      "display_weight": "144",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2023/12/boys-wrestling-group-and-ind-shots-9-of-22-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/trevor-sieben/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Joseph Augusta",
+      "display_weight": "150",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-108-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/joseph-augusta/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Chris Ahrens",
+      "display_weight": "157",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-100-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/christopher-ahrens/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Lucas Estevez",
+      "display_weight": "165",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2023/12/boys-wrestling-group-and-ind-shots-13-of-22-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/lucas-estevez/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Max Spitznas",
+      "display_weight": "175",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2023/12/boys-wrestling-group-and-ind-shots-11-of-22-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/max-spitznas/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Dominick Harris",
+      "display_weight": "190",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-103-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/dominick-harris/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Liam McSorley",
+      "display_weight": "215",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-109-of-17-XL-1-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/liam-mcsorley/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Collin McHugh",
+      "display_weight": "215",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-101-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/collin-mchugh/",
+      "source": "shawneewrestling.com_home_gallery"
+    },
+    {
+      "name": "Erik Sullivan",
+      "display_weight": "285",
+      "photo_url": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-110-of-17-XL-300x300.jpg",
+      "player_url": "https://shawneewrestling.com/index.php/player/erik-sullivan/",
+      "source": "shawneewrestling.com_home_gallery"
+    }
+  ]
+}

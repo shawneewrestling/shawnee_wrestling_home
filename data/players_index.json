@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "season": "2025-2026",
-  "updated_at": "2026-11-01T09:39:01-05:00",
+  "updated_at": "2026-11-01T10:40:37-05:00",
   "count": 58,
   "wrestlers": [
     {
@@ -16,7 +16,10 @@
       "player_page": "players/daniel-fitzpatrick-300132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "daniel fitzpatrick daniel fitzpatrick fr. 106 106"
+      "search_text": "daniel fitzpatrick fr. 106 106 106",
+      "weights_wrestled": [
+        "106"
+      ]
     },
     {
       "wrestler_id": "35217452132",
@@ -30,7 +33,12 @@
       "player_page": "players/logan-reice-452132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "logan reice logan reice fr. 106"
+      "search_text": "logan reice fr. 106 106 113 150",
+      "weights_wrestled": [
+        "106",
+        "113",
+        "150"
+      ]
     },
     {
       "wrestler_id": "35876936132",
@@ -44,7 +52,10 @@
       "player_page": "players/logan-sloan-936132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "logan sloan logan sloan fr. 106"
+      "search_text": "logan sloan fr. 106 106",
+      "weights_wrestled": [
+        "106"
+      ]
     },
     {
       "wrestler_id": "35008214132",
@@ -58,7 +69,10 @@
       "player_page": "players/jadiel-esquivel-214132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "jadiel esquivel jadiel esquivel so. 113"
+      "search_text": "jadiel esquivel so. 113 113",
+      "weights_wrestled": [
+        "113"
+      ]
     },
     {
       "wrestler_id": "35008235132",
@@ -72,7 +86,11 @@
       "player_page": "players/matt-hart-235132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "matt hart matt hart so. 113 113"
+      "search_text": "matt hart so. 113 113 106 113",
+      "weights_wrestled": [
+        "106",
+        "113"
+      ]
     },
     {
       "wrestler_id": "35217444132",
@@ -86,7 +104,10 @@
       "player_page": "players/benjamin-pollock-444132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "benjamin pollock benjamin pollock fr. 113"
+      "search_text": "benjamin pollock fr. 113 113",
+      "weights_wrestled": [
+        "113"
+      ]
     },
     {
       "wrestler_id": "35008213132",
@@ -100,7 +121,11 @@
       "player_page": "players/anthony-blahut-213132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "anthony blahut anthony blahut so. 120"
+      "search_text": "anthony blahut so. 120 113 120",
+      "weights_wrestled": [
+        "113",
+        "120"
+      ]
     },
     {
       "wrestler_id": "35008197132",
@@ -110,11 +135,15 @@
       "assigned_weight": "120",
       "wins": 21,
       "losses": 16,
-      "photo": null,
+      "photo": "assets/img/roster/sean-bradley.jpg",
       "player_page": "players/sean-bradley-197132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "sean bradley sean bradley sr. 120 120"
+      "search_text": "sean bradley sr. 120 120 113 120",
+      "weights_wrestled": [
+        "113",
+        "120"
+      ]
     },
     {
       "wrestler_id": "35217751132",
@@ -128,7 +157,10 @@
       "player_page": "players/romeo-cline-751132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "romeo cline romeo cline so. 120"
+      "search_text": "romeo cline so. 120 120",
+      "weights_wrestled": [
+        "120"
+      ]
     },
     {
       "wrestler_id": "35217521132",
@@ -142,7 +174,10 @@
       "player_page": "players/ranger-fest-521132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "ranger fest ranger fest so. 120"
+      "search_text": "ranger fest so. 120 120",
+      "weights_wrestled": [
+        "120"
+      ]
     },
     {
       "wrestler_id": "35217406132",
@@ -156,7 +191,10 @@
       "player_page": "players/noah-meisner-406132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "noah meisner noah meisner fr. 120"
+      "search_text": "noah meisner fr. 120 120",
+      "weights_wrestled": [
+        "120"
+      ]
     },
     {
       "wrestler_id": "35217460132",
@@ -170,7 +208,10 @@
       "player_page": "players/luke-velasco-460132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "luke velasco luke velasco fr. 120"
+      "search_text": "luke velasco fr. 120 120",
+      "weights_wrestled": [
+        "120"
+      ]
     },
     {
       "wrestler_id": "35217363132",
@@ -184,7 +225,11 @@
       "player_page": "players/gino-gonzalez-363132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "gino gonzalez gino gonzalez fr. 126"
+      "search_text": "gino gonzalez fr. 126 120 126",
+      "weights_wrestled": [
+        "120",
+        "126"
+      ]
     },
     {
       "wrestler_id": "35008201132",
@@ -194,11 +239,17 @@
       "assigned_weight": "126",
       "wins": 29,
       "losses": 7,
-      "photo": null,
+      "photo": "assets/img/roster/jordan-segal.jpg",
       "player_page": "players/jordan-segal-201132.html",
       "prestige_points": 105,
       "has_prestige": true,
-      "search_text": "jordan segal jordan segal sr. 126 126"
+      "search_text": "jordan segal sr. 126 126 126 132 138 144",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ]
     },
     {
       "wrestler_id": "35497376132",
@@ -212,7 +263,10 @@
       "player_page": "players/logan-curiale-376132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "logan curiale logan curiale fr. 132"
+      "search_text": "logan curiale fr. 132 132",
+      "weights_wrestled": [
+        "132"
+      ]
     },
     {
       "wrestler_id": "35217370132",
@@ -226,7 +280,10 @@
       "player_page": "players/cole-hoguet-370132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "cole hoguet cole hoguet fr. 132"
+      "search_text": "cole hoguet fr. 132 132",
+      "weights_wrestled": [
+        "132"
+      ]
     },
     {
       "wrestler_id": "35008210132",
@@ -240,7 +297,12 @@
       "player_page": "players/nathan-hunnewell-210132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "nathan hunnewell nathan hunnewell jr. 132"
+      "search_text": "nathan hunnewell jr. 132 120 126 132",
+      "weights_wrestled": [
+        "120",
+        "126",
+        "132"
+      ]
     },
     {
       "wrestler_id": "35217388132",
@@ -254,7 +316,11 @@
       "player_page": "players/brayden-inman-388132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "brayden inman brayden inman fr. 132 132"
+      "search_text": "brayden inman fr. 132 132 126 132",
+      "weights_wrestled": [
+        "126",
+        "132"
+      ]
     },
     {
       "wrestler_id": "35497452132",
@@ -268,7 +334,10 @@
       "player_page": "players/charles-pulaski-452132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "charles pulaski charles pulaski fr. 132"
+      "search_text": "charles pulaski fr. 132 132",
+      "weights_wrestled": [
+        "132"
+      ]
     },
     {
       "wrestler_id": "35008225132",
@@ -278,11 +347,16 @@
       "assigned_weight": null,
       "wins": 11,
       "losses": 6,
-      "photo": null,
+      "photo": "assets/img/roster/leeland-rogers.jpg",
       "player_page": "players/leeland-rogers-225132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "leeland rogers leeland rogers so. 132"
+      "search_text": "leeland rogers so. 132 132 138 144",
+      "weights_wrestled": [
+        "132",
+        "138",
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008238132",
@@ -296,7 +370,10 @@
       "player_page": "players/cooper-stauss-238132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "cooper stauss cooper stauss so. 132"
+      "search_text": "cooper stauss so. 132 132",
+      "weights_wrestled": [
+        "132"
+      ]
     },
     {
       "wrestler_id": "35008199132",
@@ -306,11 +383,17 @@
       "assigned_weight": "138",
       "wins": 4,
       "losses": 11,
-      "photo": null,
+      "photo": "assets/img/roster/garrett-borlaug.jpg",
       "player_page": "players/garrett-borlaug-199132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "garrett borlaug garrett borlaug sr. 138 138"
+      "search_text": "garrett borlaug sr. 138 138 126 132 138 144",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008236132",
@@ -324,7 +407,10 @@
       "player_page": "players/landon-caffery-236132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "landon caffery landon caffery so. 138"
+      "search_text": "landon caffery so. 138 138",
+      "weights_wrestled": [
+        "138"
+      ]
     },
     {
       "wrestler_id": "35008203132",
@@ -338,7 +424,13 @@
       "player_page": "players/michael-hart-203132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "michael hart michael hart jr. 138"
+      "search_text": "michael hart jr. 138 126 132 138 144",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008223132",
@@ -352,7 +444,11 @@
       "player_page": "players/owen-siena-223132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "owen siena owen siena so. 138"
+      "search_text": "owen siena so. 138 132 138",
+      "weights_wrestled": [
+        "132",
+        "138"
+      ]
     },
     {
       "wrestler_id": "35008237132",
@@ -366,7 +462,11 @@
       "player_page": "players/jack-caldwell-237132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "jack caldwell jack caldwell so. 144"
+      "search_text": "jack caldwell so. 144 144 150",
+      "weights_wrestled": [
+        "144",
+        "150"
+      ]
     },
     {
       "wrestler_id": "35008209132",
@@ -376,11 +476,16 @@
       "assigned_weight": null,
       "wins": 17,
       "losses": 14,
-      "photo": null,
+      "photo": "assets/img/roster/ryan-hoerst.jpg",
       "player_page": "players/ryan-hoerst-209132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "ryan hoerst ryan hoerst jr. 144"
+      "search_text": "ryan hoerst jr. 144 138 144 150",
+      "weights_wrestled": [
+        "138",
+        "144",
+        "150"
+      ]
     },
     {
       "wrestler_id": "35557421132",
@@ -394,7 +499,10 @@
       "player_page": "players/walter-johnson-421132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "walter johnson walter johnson so. 144"
+      "search_text": "walter johnson so. 144 144",
+      "weights_wrestled": [
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008211132",
@@ -408,7 +516,10 @@
       "player_page": "players/rhys-pritchard-211132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "rhys pritchard rhys pritchard jr. 144"
+      "search_text": "rhys pritchard jr. 144 144",
+      "weights_wrestled": [
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008220132",
@@ -422,7 +533,11 @@
       "player_page": "players/brian-reice-220132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "brian reice brian reice so. 144"
+      "search_text": "brian reice so. 144 144 150",
+      "weights_wrestled": [
+        "144",
+        "150"
+      ]
     },
     {
       "wrestler_id": "35008200132",
@@ -436,7 +551,10 @@
       "player_page": "players/max-shectman-200132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "max shectman max shectman sr. 144"
+      "search_text": "max shectman sr. 144 144",
+      "weights_wrestled": [
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008221132",
@@ -446,11 +564,16 @@
       "assigned_weight": "144",
       "wins": 21,
       "losses": 14,
-      "photo": null,
+      "photo": "assets/img/roster/oleksandr-sasha-yurovskyi.jpg",
       "player_page": "players/oleksandr-sasha-yurovskyi-221132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "oleksandr `sasha` yurovskyi oleksandr `sasha` yurovskyi so. 144 144"
+      "search_text": "oleksandr `sasha` yurovskyi so. 144 144 144 150 157",
+      "weights_wrestled": [
+        "144",
+        "150",
+        "157"
+      ]
     },
     {
       "wrestler_id": "35008232132",
@@ -464,7 +587,10 @@
       "player_page": "players/colin-dowd-232132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "colin dowd colin dowd sr. 150"
+      "search_text": "colin dowd sr. 150 150",
+      "weights_wrestled": [
+        "150"
+      ]
     },
     {
       "wrestler_id": "35008228132",
@@ -478,7 +604,10 @@
       "player_page": "players/ashton-hayden-228132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "ashton hayden ashton hayden jr. 150"
+      "search_text": "ashton hayden jr. 150 150",
+      "weights_wrestled": [
+        "150"
+      ]
     },
     {
       "wrestler_id": "35217378132",
@@ -492,7 +621,10 @@
       "player_page": "players/domenico-incollingo-378132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "domenico incollingo domenico incollingo fr. 150"
+      "search_text": "domenico incollingo fr. 150 150",
+      "weights_wrestled": [
+        "150"
+      ]
     },
     {
       "wrestler_id": "35497397132",
@@ -506,7 +638,11 @@
       "player_page": "players/kellan-mcdonough-397132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "kellan mcdonough kellan mcdonough fr. 150 150"
+      "search_text": "kellan mcdonough fr. 150 150 150 157",
+      "weights_wrestled": [
+        "150",
+        "157"
+      ]
     },
     {
       "wrestler_id": "35217455132",
@@ -520,7 +656,10 @@
       "player_page": "players/arjun-shah-455132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "arjun shah arjun shah fr. 150"
+      "search_text": "arjun shah fr. 150 150",
+      "weights_wrestled": [
+        "150"
+      ]
     },
     {
       "wrestler_id": "35217512132",
@@ -534,7 +673,10 @@
       "player_page": "players/gabriel-evans-512132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "gabriel evans gabriel evans so. 157 157"
+      "search_text": "gabriel evans so. 157 157 157",
+      "weights_wrestled": [
+        "157"
+      ]
     },
     {
       "wrestler_id": "36450248132",
@@ -548,7 +690,10 @@
       "player_page": "players/brandon-kelly-248132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "brandon kelly brandon kelly fr. 157"
+      "search_text": "brandon kelly fr. 157 157",
+      "weights_wrestled": [
+        "157"
+      ]
     },
     {
       "wrestler_id": "35555998132",
@@ -562,7 +707,10 @@
       "player_page": "players/william-mays-998132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "william mays william mays so. 157"
+      "search_text": "william mays so. 157 157",
+      "weights_wrestled": [
+        "157"
+      ]
     },
     {
       "wrestler_id": "35497529132",
@@ -576,7 +724,10 @@
       "player_page": "players/jack-potter-529132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "jack potter jack potter jr. 157"
+      "search_text": "jack potter jr. 157 157",
+      "weights_wrestled": [
+        "157"
+      ]
     },
     {
       "wrestler_id": "35008198132",
@@ -590,7 +741,11 @@
       "player_page": "players/tyler-davis-198132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "tyler davis tyler davis sr. 165"
+      "search_text": "tyler davis sr. 165 165 175",
+      "weights_wrestled": [
+        "165",
+        "175"
+      ]
     },
     {
       "wrestler_id": "35217539132",
@@ -604,7 +759,10 @@
       "player_page": "players/brodie-regan-539132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "brodie regan brodie regan so. 165"
+      "search_text": "brodie regan so. 165 165",
+      "weights_wrestled": [
+        "165"
+      ]
     },
     {
       "wrestler_id": "35008226132",
@@ -618,7 +776,11 @@
       "player_page": "players/eli-sauler-226132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "eli sauler eli sauler so. 165"
+      "search_text": "eli sauler so. 165 165 175",
+      "weights_wrestled": [
+        "165",
+        "175"
+      ]
     },
     {
       "wrestler_id": "35008207132",
@@ -628,11 +790,16 @@
       "assigned_weight": null,
       "wins": 14,
       "losses": 11,
-      "photo": null,
+      "photo": "assets/img/roster/trevor-sieben.jpg",
       "player_page": "players/trevor-sieben-207132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "trevor sieben trevor sieben jr. 165"
+      "search_text": "trevor sieben jr. 165 157 165 175",
+      "weights_wrestled": [
+        "157",
+        "165",
+        "175"
+      ]
     },
     {
       "wrestler_id": "35008208132",
@@ -642,11 +809,16 @@
       "assigned_weight": "165",
       "wins": 27,
       "losses": 6,
-      "photo": null,
+      "photo": "assets/img/roster/max-spitznas.jpg",
       "player_page": "players/max-spitznas-208132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "max spitznas max spitznas jr. 165 165"
+      "search_text": "max spitznas jr. 165 165 157 165 175",
+      "weights_wrestled": [
+        "157",
+        "165",
+        "175"
+      ]
     },
     {
       "wrestler_id": "35008202132",
@@ -656,11 +828,16 @@
       "assigned_weight": "175",
       "wins": 9,
       "losses": 12,
-      "photo": null,
+      "photo": "assets/img/roster/joseph-augusta.jpg",
       "player_page": "players/joseph-augusta-202132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "joseph augusta joseph augusta sr. 175 175"
+      "search_text": "joseph augusta sr. 175 175 165 175 190",
+      "weights_wrestled": [
+        "165",
+        "175",
+        "190"
+      ]
     },
     {
       "wrestler_id": "35497540132",
@@ -674,7 +851,10 @@
       "player_page": "players/anthony-birney-540132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "anthony birney anthony birney sr. 175"
+      "search_text": "anthony birney sr. 175 175",
+      "weights_wrestled": [
+        "175"
+      ]
     },
     {
       "wrestler_id": "35497360132",
@@ -688,7 +868,10 @@
       "player_page": "players/logan-cino-360132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "logan cino logan cino fr. 175"
+      "search_text": "logan cino fr. 175 175",
+      "weights_wrestled": [
+        "175"
+      ]
     },
     {
       "wrestler_id": "35217400132",
@@ -702,7 +885,10 @@
       "player_page": "players/giovanni-lopez-400132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "giovanni lopez giovanni lopez fr. 190"
+      "search_text": "giovanni lopez fr. 190 190",
+      "weights_wrestled": [
+        "190"
+      ]
     },
     {
       "wrestler_id": "35008215132",
@@ -716,7 +902,10 @@
       "player_page": "players/andrik-orenyo-215132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "andrik orenyo andrik orenyo so. 190"
+      "search_text": "andrik orenyo so. 190 190",
+      "weights_wrestled": [
+        "190"
+      ]
     },
     {
       "wrestler_id": "35008217132",
@@ -730,7 +919,10 @@
       "player_page": "players/jacobs-rodriguez-217132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "jacobs rodriguez jacobs rodriguez so. 190 190"
+      "search_text": "jacobs rodriguez so. 190 190 190",
+      "weights_wrestled": [
+        "190"
+      ]
     },
     {
       "wrestler_id": "35217322132",
@@ -744,7 +936,10 @@
       "player_page": "players/jack-gleeson-322132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "jack gleeson jack gleeson fr. 215"
+      "search_text": "jack gleeson fr. 215 215",
+      "weights_wrestled": [
+        "215"
+      ]
     },
     {
       "wrestler_id": "35008204132",
@@ -758,7 +953,11 @@
       "player_page": "players/robert-lane-204132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "robert lane robert lane jr. 215"
+      "search_text": "robert lane jr. 215 190 215",
+      "weights_wrestled": [
+        "190",
+        "215"
+      ]
     },
     {
       "wrestler_id": "35008205132",
@@ -768,11 +967,15 @@
       "assigned_weight": "215",
       "wins": 15,
       "losses": 15,
-      "photo": null,
+      "photo": "assets/img/roster/william-liam-mcsorley.jpg",
       "player_page": "players/william-liam-mcsorley-205132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "william (liam) mcsorley william (liam) mcsorley jr. 215 215"
+      "search_text": "william (liam) mcsorley jr. 215 215 215 285",
+      "weights_wrestled": [
+        "215",
+        "285"
+      ]
     },
     {
       "wrestler_id": "35008219132",
@@ -786,7 +989,11 @@
       "player_page": "players/rowan-nix-219132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "rowan nix rowan nix so. 215"
+      "search_text": "rowan nix so. 215 190 215",
+      "weights_wrestled": [
+        "190",
+        "215"
+      ]
     },
     {
       "wrestler_id": "35556025132",
@@ -800,7 +1007,10 @@
       "player_page": "players/veliz-velasquez-carlos-025132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "veliz-velasquez carlos veliz-velasquez carlos fr. 285"
+      "search_text": "veliz-velasquez carlos fr. 285 285",
+      "weights_wrestled": [
+        "285"
+      ]
     },
     {
       "wrestler_id": "35008230132",
@@ -810,11 +1020,15 @@
       "assigned_weight": "285",
       "wins": 22,
       "losses": 14,
-      "photo": null,
+      "photo": "assets/img/roster/collin-mchugh.jpg",
       "player_page": "players/collin-mchugh-230132.html",
       "prestige_points": 0,
       "has_prestige": false,
-      "search_text": "collin mchugh collin mchugh jr. 285 285"
+      "search_text": "collin mchugh jr. 285 285 215 285",
+      "weights_wrestled": [
+        "215",
+        "285"
+      ]
     }
   ]
 }

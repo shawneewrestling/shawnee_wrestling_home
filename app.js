@@ -7,6 +7,7 @@
   const PLAYERS_INDEX_URL = 'data/players_index.json';
   const STANDINGS_URL = 'data/standings.json';
   const COACH_HISTORY_URL = 'data/coaching_history.json';
+  const HOME_ROSTER_URL = 'data/home_roster.json';
   const PLACEHOLDER_PHOTO = 'assets/img/wrestler-silhouette.svg';
 
   async function loadJson(url) {
@@ -78,7 +79,11 @@
       return;
     }
     const data = await loadJson(DATA_URL);
-    if (page === 'Home') renderHome(data);
+    if (page === 'Home') {
+      const homeRoster = await loadJson(HOME_ROSTER_URL).catch(() => null);
+      renderHome(data, homeRoster);
+      return;
+    }
     else if (page === 'Schedule / Results') renderSchedule(data);
     else if (page === 'Results') renderResults(data);
     else if (page === 'Stats') renderStats(data);
@@ -88,7 +93,7 @@
     if (main) main.insertAdjacentHTML('afterbegin', `<div class="callout warn">${esc(e.message)}</div>`);
   }
 
-  function renderHome(data) {
+  function renderHome(data, homeRoster) {
     const m = data.metadata || {};
     const ds = data.dual_scores || {};
     const dualRec = m.dual_record || ds.record || '—';
@@ -105,6 +110,9 @@
       <div class="stat-card"><div class="label">Conference</div><div class="value">${esc(confRec)}</div></div>
       <div class="stat-card"><div class="label">Home / Away</div><div class="value">${esc((m.home_record || ds.home_record || '—') + ' / ' + (m.away_record || ds.away_record || '—'))}</div></div>
       <div class="stat-card"><div class="label">Scored duals</div><div class="value">${(ds.duals || []).length}</div></div>`;
+
+    renderHomeRoster(homeRoster);
+
     const tb = document.querySelector('#homeDuals tbody');
     // Ledger: every dual, including splits from tri/quad meets
     const duals = data.dual_scores?.duals || [];
@@ -114,6 +122,57 @@
         <td>${d.shawnee}-${d.opp}</td>
         <td><span class="badge ${d.result === 'W' ? 'w' : 'l'}">${esc(d.result)}</span></td>
       </tr>`).join('');
+  }
+
+  function renderHomeRoster(homeRoster) {
+    const grid = document.getElementById('homeRosterGrid');
+    if (!grid) return;
+    if (!homeRoster || !(homeRoster.wrestlers || []).length) {
+      grid.innerHTML = '<p>Roster gallery unavailable.</p>';
+      return;
+    }
+    const note = document.getElementById('homeRosterNote');
+    const c = homeRoster.counts || {};
+    if (note) {
+      note.textContent = `Team-site gallery (${c.wp_gallery ?? (homeRoster.wrestlers || []).length}) matched to 2025-26 season data where names align (${c.matched ?? 0} matched).`;
+    }
+    grid.innerHTML = (homeRoster.wrestlers || []).map((r) => {
+      const href = r.player_page || '';
+      const tag = href ? 'a' : 'div';
+      const hrefAttr = href ? ` href="${esc(href)}"` : '';
+      const wt = r.display_weight || (r.weights_wrestled && r.weights_wrestled[0]) || '';
+      const wtChip = wt ? `<span class="wt-chip">${esc(wt)}</span>` : '';
+      const metaParts = [];
+      if (r.grade) metaParts.push(esc(r.grade));
+      if (r.wins != null && r.losses != null) metaParts.push(esc(`${r.wins}-${r.losses}`));
+      else if ((r.weights_wrestled || []).length) metaParts.push(esc((r.weights_wrestled || []).join('/')));
+      const meta = metaParts.length ? `<div class="meta">${metaParts.join(' · ')}</div>` : '';
+      return `<${tag} class="wrestler-tile"${hrefAttr}>
+        <div class="photo-wrap">
+          ${wtChip}
+          <img src="${esc(photoSrc(r.photo))}" alt="${esc(r.name)}" loading="lazy"
+               onerror="this.src='${PLACEHOLDER_PHOTO}'" />
+        </div>
+        <div class="body">
+          <div class="name">${esc(r.name)}</div>
+          ${meta}
+        </div>
+      </${tag}>`;
+    }).join('');
+
+    const box = document.getElementById('homeRosterUnmatched');
+    if (box && homeRoster.match_report) {
+      const mr = homeRoster.match_report;
+      const uwp = mr.unmatched_wp || [];
+      const utw = mr.unmatched_tw || [];
+      if (uwp.length || utw.length) {
+        box.hidden = false;
+        const parts = [];
+        if (uwp.length) parts.push(`<strong>On team-site gallery only:</strong> ${uwp.map(esc).join(', ')}`);
+        if (utw.length) parts.push(`<strong>On 2025-26 season roster only (${utw.length}):</strong> ${utw.map(esc).join(', ')}`);
+        box.innerHTML = parts.join('<br/>');
+      }
+    }
   }
 
 
@@ -176,17 +235,23 @@
       photo: w.photo,
       player_page: null,
       prestige_points: 0,
+      weights_wrestled: w.weights_wrestled || (w.weight ? [String(w.weight)] : []),
       search_text: [w.name, w.grade, w.weight].filter(Boolean).join(' ').toLowerCase(),
     }));
     rows.sort((a, b) => {
-      const aw = parseInt(a.roster_weight || a.assigned_weight, 10) || 999;
-      const bw = parseInt(b.roster_weight || b.assigned_weight, 10) || 999;
+      const aw = parseInt((a.weights_wrestled || [])[0] || a.roster_weight || a.assigned_weight, 10) || 999;
+      const bw = parseInt((b.weights_wrestled || [])[0] || b.roster_weight || b.assigned_weight, 10) || 999;
       return aw - bw || String(a.name || '').localeCompare(String(b.name || ''));
     });
 
     const weightSel = document.getElementById('rosterWeight');
-    const weights = [...new Set(rows.map((r) => String(r.roster_weight || r.assigned_weight || '')).filter(Boolean))]
-      .sort((a, b) => (parseInt(a, 10) || 0) - (parseInt(b, 10) || 0));
+    const weightSet = new Set();
+    rows.forEach((r) => {
+      (r.weights_wrestled || []).forEach((w) => weightSet.add(String(w)));
+      if (r.roster_weight) weightSet.add(String(r.roster_weight));
+      if (r.assigned_weight) weightSet.add(String(r.assigned_weight));
+    });
+    const weights = [...weightSet].filter(Boolean).sort((a, b) => (parseInt(a, 10) || 0) - (parseInt(b, 10) || 0));
     if (weightSel && weightSel.options.length <= 1) {
       weights.forEach((wt) => {
         const opt = document.createElement('option');
@@ -201,14 +266,23 @@
     const qEl = document.getElementById('rosterSearch');
     const gEl = document.getElementById('rosterGrade');
 
+    function rowWeights(r) {
+      const ww = (r.weights_wrestled || []).map(String);
+      if (ww.length) return ww;
+      const single = r.roster_weight || r.assigned_weight;
+      return single ? [String(single)] : [];
+    }
+
     function paint() {
       const q = (qEl && qEl.value || '').trim().toLowerCase();
       const g = gEl && gEl.value || '';
       const wt = weightSel && weightSel.value || '';
       const filtered = rows.filter((r) => {
         if (g && r.grade !== g) return false;
-        if (wt && String(r.roster_weight || r.assigned_weight) !== wt) return false;
-        if (q && !(r.search_text || '').includes(q) && !(r.name || '').toLowerCase().includes(q)) return false;
+        const ww = rowWeights(r);
+        if (wt && !ww.includes(wt) && String(r.roster_weight || '') !== wt && String(r.assigned_weight || '') !== wt) return false;
+        const hay = (r.search_text || '') + ' ' + (r.name || '').toLowerCase() + ' ' + ww.join(' ');
+        if (q && !hay.includes(q)) return false;
         return true;
       });
       if (countEl) countEl.textContent = `${filtered.length} wrestler${filtered.length === 1 ? '' : 's'}`;
@@ -217,17 +291,23 @@
         const tag = href === '#' ? 'div' : 'a';
         const hrefAttr = href === '#' ? '' : ` href="${esc(href)}"`;
         const prest = r.prestige_points ? `<span class="prest-chip">${esc(r.prestige_points)} pts</span>` : '';
-        const wtLabel = r.assigned_weight || r.roster_weight || '—';
+        const ww = rowWeights(r);
+        const wtLabel = ww.length ? ww.join('/') : '';
+        const wtChip = wtLabel ? `<span class="wt-chip">${esc(wtLabel)}</span>` : '';
+        const metaParts = [];
+        if (r.grade) metaParts.push(esc(r.grade));
+        if (r.wins != null && r.losses != null) metaParts.push(esc(`${r.wins ?? 0}-${r.losses ?? 0}`));
+        const meta = metaParts.length ? `<div class="meta">${metaParts.join(' · ')}</div>` : '';
         return `<${tag} class="wrestler-tile"${hrefAttr}>
           <div class="photo-wrap">
-            <span class="wt-chip">${esc(wtLabel)}</span>
+            ${wtChip}
             ${prest}
             <img src="${esc(photoSrc(r.photo))}" alt="${esc(r.name)}" loading="lazy"
                  onerror="this.src='${PLACEHOLDER_PHOTO}'" />
           </div>
           <div class="body">
             <div class="name">${esc(r.name)}</div>
-            <div class="meta">${esc(r.grade || '')} · ${esc((r.wins ?? 0) + '-' + (r.losses ?? 0))}</div>
+            ${meta}
           </div>
         </${tag}>`;
       }).join('') || '<p>No matches</p>';

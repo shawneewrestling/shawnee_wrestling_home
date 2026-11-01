@@ -36,7 +36,10 @@
       "grade": "Fr.",
       "wins": 3,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "106"
+      ]
     },
     {
       "wrestler_id": "35217452132",
@@ -47,7 +50,12 @@
       "grade": "Fr.",
       "wins": 1,
       "losses": 3,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "106",
+        "113",
+        "150"
+      ]
     },
     {
       "wrestler_id": "35876936132",
@@ -58,7 +66,10 @@
       "grade": "Fr.",
       "wins": 0,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "106"
+      ]
     },
     {
       "wrestler_id": "35008214132",
@@ -69,7 +80,10 @@
       "grade": "So.",
       "wins": 1,
       "losses": 2,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "113"
+      ]
     },
     {
       "wrestler_id": "35008235132",
@@ -80,7 +94,11 @@
       "grade": "So.",
       "wins": 12,
       "losses": 20,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "106",
+        "113"
+      ]
     },
     {
       "wrestler_id": "35217444132",
@@ -91,7 +109,10 @@
       "grade": "Fr.",
       "wins": 1,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "113"
+      ]
     },
     {
       "wrestler_id": "35008213132",
@@ -102,7 +123,11 @@
       "grade": "So.",
       "wins": 6,
       "losses": 17,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "113",
+        "120"
+      ]
     },
     {
       "wrestler_id": "35008197132",
@@ -113,7 +138,12 @@
       "grade": "Sr.",
       "wins": 21,
       "losses": 16,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "113",
+        "120"
+      ],
+      "photo": "assets/img/roster/sean-bradley.jpg"
     },
     {
       "wrestler_id": "35217751132",
@@ -124,7 +154,10 @@
       "grade": "So.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "120"
+      ]
     },
     {
       "wrestler_id": "35217521132",
@@ -135,7 +168,10 @@
       "grade": "So.",
       "wins": 1,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "120"
+      ]
     },
     {
       "wrestler_id": "35217406132",
@@ -146,7 +182,10 @@
       "grade": "Fr.",
       "wins": 1,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "120"
+      ]
     },
     {
       "wrestler_id": "35217460132",
@@ -157,7 +196,10 @@
       "grade": "Fr.",
       "wins": 0,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "120"
+      ]
     },
     {
       "wrestler_id": "35217363132",
@@ -168,7 +210,11 @@
       "grade": "Fr.",
       "wins": 3,
       "losses": 6,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "120",
+        "126"
+      ]
     },
     {
       "wrestler_id": "35008201132",
@@ -179,7 +225,14 @@
       "grade": "Sr.",
       "wins": 29,
       "losses": 7,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
+      "photo": "assets/img/roster/jordan-segal.jpg"
     },
     {
       "wrestler_id": "35497376132",
@@ -190,7 +243,10 @@
       "grade": "Fr.",
       "wins": 1,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "132"
+      ]
     },
     {
       "wrestler_id": "35217370132",
@@ -201,7 +257,10 @@
       "grade": "Fr.",
       "wins": 0,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "132"
+      ]
     },
     {
       "wrestler_id": "35008210132",
@@ -212,7 +271,12 @@
       "grade": "Jr.",
       "wins": 12,
       "losses": 11,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "120",
+        "126",
+        "132"
+      ]
     },
     {
       "wrestler_id": "35217388132",
@@ -223,7 +287,11 @@
       "grade": "Fr.",
       "wins": 14,
       "losses": 12,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "126",
+        "132"
+      ]
     },
     {
       "wrestler_id": "35497452132",
@@ -234,7 +302,10 @@
       "grade": "Fr.",
       "wins": 0,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "132"
+      ]
     },
     {
       "wrestler_id": "35008225132",
@@ -245,7 +316,13 @@
       "grade": "So.",
       "wins": 11,
       "losses": 6,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "132",
+        "138",
+        "144"
+      ],
+      "photo": "assets/img/roster/leeland-rogers.jpg"
     },
     {
       "wrestler_id": "35008238132",
@@ -256,7 +333,10 @@
       "grade": "So.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "132"
+      ]
     },
     {
       "wrestler_id": "35008199132",
@@ -267,7 +347,14 @@
       "grade": "Sr.",
       "wins": 4,
       "losses": 11,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
+      "photo": "assets/img/roster/garrett-borlaug.jpg"
     },
     {
       "wrestler_id": "35008236132",
@@ -278,7 +365,10 @@
       "grade": "So.",
       "wins": 0,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "138"
+      ]
     },
     {
       "wrestler_id": "35008203132",
@@ -289,7 +379,13 @@
       "grade": "Jr.",
       "wins": 6,
       "losses": 5,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008223132",
@@ -300,7 +396,11 @@
       "grade": "So.",
       "wins": 2,
       "losses": 5,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "132",
+        "138"
+      ]
     },
     {
       "wrestler_id": "35008237132",
@@ -311,7 +411,11 @@
       "grade": "So.",
       "wins": 2,
       "losses": 7,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "144",
+        "150"
+      ]
     },
     {
       "wrestler_id": "35008209132",
@@ -322,7 +426,13 @@
       "grade": "Jr.",
       "wins": 17,
       "losses": 14,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "138",
+        "144",
+        "150"
+      ],
+      "photo": "assets/img/roster/ryan-hoerst.jpg"
     },
     {
       "wrestler_id": "35557421132",
@@ -333,7 +443,10 @@
       "grade": "So.",
       "wins": 0,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008211132",
@@ -344,7 +457,10 @@
       "grade": "Jr.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008220132",
@@ -355,7 +471,11 @@
       "grade": "So.",
       "wins": 3,
       "losses": 4,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "144",
+        "150"
+      ]
     },
     {
       "wrestler_id": "35008200132",
@@ -366,7 +486,10 @@
       "grade": "Sr.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "144"
+      ]
     },
     {
       "wrestler_id": "35008221132",
@@ -377,7 +500,13 @@
       "grade": "So.",
       "wins": 21,
       "losses": 14,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "144",
+        "150",
+        "157"
+      ],
+      "photo": "assets/img/roster/oleksandr-sasha-yurovskyi.jpg"
     },
     {
       "wrestler_id": "35008232132",
@@ -388,7 +517,10 @@
       "grade": "Sr.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "150"
+      ]
     },
     {
       "wrestler_id": "35008228132",
@@ -399,7 +531,10 @@
       "grade": "Jr.",
       "wins": 0,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "150"
+      ]
     },
     {
       "wrestler_id": "35217378132",
@@ -410,7 +545,10 @@
       "grade": "Fr.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "150"
+      ]
     },
     {
       "wrestler_id": "35497397132",
@@ -421,7 +559,11 @@
       "grade": "Fr.",
       "wins": 2,
       "losses": 2,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "150",
+        "157"
+      ]
     },
     {
       "wrestler_id": "35217455132",
@@ -432,7 +574,10 @@
       "grade": "Fr.",
       "wins": 0,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "150"
+      ]
     },
     {
       "wrestler_id": "35217512132",
@@ -443,7 +588,10 @@
       "grade": "So.",
       "wins": 1,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "157"
+      ]
     },
     {
       "wrestler_id": "36450248132",
@@ -454,7 +602,10 @@
       "grade": "Fr.",
       "wins": 0,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "157"
+      ]
     },
     {
       "wrestler_id": "35555998132",
@@ -465,7 +616,10 @@
       "grade": "So.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "157"
+      ]
     },
     {
       "wrestler_id": "35497529132",
@@ -476,7 +630,10 @@
       "grade": "Jr.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "157"
+      ]
     },
     {
       "wrestler_id": "35008198132",
@@ -487,7 +644,11 @@
       "grade": "Sr.",
       "wins": 3,
       "losses": 13,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "165",
+        "175"
+      ]
     },
     {
       "wrestler_id": "35217539132",
@@ -498,7 +659,10 @@
       "grade": "So.",
       "wins": 0,
       "losses": 2,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "165"
+      ]
     },
     {
       "wrestler_id": "35008226132",
@@ -509,7 +673,11 @@
       "grade": "So.",
       "wins": 1,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "165",
+        "175"
+      ]
     },
     {
       "wrestler_id": "35008207132",
@@ -520,7 +688,13 @@
       "grade": "Jr.",
       "wins": 14,
       "losses": 11,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "157",
+        "165",
+        "175"
+      ],
+      "photo": "assets/img/roster/trevor-sieben.jpg"
     },
     {
       "wrestler_id": "35008208132",
@@ -531,7 +705,13 @@
       "grade": "Jr.",
       "wins": 27,
       "losses": 6,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "157",
+        "165",
+        "175"
+      ],
+      "photo": "assets/img/roster/max-spitznas.jpg"
     },
     {
       "wrestler_id": "35008202132",
@@ -542,7 +722,13 @@
       "grade": "Sr.",
       "wins": 9,
       "losses": 12,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "165",
+        "175",
+        "190"
+      ],
+      "photo": "assets/img/roster/joseph-augusta.jpg"
     },
     {
       "wrestler_id": "35497540132",
@@ -553,7 +739,10 @@
       "grade": "Sr.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "175"
+      ]
     },
     {
       "wrestler_id": "35497360132",
@@ -564,7 +753,10 @@
       "grade": "Fr.",
       "wins": 3,
       "losses": 2,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "175"
+      ]
     },
     {
       "wrestler_id": "35217400132",
@@ -575,7 +767,10 @@
       "grade": "Fr.",
       "wins": 1,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "190"
+      ]
     },
     {
       "wrestler_id": "35008215132",
@@ -586,7 +781,10 @@
       "grade": "So.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "190"
+      ]
     },
     {
       "wrestler_id": "35008217132",
@@ -597,7 +795,10 @@
       "grade": "So.",
       "wins": 4,
       "losses": 4,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "190"
+      ]
     },
     {
       "wrestler_id": "35217322132",
@@ -608,7 +809,10 @@
       "grade": "Fr.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "215"
+      ]
     },
     {
       "wrestler_id": "35008204132",
@@ -619,7 +823,11 @@
       "grade": "Jr.",
       "wins": 3,
       "losses": 1,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "190",
+        "215"
+      ]
     },
     {
       "wrestler_id": "35008205132",
@@ -630,7 +838,12 @@
       "grade": "Jr.",
       "wins": 15,
       "losses": 15,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "215",
+        "285"
+      ],
+      "photo": "assets/img/roster/william-liam-mcsorley.jpg"
     },
     {
       "wrestler_id": "35008219132",
@@ -641,7 +854,11 @@
       "grade": "So.",
       "wins": 13,
       "losses": 14,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "190",
+        "215"
+      ]
     },
     {
       "wrestler_id": "35556025132",
@@ -652,7 +869,10 @@
       "grade": "Fr.",
       "wins": 0,
       "losses": 0,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "285"
+      ]
     },
     {
       "wrestler_id": "35008230132",
@@ -663,7 +883,12 @@
       "grade": "Jr.",
       "wins": 22,
       "losses": 14,
-      "gender": "M"
+      "gender": "M",
+      "weights_wrestled": [
+        "215",
+        "285"
+      ],
+      "photo": "assets/img/roster/collin-mchugh.jpg"
     }
   ],
   "schedule": [
@@ -2947,7 +3172,7 @@
         },
         {
           "wrestler": "Anthony Blahut",
-          "weight": "113",
+          "weight": "120",
           "record": "1-1",
           "wins": 1,
           "losses": 1,
@@ -2977,7 +3202,7 @@
         },
         {
           "wrestler": "Sean Bradley",
-          "weight": "113",
+          "weight": "120",
           "record": "1-1",
           "wins": 1,
           "losses": 1,
@@ -3006,28 +3231,8 @@
           ]
         },
         {
-          "wrestler": "Gino Gonzalez",
-          "weight": "126",
-          "record": "0-1",
-          "wins": 0,
-          "losses": 1,
-          "placement": null,
-          "bouts": [
-            {
-              "weight": "126",
-              "round": null,
-              "result": "L",
-              "win_type": "Tech. Fall",
-              "fall_seconds": 167,
-              "opponent_wrestler": "Ryan McConaghy",
-              "opponent_team": "West Deptford",
-              "score": "Fall 2:47"
-            }
-          ]
-        },
-        {
           "wrestler": "Brayden Inman",
-          "weight": "132",
+          "weight": "126",
           "record": "2-0",
           "wins": 2,
           "losses": 0,
@@ -3056,8 +3261,28 @@
           ]
         },
         {
+          "wrestler": "Gino Gonzalez",
+          "weight": "126",
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "placement": null,
+          "bouts": [
+            {
+              "weight": "126",
+              "round": null,
+              "result": "L",
+              "win_type": "Tech. Fall",
+              "fall_seconds": 167,
+              "opponent_wrestler": "Ryan McConaghy",
+              "opponent_team": "West Deptford",
+              "score": "Fall 2:47"
+            }
+          ]
+        },
+        {
           "wrestler": "Garrett Borlaug",
-          "weight": "132",
+          "weight": "138",
           "record": "1-1",
           "wins": 1,
           "losses": 1,
@@ -3136,36 +3361,6 @@
           ]
         },
         {
-          "wrestler": "Oleksandr `Sasha` Yurovskyi",
-          "weight": "150",
-          "record": "2-0",
-          "wins": 2,
-          "losses": 0,
-          "placement": null,
-          "bouts": [
-            {
-              "weight": "150",
-              "round": null,
-              "result": "W",
-              "win_type": "Fall",
-              "fall_seconds": 108,
-              "opponent_wrestler": "Ashutosh Tripathi",
-              "opponent_team": "West Windsor-Plainsboro North",
-              "score": "Fall 1:48"
-            },
-            {
-              "weight": "157",
-              "round": null,
-              "result": "W",
-              "win_type": "Fall",
-              "fall_seconds": 26,
-              "opponent_wrestler": "Joshua Teasdale",
-              "opponent_team": "West Deptford",
-              "score": "Fall 0:26"
-            }
-          ]
-        },
-        {
           "wrestler": "Ryan Hoerst",
           "weight": "150",
           "record": "1-0",
@@ -3216,28 +3411,38 @@
           ]
         },
         {
-          "wrestler": "Eli Sauler",
-          "weight": "175",
-          "record": "1-0",
-          "wins": 1,
+          "wrestler": "Oleksandr `Sasha` Yurovskyi",
+          "weight": "157",
+          "record": "2-0",
+          "wins": 2,
           "losses": 0,
           "placement": null,
           "bouts": [
             {
-              "weight": "175",
+              "weight": "150",
               "round": null,
               "result": "W",
-              "win_type": "Forfeit",
-              "fall_seconds": null,
-              "opponent_wrestler": null,
-              "opponent_team": null,
-              "score": "Forfeit"
+              "win_type": "Fall",
+              "fall_seconds": 108,
+              "opponent_wrestler": "Ashutosh Tripathi",
+              "opponent_team": "West Windsor-Plainsboro North",
+              "score": "Fall 1:48"
+            },
+            {
+              "weight": "157",
+              "round": null,
+              "result": "W",
+              "win_type": "Fall",
+              "fall_seconds": 26,
+              "opponent_wrestler": "Joshua Teasdale",
+              "opponent_team": "West Deptford",
+              "score": "Fall 0:26"
             }
           ]
         },
         {
           "wrestler": "Tyler Davis",
-          "weight": "175",
+          "weight": "165",
           "record": "2-0",
           "wins": 2,
           "losses": 0,
@@ -3262,6 +3467,26 @@
               "opponent_wrestler": "Colton Sabo",
               "opponent_team": "West Deptford",
               "score": "Fall 4:30"
+            }
+          ]
+        },
+        {
+          "wrestler": "Eli Sauler",
+          "weight": "175",
+          "record": "1-0",
+          "wins": 1,
+          "losses": 0,
+          "placement": null,
+          "bouts": [
+            {
+              "weight": "175",
+              "round": null,
+              "result": "W",
+              "win_type": "Forfeit",
+              "fall_seconds": null,
+              "opponent_wrestler": null,
+              "opponent_team": null,
+              "score": "Forfeit"
             }
           ]
         },
@@ -4940,36 +5165,6 @@
           ]
         },
         {
-          "wrestler": "Logan Reice",
-          "weight": "113",
-          "record": "0-2",
-          "wins": 0,
-          "losses": 2,
-          "placement": null,
-          "bouts": [
-            {
-              "weight": "150",
-              "round": null,
-              "result": "L",
-              "win_type": "Fall",
-              "fall_seconds": 40,
-              "opponent_wrestler": "Mark Finelli",
-              "opponent_team": "Seneca",
-              "score": "Fall 0:40"
-            },
-            {
-              "weight": "113",
-              "round": null,
-              "result": "L",
-              "win_type": "Fall",
-              "fall_seconds": 45,
-              "opponent_wrestler": "Eric LaGrotta",
-              "opponent_team": "Lenape",
-              "score": "Fall 0:45"
-            }
-          ]
-        },
-        {
           "wrestler": "Sean Bradley",
           "weight": "113",
           "record": "1-2",
@@ -5226,6 +5421,36 @@
               "opponent_wrestler": "Devin Grayson",
               "opponent_team": "Cherokee",
               "score": "14-3"
+            }
+          ]
+        },
+        {
+          "wrestler": "Logan Reice",
+          "weight": "150",
+          "record": "0-2",
+          "wins": 0,
+          "losses": 2,
+          "placement": null,
+          "bouts": [
+            {
+              "weight": "150",
+              "round": null,
+              "result": "L",
+              "win_type": "Fall",
+              "fall_seconds": 40,
+              "opponent_wrestler": "Mark Finelli",
+              "opponent_team": "Seneca",
+              "score": "Fall 0:40"
+            },
+            {
+              "weight": "113",
+              "round": null,
+              "result": "L",
+              "win_type": "Fall",
+              "fall_seconds": 45,
+              "opponent_wrestler": "Eric LaGrotta",
+              "opponent_team": "Lenape",
+              "score": "Fall 0:45"
             }
           ]
         },
@@ -5660,7 +5885,7 @@
         },
         {
           "wrestler": "Jordan Segal",
-          "weight": "132",
+          "weight": "138",
           "record": "1-1",
           "wins": 1,
           "losses": 1,
@@ -5799,28 +6024,8 @@
           ]
         },
         {
-          "wrestler": "Trevor Sieben",
-          "weight": "165",
-          "record": "0-1",
-          "wins": 0,
-          "losses": 1,
-          "placement": null,
-          "bouts": [
-            {
-              "weight": "165",
-              "round": null,
-              "result": "L",
-              "win_type": "Fall",
-              "fall_seconds": 87,
-              "opponent_wrestler": "Raymond Miller",
-              "opponent_team": "Rancocas Valley Regional",
-              "score": "Fall 1:27"
-            }
-          ]
-        },
-        {
           "wrestler": "Max Spitznas",
-          "weight": "175",
+          "weight": "165",
           "record": "0-2",
           "wins": 0,
           "losses": 2,
@@ -5845,6 +6050,26 @@
               "opponent_wrestler": "Carter Robles",
               "opponent_team": "Rancocas Valley Regional",
               "score": "4-7"
+            }
+          ]
+        },
+        {
+          "wrestler": "Trevor Sieben",
+          "weight": "165",
+          "record": "0-1",
+          "wins": 0,
+          "losses": 1,
+          "placement": null,
+          "bouts": [
+            {
+              "weight": "165",
+              "round": null,
+              "result": "L",
+              "win_type": "Fall",
+              "fall_seconds": 87,
+              "opponent_wrestler": "Raymond Miller",
+              "opponent_team": "Rancocas Valley Regional",
+              "score": "Fall 1:27"
             }
           ]
         },
@@ -6177,7 +6402,7 @@
         },
         {
           "wrestler": "Brayden Inman",
-          "weight": "132",
+          "weight": "126",
           "record": "2-2",
           "wins": 2,
           "losses": 2,
@@ -8020,7 +8245,7 @@
         },
         {
           "wrestler": "Anthony Blahut",
-          "weight": "113",
+          "weight": "120",
           "record": "2-0",
           "wins": 2,
           "losses": 0,
@@ -8050,7 +8275,7 @@
         },
         {
           "wrestler": "Sean Bradley",
-          "weight": "113",
+          "weight": "120",
           "record": "1-1",
           "wins": 1,
           "losses": 1,
