@@ -796,3 +796,16 @@ tr:hover td { background: #eef5fb; }
   font-size: clamp(0.75rem, 2vw, 0.95rem);
   color: var(--accent);
 }
+
+.team-photo-figure {
+  margin: 0;
+}
+.team-photo-caption {
+  margin-top: 0.55rem;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--navy);
+}
