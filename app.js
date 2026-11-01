@@ -602,8 +602,6 @@
 
   function renderResults(data) {
     const s = data.standings || {};
-    const noteEl = document.getElementById('resultsNote');
-    if (noteEl) noteEl.textContent = s.note || '';
     const ds = data.dual_scores || {};
     const meta = document.getElementById('resultsMeta');
     const seasonLabel = data.metadata?.title || data.metadata?.season || s.season || 'Season';
@@ -639,13 +637,6 @@
   }
 
   function renderConferenceStandings(doc) {
-    const noteEl = document.getElementById('standingsNote');
-    const gaps = (doc.gaps || []).filter((g) => typeof g === 'string' || g.type === 'validation');
-    const gapText = gaps.map((g) => typeof g === 'string' ? g : (g.issues || []).join('; ')).filter(Boolean).join(' · ');
-    if (noteEl) {
-      noteEl.textContent = gapText || '';
-      noteEl.style.display = gapText ? '' : 'none';
-    }
     const meta = document.getElementById('standingsMeta');
     const seasonTitle = doc.title || doc.season || 'Season';
     if (meta) {
@@ -653,7 +644,6 @@
       meta.innerHTML =
         `<span><strong>Conference</strong> ${esc(doc.conference || 'Olympic')}</span>
          <span><strong>Season</strong> ${final ? `Final · ${esc(seasonTitle)}` : esc(seasonTitle)}</span>
-         <span><strong>Source</strong> ${esc(doc.source || '—')}</span>
          <span><strong>As of</strong> ${esc(doc.as_of || doc.generated_at || '—')}</span>`;
     }
     const host = document.getElementById('conferenceStandings');
