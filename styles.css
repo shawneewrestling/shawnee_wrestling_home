@@ -56,11 +56,11 @@ a:hover { color: var(--accent); }
   width: 56px; height: 56px;
   display: grid; place-items: center;
   flex-shrink: 0;
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  outline: none;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
   padding: 0;
   overflow: visible;
 }

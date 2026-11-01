@@ -208,7 +208,7 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
   <header class="site-header">
     <div class="inner">
       <div class="brand">
-        <div class="brand-mark"><img src="../assets/img/shawnee-s.png" alt="Shawnee" width="56" height="56" /></div>
+        <div class="brand-mark"><img src="../assets/img/shawnee-s.png?v=568b45b" alt="Shawnee" width="56" height="56" /></div>
         <div>
           <h1>Shawnee Renegades</h1>
           <div class="tag">Wrestling · 2025-2026 Season</div>
