@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "season": "2025-2026",
-  "updated_at": "2026-11-01T13:45:56-05:00",
-  "count": 182,
+  "updated_at": "2026-11-01T13:46:35-05:00",
+  "count": 181,
   "current_count": 58,
-  "alumni_count": 124,
+  "alumni_count": 123,
   "wrestlers": [
     {
       "wrestler_id": "35217300132",
@@ -3537,28 +3537,6 @@
       "seasons_on_record": 2,
       "status": "alumni",
       "search_text": "eugene wayns alumni"
-    },
-    {
-      "wrestler_id": "alumd33fef58",
-      "name": "FF FF",
-      "grade": "Alumni",
-      "roster_weight": null,
-      "assigned_weight": null,
-      "weights_wrestled": [],
-      "career_weights": [],
-      "weights_by_season": {},
-      "wins": 0,
-      "losses": 0,
-      "photo": null,
-      "player_page": "players/ff-ff-3fef58.html",
-      "prestige_points": 0,
-      "has_prestige": false,
-      "show_career": true,
-      "career_wins": 0,
-      "career_losses": 0,
-      "seasons_on_record": 6,
-      "status": "alumni",
-      "search_text": "ff ff alumni"
     },
     {
       "wrestler_id": "alum57e81946",

@@ -585,6 +585,8 @@ def build_players(
         nk = name_key(row["name"])
         if not nk or nk in existing_keys:
             continue
+        if re.fullmatch(r"f+", nk or ""):
+            continue
         if row.get("season_rows") or (row.get("win") or 0) or (row.get("loss") or 0):
             extra_names[nk] = row["name"]
     for key, v in wh_by_key.items():

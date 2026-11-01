@@ -101,6 +101,8 @@ def clean_person_name(name: str) -> Optional[str]:
     low = nm.lower()
     if low in ("total", "totals", "team", "name", "#"):
         return None
+    if re.fullmatch(r"f+(?:\s+f+)*", low):
+        return None
     # Known sheet typo
     nm = re.sub(r"(?i)\bHggins\b", "Higgins", nm)
     return nm
@@ -509,9 +511,37 @@ def apply_awards_and_grad(
         if w.get("grade"):
             grade_by[key] = w["grade"]
         # also id-based
+    # Secondary index: last-token key (handles "Richard John (RJ) Hunnewell" ↔ "RJ Hunnewell")
+    page_by_last = {}
+    grade_by_last = {}
+    for w in (players_index.get("wrestlers") or []):
+        nm = w.get("name") or ""
+        parts = re.findall(r"[a-z]+", nm.lower())
+        if len(parts) >= 2:
+            last_key = parts[0] + parts[-1]
+            if w.get("player_page") and last_key not in page_by_last:
+                page_by_last[last_key] = w["player_page"]
+            if w.get("grade") and last_key not in grade_by_last:
+                grade_by_last[last_key] = w["grade"]
+
     for key, acc in by.items():
-        acc["player_page"] = page_by.get(key)
-        acc["current_grade"] = grade_by.get(key)
+        page = page_by.get(key)
+        grade = grade_by.get(key)
+        if not page:
+            parts = re.findall(r"[a-z]+", (acc.get("name") or "").lower())
+            if len(parts) >= 2:
+                last_key = parts[0] + parts[-1]
+                page = page_by_last.get(last_key) or page_by.get(last_key)
+                if not grade:
+                    grade = grade_by_last.get(last_key)
+                # also try last-name-only against pages whose last token matches
+                if not page:
+                    last = parts[-1]
+                    hits = [v for k, v in page_by.items() if k.endswith(last) and k != key]
+                    if len(hits) == 1:
+                        page = hits[0]
+        acc["player_page"] = page
+        acc["current_grade"] = grade
 
 
 def finalize(acc: Dict[str, Any]) -> Dict[str, Any]:
@@ -684,11 +714,12 @@ def build() -> Dict[str, Any]:
 
     wrestlers = [finalize(acc) for acc in by.values()]
     # Drop fully empty / aggregate junk names
-    junk = {"total", "totals", "team", "matthggins"}
+    junk = {"total", "totals", "team", "matthggins", "ffff", "ff"}
     wrestlers = [
         w for w in wrestlers
         if w.get("name")
         and (w.get("name_key") or "") not in junk
+        and not re.fullmatch(r"f+", (w.get("name_key") or ""))
         and (w.get("win") or w.get("loss") or w.get("seasons"))
     ]
     wrestlers.sort(key=lambda w: (-(w.get("win") or 0), (w.get("loss") or 9999), w.get("name") or ""))
