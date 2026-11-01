@@ -1,0 +1,16 @@
+# NJSIAA seeding tool — Basic Auth. Password file lives OUTSIDE public_html.
+AuthType Basic
+AuthName "Shawnee Coaching — Seeding"
+AuthUserFile /home/u696276045/.htpasswds/seeding
+Require valid-user
+
+# Extra belt: deny direct access if an .htpasswd were ever dropped here by mistake
+<Files ".htpasswd">
+  Require all denied
+</Files>
+<FilesMatch "^\.ht">
+  Require all denied
+</FilesMatch>
+
+# Do not list directory
+Options -Indexes

@@ -5,3 +5,7 @@ screens/
 
 # NJ.com bracket HTML cache (regenerable via pull_opponent_advancement.py)
 data/cache/
+
+# Seeding page credentials — never commit
+**/.htpasswd
+seeding-*/.htpasswd

@@ -925,3 +925,23 @@ tr:hover td { background: #eef5fb; }
 .player-season-table td.num, .player-season-table th.num {
   text-align: right; font-variant-numeric: tabular-nums;
 }
+
+
+/* FOOTER_STEALTH_SEEDING */
+/* Discreet seeding entry: looks like plain footer text */
+.site-footer a.footer-stealth,
+.site-footer a.footer-stealth:link,
+.site-footer a.footer-stealth:visited,
+.site-footer a.footer-stealth:hover,
+.site-footer a.footer-stealth:focus,
+.site-footer a.footer-stealth:active {
+  color: inherit;
+  text-decoration: none;
+  cursor: text;
+  font-weight: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  pointer-events: auto;
+}
