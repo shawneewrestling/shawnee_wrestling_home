@@ -1,105 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shawnee Renegades Wrestling</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home · Shawnee Renegades Wrestling</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Shawnee Renegades</h1>
-            <p class="subtitle">Wrestling</p>
-            <nav>
-                <a href="#roster">Roster</a>
-                <a href="#schedule">Schedule</a>
-                <a href="#results">Results</a>
-            </nav>
+  <header class="site-header">
+    <div class="inner">
+      <div class="brand">
+        <div class="brand-mark">S</div>
+        <div>
+          <h1>Shawnee Renegades</h1>
+          <div class="tag">Wrestling · 2025-26 Closeout</div>
         </div>
-    </header>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="roster.html" class="">Roster</a>
+        <a href="full-roster.html" class="">Full Roster</a>
+        <a href="schedule.html" class="">Schedule / Results</a>
+        <a href="standings.html" class="">Standings</a>
+        <a href="stats.html" class="">Stats</a>
+        <a href="awards.html" class="">Awards</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1 class="page-title">2025-26 Season Closeout</h1>
+    <p class="page-sub">Preliminary static rebuild simulating end-of-season for shawneewrestling.com (branch preview only).</p>
+    <div class="meta-bar" id="homeMeta">Loading…</div>
+    <div class="cards" id="homeCards"></div>
+    <div class="callout">
+      Trackwrestling is the sole schedule/results source. Opponent logos come from GoBound (Olympic Conference NJ). Main <strong>Roster</strong> is Varsity only (auto from dual appearances + coach overrides). Career baseline is empty until Jeff uploads prior-years data for 2026-27.
+    </div>
+    <h2 class="page-title" style="font-size:1.25rem;margin-top:1.5rem">Recent dual results</h2>
+    <div class="table-wrap"><table id="homeDuals"><thead><tr><th>Opponent</th><th>Score</th><th>Result</th></tr></thead><tbody></tbody></table></div>
 
-    <main class="container">
-        <div class="last-updated">
-            Last Updated: <span id="lastUpdated">Loading...</span>
-        </div>
-
-        <!-- Roster Section -->
-        <section id="roster">
-            <h2>2025-26 Roster</h2>
-            <div class="table-container">
-                <table id="rosterTable">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Weight Class</th>
-                            <th>Grade</th>
-                            <th>Record</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="4">Loading roster data...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Schedule Section -->
-        <section id="schedule">
-            <h2>Schedule</h2>
-            <div class="table-container">
-                <table id="scheduleTable">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Opponent</th>
-                            <th>Location</th>
-                            <th>Time</th>
-                            <th>Result</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="5">Loading schedule data...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- Results Section -->
-        <section id="results">
-            <h2>Results</h2>
-            <div class="table-container">
-                <table id="resultsTable">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Opponent</th>
-                            <th>Score</th>
-                            <th>Result</th>
-                            <th>Location</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="5">Loading results data...</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025-26 Shawnee High School Wrestling | Data from <a href="https://www.trackwrestling.com" target="_blank">TrackWrestling</a></p>
-            <p>Automatically updated daily at 6 AM EST</p>
-        </div>
-    </footer>
-
-    <script src="app.js"></script>
+  </main>
+  <footer class="site-footer">
+    Shawnee High School Wrestling · Data from Trackwrestling (seasonId 1560212138) · Logos from GoBound · Static site-v2 preview (not live WordPress)
+  </footer>
+  <script src="app.js"></script>
 </body>
 </html>

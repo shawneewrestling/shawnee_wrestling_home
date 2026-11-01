@@ -1,3 +1,21 @@
+# Shawnee Wrestling Home (site-v2 closeout branch)
+
+> **Branch `site-v2-2025-26-closeout`**: static multi-page preview simulating 2025-26 season closeout.
+> Not live. Do not deploy to Hostinger from this branch. Data from Trackwrestling seasonId `1560212138` / teamId `768996150`.
+
+Pages: Home · Roster · Schedule/Results · Standings · Stats · Awards (chevron cards).
+
+Update data:
+```bash
+python update_site_data.py            # scrape TW + rebuild awards/career
+python update_site_data.py --skip-scrape
+python -m http.server 8080            # then open index.html
+```
+
+Docs: `docs/AUTO_AWARDS.md`, `docs/CAREER.md`.
+
+---
+
 # Shawnee Wrestling Automation
 
 Automated wrestling website for Shawnee High School that pulls roster, schedule, and results data from TrackWrestling daily.

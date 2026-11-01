@@ -1,0 +1,18 @@
+{
+  "built_at": "2026-11-01T08:57:32-05:00",
+  "branch_target": "site-v2-2025-26-closeout",
+  "counts": {
+    "roster": 58,
+    "schedule": 24,
+    "scored_duals": 8,
+    "awards_total": 219,
+    "awards_derived_2025_26": 9,
+    "logos": 18,
+    "varsity": 46
+  },
+  "dual_record": "3-5",
+  "ids": {
+    "team_id": "768996150",
+    "season_id": "1560212138"
+  }
+}

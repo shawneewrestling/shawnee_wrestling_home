@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-01T08:56:58-05:00",
+  "source": "manual_or_jotform",
+  "note": "Coach overrides win over auto derivation. Planned: Jotform lists full roster with varsity checkbox + weight dropdown; daily routine writes submissions here. Do not create the form yet \u2014 schema only.",
+  "include": [],
+  "exclude": [],
+  "weight_overrides": {},
+  "starters": {}
+}

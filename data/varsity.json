@@ -1,0 +1,660 @@
+{
+  "schema_version": 1,
+  "season": "2025-26",
+  "season_id": "1560212138",
+  "updated_at": "2026-11-01T08:57:32-05:00",
+  "derivation": "season_record_proxy",
+  "derivation_note": "TW dual bout feed unavailable for 2025-26 replay \u2014 proxy: wrestlers with season W+L >= 1 from getWrestlers; weight = TW roster weight. Coach overrides in varsity_overrides.json win. Replace dual_appearances.json bouts to switch to true dual-bout derivation.",
+  "counts": {
+    "auto": 46,
+    "total": 46,
+    "excluded": 0,
+    "full_roster": 58
+  },
+  "wrestlers": [
+    {
+      "wrestler_id": "35217300132",
+      "name": "Daniel Fitzpatrick",
+      "weight": "106",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "106": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217452132",
+      "name": "Logan Reice",
+      "weight": "106",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 3,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "106": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35876936132",
+      "name": "Logan Sloan",
+      "weight": "106",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "106": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217444132",
+      "name": "Benjamin Pollock",
+      "weight": "113",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "113": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008214132",
+      "name": "Jadiel Esquivel",
+      "weight": "113",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 2,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "113": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008235132",
+      "name": "Matt Hart",
+      "weight": "113",
+      "grade": "So.",
+      "wins": 12,
+      "losses": 20,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "113": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008213132",
+      "name": "Anthony Blahut",
+      "weight": "120",
+      "grade": "So.",
+      "wins": 6,
+      "losses": 17,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "120": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217460132",
+      "name": "Luke Velasco",
+      "weight": "120",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "120": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217406132",
+      "name": "Noah Meisner",
+      "weight": "120",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "120": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217521132",
+      "name": "Ranger Fest",
+      "weight": "120",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "120": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008197132",
+      "name": "Sean Bradley",
+      "weight": "120",
+      "grade": "Sr.",
+      "wins": 21,
+      "losses": 16,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "120": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217363132",
+      "name": "Gino Gonzalez",
+      "weight": "126",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 6,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "126": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008201132",
+      "name": "Jordan Segal",
+      "weight": "126",
+      "grade": "Sr.",
+      "wins": 29,
+      "losses": 7,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "126": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217388132",
+      "name": "Brayden Inman",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 14,
+      "losses": 12,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "132": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35497452132",
+      "name": "Charles Pulaski",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "132": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217370132",
+      "name": "Cole Hoguet",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "132": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008225132",
+      "name": "Leeland Rogers",
+      "weight": "132",
+      "grade": "So.",
+      "wins": 11,
+      "losses": 6,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "132": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35497376132",
+      "name": "Logan Curiale",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "132": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008210132",
+      "name": "Nathan Hunnewell",
+      "weight": "132",
+      "grade": "Jr.",
+      "wins": 12,
+      "losses": 11,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "132": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008199132",
+      "name": "Garrett Borlaug",
+      "weight": "138",
+      "grade": "Sr.",
+      "wins": 4,
+      "losses": 11,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "138": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008236132",
+      "name": "Landon Caffery",
+      "weight": "138",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "138": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008203132",
+      "name": "Michael Hart",
+      "weight": "138",
+      "grade": "Jr.",
+      "wins": 6,
+      "losses": 5,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "138": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008223132",
+      "name": "Owen Siena",
+      "weight": "138",
+      "grade": "So.",
+      "wins": 2,
+      "losses": 5,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "138": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008220132",
+      "name": "Brian Reice",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 3,
+      "losses": 4,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "144": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008237132",
+      "name": "Jack Caldwell",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 2,
+      "losses": 7,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "144": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008221132",
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 21,
+      "losses": 14,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "144": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008209132",
+      "name": "Ryan Hoerst",
+      "weight": "144",
+      "grade": "Jr.",
+      "wins": 17,
+      "losses": 14,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "144": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35557421132",
+      "name": "Walter Johnson",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "144": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217455132",
+      "name": "Arjun Shah",
+      "weight": "150",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "150": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008228132",
+      "name": "Ashton Hayden",
+      "weight": "150",
+      "grade": "Jr.",
+      "wins": 0,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "150": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35497397132",
+      "name": "Kellan McDonough",
+      "weight": "150",
+      "grade": "Fr.",
+      "wins": 2,
+      "losses": 2,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "150": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "36450248132",
+      "name": "Brandon Kelly",
+      "weight": "157",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "157": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217512132",
+      "name": "Gabriel Evans",
+      "weight": "157",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "157": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217539132",
+      "name": "Brodie Regan",
+      "weight": "165",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 2,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "165": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008226132",
+      "name": "Eli Sauler",
+      "weight": "165",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "165": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008208132",
+      "name": "Max Spitznas",
+      "weight": "165",
+      "grade": "Jr.",
+      "wins": 27,
+      "losses": 6,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "165": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008207132",
+      "name": "Trevor Sieben",
+      "weight": "165",
+      "grade": "Jr.",
+      "wins": 14,
+      "losses": 11,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "165": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008198132",
+      "name": "Tyler Davis",
+      "weight": "165",
+      "grade": "Sr.",
+      "wins": 3,
+      "losses": 13,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "165": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008202132",
+      "name": "Joseph Augusta",
+      "weight": "175",
+      "grade": "Sr.",
+      "wins": 9,
+      "losses": 12,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "175": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35497360132",
+      "name": "Logan Cino",
+      "weight": "175",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 2,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "175": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35217400132",
+      "name": "Giovanni Lopez",
+      "weight": "190",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "190": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008217132",
+      "name": "Jacobs Rodriguez",
+      "weight": "190",
+      "grade": "So.",
+      "wins": 4,
+      "losses": 4,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "190": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008204132",
+      "name": "Robert Lane",
+      "weight": "215",
+      "grade": "Jr.",
+      "wins": 3,
+      "losses": 1,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "215": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008219132",
+      "name": "Rowan Nix",
+      "weight": "215",
+      "grade": "So.",
+      "wins": 13,
+      "losses": 14,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "215": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008205132",
+      "name": "William (Liam) McSorley",
+      "weight": "215",
+      "grade": "Jr.",
+      "wins": 15,
+      "losses": 15,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "215": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    },
+    {
+      "wrestler_id": "35008230132",
+      "name": "Collin McHugh",
+      "weight": "285",
+      "grade": "Jr.",
+      "wins": 22,
+      "losses": 14,
+      "varsity_bouts": null,
+      "weight_counts": {
+        "285": 1
+      },
+      "source": "season_record_proxy",
+      "starter": false
+    }
+  ]
+}

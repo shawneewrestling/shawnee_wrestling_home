@@ -1,75 +1,1783 @@
 {
   "metadata": {
-    "team_id": "768996150",
+    "team": "Shawnee High School",
+    "nickname": "Renegades",
+    "season": "2025-26",
     "season_id": "1560212138",
-    "last_updated": "2024-12-11T00:00:00",
-    "team_name": "Shawnee High School",
-    "season": "2025-26"
+    "team_id": "768996150",
+    "gb_id": "36",
+    "dual_record": "3-5",
+    "generated_at": "2026-11-01T08:53:05-05:00",
+    "timezone": "America/New_York",
+    "sources": {
+      "schedule": "Trackwrestling getTeamSchedule + Schedule UI dual scores",
+      "roster_stats": "Trackwrestling getWrestlers",
+      "logos": "GoBound Olympic Conference / NJ school pages",
+      "awards_seed": "shawneewrestling.com awards banners (historical)"
+    },
+    "gaps": [
+      "Pins / tech falls / major decisions not present on getWrestlers \u2014 null in stats",
+      "NJSIAA individual placements not scraped \u2014 see awards meta",
+      "Official OC division standings table not from TW \u2014 derived dual slice only",
+      "Home-dual Ajax opponent field often a score fragment; dual_scores overlay applied",
+      "Missing GoBound logos: Northern Burlington, Haddonfield, Robbinsville"
+    ]
   },
-  "roster": [],
-  "schedule": [
+  "roster": [
     {
-      "date": "December 14, 2024",
-      "opponent": "OPPONENT NAME HERE",
-      "location": "LOCATION HERE",
-      "time": "TIME HERE",
-      "result": "TBD"
+      "wrestler_id": "35217300132",
+      "name": "Daniel Fitzpatrick",
+      "first_name": "Daniel",
+      "last_name": "Fitzpatrick",
+      "weight": "106",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217452132",
+      "name": "Logan Reice",
+      "first_name": "Logan",
+      "last_name": "Reice",
+      "weight": "106",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 3,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35876936132",
+      "name": "Logan Sloan",
+      "first_name": "Logan",
+      "last_name": "Sloan",
+      "weight": "106",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008214132",
+      "name": "Jadiel Esquivel",
+      "first_name": "Jadiel",
+      "last_name": "Esquivel",
+      "weight": "113",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 2,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008235132",
+      "name": "Matt Hart",
+      "first_name": "Matt",
+      "last_name": "Hart",
+      "weight": "113",
+      "grade": "So.",
+      "wins": 12,
+      "losses": 20,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217444132",
+      "name": "Benjamin Pollock",
+      "first_name": "Benjamin",
+      "last_name": "Pollock",
+      "weight": "113",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008213132",
+      "name": "Anthony Blahut",
+      "first_name": "Anthony",
+      "last_name": "Blahut",
+      "weight": "120",
+      "grade": "So.",
+      "wins": 6,
+      "losses": 17,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008197132",
+      "name": "Sean Bradley",
+      "first_name": "Sean",
+      "last_name": "Bradley",
+      "weight": "120",
+      "grade": "Sr.",
+      "wins": 21,
+      "losses": 16,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217751132",
+      "name": "Romeo Cline",
+      "first_name": "Romeo",
+      "last_name": "Cline",
+      "weight": "120",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217521132",
+      "name": "Ranger Fest",
+      "first_name": "Ranger",
+      "last_name": "Fest",
+      "weight": "120",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217406132",
+      "name": "Noah Meisner",
+      "first_name": "Noah",
+      "last_name": "Meisner",
+      "weight": "120",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217460132",
+      "name": "Luke Velasco",
+      "first_name": "Luke",
+      "last_name": "Velasco",
+      "weight": "120",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217363132",
+      "name": "Gino Gonzalez",
+      "first_name": "Gino",
+      "last_name": "Gonzalez",
+      "weight": "126",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 6,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008201132",
+      "name": "Jordan Segal",
+      "first_name": "Jordan",
+      "last_name": "Segal",
+      "weight": "126",
+      "grade": "Sr.",
+      "wins": 29,
+      "losses": 7,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35497376132",
+      "name": "Logan Curiale",
+      "first_name": "Logan",
+      "last_name": "Curiale",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217370132",
+      "name": "Cole Hoguet",
+      "first_name": "Cole",
+      "last_name": "Hoguet",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008210132",
+      "name": "Nathan Hunnewell",
+      "first_name": "Nathan",
+      "last_name": "Hunnewell",
+      "weight": "132",
+      "grade": "Jr.",
+      "wins": 12,
+      "losses": 11,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217388132",
+      "name": "Brayden Inman",
+      "first_name": "Brayden",
+      "last_name": "Inman",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 14,
+      "losses": 12,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35497452132",
+      "name": "Charles Pulaski",
+      "first_name": "Charles",
+      "last_name": "Pulaski",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008225132",
+      "name": "Leeland Rogers",
+      "first_name": "Leeland",
+      "last_name": "Rogers",
+      "weight": "132",
+      "grade": "So.",
+      "wins": 11,
+      "losses": 6,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008238132",
+      "name": "Cooper Stauss",
+      "first_name": "Cooper",
+      "last_name": "Stauss",
+      "weight": "132",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008199132",
+      "name": "Garrett Borlaug",
+      "first_name": "Garrett",
+      "last_name": "Borlaug",
+      "weight": "138",
+      "grade": "Sr.",
+      "wins": 4,
+      "losses": 11,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008236132",
+      "name": "Landon Caffery",
+      "first_name": "Landon",
+      "last_name": "Caffery",
+      "weight": "138",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008203132",
+      "name": "Michael Hart",
+      "first_name": "Michael",
+      "last_name": "Hart",
+      "weight": "138",
+      "grade": "Jr.",
+      "wins": 6,
+      "losses": 5,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008223132",
+      "name": "Owen Siena",
+      "first_name": "Owen",
+      "last_name": "Siena",
+      "weight": "138",
+      "grade": "So.",
+      "wins": 2,
+      "losses": 5,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008237132",
+      "name": "Jack Caldwell",
+      "first_name": "Jack",
+      "last_name": "Caldwell",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 2,
+      "losses": 7,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008209132",
+      "name": "Ryan Hoerst",
+      "first_name": "Ryan",
+      "last_name": "Hoerst",
+      "weight": "144",
+      "grade": "Jr.",
+      "wins": 17,
+      "losses": 14,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35557421132",
+      "name": "Walter Johnson",
+      "first_name": "Walter",
+      "last_name": "Johnson",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008211132",
+      "name": "Rhys Pritchard",
+      "first_name": "Rhys",
+      "last_name": "Pritchard",
+      "weight": "144",
+      "grade": "Jr.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008220132",
+      "name": "Brian Reice",
+      "first_name": "Brian",
+      "last_name": "Reice",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 3,
+      "losses": 4,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008200132",
+      "name": "Max Shectman",
+      "first_name": "Max",
+      "last_name": "Shectman",
+      "weight": "144",
+      "grade": "Sr.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008221132",
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "first_name": "Oleksandr `Sasha`",
+      "last_name": "Yurovskyi",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 21,
+      "losses": 14,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008232132",
+      "name": "Colin Dowd",
+      "first_name": "Colin",
+      "last_name": "Dowd",
+      "weight": "150",
+      "grade": "Sr.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008228132",
+      "name": "Ashton Hayden",
+      "first_name": "Ashton",
+      "last_name": "Hayden",
+      "weight": "150",
+      "grade": "Jr.",
+      "wins": 0,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217378132",
+      "name": "Domenico Incollingo",
+      "first_name": "Domenico",
+      "last_name": "Incollingo",
+      "weight": "150",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35497397132",
+      "name": "Kellan McDonough",
+      "first_name": "Kellan",
+      "last_name": "McDonough",
+      "weight": "150",
+      "grade": "Fr.",
+      "wins": 2,
+      "losses": 2,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217455132",
+      "name": "Arjun Shah",
+      "first_name": "Arjun",
+      "last_name": "Shah",
+      "weight": "150",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217512132",
+      "name": "Gabriel Evans",
+      "first_name": "Gabriel",
+      "last_name": "Evans",
+      "weight": "157",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "36450248132",
+      "name": "Brandon Kelly",
+      "first_name": "Brandon",
+      "last_name": "Kelly",
+      "weight": "157",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35555998132",
+      "name": "William Mays",
+      "first_name": "William",
+      "last_name": "Mays",
+      "weight": "157",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35497529132",
+      "name": "Jack Potter",
+      "first_name": "Jack",
+      "last_name": "Potter",
+      "weight": "157",
+      "grade": "Jr.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008198132",
+      "name": "Tyler Davis",
+      "first_name": "Tyler",
+      "last_name": "Davis",
+      "weight": "165",
+      "grade": "Sr.",
+      "wins": 3,
+      "losses": 13,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217539132",
+      "name": "Brodie Regan",
+      "first_name": "Brodie",
+      "last_name": "Regan",
+      "weight": "165",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 2,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008226132",
+      "name": "Eli Sauler",
+      "first_name": "Eli",
+      "last_name": "Sauler",
+      "weight": "165",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008207132",
+      "name": "Trevor Sieben",
+      "first_name": "Trevor",
+      "last_name": "Sieben",
+      "weight": "165",
+      "grade": "Jr.",
+      "wins": 14,
+      "losses": 11,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008208132",
+      "name": "Max Spitznas",
+      "first_name": "Max",
+      "last_name": "Spitznas",
+      "weight": "165",
+      "grade": "Jr.",
+      "wins": 27,
+      "losses": 6,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008202132",
+      "name": "Joseph Augusta",
+      "first_name": "Joseph",
+      "last_name": "Augusta",
+      "weight": "175",
+      "grade": "Sr.",
+      "wins": 9,
+      "losses": 12,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35497540132",
+      "name": "Anthony Birney",
+      "first_name": "Anthony",
+      "last_name": "Birney",
+      "weight": "175",
+      "grade": "Sr.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35497360132",
+      "name": "Logan Cino",
+      "first_name": "Logan",
+      "last_name": "Cino",
+      "weight": "175",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 2,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217400132",
+      "name": "Giovanni Lopez",
+      "first_name": "Giovanni",
+      "last_name": "Lopez",
+      "weight": "190",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008215132",
+      "name": "Andrik Orenyo",
+      "first_name": "Andrik",
+      "last_name": "Orenyo",
+      "weight": "190",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008217132",
+      "name": "Jacobs Rodriguez",
+      "first_name": "Jacobs",
+      "last_name": "Rodriguez",
+      "weight": "190",
+      "grade": "So.",
+      "wins": 4,
+      "losses": 4,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35217322132",
+      "name": "Jack Gleeson",
+      "first_name": "Jack",
+      "last_name": "Gleeson",
+      "weight": "215",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008204132",
+      "name": "Robert Lane",
+      "first_name": "Robert",
+      "last_name": "Lane",
+      "weight": "215",
+      "grade": "Jr.",
+      "wins": 3,
+      "losses": 1,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008205132",
+      "name": "William (Liam) McSorley",
+      "first_name": "William (Liam)",
+      "last_name": "McSorley",
+      "weight": "215",
+      "grade": "Jr.",
+      "wins": 15,
+      "losses": 15,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008219132",
+      "name": "Rowan Nix",
+      "first_name": "Rowan",
+      "last_name": "Nix",
+      "weight": "215",
+      "grade": "So.",
+      "wins": 13,
+      "losses": 14,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35556025132",
+      "name": "Veliz-Velasquez Carlos",
+      "first_name": "Veliz-Velasquez",
+      "last_name": "Carlos",
+      "weight": "285",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M"
+    },
+    {
+      "wrestler_id": "35008230132",
+      "name": "Collin McHugh",
+      "first_name": "Collin",
+      "last_name": "McHugh",
+      "weight": "285",
+      "grade": "Jr.",
+      "wins": 22,
+      "losses": 14,
+      "gender": "M"
     }
   ],
-  "results": []
+  "schedule": [
+    {
+      "event_id": "8715034132",
+      "date": "December 13, 2025",
+      "date_iso": "2025-12-13",
+      "time": "9:00 AM",
+      "time_raw": "0900",
+      "opponent": null,
+      "event_name": "Shawnee Tri-Match",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "D",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8715041132",
+      "date": "December 17, 2025",
+      "date_iso": "2025-12-17",
+      "time": "5:30 PM",
+      "time_raw": "1730",
+      "opponent": "Cherry Hill West",
+      "event_name": "Cherry Hill  West, NJ @ Shawnee, NJ",
+      "location": "Shawnee",
+      "home_away": "home",
+      "level": "Varsity",
+      "event_kind": null,
+      "result": "W",
+      "score_shawnee": 57,
+      "score_opp": 11,
+      "score_display": "57-11",
+      "opponent_slug": "cherry-hill-west",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/9cf0882c-28ac-405f-83fe-7701aa59a120/CherryHillWest-NJ-Small.png",
+      "opponent_logo_local": "assets/logos/cherry-hill-west.png"
+    },
+    {
+      "event_id": "8706927132",
+      "date": "December 20, 2025",
+      "date_iso": "2025-12-20",
+      "time": null,
+      "time_raw": null,
+      "opponent": null,
+      "event_name": "2025 TCNJ Pride",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "I",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8714376132",
+      "date": "December 20, 2025",
+      "date_iso": "2025-12-20",
+      "time": "8:30 AM",
+      "time_raw": "0830",
+      "opponent": null,
+      "event_name": "Beast of the East 2025",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "I",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8719713132",
+      "date": "December 27, 2025",
+      "date_iso": "2025-12-27",
+      "time": null,
+      "time_raw": null,
+      "opponent": null,
+      "event_name": "2025 Hunterdon Central Invitational",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "I",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8724258132",
+      "date": "January 3, 2026",
+      "date_iso": "2026-01-03",
+      "time": "9:00 AM",
+      "time_raw": "0900",
+      "opponent": null,
+      "event_name": "LRHSD Quad",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "D",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8715992132",
+      "date": "January 6, 2026",
+      "date_iso": "2026-01-06",
+      "time": "6:00 PM",
+      "time_raw": "1800",
+      "opponent": "Northern Burlington ( Columbus)",
+      "event_name": "Shawnee, NJ @ Northern  Burlington ( Columbus), NJ",
+      "location": "Northern  Burlington ( Columbus)",
+      "home_away": "away",
+      "level": "Varsity",
+      "event_kind": null,
+      "result": "L",
+      "score_shawnee": 29,
+      "score_opp": 47,
+      "score_display": "29-47",
+      "opponent_slug": "northern-burlington-columbus",
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8729716132",
+      "date": "January 9, 2026",
+      "date_iso": "2026-01-09",
+      "time": "5:00 PM",
+      "time_raw": "1700",
+      "opponent": null,
+      "event_name": "Tri Match @ Camden Catholic",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "D",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8715046132",
+      "date": "January 14, 2026",
+      "date_iso": "2026-01-14",
+      "time": "5:30 PM",
+      "time_raw": "1730",
+      "opponent": "Moorestown",
+      "event_name": "Moorestown, NJ @ Shawnee, NJ",
+      "location": "Shawnee",
+      "home_away": "home",
+      "level": "Varsity",
+      "event_kind": null,
+      "result": "L",
+      "score_shawnee": 27,
+      "score_opp": 37,
+      "score_display": "27-37",
+      "opponent_slug": "moorestown",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/665a5d9c-d27e-4961-82bc-e33c059eddef/Moorestown-NJ-Small.png",
+      "opponent_logo_local": "assets/logos/moorestown.png"
+    },
+    {
+      "event_id": "8708390132",
+      "date": "January 17, 2026",
+      "date_iso": "2026-01-17",
+      "time": "8:00 AM",
+      "time_raw": "0800",
+      "opponent": null,
+      "event_name": "ESCAPE THE ROCK",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "I",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8926560132",
+      "date": "January 19, 2026",
+      "date_iso": "2026-01-19",
+      "time": null,
+      "time_raw": null,
+      "opponent": null,
+      "event_name": "Cherokee Annual JV Tournament",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Junior Varsity",
+      "event_kind": "I",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8733355132",
+      "date": "January 21, 2026",
+      "date_iso": "2026-01-21",
+      "time": "6:00 PM",
+      "time_raw": "1800",
+      "opponent": "Paul Vi",
+      "event_name": "Shawnee, NJ @ Paul Vi, NJ",
+      "location": "Paul Vi",
+      "home_away": "away",
+      "level": "Varsity",
+      "event_kind": null,
+      "result": "W",
+      "score_shawnee": 42,
+      "score_opp": 31,
+      "score_display": "42-31",
+      "opponent_slug": "paul-vi",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/4c578ccd-89bc-4f32-b173-04323a51d07a/paulVI-nj-small.png",
+      "opponent_logo_local": "assets/logos/paul-vi.png"
+    },
+    {
+      "event_id": "8715071132",
+      "date": "January 24, 2026",
+      "date_iso": "2026-01-24",
+      "time": "9:00 AM",
+      "time_raw": "0900",
+      "opponent": null,
+      "event_name": "Pine Barrens Dual Tournament",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "D",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8715049132",
+      "date": "January 28, 2026",
+      "date_iso": "2026-01-28",
+      "time": "5:30 PM",
+      "time_raw": "1730",
+      "opponent": "Eastern",
+      "event_name": "Eastern, NJ @ Shawnee, NJ",
+      "location": "Shawnee",
+      "home_away": "home",
+      "level": "Varsity",
+      "event_kind": null,
+      "result": "L",
+      "score_shawnee": 35,
+      "score_opp": 36,
+      "score_display": "35-36",
+      "opponent_slug": "eastern",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/b7b4d777-1d7c-45ee-90c8-42a29d2eea1d/EasternRegional-NJ-Small.png",
+      "opponent_logo_local": "assets/logos/eastern.png"
+    },
+    {
+      "event_id": "8715056132",
+      "date": "January 31, 2026",
+      "date_iso": "2026-01-31",
+      "time": "9:00 AM",
+      "time_raw": "0900",
+      "opponent": null,
+      "event_name": "Quad @ Shawnee w/Absegami, Cinnaminson & Collingswood",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "D",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8733359132",
+      "date": "February 4, 2026",
+      "date_iso": "2026-02-04",
+      "time": "5:30 PM",
+      "time_raw": "1730",
+      "opponent": "Cherry Hill East",
+      "event_name": "Shawnee, NJ @ Cherry Hill  East, NJ",
+      "location": "Cherry Hill  East",
+      "home_away": "away",
+      "level": "Varsity",
+      "event_kind": null,
+      "result": "W",
+      "score_shawnee": 45,
+      "score_opp": 25,
+      "score_display": "45-25",
+      "opponent_slug": "cherry-hill-east",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/d53b41d2-9d36-45a8-b1a4-4e034e2c8540/CherryHillEastCougarsSmall.png",
+      "opponent_logo_local": "assets/logos/cherry-hill-east.png"
+    },
+    {
+      "event_id": "8733362132",
+      "date": "February 6, 2026",
+      "date_iso": "2026-02-06",
+      "time": "6:00 PM",
+      "time_raw": "1800",
+      "opponent": "Haddonfield High Schol",
+      "event_name": "Shawnee, NJ @ Haddonfield High Schol, NJ",
+      "location": "Haddonfield High Schol",
+      "home_away": "away",
+      "level": "Varsity",
+      "event_kind": null,
+      "result": "L",
+      "score_shawnee": 25,
+      "score_opp": 39,
+      "score_display": "25-39",
+      "opponent_slug": "haddonfield-high-school",
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8733369132",
+      "date": "February 7, 2026",
+      "date_iso": "2026-02-07",
+      "time": "11:00 AM",
+      "time_raw": "1100",
+      "opponent": null,
+      "event_name": "Quad @ Delran vs Lacey, TRN, Shawnee",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "D",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8736380132",
+      "date": "February 11, 2026",
+      "date_iso": "2026-02-11",
+      "time": "6:00 PM",
+      "time_raw": "1800",
+      "opponent": "Robbinsville",
+      "event_name": "Shawnee, NJ @ Robbinsville, NJ",
+      "location": "Robbinsville",
+      "home_away": "away",
+      "level": "Varsity",
+      "event_kind": null,
+      "result": "L",
+      "score_shawnee": 23,
+      "score_opp": 53,
+      "score_display": "23-53",
+      "opponent_slug": "robbinsville",
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8773919132",
+      "date": "February 13, 2026",
+      "date_iso": "2026-02-13",
+      "time": "4:00 PM",
+      "time_raw": "1600",
+      "opponent": null,
+      "event_name": "St. Joes (Hamm) Tri-Match",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "D",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "9000835132",
+      "date": "February 16, 2026",
+      "date_iso": "2026-02-16",
+      "time": "11:00 AM",
+      "time_raw": "1100",
+      "opponent": null,
+      "event_name": "NJSIAA South Group 4 Sectional Quarters/Semis",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "D",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8978282132",
+      "date": "February 28, 2026",
+      "date_iso": "2026-02-28",
+      "time": null,
+      "time_raw": null,
+      "opponent": null,
+      "event_name": "NJSIAA District 28",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "I",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8978292132",
+      "date": "March 6, 2026",
+      "date_iso": "2026-03-06",
+      "time": null,
+      "time_raw": null,
+      "opponent": null,
+      "event_name": "NJSIAA Region 7",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "I",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    },
+    {
+      "event_id": "8978305132",
+      "date": "March 12, 2026",
+      "date_iso": "2026-03-12",
+      "time": "11:00 AM",
+      "time_raw": "1100",
+      "opponent": null,
+      "event_name": "NJSIAA State Championships",
+      "location": "Shawnee",
+      "home_away": "event",
+      "level": "Varsity",
+      "event_kind": "I",
+      "result": null,
+      "score_shawnee": null,
+      "score_opp": null,
+      "score_display": null,
+      "opponent_slug": null,
+      "opponent_logo": null,
+      "opponent_logo_local": null
+    }
+  ],
+  "dual_scores": {
+    "record": "3-5",
+    "wins": 3,
+    "losses": 5,
+    "duals": [
+      {
+        "opponent": "Cherry Hill West",
+        "shawnee": 57,
+        "opp": 11,
+        "result": "W"
+      },
+      {
+        "opponent": "Northern Burlington ( Columbus)",
+        "shawnee": 29,
+        "opp": 47,
+        "result": "L"
+      },
+      {
+        "opponent": "Moorestown",
+        "shawnee": 27,
+        "opp": 37,
+        "result": "L"
+      },
+      {
+        "opponent": "Paul Vi",
+        "shawnee": 42,
+        "opp": 31,
+        "result": "W"
+      },
+      {
+        "opponent": "Eastern",
+        "shawnee": 35,
+        "opp": 36,
+        "result": "L"
+      },
+      {
+        "opponent": "Cherry Hill East",
+        "shawnee": 45,
+        "opp": 25,
+        "result": "W"
+      },
+      {
+        "opponent": "Haddonfield High Schol",
+        "shawnee": 25,
+        "opp": 39,
+        "result": "L"
+      },
+      {
+        "opponent": "Robbinsville",
+        "shawnee": 23,
+        "opp": 53,
+        "result": "L"
+      }
+    ]
+  },
+  "stats": [
+    {
+      "wrestler_id": "35217300132",
+      "name": "Daniel Fitzpatrick",
+      "weight": "106",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217452132",
+      "name": "Logan Reice",
+      "weight": "106",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 3,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35876936132",
+      "name": "Logan Sloan",
+      "weight": "106",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008214132",
+      "name": "Jadiel Esquivel",
+      "weight": "113",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 2,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008235132",
+      "name": "Matt Hart",
+      "weight": "113",
+      "grade": "So.",
+      "wins": 12,
+      "losses": 20,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217444132",
+      "name": "Benjamin Pollock",
+      "weight": "113",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008213132",
+      "name": "Anthony Blahut",
+      "weight": "120",
+      "grade": "So.",
+      "wins": 6,
+      "losses": 17,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008197132",
+      "name": "Sean Bradley",
+      "weight": "120",
+      "grade": "Sr.",
+      "wins": 21,
+      "losses": 16,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217751132",
+      "name": "Romeo Cline",
+      "weight": "120",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217521132",
+      "name": "Ranger Fest",
+      "weight": "120",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217406132",
+      "name": "Noah Meisner",
+      "weight": "120",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217460132",
+      "name": "Luke Velasco",
+      "weight": "120",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217363132",
+      "name": "Gino Gonzalez",
+      "weight": "126",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 6,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008201132",
+      "name": "Jordan Segal",
+      "weight": "126",
+      "grade": "Sr.",
+      "wins": 29,
+      "losses": 7,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35497376132",
+      "name": "Logan Curiale",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217370132",
+      "name": "Cole Hoguet",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008210132",
+      "name": "Nathan Hunnewell",
+      "weight": "132",
+      "grade": "Jr.",
+      "wins": 12,
+      "losses": 11,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217388132",
+      "name": "Brayden Inman",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 14,
+      "losses": 12,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35497452132",
+      "name": "Charles Pulaski",
+      "weight": "132",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008225132",
+      "name": "Leeland Rogers",
+      "weight": "132",
+      "grade": "So.",
+      "wins": 11,
+      "losses": 6,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008238132",
+      "name": "Cooper Stauss",
+      "weight": "132",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008199132",
+      "name": "Garrett Borlaug",
+      "weight": "138",
+      "grade": "Sr.",
+      "wins": 4,
+      "losses": 11,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008236132",
+      "name": "Landon Caffery",
+      "weight": "138",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008203132",
+      "name": "Michael Hart",
+      "weight": "138",
+      "grade": "Jr.",
+      "wins": 6,
+      "losses": 5,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008223132",
+      "name": "Owen Siena",
+      "weight": "138",
+      "grade": "So.",
+      "wins": 2,
+      "losses": 5,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008237132",
+      "name": "Jack Caldwell",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 2,
+      "losses": 7,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008209132",
+      "name": "Ryan Hoerst",
+      "weight": "144",
+      "grade": "Jr.",
+      "wins": 17,
+      "losses": 14,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35557421132",
+      "name": "Walter Johnson",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008211132",
+      "name": "Rhys Pritchard",
+      "weight": "144",
+      "grade": "Jr.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008220132",
+      "name": "Brian Reice",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 3,
+      "losses": 4,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008200132",
+      "name": "Max Shectman",
+      "weight": "144",
+      "grade": "Sr.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008221132",
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "weight": "144",
+      "grade": "So.",
+      "wins": 21,
+      "losses": 14,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008232132",
+      "name": "Colin Dowd",
+      "weight": "150",
+      "grade": "Sr.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008228132",
+      "name": "Ashton Hayden",
+      "weight": "150",
+      "grade": "Jr.",
+      "wins": 0,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217378132",
+      "name": "Domenico Incollingo",
+      "weight": "150",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35497397132",
+      "name": "Kellan McDonough",
+      "weight": "150",
+      "grade": "Fr.",
+      "wins": 2,
+      "losses": 2,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217455132",
+      "name": "Arjun Shah",
+      "weight": "150",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217512132",
+      "name": "Gabriel Evans",
+      "weight": "157",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "36450248132",
+      "name": "Brandon Kelly",
+      "weight": "157",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35555998132",
+      "name": "William Mays",
+      "weight": "157",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35497529132",
+      "name": "Jack Potter",
+      "weight": "157",
+      "grade": "Jr.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008198132",
+      "name": "Tyler Davis",
+      "weight": "165",
+      "grade": "Sr.",
+      "wins": 3,
+      "losses": 13,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217539132",
+      "name": "Brodie Regan",
+      "weight": "165",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 2,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008226132",
+      "name": "Eli Sauler",
+      "weight": "165",
+      "grade": "So.",
+      "wins": 1,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008207132",
+      "name": "Trevor Sieben",
+      "weight": "165",
+      "grade": "Jr.",
+      "wins": 14,
+      "losses": 11,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008208132",
+      "name": "Max Spitznas",
+      "weight": "165",
+      "grade": "Jr.",
+      "wins": 27,
+      "losses": 6,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008202132",
+      "name": "Joseph Augusta",
+      "weight": "175",
+      "grade": "Sr.",
+      "wins": 9,
+      "losses": 12,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35497540132",
+      "name": "Anthony Birney",
+      "weight": "175",
+      "grade": "Sr.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35497360132",
+      "name": "Logan Cino",
+      "weight": "175",
+      "grade": "Fr.",
+      "wins": 3,
+      "losses": 2,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217400132",
+      "name": "Giovanni Lopez",
+      "weight": "190",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008215132",
+      "name": "Andrik Orenyo",
+      "weight": "190",
+      "grade": "So.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008217132",
+      "name": "Jacobs Rodriguez",
+      "weight": "190",
+      "grade": "So.",
+      "wins": 4,
+      "losses": 4,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35217322132",
+      "name": "Jack Gleeson",
+      "weight": "215",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008204132",
+      "name": "Robert Lane",
+      "weight": "215",
+      "grade": "Jr.",
+      "wins": 3,
+      "losses": 1,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008205132",
+      "name": "William (Liam) McSorley",
+      "weight": "215",
+      "grade": "Jr.",
+      "wins": 15,
+      "losses": 15,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008219132",
+      "name": "Rowan Nix",
+      "weight": "215",
+      "grade": "So.",
+      "wins": 13,
+      "losses": 14,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35556025132",
+      "name": "Veliz-Velasquez Carlos",
+      "weight": "285",
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 0,
+      "pins": null
+    },
+    {
+      "wrestler_id": "35008230132",
+      "name": "Collin McHugh",
+      "weight": "285",
+      "grade": "Jr.",
+      "wins": 22,
+      "losses": 14,
+      "pins": null
+    }
+  ],
+  "standings": {
+    "source": "derived",
+    "note": "Trackwrestling did not expose a bulk Olympic Conference standings Ajax in the 2025-26 replay (TeamStatistics JSPs 404). Standings below list Shawnee dual results vs Olympic Conference / local foes from the TW Schedule UI scores. Replace with official OC division table when a source is confirmed (GoBound conference standings or NJ.com).",
+    "division": "Olympic Conference (Shawnee dual slice)",
+    "shawnee_dual_record": "3-5",
+    "rows": [
+      {
+        "opponent": "Cherry Hill West",
+        "result": "W",
+        "score": "57-11",
+        "conference_dual": true
+      },
+      {
+        "opponent": "Northern Burlington ( Columbus)",
+        "result": "L",
+        "score": "29-47",
+        "conference_dual": true
+      },
+      {
+        "opponent": "Moorestown",
+        "result": "L",
+        "score": "27-37",
+        "conference_dual": true
+      },
+      {
+        "opponent": "Paul Vi",
+        "result": "W",
+        "score": "42-31",
+        "conference_dual": true
+      },
+      {
+        "opponent": "Eastern",
+        "result": "L",
+        "score": "35-36",
+        "conference_dual": true
+      },
+      {
+        "opponent": "Cherry Hill East",
+        "result": "W",
+        "score": "45-25",
+        "conference_dual": true
+      },
+      {
+        "opponent": "Haddonfield High Schol",
+        "result": "L",
+        "score": "25-39",
+        "conference_dual": true
+      },
+      {
+        "opponent": "Robbinsville",
+        "result": "L",
+        "score": "23-53",
+        "conference_dual": true
+      }
+    ]
+  }
 }
-
-INSTRUCTIONS TO FILL THIS IN:
-================================
-
-1. Copy the match template:
-   {
-     "date": "Month Day, Year",
-     "opponent": "Opponent Name",
-     "location": "Location Name",
-     "time": "Time",
-     "result": "TBD"
-   }
-
-2. For each match in your schedule, add a copy of the template
-
-3. Separate each match with a comma
-
-4. Example of 3 matches:
-   "schedule": [
-     {
-       "date": "December 14, 2024",
-       "opponent": "West Windsor",
-       "location": "Shawnee HS",
-       "time": "9:00 AM",
-       "result": "TBD"
-     },
-     {
-       "date": "December 16, 2024",
-       "opponent": "Holy Cross",
-       "location": "Holy Cross HS",
-       "time": "6:00 PM",
-       "result": "TBD"
-     },
-     {
-       "date": "December 18, 2024",
-       "opponent": "Cherry Hill West",
-       "location": "Cherry Hill West HS",
-       "time": "6:00 PM",
-       "result": "TBD"
-     }
-   ]
-
-5. Save as: wrestling_data.json
-6. Upload to GitHub at: data/wrestling_data.json
-
-================================
-
-OR - EASIER OPTION:
-Send me the list of matches with dates/opponents/locations/times
-and I'll create the correct JSON file for you!
-
-Just provide the info in any format like:
-- Dec 14: vs West Windsor at Shawnee HS, 9am
-- Dec 16: @ Holy Cross, 6pm
-etc.

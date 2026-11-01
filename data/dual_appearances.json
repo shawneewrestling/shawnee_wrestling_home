@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "season": "2025-26",
+  "season_id": "1560212138",
+  "source": "unavailable",
+  "note": "Per-bout TW feed (TeamResults / getWrestlerMatches) was unavailable in the 2025-26 replay. varsity.json for this closeout is derived via season_record_proxy (W+L>=1 from getWrestlers, weight = TW roster weight). When dual bout lines become available, put them here as {wrestler_id, name, weight, event_id, date_iso, opponent, level:\"Varsity\"} rows and re-run build_varsity / update_site_data.py.",
+  "bouts": []
+}

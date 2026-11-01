@@ -1,0 +1,1009 @@
+{
+  "schema_version": 1,
+  "baseline": [],
+  "baseline_note": "Empty by design. At the start of 2026-27, Jeff uploads prior-years career data; then each season appends events with source_event_id dedupe.",
+  "events": [
+    {
+      "source_event_id": "season:1560212138:aggregate",
+      "season": "2025-26",
+      "season_id": "1560212138",
+      "kind": "season_aggregate",
+      "applied_at": "2026-11-01T08:57:32-05:00",
+      "wrestlers": [
+        {
+          "wrestler_id": "35217300132",
+          "name": "Daniel Fitzpatrick",
+          "wins": 3,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217452132",
+          "name": "Logan Reice",
+          "wins": 1,
+          "losses": 3,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35876936132",
+          "name": "Logan Sloan",
+          "wins": 0,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008214132",
+          "name": "Jadiel Esquivel",
+          "wins": 1,
+          "losses": 2,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008235132",
+          "name": "Matt Hart",
+          "wins": 12,
+          "losses": 20,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217444132",
+          "name": "Benjamin Pollock",
+          "wins": 1,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008213132",
+          "name": "Anthony Blahut",
+          "wins": 6,
+          "losses": 17,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008197132",
+          "name": "Sean Bradley",
+          "wins": 21,
+          "losses": 16,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217751132",
+          "name": "Romeo Cline",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217521132",
+          "name": "Ranger Fest",
+          "wins": 1,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217406132",
+          "name": "Noah Meisner",
+          "wins": 1,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217460132",
+          "name": "Luke Velasco",
+          "wins": 0,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217363132",
+          "name": "Gino Gonzalez",
+          "wins": 3,
+          "losses": 6,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008201132",
+          "name": "Jordan Segal",
+          "wins": 29,
+          "losses": 7,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35497376132",
+          "name": "Logan Curiale",
+          "wins": 1,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217370132",
+          "name": "Cole Hoguet",
+          "wins": 0,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008210132",
+          "name": "Nathan Hunnewell",
+          "wins": 12,
+          "losses": 11,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217388132",
+          "name": "Brayden Inman",
+          "wins": 14,
+          "losses": 12,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35497452132",
+          "name": "Charles Pulaski",
+          "wins": 0,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008225132",
+          "name": "Leeland Rogers",
+          "wins": 11,
+          "losses": 6,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008238132",
+          "name": "Cooper Stauss",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008199132",
+          "name": "Garrett Borlaug",
+          "wins": 4,
+          "losses": 11,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008236132",
+          "name": "Landon Caffery",
+          "wins": 0,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008203132",
+          "name": "Michael Hart",
+          "wins": 6,
+          "losses": 5,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008223132",
+          "name": "Owen Siena",
+          "wins": 2,
+          "losses": 5,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008237132",
+          "name": "Jack Caldwell",
+          "wins": 2,
+          "losses": 7,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008209132",
+          "name": "Ryan Hoerst",
+          "wins": 17,
+          "losses": 14,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35557421132",
+          "name": "Walter Johnson",
+          "wins": 0,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008211132",
+          "name": "Rhys Pritchard",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008220132",
+          "name": "Brian Reice",
+          "wins": 3,
+          "losses": 4,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008200132",
+          "name": "Max Shectman",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008221132",
+          "name": "Oleksandr `Sasha` Yurovskyi",
+          "wins": 21,
+          "losses": 14,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008232132",
+          "name": "Colin Dowd",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008228132",
+          "name": "Ashton Hayden",
+          "wins": 0,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217378132",
+          "name": "Domenico Incollingo",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35497397132",
+          "name": "Kellan McDonough",
+          "wins": 2,
+          "losses": 2,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217455132",
+          "name": "Arjun Shah",
+          "wins": 0,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217512132",
+          "name": "Gabriel Evans",
+          "wins": 1,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "36450248132",
+          "name": "Brandon Kelly",
+          "wins": 0,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35555998132",
+          "name": "William Mays",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35497529132",
+          "name": "Jack Potter",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008198132",
+          "name": "Tyler Davis",
+          "wins": 3,
+          "losses": 13,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217539132",
+          "name": "Brodie Regan",
+          "wins": 0,
+          "losses": 2,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008226132",
+          "name": "Eli Sauler",
+          "wins": 1,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008207132",
+          "name": "Trevor Sieben",
+          "wins": 14,
+          "losses": 11,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008208132",
+          "name": "Max Spitznas",
+          "wins": 27,
+          "losses": 6,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008202132",
+          "name": "Joseph Augusta",
+          "wins": 9,
+          "losses": 12,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35497540132",
+          "name": "Anthony Birney",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35497360132",
+          "name": "Logan Cino",
+          "wins": 3,
+          "losses": 2,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217400132",
+          "name": "Giovanni Lopez",
+          "wins": 1,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008215132",
+          "name": "Andrik Orenyo",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008217132",
+          "name": "Jacobs Rodriguez",
+          "wins": 4,
+          "losses": 4,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35217322132",
+          "name": "Jack Gleeson",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008204132",
+          "name": "Robert Lane",
+          "wins": 3,
+          "losses": 1,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008205132",
+          "name": "William (Liam) McSorley",
+          "wins": 15,
+          "losses": 15,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008219132",
+          "name": "Rowan Nix",
+          "wins": 13,
+          "losses": 14,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35556025132",
+          "name": "Veliz-Velasquez Carlos",
+          "wins": 0,
+          "losses": 0,
+          "pins": null
+        },
+        {
+          "wrestler_id": "35008230132",
+          "name": "Collin McHugh",
+          "wins": 22,
+          "losses": 14,
+          "pins": null
+        }
+      ]
+    }
+  ],
+  "dedupe_key": [
+    "wrestler_id",
+    "source_event_id"
+  ],
+  "rollups": [
+    {
+      "wrestler_id": "35008201132",
+      "name": "Jordan Segal",
+      "career_wins": 29,
+      "career_losses": 7,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008208132",
+      "name": "Max Spitznas",
+      "career_wins": 27,
+      "career_losses": 6,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008230132",
+      "name": "Collin McHugh",
+      "career_wins": 22,
+      "career_losses": 14,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008221132",
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "career_wins": 21,
+      "career_losses": 14,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008197132",
+      "name": "Sean Bradley",
+      "career_wins": 21,
+      "career_losses": 16,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008209132",
+      "name": "Ryan Hoerst",
+      "career_wins": 17,
+      "career_losses": 14,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008205132",
+      "name": "William (Liam) McSorley",
+      "career_wins": 15,
+      "career_losses": 15,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217388132",
+      "name": "Brayden Inman",
+      "career_wins": 14,
+      "career_losses": 12,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008207132",
+      "name": "Trevor Sieben",
+      "career_wins": 14,
+      "career_losses": 11,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008219132",
+      "name": "Rowan Nix",
+      "career_wins": 13,
+      "career_losses": 14,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008235132",
+      "name": "Matt Hart",
+      "career_wins": 12,
+      "career_losses": 20,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008210132",
+      "name": "Nathan Hunnewell",
+      "career_wins": 12,
+      "career_losses": 11,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008225132",
+      "name": "Leeland Rogers",
+      "career_wins": 11,
+      "career_losses": 6,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008202132",
+      "name": "Joseph Augusta",
+      "career_wins": 9,
+      "career_losses": 12,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008213132",
+      "name": "Anthony Blahut",
+      "career_wins": 6,
+      "career_losses": 17,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008203132",
+      "name": "Michael Hart",
+      "career_wins": 6,
+      "career_losses": 5,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008199132",
+      "name": "Garrett Borlaug",
+      "career_wins": 4,
+      "career_losses": 11,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008217132",
+      "name": "Jacobs Rodriguez",
+      "career_wins": 4,
+      "career_losses": 4,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008220132",
+      "name": "Brian Reice",
+      "career_wins": 3,
+      "career_losses": 4,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217300132",
+      "name": "Daniel Fitzpatrick",
+      "career_wins": 3,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217363132",
+      "name": "Gino Gonzalez",
+      "career_wins": 3,
+      "career_losses": 6,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35497360132",
+      "name": "Logan Cino",
+      "career_wins": 3,
+      "career_losses": 2,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008204132",
+      "name": "Robert Lane",
+      "career_wins": 3,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008198132",
+      "name": "Tyler Davis",
+      "career_wins": 3,
+      "career_losses": 13,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008237132",
+      "name": "Jack Caldwell",
+      "career_wins": 2,
+      "career_losses": 7,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35497397132",
+      "name": "Kellan McDonough",
+      "career_wins": 2,
+      "career_losses": 2,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008223132",
+      "name": "Owen Siena",
+      "career_wins": 2,
+      "career_losses": 5,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217444132",
+      "name": "Benjamin Pollock",
+      "career_wins": 1,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008226132",
+      "name": "Eli Sauler",
+      "career_wins": 1,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217512132",
+      "name": "Gabriel Evans",
+      "career_wins": 1,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217400132",
+      "name": "Giovanni Lopez",
+      "career_wins": 1,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008214132",
+      "name": "Jadiel Esquivel",
+      "career_wins": 1,
+      "career_losses": 2,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35497376132",
+      "name": "Logan Curiale",
+      "career_wins": 1,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217452132",
+      "name": "Logan Reice",
+      "career_wins": 1,
+      "career_losses": 3,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217406132",
+      "name": "Noah Meisner",
+      "career_wins": 1,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217521132",
+      "name": "Ranger Fest",
+      "career_wins": 1,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008215132",
+      "name": "Andrik Orenyo",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35497540132",
+      "name": "Anthony Birney",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217455132",
+      "name": "Arjun Shah",
+      "career_wins": 0,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008228132",
+      "name": "Ashton Hayden",
+      "career_wins": 0,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "36450248132",
+      "name": "Brandon Kelly",
+      "career_wins": 0,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217539132",
+      "name": "Brodie Regan",
+      "career_wins": 0,
+      "career_losses": 2,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35497452132",
+      "name": "Charles Pulaski",
+      "career_wins": 0,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217370132",
+      "name": "Cole Hoguet",
+      "career_wins": 0,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008232132",
+      "name": "Colin Dowd",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008238132",
+      "name": "Cooper Stauss",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217378132",
+      "name": "Domenico Incollingo",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217322132",
+      "name": "Jack Gleeson",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35497529132",
+      "name": "Jack Potter",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008236132",
+      "name": "Landon Caffery",
+      "career_wins": 0,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35876936132",
+      "name": "Logan Sloan",
+      "career_wins": 0,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217460132",
+      "name": "Luke Velasco",
+      "career_wins": 0,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008200132",
+      "name": "Max Shectman",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35008211132",
+      "name": "Rhys Pritchard",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35217751132",
+      "name": "Romeo Cline",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35556025132",
+      "name": "Veliz-Velasquez Carlos",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35557421132",
+      "name": "Walter Johnson",
+      "career_wins": 0,
+      "career_losses": 1,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    },
+    {
+      "wrestler_id": "35555998132",
+      "name": "William Mays",
+      "career_wins": 0,
+      "career_losses": 0,
+      "career_pins": null,
+      "sources": [
+        "season:1560212138:aggregate"
+      ]
+    }
+  ],
+  "updated_at": "2026-11-01T08:57:32-05:00"
+}
