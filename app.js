@@ -401,28 +401,105 @@
     });
   }
 
+  function isShawneeVenue(loc) {
+    const n = String(loc || '').replace(/\s+/g, ' ').trim().toLowerCase();
+    return n === 'shawnee' || n.startsWith('shawnee ');
+  }
+
+  function dualSiteLabel(homeAway, location) {
+    let site;
+    if (homeAway === 'away') site = 'Away';
+    else if (homeAway === 'home') site = 'Home';
+    else if (homeAway === 'event') site = location ? (isShawneeVenue(location) ? 'Home' : 'Away') : 'Home';
+    else site = homeAway === 'away' ? 'Away' : 'Home';
+    const venue = String(location || '').replace(/\s+/g, ' ').trim();
+    return venue ? `${site} · ${venue}` : site;
+  }
+
+  /** Build dual rows for Results: date, location, logos, cumulative W-L (season-agnostic). */
+  function buildResultsDualRows(data) {
+    const s = data.standings || {};
+    const ds = data.dual_scores || {};
+    const venueBy = new Map();
+    (data.schedule || []).forEach((e) => {
+      if (!e.opponent || !['W', 'L', 'T'].includes(e.result)) return;
+      const key = `${e.date_iso || ''}\0${e.opponent}`;
+      if (!venueBy.has(key)) {
+        venueBy.set(key, {
+          location: (e.location || '').replace(/\s+/g, ' ').trim() || null,
+          home_away: e.home_away,
+        });
+      }
+    });
+
+    let base;
+    if (s.rows && s.rows.length) {
+      base = s.rows.map((r, idx) => ({ ...r, _idx: idx }));
+    } else {
+      base = (ds.duals || []).map((d, idx) => ({
+        opponent: d.opponent,
+        score: d.score_display || `${d.shawnee}-${d.opp}`,
+        result: d.result,
+        date_iso: d.date_iso,
+        conference_dual: d.conference || d.conference_dual,
+        opponent_logo_local: d.opponent_logo_local,
+        opponent_logo: d.opponent_logo,
+        home_away: d.home_away,
+        location: d.location,
+        location_display: d.location_display,
+        cumulative_record: d.cumulative_record,
+        _idx: idx,
+      }));
+    }
+
+    base.sort((a, b) => String(a.date_iso || '').localeCompare(String(b.date_iso || '')) || (a._idx - b._idx));
+
+    let w = 0, l = 0, t = 0;
+    return base.map((r) => {
+      const key = `${r.date_iso || ''}\0${r.opponent || ''}`;
+      const info = venueBy.get(key) || {};
+      const location = r.location || info.location || null;
+      const homeAway = r.home_away || info.home_away;
+      const location_display = r.location_display || dualSiteLabel(homeAway, location);
+      if (r.result === 'W') w += 1;
+      else if (r.result === 'L') l += 1;
+      else if (r.result === 'T') t += 1;
+      const cumulative = r.cumulative_record || (`${w}-${l}` + (t ? `-${t}` : ''));
+      // Prefer freshly computed running total so UI stays correct even if JSON lags
+      const running = `${w}-${l}` + (t ? `-${t}` : '');
+      return {
+        ...r,
+        score: r.score || r.score_display,
+        location,
+        location_display,
+        cumulative_record: running,
+      };
+    });
+  }
+
   function renderResults(data) {
     const s = data.standings || {};
     const noteEl = document.getElementById('resultsNote');
     if (noteEl) noteEl.textContent = s.note || '';
     const ds = data.dual_scores || {};
     const meta = document.getElementById('resultsMeta');
+    const seasonLabel = data.metadata?.title || data.metadata?.season || s.season || 'Season';
     const seasonFinal = (data.metadata?.status || data.metadata?.season_status || s.status) === 'final';
+    const rows = buildResultsDualRows(data);
+    const finalRec = rows.length ? rows[rows.length - 1].cumulative_record : (s.shawnee_dual_record || ds.record || '—');
     if (meta) meta.innerHTML =
-      `<span><strong>Shawnee duals</strong> ${esc(s.shawnee_dual_record || ds.record)}</span>
+      `<span><strong>Shawnee duals</strong> ${esc(s.shawnee_dual_record || ds.record || finalRec)}</span>
        <span><strong>Conference</strong> ${esc(s.conference_record || ds.conference_record || '—')}</span>
-       <span><strong>Season</strong> ${seasonFinal ? 'Final · 2025-2026 Season' : '2025-2026 Season'}</span>`;
-    const rows = (s.rows && s.rows.length) ? s.rows : (ds.duals || []).map((d) => ({
-      opponent: d.opponent, score: d.score_display || `${d.shawnee}-${d.opp}`, result: d.result,
-      opponent_logo_local: d.opponent_logo_local, opponent_logo: d.opponent_logo,
-      conference_dual: d.conference,
-    }));
+       <span><strong>Season</strong> ${seasonFinal ? `Final · ${esc(seasonLabel)}` : esc(seasonLabel)}</span>`;
     const dualBody = document.querySelector('#resultsDualsTable tbody');
     if (dualBody) dualBody.innerHTML = rows.map((r) => `
       <tr>
+        <td>${esc(r.date_iso || r.date || '')}</td>
         <td><div class="opp">${logoImg(r.opponent_logo_local, r.opponent_logo, r.opponent)}<span>${esc(r.opponent)}${r.conference_dual ? ' <em class="conf-tag">conf</em>' : ''}</span></div></td>
+        <td>${esc(r.location_display || dualSiteLabel(r.home_away, r.location))}</td>
         <td>${esc(r.score)}</td>
-        <td><span class="badge ${r.result === 'W' ? 'w' : 'l'}">${esc(r.result)}</span></td>
+        <td><span class="badge ${r.result === 'W' ? 'w' : (r.result === 'L' ? 'l' : 'ev')}">${esc(r.result)}</span></td>
+        <td>${esc(r.cumulative_record)}</td>
       </tr>`).join('');
   }
 

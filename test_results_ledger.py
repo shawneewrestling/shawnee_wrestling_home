@@ -22,6 +22,32 @@ from results_ledger import (  # noqa: E402
 )
 
 
+def test_standings_rows_location_and_running_record():
+    """Results duals: date order, Home/Away (+ venue when known), cumulative ends 12-15."""
+    wd = json.loads((ROOT / "data" / "wrestling_data.json").read_text(encoding="utf-8"))
+    rows = (wd.get("standings") or {}).get("rows") or []
+    assert len(rows) == 27
+    dates = [r.get("date_iso") for r in rows]
+    assert dates == sorted(dates), "rows must be in date order"
+    w = l = 0
+    for r in rows:
+        assert r.get("date_iso"), r
+        assert r.get("location_display"), r
+        assert r["location_display"].startswith(("Home", "Away")), r["location_display"]
+        # No placeholder venues
+        assert "unknown" not in r["location_display"].lower()
+        assert "tbd" not in r["location_display"].lower()
+        assert "n/a" not in r["location_display"].lower()
+        if r.get("result") == "W":
+            w += 1
+        elif r.get("result") == "L":
+            l += 1
+        expected = f"{w}-{l}"
+        assert r.get("cumulative_record") == expected, (r.get("opponent"), r.get("cumulative_record"), expected)
+    assert rows[-1]["cumulative_record"] == "12-15"
+    assert w == 12 and l == 15
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--rebuild", action="store_true")
@@ -64,6 +90,8 @@ def main() -> int:
                 f"ledger {d['ledger']['shawnee']}-{d['ledger']['opp']} "
                 f"vs ext {d['external']['shawnee']}-{d['external']['opp']}"
             )
+    test_standings_rows_location_and_running_record()
+    print("OK results page fields: location + cumulative 12-15")
     return 0
 
 
