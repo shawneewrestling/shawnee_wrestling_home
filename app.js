@@ -541,12 +541,20 @@
   }
 
   function dualSiteLabel(homeAway, location) {
-    let site;
+    const venue = String(location || '').replace(/\s+/g, ' ').trim();
+    let site = null;
     if (homeAway === 'away') site = 'Away';
     else if (homeAway === 'home') site = 'Home';
-    else if (homeAway === 'event') site = location ? (isShawneeVenue(location) ? 'Home' : 'Away') : 'Home';
-    else site = homeAway === 'away' ? 'Away' : 'Home';
-    const venue = String(location || '').replace(/\s+/g, ' ').trim();
+    else if (homeAway === 'event') {
+      // Infer Home/Away only when a venue is known
+      if (venue) site = isShawneeVenue(venue) ? 'Home' : 'Away';
+    } else if (homeAway) {
+      site = homeAway === 'away' ? 'Away' : 'Home';
+    } else if (venue) {
+      // Home/away omitted in source: infer only from a known venue
+      site = isShawneeVenue(venue) ? 'Home' : 'Away';
+    }
+    if (!site) return '';
     return venue ? `${site} · ${venue}` : site;
   }
 
@@ -593,8 +601,10 @@
       const key = `${r.date_iso || ''}\0${r.opponent || ''}`;
       const info = venueBy.get(key) || {};
       const location = r.location || info.location || null;
-      const homeAway = r.home_away || info.home_away;
-      const location_display = r.location_display || dualSiteLabel(homeAway, location);
+      const homeAway = r.home_away || info.home_away || null;
+      const location_display = (r.location_display != null && r.location_display !== '')
+        ? r.location_display
+        : dualSiteLabel(homeAway, location);
       if (r.result === 'W') w += 1;
       else if (r.result === 'L') l += 1;
       else if (r.result === 'T') t += 1;
@@ -630,7 +640,7 @@
       <tr>
         <td>${esc(r.date_iso || r.date || '')}</td>
         <td><div class="opp">${logoImg(r.opponent_logo_local, r.opponent_logo, r.opponent)}<span>${esc(r.opponent)}${r.conference_dual ? ' <em class="conf-tag">conf</em>' : ''}</span></div></td>
-        <td>${esc(r.location_display || dualSiteLabel(r.home_away, r.location))}</td>
+        <td>${esc(r.location_display ?? dualSiteLabel(r.home_away, r.location))}</td>
         <td>${esc(r.score)}</td>
         <td><span class="badge ${r.result === 'W' ? 'w' : (r.result === 'L' ? 'l' : 'ev')}">${esc(r.result)}</span></td>
         <td>${esc(r.cumulative_record)}</td>

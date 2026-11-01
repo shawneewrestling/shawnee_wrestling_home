@@ -1,6 +1,6 @@
 {
   "default": "2025-26",
-  "generated_at": "2026-11-01T11:09:00-05:00",
+  "generated_at": "2026-11-01T11:20:02-05:00",
   "seasons": [
     {
       "id": "2025-26",
@@ -84,11 +84,6 @@
     }
   ],
   "coaching_mismatches": [
-    {
-      "season": "2020-21",
-      "coaching_history": "5-7",
-      "nj_com_duals": "5-8"
-    },
     {
       "season": "2019-20",
       "coaching_history": "14-11",
