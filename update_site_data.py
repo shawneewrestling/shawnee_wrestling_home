@@ -32,6 +32,8 @@ sys.path.insert(0, str(ROOT))
 from career import apply_season_aggregate, load_career, save_career  # noqa: E402
 from auto_awards import detect_season_awards, merge_awards  # noqa: E402
 from varsity import build_varsity  # noqa: E402
+from schedule_enrich import enrich_schedule  # noqa: E402
+from tournament_results import attach_tournament_results  # noqa: E402
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("update_site_data")
@@ -72,6 +74,22 @@ def main():
     else:
         logger.info("Running hybrid scraper…")
         data = run_scraper(data_path)
+
+
+    # Enrich schedule: split multi-team duals, logos, tournament bout cards
+    attach_tournament_results(data)
+    data = enrich_schedule(data)
+    data_path.write_text(json.dumps(data, indent=2) + "\n")
+    (ROOT / "wrestling_data.json").write_text(json.dumps(data, indent=2) + "\n")
+    (ROOT / "data" / "tournament_results.json").write_text(
+        json.dumps(data.get("tournament_results") or {}, indent=2) + "\n"
+    )
+    logger.info(
+        "Enrichment: schedule=%d splits=%d tournament_events=%d",
+        len(data.get("schedule") or []),
+        len((data.get("enrichment") or {}).get("splits") or []),
+        len(data.get("tournament_results") or {}),
+    )
 
     seed_path = Path(args.seed)
     if seed_path.exists():

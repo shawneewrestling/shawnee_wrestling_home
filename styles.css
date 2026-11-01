@@ -1,4 +1,4 @@
-/* Shawnee Renegades Wrestling — site-v2 2025-26 closeout */
+/* Shawnee Renegades Wrestling — 2025-2026 Season */
 :root {
   --navy: #000080;
   --navy-deep: #000066;
@@ -340,4 +340,67 @@ tr:hover td { background: #eef5fb; }
 @media (max-width: 640px) {
   .brand h1 { font-size: 1.35rem; }
   th, td { padding: .5rem .55rem; font-size: .88rem; }
+}
+
+
+/* Schedule expandable tournament / dual-meet details */
+.split-note {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted, #667);
+  font-weight: 400;
+}
+.expand-btn {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--navy, #002060);
+  background: #fff;
+  color: var(--navy, #002060);
+  border-radius: 999px;
+  cursor: pointer;
+}
+.expand-btn[aria-expanded="true"] {
+  background: var(--navy, #002060);
+  color: #fff;
+}
+.expand-row.hidden { display: none; }
+.tournament-panel {
+  display: grid;
+  gap: 0.4rem;
+  padding: 0.35rem 0.25rem 0.75rem;
+}
+.wrestler-card {
+  background: #f6f8fc;
+  border: 1px solid #d7deea;
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+}
+.wrestler-card summary {
+  cursor: pointer;
+  display: flex;
+  gap: 0.65rem;
+  align-items: baseline;
+  list-style: none;
+}
+.wrestler-card summary::-webkit-details-marker { display: none; }
+.wrestler-card .wt {
+  font-weight: 700;
+  color: var(--navy, #002060);
+  min-width: 2.5rem;
+}
+.wrestler-card .nm { flex: 1; }
+.wrestler-card .rec { color: #445; font-variant-numeric: tabular-nums; }
+.wrestler-card .place {
+  background: #e8eef8;
+  color: var(--navy, #002060);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.wrestler-card ul.bouts {
+  margin: 0.4rem 0 0.2rem 1.4rem;
+  padding: 0;
+  font-size: 0.85rem;
 }

@@ -16,13 +16,17 @@
     }[c]));
   }
 
+  function logoImg(local, remote, alt) {
+    const logo = local || remote;
+    if (!logo) return '';
+    return `<img src="${esc(logo)}" alt="${esc(alt || '')}" loading="lazy" onerror="this.style.display='none'" />`;
+  }
+
   function oppCell(m) {
     const name = m.opponent || m.event_name || '—';
-    const logo = m.opponent_logo_local || m.opponent_logo;
-    const img = logo
-      ? `<img src="${esc(logo)}" alt="" loading="lazy" onerror="this.style.display='none'" />`
-      : '';
-    return `<div class="opp">${img}<span>${esc(name)}</span></div>`;
+    const note = m.split_note ? `<small class="split-note">${esc(m.split_note)}</small>` : '';
+    const img = logoImg(m.opponent_logo_local, m.opponent_logo, name);
+    return `<div class="opp">${img}<span>${esc(name)}${note}</span></div>`;
   }
 
   function resultBadge(m) {
@@ -79,9 +83,13 @@
       <div class="stat-card"><div class="label">Schedule events</div><div class="value">${(data.schedule || []).length}</div></div>
       <div class="stat-card"><div class="label">Scored duals</div><div class="value">${(data.dual_scores?.duals || []).length}</div></div>`;
     const tb = document.querySelector('#homeDuals tbody');
-    tb.innerHTML = (data.dual_scores?.duals || []).map((d) => `
-      <tr><td>${esc(d.opponent)}</td><td>${d.shawnee}-${d.opp}</td>
-      <td><span class="badge ${d.result === 'W' ? 'w' : 'l'}">${esc(d.result)}</span></td></tr>`).join('');
+    const duals = (data.dual_scores?.duals || []).filter((d) => !d.split);
+    tb.innerHTML = duals.map((d) => `
+      <tr>
+        <td><div class="opp">${logoImg(d.opponent_logo_local, d.opponent_logo, d.opponent)}<span>${esc(d.opponent)}</span></div></td>
+        <td>${d.shawnee}-${d.opp}</td>
+        <td><span class="badge ${d.result === 'W' ? 'w' : 'l'}">${esc(d.result)}</span></td>
+      </tr>`).join('');
   }
 
 
@@ -119,18 +127,69 @@
       </tr>`).join('');
   }
 
+  function boutLine(b) {
+    const res = b.result === 'W' ? 'W' : b.result === 'L' ? 'L' : '—';
+    const oppSchool = b.opponent_team ? ` (${b.opponent_team})` : '';
+    const rnd = b.round ? `${b.round} · ` : '';
+    return `<li><strong>${esc(res)}</strong> ${esc(rnd)}${esc(b.opponent_wrestler || '—')}${esc(oppSchool)} · ${esc(b.score || b.win_type || '')}</li>`;
+  }
+
+  function tournamentPanel(m, data) {
+    const key = m.tournament_key || m.event_id;
+    const tr = (data.tournament_results || {})[key];
+    if (!tr || !(tr.wrestlers || []).length) return '';
+    let wrestlers = tr.wrestlers || [];
+    if (m.filter_opponent) {
+      const want = String(m.filter_opponent).toLowerCase();
+      wrestlers = wrestlers.map((w) => {
+        const bouts = (w.bouts || []).filter((b) => String(b.opponent_team || '').toLowerCase().includes(want.split('(')[0].trim()) || want.includes(String(b.opponent_team || '').toLowerCase().slice(0, 8)));
+        // softer match: resolve by slug-ish containment
+        const bouts2 = (w.bouts || []).filter((b) => {
+          const ot = String(b.opponent_team || '').toLowerCase();
+          return ot && (want.includes(ot.slice(0, 6)) || ot.includes(want.slice(0, 6)));
+        });
+        return { ...w, bouts: bouts2.length ? bouts2 : bouts };
+      }).filter((w) => (w.bouts || []).length);
+    }
+    if (!wrestlers.length) return '';
+    const cards = wrestlers.map((w) => {
+      const place = w.placement ? `<span class="place">${esc(w.placement)}</span>` : '';
+      return `<details class="wrestler-card">
+        <summary><span class="wt">${esc(w.weight || '—')}</span> <span class="nm">${esc(w.wrestler)}</span> <span class="rec">${esc(w.record)}</span> ${place}</summary>
+        <ul class="bouts">${(w.bouts || []).map(boutLine).join('') || '<li>No bouts</li>'}</ul>
+      </details>`;
+    }).join('');
+    return `<tr class="expand-row"><td colspan="5"><div class="tournament-panel">${cards}</div></td></tr>`;
+  }
+
   function renderSchedule(data) {
     const rec = data.metadata?.dual_record || data.dual_scores?.record;
     document.getElementById('schedMeta').innerHTML = `<span><strong>Dual record</strong> ${esc(rec)}</span>
-      <span><strong>Events</strong> ${(data.schedule || []).length}</span>`;
-    document.querySelector('#scheduleTable tbody').innerHTML = (data.schedule || []).map((m) => `
-      <tr>
+      <span><strong>Listings</strong> ${(data.schedule || []).length}</span>`;
+    const body = document.querySelector('#scheduleTable tbody');
+    body.innerHTML = (data.schedule || []).map((m) => {
+      const expand = m.expandable ? `<button type="button" class="expand-btn" data-eid="${esc(m.tournament_key || m.event_id)}" aria-expanded="false">Details</button>` : '';
+      const main = `<tr class="sched-row" data-eid="${esc(m.event_id || '')}">
         <td>${esc(m.date_iso || m.date)}</td>
         <td>${oppCell(m)}</td>
         <td>${esc(m.home_away === 'home' ? 'Home' : m.home_away === 'away' ? 'Away' : (m.location || 'Event'))}</td>
-        <td>${esc(m.time || 'TBD')}</td>
+        <td>${esc(m.time || 'TBD')} ${expand}</td>
         <td>${resultBadge(m)}</td>
-      </tr>`).join('');
+      </tr>`;
+      // Pre-render collapsed panel as hidden sibling; toggled by button
+      const panel = m.expandable ? tournamentPanel(m, data).replace('class="expand-row"', 'class="expand-row hidden"') : '';
+      return main + panel;
+    }).join('');
+    body.querySelectorAll('.expand-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const tr = btn.closest('tr');
+        const panel = tr && tr.nextElementSibling;
+        if (!panel || !panel.classList.contains('expand-row')) return;
+        const open = panel.classList.toggle('hidden') === false;
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.textContent = open ? 'Hide' : 'Details';
+      });
+    });
   }
 
   function renderStandings(data) {
@@ -141,7 +200,7 @@
        <span><strong>Source</strong> ${esc(s.source)}</span>`;
     document.querySelector('#standingsTable tbody').innerHTML = (s.rows || []).map((r) => `
       <tr>
-        <td>${esc(r.opponent)}</td>
+        <td><div class="opp">${logoImg(r.opponent_logo_local, r.opponent_logo, r.opponent)}<span>${esc(r.opponent)}</span></div></td>
         <td>${esc(r.score)}</td>
         <td><span class="badge ${r.result === 'W' ? 'w' : 'l'}">${esc(r.result)}</span></td>
       </tr>`).join('');
