@@ -844,3 +844,17 @@ tr:hover td { background: #eef5fb; }
   text-align: center;
 }
 #scheduleTable .expand-btn { margin-left: 0; }
+
+.tournament-panel.dual-bouts ul.bouts {
+  list-style: none;
+  margin: 0;
+  padding: .35rem .6rem .55rem;
+}
+.tournament-panel.dual-bouts ul.bouts li {
+  font-size: .92rem;
+  line-height: 1.35;
+  padding: .18rem 0;
+  border-bottom: 1px solid #e8ecf2;
+  font-variant-numeric: tabular-nums;
+}
+.tournament-panel.dual-bouts ul.bouts li:last-child { border-bottom: 0; }

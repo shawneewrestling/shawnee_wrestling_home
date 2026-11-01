@@ -635,11 +635,76 @@
     paint();
   }
 
-  function boutLine(b) {
-    const res = b.result === 'W' ? 'W' : b.result === 'L' ? 'L' : '—';
-    const oppSchool = b.opponent_team ? ` (${b.opponent_team})` : '';
-    const rnd = b.round ? `${b.round} · ` : '';
-    return `<li><strong>${esc(res)}</strong> ${esc(rnd)}${esc(b.opponent_wrestler || '—')}${esc(oppSchool)} · ${esc(b.score || b.win_type || '')}</li>`;
+  function fallClock(b) {
+    if (b && b.fall_seconds != null && b.fall_seconds !== '' && Number.isFinite(Number(b.fall_seconds))) {
+      const s = Math.max(0, Math.floor(Number(b.fall_seconds)));
+      return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+    }
+    const m = String((b && b.score) || '').match(/(\d+:\d{2})/);
+    return m ? m[1] : '';
+  }
+
+  function winnerScoreDisplay(score, result) {
+    const raw = String(score || '').trim();
+    const m = raw.match(/^(\d+)\s*-\s*(\d+)$/);
+    if (!m) return raw;
+    if (result === 'L') return `${m[2]}-${m[1]}`;
+    return `${m[1]}-${m[2]}`;
+  }
+
+  function formatBoutParen(b) {
+    if (!b) return '';
+    const wt = String(b.win_type || '');
+    const score = String(b.score || '').trim();
+    const clock = fallClock(b);
+    if (/med\.?\s*forf/i.test(wt)) return '(M. For.)';
+    if (/forfeit/i.test(wt) || /^forfeit$/i.test(score)) return '(For.)';
+    if (/bye/i.test(wt) || /^bye$/i.test(score)) return '(Bye)';
+    if (/tech/i.test(wt)) {
+      const pts = winnerScoreDisplay(score.replace(/^(?:Tech\.?\s*Fall|TF|Fall)\s*/i, '').trim(), b.result);
+      const body = [pts && !/^\d+:\d{2}$/.test(pts) && !/^fall\b/i.test(pts) ? pts : '', clock].filter(Boolean).join(' ');
+      return body ? `(TF ${body})` : '(TF)';
+    }
+    if (/fall/i.test(wt)) {
+      return clock ? `(Fall ${clock})` : '(Fall)';
+    }
+    if (/maj/i.test(wt)) {
+      const pts = winnerScoreDisplay(score.replace(/^(?:Maj\.?\s*Dec\.?|MD)\s*/i, '').trim(), b.result);
+      return pts ? `(MD ${pts})` : '(MD)';
+    }
+    if (/sud|SV/i.test(wt)) {
+      const n = (wt.match(/(\d+)/) || [])[1] || '1';
+      const pts = winnerScoreDisplay(score, b.result);
+      return pts ? `(SV-${n} ${pts})` : `(SV-${n})`;
+    }
+    if (/dec/i.test(wt) || /^\d+\s*-\s*\d+$/.test(score)) {
+      const pts = winnerScoreDisplay(score.replace(/^(?:Dec(?:ision)?)\s*/i, '').trim(), b.result);
+      return pts ? `(Dec ${pts})` : '(Dec)';
+    }
+    return score ? `(${score})` : '';
+  }
+
+  function boutTwText(b, shawneeWrestler, weight) {
+    const wt = String(weight || (b && b.weight) || '—');
+    const us = shawneeWrestler || '—';
+    const usTeam = 'Shawnee';
+    const opp = (b && b.opponent_wrestler) || '—';
+    const oppTeam = (b && b.opponent_team) || '—';
+    const paren = formatBoutParen(b);
+    if (b && (/bye/i.test(String(b.win_type || '')) || /^bye$/i.test(String(b.score || '').trim()))) {
+      return `${wt}: ${us} (${usTeam}) ${paren}`.trim();
+    }
+    let winner = us, winnerTeam = usTeam, loser = opp, loserTeam = oppTeam;
+    if (b && b.result === 'L') {
+      winner = opp; winnerTeam = oppTeam; loser = us; loserTeam = usTeam;
+    } else if (b && b.result !== 'W') {
+      return `${wt}: ${us} (${usTeam}) vs ${opp} (${oppTeam}) ${paren}`.trim();
+    }
+    return `${wt}: ${winner} (${winnerTeam}) over ${loser} (${loserTeam}) ${paren}`.trim();
+  }
+
+  function boutLine(b, shawneeWrestler, weight) {
+    return `<li>${esc(boutTwText(b, shawneeWrestler, weight))}</li>`;
   }
 
   function tournamentPanel(m, data) {
@@ -662,11 +727,32 @@
     if (!wrestlers.length) return '';
     const hasAnyBouts = wrestlers.some((w) => (w.bouts || []).length);
     if (!hasAnyBouts) return '';
+    const isDual = ['W', 'L', 'T'].includes(m.result) || !!m.filter_opponent;
+    if (isDual) {
+      const rows = [];
+      wrestlers.forEach((w) => {
+        (w.bouts || []).forEach((b) => {
+          rows.push({ weight: w.weight || b.weight || '', wrestler: w.wrestler, bout: b });
+        });
+      });
+      rows.sort((a, b) => {
+        const aw = parseInt(String(a.weight), 10);
+        const bw = parseInt(String(b.weight), 10);
+        const aOk = Number.isFinite(aw);
+        const bOk = Number.isFinite(bw);
+        if (aOk && bOk && aw !== bw) return aw - bw;
+        if (aOk !== bOk) return aOk ? -1 : 1;
+        return String(a.weight).localeCompare(String(b.weight)) || String(a.wrestler).localeCompare(String(b.wrestler));
+      });
+      const items = rows.map((r) => boutLine(r.bout, r.wrestler, r.weight)).join('');
+      return `<tr class="expand-row"><td colspan="6"><div class="tournament-panel dual-bouts"><ul class="bouts">${items}</ul></div></td></tr>`;
+    }
     const cards = wrestlers.map((w) => {
       const place = w.placement ? `<span class="place">${esc(w.placement)}</span>` : '';
+      const items = (w.bouts || []).map((b) => boutLine(b, w.wrestler, w.weight || b.weight)).join('') || '<li>No bouts</li>';
       return `<details class="wrestler-card">
         <summary><span class="wt">${esc(w.weight || '—')}</span> <span class="nm">${esc(w.wrestler)}</span> <span class="rec">${esc(w.record)}</span> ${place}</summary>
-        <ul class="bouts">${(w.bouts || []).map(boutLine).join('') || '<li>No bouts</li>'}</ul>
+        <ul class="bouts">${items}</ul>
       </details>`;
     }).join('');
     return `<tr class="expand-row"><td colspan="6"><div class="tournament-panel">${cards}</div></td></tr>`;
