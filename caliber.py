@@ -22,6 +22,10 @@ Scoring:
   bye -> not a match (0, excluded from top-20 pool)
 
 Total pre-seed = own prestige + sum(best 20 match points).
+
+Opponent advancement for a form in season S uses ONLY the prior 3 seasons
+(`prior_seasons_for(S)`), never S itself — current-season postseason finishes
+are not available when the pre-seed is computed.
 """
 
 from __future__ import annotations
@@ -273,6 +277,31 @@ def select_top20(scores: List[MatchScore]) -> Tuple[List[MatchScore], float, flo
     return scores, top20_sum, all_sum
 
 
+
+def parse_season_start_year(season: str) -> int:
+    """Parse '2025-26' / '2025-2026' → start year 2025."""
+    s = (season or "").strip()
+    m = re.match(r"^(\d{4})\s*[-–]\s*(\d{2,4})$", s)
+    if not m:
+        raise ValueError(f"unrecognized season label: {season!r}")
+    return int(m.group(1))
+
+
+def format_season(start_year: int) -> str:
+    yy = (start_year + 1) % 100
+    return f"{start_year}-{yy:02d}"
+
+
+def prior_seasons_for(season: str, n: int = 3) -> List[str]:
+    """Prior *n* seasons for a pre-seed form in `season`, newest first.
+
+    For a 2025-26 pre-seed the window is exclusively 2024-25, 2023-24, 2022-23 —
+    never the current season (those results happen after / during the season the
+    form is for).
+    """
+    start = parse_season_start_year(season)
+    return [format_season(start - i) for i in range(1, n + 1)]
+
 def lookup_opponent_code(
     adv: Dict[str, Any],
     name: str,
@@ -434,9 +463,29 @@ def score_bout_list(
     bouts: List[Dict[str, Any]],
     adv: Dict[str, Any],
     *,
+    for_season: Optional[str] = None,
     seasons_for_opp: Optional[List[str]] = None,
     season_policy: str = "best",
 ) -> Tuple[List[Dict[str, Any]], float, float]:
+    """Score current-season bouts for a pre-seed form.
+
+    Opponent prestige/caliber codes come only from prior seasons: pass
+    `for_season` (e.g. "2025-26") and the window is derived via
+    `prior_seasons_for` (never includes `for_season` itself). Explicit
+    `seasons_for_opp` overrides the derived window when provided.
+    """
+    if seasons_for_opp is None:
+        if for_season:
+            seasons_for_opp = prior_seasons_for(for_season)
+        else:
+            raise ValueError(
+                "score_bout_list requires for_season=... (or explicit seasons_for_opp); "
+                "opponent prestige must not use unrestricted career_best (would leak "
+                "same-season postseason finishes into a pre-seed form)"
+            )
+    # Hard guard: drop the form season if a caller accidentally included it
+    if for_season:
+        seasons_for_opp = [s for s in seasons_for_opp if s != for_season]
     scored: List[MatchScore] = []
     rows: List[Dict[str, Any]] = []
     for b in bouts:
@@ -487,3 +536,4 @@ def score_bout_list(
 
 if __name__ == "__main__":
     print("caliber module OK; chart entries:", len(CHART))
+    print("prior_seasons_for(2025-26) =", prior_seasons_for("2025-26"))

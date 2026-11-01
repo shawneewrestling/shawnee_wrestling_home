@@ -2,19 +2,20 @@
   "wrestler": "Jordan Segal",
   "season": "2025-26",
   "prestige": 105.0,
-  "caliber_top20": 353.0,
-  "caliber_all": 386.5,
-  "total": 458.0,
-  "season_policy": "most_recent",
+  "caliber_top20": 375.5,
+  "caliber_all": 409.0,
+  "total": 480.5,
+  "season_policy": "best",
   "opponent_seasons": [
     "2024-25",
     "2023-24",
     "2022-23"
   ],
-  "sensitivity_best_across": {
-    "caliber_top20": 375.5,
-    "caliber_all": 409.0,
-    "total": 480.5
+  "alt_policy": {
+    "season_policy": "most_recent",
+    "caliber_top20": 353.0,
+    "caliber_all": 386.5,
+    "total": 458.0
   },
   "njsiaa_official": {
     "prestige": 105.0,
@@ -50,7 +51,7 @@
       "rules": [
         "win = opponent caliber"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "decision",
       "in_top20": true
     },
@@ -106,7 +107,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -162,7 +163,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -247,7 +248,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "most_recent prior=2023-24",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -274,7 +275,7 @@
       "rules": [
         "non-decision loss = 0"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -302,7 +303,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -330,7 +331,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -358,9 +359,9 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "tech",
-      "in_top20": true
+      "in_top20": false
     },
     {
       "event_id": null,
@@ -385,7 +386,7 @@
       "rules": [
         "non-decision loss = 0"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "tech",
       "in_top20": false
     },
@@ -470,7 +471,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -497,7 +498,7 @@
       "rules": [
         "win = opponent caliber"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "decision",
       "in_top20": true
     },
@@ -525,7 +526,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "tech",
       "in_top20": true
     },
@@ -553,7 +554,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -609,7 +610,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -655,19 +656,19 @@
       "fall_seconds": 204,
       "kind": "bout",
       "source": "segal_full_matches.txt",
-      "adv_code": "Quarters Dis",
+      "adv_code": "2v3 in Regions",
       "adv_lookup_key": "ath_justincauldwell_tomsrivernorth",
-      "caliber": 5.0,
+      "caliber": 17.5,
       "pin_point": 0.0,
-      "match_points": 5.0,
+      "match_points": 17.5,
       "non_member": false,
       "rules": [
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "tech",
-      "in_top20": false
+      "in_top20": true
     },
     {
       "event_id": null,
@@ -721,7 +722,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -749,7 +750,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -805,7 +806,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -851,7 +852,7 @@
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -879,7 +880,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "tech",
       "in_top20": false
     },
@@ -906,7 +907,7 @@
       "rules": [
         "decision loss = 20% caliber (chart)"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "decision",
       "in_top20": true
     },
@@ -942,17 +943,17 @@
       "fall_seconds": 92,
       "kind": "bout",
       "source": "segal_full_matches.txt",
-      "adv_code": "D4",
+      "adv_code": "2v3 in Regions",
       "adv_lookup_key": "ath_liamwilliams_moorestown",
-      "caliber": 7.5,
+      "caliber": 17.5,
       "pin_point": 1.0,
-      "match_points": 8.5,
+      "match_points": 18.5,
       "non_member": false,
       "rules": [
         "win = opponent caliber",
         "(4) +1 pin point for fall"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": true
     },
@@ -979,7 +980,7 @@
       "rules": [
         "win = opponent caliber"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "decision",
       "in_top20": true
     },
@@ -1006,7 +1007,7 @@
       "rules": [
         "non-decision loss = 0"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "fall",
       "in_top20": false
     },
@@ -1034,7 +1035,7 @@
         "win = opponent caliber",
         "(4) no pin point for MD/TF/DQ/FF"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "major",
       "in_top20": true
     },
@@ -1061,11 +1062,12 @@
       "rules": [
         "decision loss = 20% caliber (chart)"
       ],
-      "lookup_note": "most_recent prior=2024-25",
+      "lookup_note": "best in ['2024-25', '2023-24', '2022-23']",
       "normalized_win_type": "decision",
       "in_top20": true
     }
   ],
   "adv_count": 8999,
-  "adv_generated": "2026-11-01T19:40:01Z"
+  "adv_generated": "2026-11-01T19:40:01Z",
+  "note": "Opponent prestige for 2025-26 uses only ['2024-25', '2023-24', '2022-23']; 2025-26 postseason finishes are excluded."
 }

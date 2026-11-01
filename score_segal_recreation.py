@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from typing import Any, Dict, List
 
-from caliber import score_bout_list, name_key, school_key_compact
+from caliber import score_bout_list, name_key, school_key_compact, prior_seasons_for
 
 ROOT = Path(__file__).resolve().parent
 ADV_PATH = ROOT / "data" / "opponent_advancement.json"
@@ -37,10 +37,13 @@ NJSIAA_KNOWN_OPP_CODES = {
     ("trentonlandell", "cherokee"): "D4",
 }
 
-# Prior 3 seasons for a 2025-26 form (newest first for most_recent policy)
-OPP_SEASONS = ["2024-25", "2023-24", "2022-23"]
-# Primary policy that lands near NJSIAA 317; best-across is sensitivity
-PRIMARY_POLICY = "most_recent"
+# Pre-seed form season — opponent prestige uses ONLY the prior 3 seasons
+# (Jeff 2026-11-01 correction: never 2025-26 results on a 2025-26 form).
+FORM_SEASON = "2025-26"
+OPP_SEASONS = prior_seasons_for(FORM_SEASON)  # ["2024-25", "2023-24", "2022-23"]
+# Primary: career-best code within the prior-3 window; most_recent is the alt.
+PRIMARY_POLICY = "best"
+ALT_POLICY = "most_recent"
 
 
 def _parse_segal_date(raw: str) -> str:
@@ -230,9 +233,11 @@ def render_md(
     lines.append("`caliber.py` under official NJSIAA rules (Jeff steering 2026-11-01).")
     lines.append("")
     lines.append(
-        f"**Opponent code policy (primary):** `{PRIMARY_POLICY}` across prior seasons "
-        f"{OPP_SEASONS} (newest first; fall back when an opponent has no finish in a newer season — "
-        "e.g. Rocco Giangeruso R6place from 2023-24)."
+        f"**Opponent prestige window:** prior 3 seasons only for form `{FORM_SEASON}` → "
+        f"`{OPP_SEASONS}` (Jeff correction 2026-11-01: never use `{FORM_SEASON}` postseason "
+        f"results on a `{FORM_SEASON}` pre-seed). "
+        f"**Primary policy:** `{PRIMARY_POLICY}` (career-best code inside that window). "
+        f"**Alt:** `{ALT_POLICY}` (newest finish in the window, fall back older)."
     )
     lines.append("")
     lines.append("## Totals")
@@ -252,8 +257,8 @@ def render_md(
         f"{total - official['total']:.2f} |"
     )
     lines.append(
-        f"| Sensitivity: best across same 3 seasons | {prestige:.1f} | {alt['best_top20']:.1f} | "
-        f"{alt['best_all']:.1f} | {prestige + alt['best_top20']:.2f} |"
+        f"| Alt: `{ALT_POLICY}` within same prior-3 window | {prestige:.1f} | {alt['alt_top20']:.1f} | "
+        f"{alt['alt_all']:.1f} | {prestige + alt['alt_top20']:.2f} |"
     )
     lines.append("")
     lines.append("### Own prestige / advancement history")
@@ -347,15 +352,14 @@ def render_md(
     lines.append("### What explains the gap (rule / data citations)")
     lines.append("")
     lines.append(
-        f"- **Season-window policy (data interpretation, not rules 1–8):** "
-        f"`most_recent` prior season with fallback through {OPP_SEASONS} yields top-20 **{top20:.1f}** "
-        f"(Δ {top20 - official['caliber_top20']:+.1f} vs 317). Taking the **best** code across the same "
-        f"three seasons instead yields top-20 **{alt['best_top20']:.1f}** "
-        f"(Δ {alt['best_top20'] - official['caliber_top20']:+.1f}) — e.g. Liam Williams stays 2v3 "
-        f"(2023-24) instead of D4 (2024-25), Justin Cauldwell stays 2v3 instead of Quarters Dis. "
-        f"Jeff’s pasted codes (Spaulding S1, Giangeruso R6, Landell D4, Marino swb1, Simone RWB1) "
-        f"are consistent with most-recent-with-fallback, not pure same-season-only and not always "
-        f"career-max."
+        f"- **Prior-3 season window (Jeff correction):** opponent codes for a `{FORM_SEASON}` form "
+        f"come only from {OPP_SEASONS} — `{FORM_SEASON}` postseason finishes are excluded. "
+        f"Primary `{PRIMARY_POLICY}` top-20 **{top20:.1f}** (Δ {top20 - official['caliber_top20']:+.1f} vs 317). "
+        f"Alt `{ALT_POLICY}` top-20 **{alt['alt_top20']:.1f}** "
+        f"(Δ {alt['alt_top20'] - official['caliber_top20']:+.1f}). "
+        f"Under `{PRIMARY_POLICY}`, Liam Williams / Justin Cauldwell keep 2023-24 `2v3` rather than "
+        f"their weaker 2024-25 codes; known Jeff codes (Spaulding S1, Giangeruso R6, Landell D4, "
+        f"Marino swb1, Simone RWB1) still match under both policies."
     )
     scored_n = sum(1 for r in rows if r.get("match_points") is not None)
     lines.append(
@@ -368,8 +372,8 @@ def render_md(
         f"(Δ {top20 - official['caliber_top20']:+.1f})."
     )
     lines.append(
-        "- **Per-bout overshoot (no Jeff per-bout PrestigePts table to diff):** highest-value "
-        "rows under `most_recent` that inflate top-20 above 317:"
+        f"- **Per-bout overshoot (no Jeff per-bout PrestigePts table to diff):** highest-value "
+        f"rows under `{PRIMARY_POLICY}` that inflate top-20 above 317:"
     )
     high = sorted(
         [r for r in rows if r.get("match_points") is not None],
@@ -394,8 +398,11 @@ def render_md(
     lines.append(
         "- **Likely remaining code uncertainty vs Jeff’s form:** Rhinehart `swb2` (35), "
         "Musciano `RWB1` (20), Gardner `2v3`+pin (18.5), Pallitto decision-loss `swb4` (8.0), "
-        "Cappello decision-loss `swb2` (7.0). If the form used lower prior-season codes for any, "
-        "top-20 falls toward 317. Today’s D6/D7 bracket patch did not touch Segal opponents."
+        "Cappello decision-loss `swb2` (7.0), plus dual counting (Marino twice, Giangeruso TF). "
+        "If the form used lower prior-season codes or omitted a dual, top-20 falls toward 317. "
+        "D6/D7 bracket patch did not touch Segal opponents. "
+        f"`most_recent` alt narrows the gap (top-20 {alt['alt_top20']:.1f}) via Cauldwell/Williams "
+        "but still sits above 317."
     )
     if missing:
         lines.append("  - Dual events now merged from pipe txt (brief list):")
@@ -431,7 +438,8 @@ def render_md(
         f"seasons {adv_meta.get('seasons')}; generated {adv_meta.get('generated')}"
     )
     lines.append(
-        f"- Opponent seasons / policy for this recreation: {OPP_SEASONS}, policy=`{PRIMARY_POLICY}`"
+        f"- Form season `{FORM_SEASON}`; opponent seasons {OPP_SEASONS} "
+        f"(via `prior_seasons_for`); primary=`{PRIMARY_POLICY}`, alt=`{ALT_POLICY}`"
     )
     lines.append(f"- Bouts: `{SEGAL_FULL_MATCHES}` (fallback `{BOUTS_HIST}`)")
     lines.append(f"- Scorer: `caliber.py` + `score_segal_recreation.py`")
@@ -448,35 +456,40 @@ def main() -> int:
     rows, top20, all_sum = score_bout_list(
         bouts,
         adv,
-        seasons_for_opp=OPP_SEASONS,
+        for_season=FORM_SEASON,
         season_policy=PRIMARY_POLICY,
     )
-    _, best_top20, best_all = score_bout_list(
+    _, alt_top20, alt_all = score_bout_list(
         bouts,
         adv,
-        seasons_for_opp=OPP_SEASONS,
-        season_policy="best",
+        for_season=FORM_SEASON,
+        season_policy=ALT_POLICY,
     )
     prestige = NJSIAA_OFFICIAL["prestige"]
     payload = {
         "wrestler": "Jordan Segal",
-        "season": "2025-26",
+        "season": FORM_SEASON,
         "prestige": prestige,
         "caliber_top20": top20,
         "caliber_all": all_sum,
         "total": prestige + top20,
         "season_policy": PRIMARY_POLICY,
         "opponent_seasons": OPP_SEASONS,
-        "sensitivity_best_across": {
-            "caliber_top20": best_top20,
-            "caliber_all": best_all,
-            "total": prestige + best_top20,
+        "alt_policy": {
+            "season_policy": ALT_POLICY,
+            "caliber_top20": alt_top20,
+            "caliber_all": alt_all,
+            "total": prestige + alt_top20,
         },
         "njsiaa_official": NJSIAA_OFFICIAL,
         "bout_count_scored": sum(1 for r in rows if r.get("match_points") is not None),
         "bouts": rows,
         "adv_count": adv.get("count"),
         "adv_generated": adv.get("generated"),
+        "note": (
+            f"Opponent prestige for {FORM_SEASON} uses only {OPP_SEASONS}; "
+            f"{FORM_SEASON} postseason finishes are excluded."
+        ),
     }
     OUT_JSON.write_text(json.dumps(payload, indent=2) + "\n")
     md = render_md(
@@ -489,20 +502,20 @@ def main() -> int:
             "generated": adv.get("generated"),
             "seasons": (adv.get("source") or {}).get("seasons"),
         },
-        {"best_top20": best_top20, "best_all": best_all},
+        {"alt_top20": alt_top20, "alt_all": alt_all},
     )
     OUT_MD.parent.mkdir(parents=True, exist_ok=True)
     OUT_MD.write_text(md)
     print(f"Wrote {OUT_MD}")
     print(f"Wrote {OUT_JSON}")
     print(
-        f"PRIMARY {PRIMARY_POLICY}: Prestige {prestige} + top20 {top20} = {prestige + top20} "
-        f"(NJSIAA {NJSIAA_OFFICIAL['total']}; all {all_sum})"
+        f"PRIMARY {PRIMARY_POLICY} (prior 3 only): Prestige {prestige} + top20 {top20} = "
+        f"{prestige + top20} (NJSIAA {NJSIAA_OFFICIAL['total']}; all {all_sum})"
     )
     print(
-        f"SENSITIVITY best: top20 {best_top20} all {best_all} total {prestige + best_top20}"
+        f"ALT {ALT_POLICY} (prior 3 only): top20 {alt_top20} all {alt_all} "
+        f"total {prestige + alt_top20}"
     )
-    # verify known codes under most_recent
     from caliber import lookup_opponent_code
 
     for nk, sk in [
