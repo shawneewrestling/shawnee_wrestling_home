@@ -1,0 +1,394 @@
+{
+  "season": "2010-2011",
+  "season_short": "2010-11",
+  "title": "2010-2011 Season",
+  "status": "final",
+  "season_status": "final",
+  "generated_at": "2026-11-01T11:09:00-05:00",
+  "source": "NJ.com",
+  "shawnee_dual_record": "6-10",
+  "conference_record": null,
+  "note": "Dual meets only \u2014 tournaments listed on Schedule.",
+  "summary": {
+    "overall": {
+      "wins": 6,
+      "losses": 10,
+      "ties": 0,
+      "record": "6-10",
+      "count": 16
+    },
+    "home": {
+      "wins": 4,
+      "losses": 5,
+      "ties": 0,
+      "record": "4-5",
+      "count": 9
+    },
+    "away": {
+      "wins": 2,
+      "losses": 5,
+      "ties": 0,
+      "record": "2-5",
+      "count": 7
+    },
+    "pf": 751,
+    "pa": 373,
+    "overall_pct": 0.375
+  },
+  "rows": [
+    {
+      "date_iso": "2010-12-21",
+      "opponent": "Cherry Hill West",
+      "score": "34-26",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/cherry-hill-west.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/9cf0882c-28ac-405f-83fe-7701aa59a120/CherryHillWest-NJ-Small.png",
+      "score_shawnee": 34,
+      "score_opp": 26
+    },
+    {
+      "date_iso": "2010-12-23",
+      "opponent": "Cherry Hill East",
+      "score": "51-21",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/cherry-hill-east.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/d53b41d2-9d36-45a8-b1a4-4e034e2c8540/CherryHillEastCougarsSmall.png",
+      "score_shawnee": 51,
+      "score_opp": 21
+    },
+    {
+      "date_iso": "2011-01-05",
+      "opponent": "Pennsauken",
+      "score": "42-28",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/pennsauken.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/18791dc0-65b7-4ac4-8983-0393650e84d5/PennsaukenIndiansSmall.png",
+      "score_shawnee": 42,
+      "score_opp": 28
+    },
+    {
+      "date_iso": "2011-01-08",
+      "opponent": "Millville",
+      "score": "47-25",
+      "result": "W",
+      "home_away": "home",
+      "opponent_logo_local": null,
+      "opponent_logo": null,
+      "score_shawnee": 47,
+      "score_opp": 25
+    },
+    {
+      "date_iso": "2011-01-08",
+      "opponent": "Cherokee",
+      "score": "51-21",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/cherokee.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/35e5ef27-d07a-4724-9dc0-f0d250325cb3/Cherokee-NJ-Small.png",
+      "score_shawnee": 51,
+      "score_opp": 21
+    },
+    {
+      "date_iso": "2011-01-10",
+      "opponent": "Camden",
+      "score": "72-6",
+      "result": "W",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/camden-initials.png",
+      "opponent_logo": null,
+      "score_shawnee": 72,
+      "score_opp": 6
+    },
+    {
+      "date_iso": "2011-01-13",
+      "opponent": "Triton Regional",
+      "score": "64-18",
+      "result": "W",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/triton-regional.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/d57b53f8-f1e3-403e-9e94-b653a3cf0529/TritonRegional-NJ-Small.png",
+      "score_shawnee": 64,
+      "score_opp": 18
+    },
+    {
+      "date_iso": "2011-01-19",
+      "opponent": "Timber Creek",
+      "score": "58-6",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/timber-creek.png",
+      "opponent_logo": null,
+      "score_shawnee": 58,
+      "score_opp": 6
+    },
+    {
+      "date_iso": "2011-01-22",
+      "opponent": "Washington Township",
+      "score": "40-31",
+      "result": "W",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/washington-township.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/9a2ae55b-7267-415c-8022-850c3da8adb3/WashingtonTownship-NJ-Small.png",
+      "score_shawnee": 40,
+      "score_opp": 31
+    },
+    {
+      "date_iso": "2011-01-22",
+      "opponent": "Paul VI",
+      "score": "50-22",
+      "result": "W",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/paul-vi.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/4c578ccd-89bc-4f32-b173-04323a51d07a/paulVI-nj-small.png",
+      "score_shawnee": 50,
+      "score_opp": 22
+    },
+    {
+      "date_iso": "2011-01-22",
+      "opponent": "Moorestown",
+      "score": "36-29",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/moorestown.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/665a5d9c-d27e-4961-82bc-e33c059eddef/Moorestown-NJ-Small.png",
+      "score_shawnee": 36,
+      "score_opp": 29
+    },
+    {
+      "date_iso": "2011-01-24",
+      "opponent": "Seneca",
+      "score": "40-35",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/seneca.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/a8f6f4f2-07c6-45cd-980f-0477650f8512/seneca-nj-small.png",
+      "score_shawnee": 40,
+      "score_opp": 35
+    },
+    {
+      "date_iso": "2011-01-29",
+      "opponent": "Haddon Heights",
+      "score": "37-32",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": null,
+      "opponent_logo": null,
+      "score_shawnee": 37,
+      "score_opp": 32
+    },
+    {
+      "date_iso": "2011-01-29",
+      "opponent": "Ocean City",
+      "score": "41-27",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/ocean-city.png",
+      "opponent_logo": null,
+      "score_shawnee": 41,
+      "score_opp": 27
+    },
+    {
+      "date_iso": "2011-02-02",
+      "opponent": "Lenape",
+      "score": "45-21",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/lenape.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/b1742091-eef5-41fe-b3d1-a66a60960c28/Lenape-NJ-Small.png",
+      "score_shawnee": 45,
+      "score_opp": 21
+    },
+    {
+      "date_iso": "2011-02-05",
+      "opponent": "Bishop Eustace Prep",
+      "score": "43-25",
+      "result": "W",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/bishop-eustace.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/a3fc2d26-7204-46c4-801a-8af34195d7bd/bishopeustaceprepatory-nj-small.png",
+      "score_shawnee": 43,
+      "score_opp": 25
+    }
+  ],
+  "duals": [
+    {
+      "date_iso": "2010-12-21",
+      "opponent": "Cherry Hill West",
+      "score": "34-26",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/cherry-hill-west.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/9cf0882c-28ac-405f-83fe-7701aa59a120/CherryHillWest-NJ-Small.png",
+      "score_shawnee": 34,
+      "score_opp": 26
+    },
+    {
+      "date_iso": "2010-12-23",
+      "opponent": "Cherry Hill East",
+      "score": "51-21",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/cherry-hill-east.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/d53b41d2-9d36-45a8-b1a4-4e034e2c8540/CherryHillEastCougarsSmall.png",
+      "score_shawnee": 51,
+      "score_opp": 21
+    },
+    {
+      "date_iso": "2011-01-05",
+      "opponent": "Pennsauken",
+      "score": "42-28",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/pennsauken.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/18791dc0-65b7-4ac4-8983-0393650e84d5/PennsaukenIndiansSmall.png",
+      "score_shawnee": 42,
+      "score_opp": 28
+    },
+    {
+      "date_iso": "2011-01-08",
+      "opponent": "Millville",
+      "score": "47-25",
+      "result": "W",
+      "home_away": "home",
+      "opponent_logo_local": null,
+      "opponent_logo": null,
+      "score_shawnee": 47,
+      "score_opp": 25
+    },
+    {
+      "date_iso": "2011-01-08",
+      "opponent": "Cherokee",
+      "score": "51-21",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/cherokee.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/35e5ef27-d07a-4724-9dc0-f0d250325cb3/Cherokee-NJ-Small.png",
+      "score_shawnee": 51,
+      "score_opp": 21
+    },
+    {
+      "date_iso": "2011-01-10",
+      "opponent": "Camden",
+      "score": "72-6",
+      "result": "W",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/camden-initials.png",
+      "opponent_logo": null,
+      "score_shawnee": 72,
+      "score_opp": 6
+    },
+    {
+      "date_iso": "2011-01-13",
+      "opponent": "Triton Regional",
+      "score": "64-18",
+      "result": "W",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/triton-regional.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/d57b53f8-f1e3-403e-9e94-b653a3cf0529/TritonRegional-NJ-Small.png",
+      "score_shawnee": 64,
+      "score_opp": 18
+    },
+    {
+      "date_iso": "2011-01-19",
+      "opponent": "Timber Creek",
+      "score": "58-6",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/timber-creek.png",
+      "opponent_logo": null,
+      "score_shawnee": 58,
+      "score_opp": 6
+    },
+    {
+      "date_iso": "2011-01-22",
+      "opponent": "Washington Township",
+      "score": "40-31",
+      "result": "W",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/washington-township.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/9a2ae55b-7267-415c-8022-850c3da8adb3/WashingtonTownship-NJ-Small.png",
+      "score_shawnee": 40,
+      "score_opp": 31
+    },
+    {
+      "date_iso": "2011-01-22",
+      "opponent": "Paul VI",
+      "score": "50-22",
+      "result": "W",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/paul-vi.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/4c578ccd-89bc-4f32-b173-04323a51d07a/paulVI-nj-small.png",
+      "score_shawnee": 50,
+      "score_opp": 22
+    },
+    {
+      "date_iso": "2011-01-22",
+      "opponent": "Moorestown",
+      "score": "36-29",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/moorestown.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/665a5d9c-d27e-4961-82bc-e33c059eddef/Moorestown-NJ-Small.png",
+      "score_shawnee": 36,
+      "score_opp": 29
+    },
+    {
+      "date_iso": "2011-01-24",
+      "opponent": "Seneca",
+      "score": "40-35",
+      "result": "L",
+      "home_away": "home",
+      "opponent_logo_local": "assets/logos/seneca.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/a8f6f4f2-07c6-45cd-980f-0477650f8512/seneca-nj-small.png",
+      "score_shawnee": 40,
+      "score_opp": 35
+    },
+    {
+      "date_iso": "2011-01-29",
+      "opponent": "Haddon Heights",
+      "score": "37-32",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": null,
+      "opponent_logo": null,
+      "score_shawnee": 37,
+      "score_opp": 32
+    },
+    {
+      "date_iso": "2011-01-29",
+      "opponent": "Ocean City",
+      "score": "41-27",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/ocean-city.png",
+      "opponent_logo": null,
+      "score_shawnee": 41,
+      "score_opp": 27
+    },
+    {
+      "date_iso": "2011-02-02",
+      "opponent": "Lenape",
+      "score": "45-21",
+      "result": "L",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/lenape.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/b1742091-eef5-41fe-b3d1-a66a60960c28/Lenape-NJ-Small.png",
+      "score_shawnee": 45,
+      "score_opp": 21
+    },
+    {
+      "date_iso": "2011-02-05",
+      "opponent": "Bishop Eustace Prep",
+      "score": "43-25",
+      "result": "W",
+      "home_away": "away",
+      "opponent_logo_local": "assets/logos/bishop-eustace.png",
+      "opponent_logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/a3fc2d26-7204-46c4-801a-8af34195d7bd/bishopeustaceprepatory-nj-small.png",
+      "score_shawnee": 43,
+      "score_opp": 25
+    }
+  ]
+}

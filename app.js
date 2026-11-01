@@ -8,6 +8,7 @@
   const STANDINGS_URL = 'data/standings.json';
   const COACH_HISTORY_URL = 'data/coaching_history.json';
   const HOME_ROSTER_URL = 'data/home_roster.json';
+  const SEASONS_INDEX_URL = 'data/seasons/index.json';
   const PLACEHOLDER_PHOTO = 'assets/img/wrestler-silhouette.svg';
 
   async function loadJson(url) {
@@ -15,6 +16,104 @@
     if (!r.ok) throw new Error('Failed to load ' + url);
     return r.json();
   }
+
+  function seasonIdFromLocation() {
+    try {
+      const u = new URL(window.location.href);
+      const q = u.searchParams.get('season');
+      if (q) return q;
+      const h = (u.hash || '').replace(/^#/, '');
+      if (h.startsWith('season=')) return h.slice(7);
+    } catch (_) {}
+    return null;
+  }
+
+  function setSeasonInLocation(seasonId, replace) {
+    try {
+      const u = new URL(window.location.href);
+      u.searchParams.set('season', seasonId);
+      const method = replace ? 'replaceState' : 'pushState';
+      history[method]({}, '', u.pathname + u.search + u.hash);
+    } catch (_) {}
+  }
+
+  function seasonLabel(id, seasons) {
+    const hit = (seasons || []).find((s) => s.id === id);
+    return hit?.label || `${String(id).replace(/^(\d{4})-(\d{2})$/, (_, a, b) => a + '-' + (parseInt(a, 10) > 2000 ? String(2000 + parseInt(b, 10)) : b))} Season`;
+  }
+
+  async function loadSeasonsIndex() {
+    return loadJson(SEASONS_INDEX_URL);
+  }
+
+  async function loadSeasonBundle(seasonId) {
+    const base = `data/seasons/${seasonId}`;
+    const [schedule, results, standings] = await Promise.all([
+      loadJson(`${base}/schedule.json`),
+      loadJson(`${base}/results.json`),
+      loadJson(`${base}/standings.json`),
+    ]);
+    const duals = results.duals || results.rows || [];
+    return {
+      seasonId,
+      scheduleDoc: schedule,
+      resultsDoc: results,
+      standingsDoc: standings,
+      // Shape expected by renderSchedule / renderResults
+      view: {
+        schedule: schedule.schedule || [],
+        metadata: {
+          season: schedule.season || schedule.title,
+          title: schedule.title,
+          dual_record: schedule.dual_record,
+          conference_record: schedule.conference_record,
+          status: schedule.status || schedule.season_status,
+          season_status: schedule.season_status || schedule.status,
+        },
+        dual_scores: {
+          record: results.shawnee_dual_record || schedule.dual_record,
+          conference_record: results.conference_record || schedule.conference_record,
+          duals,
+        },
+        standings: {
+          rows: results.rows || duals,
+          note: results.note || '',
+          shawnee_dual_record: results.shawnee_dual_record || schedule.dual_record,
+          conference_record: results.conference_record || schedule.conference_record,
+          season: results.title || results.season,
+          status: results.status || results.season_status,
+        },
+      },
+    };
+  }
+
+  function fillSeasonSelect(selectEl, index, currentId) {
+    if (!selectEl) return;
+    const seasons = index.seasons || [];
+    selectEl.innerHTML = seasons.map((s) =>
+      `<option value="${esc(s.id)}"${s.id === currentId ? ' selected' : ''}>${esc(s.label)}</option>`
+    ).join('');
+  }
+
+  function updateSeasonChrome(seasonId, label) {
+    document.querySelectorAll('.site-header .tag').forEach((el) => {
+      el.textContent = `Wrestling · ${label}`;
+    });
+    document.querySelectorAll('.site-footer').forEach((el) => {
+      el.textContent = `Shawnee High School Wrestling · ${label}`;
+    });
+    const sub = document.querySelector('main .page-sub');
+    if (!sub) return;
+    const page = document.body && document.querySelector('.nav a.active')?.textContent?.trim();
+    if (page === 'Schedule / Results') {
+      sub.textContent = `Duals, tournaments, and multi-team events for the ${label.replace(/ Season$/, ' season')}.`;
+    } else if (page === 'Results') {
+      sub.textContent = `Shawnee dual-meet results (including tri/quad splits) · ${label}.`;
+    } else if (page === 'Standings') {
+      sub.textContent = `${label} wrestling · Olympic Conference`;
+    }
+  }
+
 
   function esc(s) {
     return String(s ?? '').replace(/[&<>"']/g, (c) => ({
@@ -75,24 +174,58 @@
       renderFullRosterSearchable(data, index);
       return;
     }
-    if (page === 'Standings') {
-      const standings = await loadJson(STANDINGS_URL);
-      renderConferenceStandings(standings);
-      return;
-    }
     if (page === 'Coach Stats') {
       const coachHist = await loadJson(COACH_HISTORY_URL);
       renderCoachStats(coachHist);
       return;
     }
+
+    if (page === 'Standings' || page === 'Schedule / Results' || page === 'Results') {
+      const index = await loadSeasonsIndex();
+      const seasons = index.seasons || [];
+      const defaultId = index.default || (seasons[0] && seasons[0].id) || '2025-26';
+      let currentId = seasonIdFromLocation() || defaultId;
+      if (!seasons.some((s) => s.id === currentId)) currentId = defaultId;
+
+      const selectEl = document.getElementById('seasonSelect');
+      fillSeasonSelect(selectEl, index, currentId);
+
+      async function showSeason(seasonId, { replaceUrl } = {}) {
+        currentId = seasonId;
+        if (selectEl) selectEl.value = seasonId;
+        setSeasonInLocation(seasonId, !!replaceUrl);
+        const label = seasonLabel(seasonId, seasons);
+        updateSeasonChrome(seasonId, label);
+        const bundle = await loadSeasonBundle(seasonId);
+        if (page === 'Schedule / Results') renderSchedule(bundle.view);
+        else if (page === 'Results') renderResults(bundle.view);
+        else if (page === 'Standings') renderConferenceStandings(bundle.standingsDoc);
+      }
+
+      if (selectEl) {
+        selectEl.addEventListener('change', () => {
+          showSeason(selectEl.value, { replaceUrl: false }).catch((e) => {
+            console.error(e);
+            const main = document.querySelector('main');
+            if (main) main.insertAdjacentHTML('afterbegin', `<div class="callout warn">${esc(e.message)}</div>`);
+          });
+        });
+      }
+      window.addEventListener('popstate', () => {
+        const id = seasonIdFromLocation() || defaultId;
+        showSeason(id, { replaceUrl: true }).catch(console.error);
+      });
+
+      await showSeason(currentId, { replaceUrl: true });
+      return;
+    }
+
     const data = await loadJson(DATA_URL);
     if (page === 'Home') {
       const homeRoster = await loadJson(HOME_ROSTER_URL).catch(() => null);
       renderHome(data, homeRoster);
       return;
     }
-    else if (page === 'Schedule / Results') renderSchedule(data);
-    else if (page === 'Results') renderResults(data);
     else if (page === 'Stats') renderStats(data);
   } catch (e) {
     console.error(e);
@@ -367,9 +500,10 @@
     const rec = data.metadata?.dual_record || data.dual_scores?.record;
     const conf = data.metadata?.conference_record || data.dual_scores?.conference_record;
     const seasonFinal = (data.metadata?.status || data.metadata?.season_status) === 'final';
+    const seasonLabelText = data.metadata?.title || data.metadata?.season || 'Season';
     const statusChip = seasonFinal
-      ? `<span><strong>Season</strong> Final · 2025-2026 Season</span>`
-      : `<span><strong>Season</strong> 2025-2026 Season</span>`;
+      ? `<span><strong>Season</strong> Final · ${esc(seasonLabelText)}</span>`
+      : `<span><strong>Season</strong> ${esc(seasonLabelText)}</span>`;
     document.getElementById('schedMeta').innerHTML = `<span><strong>Dual record</strong> ${esc(rec)}</span>
       <span><strong>Conference</strong> ${esc(conf || '—')}</span>
       <span><strong>Listings</strong> ${(data.schedule || []).length}</span>
@@ -503,6 +637,18 @@
       </tr>`).join('');
   }
 
+  function fmtPctCell(v) {
+    if (v == null || v === '') return '';
+    const n = Number(v);
+    if (!Number.isFinite(n)) return esc(v);
+    return n.toFixed(3).replace(/^0/, '');
+  }
+
+  function blankOr(v) {
+    if (v == null || v === '') return '<span class="muted-cell">—</span>';
+    return esc(v);
+  }
+
   function renderConferenceStandings(doc) {
     const noteEl = document.getElementById('standingsNote');
     const gaps = (doc.gaps || []).filter((g) => typeof g === 'string' || g.type === 'validation');
@@ -512,31 +658,61 @@
       noteEl.style.display = gapText ? '' : 'none';
     }
     const meta = document.getElementById('standingsMeta');
+    const seasonTitle = doc.title || doc.season || 'Season';
     if (meta) {
       const final = (doc.status || doc.season_status) === 'final';
       meta.innerHTML =
         `<span><strong>Conference</strong> ${esc(doc.conference || 'Olympic')}</span>
-         <span><strong>Season</strong> ${final ? 'Final · 2025-2026 Season' : esc(doc.title || doc.season || '2025-2026 Season')}</span>
+         <span><strong>Season</strong> ${final ? `Final · ${esc(seasonTitle)}` : esc(seasonTitle)}</span>
          <span><strong>Source</strong> ${esc(doc.source || '—')}</span>
-         <span><strong>As of</strong> ${esc(doc.as_of || '—')}</span>`;
+         <span><strong>As of</strong> ${esc(doc.as_of || doc.generated_at || '—')}</span>`;
     }
     const host = document.getElementById('conferenceStandings');
     if (!host) return;
     const divisions = doc.divisions || [];
+    const sample = divisions.flatMap((d) => d.teams || [])[0] || {};
+    const cols = doc.columns || [];
+    const showDiv = cols.includes('div') || cols.includes('division') || sample.division_record != null;
+    const showHome = cols.includes('home') || sample.home_record != null;
+    const showAway = cols.includes('away') || sample.away_record != null;
+    const showPfPa = cols.includes('pf') || sample.pf != null || sample.pa != null;
+    const showPct = cols.includes('pct') || sample.overall_pct != null;
+
     host.innerHTML = divisions.map((div) => {
+      const heading = doc.reconstructed
+        ? (div.name === 'Shawnee' ? 'Shawnee' : esc(div.name))
+        : `${esc(div.name)} Division`;
+      const headCells = ['<th>#</th>', '<th>Team</th>', '<th class="num">Overall</th>'];
+      if (showPct) headCells.push('<th class="num">PCT</th>');
+      if (showDiv) headCells.push('<th class="num">Div</th>', '<th class="num">Div PCT</th>');
+      if (showHome) headCells.push('<th class="num">Home</th>');
+      if (showAway) headCells.push('<th class="num">Away</th>');
+      if (showPfPa) headCells.push('<th class="num">PF</th>', '<th class="num">PA</th>');
+
       const rows = (div.teams || []).map((t) => {
         const cls = t.is_shawnee ? ' class="shawnee-row"' : '';
-        return `<tr${cls}>
-          <td class="rank">${esc(t.rank)}</td>
-          <td><div class="opp">${logoImg(t.logo_local, t.logo, t.team)}<span>${esc(t.team)}${t.is_shawnee ? ' <em class="conf-tag">us</em>' : ''}</span></div></td>
-          <td>${esc(t.division_record)}</td>
-          <td>${esc(t.overall_record)}</td>
-        </tr>`;
+        const cells = [
+          `<td class="rank">${esc(t.rank)}</td>`,
+          `<td><div class="opp">${logoImg(t.logo_local, t.logo, t.team)}<span>${esc(t.team)}${t.is_shawnee ? ' <em class="conf-tag">us</em>' : ''}</span></div></td>`,
+          `<td class="num">${blankOr(t.overall_record)}</td>`,
+        ];
+        if (showPct) cells.push(`<td class="num">${t.overall_pct == null ? blankOr(null) : esc(fmtPctCell(t.overall_pct))}</td>`);
+        if (showDiv) {
+          cells.push(`<td class="num">${blankOr(t.division_record)}</td>`);
+          cells.push(`<td class="num">${t.division_pct == null ? blankOr(null) : esc(fmtPctCell(t.division_pct))}</td>`);
+        }
+        if (showHome) cells.push(`<td class="num">${blankOr(t.home_record)}</td>`);
+        if (showAway) cells.push(`<td class="num">${blankOr(t.away_record)}</td>`);
+        if (showPfPa) {
+          cells.push(`<td class="num">${blankOr(t.pf)}</td>`);
+          cells.push(`<td class="num">${blankOr(t.pa)}</td>`);
+        }
+        return `<tr${cls}>${cells.join('')}</tr>`;
       }).join('');
       return `<section class="division-block">
-        <h2 class="section-title">${esc(div.name)} Division</h2>
+        <h2 class="section-title">${heading}</h2>
         <div class="table-wrap"><table class="standings-table">
-          <thead><tr><th>#</th><th>Team</th><th>Division</th><th>Overall</th></tr></thead>
+          <thead><tr>${headCells.join('')}</tr></thead>
           <tbody>${rows}</tbody>
         </table></div>
       </section>`;

@@ -1,0 +1,52 @@
+{
+  "season": "2016-2017",
+  "season_short": "2016-17",
+  "title": "2016-2017 Season",
+  "conference": "Olympic",
+  "sport": "wrestling",
+  "generated_at": "2026-11-01T11:08:58-05:00",
+  "source": "Reconstructed from NJ.com Shawnee results",
+  "source_url": "https://highschoolsports.nj.com/school/medford-shawnee/wrestling/season/2016-2017/",
+  "status": "final",
+  "season_status": "final",
+  "columns": [
+    "overall",
+    "pct",
+    "home",
+    "away",
+    "pf",
+    "pa"
+  ],
+  "reconstructed": true,
+  "divisions": [
+    {
+      "name": "Shawnee",
+      "teams": [
+        {
+          "team": "Shawnee",
+          "division": null,
+          "overall_record": "12-13",
+          "overall_pct": 0.48,
+          "division_record": null,
+          "division_pct": null,
+          "home_record": "7-8",
+          "away_record": "5-5",
+          "pf": 1115,
+          "pa": 590,
+          "team_slug": "shawnee",
+          "logo_local": "assets/logos/shawnee.png",
+          "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/20ea89fe-3c81-4d75-a449-04e57cbe2ba9/Shawnee-NJ-small.png",
+          "is_shawnee": true,
+          "rank": 1
+        }
+      ]
+    }
+  ],
+  "gaps": [
+    "Olympic Conference division standings not published on NJ.com for this season; Shawnee Overall / PCT / Home / Away / PF / PA reconstructed from dual results. Div / Div PCT left blank."
+  ],
+  "validation": {
+    "dual_count": 25,
+    "overall": "12-13"
+  }
+}

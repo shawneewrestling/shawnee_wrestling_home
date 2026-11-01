@@ -1,0 +1,28 @@
+{
+  "season": "2018-2019",
+  "season_short": "2018-19",
+  "title": "2018-2019 Season",
+  "status": "final",
+  "generated_at": "2026-11-01T11:08:57-05:00",
+  "schedule_fetch": {
+    "url": "https://highschoolsports.nj.com/school/medford-shawnee/wrestling/season/2018-2019/",
+    "http": 200,
+    "bytes": 314951,
+    "events": 39,
+    "duals": 28
+  },
+  "standings_fetch": {
+    "url": "https://highschoolsports.nj.com/wrestling/standings/season/2018-2019?conference=Olympic",
+    "http": 200,
+    "bytes": 273469,
+    "available": true,
+    "teams_parsed": 13
+  },
+  "standings_mode": "nj.com",
+  "dual_record": "10-18",
+  "conference_record": "2-4",
+  "coaching_history_record": "10-18",
+  "coaching_mismatch": null,
+  "event_count": 39,
+  "dual_count": 28
+}

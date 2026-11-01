@@ -1,0 +1,27 @@
+{
+  "season": "2016-2017",
+  "season_short": "2016-17",
+  "title": "2016-2017 Season",
+  "status": "final",
+  "generated_at": "2026-11-01T11:08:58-05:00",
+  "schedule_fetch": {
+    "url": "https://highschoolsports.nj.com/school/medford-shawnee/wrestling/season/2016-2017/",
+    "http": 200,
+    "bytes": 312520,
+    "events": 37,
+    "duals": 25
+  },
+  "standings_fetch": {
+    "url": "https://highschoolsports.nj.com/wrestling/standings/season/2016-2017?conference=Olympic",
+    "http": 200,
+    "bytes": 226743,
+    "available": false
+  },
+  "standings_mode": "reconstructed",
+  "dual_record": "12-13",
+  "conference_record": null,
+  "coaching_history_record": "12-13",
+  "coaching_mismatch": null,
+  "event_count": 37,
+  "dual_count": 25
+}

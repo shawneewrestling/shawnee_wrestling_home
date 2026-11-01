@@ -1,0 +1,21 @@
+{
+  "season": "2025-2026",
+  "season_short": "2025-26",
+  "title": "2025-2026 Season",
+  "status": "final",
+  "generated_at": "2026-11-01T11:08:53-05:00",
+  "dual_record": "12-15",
+  "conference_record": "2-3",
+  "coaching_history_record": "12-15",
+  "standings_mode": "nj.com",
+  "standings_fetch": {
+    "url": "https://highschoolsports.nj.com/wrestling/standings/season/2025-2026?conference=Olympic",
+    "http": 200,
+    "bytes": 273332,
+    "available": true,
+    "teams_parsed": 13
+  },
+  "event_count": 35,
+  "dual_count": 27,
+  "source": "site export + NJ.com standings when available"
+}

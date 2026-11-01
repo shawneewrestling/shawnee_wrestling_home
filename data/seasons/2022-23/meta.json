@@ -1,0 +1,28 @@
+{
+  "season": "2022-2023",
+  "season_short": "2022-23",
+  "title": "2022-2023 Season",
+  "status": "final",
+  "generated_at": "2026-11-01T11:08:55-05:00",
+  "schedule_fetch": {
+    "url": "https://highschoolsports.nj.com/school/medford-shawnee/wrestling/season/2022-2023/",
+    "http": 200,
+    "bytes": 311544,
+    "events": 31,
+    "duals": 26
+  },
+  "standings_fetch": {
+    "url": "https://highschoolsports.nj.com/wrestling/standings/season/2022-2023?conference=Olympic",
+    "http": 200,
+    "bytes": 273298,
+    "available": true,
+    "teams_parsed": 13
+  },
+  "standings_mode": "nj.com",
+  "dual_record": "21-5",
+  "conference_record": "5-0",
+  "coaching_history_record": "21-5",
+  "coaching_mismatch": null,
+  "event_count": 31,
+  "dual_count": 26
+}

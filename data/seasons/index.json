@@ -1,0 +1,127 @@
+{
+  "default": "2025-26",
+  "generated_at": "2026-11-01T11:09:00-05:00",
+  "seasons": [
+    {
+      "id": "2025-26",
+      "label": "2025-2026 Season",
+      "path": "data/seasons/2025-26"
+    },
+    {
+      "id": "2024-25",
+      "label": "2024-2025 Season",
+      "path": "data/seasons/2024-25"
+    },
+    {
+      "id": "2023-24",
+      "label": "2023-2024 Season",
+      "path": "data/seasons/2023-24"
+    },
+    {
+      "id": "2022-23",
+      "label": "2022-2023 Season",
+      "path": "data/seasons/2022-23"
+    },
+    {
+      "id": "2021-22",
+      "label": "2021-2022 Season",
+      "path": "data/seasons/2021-22"
+    },
+    {
+      "id": "2020-21",
+      "label": "2020-2021 Season",
+      "path": "data/seasons/2020-21"
+    },
+    {
+      "id": "2019-20",
+      "label": "2019-2020 Season",
+      "path": "data/seasons/2019-20"
+    },
+    {
+      "id": "2018-19",
+      "label": "2018-2019 Season",
+      "path": "data/seasons/2018-19"
+    },
+    {
+      "id": "2017-18",
+      "label": "2017-2018 Season",
+      "path": "data/seasons/2017-18"
+    },
+    {
+      "id": "2016-17",
+      "label": "2016-2017 Season",
+      "path": "data/seasons/2016-17"
+    },
+    {
+      "id": "2015-16",
+      "label": "2015-2016 Season",
+      "path": "data/seasons/2015-16"
+    },
+    {
+      "id": "2014-15",
+      "label": "2014-2015 Season",
+      "path": "data/seasons/2014-15"
+    },
+    {
+      "id": "2013-14",
+      "label": "2013-2014 Season",
+      "path": "data/seasons/2013-14"
+    },
+    {
+      "id": "2012-13",
+      "label": "2012-2013 Season",
+      "path": "data/seasons/2012-13"
+    },
+    {
+      "id": "2011-12",
+      "label": "2011-2012 Season",
+      "path": "data/seasons/2011-12"
+    },
+    {
+      "id": "2010-11",
+      "label": "2010-2011 Season",
+      "path": "data/seasons/2010-11"
+    }
+  ],
+  "coaching_mismatches": [
+    {
+      "season": "2020-21",
+      "coaching_history": "5-7",
+      "nj_com_duals": "5-8"
+    },
+    {
+      "season": "2019-20",
+      "coaching_history": "14-11",
+      "nj_com_duals": "13-11"
+    },
+    {
+      "season": "2015-16",
+      "coaching_history": "11-15",
+      "nj_com_duals": "11-14"
+    },
+    {
+      "season": "2014-15",
+      "coaching_history": "6-21",
+      "nj_com_duals": "6-20"
+    },
+    {
+      "season": "2011-12",
+      "coaching_history": "18-6",
+      "nj_com_duals": "14-5"
+    },
+    {
+      "season": "2010-11",
+      "coaching_history": "9-13",
+      "nj_com_duals": "6-10"
+    }
+  ],
+  "gaps": [
+    "2016-17: standings reconstructed (no NJ.com Olympic table)",
+    "2015-16: standings reconstructed (no NJ.com Olympic table)",
+    "2014-15: standings reconstructed (no NJ.com Olympic table)",
+    "2013-14: standings reconstructed (no NJ.com Olympic table)",
+    "2012-13: standings reconstructed (no NJ.com Olympic table)",
+    "2011-12: standings reconstructed (no NJ.com Olympic table)",
+    "2010-11: standings reconstructed (no NJ.com Olympic table)"
+  ]
+}

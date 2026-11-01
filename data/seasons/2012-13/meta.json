@@ -1,0 +1,27 @@
+{
+  "season": "2012-2013",
+  "season_short": "2012-13",
+  "title": "2012-2013 Season",
+  "status": "final",
+  "generated_at": "2026-11-01T11:08:59-05:00",
+  "schedule_fetch": {
+    "url": "https://highschoolsports.nj.com/school/medford-shawnee/wrestling/season/2012-2013/",
+    "http": 200,
+    "bytes": 315203,
+    "events": 42,
+    "duals": 24
+  },
+  "standings_fetch": {
+    "url": "https://highschoolsports.nj.com/wrestling/standings/season/2012-2013?conference=Olympic",
+    "http": 200,
+    "bytes": 220303,
+    "available": false
+  },
+  "standings_mode": "reconstructed",
+  "dual_record": "21-3",
+  "conference_record": null,
+  "coaching_history_record": "21-3",
+  "coaching_mismatch": null,
+  "event_count": 42,
+  "dual_count": 24
+}

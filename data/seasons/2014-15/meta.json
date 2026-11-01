@@ -1,0 +1,31 @@
+{
+  "season": "2014-2015",
+  "season_short": "2014-15",
+  "title": "2014-2015 Season",
+  "status": "final",
+  "generated_at": "2026-11-01T11:08:58-05:00",
+  "schedule_fetch": {
+    "url": "https://highschoolsports.nj.com/school/medford-shawnee/wrestling/season/2014-2015/",
+    "http": 200,
+    "bytes": 308542,
+    "events": 30,
+    "duals": 26
+  },
+  "standings_fetch": {
+    "url": "https://highschoolsports.nj.com/wrestling/standings/season/2014-2015?conference=Olympic",
+    "http": 200,
+    "bytes": 222419,
+    "available": false
+  },
+  "standings_mode": "reconstructed",
+  "dual_record": "6-20",
+  "conference_record": null,
+  "coaching_history_record": "6-21",
+  "coaching_mismatch": {
+    "season": "2014-15",
+    "coaching_history": "6-21",
+    "nj_com_duals": "6-20"
+  },
+  "event_count": 30,
+  "dual_count": 26
+}

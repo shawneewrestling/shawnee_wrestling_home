@@ -1,0 +1,31 @@
+{
+  "season": "2010-2011",
+  "season_short": "2010-11",
+  "title": "2010-2011 Season",
+  "status": "final",
+  "generated_at": "2026-11-01T11:09:00-05:00",
+  "schedule_fetch": {
+    "url": "https://highschoolsports.nj.com/school/medford-shawnee/wrestling/season/2010-2011/",
+    "http": 200,
+    "bytes": 303210,
+    "events": 30,
+    "duals": 16
+  },
+  "standings_fetch": {
+    "url": "https://highschoolsports.nj.com/wrestling/standings/season/2010-2011?conference=Olympic",
+    "http": 200,
+    "bytes": 222629,
+    "available": false
+  },
+  "standings_mode": "reconstructed",
+  "dual_record": "6-10",
+  "conference_record": null,
+  "coaching_history_record": "9-13",
+  "coaching_mismatch": {
+    "season": "2010-11",
+    "coaching_history": "9-13",
+    "nj_com_duals": "6-10"
+  },
+  "event_count": 30,
+  "dual_count": 16
+}
