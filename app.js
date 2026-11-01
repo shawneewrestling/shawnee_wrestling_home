@@ -784,6 +784,21 @@
     return `${wt}: ${winner} (${winnerTeam}) over ${loser} (${loserTeam}) ${paren}`.trim();
   }
 
+  function normTeamName(s) {
+    return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+
+  function teamMatch(want, got) {
+    const a = normTeamName(want);
+    const b = normTeamName(got);
+    if (!a || !b) return false;
+    if (a === b) return true;
+    if (a.includes(b) || b.includes(a)) return true;
+    const a6 = a.slice(0, 6);
+    const b6 = b.slice(0, 6);
+    return (!!a6 && b.includes(a6)) || (!!b6 && a.includes(b6));
+  }
+
   function boutLine(b, shawneeWrestler, weight) {
     return `<li>${esc(boutTwText(b, shawneeWrestler, weight))}</li>`;
   }
@@ -796,12 +811,9 @@
     if (!tr || !(tr.wrestlers || []).length) return '';
     let wrestlers = tr.wrestlers || [];
     if (m.filter_opponent) {
-      const want = String(m.filter_opponent).toLowerCase();
+      const want = m.filter_opponent;
       wrestlers = wrestlers.map((w) => {
-        const bouts2 = (w.bouts || []).filter((b) => {
-          const ot = String(b.opponent_team || '').toLowerCase();
-          return ot && (want.includes(ot.slice(0, 6)) || ot.includes(want.slice(0, 6)));
-        });
+        const bouts2 = (w.bouts || []).filter((b) => teamMatch(want, b.opponent_team));
         return { ...w, bouts: bouts2 };
       }).filter((w) => (w.bouts || []).length);
     }
