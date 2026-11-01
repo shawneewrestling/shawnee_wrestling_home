@@ -271,11 +271,6 @@
       grid.innerHTML = '<p>Roster gallery unavailable.</p>';
       return;
     }
-    const note = document.getElementById('homeRosterNote');
-    const c = homeRoster.counts || {};
-    if (note) {
-      note.textContent = `Team-site gallery (${c.wp_gallery ?? (homeRoster.wrestlers || []).length}) matched to 2025-26 season data where names align (${c.matched ?? 0} matched).`;
-    }
     grid.innerHTML = (homeRoster.wrestlers || []).map((r) => {
       const href = r.player_page || '';
       const tag = href ? 'a' : 'div';
@@ -299,20 +294,6 @@
         </div>
       </${tag}>`;
     }).join('');
-
-    const box = document.getElementById('homeRosterUnmatched');
-    if (box && homeRoster.match_report) {
-      const mr = homeRoster.match_report;
-      const uwp = mr.unmatched_wp || [];
-      const utw = mr.unmatched_tw || [];
-      if (uwp.length || utw.length) {
-        box.hidden = false;
-        const parts = [];
-        if (uwp.length) parts.push(`<strong>On team-site gallery only:</strong> ${uwp.map(esc).join(', ')}`);
-        if (utw.length) parts.push(`<strong>On 2025-26 season roster only (${utw.length}):</strong> ${utw.map(esc).join(', ')}`);
-        box.innerHTML = parts.join('<br/>');
-      }
-    }
   }
 
 
@@ -321,8 +302,6 @@
   }
 
   function renderVarsityCards(assign, data) {
-    const note = document.getElementById('varsityNote');
-    if (note) note.textContent = assign.derivation_note || '';
     const c = assign.counts || {};
     const meta = document.getElementById('varsityMeta');
     if (meta) meta.innerHTML = `

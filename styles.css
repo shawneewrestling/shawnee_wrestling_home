@@ -54,14 +54,9 @@ a:hover { color: var(--accent); }
 }
 .brand-mark {
   width: 56px; height: 56px;
-  border-radius: 50%;
-  background: #fff;
   display: grid; place-items: center;
-  border: 3px solid var(--accent);
   flex-shrink: 0;
-  overflow: hidden;
-  padding: 4px;
-  box-sizing: border-box;
+  background: transparent;
 }
 .brand-mark img {
   width: 100%;
