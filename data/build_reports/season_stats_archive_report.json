@@ -1,0 +1,239 @@
+{
+  "generated_at": "2026-11-01T16:52:01-05:00",
+  "uncertain_merges": [
+    {
+      "season": "2014-15",
+      "name_key": "isaiahbryant",
+      "names": [
+        "Isaiah Bryant",
+        "Isaiah Bryant"
+      ]
+    },
+    {
+      "season": "2014-15",
+      "name_key": "aaronbill",
+      "names": [
+        "Aaron Bill",
+        "Aaron Bill"
+      ]
+    },
+    {
+      "season": "2014-15",
+      "name_key": "drewlapinski",
+      "names": [
+        "Drew Lapinski",
+        "Drew Lapinski"
+      ]
+    }
+  ],
+  "built_from_sheets": [
+    {
+      "season": "2010-11",
+      "count": 1
+    },
+    {
+      "season": "2011-12",
+      "count": 2
+    },
+    {
+      "season": "2012-13",
+      "count": 2
+    },
+    {
+      "season": "2013-14",
+      "count": 2
+    },
+    {
+      "season": "2014-15",
+      "count": 16
+    },
+    {
+      "season": "2015-16",
+      "count": 21
+    },
+    {
+      "season": "2016-17",
+      "count": 18
+    },
+    {
+      "season": "2017-18",
+      "count": 16
+    },
+    {
+      "season": "2018-19",
+      "count": 22
+    },
+    {
+      "season": "2019-20",
+      "count": 26
+    },
+    {
+      "season": "2020-21",
+      "count": 19
+    },
+    {
+      "season": "2021-22",
+      "count": 24
+    },
+    {
+      "season": "2022-23",
+      "count": 25
+    },
+    {
+      "season": "2023-24",
+      "count": 26
+    }
+  ],
+  "pages": [
+    "stats/2010-11/index.html",
+    "stats/2011-12/index.html",
+    "stats/2012-13/index.html",
+    "stats/2013-14/index.html",
+    "stats/2014-15/index.html",
+    "stats/2015-16/index.html",
+    "stats/2016-17/index.html",
+    "stats/2017-18/index.html",
+    "stats/2018-19/index.html",
+    "stats/2019-20/index.html",
+    "stats/2020-21/index.html",
+    "stats/2021-22/index.html",
+    "stats/2022-23/index.html",
+    "stats/2023-24/index.html",
+    "stats/2024-25/index.html",
+    "stats/2025-26/index.html",
+    "stats/2026-27/index.html"
+  ],
+  "no_player_page_by_season": {
+    "2014-15": [
+      "John Yaegar",
+      "Drew Werosta",
+      "Eugene Wayns"
+    ],
+    "2015-16": [
+      "Ethan Mcginley",
+      "Jackson Balzan",
+      "Brandon Sarlo",
+      "John Yaegar",
+      "Ryan Ross",
+      "Eugene Wayns",
+      "Dylan Patrowicz",
+      "Drew Werosta",
+      "Jeriah Scarbrough",
+      "Mack Martin"
+    ],
+    "2016-17": [
+      "Matt Balzan",
+      "Andrew Digilio",
+      "Colin McCourt",
+      "Cadrick Augustin",
+      "Dylan Patrowicz",
+      "Nick Lope",
+      "Jake Mccreight"
+    ],
+    "2017-18": [
+      "Matthew Wolfe",
+      "Cole Kalamvokis",
+      "Colin McCourt",
+      "Preston Sarlo",
+      "Mark Palmeri",
+      "Dylan Patrowicz",
+      "Nick Lope"
+    ],
+    "2018-19": [
+      "Mark Palmieri",
+      "Colin Mcourt",
+      "Alize Alvarado",
+      "Zeke Werosta",
+      "Adam El-Saadi",
+      "Jackson O'Brien",
+      "Steven Deringer",
+      "Kalamvokis Cole",
+      "Christain Defulio"
+    ],
+    "2019-20": [
+      "Lucas Hunter",
+      "Aiden Higgins",
+      "Dom Gary",
+      "Ryan Minshall",
+      "Zeke Werosta",
+      "Ethan Smith",
+      "Jackson O'Brien",
+      "Adam El-Saadi",
+      "Cody Gates",
+      "Cole Kalamvokis",
+      "Kodran Elijah",
+      "Ali Zafer"
+    ],
+    "2020-21": [
+      "Asher Harrington",
+      "Lucas Hunter",
+      "Nathaniel Rose",
+      "RJ Hunnewell",
+      "Matt Quinn",
+      "Elijah Kodran",
+      "Jason Torres",
+      "Adam Etzel"
+    ],
+    "2021-22": [
+      "Asher Harrington",
+      "Lucas Hunter",
+      "Richard John (RJ) Hunnewell",
+      "Cody Gates",
+      "Elijah Kodran",
+      "Tom Sanson",
+      "Maximilian Germain",
+      "Elijah McGee"
+    ],
+    "2022-23": [
+      "Asher Harrington",
+      "Jackson O`Connor",
+      "Aloysius FitzPatrick",
+      "Dominic FitzPatrick",
+      "Alexander Pollock",
+      "Avery Rubano",
+      "Travis Hoskins",
+      "Richard John (RJ) Hunnewell",
+      "Caden Mobley-McHenry",
+      "Christian Pinto",
+      "Colin Wall"
+    ],
+    "2023-24": [
+      "Richard John (RJ) Hunnewell",
+      "Joe Leto",
+      "Erik Sullivan",
+      "Travis Hoskins",
+      "Justin Davenport",
+      "Jarred Kelly",
+      "Mason Davenport"
+    ],
+    "2024-25": [
+      "Tyler Nickles",
+      "Jackson Artman",
+      "Thomas Cox"
+    ]
+  },
+  "current_season": {
+    "id": "2026-27",
+    "count": 50,
+    "mode": "preseason"
+  },
+  "seasons_with_stats": [
+    "2010-11",
+    "2011-12",
+    "2012-13",
+    "2013-14",
+    "2014-15",
+    "2015-16",
+    "2016-17",
+    "2017-18",
+    "2018-19",
+    "2019-20",
+    "2020-21",
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26",
+    "2026-27"
+  ]
+}

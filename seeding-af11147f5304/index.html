@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Seeding Tool · Shawnee Wrestling (coaches)</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="seeding.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="inner">
+      <div class="brand">
+        <div class="brand-mark"><img src="../assets/img/shawnee-s.png" alt="Shawnee" width="56" height="56" /></div>
+        <div>
+          <h1>Shawnee Renegades</h1>
+          <div class="tag">Coaches · NJSIAA Seeding Tool</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <h1 class="page-title">NJSIAA Seeding Simulator</h1>
+    <p class="muted">Add wrestlers from the statewide pool, edit pre-seed inputs, enter in-season bouts, then evaluate the group (pre-seed → round-robin elimination → head-to-head). Not linked from the public site.</p>
+    <div id="status" class="seed-banner" hidden></div>
+    <div id="incompleteFlag" class="seed-banner warn" hidden>Bout data incomplete — cycles and H2H use only what you enter below.</div>
+
+    <div class="seed-controls">
+      <label>Level
+        <select id="level">
+          <option value="region">Region</option>
+          <option value="state">State</option>
+        </select>
+      </label>
+      <label>Season
+        <select id="season"></select>
+      </label>
+      <label>Weight (filter)
+        <select id="weight"></select>
+      </label>
+      <label>Group name
+        <input id="groupName" type="text" placeholder="e.g. Region 7 · 150" />
+      </label>
+    </div>
+
+    <div class="seed-actions">
+      <button type="button" id="runBtn">Evaluate group</button>
+      <button type="button" id="loadSampleBtn" class="secondary">Load sample field</button>
+      <button type="button" id="saveLocalBtn" class="secondary">Save locally</button>
+      <button type="button" id="loadLocalBtn" class="secondary">Load saved</button>
+      <button type="button" id="exportBtn" class="secondary">Export JSON</button>
+      <label class="file-btn secondary">Import JSON<input type="file" id="importFile" accept="application/json,.json" hidden /></label>
+      <button type="button" id="clearGroupBtn" class="secondary">Clear group</button>
+    </div>
+
+    <section class="seed-panel" id="pickerPanel">
+      <h2>Add participants from pool</h2>
+      <p class="muted">Search any NJSIAA wrestler (name / school). Multi-select, or select all matching this weight. Prestige auto-fills from the prior 4 seasons.</p>
+      <div class="picker-row">
+        <input id="poolSearch" type="search" placeholder="Search name or school…" autocomplete="off" />
+        <label class="inline"><input type="checkbox" id="filterWeightOnly" checked /> Limit to selected weight</label>
+        <button type="button" id="selectVisibleBtn" class="secondary">Select visible</button>
+        <button type="button" id="selectAllWeightBtn" class="secondary">Select all at weight</button>
+        <button type="button" id="clearSelBtn" class="secondary">Clear checks</button>
+        <button type="button" id="addSelectedBtn">Add selected</button>
+      </div>
+      <div id="poolResults" class="pool-results"></div>
+      <div class="manual-add">
+        <h3>Manual wrestler (not in index)</h3>
+        <div class="manual-row">
+          <input id="manualName" type="text" placeholder="Name" />
+          <input id="manualSchool" type="text" placeholder="School" />
+          <input id="manualPrior" type="text" placeholder="Prior code (e.g. R1place)" />
+          <input id="manualTw" type="number" placeholder="TW pts" />
+          <button type="button" id="addManualBtn" class="secondary">Add manual</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="seed-panel" style="margin-top:1rem">
+      <h2>Group (<span id="groupCount">0</span>)</h2>
+      <div class="table-wrap">
+        <table class="seed-table" id="groupTable">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>School</th>
+              <th>D-pl</th>
+              <th>Prior</th>
+              <th>Rank</th>
+              <th>TW</th>
+              <th>W vs seeded</th>
+              <th>W vs prior</th>
+              <th>Record</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="groupBody"></tbody>
+        </table>
+      </div>
+      <p class="muted" id="prestigeNote"></p>
+    </section>
+
+    <section class="seed-panel" style="margin-top:1rem">
+      <h2>In-season bouts (within group)</h2>
+      <p class="muted">Winner and loser must be in the group (pick from list) or type a name that matches. Date optional (YYYY-MM-DD).</p>
+      <div class="bout-add">
+        <select id="boutWinner"></select>
+        <span>beat</span>
+        <select id="boutLoser"></select>
+        <input id="boutDate" type="date" />
+        <button type="button" id="addBoutBtn" class="secondary">Add bout</button>
+      </div>
+      <div class="table-wrap" style="margin-top:.5rem">
+        <table class="seed-table">
+          <thead><tr><th>Winner</th><th>Loser</th><th>Date</th><th></th></tr></thead>
+          <tbody id="boutBody"></tbody>
+        </table>
+      </div>
+      <details class="paste-details">
+        <summary>Paste bouts / wrestlers (advanced)</summary>
+        <div class="seed-grid two">
+          <div>
+            <p class="muted">Wrestlers: <code>name | school | districtPlace | priorCode | twPoints | winsOverSeeded | winsOverPrior</code></p>
+            <textarea id="wrestlerPaste" class="paste" placeholder="Alex Champ | Shawnee | 1 | R1place | 120 | 2 | 3"></textarea>
+            <button type="button" id="applyWrestlerPaste" class="secondary">Apply wrestler paste</button>
+          </div>
+          <div>
+            <p class="muted">Bouts: <code>winner | loser | YYYY-MM-DD</code></p>
+            <textarea id="boutPaste" class="paste" placeholder="Blake Second | Chris Third | 2025-12-10"></textarea>
+            <button type="button" id="applyBoutPaste" class="secondary">Apply bout paste</button>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <div class="seed-grid two" style="margin-top:1rem">
+      <section class="seed-panel">
+        <h2>Pre-seed order</h2>
+        <p class="muted criteria" id="criteriaBox"></p>
+        <div class="table-wrap">
+          <table class="seed-table">
+            <thead><tr><th>#</th><th>Name</th><th>School</th><th>D-pl</th><th>Prior</th><th>Rank</th><th>TW</th></tr></thead>
+            <tbody id="preSeedBody"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="seed-panel">
+        <h2>Final seed (after H2H)</h2>
+        <div class="table-wrap">
+          <table class="seed-table">
+            <thead><tr><th>#</th><th>Name</th><th>School</th><th>Why</th><th>Prior</th><th>TW</th></tr></thead>
+            <tbody id="finalSeedBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <div class="seed-grid two" style="margin-top:1rem">
+      <section class="seed-panel">
+        <h2>Eliminated bouts</h2>
+        <div id="struckBox"><p class="muted">Run evaluate to see struck bouts and rules.</p></div>
+        <h3>Loops / SCC</h3>
+        <div id="loopsBox"><p class="muted">—</p></div>
+        <h3>H2H movements</h3>
+        <div id="movementsBox"><p class="muted">—</p></div>
+      </section>
+      <section class="seed-panel">
+        <h2>Vote / extenuating (both outcomes)</h2>
+        <div id="votesBox"><p class="muted">—</p></div>
+        <h3>Region 2nd/3rd first-round pairings</h3>
+        <div id="pairsBox"><p class="muted">—</p></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    Shawnee High School <a class="footer-stealth" href="./" rel="nofollow">Wrestling</a> · 2025-2026 Season
+  </footer>
+  <script src="seeding-engine.js"></script>
+  <script src="seeding-app.js"></script>
+</body>
+</html>

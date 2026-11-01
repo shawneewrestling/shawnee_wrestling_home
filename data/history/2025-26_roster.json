@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "season": "2025-26",
+  "title": "2025-2026 Season",
+  "updated_at": "2026-11-01T14:38:32-05:00",
+  "weight_classes": [
+    "106",
+    "113",
+    "120",
+    "126",
+    "132",
+    "138",
+    "144",
+    "150",
+    "157",
+    "165",
+    "175",
+    "190",
+    "215",
+    "285"
+  ],
+  "derivation": "dual_bouts",
+  "derivation_note": "Most dual appearances per NJSIAA weight from TW EventMatches captures.",
+  "counts": {
+    "filled": 14,
+    "vacant": 0,
+    "weight_classes": 14,
+    "full_roster": 58
+  },
+  "slots": [
+    {
+      "assigned_weight": "106",
+      "vacant": false,
+      "wrestler_id": "35008235132",
+      "name": "Matt Hart",
+      "grade": "So.",
+      "wins": 12,
+      "losses": 20,
+      "photo": null,
+      "player_page": "players/matt-hart-235132.html",
+      "prestige_points": 10,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 14,
+      "career_losses": 22,
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "113"
+      ]
+    },
+    {
+      "assigned_weight": "113",
+      "vacant": false,
+      "wrestler_id": "35008197132",
+      "name": "Sean Bradley",
+      "grade": "Sr.",
+      "wins": 21,
+      "losses": 16,
+      "photo": "assets/img/roster/sean-bradley.jpg",
+      "player_page": "players/sean-bradley-197132.html",
+      "prestige_points": 45,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 35,
+      "career_losses": 29,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "120"
+      ]
+    },
+    {
+      "assigned_weight": "120",
+      "vacant": false,
+      "wrestler_id": "35008213132",
+      "name": "Anthony Blahut",
+      "grade": "So.",
+      "wins": 6,
+      "losses": 17,
+      "photo": null,
+      "player_page": "players/anthony-blahut-213132.html",
+      "prestige_points": 0,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 6,
+      "career_losses": 20,
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "120"
+      ]
+    },
+    {
+      "assigned_weight": "126",
+      "vacant": false,
+      "wrestler_id": "35217388132",
+      "name": "Brayden Inman",
+      "grade": "Fr.",
+      "wins": 14,
+      "losses": 12,
+      "photo": null,
+      "player_page": "players/brayden-inman-388132.html",
+      "prestige_points": 0,
+      "source": "dual_bouts",
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1,
+      "weights_wrestled": [
+        "132"
+      ]
+    },
+    {
+      "assigned_weight": "132",
+      "vacant": false,
+      "wrestler_id": "35008201132",
+      "name": "Jordan Segal",
+      "grade": "Sr.",
+      "wins": 29,
+      "losses": 7,
+      "photo": "assets/img/roster/jordan-segal.jpg",
+      "player_page": "players/jordan-segal-201132.html",
+      "prestige_points": 105,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 107,
+      "career_losses": 25,
+      "seasons_on_record": 4,
+      "weights_wrestled": [
+        "126"
+      ]
+    },
+    {
+      "assigned_weight": "138",
+      "vacant": false,
+      "wrestler_id": "35008209132",
+      "name": "Ryan Hoerst",
+      "grade": "Jr.",
+      "wins": 17,
+      "losses": 14,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-111-of-17-XL-300x300.jpg",
+      "player_page": "players/ryan-hoerst-209132.html",
+      "prestige_points": 15,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 30,
+      "career_losses": 40,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "144"
+      ]
+    },
+    {
+      "assigned_weight": "144",
+      "vacant": false,
+      "wrestler_id": "35008221132",
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "grade": "So.",
+      "wins": 21,
+      "losses": 14,
+      "photo": "assets/img/roster/oleksandr-sasha-yurovskyi.jpg",
+      "player_page": "players/oleksandr-sasha-yurovskyi-221132.html",
+      "prestige_points": 10,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 31,
+      "career_losses": 29,
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "144"
+      ]
+    },
+    {
+      "assigned_weight": "150",
+      "vacant": false,
+      "wrestler_id": "35008220132",
+      "name": "Brian Reice",
+      "grade": "So.",
+      "wins": 3,
+      "losses": 4,
+      "photo": null,
+      "player_page": "players/brian-reice-220132.html",
+      "prestige_points": 0,
+      "source": "dual_bouts",
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1,
+      "weights_wrestled": [
+        "144"
+      ]
+    },
+    {
+      "assigned_weight": "157",
+      "vacant": false,
+      "wrestler_id": "35008208132",
+      "name": "Max Spitznas",
+      "grade": "Jr.",
+      "wins": 27,
+      "losses": 6,
+      "photo": "assets/img/roster/max-spitznas.jpg",
+      "player_page": "players/max-spitznas-208132.html",
+      "prestige_points": 15,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 53,
+      "career_losses": 44,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "165"
+      ]
+    },
+    {
+      "assigned_weight": "165",
+      "vacant": false,
+      "wrestler_id": "35008207132",
+      "name": "Trevor Sieben",
+      "grade": "Jr.",
+      "wins": 14,
+      "losses": 11,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2023/12/boys-wrestling-group-and-ind-shots-9-of-22-300x300.jpg",
+      "player_page": "players/trevor-sieben-207132.html",
+      "prestige_points": 15,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 43,
+      "career_losses": 48,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "165"
+      ]
+    },
+    {
+      "assigned_weight": "175",
+      "vacant": false,
+      "wrestler_id": "35008202132",
+      "name": "Joseph Augusta",
+      "grade": "Sr.",
+      "wins": 9,
+      "losses": 12,
+      "photo": "assets/img/roster/joseph-augusta.jpg",
+      "player_page": "players/joseph-augusta-202132.html",
+      "prestige_points": 10,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 13,
+      "career_losses": 22,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "175"
+      ]
+    },
+    {
+      "assigned_weight": "190",
+      "vacant": false,
+      "wrestler_id": "35008219132",
+      "name": "Rowan Nix",
+      "grade": "So.",
+      "wins": 13,
+      "losses": 14,
+      "photo": null,
+      "player_page": "players/rowan-nix-219132.html",
+      "prestige_points": 10,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 13,
+      "career_losses": 15,
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "215"
+      ]
+    },
+    {
+      "assigned_weight": "215",
+      "vacant": false,
+      "wrestler_id": "35008205132",
+      "name": "William (Liam) McSorley",
+      "grade": "Jr.",
+      "wins": 15,
+      "losses": 15,
+      "photo": "assets/img/roster/william-liam-mcsorley.jpg",
+      "player_page": "players/william-liam-mcsorley-205132.html",
+      "prestige_points": 35,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 22,
+      "career_losses": 28,
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "215"
+      ]
+    },
+    {
+      "assigned_weight": "285",
+      "vacant": false,
+      "wrestler_id": "35008230132",
+      "name": "Collin McHugh",
+      "grade": "Jr.",
+      "wins": 22,
+      "losses": 14,
+      "photo": "assets/img/roster/collin-mchugh.jpg",
+      "player_page": "players/collin-mchugh-230132.html",
+      "prestige_points": 15,
+      "source": "dual_bouts",
+      "show_career": true,
+      "career_wins": 27,
+      "career_losses": 34,
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "285"
+      ]
+    }
+  ]
+}

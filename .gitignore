@@ -2,3 +2,13 @@ __pycache__/
 *.pyc
 .DS_Store
 screens/
+
+# NJ.com bracket HTML cache (regenerable via pull_opponent_advancement.py)
+data/cache/
+
+# Seeding page credentials — never commit
+**/.htpasswd
+seeding-*/.htpasswd
+
+# Deploy artifact (built locally; do not commit)
+live_static.zip

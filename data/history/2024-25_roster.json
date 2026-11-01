@@ -1,0 +1,320 @@
+{
+  "schema_version": 1,
+  "season": "2024-25",
+  "title": "2024-2025 Season",
+  "updated_at": "2026-11-01T13:29:35-05:00",
+  "weight_classes": [
+    "106",
+    "113",
+    "120",
+    "126",
+    "132",
+    "138",
+    "144",
+    "150",
+    "157",
+    "165",
+    "175",
+    "190",
+    "215",
+    "285"
+  ],
+  "derivation": "season_record_proxy",
+  "derivation_note": "No TW dual lineup captures for this season; starter = most wins among wrestlers whose TW roster weight matches the class.",
+  "counts": {
+    "filled": 14,
+    "vacant": 0,
+    "weight_classes": 14,
+    "full_roster": 42
+  },
+  "slots": [
+    {
+      "assigned_weight": "106",
+      "vacant": false,
+      "wrestler_id": "29798020132",
+      "name": "Jordan Segal",
+      "grade": "Jr.",
+      "wins": 6,
+      "losses": 1,
+      "photo": "assets/img/roster/jordan-segal.jpg",
+      "player_page": "players/jordan-segal-201132.html",
+      "prestige_points": 105,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 107,
+      "career_losses": 25,
+      "seasons_on_record": 4,
+      "weights_wrestled": [
+        "106"
+      ]
+    },
+    {
+      "assigned_weight": "113",
+      "vacant": false,
+      "wrestler_id": "29798005132",
+      "name": "Joseph Hart",
+      "grade": "Sr.",
+      "wins": 20,
+      "losses": 11,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2023/12/boys-wrestling-group-and-ind-shots-6-of-22-300x300.jpg",
+      "player_page": "players/joseph-hart-8e69d7.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 34,
+      "career_losses": 25,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "113",
+        "106"
+      ]
+    },
+    {
+      "assigned_weight": "120",
+      "vacant": false,
+      "wrestler_id": "30622800132",
+      "name": "Landon Caffery",
+      "grade": "Fr.",
+      "wins": 1,
+      "losses": 3,
+      "photo": null,
+      "player_page": "players/landon-caffery-236132.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 0,
+      "career_losses": 3,
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "120"
+      ]
+    },
+    {
+      "assigned_weight": "126",
+      "vacant": false,
+      "wrestler_id": "29798016132",
+      "name": "Garrett Borlaug",
+      "grade": "Jr.",
+      "wins": 15,
+      "losses": 16,
+      "photo": "assets/img/roster/garrett-borlaug.jpg",
+      "player_page": "players/garrett-borlaug-199132.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 30,
+      "career_losses": 47,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "126"
+      ]
+    },
+    {
+      "assigned_weight": "132",
+      "vacant": false,
+      "wrestler_id": "30290481132",
+      "name": "Leeland Rogers",
+      "grade": "Fr.",
+      "wins": 21,
+      "losses": 14,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-104-of-17-XL-300x300.jpg",
+      "player_page": "players/leeland-rogers-225132.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 32,
+      "career_losses": 20,
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "132"
+      ]
+    },
+    {
+      "assigned_weight": "138",
+      "vacant": false,
+      "wrestler_id": "29798035132",
+      "name": "Ryan Hoerst",
+      "grade": "So.",
+      "wins": 11,
+      "losses": 19,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-111-of-17-XL-300x300.jpg",
+      "player_page": "players/ryan-hoerst-209132.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 30,
+      "career_losses": 40,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "138"
+      ]
+    },
+    {
+      "assigned_weight": "144",
+      "vacant": false,
+      "wrestler_id": "30293485132",
+      "name": "Jackson Artman",
+      "grade": "Jr.",
+      "wins": 1,
+      "losses": 2,
+      "photo": null,
+      "player_page": "players/jackson-artman-485132.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1,
+      "weights_wrestled": [
+        "144"
+      ]
+    },
+    {
+      "assigned_weight": "150",
+      "vacant": false,
+      "wrestler_id": "29798030132",
+      "name": "Trevor Sieben",
+      "grade": "So.",
+      "wins": 18,
+      "losses": 17,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2023/12/boys-wrestling-group-and-ind-shots-9-of-22-300x300.jpg",
+      "player_page": "players/trevor-sieben-207132.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 43,
+      "career_losses": 48,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "150"
+      ]
+    },
+    {
+      "assigned_weight": "157",
+      "vacant": false,
+      "wrestler_id": "29798006132",
+      "name": "Chris Ahrens",
+      "grade": "Sr.",
+      "wins": 32,
+      "losses": 10,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-100-of-17-XL-300x300.jpg",
+      "player_page": "players/chris-ahrens-fa070a.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 115,
+      "career_losses": 36,
+      "seasons_on_record": 4,
+      "weights_wrestled": [
+        "165",
+        "175",
+        "157",
+        "150",
+        "152"
+      ]
+    },
+    {
+      "assigned_weight": "165",
+      "vacant": false,
+      "wrestler_id": "29798010132",
+      "name": "Lucas Estevez",
+      "grade": "Sr.",
+      "wins": 20,
+      "losses": 14,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2023/12/boys-wrestling-group-and-ind-shots-13-of-22-300x300.jpg",
+      "player_page": "players/lucas-estevez-5fbc2d.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 44,
+      "career_losses": 48,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "157",
+        "165"
+      ]
+    },
+    {
+      "assigned_weight": "175",
+      "vacant": false,
+      "wrestler_id": "29798032132",
+      "name": "Max Spitznas",
+      "grade": "So.",
+      "wins": 16,
+      "losses": 17,
+      "photo": "assets/img/roster/max-spitznas.jpg",
+      "player_page": "players/max-spitznas-208132.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 53,
+      "career_losses": 44,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "175"
+      ]
+    },
+    {
+      "assigned_weight": "190",
+      "vacant": false,
+      "wrestler_id": "29798023132",
+      "name": "Dominic Harris",
+      "grade": "Sr.",
+      "wins": 17,
+      "losses": 17,
+      "photo": null,
+      "player_page": "players/dominic-harris-d7584f.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 21,
+      "career_losses": 27,
+      "seasons_on_record": 3,
+      "weights_wrestled": [
+        "190",
+        "215",
+        "175"
+      ]
+    },
+    {
+      "assigned_weight": "215",
+      "vacant": false,
+      "wrestler_id": "29798039132",
+      "name": "Erik Sullivan",
+      "grade": "Sr.",
+      "wins": 0,
+      "losses": 7,
+      "photo": "https://shawneewrestling.com/wp-content/uploads/2025/01/wrestling-finals-110-of-17-XL-300x300.jpg",
+      "player_page": "players/erik-sullivan-039132.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 1,
+      "weights_wrestled": [
+        "215"
+      ]
+    },
+    {
+      "assigned_weight": "285",
+      "vacant": false,
+      "wrestler_id": "29798028132",
+      "name": "William (Liam) McSorley",
+      "grade": "So.",
+      "wins": 9,
+      "losses": 21,
+      "photo": "assets/img/roster/william-liam-mcsorley.jpg",
+      "player_page": "players/william-liam-mcsorley-205132.html",
+      "prestige_points": 0,
+      "source": "season_record_proxy",
+      "show_career": true,
+      "career_wins": 22,
+      "career_losses": 28,
+      "seasons_on_record": 2,
+      "weights_wrestled": [
+        "285"
+      ]
+    }
+  ]
+}

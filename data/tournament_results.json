@@ -6407,5 +6407,3040 @@
     "shawnee_bout_count": 3,
     "status": "final",
     "completed": true
+  },
+  "8715041132": {
+    "event_id": "8715041132",
+    "event_name": "Cherry Hill  West, NJ @ Shawnee, NJ",
+    "date_iso": "2025-12-17",
+    "source_file": "event_8715041132.txt",
+    "opponents": [
+      "Cherry Hill West"
+    ],
+    "dual_scores": {
+      "Cherry Hill West": {
+        "opponent": "Cherry Hill West",
+        "shawnee": 57,
+        "opp": 11,
+        "result": "W",
+        "score_display": "57-11"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "W",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Aiden Sanchez",
+            "opponent_team": "Cherry Hill West",
+            "score": "15-11"
+          }
+        ]
+      },
+      {
+        "wrestler": "Sean Bradley",
+        "weight": "113",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 347,
+            "opponent_wrestler": "Caden Rossi",
+            "opponent_team": "Cherry Hill West",
+            "score": "TF 24-9 5:47"
+          }
+        ]
+      },
+      {
+        "wrestler": "Anthony Blahut",
+        "weight": "120",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Aeden Wynne",
+            "opponent_team": "Cherry Hill West",
+            "score": "4-7"
+          }
+        ]
+      },
+      {
+        "wrestler": "Brayden Inman",
+        "weight": "126",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 170,
+            "opponent_wrestler": "Mason Hare",
+            "opponent_team": "Cherry Hill West",
+            "score": "Fall 2:50"
+          }
+        ]
+      },
+      {
+        "wrestler": "Garrett Borlaug",
+        "weight": "132",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "W",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Wynnston Yim",
+            "opponent_team": "Cherry Hill West",
+            "score": "19-6"
+          }
+        ]
+      },
+      {
+        "wrestler": "Leeland Rogers",
+        "weight": "138",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 67,
+            "opponent_wrestler": "Brandon Farling",
+            "opponent_team": "Cherry Hill West",
+            "score": "Fall 1:07"
+          }
+        ]
+      },
+      {
+        "wrestler": "Ryan Hoerst",
+        "weight": "144",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Mason Mahan",
+            "opponent_team": "Cherry Hill West",
+            "score": "10-11"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "150",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 194,
+            "opponent_wrestler": "Dominic Faltz",
+            "opponent_team": "Cherry Hill West",
+            "score": "Fall 3:14"
+          }
+        ]
+      },
+      {
+        "wrestler": "Max Spitznas",
+        "weight": "157",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 359,
+            "opponent_wrestler": "Jakob Ubarry",
+            "opponent_team": "Cherry Hill West",
+            "score": "Fall 5:59"
+          }
+        ]
+      },
+      {
+        "wrestler": "Tyler Davis",
+        "weight": "165",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "L",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 315,
+            "opponent_wrestler": "Gabe Jones",
+            "opponent_team": "Cherry Hill West",
+            "score": "TF 20-5 5:15"
+          }
+        ]
+      },
+      {
+        "wrestler": "Joseph Augusta",
+        "weight": "175",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "W",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Caiden Chuck",
+            "opponent_team": "Cherry Hill West",
+            "score": "5-3"
+          }
+        ]
+      },
+      {
+        "wrestler": "Robert Lane",
+        "weight": "190",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 49,
+            "opponent_wrestler": "Noah Gibbs",
+            "opponent_team": "Cherry Hill West",
+            "score": "Fall 0:49"
+          }
+        ]
+      },
+      {
+        "wrestler": "William (Liam) McSorley",
+        "weight": "215",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 212,
+            "opponent_wrestler": "Anthony Vanella",
+            "opponent_team": "Cherry Hill West",
+            "score": "Fall 3:32"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "285",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 281,
+            "opponent_wrestler": "Mickey Smith",
+            "opponent_team": "Cherry Hill West",
+            "score": "Fall 4:41"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true
+  },
+  "8715046132": {
+    "event_id": "8715046132",
+    "event_name": "Moorestown, NJ @ Shawnee, NJ",
+    "date_iso": "2026-01-14",
+    "source_file": "event_8715046132.txt",
+    "opponents": [
+      "Moorestown"
+    ],
+    "dual_scores": {
+      "Moorestown": {
+        "opponent": "Moorestown",
+        "shawnee": 27,
+        "opp": 37,
+        "result": "L",
+        "score_display": "27-37"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 225,
+            "opponent_wrestler": "Max Soto",
+            "opponent_team": "Moorestown",
+            "score": "Fall 3:45"
+          }
+        ]
+      },
+      {
+        "wrestler": "Sean Bradley",
+        "weight": "113",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 107,
+            "opponent_wrestler": "Mark Errichetti",
+            "opponent_team": "Moorestown",
+            "score": "TF 17-2 1:47"
+          }
+        ]
+      },
+      {
+        "wrestler": "Anthony Blahut",
+        "weight": "120",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "W",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Jacob Flanders",
+            "opponent_team": "Moorestown",
+            "score": "9-6"
+          }
+        ]
+      },
+      {
+        "wrestler": "Brayden Inman",
+        "weight": "126",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Liam Suydam",
+            "opponent_team": "Moorestown",
+            "score": "4-17"
+          }
+        ]
+      },
+      {
+        "wrestler": "Garrett Borlaug",
+        "weight": "132",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Colin Webster",
+            "opponent_team": "Moorestown",
+            "score": "7-9"
+          }
+        ]
+      },
+      {
+        "wrestler": "Leeland Rogers",
+        "weight": "138",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Liam Williams",
+            "opponent_team": "Moorestown",
+            "score": "4-7"
+          }
+        ]
+      },
+      {
+        "wrestler": "Ryan Hoerst",
+        "weight": "144",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "W",
+            "win_type": "Injury Default",
+            "fall_seconds": 0,
+            "opponent_wrestler": "Sean Martin",
+            "opponent_team": "Moorestown",
+            "score": "Injury Default"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jack Caldwell",
+        "weight": "150",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 191,
+            "opponent_wrestler": "Declan Williams",
+            "opponent_team": "Moorestown",
+            "score": "Fall 3:11"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "157",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 210,
+            "opponent_wrestler": "Logan Zimmer",
+            "opponent_team": "Moorestown",
+            "score": "Fall 3:30"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "165",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 295,
+            "opponent_wrestler": "Tommy O`Connor",
+            "opponent_team": "Moorestown",
+            "score": "Fall 4:55"
+          }
+        ]
+      },
+      {
+        "wrestler": "Max Spitznas",
+        "weight": "175",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "W",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Ben Labroli",
+            "opponent_team": "Moorestown",
+            "score": "11-0"
+          }
+        ]
+      },
+      {
+        "wrestler": "Joseph Augusta",
+        "weight": "190",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Sam Milone",
+            "opponent_team": "Moorestown",
+            "score": "1-5"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "215",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 103,
+            "opponent_wrestler": "Michael Damerjian",
+            "opponent_team": "Moorestown",
+            "score": "Fall 1:43"
+          }
+        ]
+      },
+      {
+        "wrestler": "William (Liam) McSorley",
+        "weight": "285",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "W",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Cole Langan",
+            "opponent_team": "Moorestown",
+            "score": "4-0"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true
+  },
+  "8715049132": {
+    "event_id": "8715049132",
+    "event_name": "Eastern, NJ @ Shawnee, NJ",
+    "date_iso": "2026-01-28",
+    "source_file": "event_8715049132.txt",
+    "opponents": [
+      "Eastern"
+    ],
+    "dual_scores": {
+      "Eastern": {
+        "opponent": "Eastern",
+        "shawnee": 35,
+        "opp": 36,
+        "result": "L",
+        "score_display": "35-36"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 168,
+            "opponent_wrestler": "Michael Colino",
+            "opponent_team": "Eastern",
+            "score": "Fall 2:48"
+          }
+        ]
+      },
+      {
+        "wrestler": "Anthony Blahut",
+        "weight": "113",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "W",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Millard Wilkinson",
+            "opponent_team": "Eastern",
+            "score": "10-1"
+          }
+        ]
+      },
+      {
+        "wrestler": "Gino Gonzalez",
+        "weight": "120",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 229,
+            "opponent_wrestler": "Noah Wood",
+            "opponent_team": "Eastern",
+            "score": "Fall 3:49"
+          }
+        ]
+      },
+      {
+        "wrestler": "Nathan Hunnewell",
+        "weight": "126",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "W",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "David Castro",
+            "opponent_team": "Eastern",
+            "score": "10-1"
+          }
+        ]
+      },
+      {
+        "wrestler": "Brayden Inman",
+        "weight": "132",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 205,
+            "opponent_wrestler": "Jayden Jardine",
+            "opponent_team": "Eastern",
+            "score": "Fall 3:25"
+          }
+        ]
+      },
+      {
+        "wrestler": "Ryan Hoerst",
+        "weight": "138",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 212,
+            "opponent_wrestler": "Julian Michopoulos",
+            "opponent_team": "Eastern",
+            "score": "Fall 3:32"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jordan Segal",
+        "weight": "144",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 62,
+            "opponent_wrestler": "Sean Beirao",
+            "opponent_team": "Eastern",
+            "score": "Fall 1:02"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jack Caldwell",
+        "weight": "150",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 229,
+            "opponent_wrestler": "Keshawn Townsend",
+            "opponent_team": "Eastern",
+            "score": "Fall 3:49"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "157",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "L",
+            "win_type": "Sudden Victory",
+            "fall_seconds": null,
+            "opponent_wrestler": "Ryan Schmidt",
+            "opponent_team": "Eastern",
+            "score": "1-4"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "165",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 70,
+            "opponent_wrestler": "Nathan Coleman",
+            "opponent_team": "Eastern",
+            "score": "Fall 1:10"
+          }
+        ]
+      },
+      {
+        "wrestler": "Max Spitznas",
+        "weight": "175",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 288,
+            "opponent_wrestler": "Lucas Pacitti",
+            "opponent_team": "Eastern",
+            "score": "Fall 4:48"
+          }
+        ]
+      },
+      {
+        "wrestler": "Rowan Nix",
+        "weight": "190",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 146,
+            "opponent_wrestler": "Gabriel Graixinha",
+            "opponent_team": "Eastern",
+            "score": "Fall 2:26"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "215",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Brayden Dove",
+            "opponent_team": "Eastern",
+            "score": "8-10"
+          }
+        ]
+      },
+      {
+        "wrestler": "William (Liam) McSorley",
+        "weight": "285",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "W",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Jacob Wolf",
+            "opponent_team": "Eastern",
+            "score": "6-0"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true
+  },
+  "8715992132": {
+    "event_id": "8715992132",
+    "event_name": "Shawnee, NJ @ Northern  Burlington ( Columbus), NJ",
+    "date_iso": "2026-01-06",
+    "source_file": "event_8715992132.txt",
+    "opponents": [
+      "Northern Burlington"
+    ],
+    "dual_scores": {
+      "Northern Burlington": {
+        "opponent": "Northern Burlington",
+        "shawnee": 29,
+        "opp": 47,
+        "result": "L",
+        "score_display": "29-47"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 56,
+            "opponent_wrestler": "Maddox Millan",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 0:56"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jadiel Esquivel",
+        "weight": "113",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 160,
+            "opponent_wrestler": "Chase Millan",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 2:40"
+          }
+        ]
+      },
+      {
+        "wrestler": "Sean Bradley",
+        "weight": "120",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 166,
+            "opponent_wrestler": "Ryan Thatcher",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 2:46"
+          }
+        ]
+      },
+      {
+        "wrestler": "Nathan Hunnewell",
+        "weight": "126",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 161,
+            "opponent_wrestler": "Jason Marasco",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 2:41"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jordan Segal",
+        "weight": "132",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 294,
+            "opponent_wrestler": "Rocco Giangeruso",
+            "opponent_team": "Northern Burlington",
+            "score": "TF 19-3 4:54"
+          }
+        ]
+      },
+      {
+        "wrestler": "Garrett Borlaug",
+        "weight": "138",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Michael Mayhew",
+            "opponent_team": "Northern Burlington",
+            "score": "4-13"
+          }
+        ]
+      },
+      {
+        "wrestler": "Leeland Rogers",
+        "weight": "144",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 231,
+            "opponent_wrestler": "Justin Marcello",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 3:51"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "150",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Nathan Hyman",
+            "opponent_team": "Northern Burlington",
+            "score": "7-19"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "157",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 74,
+            "opponent_wrestler": "Nathanael Beteta-Perez",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 1:14"
+          }
+        ]
+      },
+      {
+        "wrestler": "Max Spitznas",
+        "weight": "165",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 109,
+            "opponent_wrestler": "Aadil Rehman",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 1:49"
+          }
+        ]
+      },
+      {
+        "wrestler": "Tyler Davis",
+        "weight": "175",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Logan Berck",
+            "opponent_team": "Northern Burlington",
+            "score": "2-9"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jacobs Rodriguez",
+        "weight": "190",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 22,
+            "opponent_wrestler": "Jonathan Smith",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 0:22"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "215",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 23,
+            "opponent_wrestler": "Kody Phillips",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 0:23"
+          }
+        ]
+      },
+      {
+        "wrestler": "William (Liam) McSorley",
+        "weight": "285",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 100,
+            "opponent_wrestler": "Alexander Imburgia",
+            "opponent_team": "Northern Burlington",
+            "score": "Fall 1:40"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true
+  },
+  "8733355132": {
+    "event_id": "8733355132",
+    "event_name": "Shawnee, NJ @ Paul Vi, NJ",
+    "date_iso": "2026-01-21",
+    "source_file": "event_8733355132.txt",
+    "opponents": [
+      "Paul Vi"
+    ],
+    "dual_scores": {
+      "Paul Vi": {
+        "opponent": "Paul Vi",
+        "shawnee": 42,
+        "opp": 31,
+        "result": "W",
+        "score_display": "42-31"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "W",
+            "win_type": "Forfeit",
+            "fall_seconds": null,
+            "opponent_wrestler": "Unknown",
+            "opponent_team": "Paul Vi",
+            "score": "Forfeit"
+          }
+        ]
+      },
+      {
+        "wrestler": "Anthony Blahut",
+        "weight": "113",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 99,
+            "opponent_wrestler": "Iyon Townsend",
+            "opponent_team": "Paul Vi",
+            "score": "Fall 1:39"
+          }
+        ]
+      },
+      {
+        "wrestler": "Sean Bradley",
+        "weight": "120",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 28,
+            "opponent_wrestler": "Tom Ferrese",
+            "opponent_team": "Paul Vi",
+            "score": "Fall 0:28"
+          }
+        ]
+      },
+      {
+        "wrestler": "Nathan Hunnewell",
+        "weight": "126",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "W",
+            "win_type": "Forfeit",
+            "fall_seconds": null,
+            "opponent_wrestler": "Unknown",
+            "opponent_team": "Paul Vi",
+            "score": "Forfeit"
+          }
+        ]
+      },
+      {
+        "wrestler": "Garrett Borlaug",
+        "weight": "132",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 187,
+            "opponent_wrestler": "Nico Bodrog",
+            "opponent_team": "Paul Vi",
+            "score": "Fall 3:07"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jordan Segal",
+        "weight": "138",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 239,
+            "opponent_wrestler": "Owen Gardner",
+            "opponent_team": "Paul Vi",
+            "score": "Fall 3:59"
+          }
+        ]
+      },
+      {
+        "wrestler": "Ryan Hoerst",
+        "weight": "144",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "W",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Rocco Waters",
+            "opponent_team": "Paul Vi",
+            "score": "1-0"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "150",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "W",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Christian Clark",
+            "opponent_team": "Paul Vi",
+            "score": "12-7"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jack Caldwell",
+        "weight": "157",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Keith Clark",
+            "opponent_team": "Paul Vi",
+            "score": "3-14"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "165",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 115,
+            "opponent_wrestler": "Maxwell Shipp",
+            "opponent_team": "Paul Vi",
+            "score": "Fall 1:55"
+          }
+        ]
+      },
+      {
+        "wrestler": "Tyler Davis",
+        "weight": "175",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 350,
+            "opponent_wrestler": "Chris Garvin",
+            "opponent_team": "Paul Vi",
+            "score": "Fall 5:50"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jacobs Rodriguez",
+        "weight": "190",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Ryan Hee",
+            "opponent_team": "Paul Vi",
+            "score": "4-8"
+          }
+        ]
+      },
+      {
+        "wrestler": "Rowan Nix",
+        "weight": "215",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 214,
+            "opponent_wrestler": "Sean Henderson",
+            "opponent_team": "Paul Vi",
+            "score": "Fall 3:34"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "285",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 39,
+            "opponent_wrestler": "Anthony Jackson",
+            "opponent_team": "Paul Vi",
+            "score": "Fall 0:39"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true
+  },
+  "8733359132": {
+    "event_id": "8733359132",
+    "event_name": "Shawnee, NJ @ Cherry Hill  East, NJ",
+    "date_iso": "2026-02-04",
+    "source_file": "event_8733359132.txt",
+    "opponents": [
+      "Cherry Hill East"
+    ],
+    "dual_scores": {
+      "Cherry Hill East": {
+        "opponent": "Cherry Hill East",
+        "shawnee": 45,
+        "opp": 25,
+        "result": "W",
+        "score_display": "45-25"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Ryan DiDio",
+            "opponent_team": "Cherry Hill East",
+            "score": "8-11"
+          }
+        ]
+      },
+      {
+        "wrestler": "Sean Bradley",
+        "weight": "113",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 191,
+            "opponent_wrestler": "Michael Robins",
+            "opponent_team": "Cherry Hill East",
+            "score": "TF 19-4 3:11"
+          }
+        ]
+      },
+      {
+        "wrestler": "Anthony Blahut",
+        "weight": "120",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 228,
+            "opponent_wrestler": "Owen Schwesig",
+            "opponent_team": "Cherry Hill East",
+            "score": "Fall 3:48"
+          }
+        ]
+      },
+      {
+        "wrestler": "Nathan Hunnewell",
+        "weight": "126",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Everett Hardy",
+            "opponent_team": "Cherry Hill East",
+            "score": "2-3"
+          }
+        ]
+      },
+      {
+        "wrestler": "Owen Siena",
+        "weight": "132",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 118,
+            "opponent_wrestler": "Liam Schwesig",
+            "opponent_team": "Cherry Hill East",
+            "score": "Fall 1:58"
+          }
+        ]
+      },
+      {
+        "wrestler": "Ryan Hoerst",
+        "weight": "138",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 162,
+            "opponent_wrestler": "Samii Lyons",
+            "opponent_team": "Cherry Hill East",
+            "score": "TF 15-0 2:42"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jordan Segal",
+        "weight": "144",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 116,
+            "opponent_wrestler": "Matan Cohen",
+            "opponent_team": "Cherry Hill East",
+            "score": "Fall 1:56"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "150",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 358,
+            "opponent_wrestler": "Klevis Kaqikolla",
+            "opponent_team": "Cherry Hill East",
+            "score": "TF 17-2 5:58"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "157",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 71,
+            "opponent_wrestler": "Colin Gorman",
+            "opponent_team": "Cherry Hill East",
+            "score": "Fall 1:11"
+          }
+        ]
+      },
+      {
+        "wrestler": "Joseph Augusta",
+        "weight": "165",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Kohler Kahn",
+            "opponent_team": "Cherry Hill East",
+            "score": "4-10"
+          }
+        ]
+      },
+      {
+        "wrestler": "Max Spitznas",
+        "weight": "175",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 195,
+            "opponent_wrestler": "Julian Gallo",
+            "opponent_team": "Cherry Hill East",
+            "score": "Fall 3:15"
+          }
+        ]
+      },
+      {
+        "wrestler": "Rowan Nix",
+        "weight": "190",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "W",
+            "win_type": "Forfeit",
+            "fall_seconds": null,
+            "opponent_wrestler": "Unknown",
+            "opponent_team": "Cherry Hill East",
+            "score": "Forfeit"
+          }
+        ]
+      },
+      {
+        "wrestler": "William (Liam) McSorley",
+        "weight": "215",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "W",
+            "win_type": "Forfeit",
+            "fall_seconds": null,
+            "opponent_wrestler": "Unknown",
+            "opponent_team": "Cherry Hill East",
+            "score": "Forfeit"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "285",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Dominic Canzano",
+            "opponent_team": "Cherry Hill East",
+            "score": "1-11"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true
+  },
+  "8733362132": {
+    "event_id": "8733362132",
+    "event_name": "Shawnee, NJ @ Haddonfield High Schol, NJ",
+    "date_iso": "2026-02-06",
+    "source_file": "event_8733362132.txt",
+    "opponents": [
+      "Haddonfield"
+    ],
+    "dual_scores": {
+      "Haddonfield": {
+        "opponent": "Haddonfield",
+        "shawnee": 25,
+        "opp": 39,
+        "result": "L",
+        "score_display": "25-39"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "W",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Michael Scocca",
+            "opponent_team": "Haddonfield",
+            "score": "9-1"
+          }
+        ]
+      },
+      {
+        "wrestler": "Sean Bradley",
+        "weight": "113",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 330,
+            "opponent_wrestler": "Harrison Carroll",
+            "opponent_team": "Haddonfield",
+            "score": "TF 21-6 5:30"
+          }
+        ]
+      },
+      {
+        "wrestler": "Nathan Hunnewell",
+        "weight": "120",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Cole Spence",
+            "opponent_team": "Haddonfield",
+            "score": "3-9"
+          }
+        ]
+      },
+      {
+        "wrestler": "Unknown",
+        "weight": "126",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "L",
+            "win_type": "Forfeit",
+            "fall_seconds": null,
+            "opponent_wrestler": "Alexandar Frey",
+            "opponent_team": "Haddonfield",
+            "score": "Forfeit"
+          }
+        ]
+      },
+      {
+        "wrestler": "Owen Siena",
+        "weight": "132",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 94,
+            "opponent_wrestler": "Michael Lamb",
+            "opponent_team": "Haddonfield",
+            "score": "Fall 1:34"
+          }
+        ]
+      },
+      {
+        "wrestler": "Ryan Hoerst",
+        "weight": "138",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Pierce Hoffman",
+            "opponent_team": "Haddonfield",
+            "score": "4-16"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jordan Segal",
+        "weight": "144",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 67,
+            "opponent_wrestler": "Charlie Falco",
+            "opponent_team": "Haddonfield",
+            "score": "Fall 1:07"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jack Caldwell",
+        "weight": "150",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 95,
+            "opponent_wrestler": "William Dietz",
+            "opponent_team": "Haddonfield",
+            "score": "Fall 1:35"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "157",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "W",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "William Barker",
+            "opponent_team": "Haddonfield",
+            "score": "20-8"
+          }
+        ]
+      },
+      {
+        "wrestler": "Max Spitznas",
+        "weight": "165",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "W",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Thomas Reilly",
+            "opponent_team": "Haddonfield",
+            "score": "4-0"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "175",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "L",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 192,
+            "opponent_wrestler": "Hutch Rhyne",
+            "opponent_team": "Haddonfield",
+            "score": "TF 15-0 3:12"
+          }
+        ]
+      },
+      {
+        "wrestler": "Rowan Nix",
+        "weight": "190",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Parker Bawidamann",
+            "opponent_team": "Haddonfield",
+            "score": "3-8"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "215",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 340,
+            "opponent_wrestler": "Logan Rhea",
+            "opponent_team": "Haddonfield",
+            "score": "Fall 5:40"
+          }
+        ]
+      },
+      {
+        "wrestler": "William (Liam) McSorley",
+        "weight": "285",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "W",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Michael Grant-Hines",
+            "opponent_team": "Haddonfield",
+            "score": "1-0"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true
+  },
+  "8736380132": {
+    "event_id": "8736380132",
+    "event_name": "Shawnee, NJ @ Robbinsville, NJ",
+    "date_iso": "2026-02-11",
+    "source_file": "event_8736380132.txt",
+    "opponents": [
+      "Robbinsville"
+    ],
+    "dual_scores": {
+      "Robbinsville": {
+        "opponent": "Robbinsville",
+        "shawnee": 23,
+        "opp": 53,
+        "result": "L",
+        "score_display": "23-53"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 23,
+            "opponent_wrestler": "Alexander Viscido",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 0:23"
+          }
+        ]
+      },
+      {
+        "wrestler": "Anthony Blahut",
+        "weight": "113",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 163,
+            "opponent_wrestler": "Vincent Grippa",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 2:43"
+          }
+        ]
+      },
+      {
+        "wrestler": "Sean Bradley",
+        "weight": "120",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 206,
+            "opponent_wrestler": "Lucas Messinger",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 3:26"
+          }
+        ]
+      },
+      {
+        "wrestler": "Nathan Hunnewell",
+        "weight": "126",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "L",
+            "win_type": "Sudden Victory",
+            "fall_seconds": null,
+            "opponent_wrestler": "Lucien Amato",
+            "opponent_team": "Robbinsville",
+            "score": "6-9"
+          }
+        ]
+      },
+      {
+        "wrestler": "Owen Siena",
+        "weight": "132",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "L",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 344,
+            "opponent_wrestler": "Michael Panzer",
+            "opponent_team": "Robbinsville",
+            "score": "TF 18-3 5:44"
+          }
+        ]
+      },
+      {
+        "wrestler": "Michael Hart",
+        "weight": "138",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 162,
+            "opponent_wrestler": "Jack Alexander",
+            "opponent_team": "Robbinsville",
+            "score": "TF 17-1 2:42"
+          }
+        ]
+      },
+      {
+        "wrestler": "Ryan Hoerst",
+        "weight": "144",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 183,
+            "opponent_wrestler": "Colin Yuncza",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 3:03"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jordan Segal",
+        "weight": "150",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 52,
+            "opponent_wrestler": "Luca Cannuli",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 0:52"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "157",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 187,
+            "opponent_wrestler": "Jude Cohen",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 3:07"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "165",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 104,
+            "opponent_wrestler": "Taylor Adams",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 1:44"
+          }
+        ]
+      },
+      {
+        "wrestler": "Max Spitznas",
+        "weight": "175",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 180,
+            "opponent_wrestler": "Tyler Shane",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 3:00"
+          }
+        ]
+      },
+      {
+        "wrestler": "Rowan Nix",
+        "weight": "190",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 116,
+            "opponent_wrestler": "Tony Migliaccio",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 1:56"
+          }
+        ]
+      },
+      {
+        "wrestler": "William (Liam) McSorley",
+        "weight": "215",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Anthony Inverso",
+            "opponent_team": "Robbinsville",
+            "score": "3-7"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "285",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 216,
+            "opponent_wrestler": "Nicco Cuevas-Gould",
+            "opponent_team": "Robbinsville",
+            "score": "Fall 3:36"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true
+  },
+  "9000835132": {
+    "event_id": "9000835132",
+    "event_name": "NJSIAA South Group 4 Sectional Quarters/Semis",
+    "date_iso": "2026-02-16",
+    "source_file": "event_9000835132.txt",
+    "opponents": [
+      "Toms River South"
+    ],
+    "dual_scores": {
+      "Toms River South": {
+        "opponent": "Toms River South",
+        "shawnee": 33,
+        "opp": 34,
+        "result": "L",
+        "score_display": "33-34"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Logan Maestrey",
+            "opponent_team": "Toms River South",
+            "score": "3-6"
+          }
+        ]
+      },
+      {
+        "wrestler": "Anthony Blahut",
+        "weight": "113",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 209,
+            "opponent_wrestler": "Vincent Pedalino",
+            "opponent_team": "Toms River South",
+            "score": "Fall 3:29"
+          }
+        ]
+      },
+      {
+        "wrestler": "Sean Bradley",
+        "weight": "120",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 169,
+            "opponent_wrestler": "Jaevion Friday",
+            "opponent_team": "Toms River South",
+            "score": "Fall 2:49"
+          }
+        ]
+      },
+      {
+        "wrestler": "Nathan Hunnewell",
+        "weight": "126",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "W",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Alex Ortiz",
+            "opponent_team": "Toms River South",
+            "score": "10-0"
+          }
+        ]
+      },
+      {
+        "wrestler": "Brayden Inman",
+        "weight": "132",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 310,
+            "opponent_wrestler": "Ronan Lindemann",
+            "opponent_team": "Toms River South",
+            "score": "TF 16-1 5:10"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jordan Segal",
+        "weight": "138",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 58,
+            "opponent_wrestler": "Angel Padrenan",
+            "opponent_team": "Toms River South",
+            "score": "Fall 0:58"
+          }
+        ]
+      },
+      {
+        "wrestler": "Ryan Hoerst",
+        "weight": "144",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Cullen Burr",
+            "opponent_team": "Toms River South",
+            "score": "2-13"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jack Caldwell",
+        "weight": "150",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "L",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 126,
+            "opponent_wrestler": "Owen Beneciuk",
+            "opponent_team": "Toms River South",
+            "score": "TF 17-2 2:06"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "157",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Jeffrey Hare",
+            "opponent_team": "Toms River South",
+            "score": "3-12"
+          }
+        ]
+      },
+      {
+        "wrestler": "Max Spitznas",
+        "weight": "165",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 91,
+            "opponent_wrestler": "Vaughn Parker",
+            "opponent_team": "Toms River South",
+            "score": "Fall 1:31"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "175",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 36,
+            "opponent_wrestler": "Jake Gallagher",
+            "opponent_team": "Toms River South",
+            "score": "Fall 0:36"
+          }
+        ]
+      },
+      {
+        "wrestler": "Rowan Nix",
+        "weight": "190",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Finn Devrous",
+            "opponent_team": "Toms River South",
+            "score": "2-9"
+          }
+        ]
+      },
+      {
+        "wrestler": "William (Liam) McSorley",
+        "weight": "215",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 115,
+            "opponent_wrestler": "Brett Rankin",
+            "opponent_team": "Toms River South",
+            "score": "Fall 1:55"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "285",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Austin Reed",
+            "opponent_team": "Toms River South",
+            "score": "5-8"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true,
+    "dual_id": "9000836132",
+    "dual_note": "Trackwrestling DualMatches dualId=9000836132 inside parent event 9000835132"
+  },
+  "9000836132": {
+    "event_id": "9000836132",
+    "event_name": "NJSIAA South Group 4 Sectional Quarters/Semis",
+    "date_iso": "2026-02-16",
+    "source_file": "event_9000835132.txt",
+    "opponents": [
+      "Toms River South"
+    ],
+    "dual_scores": {
+      "Toms River South": {
+        "opponent": "Toms River South",
+        "shawnee": 33,
+        "opp": 34,
+        "result": "L",
+        "score_display": "33-34"
+      }
+    },
+    "wrestlers": [
+      {
+        "wrestler": "Matt Hart",
+        "weight": "106",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "106",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Logan Maestrey",
+            "opponent_team": "Toms River South",
+            "score": "3-6"
+          }
+        ]
+      },
+      {
+        "wrestler": "Anthony Blahut",
+        "weight": "113",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "113",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 209,
+            "opponent_wrestler": "Vincent Pedalino",
+            "opponent_team": "Toms River South",
+            "score": "Fall 3:29"
+          }
+        ]
+      },
+      {
+        "wrestler": "Sean Bradley",
+        "weight": "120",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "120",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 169,
+            "opponent_wrestler": "Jaevion Friday",
+            "opponent_team": "Toms River South",
+            "score": "Fall 2:49"
+          }
+        ]
+      },
+      {
+        "wrestler": "Nathan Hunnewell",
+        "weight": "126",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "126",
+            "round": null,
+            "result": "W",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Alex Ortiz",
+            "opponent_team": "Toms River South",
+            "score": "10-0"
+          }
+        ]
+      },
+      {
+        "wrestler": "Brayden Inman",
+        "weight": "132",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "132",
+            "round": null,
+            "result": "W",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 310,
+            "opponent_wrestler": "Ronan Lindemann",
+            "opponent_team": "Toms River South",
+            "score": "TF 16-1 5:10"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jordan Segal",
+        "weight": "138",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "138",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 58,
+            "opponent_wrestler": "Angel Padrenan",
+            "opponent_team": "Toms River South",
+            "score": "Fall 0:58"
+          }
+        ]
+      },
+      {
+        "wrestler": "Ryan Hoerst",
+        "weight": "144",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "144",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Cullen Burr",
+            "opponent_team": "Toms River South",
+            "score": "2-13"
+          }
+        ]
+      },
+      {
+        "wrestler": "Jack Caldwell",
+        "weight": "150",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "150",
+            "round": null,
+            "result": "L",
+            "win_type": "Tech. Fall",
+            "fall_seconds": 126,
+            "opponent_wrestler": "Owen Beneciuk",
+            "opponent_team": "Toms River South",
+            "score": "TF 17-2 2:06"
+          }
+        ]
+      },
+      {
+        "wrestler": "Oleksandr `Sasha` Yurovskyi",
+        "weight": "157",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "157",
+            "round": null,
+            "result": "L",
+            "win_type": "Maj. Dec.",
+            "fall_seconds": null,
+            "opponent_wrestler": "Jeffrey Hare",
+            "opponent_team": "Toms River South",
+            "score": "3-12"
+          }
+        ]
+      },
+      {
+        "wrestler": "Max Spitznas",
+        "weight": "165",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "165",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 91,
+            "opponent_wrestler": "Vaughn Parker",
+            "opponent_team": "Toms River South",
+            "score": "Fall 1:31"
+          }
+        ]
+      },
+      {
+        "wrestler": "Trevor Sieben",
+        "weight": "175",
+        "record": "1-0",
+        "wins": 1,
+        "losses": 0,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "175",
+            "round": null,
+            "result": "W",
+            "win_type": "Fall",
+            "fall_seconds": 36,
+            "opponent_wrestler": "Jake Gallagher",
+            "opponent_team": "Toms River South",
+            "score": "Fall 0:36"
+          }
+        ]
+      },
+      {
+        "wrestler": "Rowan Nix",
+        "weight": "190",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "190",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Finn Devrous",
+            "opponent_team": "Toms River South",
+            "score": "2-9"
+          }
+        ]
+      },
+      {
+        "wrestler": "William (Liam) McSorley",
+        "weight": "215",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "215",
+            "round": null,
+            "result": "L",
+            "win_type": "Fall",
+            "fall_seconds": 115,
+            "opponent_wrestler": "Brett Rankin",
+            "opponent_team": "Toms River South",
+            "score": "Fall 1:55"
+          }
+        ]
+      },
+      {
+        "wrestler": "Collin McHugh",
+        "weight": "285",
+        "record": "0-1",
+        "wins": 0,
+        "losses": 1,
+        "placement": null,
+        "bouts": [
+          {
+            "weight": "285",
+            "round": null,
+            "result": "L",
+            "win_type": "Decision",
+            "fall_seconds": null,
+            "opponent_wrestler": "Austin Reed",
+            "opponent_team": "Toms River South",
+            "score": "5-8"
+          }
+        ]
+      }
+    ],
+    "shawnee_bout_count": 14,
+    "status": "final",
+    "completed": true,
+    "dual_id": "9000836132",
+    "dual_note": "Trackwrestling DualMatches dualId=9000836132 inside parent event 9000835132",
+    "parent_event_id": "9000835132"
   }
 }
