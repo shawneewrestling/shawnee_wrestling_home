@@ -9,3 +9,6 @@ data/cache/
 # Seeding page credentials — never commit
 **/.htpasswd
 seeding-*/.htpasswd
+
+# Deploy artifact (built locally; do not commit)
+live_static.zip

@@ -154,3 +154,99 @@ textarea.paste {
   color: inherit;
   text-decoration: none;
 }
+
+/* Pool picker + group editor */
+.picker-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+  margin-bottom: .65rem;
+}
+.picker-row input[type="search"] {
+  flex: 1 1 220px;
+  font: inherit;
+  padding: .45rem .55rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.picker-row .inline {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+  font-size: .85rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+.pool-results {
+  max-height: 280px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: .35rem;
+  background: #fafbfd;
+}
+.pool-table { font-size: .85rem; }
+.manual-add { margin-top: .85rem; }
+.manual-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  align-items: center;
+}
+.manual-row input {
+  font: inherit;
+  padding: .4rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  min-width: 7rem;
+}
+.bout-add {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  align-items: center;
+}
+.bout-add select, .bout-add input {
+  font: inherit;
+  padding: .4rem .5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.seed-actions .file-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: var(--navy);
+  border: 1px solid var(--navy);
+  border-radius: 999px;
+  padding: .5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.linkish {
+  background: none;
+  border: none;
+  color: var(--navy);
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+.cell-in {
+  font: inherit;
+  font-size: .85rem;
+  padding: .2rem .3rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  max-width: 100%;
+}
+.why-cell { font-size: .8rem; color: var(--muted); max-width: 22rem; }
+.paste-details { margin-top: .75rem; }
+.paste-details summary {
+  cursor: pointer;
+  color: var(--navy);
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+.criteria { font-size: .8rem; margin-bottom: .5rem; line-height: 1.35; }

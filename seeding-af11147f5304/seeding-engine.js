@@ -224,23 +224,40 @@
     // For each pair on a cycle, mark exactly one bout to strike:
     // the earliest result in the series (rule ii), and only one even if
     // multiple losses to same opponent (rule i).
-    var struckIds = {};
+    var struckMeta = {}; // id -> { bout, reason, loops }
     Object.keys(pairOnCycle).forEach(function (k) {
       var list = pairBouts[k] || [];
       if (!list.length) return;
       // earliest already sorted
       var victim = list[0];
-      struckIds[victim.id] = true;
+      var pairParts = k.split("|");
+      var multi = list.length > 1;
+      var reason =
+        "Round-robin loop (3+): eliminate " +
+        (multi
+          ? "earliest result of this pair (only one loss per repeated pair)"
+          : "this bout (pair sits on a cycle of 3+)");
+      struckMeta[victim.id] = {
+        bout: victim,
+        reason: reason,
+        pair: k,
+        loopCount: 0,
+        rule: multi ? "earliest_of_pair_in_loop" : "bout_on_loop",
+      };
     });
 
-    // Attach struck bouts to every loop that uses that pair
+    // Attach struck bouts to every loop that uses that pair; annotate loop membership
     loops.forEach(function (loop) {
       loop.edges.forEach(function (e) {
         var list = pairBouts[e.pair] || [];
         if (!list.length) return;
         var victim = list[0];
-        if (struckIds[victim.id]) {
+        if (struckMeta[victim.id]) {
           loop.struck.push(victim);
+          struckMeta[victim.id].loopCount++;
+          if (!struckMeta[victim.id].sampleLoop) {
+            struckMeta[victim.id].sampleLoop = loop.wrestlers.slice();
+          }
         }
       });
       // unique struck by id
@@ -253,17 +270,33 @@
     });
 
     var remaining = normalized.filter(function (b) {
-      return !struckIds[b.id];
+      return !struckMeta[b.id];
     });
-    var struck = normalized.filter(function (b) {
-      return struckIds[b.id];
-    });
+    var struck = normalized
+      .filter(function (b) {
+        return !!struckMeta[b.id];
+      })
+      .map(function (b) {
+        var m = struckMeta[b.id];
+        var loopNote = m.sampleLoop
+          ? " Loop: " + m.sampleLoop.join(" → ") + " → " + m.sampleLoop[0] + "."
+          : "";
+        return Object.assign({}, b, {
+          eliminated: true,
+          rule: m.rule,
+          reason: m.reason + loopNote,
+          pair: m.pair,
+        });
+      });
 
     return {
       remainingBouts: remaining,
       struckBouts: struck,
       loops: loops,
       cycles: cycles,
+      sccGroups: stronglyConnectedGroups(wrestlerIds, normalized).filter(function (c) {
+        return c.length >= 3;
+      }),
     };
   }
 
@@ -544,6 +577,48 @@
       pairs = pairSecondThird(after);
     }
 
+    // Annotate final order with why each wrestler sits where (pre-seed + movements)
+    var preIndex = {};
+    pre.forEach(function (w, i) {
+      preIndex[w.id] = i;
+    });
+    var moveByChallenger = {};
+    h2h.movements.forEach(function (m) {
+      if (m.type === "move") moveByChallenger[m.challenger] = m;
+    });
+    var nameById = {};
+    wrestlers.forEach(function (w) {
+      nameById[w.id] = w.name || w.id;
+    });
+    var seedTrail = after.map(function (w, i) {
+      var prePos = preIndex[w.id];
+      var m = moveByChallenger[w.id];
+      var why;
+      if (m) {
+        why =
+          "Moved ahead of " +
+          (nameById[m.over] || m.over) +
+          " via H2H (" +
+          m.reason +
+          ", " +
+          m.record +
+          "); pre-seed was #" +
+          (prePos + 1);
+      } else if (typeof prePos === "number" && prePos === i) {
+        why = "Holds pre-seed #" + (i + 1) + " (merit/TW order; no H2H challenge prevailed)";
+      } else if (typeof prePos === "number") {
+        why =
+          "Pre-seed #" +
+          (prePos + 1) +
+          " → final #" +
+          (i + 1) +
+          " after H2H reshuffle / champ top-8 rule";
+      } else {
+        why = "Final #" + (i + 1);
+      }
+      return { id: w.id, final: i + 1, preSeed: typeof prePos === "number" ? prePos + 1 : null, why: why };
+    });
+
     return {
       preSeed: pre,
       finalSeed: after,
@@ -552,9 +627,70 @@
       loops: elim.loops,
       struckBouts: elim.struckBouts,
       remainingBouts: elim.remainingBouts,
+      sccGroups: elim.sccGroups || [],
       pairs: pairs,
       boutDataIncomplete: boutDataIncomplete,
       level: level,
+      seedTrail: seedTrail,
+      criteriaOrder: [
+        "1. Own merit in previous tournament (this level or better)",
+        "2. Wins over seeded wrestlers this season (distinct preferred)",
+        "3. Wins over prior-year participants this season",
+        "4. Trackwrestling points tiebreak",
+        "5. Eliminate round-robin loops of 3+ (one bout per pair; earliest if series)",
+        "6. H2H from best pre-seed down: majority wins; split → later win",
+      ],
+    };
+  }
+
+
+  /**
+   * Seasons strictly before `season`, newest first, up to `count` (default 4).
+   * "2025-26" → ["2024-25","2023-24","2022-23","2021-22"]
+   */
+  function priorSeasonWindow(season, count) {
+    count = typeof count === "number" ? count : 4;
+    var m = String(season || "").match(/^(\d{4})-(\d{2})$/);
+    if (!m) return [];
+    var start = parseInt(m[1], 10);
+    var out = [];
+    for (var i = 1; i <= count; i++) {
+      var y = start - i;
+      var yy = String((y + 1) % 100).padStart(2, "0");
+      out.push(y + "-" + yy);
+    }
+    return out;
+  }
+
+  /**
+   * Best prior-tournament code within the window (highest code_rank).
+   * seasonsMap: { "2024-25": {code,weight,...} } or compact [code,weight,grade,school]
+   */
+  function bestPriorInWindow(seasonsMap, season, codeRank, windowSize) {
+    var window = priorSeasonWindow(season, windowSize || 4);
+    var bestCode = null;
+    var bestRank = -1;
+    var bestSeason = null;
+    var finishes = [];
+    window.forEach(function (s) {
+      var info = seasonsMap && seasonsMap[s];
+      if (!info) return;
+      var code = Array.isArray(info) ? info[0] : info.code;
+      if (!code) return;
+      var rank = typeof codeRank[code] === "number" ? codeRank[code] : -1;
+      finishes.push({ season: s, code: code, rank: rank });
+      if (rank > bestRank) {
+        bestRank = rank;
+        bestCode = code;
+        bestSeason = s;
+      }
+    });
+    return {
+      priorCode: bestCode,
+      priorRank: bestRank,
+      priorSeason: bestSeason,
+      window: window,
+      finishes: finishes,
     };
   }
 
@@ -570,5 +706,7 @@
     meritRank: meritRank,
     preSeedSort: preSeedSort,
     runSeeding: runSeeding,
+    priorSeasonWindow: priorSeasonWindow,
+    bestPriorInWindow: bestPriorInWindow,
   };
 });
