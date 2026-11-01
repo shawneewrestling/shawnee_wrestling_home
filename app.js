@@ -649,8 +649,12 @@
       const prestigeNcaa = isNcaaCard(card);
       const prestigeState = isStateChampionCard(card);
       const team = isTeamCard(card);
+      const statePlace = isStatePlaceWinnerCard(card);
       let body;
       let extraClass = '';
+      // AWARDS_CHEVRON_CHROME_LOCKED: Region-and-below share .tier-uniform width;
+      // NCAA + State Champions + State Place keep default 252px tier.
+      const uniformTier = !prestigeNcaa && !prestigeState && !statePlace;
       if (team) {
         body = renderTeamBody(card, rows);
         extraClass = ' team';
@@ -676,6 +680,7 @@
           return `<div class="${cells.rowClass}"><span>${esc(left)}</span><span>${esc(cells.mid)}</span><span>${esc(cells.right)}</span></div>`;
         }).join('');
       }
+      if (uniformTier) extraClass += ' tier-uniform';
       return `<article class="chevron-card${extraClass}" data-kind="${esc(card.kind)}">
           <div class="chevron-card-inner">
             <div class="title">${formatChevronTitle(card.title)}</div>

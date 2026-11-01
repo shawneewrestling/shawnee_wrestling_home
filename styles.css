@@ -199,11 +199,12 @@ tr:hover td { background: #eef5fb; }
 }
 /* AWARDS_CHEVRON_CHROME_LOCKED
    - Font: Graduate (self-hosted OFL) — titles only; do not swap
-   - Tip: IDENTICAL on every card — fixed --cw/--cv/--cb; navy triangle with
-     centered Shawnee S (assets/img/shawnee-s.png) via .foot / .s-logo
-   - Rows: awards.json card_rows → .awards-row (NCAA | State+Place | Region |
-     District decades | Team | Career/Season individuals)
-   Pipelines must not rewrite this block, swap the font, or override --cw/--cv.
+   - Tip: navy triangle + centered Shawnee S (assets/img/shawnee-s.png);
+     --cv/--cb/--s-logo fixed; tip height + S identical on every card
+   - Width tiers: prestige/State rows keep --cw 252px; Region-and-below use
+     .tier-uniform --cw 280px (shared body padding/columns; fits widest names)
+   - Rows: awards.json card_rows → .awards-row
+   Pipelines must not rewrite this block, swap the font, or override tip vars.
 */
 .chevron-card {
   /* Geometry locked: same tip size/angle on every card regardless of content */
@@ -348,6 +349,32 @@ tr:hover td { background: #eef5fb; }
   display: block;
   background: transparent;
   flex-shrink: 0;
+}
+/* AWARDS_CHEVRON_CHROME_LOCKED — Region / District / Team / Career+Season share width */
+.chevron-card.tier-uniform {
+  --cw: 280px; /* sized for widest body row + title lines without ellipsis */
+}
+.chevron-card.tier-uniform .body {
+  padding: 0.45rem 0.65rem 0.2rem;
+}
+.chevron-card.tier-uniform .body .row {
+  grid-template-columns: 2.6rem minmax(0, 1fr) auto;
+  gap: 0.05rem 0.4rem;
+}
+.chevron-card.tier-uniform .body .row.leaderboard {
+  grid-template-columns: 2.4rem minmax(0, 1fr) auto;
+}
+.chevron-card.tier-uniform .body .row span:nth-child(2) {
+  overflow: visible;
+  text-overflow: clip;
+}
+.chevron-card.tier-uniform.team .title {
+  font-size: 1.12rem;
+  line-height: 1.02;
+  padding: 0.85rem 0.45rem 0.65rem;
+}
+.chevron-card.tier-uniform.team .body {
+  padding: 0.75rem 0.65rem 0.4rem;
 }
 
 /* Team acknowledgement cards — years only, no placeholder columns */
