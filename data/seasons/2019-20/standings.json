@@ -4,8 +4,8 @@
   "title": "2019-2020 Season",
   "conference": "Olympic",
   "sport": "wrestling",
-  "generated_at": "2026-11-01T11:08:56-05:00",
-  "source": "NJ.com",
+  "generated_at": "2026-11-01T11:24:16-05:00",
+  "source": "NJ.com (conference peers + Shawnee Div) + Trackwrestling (Shawnee Overall/PCT/PF/PA)",
   "source_url": "https://highschoolsports.nj.com/wrestling/standings/season/2019-2020?conference=Olympic",
   "status": "final",
   "season_status": "final",
@@ -77,14 +77,14 @@
         {
           "team": "Shawnee",
           "division": "American",
-          "overall_record": "13-11",
-          "overall_pct": 0.542,
+          "overall_record": "14-11",
+          "overall_pct": 0.56,
           "division_record": "3-3",
           "division_pct": 0.5,
-          "home_record": "10-6",
-          "away_record": "3-5",
-          "pf": 950,
-          "pa": 759,
+          "home_record": null,
+          "away_record": null,
+          "pf": 1004,
+          "pa": 767,
           "team_slug": "shawnee",
           "logo_local": "assets/logos/shawnee.png",
           "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/20ea89fe-3c81-4d75-a449-04e57cbe2ba9/Shawnee-NJ-small.png",
@@ -252,27 +252,19 @@
       ]
     }
   ],
-  "gaps": [],
+  "gaps": [
+    "Shawnee Overall / PCT / PF / PA rebuilt from Trackwrestling duals (25 duals, 14-11, PF 1004, PA 767). Home / Away omitted on the standings line (not fully known from TW capture). Div / Div PCT retained from NJ.com Olympic table."
+  ],
   "validation": {
     "ok": true,
-    "issues": [],
-    "duals_overall": "13-11",
-    "shawnee_row": {
-      "team": "Shawnee",
-      "division": "American",
-      "overall_record": "13-11",
-      "overall_pct": 0.542,
-      "division_record": "3-3",
-      "division_pct": 0.5,
-      "home_record": "10-6",
-      "away_record": "3-5",
-      "pf": 950,
-      "pa": 759,
-      "team_slug": "shawnee",
-      "logo_local": "assets/logos/shawnee.png",
-      "logo": "https://d2uxtb165k2tu5.cloudfront.net/attachments/20ea89fe-3c81-4d75-a449-04e57cbe2ba9/Shawnee-NJ-small.png",
-      "is_shawnee": true,
-      "rank": 4
-    }
-  }
+    "dual_count": 25,
+    "overall": "14-11",
+    "pf": 1004,
+    "pa": 767,
+    "pf_pa_verified": true,
+    "division_record_retained_from": "NJ.com",
+    "source": "Trackwrestling capture"
+  },
+  "source_url_duals": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1428400132&gbId=36&pageName=TeamSchedule.jsp;teamId=853914135",
+  "shawnee_source": "Trackwrestling"
 }

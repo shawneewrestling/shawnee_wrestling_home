@@ -3,30 +3,32 @@
   "season_short": "2019-20",
   "title": "2019-2020 Season",
   "status": "final",
-  "generated_at": "2026-11-01T11:08:56-05:00",
+  "generated_at": "2026-11-01T11:24:16-05:00",
   "schedule_fetch": {
-    "url": "https://highschoolsports.nj.com/school/medford-shawnee/wrestling/season/2019-2020/",
-    "http": 200,
-    "bytes": 307223,
-    "events": 29,
-    "duals": 24
+    "source": "Trackwrestling",
+    "url": "https://www.trackwrestling.com/tw/seasons/LoadBalance.jsp?seasonId=1428400132&gbId=36&pageName=TeamSchedule.jsp;teamId=853914135",
+    "seasonId": "1428400132",
+    "gbId": "36",
+    "teamId": "853914135",
+    "capture": "data/seasons/2019-20/tw_schedule.csv",
+    "tournaments_capture": "data/seasons/2019-20/tw_tournaments.txt",
+    "events": 35,
+    "duals": 25,
+    "tournaments": 10
   },
   "standings_fetch": {
+    "note": "Conference peer rows + Shawnee Div retained from NJ.com; Shawnee Overall/PCT/PF/PA from TW",
     "url": "https://highschoolsports.nj.com/wrestling/standings/season/2019-2020?conference=Olympic",
-    "http": 200,
-    "bytes": 273453,
-    "available": true,
-    "teams_parsed": 13
+    "shawnee_source": "Trackwrestling",
+    "available": true
   },
-  "standings_mode": "nj.com",
-  "dual_record": "13-11",
+  "standings_mode": "tw_shawnee_line",
+  "dual_record": "14-11",
   "conference_record": "3-3",
   "coaching_history_record": "14-11",
-  "coaching_mismatch": {
-    "season": "2019-20",
-    "coaching_history": "14-11",
-    "nj_com_duals": "13-11"
-  },
-  "event_count": 29,
-  "dual_count": 24
+  "coaching_mismatch": null,
+  "event_count": 35,
+  "dual_count": 25,
+  "pf": 1004,
+  "pa": 767
 }

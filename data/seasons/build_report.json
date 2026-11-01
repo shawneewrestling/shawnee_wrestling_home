@@ -19,11 +19,6 @@
   ],
   "mismatches": [
     {
-      "season": "2019-20",
-      "coaching_history": "14-11",
-      "nj_com_duals": "13-11"
-    },
-    {
       "season": "2015-16",
       "coaching_history": "11-15",
       "nj_com_duals": "11-14"
@@ -54,6 +49,7 @@
     "2010-11: standings reconstructed (no NJ.com Olympic table)"
   ],
   "notes": [
-    "2020-21 duals replaced with Trackwrestling capture (5-7, PF 422, PA 457); coaching mismatch cleared"
+    "2020-21 duals replaced with Trackwrestling capture (5-7, PF 422, PA 457); coaching mismatch cleared",
+    "2019-20 duals replaced with Trackwrestling capture (14-11, PF 1004, PA 767); coaching mismatch cleared"
   ]
 }
