@@ -504,7 +504,7 @@
         <td><div class="opp">${logoImg(d.opponent_logo_local, d.opponent_logo, d.opponent)}<span>${esc(d.opponent)}</span></div></td>
         <td class="result-letter"><span class="badge ${cls}">${esc(d.result || '')}</span></td>
         <td class="score-cell">${esc(scoreText)}</td>
-        <td class="record-cell">${esc(recordText)}</td>
+        <td class="record-cell">${recordText ? `(${esc(recordText)})` : ''}</td>
       </tr>`);
       if (panelHtml) {
         parts.push(panelHtml.replace('class="expand-row"', 'class="expand-row home-dual-expand hidden"'));
@@ -908,7 +908,7 @@
       const timeLabel = m.time || ((m.status === 'final' || m.completed || seasonFinal) ? '—' : 'TBD');
       const resultCell = resultBadge(m, data);
       const scoreCell = completedDual ? esc(dualScoreText(m)) : '';
-      const recordCell = running ? esc(running) : '';
+      const recordCell = running ? `(${esc(running)})` : '';
       const detailsCell = expand || '';
       const anchor = dualAnchorId(m);
       const idAttr = anchor ? ` id="${esc(anchor)}"` : '';

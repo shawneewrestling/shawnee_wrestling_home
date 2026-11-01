@@ -889,3 +889,9 @@ tr:hover td { background: #eef5fb; }
   font-variant-numeric: tabular-nums;
   width: 1%;
 }
+
+#scheduleTable thead th[aria-label="Details"] {
+  width: 1%;
+  padding-left: .35rem;
+  padding-right: .35rem;
+}
