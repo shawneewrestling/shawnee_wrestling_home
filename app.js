@@ -669,7 +669,7 @@
         <ul class="bouts">${(w.bouts || []).map(boutLine).join('') || '<li>No bouts</li>'}</ul>
       </details>`;
     }).join('');
-    return `<tr class="expand-row"><td colspan="5"><div class="tournament-panel">${cards}</div></td></tr>`;
+    return `<tr class="expand-row"><td colspan="6"><div class="tournament-panel">${cards}</div></td></tr>`;
   }
 
   function siteCell(m) {
@@ -725,13 +725,15 @@
         running = formatRunningRecord(w, l, t);
       }
       const timeLabel = m.time || ((m.status === 'final' || m.completed || seasonFinal) ? '—' : 'TBD');
-      const resultCell = `${resultBadge(m, data, running)}${expand ? ' ' + expand : ''}`;
+      const resultCell = resultBadge(m, data, running);
+      const detailsCell = expand || '';
       parts.push(`<tr class="sched-row" data-eid="${esc(m.event_id || '')}">
         <td>${esc(m.date_iso || m.date || '')}</td>
         <td>${oppCell(m)}</td>
         <td>${esc(siteCell(m))}</td>
         <td>${esc(timeLabel)}</td>
         <td>${resultCell}</td>
+        <td class="details-cell">${detailsCell}</td>
       </tr>`);
       if (canExpand) {
         parts.push(panelHtml.replace('class="expand-row"', 'class="expand-row hidden"'));

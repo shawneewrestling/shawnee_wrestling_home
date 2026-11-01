@@ -838,4 +838,9 @@ tr:hover td { background: #eef5fb; }
   color: var(--navy-deep, #001a4d);
 }
 
-#scheduleTable .expand-btn { margin-left: .4rem; }
+#scheduleTable td.details-cell {
+  white-space: nowrap;
+  width: 1%;
+  text-align: center;
+}
+#scheduleTable .expand-btn { margin-left: 0; }
