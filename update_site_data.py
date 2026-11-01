@@ -41,6 +41,12 @@ from players_build import build_players  # noqa: E402
 from prestige import build_prestige_index  # noqa: E402
 from schedule_enrich import enrich_schedule  # noqa: E402
 from tournament_results import attach_tournament_results  # noqa: E402
+from results_ledger import (  # noqa: E402
+    build_and_apply,
+    assert_consistent,
+    LedgerConsistencyError,
+    LEDGER_PATH,
+)
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger("update_site_data")
@@ -86,16 +92,34 @@ def main():
     # Enrich schedule: split multi-team duals, logos, tournament bout cards
     attach_tournament_results(data)
     data = enrich_schedule(data)
+    # Canonical results ledger + consistency gate (fails loudly on W-L mismatches)
+    try:
+        ledger, data = build_and_apply(data, write=True, strict=True)
+        assert_consistent(LEDGER_PATH)
+        logger.info(
+            "Results ledger: duals=%d overall=%s conference=%s discrepancies=%d",
+            ledger["summary"]["overall"]["count"],
+            ledger["summary"]["overall"]["record"],
+            ledger["summary"]["conference"]["record"],
+            ledger["validation"]["discrepancy_count"],
+        )
+    except LedgerConsistencyError as e:
+        data_path.write_text(json.dumps(data, indent=2) + "\n")
+        (ROOT / "wrestling_data.json").write_text(json.dumps(data, indent=2) + "\n")
+        logger.error("RESULTS LEDGER CONSISTENCY FAILED — refusing to continue update")
+        logger.error("%s", e)
+        raise SystemExit(2) from e
     data_path.write_text(json.dumps(data, indent=2) + "\n")
     (ROOT / "wrestling_data.json").write_text(json.dumps(data, indent=2) + "\n")
     (ROOT / "data" / "tournament_results.json").write_text(
         json.dumps(data.get("tournament_results") or {}, indent=2) + "\n"
     )
     logger.info(
-        "Enrichment: schedule=%d splits=%d tournament_events=%d",
+        "Enrichment: schedule=%d splits=%d tournament_events=%d dual_record=%s",
         len(data.get("schedule") or []),
         len((data.get("enrichment") or {}).get("splits") or []),
         len(data.get("tournament_results") or {}),
+        (data.get("dual_scores") or {}).get("record"),
     )
 
     seed_path = Path(args.seed)
@@ -166,6 +190,8 @@ def main():
             "player_pages": players_index.get("count"),
         },
         "dual_record": (data.get("dual_scores") or {}).get("record") or data.get("metadata", {}).get("dual_record"),
+        "conference_record": (data.get("dual_scores") or {}).get("conference_record"),
+        "ledger_duals": len((data.get("dual_scores") or {}).get("duals") or []),
         "ids": {
             "team_id": data.get("metadata", {}).get("team_id"),
             "season_id": data.get("metadata", {}).get("season_id"),

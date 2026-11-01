@@ -229,58 +229,17 @@ def enrich_schedule(data: Dict[str, Any], capture_dir: Path | None = None) -> Di
     data["schedule"] = new_schedule
     data.setdefault("enrichment", {})["splits"] = split_log
 
-    # Refresh dual_scores list from schedule rows that have scores (include splits)
-    duals = []
-    for m in new_schedule:
-        if m.get("score_shawnee") is not None and m.get("opponent"):
-            duals.append({
-                "opponent": m["opponent"],
-                "shawnee": m["score_shawnee"],
-                "opp": m["score_opp"],
-                "result": m.get("result"),
-                "date_iso": m.get("date_iso"),
-                "event_id": m.get("event_id"),
-                "split": bool(m.get("split")),
-                "opponent_logo_local": m.get("opponent_logo_local"),
-                "opponent_logo": m.get("opponent_logo"),
-                "opponent_slug": m.get("opponent_slug"),
-            })
-    # Keep original 3-5 varsity dual record in metadata; enrichment may add multi-meet duals
-    wins = sum(1 for d in duals if d.get("result") == "W" and not d.get("split"))
-    losses = sum(1 for d in duals if d.get("result") == "L" and not d.get("split"))
-    # If scraper already had record, prefer counting only non-split scored duals for headline
-    headline_duals = [d for d in duals if not d.get("split")]
-    if headline_duals:
-        wins = sum(1 for d in headline_duals if d.get("result") == "W")
-        losses = sum(1 for d in headline_duals if d.get("result") == "L")
-        data["dual_scores"] = {
-            "record": f"{wins}-{losses}",
-            "wins": wins,
-            "losses": losses,
-            "duals": duals,  # include splits for home page / schedule detail
-        }
-        if data.get("metadata"):
-            data["metadata"]["dual_record"] = f"{wins}-{losses}"
+    # Canonical dual record from ALL dual listings (incl. multi-meet splits).
+    # results_ledger owns dual_scores / metadata records / standings rows.
+    from results_ledger import build_and_apply, LedgerConsistencyError
+    try:
+        build_and_apply(data, write=True, strict=False)
+    except LedgerConsistencyError as e:
+        logger.error("%s", e)
 
-    # Logos on standings rows + scrub note
     st = data.get("standings") or {}
     if st.get("note"):
         st["note"] = _clean_standings_note(st["note"])
-    # Never surface raw season/team ids in standings source label
-    if st.get("source") in ("derived", "Trackwrestling", "TW"):
-        st["source"] = "Shawnee dual results"
-    rows = []
-    for r in st.get("rows") or []:
-        r = dict(r)
-        # Fix display names via alias
-        info = lookup_logo(r.get("opponent") or "", logos_map, make_badge=True)
-        if info.get("opponent"):
-            r["opponent"] = info["opponent"]
-        r["opponent_slug"] = info.get("opponent_slug")
-        r["opponent_logo"] = info.get("opponent_logo")
-        r["opponent_logo_local"] = info.get("opponent_logo_local")
-        rows.append(r)
-    st["rows"] = rows
     data["standings"] = st
 
     # Scrub metadata sources of raw IDs (keep in config only — already in season_config)

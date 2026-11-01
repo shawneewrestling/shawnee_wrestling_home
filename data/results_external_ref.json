@@ -1,0 +1,49 @@
+{
+  "season": "2025-2026",
+  "sources": [
+    {
+      "name": "NJ.com Shawnee wrestling 2025-2026",
+      "url": "https://highschoolsports.nj.com/school/medford-shawnee/wrestling/season/2025-2026",
+      "overall_record": "12-15",
+      "league_record": "2-3",
+      "league_name": "Olympic - American",
+      "retrieved_note": "Captured from NJ.com season page synthesis 2026-11-01; used for validation only, not as schedule source of truth."
+    }
+  ],
+  "conference_opponents": [
+    "Cherry Hill West",
+    "Moorestown",
+    "Paul VI",
+    "Eastern",
+    "Rancocas Valley"
+  ],
+  "duals": [
+    {"date_iso": "2025-12-13", "opponent": "West Deptford", "shawnee": 44, "opp": 27, "result": "W"},
+    {"date_iso": "2025-12-13", "opponent": "West Windsor-Plainsboro North", "shawnee": 77, "opp": 3, "result": "W"},
+    {"date_iso": "2025-12-17", "opponent": "Cherry Hill West", "shawnee": 57, "opp": 11, "result": "W"},
+    {"date_iso": "2026-01-03", "opponent": "Cherokee", "shawnee": 38, "opp": 30, "result": "W"},
+    {"date_iso": "2026-01-03", "opponent": "Seneca", "shawnee": 32, "opp": 42, "result": "L"},
+    {"date_iso": "2026-01-03", "opponent": "Lenape", "shawnee": 34, "opp": 42, "result": "L"},
+    {"date_iso": "2026-01-06", "opponent": "Northern Burlington", "shawnee": 29, "opp": 47, "result": "L"},
+    {"date_iso": "2026-01-09", "opponent": "Camden Catholic", "shawnee": 0, "opp": 76, "result": "L"},
+    {"date_iso": "2026-01-09", "opponent": "Rancocas Valley", "shawnee": 35, "opp": 39, "result": "L"},
+    {"date_iso": "2026-01-14", "opponent": "Moorestown", "shawnee": 27, "opp": 37, "result": "L"},
+    {"date_iso": "2026-01-21", "opponent": "Paul VI", "shawnee": 42, "opp": 31, "result": "W"},
+    {"date_iso": "2026-01-24", "opponent": "High Point", "shawnee": 27, "opp": 39, "result": "L"},
+    {"date_iso": "2026-01-24", "opponent": "St. Peter's Prep", "shawnee": 27, "opp": 45, "result": "L"},
+    {"date_iso": "2026-01-24", "opponent": "Peddie", "shawnee": 50, "opp": 28, "result": "W"},
+    {"date_iso": "2026-01-28", "opponent": "Eastern", "shawnee": 35, "opp": 36, "result": "L"},
+    {"date_iso": "2026-01-31", "opponent": "Cinnaminson", "shawnee": 43, "opp": 29, "result": "W"},
+    {"date_iso": "2026-01-31", "opponent": "Collingswood", "shawnee": 24, "opp": 45, "result": "L"},
+    {"date_iso": "2026-01-31", "opponent": "Absegami", "shawnee": 54, "opp": 24, "result": "W"},
+    {"date_iso": "2026-02-04", "opponent": "Cherry Hill East", "shawnee": 45, "opp": 25, "result": "W"},
+    {"date_iso": "2026-02-06", "opponent": "Haddonfield", "shawnee": 24, "opp": 39, "result": "L"},
+    {"date_iso": "2026-02-07", "opponent": "Delran", "shawnee": 30, "opp": 37, "result": "L"},
+    {"date_iso": "2026-02-07", "opponent": "Lacey", "shawnee": 27, "opp": 46, "result": "L"},
+    {"date_iso": "2026-02-07", "opponent": "Toms River North", "shawnee": 40, "opp": 32, "result": "W"},
+    {"date_iso": "2026-02-11", "opponent": "Robbinsville", "shawnee": 23, "opp": 53, "result": "L"},
+    {"date_iso": "2026-02-13", "opponent": "Pennsauken", "shawnee": 67, "opp": 9, "result": "W"},
+    {"date_iso": "2026-02-13", "opponent": "St. Joseph (Hammonton)", "shawnee": 68, "opp": 1, "result": "W"},
+    {"date_iso": "2026-02-16", "opponent": "Toms River South", "shawnee": 33, "opp": 34, "result": "L", "note": "NJSIAA South Group 4 Sectional Quarters"}
+  ]
+}

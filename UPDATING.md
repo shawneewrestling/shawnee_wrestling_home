@@ -147,3 +147,32 @@ See `docs/VARSITY_JOTFORM.md`. Stub: `varsity_assignments.ingest_jotform_submiss
 1. Build a **Jotform** with one dropdown per NJSIAA weight, options from `jotform_roster_options.json`.
 2. On submit / daily routine: ingest → `data/varsity_jotform_overrides.json` → `update_site_data.py --skip-scrape` → commit assignments + player pages.
 3. Until the form exists, set `varsity_overrides.json` → `starters` `{ "126": "<wrestler_id>", … }` by hand.
+
+## Results ledger (canonical dual record)
+
+**Source of truth for dual W–L is `data/results_ledger.json`**, not “events typed as duals” on Trackwrestling.
+
+### Why
+Tri/quad meets and dual tournaments are split into one schedule listing per opponent. The season dual record must count **every** scored dual listing (including those splits and team duals filled from sectionals). Counting only TW `event_kind=D` rows understated the 2025–26 record as 3–5.
+
+### Pipeline
+1. Scrape / load `wrestling_data.json`
+2. `attach_tournament_results` + `enrich_schedule` (splits + logos)
+3. `results_ledger.build_and_apply(...)` writes `data/results_ledger.json` and stamps:
+   - `dual_scores.record` / `wins` / `losses` / `conference_record` / `home_record` / `away_record` / `duals`
+   - `metadata.dual_record`, `conference_record`, `home_record`, `away_record`
+   - `standings.rows` + `shawnee_dual_record` / `conference_record`
+4. **Consistency gate** (`test_results_ledger.py` / `assert_consistent`): update aborts with exit code 2 if ledger overall, conference, dual count, or any W/L disagrees with `data/results_external_ref.json` (NJ.com / league validation). Score-only mismatches are reported but do not fail the build.
+
+### Commands
+```bash
+python results_ledger.py              # rebuild ledger (non-strict print)
+python test_results_ledger.py --rebuild   # rebuild + fail on W-L mismatches
+python update_site_data.py --skip-scrape  # full pipeline incl. ledger gate
+```
+
+### External validation
+`data/results_external_ref.json` holds the published overall/league records and per-dual scores used for cross-check (NJ.com Shawnee 2025–26). Conference opponents for Olympic–American are listed there. When TW has no scored dual yet (e.g. a sectional), the ledger gap-fills from this ref and flags `needs_tw_score`.
+
+### Pages
+Home, Schedule/Results, and Standings all read the ledger-backed `dual_scores` / `standings` / `metadata` fields. Do not reintroduce a `!split` filter on the home dual table.

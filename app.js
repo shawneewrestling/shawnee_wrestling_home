@@ -78,19 +78,24 @@
 
   function renderHome(data) {
     const m = data.metadata || {};
+    const ds = data.dual_scores || {};
+    const dualRec = m.dual_record || ds.record || '—';
+    const confRec = m.conference_record || ds.conference_record || '—';
     document.getElementById('homeMeta').innerHTML = `
       <span><strong>Season</strong> ${esc(m.season)}</span>
-      <span><strong>Dual record</strong> ${esc(m.dual_record)}</span>
+      <span><strong>Dual record</strong> ${esc(dualRec)}</span>
+      <span><strong>Conference</strong> ${esc(confRec)}</span>
       <span><strong>Roster</strong> ${(data.roster || []).length}</span>
       <span><strong>Events</strong> ${(data.schedule || []).length}</span>
       <span><strong>Updated</strong> ${esc(m.generated_at)}</span>`;
     document.getElementById('homeCards').innerHTML = `
-      <div class="stat-card"><div class="label">Dual record</div><div class="value">${esc(m.dual_record || '—')}</div></div>
-      <div class="stat-card"><div class="label">Wrestlers</div><div class="value">${(data.roster || []).length}</div></div>
-      <div class="stat-card"><div class="label">Schedule events</div><div class="value">${(data.schedule || []).length}</div></div>
-      <div class="stat-card"><div class="label">Scored duals</div><div class="value">${(data.dual_scores?.duals || []).length}</div></div>`;
+      <div class="stat-card"><div class="label">Dual record</div><div class="value">${esc(dualRec)}</div></div>
+      <div class="stat-card"><div class="label">Conference</div><div class="value">${esc(confRec)}</div></div>
+      <div class="stat-card"><div class="label">Home / Away</div><div class="value">${esc((m.home_record || ds.home_record || '—') + ' / ' + (m.away_record || ds.away_record || '—'))}</div></div>
+      <div class="stat-card"><div class="label">Scored duals</div><div class="value">${(ds.duals || []).length}</div></div>`;
     const tb = document.querySelector('#homeDuals tbody');
-    const duals = (data.dual_scores?.duals || []).filter((d) => !d.split);
+    // Ledger: every dual, including splits from tri/quad meets
+    const duals = data.dual_scores?.duals || [];
     tb.innerHTML = duals.map((d) => `
       <tr>
         <td><div class="opp">${logoImg(d.opponent_logo_local, d.opponent_logo, d.opponent)}<span>${esc(d.opponent)}</span></div></td>
@@ -261,7 +266,9 @@
 
   function renderSchedule(data) {
     const rec = data.metadata?.dual_record || data.dual_scores?.record;
+    const conf = data.metadata?.conference_record || data.dual_scores?.conference_record;
     document.getElementById('schedMeta').innerHTML = `<span><strong>Dual record</strong> ${esc(rec)}</span>
+      <span><strong>Conference</strong> ${esc(conf || '—')}</span>
       <span><strong>Listings</strong> ${(data.schedule || []).length}</span>`;
     const body = document.querySelector('#scheduleTable tbody');
     body.innerHTML = (data.schedule || []).map((m) => {
@@ -292,12 +299,19 @@
   function renderStandings(data) {
     const s = data.standings || {};
     document.getElementById('standingsNote').textContent = s.note || '';
+    const ds = data.dual_scores || {};
     document.getElementById('standingsMeta').innerHTML =
-      `<span><strong>Shawnee duals</strong> ${esc(s.shawnee_dual_record)}</span>
-       <span><strong>Source</strong> ${esc(s.source)}</span>`;
-    document.querySelector('#standingsTable tbody').innerHTML = (s.rows || []).map((r) => `
+      `<span><strong>Shawnee duals</strong> ${esc(s.shawnee_dual_record || ds.record)}</span>
+       <span><strong>Conference</strong> ${esc(s.conference_record || ds.conference_record || '—')}</span>
+       <span><strong>Source</strong> ${esc(s.source || 'results ledger')}</span>`;
+    const rows = (s.rows && s.rows.length) ? s.rows : (ds.duals || []).map((d) => ({
+      opponent: d.opponent, score: d.score_display || `${d.shawnee}-${d.opp}`, result: d.result,
+      opponent_logo_local: d.opponent_logo_local, opponent_logo: d.opponent_logo,
+      conference_dual: d.conference,
+    }));
+    document.querySelector('#standingsTable tbody').innerHTML = rows.map((r) => `
       <tr>
-        <td><div class="opp">${logoImg(r.opponent_logo_local, r.opponent_logo, r.opponent)}<span>${esc(r.opponent)}</span></div></td>
+        <td><div class="opp">${logoImg(r.opponent_logo_local, r.opponent_logo, r.opponent)}<span>${esc(r.opponent)}${r.conference_dual ? ' <em class="conf-tag">conf</em>' : ''}</span></div></td>
         <td>${esc(r.score)}</td>
         <td><span class="badge ${r.result === 'W' ? 'w' : 'l'}">${esc(r.result)}</span></td>
       </tr>`).join('');
@@ -358,7 +372,7 @@
   function awardRowCells(a, kind) {
     const name = a.wrestler || a.details || '';
     if (kind === 'leaderboard' || a.award_category === 'leaderboard') {
-      // Live Career Wins / Pins: value | name | years
+      // Live Career Wins / Pins: value | name | years (single-row columns)
       return {
         left: a.value != null ? String(a.value) : '',
         mid: name,
@@ -374,13 +388,36 @@
         rowClass: 'row',
       };
     }
-    // district / region / state-place / default: year | wrestler | weight/placement
+    // State Place Winner: place | name | year weight (match original card)
+    if ((a.award_name || '') === 'State Place Winner' ||
+        (kind === 'state' && a.placement && a.placement !== '1st' && (a.award_name || '').toLowerCase().includes('place'))) {
+      const yr = a.season || '';
+      const wt = a.weight || '';
+      const right = [yr, wt].filter(Boolean).join(' ');
+      return {
+        left: a.placement || '',
+        mid: name,
+        right,
+        rowClass: 'row state-place',
+      };
+    }
+    // district / region / default: year | wrestler | weight/placement
     return {
       left: a.season || '',
       mid: name,
       right: a.weight || a.placement || (a.value != null ? String(a.value) : ''),
       rowClass: 'row',
     };
+  }
+
+  function isStatePlaceWinnerCard(card) {
+    return (card.title || '') === 'State Place Winner' ||
+      /^State Place/i.test(card.title || '');
+  }
+
+  function placeSortKey(p) {
+    const m = String(p || '').match(/(\d+)/);
+    return m ? Number(m[1]) : 99;
   }
 
   function isStateChampionCard(card) {
@@ -399,17 +436,32 @@
 
   function renderTeamBody(card, rows) {
     // Team acknowledgements: years only (or a single note). No blank "Team title" / "1st" columns.
+    // Layout matches originals: decade columns for multi-decade lists; stacked years when few.
     const noteOnly = rows.every((a) => !a.season && (a.details || a.value != null));
     if (noteOnly || /dual record/i.test(card.title || '')) {
       const text = rows.map((a) => a.details || a.value || a.season || '').filter(Boolean).join(' · ');
       return `<div class="team-note">${esc(text)}</div>`;
     }
-    const years = rows.map((a) => a.season).filter(Boolean);
+    const years = rows.map((a) => String(a.season || '').slice(0, 4)).filter((y) => /^\d{4}$/.test(y));
+    years.sort();
     if (years.length <= 4) {
+      // Sectional (and short lists): stacked years like the original sectional banner
       return `<div class="years-stack">${years.map((y) => `<div>${esc(y)}</div>`).join('')}</div>`;
     }
-    return `<div class="year-grid">${years.map((y) => `<div>${esc(y)}</div>`).join('')}</div>`;
+    // District (and longer lists): one column per decade, years packed — no empty placeholder cells
+    const byDecade = {};
+    for (const y of years) {
+      const dec = Math.floor(Number(y) / 10) * 10;
+      (byDecade[dec] ||= []).push(y);
+    }
+    const decades = Object.keys(byDecade).map(Number).sort((a, b) => a - b);
+    const cols = decades.map((dec) => {
+      const cells = byDecade[dec].map((y) => `<div class="yr">${esc(y)}</div>`).join('');
+      return `<div class="decade-col" data-decade="${dec}s">${cells}</div>`;
+    }).join('');
+    return `<div class="decade-cols" style="--cols:${decades.length}">${cols}</div>`;
   }
+
 
   function renderNcaaBody(rows) {
     // Prestigious centered entries: year · NAME · place · school
@@ -441,8 +493,10 @@
 
     // Group into cards
     const byName = {};
+    const SKIP_AWARDS = new Set(['Season Win Leaders', 'Season 20+ Wins']);
     for (const a of awards) {
       const name = a.award_name || 'Award';
+      if (SKIP_AWARDS.has(name)) continue;
       if (name === 'District Champions' || a.award_category === 'district') {
         const dec = decadeLabel(a.season);
         const key = `District Champions — ${dec}`;
@@ -473,6 +527,10 @@
             const av = Number(a.value), bv = Number(b.value);
             if (!Number.isNaN(av) && !Number.isNaN(bv) && bv !== av) return bv - av;
           }
+          if (isStatePlaceWinnerCard(card)) {
+            const pd = placeSortKey(a.placement) - placeSortKey(b.placement);
+            if (pd) return pd;
+          }
           return String(a.season || '').localeCompare(String(b.season || ''))
             || String(a.wrestler || '').localeCompare(String(b.wrestler || ''));
         });
@@ -493,10 +551,13 @@
           extraClass = ' prestige state-champ';
         } else {
           let prevSeason = null;
+          const placeCard = isStatePlaceWinnerCard(card);
           body = rows.map((a) => {
             const cells = awardRowCells(a, card.kind);
             let left = cells.left;
-            if ((card.kind === 'district' || card.kind === 'region' || card.kind === 'state') && left && left === prevSeason) {
+            // Blank repeated seasons for district/region only — never for State Place Winner
+            // (place is left col; year must stay visible per entry, e.g. Luke Sherlock 2024).
+            if (!placeCard && (card.kind === 'district' || card.kind === 'region') && left && left === prevSeason) {
               left = '';
             } else if (cells.left) {
               prevSeason = cells.left;
