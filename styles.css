@@ -641,3 +641,43 @@ tr:hover td { background: #eef5fb; }
 .results-tournaments { display: grid; gap: 1.25rem; }
 .results-tournament-block h3 { margin: 0 0 0.5rem; font-size: 1.05rem; }
 .results-tournament-block .muted, .muted { opacity: 0.7; font-weight: 400; font-size: 0.9em; }
+
+/* Coach Stats */
+.coach-summary-cards {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+.coach-card .coach-card-name {
+  font-family: Graduate, "Arial Black", Impact, serif;
+  font-size: 1.15rem;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.15rem;
+}
+.coach-card .coach-card-pct {
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0.15rem 0 0.55rem;
+}
+.coach-card-titles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 0.75rem;
+  font-size: 0.82rem;
+  color: #334;
+}
+.coach-card-titles strong { color: var(--navy); }
+.coach-season-block { margin-bottom: 1.5rem; }
+.coach-history-table td, .coach-history-table th { font-variant-numeric: tabular-nums; }
+.title-chip {
+  display: inline-block;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.title-chip.league { background: #e8eef8; color: var(--navy); }
+.title-chip.district { background: #d9f5e3; color: #0a6b38; }
+.title-chip.sectional { background: #fff0d6; color: #8a5a00; }
+.titles-cell { white-space: nowrap; }

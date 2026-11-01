@@ -6,6 +6,7 @@
   const VARSITY_ASSIGN_URL = 'data/varsity_assignments.json';
   const PLAYERS_INDEX_URL = 'data/players_index.json';
   const STANDINGS_URL = 'data/standings.json';
+  const COACH_HISTORY_URL = 'data/coaching_history.json';
   const PLACEHOLDER_PHOTO = 'assets/img/wrestler-silhouette.svg';
 
   async function loadJson(url) {
@@ -69,6 +70,11 @@
     if (page === 'Standings') {
       const standings = await loadJson(STANDINGS_URL);
       renderConferenceStandings(standings);
+      return;
+    }
+    if (page === 'Coach Stats') {
+      const coachHist = await loadJson(COACH_HISTORY_URL);
+      renderCoachStats(coachHist);
       return;
     }
     const data = await loadJson(DATA_URL);
@@ -565,6 +571,92 @@
         <div class="year">${esc(a.season || '')}</div>
         ${a.details ? `<div class="school">${esc(a.details)}</div>` : ''}
       </div>`).join('');
+  }
+
+  function fmtPct(p) {
+    if (p == null || Number.isNaN(Number(p))) return '—';
+    return Number(p).toFixed(1) + '%';
+  }
+
+  function titleMarks(ch) {
+    const bits = [];
+    if (ch.league) bits.push('<span class="title-chip league" title="League champions">League</span>');
+    if (ch.districts) bits.push('<span class="title-chip district" title="District team champions">District</span>');
+    if (ch.sectional) bits.push('<span class="title-chip sectional" title="Sectional team champions">Sectional</span>');
+    return bits.length ? bits.join(' ') : '<span class="muted">—</span>';
+  }
+
+  function renderCoachStats(doc) {
+    const team = doc.team_all_time || {};
+    const coaches = doc.coaches || [];
+    const seasons = doc.seasons || [];
+    const meta = document.getElementById('coachMeta');
+    if (meta) {
+      meta.innerHTML = `
+        <span><strong>All-time duals</strong> ${esc(team.record || '—')}</span>
+        <span><strong>Winning %</strong> ${esc(fmtPct(team.win_pct))}</span>
+        <span><strong>Seasons</strong> ${seasons.length}</span>
+        <span><strong>Coaches</strong> ${coaches.length}</span>`;
+    }
+    const cards = document.getElementById('coachCards');
+    if (cards) {
+      cards.innerHTML = coaches.map((c) => {
+        const t = c.titles || {};
+        const years = c.first_season === c.last_season
+          ? c.first_season
+          : `${c.first_season} – ${c.last_season}`;
+        return `<div class="stat-card coach-card">
+          <div class="coach-card-name">${esc(c.name)}</div>
+          <div class="label">${esc(years)} · ${c.seasons} season${c.seasons === 1 ? '' : 's'}</div>
+          <div class="value">${esc(c.record)}</div>
+          <div class="coach-card-pct">${esc(fmtPct(c.win_pct))}</div>
+          <div class="coach-card-titles">
+            <span><strong>${t.league || 0}</strong> League</span>
+            <span><strong>${t.districts || 0}</strong> District</span>
+            <span><strong>${t.sectional || 0}</strong> Sectional</span>
+          </div>
+        </div>`;
+      }).join('');
+    }
+    const wrap = document.getElementById('coachSeasonTables');
+    if (!wrap) return;
+    // Group consecutive seasons by coach (already chronological)
+    const groups = [];
+    for (const s of seasons) {
+      if (!groups.length || groups[groups.length - 1].coach !== s.coach) {
+        groups.push({ coach: s.coach, rows: [s] });
+      } else {
+        groups[groups.length - 1].rows.push(s);
+      }
+    }
+    wrap.innerHTML = groups.map((g) => {
+      const summary = coaches.find((c) => c.name === g.coach);
+      const head = summary
+        ? `${esc(g.coach)} · ${esc(summary.record)} · ${esc(fmtPct(summary.win_pct))}`
+        : esc(g.coach);
+      const body = g.rows.map((s) => {
+        const ch = s.championships || {};
+        return `<tr>
+          <td>${esc(s.season)}</td>
+          <td>${esc(s.record)}</td>
+          <td>${esc(fmtPct(s.win_pct))}</td>
+          <td>${esc(s.team_cumulative.record)}</td>
+          <td>${esc(s.coach_cumulative.record)}</td>
+          <td>${esc(fmtPct(s.coach_cumulative.win_pct))}</td>
+          <td class="titles-cell">${titleMarks(ch)}</td>
+        </tr>`;
+      }).join('');
+      return `<section class="coach-season-block">
+        <h3 class="section-title">${head}</h3>
+        <div class="table-wrap"><table class="coach-history-table">
+          <thead><tr>
+            <th>Season</th><th>Record</th><th>Win%</th>
+            <th>Team cum.</th><th>Coach cum.</th><th>Coach %</th><th>Titles</th>
+          </tr></thead>
+          <tbody>${body}</tbody>
+        </table></div>
+      </section>`;
+    }).join('');
   }
 
   function renderAwards(data) {

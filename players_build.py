@@ -131,6 +131,7 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
         <a href="../schedule.html">Schedule / Results</a>
         <a href="../standings.html">Standings</a>
         <a href="../stats.html">Stats</a>
+        <a href="../coach-stats.html">Coach Stats</a>
         <a href="../awards.html">Awards</a>
       </nav>
     </div>

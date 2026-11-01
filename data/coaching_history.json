@@ -1,0 +1,1711 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-01T15:35:26Z",
+  "notes": [
+    "Win% = W / (W+L+T), computed in code.",
+    "2024-25 overall is 12-14-0 (corrected from historic sheet 12-13).",
+    "Sectional titles sourced from awards.json Sectional Team Championship + Jeff confirmation (2021-22, 2022-23).",
+    "Never display Trackwrestling or internal IDs on the page."
+  ],
+  "team_all_time": {
+    "w": 610,
+    "l": 457,
+    "t": 9,
+    "record": "610-457-9",
+    "win_pct": 56.6914498141
+  },
+  "coaches": [
+    {
+      "name": "Bill Neal",
+      "first_season": "1970-71",
+      "last_season": "1978-79",
+      "seasons": 9,
+      "w": 90,
+      "l": 34,
+      "t": 4,
+      "record": "90-34-4",
+      "win_pct": 70.3125,
+      "titles": {
+        "league": 2,
+        "districts": 4,
+        "sectional": 0
+      }
+    },
+    {
+      "name": "Roger Pullen",
+      "first_season": "1979-80",
+      "last_season": "1998-99",
+      "seasons": 20,
+      "w": 209,
+      "l": 113,
+      "t": 4,
+      "record": "209-113-4",
+      "win_pct": 64.1104294479,
+      "titles": {
+        "league": 2,
+        "districts": 3,
+        "sectional": 0
+      }
+    },
+    {
+      "name": "Ron Jensen",
+      "first_season": "1999-00",
+      "last_season": "2002-03",
+      "seasons": 4,
+      "w": 47,
+      "l": 30,
+      "t": 1,
+      "record": "47-30-1",
+      "win_pct": 60.2564102564,
+      "titles": {
+        "league": 0,
+        "districts": 1,
+        "sectional": 0
+      }
+    },
+    {
+      "name": "Tom Mann",
+      "first_season": "2003-04",
+      "last_season": "2018-19",
+      "seasons": 16,
+      "w": 162,
+      "l": 216,
+      "t": 0,
+      "record": "162-216-0",
+      "win_pct": 42.8571428571,
+      "titles": {
+        "league": 2,
+        "districts": 2,
+        "sectional": 0
+      }
+    },
+    {
+      "name": "Kyle Packer",
+      "first_season": "2019-20",
+      "last_season": "2025-26",
+      "seasons": 7,
+      "w": 102,
+      "l": 64,
+      "t": 0,
+      "record": "102-64-0",
+      "win_pct": 61.4457831325,
+      "titles": {
+        "league": 2,
+        "districts": 0,
+        "sectional": 2
+      }
+    }
+  ],
+  "seasons": [
+    {
+      "season": "1970-71",
+      "season_end_year": 1971,
+      "coach": "Bill Neal",
+      "w": 4,
+      "l": 9,
+      "t": 0,
+      "record": "4-9-0",
+      "win_pct": 30.7692307692,
+      "team_cumulative": {
+        "w": 4,
+        "l": 9,
+        "t": 0,
+        "record": "4-9-0"
+      },
+      "coach_cumulative": {
+        "w": 4,
+        "l": 9,
+        "t": 0,
+        "record": "4-9-0",
+        "win_pct": 30.7692307692
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1971-72",
+      "season_end_year": 1972,
+      "coach": "Bill Neal",
+      "w": 8,
+      "l": 5,
+      "t": 1,
+      "record": "8-5-1",
+      "win_pct": 57.1428571429,
+      "team_cumulative": {
+        "w": 12,
+        "l": 14,
+        "t": 1,
+        "record": "12-14-1"
+      },
+      "coach_cumulative": {
+        "w": 12,
+        "l": 14,
+        "t": 1,
+        "record": "12-14-1",
+        "win_pct": 44.4444444444
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1972-73",
+      "season_end_year": 1973,
+      "coach": "Bill Neal",
+      "w": 14,
+      "l": 0,
+      "t": 0,
+      "record": "14-0-0",
+      "win_pct": 100.0,
+      "team_cumulative": {
+        "w": 26,
+        "l": 14,
+        "t": 1,
+        "record": "26-14-1"
+      },
+      "coach_cumulative": {
+        "w": 26,
+        "l": 14,
+        "t": 1,
+        "record": "26-14-1",
+        "win_pct": 63.4146341463
+      },
+      "championships": {
+        "league": true,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1973-74",
+      "season_end_year": 1974,
+      "coach": "Bill Neal",
+      "w": 11,
+      "l": 2,
+      "t": 1,
+      "record": "11-2-1",
+      "win_pct": 78.5714285714,
+      "team_cumulative": {
+        "w": 37,
+        "l": 16,
+        "t": 2,
+        "record": "37-16-2"
+      },
+      "coach_cumulative": {
+        "w": 37,
+        "l": 16,
+        "t": 2,
+        "record": "37-16-2",
+        "win_pct": 67.2727272727
+      },
+      "championships": {
+        "league": true,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1974-75",
+      "season_end_year": 1975,
+      "coach": "Bill Neal",
+      "w": 9,
+      "l": 3,
+      "t": 2,
+      "record": "9-3-2",
+      "win_pct": 64.2857142857,
+      "team_cumulative": {
+        "w": 46,
+        "l": 19,
+        "t": 4,
+        "record": "46-19-4"
+      },
+      "coach_cumulative": {
+        "w": 46,
+        "l": 19,
+        "t": 4,
+        "record": "46-19-4",
+        "win_pct": 66.6666666667
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1975-76",
+      "season_end_year": 1976,
+      "coach": "Bill Neal",
+      "w": 16,
+      "l": 2,
+      "t": 0,
+      "record": "16-2-0",
+      "win_pct": 88.8888888889,
+      "team_cumulative": {
+        "w": 62,
+        "l": 21,
+        "t": 4,
+        "record": "62-21-4"
+      },
+      "coach_cumulative": {
+        "w": 62,
+        "l": 21,
+        "t": 4,
+        "record": "62-21-4",
+        "win_pct": 71.2643678161
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1976-77",
+      "season_end_year": 1977,
+      "coach": "Bill Neal",
+      "w": 10,
+      "l": 5,
+      "t": 0,
+      "record": "10-5-0",
+      "win_pct": 66.6666666667,
+      "team_cumulative": {
+        "w": 72,
+        "l": 26,
+        "t": 4,
+        "record": "72-26-4"
+      },
+      "coach_cumulative": {
+        "w": 72,
+        "l": 26,
+        "t": 4,
+        "record": "72-26-4",
+        "win_pct": 70.5882352941
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1977-78",
+      "season_end_year": 1978,
+      "coach": "Bill Neal",
+      "w": 8,
+      "l": 5,
+      "t": 0,
+      "record": "8-5-0",
+      "win_pct": 61.5384615385,
+      "team_cumulative": {
+        "w": 80,
+        "l": 31,
+        "t": 4,
+        "record": "80-31-4"
+      },
+      "coach_cumulative": {
+        "w": 80,
+        "l": 31,
+        "t": 4,
+        "record": "80-31-4",
+        "win_pct": 69.5652173913
+      },
+      "championships": {
+        "league": false,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1978-79",
+      "season_end_year": 1979,
+      "coach": "Bill Neal",
+      "w": 10,
+      "l": 3,
+      "t": 0,
+      "record": "10-3-0",
+      "win_pct": 76.9230769231,
+      "team_cumulative": {
+        "w": 90,
+        "l": 34,
+        "t": 4,
+        "record": "90-34-4"
+      },
+      "coach_cumulative": {
+        "w": 90,
+        "l": 34,
+        "t": 4,
+        "record": "90-34-4",
+        "win_pct": 70.3125
+      },
+      "championships": {
+        "league": false,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1979-80",
+      "season_end_year": 1980,
+      "coach": "Roger Pullen",
+      "w": 13,
+      "l": 3,
+      "t": 0,
+      "record": "13-3-0",
+      "win_pct": 81.25,
+      "team_cumulative": {
+        "w": 103,
+        "l": 37,
+        "t": 4,
+        "record": "103-37-4"
+      },
+      "coach_cumulative": {
+        "w": 13,
+        "l": 3,
+        "t": 0,
+        "record": "13-3-0",
+        "win_pct": 81.25
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1980-81",
+      "season_end_year": 1981,
+      "coach": "Roger Pullen",
+      "w": 7,
+      "l": 9,
+      "t": 0,
+      "record": "7-9-0",
+      "win_pct": 43.75,
+      "team_cumulative": {
+        "w": 110,
+        "l": 46,
+        "t": 4,
+        "record": "110-46-4"
+      },
+      "coach_cumulative": {
+        "w": 20,
+        "l": 12,
+        "t": 0,
+        "record": "20-12-0",
+        "win_pct": 62.5
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1981-82",
+      "season_end_year": 1982,
+      "coach": "Roger Pullen",
+      "w": 11,
+      "l": 6,
+      "t": 1,
+      "record": "11-6-1",
+      "win_pct": 61.1111111111,
+      "team_cumulative": {
+        "w": 121,
+        "l": 52,
+        "t": 5,
+        "record": "121-52-5"
+      },
+      "coach_cumulative": {
+        "w": 31,
+        "l": 18,
+        "t": 1,
+        "record": "31-18-1",
+        "win_pct": 62.0
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1982-83",
+      "season_end_year": 1983,
+      "coach": "Roger Pullen",
+      "w": 11,
+      "l": 4,
+      "t": 1,
+      "record": "11-4-1",
+      "win_pct": 68.75,
+      "team_cumulative": {
+        "w": 132,
+        "l": 56,
+        "t": 6,
+        "record": "132-56-6"
+      },
+      "coach_cumulative": {
+        "w": 42,
+        "l": 22,
+        "t": 2,
+        "record": "42-22-2",
+        "win_pct": 63.6363636364
+      },
+      "championships": {
+        "league": false,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1983-84",
+      "season_end_year": 1984,
+      "coach": "Roger Pullen",
+      "w": 8,
+      "l": 4,
+      "t": 0,
+      "record": "8-4-0",
+      "win_pct": 66.6666666667,
+      "team_cumulative": {
+        "w": 140,
+        "l": 60,
+        "t": 6,
+        "record": "140-60-6"
+      },
+      "coach_cumulative": {
+        "w": 50,
+        "l": 26,
+        "t": 2,
+        "record": "50-26-2",
+        "win_pct": 64.1025641026
+      },
+      "championships": {
+        "league": false,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1984-85",
+      "season_end_year": 1985,
+      "coach": "Roger Pullen",
+      "w": 8,
+      "l": 4,
+      "t": 1,
+      "record": "8-4-1",
+      "win_pct": 61.5384615385,
+      "team_cumulative": {
+        "w": 148,
+        "l": 64,
+        "t": 7,
+        "record": "148-64-7"
+      },
+      "coach_cumulative": {
+        "w": 58,
+        "l": 30,
+        "t": 3,
+        "record": "58-30-3",
+        "win_pct": 63.7362637363
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1985-86",
+      "season_end_year": 1986,
+      "coach": "Roger Pullen",
+      "w": 10,
+      "l": 4,
+      "t": 0,
+      "record": "10-4-0",
+      "win_pct": 71.4285714286,
+      "team_cumulative": {
+        "w": 158,
+        "l": 68,
+        "t": 7,
+        "record": "158-68-7"
+      },
+      "coach_cumulative": {
+        "w": 68,
+        "l": 34,
+        "t": 3,
+        "record": "68-34-3",
+        "win_pct": 64.7619047619
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1986-87",
+      "season_end_year": 1987,
+      "coach": "Roger Pullen",
+      "w": 10,
+      "l": 5,
+      "t": 0,
+      "record": "10-5-0",
+      "win_pct": 66.6666666667,
+      "team_cumulative": {
+        "w": 168,
+        "l": 73,
+        "t": 7,
+        "record": "168-73-7"
+      },
+      "coach_cumulative": {
+        "w": 78,
+        "l": 39,
+        "t": 3,
+        "record": "78-39-3",
+        "win_pct": 65.0
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1987-88",
+      "season_end_year": 1988,
+      "coach": "Roger Pullen",
+      "w": 10,
+      "l": 6,
+      "t": 0,
+      "record": "10-6-0",
+      "win_pct": 62.5,
+      "team_cumulative": {
+        "w": 178,
+        "l": 79,
+        "t": 7,
+        "record": "178-79-7"
+      },
+      "coach_cumulative": {
+        "w": 88,
+        "l": 45,
+        "t": 3,
+        "record": "88-45-3",
+        "win_pct": 64.7058823529
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1988-89",
+      "season_end_year": 1989,
+      "coach": "Roger Pullen",
+      "w": 9,
+      "l": 7,
+      "t": 0,
+      "record": "9-7-0",
+      "win_pct": 56.25,
+      "team_cumulative": {
+        "w": 187,
+        "l": 86,
+        "t": 7,
+        "record": "187-86-7"
+      },
+      "coach_cumulative": {
+        "w": 97,
+        "l": 52,
+        "t": 3,
+        "record": "97-52-3",
+        "win_pct": 63.8157894737
+      },
+      "championships": {
+        "league": true,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1989-90",
+      "season_end_year": 1990,
+      "coach": "Roger Pullen",
+      "w": 10,
+      "l": 6,
+      "t": 1,
+      "record": "10-6-1",
+      "win_pct": 58.8235294118,
+      "team_cumulative": {
+        "w": 197,
+        "l": 92,
+        "t": 8,
+        "record": "197-92-8"
+      },
+      "coach_cumulative": {
+        "w": 107,
+        "l": 58,
+        "t": 4,
+        "record": "107-58-4",
+        "win_pct": 63.3136094675
+      },
+      "championships": {
+        "league": true,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1990-91",
+      "season_end_year": 1991,
+      "coach": "Roger Pullen",
+      "w": 10,
+      "l": 7,
+      "t": 0,
+      "record": "10-7-0",
+      "win_pct": 58.8235294118,
+      "team_cumulative": {
+        "w": 207,
+        "l": 99,
+        "t": 8,
+        "record": "207-99-8"
+      },
+      "coach_cumulative": {
+        "w": 117,
+        "l": 65,
+        "t": 4,
+        "record": "117-65-4",
+        "win_pct": 62.9032258065
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1991-92",
+      "season_end_year": 1992,
+      "coach": "Roger Pullen",
+      "w": 11,
+      "l": 10,
+      "t": 0,
+      "record": "11-10-0",
+      "win_pct": 52.380952381,
+      "team_cumulative": {
+        "w": 218,
+        "l": 109,
+        "t": 8,
+        "record": "218-109-8"
+      },
+      "coach_cumulative": {
+        "w": 128,
+        "l": 75,
+        "t": 4,
+        "record": "128-75-4",
+        "win_pct": 61.8357487923
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1992-93",
+      "season_end_year": 1993,
+      "coach": "Roger Pullen",
+      "w": 11,
+      "l": 3,
+      "t": 0,
+      "record": "11-3-0",
+      "win_pct": 78.5714285714,
+      "team_cumulative": {
+        "w": 229,
+        "l": 112,
+        "t": 8,
+        "record": "229-112-8"
+      },
+      "coach_cumulative": {
+        "w": 139,
+        "l": 78,
+        "t": 4,
+        "record": "139-78-4",
+        "win_pct": 62.8959276018
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1993-94",
+      "season_end_year": 1994,
+      "coach": "Roger Pullen",
+      "w": 7,
+      "l": 8,
+      "t": 0,
+      "record": "7-8-0",
+      "win_pct": 46.6666666667,
+      "team_cumulative": {
+        "w": 236,
+        "l": 120,
+        "t": 8,
+        "record": "236-120-8"
+      },
+      "coach_cumulative": {
+        "w": 146,
+        "l": 86,
+        "t": 4,
+        "record": "146-86-4",
+        "win_pct": 61.8644067797
+      },
+      "championships": {
+        "league": false,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1994-95",
+      "season_end_year": 1995,
+      "coach": "Roger Pullen",
+      "w": 14,
+      "l": 4,
+      "t": 0,
+      "record": "14-4-0",
+      "win_pct": 77.7777777778,
+      "team_cumulative": {
+        "w": 250,
+        "l": 124,
+        "t": 8,
+        "record": "250-124-8"
+      },
+      "coach_cumulative": {
+        "w": 160,
+        "l": 90,
+        "t": 4,
+        "record": "160-90-4",
+        "win_pct": 62.9921259843
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1995-96",
+      "season_end_year": 1996,
+      "coach": "Roger Pullen",
+      "w": 12,
+      "l": 3,
+      "t": 0,
+      "record": "12-3-0",
+      "win_pct": 80.0,
+      "team_cumulative": {
+        "w": 262,
+        "l": 127,
+        "t": 8,
+        "record": "262-127-8"
+      },
+      "coach_cumulative": {
+        "w": 172,
+        "l": 93,
+        "t": 4,
+        "record": "172-93-4",
+        "win_pct": 63.9405204461
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1996-97",
+      "season_end_year": 1997,
+      "coach": "Roger Pullen",
+      "w": 11,
+      "l": 8,
+      "t": 0,
+      "record": "11-8-0",
+      "win_pct": 57.8947368421,
+      "team_cumulative": {
+        "w": 273,
+        "l": 135,
+        "t": 8,
+        "record": "273-135-8"
+      },
+      "coach_cumulative": {
+        "w": 183,
+        "l": 101,
+        "t": 4,
+        "record": "183-101-4",
+        "win_pct": 63.5416666667
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1997-98",
+      "season_end_year": 1998,
+      "coach": "Roger Pullen",
+      "w": 12,
+      "l": 7,
+      "t": 0,
+      "record": "12-7-0",
+      "win_pct": 63.1578947368,
+      "team_cumulative": {
+        "w": 285,
+        "l": 142,
+        "t": 8,
+        "record": "285-142-8"
+      },
+      "coach_cumulative": {
+        "w": 195,
+        "l": 108,
+        "t": 4,
+        "record": "195-108-4",
+        "win_pct": 63.5179153094
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1998-99",
+      "season_end_year": 1999,
+      "coach": "Roger Pullen",
+      "w": 14,
+      "l": 5,
+      "t": 0,
+      "record": "14-5-0",
+      "win_pct": 73.6842105263,
+      "team_cumulative": {
+        "w": 299,
+        "l": 147,
+        "t": 8,
+        "record": "299-147-8"
+      },
+      "coach_cumulative": {
+        "w": 209,
+        "l": 113,
+        "t": 4,
+        "record": "209-113-4",
+        "win_pct": 64.1104294479
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "1999-00",
+      "season_end_year": 2000,
+      "coach": "Ron Jensen",
+      "w": 12,
+      "l": 6,
+      "t": 1,
+      "record": "12-6-1",
+      "win_pct": 63.1578947368,
+      "team_cumulative": {
+        "w": 311,
+        "l": 153,
+        "t": 9,
+        "record": "311-153-9"
+      },
+      "coach_cumulative": {
+        "w": 12,
+        "l": 6,
+        "t": 1,
+        "record": "12-6-1",
+        "win_pct": 63.1578947368
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2000-01",
+      "season_end_year": 2001,
+      "coach": "Ron Jensen",
+      "w": 16,
+      "l": 6,
+      "t": 0,
+      "record": "16-6-0",
+      "win_pct": 72.7272727273,
+      "team_cumulative": {
+        "w": 327,
+        "l": 159,
+        "t": 9,
+        "record": "327-159-9"
+      },
+      "coach_cumulative": {
+        "w": 28,
+        "l": 12,
+        "t": 1,
+        "record": "28-12-1",
+        "win_pct": 68.2926829268
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2001-02",
+      "season_end_year": 2002,
+      "coach": "Ron Jensen",
+      "w": 9,
+      "l": 11,
+      "t": 0,
+      "record": "9-11-0",
+      "win_pct": 45.0,
+      "team_cumulative": {
+        "w": 336,
+        "l": 170,
+        "t": 9,
+        "record": "336-170-9"
+      },
+      "coach_cumulative": {
+        "w": 37,
+        "l": 23,
+        "t": 1,
+        "record": "37-23-1",
+        "win_pct": 60.6557377049
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2002-03",
+      "season_end_year": 2003,
+      "coach": "Ron Jensen",
+      "w": 10,
+      "l": 7,
+      "t": 0,
+      "record": "10-7-0",
+      "win_pct": 58.8235294118,
+      "team_cumulative": {
+        "w": 346,
+        "l": 177,
+        "t": 9,
+        "record": "346-177-9"
+      },
+      "coach_cumulative": {
+        "w": 47,
+        "l": 30,
+        "t": 1,
+        "record": "47-30-1",
+        "win_pct": 60.2564102564
+      },
+      "championships": {
+        "league": false,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2003-04",
+      "season_end_year": 2004,
+      "coach": "Tom Mann",
+      "w": 11,
+      "l": 8,
+      "t": 0,
+      "record": "11-8-0",
+      "win_pct": 57.8947368421,
+      "team_cumulative": {
+        "w": 357,
+        "l": 185,
+        "t": 9,
+        "record": "357-185-9"
+      },
+      "coach_cumulative": {
+        "w": 11,
+        "l": 8,
+        "t": 0,
+        "record": "11-8-0",
+        "win_pct": 57.8947368421
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2004-05",
+      "season_end_year": 2005,
+      "coach": "Tom Mann",
+      "w": 13,
+      "l": 6,
+      "t": 0,
+      "record": "13-6-0",
+      "win_pct": 68.4210526316,
+      "team_cumulative": {
+        "w": 370,
+        "l": 191,
+        "t": 9,
+        "record": "370-191-9"
+      },
+      "coach_cumulative": {
+        "w": 24,
+        "l": 14,
+        "t": 0,
+        "record": "24-14-0",
+        "win_pct": 63.1578947368
+      },
+      "championships": {
+        "league": false,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2005-06",
+      "season_end_year": 2006,
+      "coach": "Tom Mann",
+      "w": 5,
+      "l": 20,
+      "t": 0,
+      "record": "5-20-0",
+      "win_pct": 20.0,
+      "team_cumulative": {
+        "w": 375,
+        "l": 211,
+        "t": 9,
+        "record": "375-211-9"
+      },
+      "coach_cumulative": {
+        "w": 29,
+        "l": 34,
+        "t": 0,
+        "record": "29-34-0",
+        "win_pct": 46.0317460317
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2006-07",
+      "season_end_year": 2007,
+      "coach": "Tom Mann",
+      "w": 5,
+      "l": 18,
+      "t": 0,
+      "record": "5-18-0",
+      "win_pct": 21.7391304348,
+      "team_cumulative": {
+        "w": 380,
+        "l": 229,
+        "t": 9,
+        "record": "380-229-9"
+      },
+      "coach_cumulative": {
+        "w": 34,
+        "l": 52,
+        "t": 0,
+        "record": "34-52-0",
+        "win_pct": 39.5348837209
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2007-08",
+      "season_end_year": 2008,
+      "coach": "Tom Mann",
+      "w": 6,
+      "l": 21,
+      "t": 0,
+      "record": "6-21-0",
+      "win_pct": 22.2222222222,
+      "team_cumulative": {
+        "w": 386,
+        "l": 250,
+        "t": 9,
+        "record": "386-250-9"
+      },
+      "coach_cumulative": {
+        "w": 40,
+        "l": 73,
+        "t": 0,
+        "record": "40-73-0",
+        "win_pct": 35.3982300885
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2008-09",
+      "season_end_year": 2009,
+      "coach": "Tom Mann",
+      "w": 7,
+      "l": 14,
+      "t": 0,
+      "record": "7-14-0",
+      "win_pct": 33.3333333333,
+      "team_cumulative": {
+        "w": 393,
+        "l": 264,
+        "t": 9,
+        "record": "393-264-9"
+      },
+      "coach_cumulative": {
+        "w": 47,
+        "l": 87,
+        "t": 0,
+        "record": "47-87-0",
+        "win_pct": 35.0746268657
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2009-10",
+      "season_end_year": 2010,
+      "coach": "Tom Mann",
+      "w": 6,
+      "l": 14,
+      "t": 0,
+      "record": "6-14-0",
+      "win_pct": 30.0,
+      "team_cumulative": {
+        "w": 399,
+        "l": 278,
+        "t": 9,
+        "record": "399-278-9"
+      },
+      "coach_cumulative": {
+        "w": 53,
+        "l": 101,
+        "t": 0,
+        "record": "53-101-0",
+        "win_pct": 34.4155844156
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2010-11",
+      "season_end_year": 2011,
+      "coach": "Tom Mann",
+      "w": 9,
+      "l": 13,
+      "t": 0,
+      "record": "9-13-0",
+      "win_pct": 40.9090909091,
+      "team_cumulative": {
+        "w": 408,
+        "l": 291,
+        "t": 9,
+        "record": "408-291-9"
+      },
+      "coach_cumulative": {
+        "w": 62,
+        "l": 114,
+        "t": 0,
+        "record": "62-114-0",
+        "win_pct": 35.2272727273
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2011-12",
+      "season_end_year": 2012,
+      "coach": "Tom Mann",
+      "w": 18,
+      "l": 6,
+      "t": 0,
+      "record": "18-6-0",
+      "win_pct": 75.0,
+      "team_cumulative": {
+        "w": 426,
+        "l": 297,
+        "t": 9,
+        "record": "426-297-9"
+      },
+      "coach_cumulative": {
+        "w": 80,
+        "l": 120,
+        "t": 0,
+        "record": "80-120-0",
+        "win_pct": 40.0
+      },
+      "championships": {
+        "league": true,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2012-13",
+      "season_end_year": 2013,
+      "coach": "Tom Mann",
+      "w": 21,
+      "l": 3,
+      "t": 0,
+      "record": "21-3-0",
+      "win_pct": 87.5,
+      "team_cumulative": {
+        "w": 447,
+        "l": 300,
+        "t": 9,
+        "record": "447-300-9"
+      },
+      "coach_cumulative": {
+        "w": 101,
+        "l": 123,
+        "t": 0,
+        "record": "101-123-0",
+        "win_pct": 45.0892857143
+      },
+      "championships": {
+        "league": true,
+        "districts": true,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2013-14",
+      "season_end_year": 2014,
+      "coach": "Tom Mann",
+      "w": 14,
+      "l": 8,
+      "t": 0,
+      "record": "14-8-0",
+      "win_pct": 63.6363636364,
+      "team_cumulative": {
+        "w": 461,
+        "l": 308,
+        "t": 9,
+        "record": "461-308-9"
+      },
+      "coach_cumulative": {
+        "w": 115,
+        "l": 131,
+        "t": 0,
+        "record": "115-131-0",
+        "win_pct": 46.7479674797
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2014-15",
+      "season_end_year": 2015,
+      "coach": "Tom Mann",
+      "w": 6,
+      "l": 21,
+      "t": 0,
+      "record": "6-21-0",
+      "win_pct": 22.2222222222,
+      "team_cumulative": {
+        "w": 467,
+        "l": 329,
+        "t": 9,
+        "record": "467-329-9"
+      },
+      "coach_cumulative": {
+        "w": 121,
+        "l": 152,
+        "t": 0,
+        "record": "121-152-0",
+        "win_pct": 44.3223443223
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2015-16",
+      "season_end_year": 2016,
+      "coach": "Tom Mann",
+      "w": 11,
+      "l": 15,
+      "t": 0,
+      "record": "11-15-0",
+      "win_pct": 42.3076923077,
+      "team_cumulative": {
+        "w": 478,
+        "l": 344,
+        "t": 9,
+        "record": "478-344-9"
+      },
+      "coach_cumulative": {
+        "w": 132,
+        "l": 167,
+        "t": 0,
+        "record": "132-167-0",
+        "win_pct": 44.1471571906
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2016-17",
+      "season_end_year": 2017,
+      "coach": "Tom Mann",
+      "w": 12,
+      "l": 13,
+      "t": 0,
+      "record": "12-13-0",
+      "win_pct": 48.0,
+      "team_cumulative": {
+        "w": 490,
+        "l": 357,
+        "t": 9,
+        "record": "490-357-9"
+      },
+      "coach_cumulative": {
+        "w": 144,
+        "l": 180,
+        "t": 0,
+        "record": "144-180-0",
+        "win_pct": 44.4444444444
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2017-18",
+      "season_end_year": 2018,
+      "coach": "Tom Mann",
+      "w": 8,
+      "l": 18,
+      "t": 0,
+      "record": "8-18-0",
+      "win_pct": 30.7692307692,
+      "team_cumulative": {
+        "w": 498,
+        "l": 375,
+        "t": 9,
+        "record": "498-375-9"
+      },
+      "coach_cumulative": {
+        "w": 152,
+        "l": 198,
+        "t": 0,
+        "record": "152-198-0",
+        "win_pct": 43.4285714286
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2018-19",
+      "season_end_year": 2019,
+      "coach": "Tom Mann",
+      "w": 10,
+      "l": 18,
+      "t": 0,
+      "record": "10-18-0",
+      "win_pct": 35.7142857143,
+      "team_cumulative": {
+        "w": 508,
+        "l": 393,
+        "t": 9,
+        "record": "508-393-9"
+      },
+      "coach_cumulative": {
+        "w": 162,
+        "l": 216,
+        "t": 0,
+        "record": "162-216-0",
+        "win_pct": 42.8571428571
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2019-20",
+      "season_end_year": 2020,
+      "coach": "Kyle Packer",
+      "w": 14,
+      "l": 11,
+      "t": 0,
+      "record": "14-11-0",
+      "win_pct": 56.0,
+      "team_cumulative": {
+        "w": 522,
+        "l": 404,
+        "t": 9,
+        "record": "522-404-9"
+      },
+      "coach_cumulative": {
+        "w": 14,
+        "l": 11,
+        "t": 0,
+        "record": "14-11-0",
+        "win_pct": 56.0
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2020-21",
+      "season_end_year": 2021,
+      "coach": "Kyle Packer",
+      "w": 5,
+      "l": 7,
+      "t": 0,
+      "record": "5-7-0",
+      "win_pct": 41.6666666667,
+      "team_cumulative": {
+        "w": 527,
+        "l": 411,
+        "t": 9,
+        "record": "527-411-9"
+      },
+      "coach_cumulative": {
+        "w": 19,
+        "l": 18,
+        "t": 0,
+        "record": "19-18-0",
+        "win_pct": 51.3513513514
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2021-22",
+      "season_end_year": 2022,
+      "coach": "Kyle Packer",
+      "w": 23,
+      "l": 2,
+      "t": 0,
+      "record": "23-2-0",
+      "win_pct": 92.0,
+      "team_cumulative": {
+        "w": 550,
+        "l": 413,
+        "t": 9,
+        "record": "550-413-9"
+      },
+      "coach_cumulative": {
+        "w": 42,
+        "l": 20,
+        "t": 0,
+        "record": "42-20-0",
+        "win_pct": 67.7419354839
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": true
+      }
+    },
+    {
+      "season": "2022-23",
+      "season_end_year": 2023,
+      "coach": "Kyle Packer",
+      "w": 21,
+      "l": 5,
+      "t": 0,
+      "record": "21-5-0",
+      "win_pct": 80.7692307692,
+      "team_cumulative": {
+        "w": 571,
+        "l": 418,
+        "t": 9,
+        "record": "571-418-9"
+      },
+      "coach_cumulative": {
+        "w": 63,
+        "l": 25,
+        "t": 0,
+        "record": "63-25-0",
+        "win_pct": 71.5909090909
+      },
+      "championships": {
+        "league": true,
+        "districts": false,
+        "sectional": true
+      }
+    },
+    {
+      "season": "2023-24",
+      "season_end_year": 2024,
+      "coach": "Kyle Packer",
+      "w": 15,
+      "l": 10,
+      "t": 0,
+      "record": "15-10-0",
+      "win_pct": 60.0,
+      "team_cumulative": {
+        "w": 586,
+        "l": 428,
+        "t": 9,
+        "record": "586-428-9"
+      },
+      "coach_cumulative": {
+        "w": 78,
+        "l": 35,
+        "t": 0,
+        "record": "78-35-0",
+        "win_pct": 69.0265486726
+      },
+      "championships": {
+        "league": true,
+        "districts": false,
+        "sectional": false
+      }
+    },
+    {
+      "season": "2024-25",
+      "season_end_year": 2025,
+      "coach": "Kyle Packer",
+      "w": 12,
+      "l": 14,
+      "t": 0,
+      "record": "12-14-0",
+      "win_pct": 46.1538461538,
+      "team_cumulative": {
+        "w": 598,
+        "l": 442,
+        "t": 9,
+        "record": "598-442-9"
+      },
+      "coach_cumulative": {
+        "w": 90,
+        "l": 49,
+        "t": 0,
+        "record": "90-49-0",
+        "win_pct": 64.7482014388
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      },
+      "standings_detail": {
+        "div_record": "3-2",
+        "home_record": "8-6",
+        "away_record": "4-8",
+        "pf": 925,
+        "pa": 946,
+        "notes": "Overall corrected to 12-14 from conference standings (sheet had 12-13)."
+      }
+    },
+    {
+      "season": "2025-26",
+      "season_end_year": 2026,
+      "coach": "Kyle Packer",
+      "w": 12,
+      "l": 15,
+      "t": 0,
+      "record": "12-15-0",
+      "win_pct": 44.4444444444,
+      "team_cumulative": {
+        "w": 610,
+        "l": 457,
+        "t": 9,
+        "record": "610-457-9"
+      },
+      "coach_cumulative": {
+        "w": 102,
+        "l": 64,
+        "t": 0,
+        "record": "102-64-0",
+        "win_pct": 61.4457831325
+      },
+      "championships": {
+        "league": false,
+        "districts": false,
+        "sectional": false
+      },
+      "standings_detail": {
+        "div_record": "2-3",
+        "home_record": "8-9",
+        "away_record": "4-6",
+        "pf": 1032,
+        "pa": 907,
+        "notes": "Overall must match results_ledger.json (12-15)."
+      }
+    }
+  ],
+  "validation": {
+    "expected_team_all_time": {
+      "w": 610,
+      "l": 457,
+      "t": 9
+    },
+    "team_matches_expected": true,
+    "awards_cross_check": [
+      "District Team years in awards.json but not flagged in coaching history: [1986]",
+      "awards.json has no League/Conference team championship entries; coaching history League flags (end years): [1973, 1974, 1989, 1990, 2012, 2013, 2023, 2024]"
+    ],
+    "results_ledger_2025_26": "matches results_ledger overall 12-15",
+    "sectional_seasons": [
+      "2021-22",
+      "2022-23"
+    ],
+    "sectional_from_awards": [
+      "2021-22",
+      "2022-23"
+    ],
+    "jeff_sectional_seasons": [
+      "2021-22",
+      "2022-23"
+    ],
+    "sectional_agrees_with_awards": true
+  }
+}
