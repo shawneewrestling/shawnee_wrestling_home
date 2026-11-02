@@ -19,7 +19,8 @@
       "varsity_bouts": 36,
       "jv_bouts_skipped": 0,
       "byes_skipped": 2,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Max Spitznas",
@@ -40,7 +41,8 @@
       "varsity_bouts": 33,
       "jv_bouts_skipped": 0,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Collin McHugh",
@@ -60,7 +62,8 @@
       "varsity_bouts": 36,
       "jv_bouts_skipped": 0,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Oleksandr `Sasha` Yurovskyi",
@@ -80,7 +83,8 @@
       "varsity_bouts": 35,
       "jv_bouts_skipped": 0,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Sean Bradley",
@@ -103,7 +107,8 @@
       "varsity_bouts": 37,
       "jv_bouts_skipped": 0,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Ryan Hoerst",
@@ -126,7 +131,8 @@
       "varsity_bouts": 31,
       "jv_bouts_skipped": 0,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "William (Liam) McSorley",
@@ -147,7 +153,8 @@
       "varsity_bouts": 30,
       "jv_bouts_skipped": 0,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Trevor Sieben",
@@ -165,7 +172,8 @@
       "varsity_bouts": 25,
       "jv_bouts_skipped": 0,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Brayden Inman",
@@ -187,7 +195,8 @@
       "varsity_bouts": 26,
       "jv_bouts_skipped": 0,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Rowan Nix",
@@ -208,7 +217,8 @@
       "jv_bouts_skipped": 5,
       "byes_skipped": 1,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "5-0"
     },
     {
       "name": "Nathan Hunnewell",
@@ -227,10 +237,11 @@
       },
       "source": "wrestler_matches/Nathan_Hunnewell.txt",
       "varsity_bouts": 18,
-      "jv_bouts_skipped": 6,
+      "jv_bouts_skipped": 5,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "4-1"
     },
     {
       "name": "Matt Hart",
@@ -253,7 +264,8 @@
       "varsity_bouts": 32,
       "jv_bouts_skipped": 0,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Leeland Rogers",
@@ -311,7 +323,8 @@
       "varsity_bouts": 11,
       "jv_bouts_skipped": 0,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Anthony Blahut",
@@ -332,7 +345,8 @@
       "varsity_bouts": 23,
       "jv_bouts_skipped": 0,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Jacobs Rodriguez",
@@ -349,7 +363,8 @@
       "jv_bouts_skipped": 4,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "3-1"
     },
     {
       "name": "Garrett Borlaug",
@@ -400,7 +415,8 @@
       "jv_bouts_skipped": 4,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "3-1"
     },
     {
       "name": "Brian Reice",
@@ -414,10 +430,11 @@
       },
       "source": "wrestler_matches/Brian_Reice.txt",
       "varsity_bouts": 5,
-      "jv_bouts_skipped": 3,
+      "jv_bouts_skipped": 2,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "1-1"
     },
     {
       "name": "Gino Gonzalez",
@@ -431,10 +448,11 @@
       },
       "source": "wrestler_matches/Gino_Gonzalez.txt",
       "varsity_bouts": 6,
-      "jv_bouts_skipped": 4,
+      "jv_bouts_skipped": 3,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "2-1"
     },
     {
       "name": "Tyler Davis",
@@ -464,7 +482,8 @@
           "opponent": "Xzavier Torres",
           "opponent_team": "The Peddie School"
         }
-      ]
+      ],
+      "jv_record_skipped": "0-0"
     },
     {
       "name": "Kellan McDonough",
@@ -479,7 +498,8 @@
       "jv_bouts_skipped": 3,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "2-1"
     },
     {
       "name": "Owen Siena",
@@ -493,10 +513,11 @@
       },
       "source": "wrestler_matches/Owen_Siena.txt",
       "varsity_bouts": 5,
-      "jv_bouts_skipped": 3,
+      "jv_bouts_skipped": 2,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "1-1"
     },
     {
       "name": "Jack Caldwell",
@@ -510,10 +531,11 @@
       },
       "source": "wrestler_matches/Jack_Caldwell.txt",
       "varsity_bouts": 6,
-      "jv_bouts_skipped": 4,
+      "jv_bouts_skipped": 3,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "2-1"
     },
     {
       "name": "Eli Sauler",
@@ -525,10 +547,11 @@
       },
       "source": "wrestler_matches/Eli_Sauler.txt",
       "varsity_bouts": 1,
-      "jv_bouts_skipped": 2,
+      "jv_bouts_skipped": 1,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "0-1"
     },
     {
       "name": "Jadiel Esquivel",
@@ -540,10 +563,11 @@
       },
       "source": "wrestler_matches/Jadiel_Esquivel.txt",
       "varsity_bouts": 1,
-      "jv_bouts_skipped": 3,
+      "jv_bouts_skipped": 2,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "1-1"
     },
     {
       "name": "Logan Reice",
@@ -555,10 +579,11 @@
       },
       "source": "wrestler_matches/Logan_Reice.txt",
       "varsity_bouts": 2,
-      "jv_bouts_skipped": 3,
+      "jv_bouts_skipped": 2,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "1-1"
     },
     {
       "name": "Brodie Regan",
@@ -570,10 +595,11 @@
       },
       "source": "wrestler_matches/Brodie_Regan.txt",
       "varsity_bouts": 1,
-      "jv_bouts_skipped": 4,
+      "jv_bouts_skipped": 1,
       "byes_skipped": 0,
       "excluded_bouts": [],
-      "record_changed_from_tw": true
+      "record_changed_from_tw": true,
+      "jv_record_skipped": "0-1"
     }
   ],
   "incomplete": [],
@@ -676,91 +702,91 @@
       "name": "Brian Reice",
       "from_tw": "3-4",
       "to_varsity": "2-3",
-      "jv_bouts_skipped": 3,
+      "jv_skipped": "1-1",
       "team_points_net": -8
     },
     {
       "name": "Brodie Regan",
       "from_tw": "0-2",
       "to_varsity": "0-1",
-      "jv_bouts_skipped": 4,
+      "jv_skipped": "0-1",
       "team_points_net": -6
     },
     {
       "name": "Eli Sauler",
       "from_tw": "1-1",
       "to_varsity": "1-0",
-      "jv_bouts_skipped": 2,
+      "jv_skipped": "0-1",
       "team_points_net": 6
     },
     {
       "name": "Gino Gonzalez",
       "from_tw": "3-6",
       "to_varsity": "1-5",
-      "jv_bouts_skipped": 4,
+      "jv_skipped": "2-1",
       "team_points_net": -23
     },
     {
       "name": "Jack Caldwell",
       "from_tw": "2-7",
       "to_varsity": "0-6",
-      "jv_bouts_skipped": 4,
+      "jv_skipped": "2-1",
       "team_points_net": -33
     },
     {
       "name": "Jacobs Rodriguez",
       "from_tw": "4-4",
       "to_varsity": "1-3",
-      "jv_bouts_skipped": 4,
+      "jv_skipped": "3-1",
       "team_points_net": -9
     },
     {
       "name": "Jadiel Esquivel",
       "from_tw": "1-2",
       "to_varsity": "0-1",
-      "jv_bouts_skipped": 3,
+      "jv_skipped": "1-1",
       "team_points_net": -6
     },
     {
       "name": "Kellan McDonough",
       "from_tw": "2-2",
       "to_varsity": "0-1",
-      "jv_bouts_skipped": 3,
+      "jv_skipped": "2-1",
       "team_points_net": -6
     },
     {
       "name": "Logan Cino",
       "from_tw": "3-2",
       "to_varsity": "0-1",
-      "jv_bouts_skipped": 4,
+      "jv_skipped": "3-1",
       "team_points_net": -6
     },
     {
       "name": "Logan Reice",
       "from_tw": "1-3",
       "to_varsity": "0-2",
-      "jv_bouts_skipped": 3,
+      "jv_skipped": "1-1",
       "team_points_net": -12
     },
     {
       "name": "Nathan Hunnewell",
       "from_tw": "12-11",
       "to_varsity": "8-10",
-      "jv_bouts_skipped": 6,
+      "jv_skipped": "4-1",
       "team_points_net": 1
     },
     {
       "name": "Owen Siena",
       "from_tw": "2-5",
       "to_varsity": "1-4",
-      "jv_bouts_skipped": 3,
+      "jv_skipped": "1-1",
       "team_points_net": -18
     },
     {
       "name": "Rowan Nix",
       "from_tw": "13-14",
       "to_varsity": "8-14",
-      "jv_bouts_skipped": 5,
+      "jv_skipped": "5-0",
       "team_points_net": -27
     }
   ]
