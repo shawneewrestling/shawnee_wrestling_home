@@ -2,7 +2,7 @@
   "schema_version": 1,
   "season": "2018-19",
   "title": "2018-2019 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "sheet:2018-19",
   "has_breakdown": true,
   "count": 22,
@@ -357,7 +357,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 3,
-      "player_page": null
+      "player_page": "players/mark-palmieri-22264e.html"
     },
     {
       "name": "Zeke Werosta",
@@ -389,7 +389,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 3,
-      "player_page": null
+      "player_page": "players/zeke-werosta-23b608.html"
     },
     {
       "name": "Kalamvokis Cole",
@@ -421,7 +421,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/kalamvokis-cole-a61225.html"
     },
     {
       "name": "Adam El-Saadi",
@@ -453,7 +453,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/adam-el-saadi-712fde.html"
     },
     {
       "name": "Steven Deringer",
@@ -485,7 +485,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/steven-deringer-44dc21.html"
     },
     {
       "name": "Ethan Greenberg",
@@ -549,7 +549,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/colin-mcourt-c9f2d4.html"
     },
     {
       "name": "Christain Defulio",
@@ -581,7 +581,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": null,
-      "player_page": null
+      "player_page": "players/christain-defulio-1ed3b5.html"
     },
     {
       "name": "Jay Stokes",
@@ -645,7 +645,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/jackson-o-brien-222e25.html"
     },
     {
       "name": "Max Germain",
@@ -709,7 +709,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/alize-alvarado-998a1b.html"
     }
   ]
 }

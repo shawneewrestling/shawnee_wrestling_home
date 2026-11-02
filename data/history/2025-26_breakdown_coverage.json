@@ -1,0 +1,659 @@
+{
+  "season": "2025-26",
+  "complete": [
+    {
+      "name": "Leeland Rogers",
+      "record": "11-6",
+      "team_points": 62,
+      "breakdown": {
+        "w_fall": 9,
+        "w_tech": 1,
+        "w_dec": 1,
+        "l_fall": 4,
+        "l_dec": 2
+      }
+    },
+    {
+      "name": "Joseph Augusta",
+      "record": "9-12",
+      "team_points": 38,
+      "breakdown": {
+        "w_fall": 2,
+        "w_tech": 1,
+        "w_dec": 5,
+        "w_ff": 1,
+        "l_fall": 4,
+        "l_tech": 1,
+        "l_maj": 2,
+        "l_dec": 5
+      }
+    },
+    {
+      "name": "Garrett Borlaug",
+      "record": "4-11",
+      "team_points": 19,
+      "breakdown": {
+        "w_fall": 2,
+        "w_maj": 1,
+        "w_dec": 1,
+        "l_fall": 4,
+        "l_tech": 2,
+        "l_maj": 1,
+        "l_dec": 4
+      }
+    },
+    {
+      "name": "Robert Lane",
+      "record": "3-1",
+      "team_points": 17,
+      "breakdown": {
+        "w_fall": 2,
+        "w_tech": 1,
+        "l_dec": 1
+      }
+    }
+  ],
+  "incomplete": [
+    {
+      "name": "Jordan Segal",
+      "tw_record": "29-7",
+      "captured_record": "31-7",
+      "byes_skipped": 2,
+      "delta_w": 2,
+      "delta_l": 0,
+      "events_with_bouts": [
+        "8714376132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8715992132",
+        "8724258132",
+        "8729716132",
+        "8733355132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "8978292132",
+        "8978305132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Max Spitznas",
+      "tw_record": "27-6",
+      "captured_record": "29-6",
+      "byes_skipped": 1,
+      "delta_w": 2,
+      "delta_l": 0,
+      "events_with_bouts": [
+        "8706927132",
+        "8715034132",
+        "8715041132",
+        "8715046132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8715992132",
+        "8719713132",
+        "8724258132",
+        "8729716132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Collin McHugh",
+      "tw_record": "22-14",
+      "captured_record": "22-16",
+      "byes_skipped": 1,
+      "delta_w": 0,
+      "delta_l": 2,
+      "events_with_bouts": [
+        "8706927132",
+        "8715034132",
+        "8715041132",
+        "8715046132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8715992132",
+        "8719713132",
+        "8724258132",
+        "8729716132",
+        "8733355132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "tw_record": "21-14",
+      "captured_record": "22-15",
+      "byes_skipped": 1,
+      "delta_w": 1,
+      "delta_l": 1,
+      "events_with_bouts": [
+        "8706927132",
+        "8715034132",
+        "8715041132",
+        "8715046132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8715992132",
+        "8719713132",
+        "8724258132",
+        "8729716132",
+        "8733355132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Sean Bradley",
+      "tw_record": "21-16",
+      "captured_record": "23-16",
+      "byes_skipped": 1,
+      "delta_w": 2,
+      "delta_l": 0,
+      "events_with_bouts": [
+        "8706927132",
+        "8715034132",
+        "8715041132",
+        "8715046132",
+        "8715071132",
+        "8715992132",
+        "8719713132",
+        "8724258132",
+        "8729716132",
+        "8733355132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "8978292132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Ryan Hoerst",
+      "tw_record": "17-14",
+      "captured_record": "19-15",
+      "byes_skipped": 1,
+      "delta_w": 2,
+      "delta_l": 1,
+      "events_with_bouts": [
+        "8706927132",
+        "8715034132",
+        "8715041132",
+        "8715046132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8719713132",
+        "8724258132",
+        "8729716132",
+        "8733355132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "William (Liam) McSorley",
+      "tw_record": "15-15",
+      "captured_record": "15-17",
+      "byes_skipped": 1,
+      "delta_w": 0,
+      "delta_l": 2,
+      "events_with_bouts": [
+        "8715034132",
+        "8715041132",
+        "8715046132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8715992132",
+        "8724258132",
+        "8729716132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "8978292132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Trevor Sieben",
+      "tw_record": "14-11",
+      "captured_record": "15-12",
+      "byes_skipped": 1,
+      "delta_w": 1,
+      "delta_l": 1,
+      "events_with_bouts": [
+        "8715046132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8715992132",
+        "8719713132",
+        "8729716132",
+        "8733355132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Brayden Inman",
+      "tw_record": "14-12",
+      "captured_record": "16-12",
+      "byes_skipped": 1,
+      "delta_w": 2,
+      "delta_l": 0,
+      "events_with_bouts": [
+        "8714376132",
+        "8715034132",
+        "8715041132",
+        "8715046132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8719713132",
+        "8724258132",
+        "8729716132",
+        "8733369132",
+        "8978282132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Rowan Nix",
+      "tw_record": "13-14",
+      "captured_record": "8-16",
+      "byes_skipped": 1,
+      "delta_w": -5,
+      "delta_l": 2,
+      "events_with_bouts": [
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8719713132",
+        "8733355132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Nathan Hunnewell",
+      "tw_record": "12-11",
+      "captured_record": "9-11",
+      "byes_skipped": 0,
+      "delta_w": -3,
+      "delta_l": 0,
+      "events_with_bouts": [
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8715992132",
+        "8733355132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Matt Hart",
+      "tw_record": "12-20",
+      "captured_record": "12-22",
+      "byes_skipped": 0,
+      "delta_w": 0,
+      "delta_l": 2,
+      "events_with_bouts": [
+        "8706927132",
+        "8715034132",
+        "8715041132",
+        "8715046132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8715992132",
+        "8719713132",
+        "8724258132",
+        "8729716132",
+        "8733355132",
+        "8733359132",
+        "8733362132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Michael Hart",
+      "tw_record": "6-5",
+      "captured_record": "6-4",
+      "byes_skipped": 1,
+      "delta_w": 0,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8715034132",
+        "8719713132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "8978282132"
+      ]
+    },
+    {
+      "name": "Anthony Blahut",
+      "tw_record": "6-17",
+      "captured_record": "6-19",
+      "byes_skipped": 0,
+      "delta_w": 0,
+      "delta_l": 2,
+      "events_with_bouts": [
+        "8706927132",
+        "8715034132",
+        "8715041132",
+        "8715046132",
+        "8715049132",
+        "8715056132",
+        "8715071132",
+        "8724258132",
+        "8729716132",
+        "8733355132",
+        "8733359132",
+        "8733369132",
+        "8736380132",
+        "8773919132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Jacobs Rodriguez",
+      "tw_record": "4-4",
+      "captured_record": "1-3",
+      "byes_skipped": 0,
+      "delta_w": -3,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8715992132",
+        "8729716132",
+        "8733355132"
+      ]
+    },
+    {
+      "name": "Logan Cino",
+      "tw_record": "3-2",
+      "captured_record": "0-1",
+      "byes_skipped": 0,
+      "delta_w": -3,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8733369132"
+      ]
+    },
+    {
+      "name": "Brian Reice",
+      "tw_record": "3-4",
+      "captured_record": "2-3",
+      "byes_skipped": 0,
+      "delta_w": -1,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8715071132",
+        "8719713132",
+        "8724258132",
+        "8729716132"
+      ]
+    },
+    {
+      "name": "Gino Gonzalez",
+      "tw_record": "3-6",
+      "captured_record": "1-5",
+      "byes_skipped": 0,
+      "delta_w": -2,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8715034132",
+        "8715049132",
+        "8715056132",
+        "8733369132"
+      ]
+    },
+    {
+      "name": "Tyler Davis",
+      "tw_record": "3-13",
+      "captured_record": "3-15",
+      "byes_skipped": 0,
+      "delta_w": 0,
+      "delta_l": 2,
+      "events_with_bouts": [
+        "8706927132",
+        "8715034132",
+        "8715041132",
+        "8715071132",
+        "8715992132",
+        "8719713132",
+        "8724258132",
+        "8729716132",
+        "8733355132"
+      ]
+    },
+    {
+      "name": "Kellan McDonough",
+      "tw_record": "2-2",
+      "captured_record": "0-1",
+      "byes_skipped": 0,
+      "delta_w": -2,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8733369132"
+      ]
+    },
+    {
+      "name": "Owen Siena",
+      "tw_record": "2-5",
+      "captured_record": "1-4",
+      "byes_skipped": 0,
+      "delta_w": -1,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8715071132",
+        "8733359132",
+        "8733362132",
+        "8736380132"
+      ]
+    },
+    {
+      "name": "Jack Caldwell",
+      "tw_record": "2-7",
+      "captured_record": "0-7",
+      "byes_skipped": 0,
+      "delta_w": -2,
+      "delta_l": 0,
+      "events_with_bouts": [
+        "8715046132",
+        "8715049132",
+        "8733355132",
+        "8733362132",
+        "8733369132",
+        "9000835132",
+        "9000836132"
+      ]
+    },
+    {
+      "name": "Eli Sauler",
+      "tw_record": "1-1",
+      "captured_record": "1-0",
+      "byes_skipped": 0,
+      "delta_w": 0,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8715034132"
+      ]
+    },
+    {
+      "name": "Jadiel Esquivel",
+      "tw_record": "1-2",
+      "captured_record": "0-1",
+      "byes_skipped": 0,
+      "delta_w": -1,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8715992132"
+      ]
+    },
+    {
+      "name": "Logan Reice",
+      "tw_record": "1-3",
+      "captured_record": "0-2",
+      "byes_skipped": 0,
+      "delta_w": -1,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8724258132"
+      ]
+    },
+    {
+      "name": "Brodie Regan",
+      "tw_record": "0-2",
+      "captured_record": "0-1",
+      "byes_skipped": 0,
+      "delta_w": 0,
+      "delta_l": -1,
+      "events_with_bouts": [
+        "8724258132"
+      ]
+    }
+  ],
+  "no_bouts": [
+    {
+      "name": "Daniel Fitzpatrick",
+      "tw_record": "3-1"
+    },
+    {
+      "name": "Benjamin Pollock",
+      "tw_record": "1-1"
+    },
+    {
+      "name": "Gabriel Evans",
+      "tw_record": "1-1"
+    },
+    {
+      "name": "Giovanni Lopez",
+      "tw_record": "1-1"
+    },
+    {
+      "name": "Logan Curiale",
+      "tw_record": "1-1"
+    },
+    {
+      "name": "Noah Meisner",
+      "tw_record": "1-1"
+    },
+    {
+      "name": "Ranger Fest",
+      "tw_record": "1-1"
+    },
+    {
+      "name": "Arjun Shah",
+      "tw_record": "0-1"
+    },
+    {
+      "name": "Ashton Hayden",
+      "tw_record": "0-1"
+    },
+    {
+      "name": "Brandon Kelly",
+      "tw_record": "0-1"
+    },
+    {
+      "name": "Charles Pulaski",
+      "tw_record": "0-1"
+    },
+    {
+      "name": "Cole Hoguet",
+      "tw_record": "0-1"
+    },
+    {
+      "name": "Landon Caffery",
+      "tw_record": "0-1"
+    },
+    {
+      "name": "Logan Sloan",
+      "tw_record": "0-1"
+    },
+    {
+      "name": "Luke Velasco",
+      "tw_record": "0-1"
+    },
+    {
+      "name": "Walter Johnson",
+      "tw_record": "0-1"
+    }
+  ],
+  "summary": {
+    "complete": 4,
+    "incomplete": 26,
+    "no_bouts": 16,
+    "rule": "exact TW W-L match to schedule tournament_results non-bye bouts only; team_points from bout dual_points when known else standard dual scoring by win type",
+    "source": "data/seasons/2025-26/schedule.json#tournament_results"
+  }
+}

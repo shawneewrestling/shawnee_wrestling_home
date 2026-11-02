@@ -203,7 +203,7 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
   <title>{title} Stats · Shawnee Renegades Wrestling</title>
   <link rel="stylesheet" href="../../styles.css?v={v}" />
 </head>
-<body data-stats-season="{season}" data-asset-prefix="../..">
+<body data-stats-season="{season}" data-stats-prerendered="1" data-asset-prefix="../..">
   <header class="site-header">
     <div class="inner">
       <div class="brand">
@@ -227,13 +227,13 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
     </div>
   </header>
   <main>
-    <h1 class="page-title">{title} Stats</h1>
-    <p class="page-sub">Individual W-L for the {title}.</p>
+    <h1 class="page-title">{title_short} Season Stats</h1>
+    <p class="page-sub">{sub}</p>
     <div class="season-toolbar" id="seasonToolbar">
       <label for="seasonSelect">Season</label>
       <select id="seasonSelect" aria-label="Select season"></select>
     </div>
-    <div class="table-wrap"><table id="statsTable"><thead><tr><th>Name</th><th>Wt</th><th>Grade</th><th>W</th><th>L</th><th>Win%</th><th>Pins</th></tr></thead><tbody></tbody></table></div>
+    <div class="table-wrap"><table id="statsTable"><thead>{thead}</thead><tbody>{tbody}</tbody></table></div>
   </main>
   <footer class="site-footer">
     Shawnee High School <a class="footer-stealth" href="/seeding-af11147f5304/" rel="nofollow">Wrestling</a> · {title}
@@ -245,11 +245,105 @@ PAGE_TEMPLATE = """<!DOCTYPE html>
 """
 
 
+def html_esc(s: Any) -> str:
+    return (
+        str(s if s is not None else "")
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&#39;")
+    )
+
+
+def primary_weight(weights: Any) -> str:
+    if not weights:
+        return ""
+    m = re.search(r"\d+", str(weights))
+    return m.group(0) if m else ""
+
+
+def prerender_stats_table(doc: Dict[str, Any]) -> Tuple[str, str, str]:
+    """Return (thead_html, tbody_html, page_sub)."""
+    has_bd = bool(doc.get("has_breakdown"))
+    title = doc.get("title") or season_label(str(doc.get("season") or ""))
+    if has_bd:
+        thead = (
+            "<tr><th>Name</th><th>Wt</th><th>Grade</th><th>W</th><th>L</th><th>Win%</th>"
+            "<th>Fall</th><th>TF</th><th>MD</th><th>Dec</th>"
+            "<th>L-Fall</th><th>L-TF</th><th>L-MD</th><th>L-Dec</th></tr>"
+        )
+        sub = f"Individual W-L breakdown for the {title}."
+    else:
+        thead = "<tr><th>Name</th><th>Wt</th><th>Grade</th><th>W</th><th>L</th><th>Win%</th><th>Pins</th></tr>"
+        sub = f"Individual W-L for the {title}."
+    rows = list(doc.get("wrestlers") or [])
+    rows.sort(
+        key=lambda w: (
+            -(int(w.get("wins") if w.get("wins") is not None else w.get("win") or 0)),
+            int(w.get("losses") if w.get("losses") is not None else w.get("loss") or 0),
+        )
+    )
+    body_rows = []
+    for w in rows:
+        wins = int(w.get("wins") if w.get("wins") is not None else w.get("win") or 0)
+        losses = int(w.get("losses") if w.get("losses") is not None else w.get("loss") or 0)
+        pct = f"{(wins / (wins + losses) * 100):.1f}%" if (wins + losses) else "—"
+        href = w.get("player_page") or ""
+        if href and not re.match(r"^(https?:|/)", str(href)):
+            href = "../../" + str(href).lstrip("./")
+        name = html_esc(w.get("name"))
+        name_cell = f'<a href="{html_esc(href)}">{name}</a>' if href else name
+        wt = html_esc(w.get("weight") or primary_weight(w.get("weights")) or "—")
+        grade = html_esc(w.get("grade") or "—")
+        if not has_bd:
+            pins = w.get("pins") if w.get("pins") is not None else w.get("w_fall")
+            pins_s = "—" if pins is None else html_esc(pins)
+            body_rows.append(
+                f"<tr><td>{name_cell}</td><td>{wt}</td><td>{grade}</td>"
+                f"<td>{wins}</td><td>{losses}</td><td>{pct}</td><td>{pins_s}</td></tr>"
+            )
+        else:
+            def cell(v: Any) -> str:
+                return "—" if v is None or v == "" else html_esc(v)
+            body_rows.append(
+                f"<tr><td>{name_cell}</td><td>{wt}</td><td>{grade}</td>"
+                f"<td>{wins}</td><td>{losses}</td><td>{pct}</td>"
+                f"<td>{cell(w.get('w_fall'))}</td><td>{cell(w.get('w_tech'))}</td>"
+                f"<td>{cell(w.get('w_maj'))}</td><td>{cell(w.get('w_dec'))}</td>"
+                f"<td>{cell(w.get('l_fall'))}</td><td>{cell(w.get('l_tech'))}</td>"
+                f"<td>{cell(w.get('l_maj'))}</td><td>{cell(w.get('l_dec'))}</td></tr>"
+            )
+    return thead, "\n".join(body_rows), sub
+
+
 def write_season_page(season: str, cache_bust: str) -> Path:
     title = season_label(season)
+    title_short = title.replace(" Season", "")
     path = STATS_PAGES / season / "index.html"
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(PAGE_TEMPLATE.format(season=season, title=title, v=cache_bust))
+    stats_path = HISTORY / f"{season}_stats.json"
+    thead = "<tr><th>Name</th><th>Wt</th><th>Grade</th><th>W</th><th>L</th><th>Win%</th><th>Pins</th></tr>"
+    tbody = ""
+    sub = f"Individual W-L for the {title}."
+    prerendered = "0"
+    if stats_path.exists():
+        doc = json.loads(stats_path.read_text())
+        thead, tbody, sub = prerender_stats_table(doc)
+        prerendered = "1"
+    html = PAGE_TEMPLATE.format(
+        season=season,
+        title=title,
+        title_short=title_short,
+        sub=html_esc(sub),
+        thead=thead,
+        tbody=tbody,
+        v=cache_bust,
+    )
+    # Ensure prerender flag matches (template hardcodes 1; blank table → 0)
+    if prerendered != "1":
+        html = html.replace('data-stats-prerendered="1"', 'data-stats-prerendered="0"', 1)
+    path.write_text(html)
     return path
 
 
@@ -302,17 +396,44 @@ def build_from_sheets(pages: Dict[str, str], report: Dict[str, Any]) -> List[str
 
 
 def refresh_existing(pages: Dict[str, str], report: Dict[str, Any], seasons: List[str]) -> None:
+    """Refresh player_page links / titles for closed seasons without wiping capture breakdown."""
     for sid in ("2024-25", "2025-26"):
         path = HISTORY / f"{sid}_stats.json"
         if not path.exists():
             report.setdefault("missing_cleaned", []).append(sid)
             continue
         doc = json.loads(path.read_text())
+        prior_by_name = {
+            (w.get("name") or "").strip().lower(): w
+            for w in (doc.get("wrestlers") or [])
+            if w.get("name")
+        }
         rows, missing = attach_pages(doc.get("wrestlers") or [], pages)
+        # Preserve per-wrestler capture / sheet breakdown fields across refresh
+        preserve_keys = list(STAT_KEYS) + [
+            "team_points", "points", "pins", "has_capture_breakdown", "advancement",
+        ]
+        for row in rows:
+            prior = prior_by_name.get((row.get("name") or "").strip().lower()) or {}
+            for k in preserve_keys:
+                if k in prior and k not in row:
+                    row[k] = prior[k]
+                elif k in prior and row.get(k) is None and prior.get(k) is not None:
+                    row[k] = prior[k]
         doc["wrestlers"] = rows
         doc["count"] = len(rows)
         doc["title"] = season_label(sid)
         doc["generated_at"] = now_est()
+        # Keep explicit breakdown flags/sources; recompute has_breakdown if capture fields present
+        if doc.get("breakdown_source") == "capture_exact_match" or any(
+            r.get("has_capture_breakdown") for r in rows
+        ):
+            doc["has_breakdown"] = any(
+                r.get("has_capture_breakdown")
+                or any(r.get(k) is not None for k in STAT_KEYS)
+                for r in rows
+            )
+            doc.setdefault("breakdown_source", "capture_exact_match")
         path.write_text(json.dumps(doc, indent=2, ensure_ascii=False) + "\n")
         season_dir = ROOT / "data" / "seasons" / sid
         if season_dir.exists():

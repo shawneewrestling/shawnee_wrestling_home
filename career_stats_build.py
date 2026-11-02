@@ -76,6 +76,29 @@ def norm_name(n: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", (n or "").lower())
 
 
+def sort_weights_asc(weights) -> Optional[str]:
+    """Return ascending comma-separated weights for season_row.weight display."""
+    if weights is None or weights == "":
+        return None
+    if isinstance(weights, (list, tuple)):
+        parts = [str(x).strip() for x in weights if x is not None and str(x).strip()]
+    else:
+        parts = [p.strip() for p in re.split(r"[\/,|;\s]+", str(weights).strip()) if p.strip()]
+    cleaned = []
+    seen = set()
+    for p in parts:
+        digits = re.sub(r"\D", "", p) or p
+        if digits in seen:
+            continue
+        seen.add(digits)
+        cleaned.append(digits)
+    if not cleaned:
+        return None
+    cleaned.sort(key=lambda w: int(w) if str(w).isdigit() else 999)
+    return ", ".join(cleaned)
+
+
+
 def to_int(v: Any) -> Optional[int]:
     if v is None or v == "":
         return None
@@ -197,7 +220,7 @@ def parse_sheet_row(r: Dict[str, Any], season_id: str) -> Optional[Dict[str, Any
         "name": name,
         "win": win,
         "loss": loss,
-        "weight": (r.get("Weight Class") or "").strip() or None,
+        "weight": sort_weights_asc((r.get("Weight Class") or "").strip() or None),
         "team_points": to_float(r.get("Team Points")),
     }
     known = False
@@ -240,7 +263,7 @@ def ingest_season_row(by: Dict[str, Dict[str, Any]], srow: Dict[str, Any], sourc
         "season": season,
         "win": int(srow.get("win") or 0),
         "loss": int(srow.get("loss") or 0),
-        "weight": srow.get("weight"),
+        "weight": sort_weights_asc(srow.get("weight")),
         "team_points": srow.get("team_points"),
         "has_breakdown": bool(srow.get("has_breakdown")),
     }

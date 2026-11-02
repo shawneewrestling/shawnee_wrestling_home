@@ -2,9 +2,9 @@
   "schema_version": 1,
   "season": "2025-26",
   "title": "2025-2026 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "tw_roster",
-  "has_breakdown": false,
+  "has_breakdown": true,
   "count": 46,
   "wrestlers": [
     {
@@ -17,7 +17,6 @@
       "wins": 29,
       "losses": 7,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/jordan-segal-201132.html"
     },
     {
@@ -30,7 +29,6 @@
       "wins": 27,
       "losses": 6,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/max-spitznas-109132.html"
     },
     {
@@ -43,7 +41,6 @@
       "wins": 22,
       "losses": 14,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/collin-mchugh-124132.html"
     },
     {
@@ -56,7 +53,6 @@
       "wins": 21,
       "losses": 14,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/oleksandr-sasha-yurovskyi-119132.html"
     },
     {
@@ -69,7 +65,6 @@
       "wins": 21,
       "losses": 16,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/sean-bradley-197132.html"
     },
     {
@@ -82,7 +77,6 @@
       "wins": 17,
       "losses": 14,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/ryan-hoerst-110132.html"
     },
     {
@@ -95,7 +89,6 @@
       "wins": 15,
       "losses": 15,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/william-liam-mcsorley-107132.html"
     },
     {
@@ -108,7 +101,6 @@
       "wins": 14,
       "losses": 11,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/trevor-sieben-108132.html"
     },
     {
@@ -121,7 +113,6 @@
       "wins": 14,
       "losses": 12,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/brayden-inman-134132.html"
     },
     {
@@ -134,7 +125,6 @@
       "wins": 13,
       "losses": 14,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/rowan-nix-117132.html"
     },
     {
@@ -147,7 +137,6 @@
       "wins": 12,
       "losses": 11,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/nathan-hunnewell-111132.html"
     },
     {
@@ -160,7 +149,6 @@
       "wins": 12,
       "losses": 20,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/matt-hart-125132.html"
     },
     {
@@ -172,9 +160,29 @@
       "loss": 6,
       "wins": 11,
       "losses": 6,
-      "pins": null,
-      "w_fall": null,
-      "player_page": "players/leeland-rogers-121132.html"
+      "pins": 9,
+      "player_page": "players/leeland-rogers-121132.html",
+      "w_fall": 9,
+      "w_tech": 1,
+      "w_maj": 0,
+      "w_dec": 1,
+      "w_sv": 0,
+      "w_tb": 0,
+      "w_ff": 0,
+      "w_inj": 0,
+      "w_dq": 0,
+      "l_fall": 4,
+      "l_tech": 0,
+      "l_maj": 0,
+      "l_dec": 2,
+      "l_sv": 0,
+      "l_tb": 0,
+      "l_ff": 0,
+      "l_inj": 0,
+      "l_dq": 0,
+      "team_points": 62,
+      "points": 62,
+      "has_capture_breakdown": true
     },
     {
       "name": "Joseph Augusta",
@@ -185,9 +193,29 @@
       "loss": 12,
       "wins": 9,
       "losses": 12,
-      "pins": null,
-      "w_fall": null,
-      "player_page": "players/joseph-augusta-202132.html"
+      "pins": 2,
+      "player_page": "players/joseph-augusta-202132.html",
+      "w_fall": 2,
+      "w_tech": 1,
+      "w_maj": 0,
+      "w_dec": 5,
+      "w_sv": 0,
+      "w_tb": 0,
+      "w_ff": 1,
+      "w_inj": 0,
+      "w_dq": 0,
+      "l_fall": 4,
+      "l_tech": 1,
+      "l_maj": 2,
+      "l_dec": 5,
+      "l_sv": 0,
+      "l_tb": 0,
+      "l_ff": 0,
+      "l_inj": 0,
+      "l_dq": 0,
+      "team_points": 38,
+      "points": 38,
+      "has_capture_breakdown": true
     },
     {
       "name": "Michael Hart",
@@ -199,7 +227,6 @@
       "wins": 6,
       "losses": 5,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/michael-hart-105132.html"
     },
     {
@@ -212,7 +239,6 @@
       "wins": 6,
       "losses": 17,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/anthony-blahut-113132.html"
     },
     {
@@ -225,7 +251,6 @@
       "wins": 4,
       "losses": 4,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/jacobs-rodriguez-116132.html"
     },
     {
@@ -237,9 +262,29 @@
       "loss": 11,
       "wins": 4,
       "losses": 11,
-      "pins": null,
-      "w_fall": null,
-      "player_page": "players/garrett-borlaug-199132.html"
+      "pins": 2,
+      "player_page": "players/garrett-borlaug-199132.html",
+      "w_fall": 2,
+      "w_tech": 0,
+      "w_maj": 1,
+      "w_dec": 1,
+      "w_sv": 0,
+      "w_tb": 0,
+      "w_ff": 0,
+      "w_inj": 0,
+      "w_dq": 0,
+      "l_fall": 4,
+      "l_tech": 2,
+      "l_maj": 1,
+      "l_dec": 4,
+      "l_sv": 0,
+      "l_tb": 0,
+      "l_ff": 0,
+      "l_inj": 0,
+      "l_dq": 0,
+      "team_points": 19,
+      "points": 19,
+      "has_capture_breakdown": true
     },
     {
       "name": "Daniel Fitzpatrick",
@@ -251,7 +296,6 @@
       "wins": 3,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/daniel-fitzpatrick-129132.html"
     },
     {
@@ -263,9 +307,29 @@
       "loss": 1,
       "wins": 3,
       "losses": 1,
-      "pins": null,
-      "w_fall": null,
-      "player_page": "players/robert-lane-106132.html"
+      "pins": 2,
+      "player_page": "players/robert-lane-106132.html",
+      "w_fall": 2,
+      "w_tech": 1,
+      "w_maj": 0,
+      "w_dec": 0,
+      "w_sv": 0,
+      "w_tb": 0,
+      "w_ff": 0,
+      "w_inj": 0,
+      "w_dq": 0,
+      "l_fall": 0,
+      "l_tech": 0,
+      "l_maj": 0,
+      "l_dec": 1,
+      "l_sv": 0,
+      "l_tb": 0,
+      "l_ff": 0,
+      "l_inj": 0,
+      "l_dq": 0,
+      "team_points": 17,
+      "points": 17,
+      "has_capture_breakdown": true
     },
     {
       "name": "Logan Cino",
@@ -277,7 +341,6 @@
       "wins": 3,
       "losses": 2,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/logan-cino-145132.html"
     },
     {
@@ -290,7 +353,6 @@
       "wins": 3,
       "losses": 4,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/brian-reice-118132.html"
     },
     {
@@ -303,7 +365,6 @@
       "wins": 3,
       "losses": 6,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/gino-gonzalez-131132.html"
     },
     {
@@ -316,7 +377,6 @@
       "wins": 3,
       "losses": 13,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/tyler-davis-198132.html"
     },
     {
@@ -329,7 +389,6 @@
       "wins": 2,
       "losses": 2,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/kellan-mcdonough-147132.html"
     },
     {
@@ -342,7 +401,6 @@
       "wins": 2,
       "losses": 5,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/owen-siena-120132.html"
     },
     {
@@ -355,7 +413,6 @@
       "wins": 2,
       "losses": 7,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/jack-caldwell-127132.html"
     },
     {
@@ -368,7 +425,6 @@
       "wins": 1,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/benjamin-pollock-137132.html"
     },
     {
@@ -381,7 +437,6 @@
       "wins": 1,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/eli-sauler-122132.html"
     },
     {
@@ -394,7 +449,6 @@
       "wins": 1,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/gabriel-evans-141132.html"
     },
     {
@@ -407,7 +461,6 @@
       "wins": 1,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/giovanni-lopez-135132.html"
     },
     {
@@ -420,7 +473,6 @@
       "wins": 1,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/logan-curiale-146132.html"
     },
     {
@@ -433,7 +485,6 @@
       "wins": 1,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/noah-meisner-136132.html"
     },
     {
@@ -446,7 +497,6 @@
       "wins": 1,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/ranger-fest-142132.html"
     },
     {
@@ -459,7 +509,6 @@
       "wins": 1,
       "losses": 2,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/jadiel-esquivel-114132.html"
     },
     {
@@ -472,7 +521,6 @@
       "wins": 1,
       "losses": 3,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/logan-reice-138132.html"
     },
     {
@@ -485,7 +533,6 @@
       "wins": 0,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/arjun-shah-139132.html"
     },
     {
@@ -498,7 +545,6 @@
       "wins": 0,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/ashton-hayden-123132.html"
     },
     {
@@ -511,7 +557,6 @@
       "wins": 0,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/brandon-kelly-154132.html"
     },
     {
@@ -524,7 +569,6 @@
       "wins": 0,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/charles-pulaski-148132.html"
     },
     {
@@ -537,7 +581,6 @@
       "wins": 0,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/cole-hoguet-132132.html"
     },
     {
@@ -550,7 +593,6 @@
       "wins": 0,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/landon-caffery-126132.html"
     },
     {
@@ -563,7 +605,6 @@
       "wins": 0,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/logan-sloan-153132.html"
     },
     {
@@ -576,7 +617,6 @@
       "wins": 0,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/luke-velasco-140132.html"
     },
     {
@@ -589,7 +629,6 @@
       "wins": 0,
       "losses": 1,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/walter-johnson-152132.html"
     },
     {
@@ -602,8 +641,16 @@
       "wins": 0,
       "losses": 2,
       "pins": null,
-      "w_fall": null,
       "player_page": "players/brodie-regan-143132.html"
     }
-  ]
+  ],
+  "breakdown_coverage": {
+    "complete": 4,
+    "incomplete": 26,
+    "no_bout_data": 16,
+    "total": 46,
+    "note": "Breakdown filled only when bout-derived W-L exactly matches TW roster W-L. team_points = dual-style points from win types (Fall/FF/Inj/DQ=6, TF=5, Maj=4, Dec/SV/TB=3); TW Team Points column was not captured for 2025-26.",
+    "generated_at": "2026-11-01T19:36:39-05:00"
+  },
+  "breakdown_source": "capture_exact_match"
 }

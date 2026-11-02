@@ -2,7 +2,7 @@
   "schema_version": 1,
   "season": "2019-20",
   "title": "2019-2020 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "sheet:2019-20",
   "has_breakdown": true,
   "count": 26,
@@ -261,7 +261,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 8,
-      "player_page": null
+      "player_page": "players/dom-gary-41f54f.html"
     },
     {
       "name": "James Moriarty",
@@ -485,7 +485,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 3,
-      "player_page": null
+      "player_page": "players/ryan-minshall-47f9d7.html"
     },
     {
       "name": "Aiden Higgins",
@@ -517,7 +517,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 4,
-      "player_page": null
+      "player_page": "players/aiden-higgins-3ef046.html"
     },
     {
       "name": "Lucas Hunter",
@@ -549,7 +549,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/lucas-hunter-afd1b4.html"
     },
     {
       "name": "Kodran Elijah",
@@ -581,7 +581,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/kodran-elijah-2d04fa.html"
     },
     {
       "name": "Brett Balzan",
@@ -645,7 +645,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/zeke-werosta-23b608.html"
     },
     {
       "name": "Adam El-Saadi",
@@ -677,7 +677,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/adam-el-saadi-712fde.html"
     },
     {
       "name": "Ethan Smith",
@@ -709,7 +709,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/ethan-smith-762a54.html"
     },
     {
       "name": "Cole Kalamvokis",
@@ -741,7 +741,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/cole-kalamvokis-1626c9.html"
     },
     {
       "name": "Ali Zafer",
@@ -773,7 +773,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/ali-zafer-9b1696.html"
     },
     {
       "name": "Cody Gates",
@@ -805,7 +805,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/cody-gates-e62987.html"
     },
     {
       "name": "Jackson O'Brien",
@@ -837,7 +837,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/jackson-o-brien-222e25.html"
     }
   ]
 }

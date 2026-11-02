@@ -2,7 +2,7 @@
   "schema_version": 1,
   "season": "2021-22",
   "title": "2021-2022 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "sheet:2021-22",
   "has_breakdown": true,
   "count": 24,
@@ -389,7 +389,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 8,
-      "player_page": null
+      "player_page": "players/maximilian-germain-18060c.html"
     },
     {
       "name": "Richard John (RJ) Hunnewell",
@@ -517,7 +517,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/elijah-mcgee-c23601.html"
     },
     {
       "name": "Joseph Hart",
@@ -613,7 +613,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/elijah-kodran-bf6574.html"
     },
     {
       "name": "Lucas Hunter",
@@ -645,7 +645,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/lucas-hunter-afd1b4.html"
     },
     {
       "name": "Tyler Aschim",
@@ -709,7 +709,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/asher-harrington-11a3c1.html"
     },
     {
       "name": "Tom Sanson",
@@ -741,7 +741,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/tom-sanson-109422.html"
     },
     {
       "name": "Cody Gates",
@@ -773,7 +773,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/cody-gates-e62987.html"
     }
   ]
 }

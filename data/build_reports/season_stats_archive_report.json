@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "uncertain_merges": [
     {
       "season": "2014-15",
@@ -104,112 +104,14 @@
     "stats/2026-27/index.html"
   ],
   "no_player_page_by_season": {
-    "2014-15": [
-      "John Yaegar",
-      "Drew Werosta",
-      "Eugene Wayns"
-    ],
-    "2015-16": [
-      "Ethan Mcginley",
-      "Jackson Balzan",
-      "Brandon Sarlo",
-      "John Yaegar",
-      "Ryan Ross",
-      "Eugene Wayns",
-      "Dylan Patrowicz",
-      "Drew Werosta",
-      "Jeriah Scarbrough",
-      "Mack Martin"
-    ],
-    "2016-17": [
-      "Matt Balzan",
-      "Andrew Digilio",
-      "Colin McCourt",
-      "Cadrick Augustin",
-      "Dylan Patrowicz",
-      "Nick Lope",
-      "Jake Mccreight"
-    ],
-    "2017-18": [
-      "Matthew Wolfe",
-      "Cole Kalamvokis",
-      "Colin McCourt",
-      "Preston Sarlo",
-      "Mark Palmeri",
-      "Dylan Patrowicz",
-      "Nick Lope"
-    ],
-    "2018-19": [
-      "Mark Palmieri",
-      "Colin Mcourt",
-      "Alize Alvarado",
-      "Zeke Werosta",
-      "Adam El-Saadi",
-      "Jackson O'Brien",
-      "Steven Deringer",
-      "Kalamvokis Cole",
-      "Christain Defulio"
-    ],
-    "2019-20": [
-      "Lucas Hunter",
-      "Aiden Higgins",
-      "Dom Gary",
-      "Ryan Minshall",
-      "Zeke Werosta",
-      "Ethan Smith",
-      "Jackson O'Brien",
-      "Adam El-Saadi",
-      "Cody Gates",
-      "Cole Kalamvokis",
-      "Kodran Elijah",
-      "Ali Zafer"
-    ],
-    "2020-21": [
-      "Asher Harrington",
-      "Lucas Hunter",
-      "Nathaniel Rose",
-      "RJ Hunnewell",
-      "Matt Quinn",
-      "Elijah Kodran",
-      "Jason Torres",
-      "Adam Etzel"
-    ],
     "2021-22": [
-      "Asher Harrington",
-      "Lucas Hunter",
-      "Richard John (RJ) Hunnewell",
-      "Cody Gates",
-      "Elijah Kodran",
-      "Tom Sanson",
-      "Maximilian Germain",
-      "Elijah McGee"
+      "Richard John (RJ) Hunnewell"
     ],
     "2022-23": [
-      "Asher Harrington",
-      "Jackson O`Connor",
-      "Aloysius FitzPatrick",
-      "Dominic FitzPatrick",
-      "Alexander Pollock",
-      "Avery Rubano",
-      "Travis Hoskins",
-      "Richard John (RJ) Hunnewell",
-      "Caden Mobley-McHenry",
-      "Christian Pinto",
-      "Colin Wall"
+      "Richard John (RJ) Hunnewell"
     ],
     "2023-24": [
-      "Richard John (RJ) Hunnewell",
-      "Joe Leto",
-      "Erik Sullivan",
-      "Travis Hoskins",
-      "Justin Davenport",
-      "Jarred Kelly",
-      "Mason Davenport"
-    ],
-    "2024-25": [
-      "Tyler Nickles",
-      "Jackson Artman",
-      "Thomas Cox"
+      "Richard John (RJ) Hunnewell"
     ]
   },
   "current_season": {

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "season": "2023-24",
   "title": "2023-2024 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "sheet:2023-24",
   "has_breakdown": true,
   "count": 26,
@@ -485,7 +485,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 2,
-      "player_page": null
+      "player_page": "players/joe-leto-4395f4.html"
     },
     {
       "name": "Michael Hart",
@@ -581,7 +581,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/erik-sullivan-28ecfa.html"
     },
     {
       "name": "Ryan Hoerst",
@@ -677,7 +677,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/travis-hoskins-7d5dfd.html"
     },
     {
       "name": "Jarred Kelly",
@@ -709,7 +709,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/jarred-kelly-ad9bfd.html"
     },
     {
       "name": "Justin Davenport",
@@ -741,7 +741,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/justin-davenport-c4bd01.html"
     },
     {
       "name": "Joseph Augusta",
@@ -805,7 +805,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/mason-davenport-18ede6.html"
     },
     {
       "name": "Tyler Davis",

@@ -2,7 +2,7 @@
   "schema_version": 1,
   "season": "2014-15",
   "title": "2014-2015 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "sheet:2014-15",
   "has_breakdown": true,
   "count": 16,
@@ -325,7 +325,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 4,
-      "player_page": null
+      "player_page": "players/john-yaegar-a71188.html"
     },
     {
       "name": "Eugene Wayns",
@@ -357,7 +357,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 2,
-      "player_page": null
+      "player_page": "players/eugene-wayns-b42170.html"
     },
     {
       "name": "Drew Lapinski",
@@ -517,7 +517,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": null,
-      "player_page": null
+      "player_page": "players/drew-werosta-721c1f.html"
     }
   ]
 }

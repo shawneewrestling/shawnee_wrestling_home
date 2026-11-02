@@ -2,7 +2,7 @@
   "schema_version": 1,
   "season": "2022-23",
   "title": "2022-2023 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "sheet:2022-23",
   "has_breakdown": true,
   "count": 25,
@@ -421,7 +421,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 2,
-      "player_page": null
+      "player_page": "players/avery-rubano-193d00.html"
     },
     {
       "name": "Lucas Estevez",
@@ -485,7 +485,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 3,
-      "player_page": null
+      "player_page": "players/alexander-pollock-a455aa.html"
     },
     {
       "name": "Asher Harrington",
@@ -517,7 +517,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/asher-harrington-11a3c1.html"
     },
     {
       "name": "Caden Mobley-McHenry",
@@ -549,7 +549,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/caden-mobley-mchenry-eb1435.html"
     },
     {
       "name": "Colin Wall",
@@ -581,7 +581,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/colin-wall-62679f.html"
     },
     {
       "name": "Brett Strohm",
@@ -645,7 +645,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/aloysius-fitzpatrick-8f2de4.html"
     },
     {
       "name": "Christian Pinto",
@@ -677,7 +677,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/christian-pinto-c78672.html"
     },
     {
       "name": "Dominic FitzPatrick",
@@ -709,7 +709,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/dominic-fitzpatrick-723015.html"
     },
     {
       "name": "Dominic Harris",
@@ -773,7 +773,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/jackson-o-connor-4ecad6.html"
     },
     {
       "name": "Travis Hoskins",
@@ -805,7 +805,7 @@
       "l_dq": 0,
       "l_ff": 0,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/travis-hoskins-7d5dfd.html"
     }
   ]
 }

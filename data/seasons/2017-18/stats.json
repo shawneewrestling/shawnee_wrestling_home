@@ -2,7 +2,7 @@
   "schema_version": 1,
   "season": "2017-18",
   "title": "2017-2018 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "sheet:2017-18",
   "has_breakdown": true,
   "count": 16,
@@ -229,7 +229,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 3,
-      "player_page": null
+      "player_page": "players/mark-palmeri-b0598f.html"
     },
     {
       "name": "Nick Lope",
@@ -261,7 +261,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 7,
-      "player_page": null
+      "player_page": "players/nick-lope-7c4be2.html"
     },
     {
       "name": "Alex Pfeifer",
@@ -325,7 +325,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 4,
-      "player_page": null
+      "player_page": "players/dylan-patrowicz-94d6c0.html"
     },
     {
       "name": "Preston Sarlo",
@@ -357,7 +357,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 2,
-      "player_page": null
+      "player_page": "players/preston-sarlo-628696.html"
     },
     {
       "name": "Jaylen Horsley",
@@ -453,7 +453,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/matthew-wolfe-6ab0d7.html"
     },
     {
       "name": "Colin McCourt",
@@ -485,7 +485,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": null,
-      "player_page": null
+      "player_page": "players/colin-mccourt-9d9481.html"
     },
     {
       "name": "Cole Kalamvokis",
@@ -517,7 +517,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": null,
-      "player_page": null
+      "player_page": "players/cole-kalamvokis-1626c9.html"
     }
   ]
 }

@@ -261,6 +261,9 @@
       return;
     }
 
+    // Stats with season toolbar: history.js owns the page (do not fetch current DATA_URL)
+    if (page === 'Stats' && document.getElementById('seasonSelect')) return;
+
     const data = await loadJson(DATA_URL);
     if (page === 'Home') {
       const homeRoster = await loadJson(HOME_ROSTER_URL).catch(() => null);
@@ -268,8 +271,6 @@
       return;
     }
     else if (page === 'Stats') {
-      // history.js owns season dropdown when #seasonSelect is present
-      if (document.getElementById('seasonSelect')) return;
       const index = await loadJson(PLAYERS_INDEX_URL).catch(() => null);
       renderStats(data, index);
     }
@@ -555,7 +556,10 @@
       const metaParts = [];
       if (r.grade) metaParts.push(esc(r.grade));
       if (r.wins != null && r.losses != null) metaParts.push(esc(`${r.wins}-${r.losses}`));
-      else if ((r.weights_wrestled || []).length) metaParts.push(esc((r.weights_wrestled || []).join('/')));
+      else if ((r.weights_wrestled || []).length) {
+        const ww = (r.weights_wrestled || []).map(String).slice().sort((a, b) => (parseInt(a, 10) || 0) - (parseInt(b, 10) || 0));
+        metaParts.push(esc(ww.join('/')));
+      }
       const meta = metaParts.length ? `<div class="meta">${metaParts.join(' · ')}</div>` : '';
       return `<${tag} class="wrestler-tile"${hrefAttr}>
         <div class="photo-wrap">

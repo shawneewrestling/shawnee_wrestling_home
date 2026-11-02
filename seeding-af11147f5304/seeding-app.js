@@ -882,6 +882,10 @@
   function renderPairs(r) {
     const box = els.pairsBox;
     box.innerHTML = "";
+    if (r.level === "district") {
+      box.innerHTML = '<p class="muted">2nd/3rd first-round pairings apply to region only (not district).</p>';
+      return;
+    }
     if (r.level !== "region") {
       box.innerHTML = '<p class="muted">2nd/3rd pairings apply to region only.</p>';
       return;

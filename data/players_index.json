@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "season": "2026-2027",
-  "updated_at": "2026-11-01T16:53:02-05:00",
+  "updated_at": "2026-11-01T19:44:13-05:00",
   "count": 181,
   "current_count": 50,
   "alumni_count": 131,
@@ -1062,14 +1062,14 @@
         ],
         "2023-24": [
           "106",
-          "120",
+          "107",
           "113",
-          "107"
+          "120"
         ],
         "2024-25": [
-          "120",
           "106",
-          "113"
+          "113",
+          "120"
         ]
       },
       "wins": 0,
@@ -1190,13 +1190,13 @@
       ],
       "weights_by_season": {
         "2023-24": [
-          "165",
-          "157"
+          "157",
+          "165"
         ],
         "2024-25": [
-          "165",
+          "150",
           "157",
-          "150"
+          "165"
         ]
       },
       "wins": 0,
@@ -1347,34 +1347,34 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "113",
         "106",
+        "113",
         "120",
+        "121",
         "126",
-        "138",
         "132",
-        "121"
+        "138"
       ],
       "weights_by_season": {
         "2021-22": [
-          "113",
-          "106"
+          "106",
+          "113"
         ],
         "2022-23": [
+          "113",
           "120",
-          "126",
-          "113"
+          "126"
         ],
         "2023-24": [
           "120",
+          "121",
           "126",
-          "138",
           "132",
-          "121"
+          "138"
         ],
         "2024-25": [
-          "138",
-          "132"
+          "132",
+          "138"
         ]
       },
       "wins": 0,
@@ -1388,7 +1388,7 @@
       "career_losses": 23,
       "seasons_on_record": 4,
       "status": "alumni",
-      "search_text": "luke sherlock alumni 113 106 120 126 138 132 121"
+      "search_text": "luke sherlock alumni 106 113 120 121 126 132 138"
     },
     {
       "wrestler_id": "alum07fa070a",
@@ -1401,10 +1401,10 @@
         "138",
         "144",
         "150",
+        "152",
         "157",
-        "175",
         "165",
-        "152"
+        "175"
       ],
       "weights_by_season": {
         "2021-22": [
@@ -1413,22 +1413,22 @@
           "150"
         ],
         "2022-23": [
+          "138",
           "144",
-          "150",
-          "138"
-        ],
-        "2023-24": [
-          "157",
-          "175",
-          "165",
           "150"
         ],
-        "2024-25": [
-          "165",
-          "175",
-          "157",
+        "2023-24": [
           "150",
-          "152"
+          "157",
+          "165",
+          "175"
+        ],
+        "2024-25": [
+          "150",
+          "152",
+          "157",
+          "165",
+          "175"
         ]
       },
       "wins": 0,
@@ -1442,7 +1442,7 @@
       "career_losses": 36,
       "seasons_on_record": 4,
       "status": "alumni",
-      "search_text": "chris ahrens alumni 138 144 150 157 175 165 152"
+      "search_text": "chris ahrens alumni 138 144 150 152 157 165 175"
     },
     {
       "wrestler_id": "alumbd431bad",
@@ -1487,18 +1487,18 @@
       "weights_wrestled": [],
       "career_weights": [
         "126",
+        "132",
         "138",
-        "144",
-        "132"
+        "144"
       ],
       "weights_by_season": {
         "2020-21": [
           "126"
         ],
         "2021-22": [
+          "132",
           "138",
-          "144",
-          "132"
+          "144"
         ]
       },
       "wins": 0,
@@ -1512,7 +1512,7 @@
       "career_losses": 33,
       "seasons_on_record": 4,
       "status": "alumni",
-      "search_text": "jake hastings alumni 126 138 144 132"
+      "search_text": "jake hastings alumni 126 132 138 144"
     },
     {
       "wrestler_id": "alum0b93c2fe",
@@ -1653,8 +1653,8 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "220",
         "215",
+        "220",
         "285"
       ],
       "weights_by_season": {
@@ -1679,7 +1679,7 @@
       "career_losses": 36,
       "seasons_on_record": 4,
       "status": "alumni",
-      "search_text": "jackson harris alumni 220 215 285"
+      "search_text": "jackson harris alumni 215 220 285"
     },
     {
       "wrestler_id": "alumbabe6b1e",
@@ -1915,9 +1915,9 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
+        "157",
         "165",
-        "175",
-        "157"
+        "175"
       ],
       "weights_by_season": {
         "2022-23": [
@@ -1925,8 +1925,8 @@
           "175"
         ],
         "2023-24": [
-          "165",
           "157",
+          "165",
           "175"
         ],
         "2024-25": [
@@ -1945,7 +1945,7 @@
       "career_losses": 48,
       "seasons_on_record": 3,
       "status": "alumni",
-      "search_text": "lucas estevez alumni 165 175 157"
+      "search_text": "lucas estevez alumni 157 165 175"
     },
     {
       "wrestler_id": "alum563d0c1e",
@@ -1991,21 +1991,21 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "157",
-        "165",
+        "144",
         "150",
-        "144"
+        "157",
+        "165"
       ],
       "weights_by_season": {
         "2021-22": [
-          "157",
-          "165",
-          "150"
-        ],
-        "2022-23": [
           "150",
           "157",
-          "144"
+          "165"
+        ],
+        "2022-23": [
+          "144",
+          "150",
+          "157"
         ]
       },
       "wins": 0,
@@ -2019,7 +2019,7 @@
       "career_losses": 20,
       "seasons_on_record": 2,
       "status": "alumni",
-      "search_text": "matthew quinn alumni 157 165 150 144"
+      "search_text": "matthew quinn alumni 144 150 157 165"
     },
     {
       "wrestler_id": "alume74ca47a",
@@ -2051,9 +2051,9 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "138",
-        "132",
         "126",
+        "132",
+        "138",
         "144"
       ],
       "weights_by_season": {
@@ -2061,8 +2061,8 @@
           "138"
         ],
         "2021-22": [
-          "132",
-          "126"
+          "126",
+          "132"
         ],
         "2022-23": [
           "132",
@@ -2081,7 +2081,7 @@
       "career_losses": 40,
       "seasons_on_record": 4,
       "status": "alumni",
-      "search_text": "james moriarty alumni 138 132 126 144"
+      "search_text": "james moriarty alumni 126 132 138 144"
     },
     {
       "wrestler_id": "aluma38e69d7",
@@ -2091,8 +2091,8 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "113",
-        "106"
+        "106",
+        "113"
       ],
       "weights_by_season": {
         "2021-22": [
@@ -2103,8 +2103,8 @@
           "113"
         ],
         "2024-25": [
-          "113",
-          "106"
+          "106",
+          "113"
         ]
       },
       "wins": 0,
@@ -2118,7 +2118,7 @@
       "career_losses": 25,
       "seasons_on_record": 3,
       "status": "alumni",
-      "search_text": "joseph hart alumni 113 106"
+      "search_text": "joseph hart alumni 106 113"
     },
     {
       "wrestler_id": "alumf33aab20",
@@ -2268,9 +2268,9 @@
       "career_weights": [
         "150",
         "165",
+        "175",
         "190",
-        "215",
-        "175"
+        "215"
       ],
       "weights_by_season": {
         "2022-23": [
@@ -2281,9 +2281,9 @@
           "165"
         ],
         "2024-25": [
+          "175",
           "190",
-          "215",
-          "175"
+          "215"
         ]
       },
       "wins": 0,
@@ -2297,7 +2297,7 @@
       "career_losses": 27,
       "seasons_on_record": 3,
       "status": "alumni",
-      "search_text": "dominic harris alumni 150 165 190 215 175"
+      "search_text": "dominic harris alumni 150 165 175 190 215"
     },
     {
       "wrestler_id": "alum6705c875",
@@ -2351,8 +2351,8 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "157",
         "150",
+        "157",
         "165"
       ],
       "weights_by_season": {
@@ -2376,7 +2376,7 @@
       "career_losses": 7,
       "seasons_on_record": 2,
       "status": "alumni",
-      "search_text": "brett strohm alumni 157 150 165"
+      "search_text": "brett strohm alumni 150 157 165"
     },
     {
       "wrestler_id": "alum659a2b5c",
@@ -2408,9 +2408,9 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "220",
+        "190",
         "215",
-        "190"
+        "220"
       ],
       "weights_by_season": {
         "2020-21": [
@@ -2424,8 +2424,8 @@
           "215"
         ],
         "2023-24": [
-          "215",
-          "190"
+          "190",
+          "215"
         ]
       },
       "wins": 0,
@@ -2439,7 +2439,7 @@
       "career_losses": 38,
       "seasons_on_record": 4,
       "status": "alumni",
-      "search_text": "tyler aschim alumni 220 215 190"
+      "search_text": "tyler aschim alumni 190 215 220"
     },
     {
       "wrestler_id": "alum3c1c30d8",
@@ -2499,8 +2499,8 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "215",
-        "190"
+        "190",
+        "215"
       ],
       "weights_by_season": {
         "2021-22": [
@@ -2522,7 +2522,7 @@
       "career_losses": 21,
       "seasons_on_record": 2,
       "status": "alumni",
-      "search_text": "alexander kokolis alumni 215 190"
+      "search_text": "alexander kokolis alumni 190 215"
     },
     {
       "wrestler_id": "alum98255180",
@@ -2857,13 +2857,13 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "157",
-        "150"
+        "150",
+        "157"
       ],
       "weights_by_season": {
         "2022-23": [
-          "157",
-          "150"
+          "150",
+          "157"
         ]
       },
       "wins": 0,
@@ -2877,7 +2877,7 @@
       "career_losses": 17,
       "seasons_on_record": 1,
       "status": "alumni",
-      "search_text": "avery rubano alumni 157 150"
+      "search_text": "avery rubano alumni 150 157"
     },
     {
       "wrestler_id": "alum04eb382c",
@@ -3097,13 +3097,13 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "150",
-        "144"
+        "144",
+        "150"
       ],
       "weights_by_season": {
         "2021-22": [
-          "150",
-          "144"
+          "144",
+          "150"
         ]
       },
       "wins": 0,
@@ -3117,7 +3117,7 @@
       "career_losses": 7,
       "seasons_on_record": 2,
       "status": "alumni",
-      "search_text": "cody gates alumni 150 144"
+      "search_text": "cody gates alumni 144 150"
     },
     {
       "wrestler_id": "alum5e1626c9",
@@ -3337,8 +3337,8 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "182",
-        "157"
+        "157",
+        "182"
       ],
       "weights_by_season": {
         "2020-21": [
@@ -3359,7 +3359,7 @@
       "career_losses": 9,
       "seasons_on_record": 2,
       "status": "alumni",
-      "search_text": "elijah kodran alumni 182 157"
+      "search_text": "elijah kodran alumni 157 182"
     },
     {
       "wrestler_id": "alum9dc23601",
@@ -3397,17 +3397,17 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "285",
-        "215"
+        "215",
+        "285"
       ],
       "weights_by_season": {
         "2023-24": [
-          "285",
-          "215"
+          "215",
+          "285"
         ],
         "2024-25": [
-          "285",
-          "215"
+          "215",
+          "285"
         ]
       },
       "wins": 0,
@@ -3421,7 +3421,7 @@
       "career_losses": 5,
       "seasons_on_record": 1,
       "status": "alumni",
-      "search_text": "erik sullivan alumni 285 215"
+      "search_text": "erik sullivan alumni 215 285"
     },
     {
       "wrestler_id": "alum44ada87c",
@@ -3765,13 +3765,13 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "285",
-        "215"
+        "215",
+        "285"
       ],
       "weights_by_season": {
         "2023-24": [
-          "285",
-          "215"
+          "215",
+          "285"
         ]
       },
       "wins": 0,
@@ -3785,7 +3785,7 @@
       "career_losses": 16,
       "seasons_on_record": 1,
       "status": "alumni",
-      "search_text": "joe leto alumni 285 215"
+      "search_text": "joe leto alumni 215 285"
     },
     {
       "wrestler_id": "alum5fa71188",
@@ -3913,8 +3913,8 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "126",
-        "120"
+        "120",
+        "126"
       ],
       "weights_by_season": {
         "2020-21": [
@@ -3935,7 +3935,7 @@
       "career_losses": 7,
       "seasons_on_record": 3,
       "status": "alumni",
-      "search_text": "lucas hunter alumni 126 120"
+      "search_text": "lucas hunter alumni 120 126"
     },
     {
       "wrestler_id": "alumfd5b02a7",
@@ -4011,13 +4011,13 @@
       "assigned_weight": null,
       "weights_wrestled": [],
       "career_weights": [
-        "175",
-        "165"
+        "165",
+        "175"
       ],
       "weights_by_season": {
         "2023-24": [
-          "175",
-          "165"
+          "165",
+          "175"
         ]
       },
       "wins": 0,
@@ -4031,7 +4031,7 @@
       "career_losses": 2,
       "seasons_on_record": 1,
       "status": "alumni",
-      "search_text": "mason davenport alumni 175 165"
+      "search_text": "mason davenport alumni 165 175"
     },
     {
       "wrestler_id": "alum2c8fa759",

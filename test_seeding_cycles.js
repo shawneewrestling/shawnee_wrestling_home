@@ -265,4 +265,126 @@ test("multiple results in loop: only earliest of pair struck (rule annotated)", 
   assert.ok(!r.struckBouts.some((b) => b.id === "ab2"));
 });
 
+
+
+// --- Official RR vs informal "strike every bout in the SCC" ---
+
+test("official RR keeps rematch after earliest pair bout (differs from strike-all-SCC)", () => {
+  // A>B early, A>B rematch later, B>C, C>A — SCC is {A,B,C}.
+  // Official: strike earliest A-B only (+ B-C, C-A). Rematch ab2 remains.
+  // Strike-all-SCC would also remove ab2.
+  const ids = ["A", "B", "C"];
+  const bouts = [
+    { id: "ab1", winnerId: "A", loserId: "B", date: "2025-01-01", seq: 0 },
+    { id: "ab2", winnerId: "A", loserId: "B", date: "2025-03-01", seq: 1 },
+    { id: "bc", winnerId: "B", loserId: "C", date: "2025-01-15", seq: 2 },
+    { id: "ca", winnerId: "C", loserId: "A", date: "2025-01-20", seq: 3 },
+  ];
+  const r = Eng.eliminateRoundRobins(ids, bouts);
+  const struck = new Set(r.struckBouts.map((b) => b.id));
+  assert.ok(struck.has("ab1"));
+  assert.ok(struck.has("bc"));
+  assert.ok(struck.has("ca"));
+  assert.ok(!struck.has("ab2"), "later rematch kept under official pair rule");
+  assert.ok(r.remainingBouts.some((b) => b.id === "ab2"));
+  // SCC still reports the component for annotation
+  assert.ok((r.sccGroups || []).some((g) => g.length >= 3));
+});
+
+test("singular loss reused across overlapping cycles (one strike covers many loops)", () => {
+  // Two triangles sharing edge A>B: A>B, B>C, C>A and A>B, B>D, D>A
+  const ids = ["A", "B", "C", "D"];
+  const bouts = [
+    { id: "ab", winnerId: "A", loserId: "B", date: "2025-01-01", seq: 0 },
+    { id: "bc", winnerId: "B", loserId: "C", date: "2025-01-02", seq: 1 },
+    { id: "ca", winnerId: "C", loserId: "A", date: "2025-01-03", seq: 2 },
+    { id: "bd", winnerId: "B", loserId: "D", date: "2025-01-04", seq: 3 },
+    { id: "da", winnerId: "D", loserId: "A", date: "2025-01-05", seq: 4 },
+  ];
+  const r = Eng.eliminateRoundRobins(ids, bouts);
+  // A-B pair struck once even though it sits on two loops
+  assert.strictEqual(r.struckBouts.filter((b) => b.id === "ab").length, 1);
+  assert.ok(r.loops.length >= 2);
+  const abMeta = r.struckBouts.find((b) => b.id === "ab");
+  assert.ok(abMeta);
+});
+
+// --- District pre-seed ties ---
+
+test("district pre-seed sorts by TW points", () => {
+  const r = Eng.runSeeding({
+    level: "district",
+    wrestlers: [
+      { id: "A", name: "A", twPoints: 40 },
+      { id: "B", name: "B", twPoints: 55 },
+      { id: "C", name: "C", twPoints: 30 },
+    ],
+    bouts: [],
+  });
+  assert.deepStrictEqual(r.preSeed.map((w) => w.id), ["B", "A", "C"]);
+  assert.strictEqual(r.pairs.length, 0);
+  assert.ok(r.criteriaOrder[0].toLowerCase().includes("trackwrestling"));
+});
+
+test("district TW tie broken by H2H", () => {
+  const r = Eng.runSeeding({
+    level: "district",
+    wrestlers: [
+      { id: "A", name: "A", twPoints: 50 },
+      { id: "B", name: "B", twPoints: 50 },
+    ],
+    bouts: [{ id: "1", winnerId: "B", loserId: "A", date: "2025-01-01", seq: 0 }],
+  });
+  assert.strictEqual(r.preSeed[0].id, "B");
+  assert.ok(!(r.votePoints || []).some((v) => v.type === "district_preseed_vote"));
+});
+
+test("district TW tie broken by common opponents when no H2H", () => {
+  const r = Eng.runSeeding({
+    level: "district",
+    wrestlers: [
+      { id: "A", name: "A", twPoints: 50 },
+      { id: "B", name: "B", twPoints: 50 },
+      { id: "X", name: "Common", twPoints: 10 },
+    ],
+    bouts: [
+      { id: "ax", winnerId: "A", loserId: "X", date: "2025-01-01", seq: 0 },
+      { id: "xb", winnerId: "X", loserId: "B", date: "2025-01-02", seq: 1 },
+    ],
+  });
+  // A beat X, B lost to X → A better on common opponents
+  assert.strictEqual(r.preSeed[0].id, "A");
+  assert.strictEqual(r.preSeed[1].id, "B");
+});
+
+test("district unresolved TW tie flags coaches vote", () => {
+  const r = Eng.runSeeding({
+    level: "district",
+    wrestlers: [
+      { id: "A", name: "A", twPoints: 50 },
+      { id: "B", name: "B", twPoints: 50 },
+    ],
+    bouts: [],
+  });
+  assert.ok((r.votePoints || []).some((v) => v.type === "district_preseed_vote"));
+});
+
+test("district skips region champ top-8 and 2nd/3rd pairs", () => {
+  const wrestlers = [];
+  for (let i = 1; i <= 10; i++) {
+    wrestlers.push({
+      id: "w" + i,
+      name: "W" + i,
+      twPoints: 100 - i,
+      districtPlace: i === 10 ? 1 : 2,
+      isChamp: i === 10,
+    });
+  }
+  const r = Eng.runSeeding({ level: "district", wrestlers, bouts: [] });
+  assert.strictEqual(r.pairs.length, 0);
+  // champ stays at end of TW order (lowest points here) — not forced to top 8
+  assert.strictEqual(r.finalSeed[r.finalSeed.length - 1].id, "w10");
+});
+
+
 console.log("\n" + passed + " tests passed (including group evaluation)");

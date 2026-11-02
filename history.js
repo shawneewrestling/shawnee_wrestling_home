@@ -33,33 +33,49 @@
     return null;
   }
 
+  /** Returns true if a full navigation was triggered (caller should stop). */
   function setSeasonInLocation(seasonId, replace) {
     try {
       const u = new URL(window.location.href);
-      const onArchive = /\/stats\/\d{4}-\d{2}\/?$/.test(u.pathname) || !!document.body.getAttribute('data-stats-season');
+      const bodySeason = document.body && document.body.getAttribute('data-stats-season');
+      const pathMatch = u.pathname.match(/\/stats\/(\d{4}-\d{2})(?:\/index\.html)?\/?$/);
+      const pathSeason = pathMatch ? pathMatch[1] : null;
+      const onArchive = !!(pathSeason || bodySeason);
       const pre = assetPrefix();
       // Pretty archive URLs for past seasons; current season stays on stats.html
       if (onArchive || page === 'Stats') {
-        let target;
         if (seasonId === CURRENT_SEASON) {
-          target = pre ? (pre.replace(/\/$/, '') + '/stats.html') : 'stats.html';
-          // Keep query-less current page when already on root stats.html
-          if (!onArchive && !pre) {
-            u.searchParams.delete('season');
-            const next = u.pathname + (u.searchParams.toString() ? '?' + u.searchParams.toString() : '') + u.hash;
-            history[replace ? 'replaceState' : 'pushState']({}, '', next);
-            return;
+          // Already on root stats.html — strip ?season= only
+          if (!onArchive) {
+            if (u.searchParams.has('season')) {
+              u.searchParams.delete('season');
+              const next = u.pathname + (u.searchParams.toString() ? '?' + u.searchParams.toString() : '') + u.hash;
+              history[replace ? 'replaceState' : 'pushState']({}, '', next);
+            }
+            return false;
           }
-        } else {
-          target = pre ? (pre.replace(/\/$/, '') + '/stats/' + seasonId + '/') : ('stats/' + seasonId + '/');
+          const target = pre ? (pre.replace(/\/$/, '') + '/stats.html') : 'stats.html';
+          if (replace) location.replace(target);
+          else location.assign(target);
+          return true;
         }
+        // Past season: stay put when already on this archive page (avoids reload flicker)
+        if (pathSeason === seasonId || bodySeason === seasonId) {
+          if (u.searchParams.has('season')) {
+            u.searchParams.delete('season');
+            history.replaceState({}, '', u.pathname + (u.searchParams.toString() ? '?' + u.searchParams.toString() : '') + u.hash);
+          }
+          return false;
+        }
+        const target = pre ? (pre.replace(/\/$/, '') + '/stats/' + seasonId + '/') : ('stats/' + seasonId + '/');
         if (replace) location.replace(target);
         else location.assign(target);
-        return;
+        return true;
       }
       u.searchParams.set('season', seasonId);
       history[replace ? 'replaceState' : 'pushState']({}, '', u.pathname + u.search + u.hash);
     } catch (_) {}
+    return false;
   }
 
   function seasonLabel(id, seasons) {
@@ -94,7 +110,7 @@
 
   function statsSeasonFromPath() {
     try {
-      const m = window.location.pathname.match(/\/stats\/(\d{4}-\d{2})\/?$/);
+      const m = window.location.pathname.match(/\/stats\/(\d{4}-\d{2})(?:\/index\.html)?\/?$/);
       if (m) return m[1];
       const body = document.body && document.body.getAttribute('data-stats-season');
       if (body) return body;
@@ -246,6 +262,21 @@
   async function showStatsSeason(seasonId, seasons) {
     const label = seasonLabel(seasonId, seasons);
     updateChrome(label);
+    const bodySeason = document.body && document.body.getAttribute('data-stats-season');
+    const prerendered = document.body && document.body.getAttribute('data-stats-prerendered') === '1';
+    const tbody = document.querySelector('#statsTable tbody');
+    if (
+      prerendered
+      && bodySeason
+      && bodySeason === seasonId
+      && tbody
+      && tbody.children.length > 0
+    ) {
+      // Archive HTML already has the correct table; keep first paint, only refresh chrome.
+      const title = document.querySelector('main h1.page-title');
+      if (title) title.textContent = `${label.replace(/ Season$/, '')} Season Stats`;
+      return;
+    }
     if (seasonId === CURRENT_SEASON) {
       // Live wrestling_data stats (may lack full breakdown)
       const [data, index] = await Promise.all([
@@ -302,7 +333,8 @@
     async function show(id, { replaceUrl } = {}) {
       currentId = id;
       selectEl.value = id;
-      setSeasonInLocation(id, !!replaceUrl);
+      const navigated = setSeasonInLocation(id, !!replaceUrl);
+      if (navigated) return; // full page load will re-init
       if (page === 'Roster') await showRosterSeason(id, filtered);
       else await showStatsSeason(id, filtered);
     }

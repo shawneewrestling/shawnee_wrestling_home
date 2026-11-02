@@ -46,6 +46,26 @@ def name_key(name: str) -> str:
     return "".join(parts)
 
 
+def sort_weights_asc(weights) -> List[str]:
+    """Ascending numeric order for multi-weight seasons (e.g. 120, 126, 132)."""
+    if not weights:
+        return []
+    if isinstance(weights, str):
+        parts = [p.strip() for p in re.split(r"[\/,|;\s]+", weights) if p.strip()]
+    else:
+        parts = [str(x).strip() for x in weights if x is not None and str(x).strip()]
+    cleaned = []
+    seen = set()
+    for p in parts:
+        digits = re.sub(r"\D", "", p) or p
+        if digits in seen:
+            continue
+        seen.add(digits)
+        cleaned.append(digits)
+    return sorted(cleaned, key=lambda w: int(w) if str(w).isdigit() else 999)
+
+
+
 def esc(s: Any) -> str:
     return html.escape("" if s is None else str(s), quote=True)
 
@@ -53,6 +73,7 @@ def esc(s: Any) -> str:
 def _weights_line(weights: List[str], label: str) -> str:
     if not weights:
         return ""
+    weights = sort_weights_asc(weights)
     joined = " / ".join(esc(w) for w in weights)
     return f'<p class="page-sub weights-line" style="margin-top:.35rem">{esc(label)}: {joined}</p>'
 
@@ -62,7 +83,7 @@ def _season_weights_block(by_season: Dict[str, List[str]]) -> str:
         return ""
     rows = []
     for sid in sorted(by_season.keys()):
-        wts = by_season[sid] or []
+        wts = sort_weights_asc(by_season[sid] or [])
         if not wts:
             continue
         # sid like 2023-24 → 2023-2024 Season
@@ -180,8 +201,8 @@ def player_html(w: Dict[str, Any], ctx: Dict[str, Any]) -> str:
     cs_row = cs.get(name_key(name)) or cs.get((name or "").strip().lower()) or {}
     season_rows = cs_row.get("season_rows") or []
 
-    weights_current = [str(x) for x in (w.get("weights_wrestled") or []) if x]
-    weights_all = [str(x) for x in (w.get("career_weights") or []) if x]
+    weights_current = sort_weights_asc(w.get("weights_wrestled") or [])
+    weights_all = sort_weights_asc(w.get("career_weights") or [])
     by_season = w.get("weights_by_season") or {}
 
     if recognitions:
@@ -478,9 +499,7 @@ def build_players(
         key = name_key(w.get("name") or "")
         current_keys.add(key)
         # Current-season weights only (from wrestling_data.weights_wrestled)
-        weights = [str(x) for x in (w.get("weights_wrestled") or []) if x]
-        if not weights and w.get("weight"):
-            weights = [str(w["weight"])]
+        weights = sort_weights_asc(w.get("weights_wrestled") or ([w["weight"]] if w.get("weight") else []))
         w_page = dict(w)
         w_page["weights_wrestled"] = weights
         w_page["alumni"] = False
@@ -539,8 +558,11 @@ def build_players(
             if any(name_key(x.get("name") or "") == key for x in index if x.get("status") == "alumni"):
                 continue
             wh_row = wh_by_key.get(key) or {}
-            all_wts = list(row.get("career_weights") or wh_row.get("all_weights") or [])
-            by_season = dict(row.get("weights_by_season") or wh_row.get("by_season") or {})
+            all_wts = sort_weights_asc(row.get("career_weights") or wh_row.get("all_weights") or [])
+            by_season = {
+                sid: sort_weights_asc(wts)
+                for sid, wts in dict(row.get("weights_by_season") or wh_row.get("by_season") or {}).items()
+            }
             wid = str(row.get("wrestler_id") or "")
             if not wid:
                 alum_id = "alum" + hashlib.sha1(key.encode()).hexdigest()[:8]
@@ -610,8 +632,11 @@ def build_players(
         if not key or key in current_keys:
             continue
         wh_row = wh_by_key.get(key) or {}
-        all_wts = list(wh_row.get("all_weights") or [])
-        by_season = dict(wh_row.get("by_season") or {})
+        all_wts = sort_weights_asc(wh_row.get("all_weights") or [])
+        by_season = {
+            sid: sort_weights_asc(wts)
+            for sid, wts in dict(wh_row.get("by_season") or {}).items()
+        }
         # Synthetic id for slug stability (deterministic; do not use hash())
         alum_id = "alum" + hashlib.sha1(key.encode()).hexdigest()[:8]
         s = slug(name, alum_id)
@@ -692,8 +717,11 @@ def build_players(
         if nk in existing_keys:
             continue
         wh_row = wh_by_key.get(nk) or {}
-        all_wts = list(wh_row.get("all_weights") or [])
-        by_season = dict(wh_row.get("by_season") or {})
+        all_wts = sort_weights_asc(wh_row.get("all_weights") or [])
+        by_season = {
+            sid: sort_weights_asc(wts)
+            for sid, wts in dict(wh_row.get("by_season") or {}).items()
+        }
         cs_row = career_stats_by.get(nk) or {}
         c = career_by.get(nk) or career_by.get(name.lower()) or {}
         seasons = int(

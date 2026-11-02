@@ -168,15 +168,17 @@
   }
 
   /**
-   * Apply NJSIAA round-robin elimination rules:
-   * - Cycles of length 3+
-   * - A single loss may satisfy many round robins
-   * - Multiple losses to same opponent: eliminate only one
-   * - Multiple results between two wrestlers that are part of a round robin:
-   *   eliminate the earliest result in that pair series
+   * Apply NJSIAA round-robin elimination rules (official wording):
+   * - Cycles of length 3+ (a singular loss may satisfy many overlapping RRs)
+   * - Multiple losses to the same opponent: eliminate only one
+   * - Multiple results between two wrestlers that sit on a RR:
+   *   eliminate the earliest result in that unordered pair series
    *
-   * Returns { remainingBouts, struckBouts, loops }
-   * struckBouts grouped conceptually by loop in `loops`.
+   * Not "strike every bout in the SCC": rematches after the earliest
+   * pair-bout remain for H2H. SCC groups are returned separately as
+   * sccGroups for annotation only.
+   *
+   * Returns { remainingBouts, struckBouts, loops, cycles, sccGroups }
    *
    * @param {string[]} wrestlerIds
    * @param {Bout[]} bouts
@@ -516,6 +518,95 @@
     return -1;
   }
 
+
+  /**
+   * Common-opponent tiebreak (District rule 9b): among shared opponents,
+   * compare wins vs losses. Returns >0 if a is better, <0 if b, 0 if tied.
+   */
+  function commonOpponentCompare(aId, bId, bouts) {
+    var aRec = {};
+    var bRec = {};
+    (bouts || []).forEach(function (bout) {
+      if (bout.winnerId === aId) {
+        aRec[bout.loserId] = aRec[bout.loserId] || { w: 0, l: 0 };
+        aRec[bout.loserId].w++;
+      } else if (bout.loserId === aId) {
+        aRec[bout.winnerId] = aRec[bout.winnerId] || { w: 0, l: 0 };
+        aRec[bout.winnerId].l++;
+      }
+      if (bout.winnerId === bId) {
+        bRec[bout.loserId] = bRec[bout.loserId] || { w: 0, l: 0 };
+        bRec[bout.loserId].w++;
+      } else if (bout.loserId === bId) {
+        bRec[bout.winnerId] = bRec[bout.winnerId] || { w: 0, l: 0 };
+        bRec[bout.winnerId].l++;
+      }
+    });
+    var aWins = 0, aLoss = 0, bWins = 0, bLoss = 0;
+    Object.keys(aRec).forEach(function (opp) {
+      if (!bRec[opp]) return;
+      aWins += aRec[opp].w;
+      aLoss += aRec[opp].l;
+      bWins += bRec[opp].w;
+      bLoss += bRec[opp].l;
+    });
+    if (aWins !== bWins) return aWins - bWins;
+    if (aLoss !== bLoss) return bLoss - aLoss;
+    return 0;
+  }
+
+  /**
+   * District pre-seed: TW points (desc). Ties broken by:
+   * (a) head-to-head, (b) common opponents win-vs-loss, (c) coaches vote flag.
+   */
+  function preSeedSortDistrict(wrestlers, bouts) {
+    var list = wrestlers.slice().sort(function (a, b) {
+      return (b.twPoints || 0) - (a.twPoints || 0);
+    });
+    var voteFlags = [];
+    var i = 0;
+    while (i < list.length) {
+      var j = i + 1;
+      while (j < list.length && (list[j].twPoints || 0) === (list[i].twPoints || 0)) j++;
+      if (j - i > 1) {
+        var group = list.slice(i, j);
+        group.sort(function (a, b) {
+          var h = headToHead(a.id, b.id, bouts || []);
+          if (h.aWins + h.bWins > 0) {
+            if (h.aWins !== h.bWins) return h.bWins - h.aWins;
+            if (h.laterWinnerId === a.id) return -1;
+            if (h.laterWinnerId === b.id) return 1;
+          }
+          var co = commonOpponentCompare(a.id, b.id, bouts || []);
+          if (co !== 0) return -co;
+          return 0;
+        });
+        for (var g = 0; g < group.length - 1; g++) {
+          var a = group[g];
+          var b = group[g + 1];
+          var h = headToHead(a.id, b.id, bouts || []);
+          var h2hDecides =
+            h.aWins + h.bWins > 0 &&
+            (h.aWins !== h.bWins || h.laterWinnerId === a.id || h.laterWinnerId === b.id);
+          var co = commonOpponentCompare(a.id, b.id, bouts || []);
+          if (!h2hDecides && co === 0) {
+            voteFlags.push({
+              type: "district_preseed_vote",
+              wrestlerIds: [a.id, b.id],
+              twPoints: a.twPoints || 0,
+              note:
+                "District pre-seed tie: TW points tied; no H2H or common-opponent edge — three best wins on a vote of the head coaches (cannot compute).",
+            });
+          }
+        }
+        for (var k = 0; k < group.length; k++) list[i + k] = group[k];
+      }
+      i = j;
+    }
+    list._districtVoteFlags = voteFlags;
+    return list;
+  }
+
   /**
    * Sort wrestlers by pre-seed criteria (before H2H):
    * 1) own merit at this level or better
@@ -542,7 +633,7 @@
    * Full pipeline.
    */
   function runSeeding(opts) {
-    var level = opts.level || "region"; // 'region' | 'state'
+    var level = opts.level || "region"; // 'region' | 'state' | 'district'
     var wrestlers = (opts.wrestlers || []).map(function (w, i) {
       return Object.assign(
         {
@@ -568,7 +659,15 @@
       return w.id;
     });
     var elim = eliminateRoundRobins(ids, bouts);
-    var pre = preSeedSort(wrestlers, codeRank, level);
+    var districtVotes = [];
+    var pre;
+    if (level === "district") {
+      pre = preSeedSortDistrict(wrestlers, elim.remainingBouts);
+      districtVotes = pre._districtVoteFlags || [];
+      delete pre._districtVoteFlags;
+    } else {
+      pre = preSeedSort(wrestlers, codeRank, level);
+    }
     var h2h = applyHeadToHeadMovement(pre, elim.remainingBouts);
     var after = h2h.order;
     var pairs = [];
@@ -576,6 +675,7 @@
       after = forceChampsTop8(after);
       pairs = pairSecondThird(after);
     }
+    // district: no champ top-8 / 2nd-3rd pairings
 
     // Annotate final order with why each wrestler sits where (pre-seed + movements)
     var preIndex = {};
@@ -623,7 +723,7 @@
       preSeed: pre,
       finalSeed: after,
       movements: h2h.movements,
-      votePoints: h2h.votePoints,
+      votePoints: (h2h.votePoints || []).concat(districtVotes),
       loops: elim.loops,
       struckBouts: elim.struckBouts,
       remainingBouts: elim.remainingBouts,
@@ -632,14 +732,22 @@
       boutDataIncomplete: boutDataIncomplete,
       level: level,
       seedTrail: seedTrail,
-      criteriaOrder: [
-        "1. Own merit in previous tournament (this level or better)",
-        "2. Wins over seeded wrestlers this season (distinct preferred)",
-        "3. Wins over prior-year participants this season",
-        "4. Trackwrestling points tiebreak",
-        "5. Eliminate round-robin loops of 3+ (one bout per pair; earliest if series)",
-        "6. H2H from best pre-seed down: majority wins; split → later win",
-      ],
+      criteriaOrder:
+        level === "district"
+          ? [
+              "1. Pre-seed by Trackwrestling points (best 20 matches)",
+              "2. TW-point ties: head-to-head, then common opponents (win vs loss), else coaches vote on three best wins",
+              "3. Eliminate round-robin loops of 3+ (one bout per pair; earliest if series)",
+              "4. H2H from best pre-seed down: majority wins; split → later win",
+            ]
+          : [
+              "1. Own merit in previous tournament (this level or better)",
+              "2. Wins over seeded wrestlers this season (distinct preferred)",
+              "3. Wins over prior-year participants this season",
+              "4. Trackwrestling points tiebreak",
+              "5. Eliminate round-robin loops of 3+ (one bout per pair; earliest if series)",
+              "6. H2H from best pre-seed down: majority wins; split → later win",
+            ],
     };
   }
 
@@ -705,6 +813,8 @@
     pairSecondThird: pairSecondThird,
     meritRank: meritRank,
     preSeedSort: preSeedSort,
+    preSeedSortDistrict: preSeedSortDistrict,
+    commonOpponentCompare: commonOpponentCompare,
     runSeeding: runSeeding,
     priorSeasonWindow: priorSeasonWindow,
     bestPriorInWindow: bestPriorInWindow,

@@ -338,15 +338,33 @@ def build_bouts_from_tournament_results(season: str) -> Optional[Dict[str, Any]]
     }
 
 
-def primary_weight_from_sheet(weights: str) -> Optional[str]:
-    if not weights:
-        return None
-    parts = re.split(r"[\/,|; ]+", str(weights).strip())
+def sheet_weights_list(weights: Any) -> List[str]:
+    """Parse sheet/TW multi-weight strings into unique NJSIAA classes (first-seen order)."""
+    if weights is None:
+        return []
+    if isinstance(weights, (list, tuple)):
+        parts = [str(x).strip() for x in weights if x is not None and str(x).strip()]
+    else:
+        parts = [p.strip() for p in re.split(r"[\/,|;\s]+", str(weights).strip()) if p.strip()]
+    out: List[str] = []
+    seen = set()
     for p in parts:
-        p = p.strip()
-        if p.isdigit():
-            return p
-    return None
+        digits = re.sub(r"\D", "", p)
+        if digits in NJSIAA_WEIGHTS and digits not in seen:
+            seen.add(digits)
+            out.append(digits)
+    return out
+
+
+def primary_weight_from_sheet(weights: str) -> Optional[str]:
+    parts = sheet_weights_list(weights)
+    return parts[0] if parts else None
+
+
+def sort_weights_asc(weights: Any) -> List[str]:
+    """Ascending numeric weight order for display (e.g. 120, 126, 132)."""
+    parts = sheet_weights_list(weights)
+    return sorted(parts, key=lambda w: int(w) if w.isdigit() else 999)
 
 
 def build_roster(season: str, bouts_doc: Dict[str, Any]) -> Dict[str, Any]:
@@ -403,22 +421,36 @@ def build_roster(season: str, bouts_doc: Dict[str, Any]) -> Dict[str, Any]:
             if not name:
                 continue
             st = stats_by.get(norm_name(name), {})
-            weight = str(w.get("weight") or primary_weight_from_sheet(st.get("weights") or "") or "")
-            wins = int(w.get("wins") if w.get("wins") is not None else st.get("win") or 0)
-            losses = int(w.get("losses") if w.get("losses") is not None else st.get("loss") or 0)
+            # Prefer sheet W-L when present (official season totals)
+            if st.get("win") is not None or st.get("loss") is not None:
+                wins = int(st.get("win") or 0)
+                losses = int(st.get("loss") or 0)
+            else:
+                wins = int(w.get("wins") or 0)
+                losses = int(w.get("losses") or 0)
+            sheet_wts = sheet_weights_list(st.get("weights") or st.get("weight") or "")
+            tw_wt = str(w.get("weight") or "").strip()
+            eligible = list(sheet_wts)
+            if tw_wt in NJSIAA_WEIGHTS and tw_wt not in eligible:
+                eligible.append(tw_wt)
+            # Primary: sheet first weight, else TW listed weight
+            weight = (sheet_wts[0] if sheet_wts else tw_wt) or ""
             if wins + losses < 1 and method == "season_record_proxy":
                 continue
             candidates.append({
                 "wrestler_id": w.get("wrestler_id"),
                 "name": name,
-                "grade": w.get("grade"),
+                "grade": w.get("grade") or st.get("grade"),
                 "weight": weight,
+                "eligible_weights": eligible or ([weight] if weight else []),
                 "wins": wins,
                 "losses": losses,
+                "stats_weights": sheet_wts,
             })
     else:
         for key, st in stats_by.items():
-            weight = primary_weight_from_sheet(st.get("weights") or "") or ""
+            sheet_wts = sheet_weights_list(st.get("weights") or st.get("weight") or "")
+            weight = sheet_wts[0] if sheet_wts else ""
             wins = int(st.get("win") or 0)
             losses = int(st.get("loss") or 0)
             if wins + losses < 1:
@@ -426,46 +458,21 @@ def build_roster(season: str, bouts_doc: Dict[str, Any]) -> Dict[str, Any]:
             candidates.append({
                 "wrestler_id": None,
                 "name": st.get("name"),
-                "grade": None,
+                "grade": st.get("grade"),
                 "weight": weight,
+                "eligible_weights": list(sheet_wts),
                 "wins": wins,
                 "losses": losses,
+                "stats_weights": sheet_wts,
             })
 
-    # Pick starter per weight
-    slots = []
-    used = set()
-    for wt in NJSIAA_WEIGHTS:
-        best = None
-        best_score = (-1, -1, -1)  # appearances, wins_at, season wins
-        for c in candidates:
-            nk = norm_name(c["name"])
-            if nk in used:
-                continue
-            if method == "dual_bouts":
-                apps = appearance.get((nk, wt), 0)
-                if apps <= 0:
-                    continue
-                score = (apps, wins_at.get((nk, wt), 0), c["wins"])
-            else:
-                if str(c.get("weight") or "") != wt:
-                    continue
-                score = (c["wins"] + c["losses"], c["wins"], 0)
-            if score > best_score:
-                best_score = score
-                best = c
-        if not best:
-            slots.append({"assigned_weight": wt, "vacant": True})
-            continue
-        used.add(norm_name(best["name"]))
+    def _slot_payload(wt: str, best: Dict[str, Any]) -> Dict[str, Any]:
         idx = by_name.get(norm_name(best["name"]), {})
         photo = photo_by.get(norm_name(best["name"])) or idx.get("photo")
-        # Historical grade: TW grade after season end means Sr. -> treat as that season's grade
         grade = best.get("grade") or idx.get("grade")
         if grade and str(grade).lower() in ("alumni",):
-            # Prefer TW grade from dryrun when available
             grade = best.get("grade") or "—"
-        slots.append({
+        return {
             "assigned_weight": wt,
             "vacant": False,
             "wrestler_id": best.get("wrestler_id") or idx.get("wrestler_id"),
@@ -481,10 +488,84 @@ def build_roster(season: str, bouts_doc: Dict[str, Any]) -> Dict[str, Any]:
             "career_wins": idx.get("career_wins"),
             "career_losses": idx.get("career_losses"),
             "seasons_on_record": idx.get("seasons_on_record") or 0,
-            "weights_wrestled": (idx.get("weights_by_season") or {}).get(season)
+            "weights_wrestled": sort_weights_asc(
+                best.get("stats_weights")
+                or (idx.get("weights_by_season") or {}).get(season)
                 or idx.get("career_weights")
-                or ([best["weight"]] if best.get("weight") else []),
-        })
+                or ([best["weight"]] if best.get("weight") else [])
+            ),
+        }
+
+    # Pick starter per weight
+    slots = []
+    used = set()
+    if method == "dual_bouts":
+        for wt in NJSIAA_WEIGHTS:
+            best = None
+            best_score = (-1, -1, -1)  # appearances, wins_at, season wins
+            for c in candidates:
+                nk = norm_name(c["name"])
+                if nk in used:
+                    continue
+                apps = appearance.get((nk, wt), 0)
+                if apps <= 0:
+                    continue
+                score = (apps, wins_at.get((nk, wt), 0), c["wins"])
+                if score > best_score:
+                    best_score = score
+                    best = c
+            if not best:
+                slots.append({"assigned_weight": wt, "vacant": True})
+                continue
+            used.add(norm_name(best["name"]))
+            slots.append(_slot_payload(wt, best))
+    else:
+        # Pass 1: assign each wrestler only at primary sheet/TW weight (most wins).
+        # Pass 2: fill remaining vacant classes from secondary eligible weights.
+        by_wt: Dict[str, Optional[Dict[str, Any]]] = {wt: None for wt in NJSIAA_WEIGHTS}
+        for wt in NJSIAA_WEIGHTS:
+            best = None
+            best_score = (-1, -1)
+            for c in candidates:
+                nk = norm_name(c["name"])
+                if nk in used:
+                    continue
+                if str(c.get("weight") or "") != wt:
+                    continue
+                score = (c["wins"], c["wins"] + c["losses"])
+                if score > best_score:
+                    best_score = score
+                    best = c
+            if best:
+                used.add(norm_name(best["name"]))
+                by_wt[wt] = best
+        for wt in NJSIAA_WEIGHTS:
+            if by_wt[wt] is not None:
+                continue
+            best = None
+            best_score = (-1, -1)
+            for c in candidates:
+                nk = norm_name(c["name"])
+                if nk in used:
+                    continue
+                eligible = [str(x) for x in (c.get("eligible_weights") or [])] or (
+                    [str(c.get("weight"))] if c.get("weight") else []
+                )
+                if wt not in eligible:
+                    continue
+                score = (c["wins"], c["wins"] + c["losses"])
+                if score > best_score:
+                    best_score = score
+                    best = c
+            if best:
+                used.add(norm_name(best["name"]))
+                by_wt[wt] = best
+        for wt in NJSIAA_WEIGHTS:
+            best = by_wt[wt]
+            if not best:
+                slots.append({"assigned_weight": wt, "vacant": True})
+            else:
+                slots.append(_slot_payload(wt, best))
 
     filled = sum(1 for s in slots if not s.get("vacant"))
     return {
@@ -499,7 +580,8 @@ def build_roster(season: str, bouts_doc: Dict[str, Any]) -> Dict[str, Any]:
             if method == "dual_bouts"
             else (
                 "No TW dual lineup captures for this season; "
-                "starter = most wins among wrestlers whose TW roster weight matches the class."
+                "starter = most wins at primary sheet weight (else TW roster weight); "
+                "vacant classes filled from secondary sheet/TW weights by most wins."
             )
         ),
         "counts": {
@@ -568,7 +650,16 @@ def build_stats(season: str) -> Dict[str, Any]:
         "title": short_to_label(season),
         "generated_at": _now(),
         "source": (existing or {}).get("source") or ("tw_roster" if dry else None),
-        "has_breakdown": bool(existing),
+        "has_breakdown": bool(
+            (existing or {}).get("has_breakdown")
+            or any(
+                any(w.get(k) is not None for k in (
+                    "w_fall","w_tech","w_maj","w_dec","w_sv","w_tb","w_ff","w_inj","w_dq",
+                    "l_fall","l_tech","l_maj","l_dec","l_sv","l_tb","l_ff","l_inj","l_dq",
+                ))
+                for w in wrestlers
+            )
+        ),
         "count": len(wrestlers),
         "wrestlers": wrestlers,
     }

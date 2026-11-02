@@ -1,0 +1,30 @@
+DirectoryIndex index.html index.php
+
+# BEGIN Shawnee v2 redirects
+RedirectMatch 301 ^/index\.php/awards/?$ /awards.html
+RedirectMatch 301 ^/index\.php/schedule-results/?$ /schedule.html
+RedirectMatch 301 ^/index\.php/league-table/?$ /standings.html
+RedirectMatch 301 ^/index\.php/roster/?$ /roster.html
+RedirectMatch 301 ^/index\.php/stats/coach-stats/?$ /coach-stats.html
+RedirectMatch 301 ^/index\.php/stats(/wrestler-stats|/2022-2023-varsity-leaderboard)?/?$ /stats.html
+# END Shawnee v2 redirects
+
+# BEGIN LSCACHE
+# END LSCACHE
+# BEGIN NON_LSCACHE
+# END NON_LSCACHE
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

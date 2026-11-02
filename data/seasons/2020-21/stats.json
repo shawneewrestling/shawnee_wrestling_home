@@ -2,7 +2,7 @@
   "schema_version": 1,
   "season": "2020-21",
   "title": "2020-2021 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "sheet:2020-21",
   "has_breakdown": true,
   "count": 19,
@@ -293,7 +293,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/asher-harrington-11a3c1.html"
     },
     {
       "name": "James Moriarty",
@@ -389,7 +389,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 2,
-      "player_page": null
+      "player_page": "players/matt-quinn-35eef8.html"
     },
     {
       "name": "Elijah Kodran",
@@ -421,7 +421,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/elijah-kodran-bf6574.html"
     },
     {
       "name": "Lucas Hunter",
@@ -453,7 +453,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/lucas-hunter-afd1b4.html"
     },
     {
       "name": "RJ Hunnewell",
@@ -485,7 +485,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/rj-hunnewell-b6f027.html"
     },
     {
       "name": "Adam Etzel",
@@ -517,7 +517,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/adam-etzel-b0eed9.html"
     },
     {
       "name": "Tyler Aschim",
@@ -581,7 +581,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/nathaniel-rose-72d8f7.html"
     },
     {
       "name": "Jason Torres",
@@ -613,7 +613,7 @@
       "l_dq": 0,
       "l_ff": null,
       "pins": 0,
-      "player_page": null
+      "player_page": "players/jason-torres-8ca77c.html"
     }
   ]
 }

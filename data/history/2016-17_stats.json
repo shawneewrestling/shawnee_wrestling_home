@@ -2,7 +2,7 @@
   "schema_version": 1,
   "season": "2016-17",
   "title": "2016-2017 Season",
-  "generated_at": "2026-11-01T16:52:01-05:00",
+  "generated_at": "2026-11-01T19:44:09-05:00",
   "source": "sheet:2016-17",
   "has_breakdown": true,
   "count": 18,
@@ -357,7 +357,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 2,
-      "player_page": null
+      "player_page": "players/cadrick-augustin-29f500.html"
     },
     {
       "name": "Andrew Digilio",
@@ -389,7 +389,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 2,
-      "player_page": null
+      "player_page": "players/andrew-digilio-548601.html"
     },
     {
       "name": "Matt Balzan",
@@ -421,7 +421,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 2,
-      "player_page": null
+      "player_page": "players/matt-balzan-8fa759.html"
     },
     {
       "name": "Max VanDoren",
@@ -485,7 +485,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/dylan-patrowicz-94d6c0.html"
     },
     {
       "name": "Nick Lope",
@@ -517,7 +517,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": 1,
-      "player_page": null
+      "player_page": "players/nick-lope-7c4be2.html"
     },
     {
       "name": "Colin McCourt",
@@ -549,7 +549,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": null,
-      "player_page": null
+      "player_page": "players/colin-mccourt-9d9481.html"
     },
     {
       "name": "Jake Mccreight",
@@ -581,7 +581,7 @@
       "l_dq": null,
       "l_ff": null,
       "pins": null,
-      "player_page": null
+      "player_page": "players/jake-mccreight-99abce.html"
     }
   ]
 }
