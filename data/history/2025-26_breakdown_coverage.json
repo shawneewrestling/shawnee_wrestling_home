@@ -4,7 +4,8 @@
     {
       "name": "Jordan Segal",
       "record": "29-7",
-      "team_points": 150,
+      "prior_tw_record": "29-7",
+      "team_points": 119,
       "breakdown": {
         "w_fall": 14,
         "w_tech": 10,
@@ -16,14 +17,15 @@
       },
       "source": "wrestler_matches/Jordan_Segal.txt",
       "varsity_bouts": 36,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 2,
       "excluded_bouts": []
     },
     {
       "name": "Max Spitznas",
       "record": "27-6",
-      "team_points": 133,
+      "prior_tw_record": "27-6",
+      "team_points": 104,
       "breakdown": {
         "w_fall": 15,
         "w_tech": 1,
@@ -36,14 +38,15 @@
       },
       "source": "wrestler_matches/Max_Spitznas.txt",
       "varsity_bouts": 33,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "Collin McHugh",
       "record": "22-14",
-      "team_points": 127,
+      "prior_tw_record": "22-14",
+      "team_points": 60,
       "breakdown": {
         "w_fall": 19,
         "w_maj": 1,
@@ -55,14 +58,15 @@
       },
       "source": "wrestler_matches/Collin_McHugh.txt",
       "varsity_bouts": 36,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "Oleksandr `Sasha` Yurovskyi",
       "record": "21-14",
-      "team_points": 116,
+      "prior_tw_record": "21-14",
+      "team_points": 41,
       "breakdown": {
         "w_fall": 16,
         "w_tech": 2,
@@ -74,14 +78,15 @@
       },
       "source": "wrestler_matches/Oleksandr_Sasha_Yurovskyi.txt",
       "varsity_bouts": 35,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "Sean Bradley",
       "record": "21-16",
-      "team_points": 106,
+      "prior_tw_record": "21-16",
+      "team_points": 27,
       "breakdown": {
         "w_fall": 6,
         "w_tech": 7,
@@ -96,14 +101,15 @@
       },
       "source": "wrestler_matches/Sean_Bradley.txt",
       "varsity_bouts": 37,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "Ryan Hoerst",
       "record": "17-14",
-      "team_points": 77,
+      "prior_tw_record": "17-14",
+      "team_points": 3,
       "breakdown": {
         "w_fall": 2,
         "w_tech": 3,
@@ -118,14 +124,15 @@
       },
       "source": "wrestler_matches/Ryan_Hoerst.txt",
       "varsity_bouts": 31,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "William (Liam) McSorley",
       "record": "15-15",
-      "team_points": 73,
+      "prior_tw_record": "15-15",
+      "team_points": 0,
       "breakdown": {
         "w_fall": 6,
         "w_maj": 1,
@@ -138,14 +145,15 @@
       },
       "source": "wrestler_matches/William_Liam_McSorley.txt",
       "varsity_bouts": 30,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "Trevor Sieben",
       "record": "14-11",
-      "team_points": 84,
+      "prior_tw_record": "14-11",
+      "team_points": 23,
       "breakdown": {
         "w_fall": 12,
         "w_ff": 2,
@@ -155,14 +163,15 @@
       },
       "source": "wrestler_matches/Trevor_Sieben.txt",
       "varsity_bouts": 25,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "Brayden Inman",
       "record": "14-12",
-      "team_points": 58,
+      "prior_tw_record": "14-12",
+      "team_points": -4,
       "breakdown": {
         "w_fall": 3,
         "w_tech": 3,
@@ -176,17 +185,18 @@
       },
       "source": "wrestler_matches/Brayden_Inman.txt",
       "varsity_bouts": 26,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "Rowan Nix",
-      "record": "13-14",
-      "team_points": 43,
+      "record": "8-14",
+      "prior_tw_record": "8-14",
+      "team_points": -27,
       "breakdown": {
-        "w_fall": 7,
-        "w_maj": 3,
+        "w_fall": 4,
+        "w_maj": 1,
         "w_dec": 1,
         "w_ff": 2,
         "l_fall": 9,
@@ -195,19 +205,20 @@
       },
       "source": "wrestler_matches/Rowan_Nix.txt",
       "varsity_bouts": 22,
-      "jv_bouts": 5,
+      "jv_bouts_skipped": 5,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "Nathan Hunnewell",
-      "record": "12-11",
-      "team_points": 44,
+      "record": "8-10",
+      "prior_tw_record": "8-10",
+      "team_points": 1,
       "breakdown": {
-        "w_fall": 7,
-        "w_maj": 4,
+        "w_fall": 5,
+        "w_maj": 2,
         "w_ff": 1,
-        "l_fall": 4,
+        "l_fall": 3,
         "l_tech": 1,
         "l_maj": 2,
         "l_dec": 3,
@@ -215,14 +226,15 @@
       },
       "source": "wrestler_matches/Nathan_Hunnewell.txt",
       "varsity_bouts": 18,
-      "jv_bouts": 5,
-      "byes_skipped": 1,
+      "jv_bouts_skipped": 6,
+      "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Matt Hart",
       "record": "12-20",
-      "team_points": 63,
+      "prior_tw_record": "12-20",
+      "team_points": -42,
       "breakdown": {
         "w_fall": 5,
         "w_tech": 1,
@@ -237,14 +249,15 @@
       },
       "source": "wrestler_matches/Matt_Hart.txt",
       "varsity_bouts": 32,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Leeland Rogers",
       "record": "11-6",
-      "team_points": 62,
+      "prior_tw_record": "11-6",
+      "team_points": 32,
       "breakdown": {
         "w_fall": 9,
         "w_tech": 1,
@@ -254,14 +267,15 @@
       },
       "source": "schedule.tournament_results",
       "varsity_bouts": 17,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Joseph Augusta",
       "record": "9-12",
-      "team_points": 38,
+      "prior_tw_record": "9-12",
+      "team_points": -14,
       "breakdown": {
         "w_fall": 2,
         "w_tech": 1,
@@ -274,14 +288,15 @@
       },
       "source": "schedule.tournament_results",
       "varsity_bouts": 21,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Michael Hart",
       "record": "6-5",
-      "team_points": 32,
+      "prior_tw_record": "6-5",
+      "team_points": 8,
       "breakdown": {
         "w_fall": 1,
         "w_tech": 2,
@@ -292,14 +307,15 @@
       },
       "source": "wrestler_matches/Michael_Hart.txt",
       "varsity_bouts": 11,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 1,
       "excluded_bouts": []
     },
     {
       "name": "Anthony Blahut",
       "record": "6-17",
-      "team_points": 31,
+      "prior_tw_record": "6-17",
+      "team_points": -62,
       "breakdown": {
         "w_fall": 2,
         "w_maj": 1,
@@ -312,30 +328,31 @@
       },
       "source": "wrestler_matches/Anthony_Blahut.txt",
       "varsity_bouts": 23,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Jacobs Rodriguez",
-      "record": "4-4",
-      "team_points": 6,
+      "record": "1-3",
+      "prior_tw_record": "1-3",
+      "team_points": -9,
       "breakdown": {
-        "w_fall": 3,
-        "w_dec": 1,
+        "w_fall": 1,
         "l_fall": 2,
-        "l_dec": 2
+        "l_dec": 1
       },
       "source": "wrestler_matches/Jacobs_Rodriguez.txt",
       "varsity_bouts": 4,
-      "jv_bouts": 4,
+      "jv_bouts_skipped": 4,
       "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Garrett Borlaug",
       "record": "4-11",
-      "team_points": 19,
+      "prior_tw_record": "4-11",
+      "team_points": -31,
       "breakdown": {
         "w_fall": 2,
         "w_maj": 1,
@@ -347,14 +364,15 @@
       },
       "source": "schedule.tournament_results",
       "varsity_bouts": 15,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Robert Lane",
       "record": "3-1",
-      "team_points": 17,
+      "prior_tw_record": "3-1",
+      "team_points": 14,
       "breakdown": {
         "w_fall": 2,
         "w_tech": 1,
@@ -362,61 +380,61 @@
       },
       "source": "schedule.tournament_results",
       "varsity_bouts": 4,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Logan Cino",
-      "record": "3-2",
-      "team_points": 0,
+      "record": "0-1",
+      "prior_tw_record": "0-1",
+      "team_points": -6,
       "breakdown": {
-        "w_fall": 1,
-        "w_dec": 1,
-        "w_inj": 1,
-        "l_fall": 1,
-        "l_dec": 1
+        "l_fall": 1
       },
       "source": "wrestler_matches/Logan_Cino.txt",
       "varsity_bouts": 1,
-      "jv_bouts": 4,
+      "jv_bouts_skipped": 4,
       "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Brian Reice",
-      "record": "3-4",
-      "team_points": 10,
+      "record": "2-3",
+      "prior_tw_record": "2-3",
+      "team_points": -8,
       "breakdown": {
         "w_fall": 1,
-        "w_maj": 2,
-        "l_fall": 4
+        "w_maj": 1,
+        "l_fall": 3
       },
       "source": "wrestler_matches/Brian_Reice.txt",
       "varsity_bouts": 5,
-      "jv_bouts": 2,
-      "byes_skipped": 1,
+      "jv_bouts_skipped": 3,
+      "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Gino Gonzalez",
-      "record": "3-6",
-      "team_points": 6,
+      "record": "1-5",
+      "prior_tw_record": "1-5",
+      "team_points": -23,
       "breakdown": {
-        "w_fall": 3,
-        "l_fall": 5,
+        "w_fall": 1,
+        "l_fall": 4,
         "l_tech": 1
       },
       "source": "wrestler_matches/Gino_Gonzalez.txt",
       "varsity_bouts": 6,
-      "jv_bouts": 3,
-      "byes_skipped": 1,
+      "jv_bouts_skipped": 4,
+      "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Tyler Davis",
       "record": "3-13",
-      "team_points": 17,
+      "prior_tw_record": "3-13",
+      "team_points": -50,
       "breakdown": {
         "w_fall": 2,
         "w_tech": 1,
@@ -427,7 +445,7 @@
       },
       "source": "wrestler_matches/Tyler_Davis.txt",
       "varsity_bouts": 16,
-      "jv_bouts": 0,
+      "jv_bouts_skipped": 0,
       "byes_skipped": 0,
       "excluded_bouts": [
         {
@@ -444,109 +462,104 @@
     },
     {
       "name": "Kellan McDonough",
-      "record": "2-2",
-      "team_points": 0,
+      "record": "0-1",
+      "prior_tw_record": "0-1",
+      "team_points": -6,
       "breakdown": {
-        "w_fall": 1,
-        "w_maj": 1,
-        "l_fall": 2
+        "l_fall": 1
       },
       "source": "wrestler_matches/Kellan_McDonough.txt",
       "varsity_bouts": 1,
-      "jv_bouts": 3,
+      "jv_bouts_skipped": 3,
       "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Owen Siena",
-      "record": "2-5",
-      "team_points": 4,
+      "record": "1-4",
+      "prior_tw_record": "1-4",
+      "team_points": -18,
       "breakdown": {
         "w_maj": 1,
-        "w_ff": 1,
         "l_fall": 2,
-        "l_tech": 2,
-        "l_sv": 1
+        "l_tech": 2
       },
       "source": "wrestler_matches/Owen_Siena.txt",
       "varsity_bouts": 5,
-      "jv_bouts": 2,
-      "byes_skipped": 1,
+      "jv_bouts_skipped": 3,
+      "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Jack Caldwell",
-      "record": "2-7",
-      "team_points": 0,
+      "record": "0-6",
+      "prior_tw_record": "0-6",
+      "team_points": -33,
       "breakdown": {
-        "w_tech": 1,
-        "w_dec": 1,
-        "l_fall": 5,
+        "l_fall": 4,
         "l_tech": 1,
         "l_maj": 1
       },
       "source": "wrestler_matches/Jack_Caldwell.txt",
       "varsity_bouts": 6,
-      "jv_bouts": 3,
-      "byes_skipped": 1,
+      "jv_bouts_skipped": 4,
+      "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Eli Sauler",
-      "record": "1-1",
+      "record": "1-0",
+      "prior_tw_record": "1-0",
       "team_points": 6,
       "breakdown": {
-        "w_ff": 1,
-        "l_maj": 1
+        "w_ff": 1
       },
       "source": "wrestler_matches/Eli_Sauler.txt",
       "varsity_bouts": 1,
-      "jv_bouts": 1,
-      "byes_skipped": 1,
+      "jv_bouts_skipped": 2,
+      "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Jadiel Esquivel",
-      "record": "1-2",
-      "team_points": 0,
+      "record": "0-1",
+      "prior_tw_record": "0-1",
+      "team_points": -6,
       "breakdown": {
-        "w_fall": 1,
-        "l_fall": 1,
-        "l_tech": 1
+        "l_fall": 1
       },
       "source": "wrestler_matches/Jadiel_Esquivel.txt",
       "varsity_bouts": 1,
-      "jv_bouts": 2,
-      "byes_skipped": 1,
+      "jv_bouts_skipped": 3,
+      "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Logan Reice",
-      "record": "1-3",
-      "team_points": 0,
+      "record": "0-2",
+      "prior_tw_record": "0-2",
+      "team_points": -12,
       "breakdown": {
-        "w_dec": 1,
-        "l_fall": 2,
-        "l_dec": 1
+        "l_fall": 2
       },
       "source": "wrestler_matches/Logan_Reice.txt",
       "varsity_bouts": 2,
-      "jv_bouts": 2,
-      "byes_skipped": 1,
+      "jv_bouts_skipped": 3,
+      "byes_skipped": 0,
       "excluded_bouts": []
     },
     {
       "name": "Brodie Regan",
-      "record": "0-2",
-      "team_points": 0,
+      "record": "0-1",
+      "prior_tw_record": "0-1",
+      "team_points": -6,
       "breakdown": {
-        "l_fall": 1,
-        "l_dec": 1
+        "l_fall": 1
       },
       "source": "wrestler_matches/Brodie_Regan.txt",
       "varsity_bouts": 1,
-      "jv_bouts": 1,
-      "byes_skipped": 3,
+      "jv_bouts_skipped": 4,
+      "byes_skipped": 0,
       "excluded_bouts": []
     }
   ],
@@ -638,8 +651,8 @@
     "complete": 30,
     "incomplete": 0,
     "no_bouts": 16,
-    "points_convention": "standard_dual_scoring_varsity_wins_only (Fall/FF/DQ/Inj-Def=6, TF=5, MD=4, Dec/SV/TB=3); JV (#JV) counted in W-L types, not points; byes/#JV-NORESULT excluded",
-    "rule": "Match-list files: include #JV in type counts; exclude #BYE/#JV-NORESULT; points from varsity wins with standard dual scoring. Fallback: tournament_results exact TW W-L match. Tyler Davis: exclude Peddie 1/24 M. For. loss (TW 3-13).",
+    "points_convention": "standard_dual_scoring_varsity_net (Fall/FF/DQ/Inj-Def=6, TF=5, MD=4, Dec/SV/TB=3); records + W/L types + win% + NET points from varsity only; #JV / #JV-NORESULT / byes excluded",
+    "rule": "Varsity-only: exclude #JV, #JV-NORESULT, and byes from records, W/L type breakdown, win%, and points. Points: NET dual scoring on varsity (wins add, losses subtract Fall/FF/DQ/Inj=6 TF=5 MD=4 Dec/SV/TB=3). Fallback: tournament_results exact TW W-L match. Tyler Davis: exclude Peddie 1/24 M. For. loss (display 3-13).",
     "match_list_dir": "tw_capture/2025-26/wrestler_matches"
   }
 }

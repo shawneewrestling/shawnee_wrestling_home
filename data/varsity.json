@@ -4,7 +4,7 @@
   "season_id": "1560212138",
   "updated_at": "2026-11-01T08:57:32-05:00",
   "derivation": "season_record_proxy",
-  "derivation_note": "TW dual bout feed unavailable for 2025-26 replay \u2014 proxy: wrestlers with season W+L >= 1 from getWrestlers; weight = TW roster weight. Coach overrides in varsity_overrides.json win. Replace dual_appearances.json bouts to switch to true dual-bout derivation.",
+  "derivation_note": "TW dual bout feed unavailable for 2025-26 replay — proxy: wrestlers with season W+L >= 1 from getWrestlers; weight = TW roster weight. Coach overrides in varsity_overrides.json win. Replace dual_appearances.json bouts to switch to true dual-bout derivation.",
   "counts": {
     "auto": 46,
     "total": 46,
@@ -31,8 +31,8 @@
       "name": "Logan Reice",
       "weight": "106",
       "grade": "Fr.",
-      "wins": 1,
-      "losses": 3,
+      "wins": 0,
+      "losses": 2,
       "varsity_bouts": null,
       "weight_counts": {
         "106": 1
@@ -73,8 +73,8 @@
       "name": "Jadiel Esquivel",
       "weight": "113",
       "grade": "So.",
-      "wins": 1,
-      "losses": 2,
+      "wins": 0,
+      "losses": 1,
       "varsity_bouts": null,
       "weight_counts": {
         "113": 1
@@ -171,8 +171,8 @@
       "name": "Gino Gonzalez",
       "weight": "126",
       "grade": "Fr.",
-      "wins": 3,
-      "losses": 6,
+      "wins": 1,
+      "losses": 5,
       "varsity_bouts": null,
       "weight_counts": {
         "126": 1
@@ -269,8 +269,8 @@
       "name": "Nathan Hunnewell",
       "weight": "132",
       "grade": "Jr.",
-      "wins": 12,
-      "losses": 11,
+      "wins": 8,
+      "losses": 10,
       "varsity_bouts": null,
       "weight_counts": {
         "132": 1
@@ -325,8 +325,8 @@
       "name": "Owen Siena",
       "weight": "138",
       "grade": "So.",
-      "wins": 2,
-      "losses": 5,
+      "wins": 1,
+      "losses": 4,
       "varsity_bouts": null,
       "weight_counts": {
         "138": 1
@@ -339,8 +339,8 @@
       "name": "Brian Reice",
       "weight": "144",
       "grade": "So.",
-      "wins": 3,
-      "losses": 4,
+      "wins": 2,
+      "losses": 3,
       "varsity_bouts": null,
       "weight_counts": {
         "144": 1
@@ -353,8 +353,8 @@
       "name": "Jack Caldwell",
       "weight": "144",
       "grade": "So.",
-      "wins": 2,
-      "losses": 7,
+      "wins": 0,
+      "losses": 6,
       "varsity_bouts": null,
       "weight_counts": {
         "144": 1
@@ -437,8 +437,8 @@
       "name": "Kellan McDonough",
       "weight": "150",
       "grade": "Fr.",
-      "wins": 2,
-      "losses": 2,
+      "wins": 0,
+      "losses": 1,
       "varsity_bouts": null,
       "weight_counts": {
         "150": 1
@@ -480,7 +480,7 @@
       "weight": "165",
       "grade": "So.",
       "wins": 0,
-      "losses": 2,
+      "losses": 1,
       "varsity_bouts": null,
       "weight_counts": {
         "165": 1
@@ -494,7 +494,7 @@
       "weight": "165",
       "grade": "So.",
       "wins": 1,
-      "losses": 1,
+      "losses": 0,
       "varsity_bouts": null,
       "weight_counts": {
         "165": 1
@@ -563,8 +563,8 @@
       "name": "Logan Cino",
       "weight": "175",
       "grade": "Fr.",
-      "wins": 3,
-      "losses": 2,
+      "wins": 0,
+      "losses": 1,
       "varsity_bouts": null,
       "weight_counts": {
         "175": 1
@@ -591,8 +591,8 @@
       "name": "Jacobs Rodriguez",
       "weight": "190",
       "grade": "So.",
-      "wins": 4,
-      "losses": 4,
+      "wins": 1,
+      "losses": 3,
       "varsity_bouts": null,
       "weight_counts": {
         "190": 1
@@ -619,7 +619,7 @@
       "name": "Rowan Nix",
       "weight": "215",
       "grade": "So.",
-      "wins": 13,
+      "wins": 8,
       "losses": 14,
       "varsity_bouts": null,
       "weight_counts": {

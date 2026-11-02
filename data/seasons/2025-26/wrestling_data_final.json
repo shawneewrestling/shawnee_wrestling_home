@@ -16,8 +16,8 @@
       "awards_seed": "shawneewrestling.com awards banners (historical)"
     },
     "gaps": [
-      "Pins / tech falls / major decisions not present on roster feed \u2014 null in stats",
-      "NJSIAA individual placements not scraped \u2014 see awards meta",
+      "Pins / tech falls / major decisions not present on roster feed — null in stats",
+      "NJSIAA individual placements not scraped — see awards meta",
       "Home-dual Ajax opponent field often a score fragment; dual_scores overlay applied",
       "Missing GoBound logos: Northern Burlington, Haddonfield, Robbinsville",
       "Individual-event bout cards unavailable: Cherokee Annual JV Tournament, ESCAPE THE ROCK"
@@ -52,8 +52,8 @@
       "last_name": "Reice",
       "weight": "106",
       "grade": "Fr.",
-      "wins": 1,
-      "losses": 3,
+      "wins": 0,
+      "losses": 2,
       "gender": "M",
       "weights_wrestled": [
         "106",
@@ -82,8 +82,8 @@
       "last_name": "Esquivel",
       "weight": "113",
       "grade": "So.",
-      "wins": 1,
-      "losses": 2,
+      "wins": 0,
+      "losses": 1,
       "gender": "M",
       "weights_wrestled": [
         "113"
@@ -212,8 +212,8 @@
       "last_name": "Gonzalez",
       "weight": "126",
       "grade": "Fr.",
-      "wins": 3,
-      "losses": 6,
+      "wins": 1,
+      "losses": 5,
       "gender": "M",
       "weights_wrestled": [
         "120",
@@ -273,8 +273,8 @@
       "last_name": "Hunnewell",
       "weight": "132",
       "grade": "Jr.",
-      "wins": 12,
-      "losses": 11,
+      "wins": 8,
+      "losses": 10,
       "gender": "M",
       "weights_wrestled": [
         "120",
@@ -398,8 +398,8 @@
       "last_name": "Siena",
       "weight": "138",
       "grade": "So.",
-      "wins": 2,
-      "losses": 5,
+      "wins": 1,
+      "losses": 4,
       "gender": "M",
       "weights_wrestled": [
         "132",
@@ -413,8 +413,8 @@
       "last_name": "Caldwell",
       "weight": "144",
       "grade": "So.",
-      "wins": 2,
-      "losses": 7,
+      "wins": 0,
+      "losses": 6,
       "gender": "M",
       "weights_wrestled": [
         "144",
@@ -473,8 +473,8 @@
       "last_name": "Reice",
       "weight": "144",
       "grade": "So.",
-      "wins": 3,
-      "losses": 4,
+      "wins": 2,
+      "losses": 3,
       "gender": "M",
       "weights_wrestled": [
         "144",
@@ -561,8 +561,8 @@
       "last_name": "McDonough",
       "weight": "150",
       "grade": "Fr.",
-      "wins": 2,
-      "losses": 2,
+      "wins": 0,
+      "losses": 1,
       "gender": "M",
       "weights_wrestled": [
         "150",
@@ -662,7 +662,7 @@
       "weight": "165",
       "grade": "So.",
       "wins": 0,
-      "losses": 2,
+      "losses": 1,
       "gender": "M",
       "weights_wrestled": [
         "165"
@@ -676,7 +676,7 @@
       "weight": "165",
       "grade": "So.",
       "wins": 1,
-      "losses": 1,
+      "losses": 0,
       "gender": "M",
       "weights_wrestled": [
         "165",
@@ -755,8 +755,8 @@
       "last_name": "Cino",
       "weight": "175",
       "grade": "Fr.",
-      "wins": 3,
-      "losses": 2,
+      "wins": 0,
+      "losses": 1,
       "gender": "M",
       "weights_wrestled": [
         "175"
@@ -797,8 +797,8 @@
       "last_name": "Rodriguez",
       "weight": "190",
       "grade": "So.",
-      "wins": 4,
-      "losses": 4,
+      "wins": 1,
+      "losses": 3,
       "gender": "M",
       "weights_wrestled": [
         "190"
@@ -856,7 +856,7 @@
       "last_name": "Nix",
       "weight": "215",
       "grade": "So.",
-      "wins": 13,
+      "wins": 8,
       "losses": 14,
       "gender": "M",
       "weights_wrestled": [
@@ -1878,7 +1878,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "1-0"
       },
       {
@@ -1898,7 +1898,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "2-0"
       },
       {
@@ -1918,7 +1918,7 @@
         "source": "posted_tw_schedule",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "3-0"
       },
       {
@@ -1938,7 +1938,7 @@
         "source": "bout_derived",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-0"
       },
       {
@@ -1958,7 +1958,7 @@
         "source": "bout_derived",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-1"
       },
       {
@@ -1978,7 +1978,7 @@
         "source": "bout_derived",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-2"
       },
       {
@@ -1998,7 +1998,7 @@
         "source": "posted_tw_schedule",
         "validation": "ok",
         "location": "Northern Burlington ( Columbus)",
-        "location_display": "Away \u00b7 Northern Burlington ( Columbus)",
+        "location_display": "Away · Northern Burlington ( Columbus)",
         "cumulative_record": "4-3"
       },
       {
@@ -2018,7 +2018,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-4"
       },
       {
@@ -2038,7 +2038,7 @@
         "source": "bout_derived",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-5"
       },
       {
@@ -2058,7 +2058,7 @@
         "source": "posted_tw_schedule",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-6"
       },
       {
@@ -2078,7 +2078,7 @@
         "source": "posted_tw_schedule",
         "validation": "ok",
         "location": "Paul Vi",
-        "location_display": "Away \u00b7 Paul Vi",
+        "location_display": "Away · Paul Vi",
         "cumulative_record": "5-6"
       },
       {
@@ -2098,7 +2098,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "5-7"
       },
       {
@@ -2118,7 +2118,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "6-7"
       },
       {
@@ -2138,7 +2138,7 @@
         "source": "bout_derived",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "6-8"
       },
       {
@@ -2158,7 +2158,7 @@
         "source": "posted_tw_schedule",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "6-9"
       },
       {
@@ -2178,7 +2178,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "7-9"
       },
       {
@@ -2198,7 +2198,7 @@
         "source": "bout_derived",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "8-9"
       },
       {
@@ -2218,7 +2218,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "8-10"
       },
       {
@@ -2238,7 +2238,7 @@
         "source": "posted_tw_schedule",
         "validation": "ok",
         "location": "Cherry Hill East",
-        "location_display": "Away \u00b7 Cherry Hill East",
+        "location_display": "Away · Cherry Hill East",
         "cumulative_record": "9-10"
       },
       {
@@ -2258,7 +2258,7 @@
         "source": "posted_tw_schedule",
         "validation": "score_mismatch",
         "location": "Haddonfield High Schol",
-        "location_display": "Away \u00b7 Haddonfield High Schol",
+        "location_display": "Away · Haddonfield High Schol",
         "cumulative_record": "9-11"
       },
       {
@@ -2278,7 +2278,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "9-12"
       },
       {
@@ -2298,7 +2298,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "9-13"
       },
       {
@@ -2318,7 +2318,7 @@
         "source": "bout_derived",
         "validation": "ok",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "10-13"
       },
       {
@@ -2338,7 +2338,7 @@
         "source": "posted_tw_schedule",
         "validation": "ok",
         "location": "Robbinsville",
-        "location_display": "Away \u00b7 Robbinsville",
+        "location_display": "Away · Robbinsville",
         "cumulative_record": "10-14"
       },
       {
@@ -2358,7 +2358,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "11-14"
       },
       {
@@ -2378,7 +2378,7 @@
         "source": "bout_derived",
         "validation": "score_mismatch",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "12-14"
       },
       {
@@ -2398,7 +2398,7 @@
         "source": "external_ref_gapfill",
         "validation": "external_gapfill",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "12-15"
       }
     ],
@@ -2419,9 +2419,9 @@
       "name": "Logan Reice",
       "weight": "106",
       "grade": "Fr.",
-      "wins": 1,
-      "losses": 3,
-      "pins": null
+      "wins": 0,
+      "losses": 2,
+      "pins": 0
     },
     {
       "wrestler_id": "35876936132",
@@ -2437,9 +2437,9 @@
       "name": "Jadiel Esquivel",
       "weight": "113",
       "grade": "So.",
-      "wins": 1,
-      "losses": 2,
-      "pins": null
+      "wins": 0,
+      "losses": 1,
+      "pins": 0
     },
     {
       "wrestler_id": "35008235132",
@@ -2448,7 +2448,7 @@
       "grade": "So.",
       "wins": 12,
       "losses": 20,
-      "pins": null
+      "pins": 5
     },
     {
       "wrestler_id": "35217444132",
@@ -2466,7 +2466,7 @@
       "grade": "So.",
       "wins": 6,
       "losses": 17,
-      "pins": null
+      "pins": 2
     },
     {
       "wrestler_id": "35008197132",
@@ -2475,7 +2475,7 @@
       "grade": "Sr.",
       "wins": 21,
       "losses": 16,
-      "pins": null
+      "pins": 6
     },
     {
       "wrestler_id": "35217751132",
@@ -2518,9 +2518,9 @@
       "name": "Gino Gonzalez",
       "weight": "126",
       "grade": "Fr.",
-      "wins": 3,
-      "losses": 6,
-      "pins": null
+      "wins": 1,
+      "losses": 5,
+      "pins": 1
     },
     {
       "wrestler_id": "35008201132",
@@ -2529,7 +2529,7 @@
       "grade": "Sr.",
       "wins": 29,
       "losses": 7,
-      "pins": null
+      "pins": 14
     },
     {
       "wrestler_id": "35497376132",
@@ -2554,9 +2554,9 @@
       "name": "Nathan Hunnewell",
       "weight": "132",
       "grade": "Jr.",
-      "wins": 12,
-      "losses": 11,
-      "pins": null
+      "wins": 8,
+      "losses": 10,
+      "pins": 5
     },
     {
       "wrestler_id": "35217388132",
@@ -2565,7 +2565,7 @@
       "grade": "Fr.",
       "wins": 14,
       "losses": 12,
-      "pins": null
+      "pins": 3
     },
     {
       "wrestler_id": "35497452132",
@@ -2583,7 +2583,7 @@
       "grade": "So.",
       "wins": 11,
       "losses": 6,
-      "pins": null
+      "pins": 9
     },
     {
       "wrestler_id": "35008238132",
@@ -2601,7 +2601,7 @@
       "grade": "Sr.",
       "wins": 4,
       "losses": 11,
-      "pins": null
+      "pins": 2
     },
     {
       "wrestler_id": "35008236132",
@@ -2619,25 +2619,25 @@
       "grade": "Jr.",
       "wins": 6,
       "losses": 5,
-      "pins": null
+      "pins": 1
     },
     {
       "wrestler_id": "35008223132",
       "name": "Owen Siena",
       "weight": "138",
       "grade": "So.",
-      "wins": 2,
-      "losses": 5,
-      "pins": null
+      "wins": 1,
+      "losses": 4,
+      "pins": 0
     },
     {
       "wrestler_id": "35008237132",
       "name": "Jack Caldwell",
       "weight": "144",
       "grade": "So.",
-      "wins": 2,
-      "losses": 7,
-      "pins": null
+      "wins": 0,
+      "losses": 6,
+      "pins": 0
     },
     {
       "wrestler_id": "35008209132",
@@ -2646,7 +2646,7 @@
       "grade": "Jr.",
       "wins": 17,
       "losses": 14,
-      "pins": null
+      "pins": 2
     },
     {
       "wrestler_id": "35557421132",
@@ -2671,9 +2671,9 @@
       "name": "Brian Reice",
       "weight": "144",
       "grade": "So.",
-      "wins": 3,
-      "losses": 4,
-      "pins": null
+      "wins": 2,
+      "losses": 3,
+      "pins": 1
     },
     {
       "wrestler_id": "35008200132",
@@ -2691,7 +2691,7 @@
       "grade": "So.",
       "wins": 21,
       "losses": 14,
-      "pins": null
+      "pins": 16
     },
     {
       "wrestler_id": "35008232132",
@@ -2725,9 +2725,9 @@
       "name": "Kellan McDonough",
       "weight": "150",
       "grade": "Fr.",
-      "wins": 2,
-      "losses": 2,
-      "pins": null
+      "wins": 0,
+      "losses": 1,
+      "pins": 0
     },
     {
       "wrestler_id": "35217455132",
@@ -2781,7 +2781,7 @@
       "grade": "Sr.",
       "wins": 3,
       "losses": 13,
-      "pins": null
+      "pins": 2
     },
     {
       "wrestler_id": "35217539132",
@@ -2789,8 +2789,8 @@
       "weight": "165",
       "grade": "So.",
       "wins": 0,
-      "losses": 2,
-      "pins": null
+      "losses": 1,
+      "pins": 0
     },
     {
       "wrestler_id": "35008226132",
@@ -2798,8 +2798,8 @@
       "weight": "165",
       "grade": "So.",
       "wins": 1,
-      "losses": 1,
-      "pins": null
+      "losses": 0,
+      "pins": 0
     },
     {
       "wrestler_id": "35008207132",
@@ -2808,7 +2808,7 @@
       "grade": "Jr.",
       "wins": 14,
       "losses": 11,
-      "pins": null
+      "pins": 12
     },
     {
       "wrestler_id": "35008208132",
@@ -2817,7 +2817,7 @@
       "grade": "Jr.",
       "wins": 27,
       "losses": 6,
-      "pins": null
+      "pins": 15
     },
     {
       "wrestler_id": "35008202132",
@@ -2826,7 +2826,7 @@
       "grade": "Sr.",
       "wins": 9,
       "losses": 12,
-      "pins": null
+      "pins": 2
     },
     {
       "wrestler_id": "35497540132",
@@ -2842,9 +2842,9 @@
       "name": "Logan Cino",
       "weight": "175",
       "grade": "Fr.",
-      "wins": 3,
-      "losses": 2,
-      "pins": null
+      "wins": 0,
+      "losses": 1,
+      "pins": 0
     },
     {
       "wrestler_id": "35217400132",
@@ -2869,9 +2869,9 @@
       "name": "Jacobs Rodriguez",
       "weight": "190",
       "grade": "So.",
-      "wins": 4,
-      "losses": 4,
-      "pins": null
+      "wins": 1,
+      "losses": 3,
+      "pins": 1
     },
     {
       "wrestler_id": "35217322132",
@@ -2889,7 +2889,7 @@
       "grade": "Jr.",
       "wins": 3,
       "losses": 1,
-      "pins": null
+      "pins": 2
     },
     {
       "wrestler_id": "35008205132",
@@ -2898,16 +2898,16 @@
       "grade": "Jr.",
       "wins": 15,
       "losses": 15,
-      "pins": null
+      "pins": 6
     },
     {
       "wrestler_id": "35008219132",
       "name": "Rowan Nix",
       "weight": "215",
       "grade": "So.",
-      "wins": 13,
+      "wins": 8,
       "losses": 14,
-      "pins": null
+      "pins": 4
     },
     {
       "wrestler_id": "35556025132",
@@ -2925,12 +2925,12 @@
       "grade": "Jr.",
       "wins": 22,
       "losses": 14,
-      "pins": null
+      "pins": 19
     }
   ],
   "standings": {
     "source": "results ledger",
-    "note": "Overall dual record 12-15 from 27 duals (including multi-meet splits). Olympic\u2013American conference slice: 2-3.",
+    "note": "Overall dual record 12-15 from 27 duals (including multi-meet splits). Olympic–American conference slice: 2-3.",
     "division": "Olympic Conference (Shawnee dual slice)",
     "shawnee_dual_record": "12-15",
     "rows": [
@@ -2946,7 +2946,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "1-0"
       },
       {
@@ -2961,7 +2961,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "2-0"
       },
       {
@@ -2976,7 +2976,7 @@
         "home_away": "home",
         "source": "posted_tw_schedule",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "3-0"
       },
       {
@@ -2991,7 +2991,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-0"
       },
       {
@@ -3006,7 +3006,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-1"
       },
       {
@@ -3021,7 +3021,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-2"
       },
       {
@@ -3036,7 +3036,7 @@
         "home_away": "away",
         "source": "posted_tw_schedule",
         "location": "Northern Burlington ( Columbus)",
-        "location_display": "Away \u00b7 Northern Burlington ( Columbus)",
+        "location_display": "Away · Northern Burlington ( Columbus)",
         "cumulative_record": "4-3"
       },
       {
@@ -3051,7 +3051,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-4"
       },
       {
@@ -3066,7 +3066,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-5"
       },
       {
@@ -3081,7 +3081,7 @@
         "home_away": "home",
         "source": "posted_tw_schedule",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "4-6"
       },
       {
@@ -3096,7 +3096,7 @@
         "home_away": "away",
         "source": "posted_tw_schedule",
         "location": "Paul Vi",
-        "location_display": "Away \u00b7 Paul Vi",
+        "location_display": "Away · Paul Vi",
         "cumulative_record": "5-6"
       },
       {
@@ -3111,7 +3111,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "5-7"
       },
       {
@@ -3126,7 +3126,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "6-7"
       },
       {
@@ -3141,7 +3141,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "6-8"
       },
       {
@@ -3156,7 +3156,7 @@
         "home_away": "home",
         "source": "posted_tw_schedule",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "6-9"
       },
       {
@@ -3171,7 +3171,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "7-9"
       },
       {
@@ -3186,7 +3186,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "8-9"
       },
       {
@@ -3201,7 +3201,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "8-10"
       },
       {
@@ -3216,7 +3216,7 @@
         "home_away": "away",
         "source": "posted_tw_schedule",
         "location": "Cherry Hill East",
-        "location_display": "Away \u00b7 Cherry Hill East",
+        "location_display": "Away · Cherry Hill East",
         "cumulative_record": "9-10"
       },
       {
@@ -3231,7 +3231,7 @@
         "home_away": "away",
         "source": "posted_tw_schedule",
         "location": "Haddonfield High Schol",
-        "location_display": "Away \u00b7 Haddonfield High Schol",
+        "location_display": "Away · Haddonfield High Schol",
         "cumulative_record": "9-11"
       },
       {
@@ -3246,7 +3246,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "9-12"
       },
       {
@@ -3261,7 +3261,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "9-13"
       },
       {
@@ -3276,7 +3276,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "10-13"
       },
       {
@@ -3291,7 +3291,7 @@
         "home_away": "away",
         "source": "posted_tw_schedule",
         "location": "Robbinsville",
-        "location_display": "Away \u00b7 Robbinsville",
+        "location_display": "Away · Robbinsville",
         "cumulative_record": "10-14"
       },
       {
@@ -3306,7 +3306,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "11-14"
       },
       {
@@ -3321,7 +3321,7 @@
         "home_away": "home",
         "source": "bout_derived",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "12-14"
       },
       {
@@ -3336,7 +3336,7 @@
         "home_away": "home",
         "source": "external_ref_gapfill",
         "location": "Shawnee",
-        "location_display": "Home \u00b7 Shawnee",
+        "location_display": "Home · Shawnee",
         "cumulative_record": "12-15"
       }
     ],

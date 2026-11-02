@@ -181,6 +181,7 @@
       <th>Name</th><th>Wt</th><th>Grade</th><th>W</th><th>L</th><th>Win%</th>
       <th>Fall</th><th>TF</th><th>MD</th><th>Dec</th>
       <th>L-Fall</th><th>L-TF</th><th>L-MD</th><th>L-Dec</th>
+      <th>Pts</th>
     </tr>`;
   }
 
@@ -228,6 +229,7 @@
         <td>${wins}</td><td>${losses}</td><td>${pct}</td>
         <td>${cell(w.w_fall)}</td><td>${cell(w.w_tech)}</td><td>${cell(w.w_maj)}</td><td>${cell(w.w_dec)}</td>
         <td>${cell(w.l_fall)}</td><td>${cell(w.l_tech)}</td><td>${cell(w.l_maj)}</td><td>${cell(w.l_dec)}</td>
+        <td>${cell(w.team_points)}</td>
       </tr>`;
     }).join('');
   }

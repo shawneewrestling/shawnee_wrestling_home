@@ -4,8 +4,8 @@
 Primary source for 2025-26 incomplete wrestlers:
   tw_capture/<season>/wrestler_matches/<First_Last>.txt
   pipe: date|event|weight|W/L|result_type|score_time|opponent|opponent_team|team_points
-  #BYE / #JV-NORESULT excluded; #JV included in W-L type counts but not points.
-  Points = standard dual scoring on varsity (non-#JV) wins only.
+  #BYE / #JV / #JV-NORESULT excluded from records, types, win%, and points.
+  Points = NET dual scoring on varsity (wins add / losses subtract).
 
 Fallback for wrestlers without a match file: schedule tournament_results
 exact TW W-L match (prior behavior).
@@ -87,7 +87,7 @@ def classify(result_type: str, score_time: str = "") -> str:
 
 
 def empty_agg() -> Dict[str, Any]:
-    a = {k: 0 for k in STAT_KEYS + ["w", "l", "byes", "points", "jv_bouts", "varsity_bouts"]}
+    a = {k: 0 for k in STAT_KEYS + ["w", "l", "byes", "points", "jv_bouts_skipped", "varsity_bouts"]}
     a["excluded"] = []
     a["source"] = None
     a["_name"] = None
@@ -108,14 +108,10 @@ def parse_match_file(path: Path, wrestler_name: str) -> Dict[str, Any]:
         if line.startswith("#JV-NORESULT"):
             continue
 
-        is_jv = False
-        if line.startswith("#JV|"):
-            is_jv = True
-            line = line[len("#JV|"):]
-        elif line.startswith("#JV"):
-            # tolerate missing pipe after tag
-            is_jv = True
-            line = line[3:].lstrip("|")
+        # Jeff: JV does not count — skip all #JV lines (same as byes / no-results)
+        if line.startswith("#JV"):
+            a["jv_bouts_skipped"] = a.get("jv_bouts_skipped", 0) + 1
+            continue
 
         parts = line.split("|")
         # JV bye short form: date|event|weight|BYE
@@ -164,25 +160,23 @@ def parse_match_file(path: Path, wrestler_name: str) -> Dict[str, Any]:
             a["byes"] += 1
             continue
 
-        if is_jv:
-            a["jv_bouts"] += 1
-        else:
-            a["varsity_bouts"] += 1
+        a["varsity_bouts"] += 1
 
+        pts = WIN_PTS.get(kind, 3)
         if wl == "W":
             a["w"] += 1
             field = "w_" + kind
             if field not in a:
                 field = "w_dec"
             a[field] += 1
-            if not is_jv:
-                a["points"] += WIN_PTS.get(kind, 3)
+            a["points"] += pts  # net: wins add
         else:
             a["l"] += 1
             field = "l_" + kind
             if field not in a:
                 field = "l_dec"
             a[field] += 1
+            a["points"] -= pts  # net: losses subtract same dual values
     return a
 
 
@@ -244,41 +238,53 @@ def aggregate_tournament_results(season: str) -> Dict[str, Dict[str, Any]]:
                 a["varsity_bouts"] += 1
                 opp = b.get("opponent_wrestler") or b.get("opponent")
                 pts = bout_pts.get((key, nk(opp), res))
+                dual = float(pts if pts is not None else WIN_PTS.get(kind, 3))
                 if res == "W":
                     a["w"] += 1
                     field = "w_" + kind
                     if field not in a:
                         field = "w_dec"
                     a[field] += 1
-                    a["points"] += float(pts if pts is not None else WIN_PTS.get(kind, 3))
+                    a["points"] += dual
                 else:
                     a["l"] += 1
                     field = "l_" + kind
                     if field not in a:
                         field = "l_dec"
                     a[field] += 1
+                    a["points"] -= dual
     return agg
 
 
-def apply_agg_to_wrestler(w: Dict[str, Any], a: Dict[str, Any]) -> Dict[str, Any]:
+def apply_agg_to_wrestler(w: Dict[str, Any], a: Dict[str, Any], *, prior_tw: str) -> Dict[str, Any]:
     for k in STAT_KEYS:
         w[k] = a[k]
+    # Displayed record = varsity-only
+    w["win"] = a["w"]
+    w["loss"] = a["l"]
+    w["wins"] = a["w"]
+    w["losses"] = a["l"]
     tp = a["points"]
     w["team_points"] = int(tp) if float(tp) == int(tp) else tp
     w["points"] = w["team_points"]
     w["pins"] = a["w_fall"]
     w["has_capture_breakdown"] = True
-    return {
+    w["record_scope"] = "varsity_only"
+    entry = {
         "name": w.get("name"),
         "record": f"{a['w']}-{a['l']}",
+        "prior_tw_record": prior_tw,
         "team_points": w["team_points"],
         "breakdown": {k: a[k] for k in STAT_KEYS if a[k]},
         "source": a.get("source"),
         "varsity_bouts": a.get("varsity_bouts"),
-        "jv_bouts": a.get("jv_bouts"),
+        "jv_bouts_skipped": a.get("jv_bouts_skipped") or 0,
         "byes_skipped": a.get("byes"),
         "excluded_bouts": a.get("excluded") or [],
     }
+    if prior_tw != entry["record"]:
+        entry["record_changed_from_tw"] = True
+    return entry
 
 
 def enrich(season: str) -> Dict[str, Any]:
@@ -307,19 +313,24 @@ def enrich(season: str) -> Dict[str, Any]:
         elif key in tr_agg:
             a = tr_agg[key]
 
-        if not a or (a["w"] + a["l"] == 0):
+        prior_tw = f"{tw_w}-{tw_l}"
+        from_match_file = bool(match_path.exists())
+
+        if not a or (a["w"] + a["l"] == 0 and not from_match_file):
             if tw_w + tw_l >= 1:
-                no_bouts.append({"name": name, "tw_record": f"{tw_w}-{tw_l}"})
+                no_bouts.append({"name": name, "tw_record": prior_tw})
             continue
 
-        if a["w"] == tw_w and a["l"] == tw_l:
-            complete.append(apply_agg_to_wrestler(w, a))
+        # Match-list path: always publish varsity-only record (even 0-0 after JV strip)
+        # TR fallback: require exact match to prior TW (no JV tags in that source)
+        if from_match_file or (a["w"] == tw_w and a["l"] == tw_l):
+            complete.append(apply_agg_to_wrestler(w, a, prior_tw=prior_tw))
             if a.get("excluded"):
                 notes.append({"name": name, "excluded_bouts": a["excluded"]})
         else:
             incomplete.append({
                 "name": name,
-                "tw_record": f"{tw_w}-{tw_l}",
+                "tw_record": prior_tw,
                 "captured_record": f"{a['w']}-{a['l']}",
                 "byes_skipped": a.get("byes"),
                 "delta_w": a["w"] - tw_w,
@@ -331,9 +342,10 @@ def enrich(season: str) -> Dict[str, Any]:
     stats["has_breakdown"] = bool(complete)
     stats["breakdown_source"] = "wrestler_matches+tournament_results_exact_match"
     stats["breakdown_points_convention"] = (
-        "standard_dual_scoring_varsity_wins_only"
+        "standard_dual_scoring_varsity_net"
         " (Fall/FF/DQ/Inj-Def=6, TF=5, MD=4, Dec/SV/TB=3);"
-        " JV (#JV) counted in W-L types, not points; byes/#JV-NORESULT excluded"
+        " records + W/L types + win% + NET points from varsity only;"
+        " #JV / #JV-NORESULT / byes excluded"
     )
     stats["count"] = len(stats.get("wrestlers") or [])
     out = json.dumps(stats, indent=2, ensure_ascii=False) + "\n"
@@ -354,10 +366,11 @@ def enrich(season: str) -> Dict[str, Any]:
             "no_bouts": len(no_bouts),
             "points_convention": stats["breakdown_points_convention"],
             "rule": (
-                "Match-list files: include #JV in type counts; exclude #BYE/#JV-NORESULT; "
-                "points from varsity wins with standard dual scoring. "
+                "Varsity-only: exclude #JV, #JV-NORESULT, and byes from records, "
+                "W/L type breakdown, win%, and points. "
+                "Points: NET dual scoring on varsity (wins add, losses subtract Fall/FF/DQ/Inj=6 TF=5 MD=4 Dec/SV/TB=3). "
                 "Fallback: tournament_results exact TW W-L match. "
-                "Tyler Davis: exclude Peddie 1/24 M. For. loss (TW 3-13)."
+                "Tyler Davis: exclude Peddie 1/24 M. For. loss (display 3-13)."
             ),
             "match_list_dir": str(matches_dir.relative_to(ROOT.parent)) if matches_dir.exists() else None,
         },

@@ -271,7 +271,8 @@ def prerender_stats_table(doc: Dict[str, Any]) -> Tuple[str, str, str]:
         thead = (
             "<tr><th>Name</th><th>Wt</th><th>Grade</th><th>W</th><th>L</th><th>Win%</th>"
             "<th>Fall</th><th>TF</th><th>MD</th><th>Dec</th>"
-            "<th>L-Fall</th><th>L-TF</th><th>L-MD</th><th>L-Dec</th></tr>"
+            "<th>L-Fall</th><th>L-TF</th><th>L-MD</th><th>L-Dec</th>"
+            "<th>Pts</th></tr>"
         )
         sub = f"Individual W-L breakdown for the {title}."
     else:
@@ -312,7 +313,8 @@ def prerender_stats_table(doc: Dict[str, Any]) -> Tuple[str, str, str]:
                 f"<td>{cell(w.get('w_fall'))}</td><td>{cell(w.get('w_tech'))}</td>"
                 f"<td>{cell(w.get('w_maj'))}</td><td>{cell(w.get('w_dec'))}</td>"
                 f"<td>{cell(w.get('l_fall'))}</td><td>{cell(w.get('l_tech'))}</td>"
-                f"<td>{cell(w.get('l_maj'))}</td><td>{cell(w.get('l_dec'))}</td></tr>"
+                f"<td>{cell(w.get('l_maj'))}</td><td>{cell(w.get('l_dec'))}</td>"
+                f"<td>{cell(w.get('team_points'))}</td></tr>"
             )
     return thead, "\n".join(body_rows), sub
 
