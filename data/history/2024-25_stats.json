@@ -2,8 +2,8 @@
   "schema_version": 1,
   "season": "2024-25",
   "title": "2024-2025 Season",
-  "generated_at": "2026-11-01T20:06:31-05:00",
-  "source": "history/2024-25/season_stats.csv (Jeff paste t100u)",
+  "generated_at": "2026-11-01T21:33:28-05:00",
+  "source": "history/2024-25/season_stats.csv + TrackTest.csv net points",
   "has_breakdown": true,
   "count": 23,
   "wrestlers": [
@@ -19,7 +19,7 @@
       "w_sv": 0,
       "w_tb": 0,
       "w_ff": 0,
-      "w_inj": 1,
+      "w_inj": 2,
       "w_dq": 0,
       "l_fall": 4,
       "l_tech": 0,
@@ -30,14 +30,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": null,
+      "team_points": 134,
       "advancement": null,
       "grade": "Sr.",
       "player_page": "players/chris-ahrens-fa070a.html",
       "wins": 32,
       "losses": 10,
       "pins": 24,
-      "weight": "165"
+      "weight": "165",
+      "points": 134,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "126/132/120",
@@ -62,14 +65,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": null,
+      "team_points": 41,
       "advancement": null,
       "grade": "Fr.",
       "player_page": "players/leeland-rogers-121132.html",
       "wins": 21,
       "losses": 14,
       "pins": 15,
-      "weight": "126"
+      "weight": "126",
+      "points": 41,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "157/165",
@@ -94,14 +100,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": null,
+      "team_points": 36,
       "advancement": null,
       "grade": "Sr.",
       "player_page": "players/lucas-estevez-5fbc2d.html",
       "wins": 20,
       "losses": 14,
       "pins": 10,
-      "weight": "157"
+      "weight": "157",
+      "points": 36,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "113/106",
@@ -126,14 +135,15 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": null,
+      "team_points": 42,
       "advancement": null,
       "grade": "Sr.",
       "player_page": "players/joseph-hart-8e69d7.html",
       "wins": 19,
       "losses": 11,
       "pins": 10,
-      "weight": "113"
+      "weight": "113",
+      "points": 42
     },
     {
       "weights": "144/138",
@@ -158,14 +168,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": null,
+      "team_points": 14,
       "advancement": null,
       "grade": "So.",
       "player_page": "players/trevor-sieben-108132.html",
       "wins": 18,
       "losses": 17,
       "pins": 15,
-      "weight": "144"
+      "weight": "144",
+      "points": 14,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "190/215/175",
@@ -190,14 +203,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": null,
+      "team_points": 3,
       "advancement": null,
       "grade": "Sr.",
       "player_page": "players/dominic-harris-d7584f.html",
       "wins": 17,
       "losses": 17,
       "pins": 11,
-      "weight": "190"
+      "weight": "190",
+      "points": 3,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "175/190",
@@ -213,23 +229,26 @@
       "w_ff": 1,
       "w_inj": 0,
       "w_dq": 0,
-      "l_fall": 0,
+      "l_fall": 8,
       "l_tech": 1,
       "l_maj": 2,
       "l_dec": 4,
       "l_sv": 1,
       "l_tb": 0,
-      "l_inj": 0,
+      "l_inj": 1,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": null,
+      "team_points": 6,
       "advancement": null,
       "grade": "So.",
       "player_page": "players/max-spitznas-109132.html",
       "wins": 16,
       "losses": 17,
       "pins": 12,
-      "weight": "175"
+      "weight": "175",
+      "points": 6,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "120/126",
@@ -254,14 +273,15 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": null,
+      "team_points": -11,
       "advancement": null,
       "grade": "Jr.",
       "player_page": "players/garrett-borlaug-199132.html",
       "wins": 14,
       "losses": 16,
       "pins": 9,
-      "weight": "120"
+      "weight": "120",
+      "points": -11
     },
     {
       "weights": "138/132",
@@ -283,17 +303,20 @@
       "l_dec": 0,
       "l_sv": 0,
       "l_tb": 0,
-      "l_inj": 0,
+      "l_inj": 1,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": 54,
+      "team_points": 50,
       "advancement": "swb1; s7, district, region",
       "grade": "Sr.",
       "player_page": "players/luke-sherlock-7859c5.html",
       "wins": 12,
       "losses": 3,
       "pins": 8,
-      "weight": "138"
+      "weight": "138",
+      "points": 50,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "113/120",
@@ -318,14 +341,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": -17,
+      "team_points": -10,
       "advancement": "s4",
       "grade": "Jr.",
       "player_page": "players/sean-bradley-197132.html",
       "wins": 12,
       "losses": 13,
       "pins": 4,
-      "weight": "113"
+      "weight": "113",
+      "points": -10,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "132/138",
@@ -350,14 +376,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": -55,
+      "team_points": -42,
       "advancement": null,
       "grade": "So.",
       "player_page": "players/ryan-hoerst-110132.html",
       "wins": 11,
       "losses": 19,
       "pins": 1,
-      "weight": "132"
+      "weight": "132",
+      "points": -42,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "138/144",
@@ -382,14 +411,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": -41,
+      "team_points": -38,
       "advancement": null,
       "grade": "Fr.",
       "player_page": "players/oleksandr-sasha-yurovskyi-119132.html",
       "wins": 10,
       "losses": 15,
       "pins": 4,
-      "weight": "138"
+      "weight": "138",
+      "points": -38,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "165/157/150",
@@ -414,14 +446,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": -52,
+      "team_points": -44,
       "advancement": null,
       "grade": "Jr.",
       "player_page": "players/tyler-davis-198132.html",
       "wins": 7,
       "losses": 15,
       "pins": 2,
-      "weight": "165"
+      "weight": "165",
+      "points": -44,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "120/106/113",
@@ -443,17 +478,20 @@
       "l_dec": 0,
       "l_sv": 0,
       "l_tb": 0,
-      "l_inj": 0,
+      "l_inj": 1,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": 33,
+      "team_points": 27,
       "advancement": null,
       "grade": "Jr.",
       "player_page": "players/jordan-segal-201132.html",
       "wins": 6,
       "losses": 1,
       "pins": 5,
-      "weight": "120"
+      "weight": "120",
+      "points": 27,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "150/157",
@@ -478,14 +516,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": -23,
+      "team_points": -14,
       "advancement": null,
       "grade": "Jr.",
       "player_page": "players/joseph-augusta-202132.html",
       "wins": 4,
       "losses": 9,
       "pins": 1,
-      "weight": "150"
+      "weight": "150",
+      "points": -14,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "106",
@@ -510,14 +551,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": 2,
+      "team_points": 3,
       "advancement": null,
       "grade": "Fr.",
       "player_page": "players/matt-hart-125132.html",
       "wins": 2,
       "losses": 2,
       "pins": 0,
-      "weight": "106"
+      "weight": "106",
+      "points": 3,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "150/157",
@@ -549,7 +593,10 @@
       "wins": 1,
       "losses": 1,
       "pins": 0,
-      "weight": "150"
+      "weight": "150",
+      "points": 0,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "144",
@@ -581,7 +628,10 @@
       "wins": 0,
       "losses": 1,
       "pins": 0,
-      "weight": "144"
+      "weight": "144",
+      "points": -6,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "132",
@@ -613,7 +663,10 @@
       "wins": 0,
       "losses": 1,
       "pins": 0,
-      "weight": "132"
+      "weight": "132",
+      "points": -6,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "120",
@@ -638,14 +691,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": null,
+      "team_points": -12,
       "advancement": null,
       "grade": "Fr.",
       "player_page": "players/landon-caffery-126132.html",
       "wins": 0,
       "losses": 2,
       "pins": 0,
-      "weight": "120"
+      "weight": "120",
+      "points": -12,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "126",
@@ -677,7 +733,10 @@
       "wins": 0,
       "losses": 2,
       "pins": 0,
-      "weight": "126"
+      "weight": "126",
+      "points": -12,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "113",
@@ -702,14 +761,17 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": -16,
+      "team_points": -15,
       "advancement": null,
       "grade": "Fr.",
       "player_page": "players/anthony-blahut-113132.html",
       "wins": 0,
       "losses": 3,
       "pins": 0,
-      "weight": "113"
+      "weight": "113",
+      "points": -15,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     },
     {
       "weights": "132/126",
@@ -734,14 +796,19 @@
       "l_inj": 0,
       "l_dq": 0,
       "l_ff": 0,
-      "team_points": -22,
+      "team_points": -20,
       "advancement": null,
       "grade": "So.",
       "player_page": "players/nathan-hunnewell-111132.html",
       "wins": 0,
       "losses": 4,
       "pins": 0,
-      "weight": "132"
+      "weight": "132",
+      "points": -20,
+      "has_capture_breakdown": true,
+      "record_scope": "varsity_only"
     }
-  ]
+  ],
+  "breakdown_source": "TrackTest.csv wrestler_matches + current_auto Team Points fallback",
+  "breakdown_points_convention": "standard_dual_scoring_varsity_net (Fall/FF/DQ/Inj-Def=6, TF=5, MD=4, Dec/SV/TB=3); NET points from varsity TrackTest bouts when W-L matches sheet; else TW current_auto Team Points; byes + Segal M.For. excluded"
 }

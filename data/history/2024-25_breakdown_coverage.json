@@ -1,0 +1,180 @@
+{
+  "season": "2024-25",
+  "summary": {
+    "filled_from_bouts": 21,
+    "filled_from_auto": 2,
+    "unmatched": 0,
+    "types_fixed": [],
+    "points_convention": "standard_dual_scoring_varsity_net (Fall/FF/DQ/Inj-Def=6, TF=5, MD=4, Dec/SV/TB=3); NET points from varsity TrackTest bouts when W-L matches sheet; else TW current_auto Team Points; byes + Segal M.For. excluded",
+    "rule": "Varsity-only NET dual scoring from TrackTest.csv when bout W-L matches season_stats sheet record; Segal medical forfeit excluded; byes excluded. Joseph Hart / Garrett Borlaug bout W-L differs from sheet by +1 win — used current_auto Team Points for those.",
+    "match_list_dir": "tw_capture/2024-25/wrestler_matches"
+  },
+  "filled_from_bouts": [
+    {
+      "name": "Chris Ahrens",
+      "record": "32-10",
+      "team_points": 134,
+      "prior_team_points": null,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Leeland Rogers",
+      "record": "21-14",
+      "team_points": 41,
+      "prior_team_points": null,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Lucas Estevez",
+      "record": "20-14",
+      "team_points": 36,
+      "prior_team_points": null,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Trevor Sieben",
+      "record": "18-17",
+      "team_points": 14,
+      "prior_team_points": null,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Dominic Harris",
+      "record": "17-17",
+      "team_points": 3,
+      "prior_team_points": null,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Max Spitznas",
+      "record": "16-17",
+      "team_points": 6,
+      "prior_team_points": null,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Luke Sherlock",
+      "record": "12-3",
+      "team_points": 50,
+      "prior_team_points": 54,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Sean Bradley",
+      "record": "12-13",
+      "team_points": -10,
+      "prior_team_points": -17,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Ryan Hoerst",
+      "record": "11-19",
+      "team_points": -42,
+      "prior_team_points": -55,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Oleksandr (Sasha) Yurovskyi",
+      "record": "10-15",
+      "team_points": -38,
+      "prior_team_points": -41,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Tyler Davis",
+      "record": "7-15",
+      "team_points": -44,
+      "prior_team_points": -52,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Jordan Segal",
+      "record": "6-1",
+      "team_points": 27,
+      "prior_team_points": 33,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Joseph Augusta",
+      "record": "4-9",
+      "team_points": -14,
+      "prior_team_points": -23,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Matt Hart",
+      "record": "2-2",
+      "team_points": 3,
+      "prior_team_points": 2,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Tyler Nickles",
+      "record": "1-1",
+      "team_points": 0,
+      "prior_team_points": 0,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Jackson Artman",
+      "record": "0-1",
+      "team_points": -6,
+      "prior_team_points": -6,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Thomas Cox",
+      "record": "0-1",
+      "team_points": -6,
+      "prior_team_points": -6,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Landon Caffery",
+      "record": "0-2",
+      "team_points": -12,
+      "prior_team_points": null,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Rhys Pritchard",
+      "record": "0-2",
+      "team_points": -12,
+      "prior_team_points": -12,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Anthony Blahut",
+      "record": "0-3",
+      "team_points": -15,
+      "prior_team_points": -16,
+      "source": "TrackTest.csv varsity net"
+    },
+    {
+      "name": "Nathan Hunnewell",
+      "record": "0-4",
+      "team_points": -20,
+      "prior_team_points": -22,
+      "source": "TrackTest.csv varsity net"
+    }
+  ],
+  "filled_from_auto": [
+    {
+      "name": "Joseph Hart",
+      "record": "19-11",
+      "bout_record": "20-11",
+      "team_points": 42,
+      "prior_team_points": null,
+      "source": "current_auto.csv Team Points (bout W-L mismatch)"
+    },
+    {
+      "name": "Garrett Borlaug",
+      "record": "14-16",
+      "bout_record": "15-16",
+      "team_points": -11,
+      "prior_team_points": null,
+      "source": "current_auto.csv Team Points (bout W-L mismatch)"
+    }
+  ],
+  "unmatched": []
+}
