@@ -192,7 +192,7 @@
     {
       "name": "Rowan Nix",
       "record": "8-14",
-      "prior_tw_record": "8-14",
+      "prior_tw_record": "13-14",
       "team_points": -27,
       "breakdown": {
         "w_fall": 4,
@@ -207,12 +207,13 @@
       "varsity_bouts": 22,
       "jv_bouts_skipped": 5,
       "byes_skipped": 1,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Nathan Hunnewell",
       "record": "8-10",
-      "prior_tw_record": "8-10",
+      "prior_tw_record": "12-11",
       "team_points": 1,
       "breakdown": {
         "w_fall": 5,
@@ -228,7 +229,8 @@
       "varsity_bouts": 18,
       "jv_bouts_skipped": 6,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Matt Hart",
@@ -335,7 +337,7 @@
     {
       "name": "Jacobs Rodriguez",
       "record": "1-3",
-      "prior_tw_record": "1-3",
+      "prior_tw_record": "4-4",
       "team_points": -9,
       "breakdown": {
         "w_fall": 1,
@@ -346,7 +348,8 @@
       "varsity_bouts": 4,
       "jv_bouts_skipped": 4,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Garrett Borlaug",
@@ -387,7 +390,7 @@
     {
       "name": "Logan Cino",
       "record": "0-1",
-      "prior_tw_record": "0-1",
+      "prior_tw_record": "3-2",
       "team_points": -6,
       "breakdown": {
         "l_fall": 1
@@ -396,12 +399,13 @@
       "varsity_bouts": 1,
       "jv_bouts_skipped": 4,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Brian Reice",
       "record": "2-3",
-      "prior_tw_record": "2-3",
+      "prior_tw_record": "3-4",
       "team_points": -8,
       "breakdown": {
         "w_fall": 1,
@@ -412,12 +416,13 @@
       "varsity_bouts": 5,
       "jv_bouts_skipped": 3,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Gino Gonzalez",
       "record": "1-5",
-      "prior_tw_record": "1-5",
+      "prior_tw_record": "3-6",
       "team_points": -23,
       "breakdown": {
         "w_fall": 1,
@@ -428,7 +433,8 @@
       "varsity_bouts": 6,
       "jv_bouts_skipped": 4,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Tyler Davis",
@@ -463,7 +469,7 @@
     {
       "name": "Kellan McDonough",
       "record": "0-1",
-      "prior_tw_record": "0-1",
+      "prior_tw_record": "2-2",
       "team_points": -6,
       "breakdown": {
         "l_fall": 1
@@ -472,12 +478,13 @@
       "varsity_bouts": 1,
       "jv_bouts_skipped": 3,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Owen Siena",
       "record": "1-4",
-      "prior_tw_record": "1-4",
+      "prior_tw_record": "2-5",
       "team_points": -18,
       "breakdown": {
         "w_maj": 1,
@@ -488,12 +495,13 @@
       "varsity_bouts": 5,
       "jv_bouts_skipped": 3,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Jack Caldwell",
       "record": "0-6",
-      "prior_tw_record": "0-6",
+      "prior_tw_record": "2-7",
       "team_points": -33,
       "breakdown": {
         "l_fall": 4,
@@ -504,12 +512,13 @@
       "varsity_bouts": 6,
       "jv_bouts_skipped": 4,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Eli Sauler",
       "record": "1-0",
-      "prior_tw_record": "1-0",
+      "prior_tw_record": "1-1",
       "team_points": 6,
       "breakdown": {
         "w_ff": 1
@@ -518,12 +527,13 @@
       "varsity_bouts": 1,
       "jv_bouts_skipped": 2,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Jadiel Esquivel",
       "record": "0-1",
-      "prior_tw_record": "0-1",
+      "prior_tw_record": "1-2",
       "team_points": -6,
       "breakdown": {
         "l_fall": 1
@@ -532,12 +542,13 @@
       "varsity_bouts": 1,
       "jv_bouts_skipped": 3,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Logan Reice",
       "record": "0-2",
-      "prior_tw_record": "0-2",
+      "prior_tw_record": "1-3",
       "team_points": -12,
       "breakdown": {
         "l_fall": 2
@@ -546,12 +557,13 @@
       "varsity_bouts": 2,
       "jv_bouts_skipped": 3,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     },
     {
       "name": "Brodie Regan",
       "record": "0-1",
-      "prior_tw_record": "0-1",
+      "prior_tw_record": "0-2",
       "team_points": -6,
       "breakdown": {
         "l_fall": 1
@@ -560,7 +572,8 @@
       "varsity_bouts": 1,
       "jv_bouts_skipped": 4,
       "byes_skipped": 0,
-      "excluded_bouts": []
+      "excluded_bouts": [],
+      "record_changed_from_tw": true
     }
   ],
   "incomplete": [],
@@ -653,6 +666,102 @@
     "no_bouts": 16,
     "points_convention": "standard_dual_scoring_varsity_net (Fall/FF/DQ/Inj-Def=6, TF=5, MD=4, Dec/SV/TB=3); records + W/L types + win% + NET points from varsity only; #JV / #JV-NORESULT / byes excluded",
     "rule": "Varsity-only: exclude #JV, #JV-NORESULT, and byes from records, W/L type breakdown, win%, and points. Points: NET dual scoring on varsity (wins add, losses subtract Fall/FF/DQ/Inj=6 TF=5 MD=4 Dec/SV/TB=3). Fallback: tournament_results exact TW W-L match. Tyler Davis: exclude Peddie 1/24 M. For. loss (display 3-13).",
-    "match_list_dir": "tw_capture/2025-26/wrestler_matches"
-  }
+    "match_list_dir": "tw_capture/2025-26/wrestler_matches",
+    "changed_records_from_tw": 13,
+    "prior_seasons_team_points_note": "2014-15 through 2024-25 Team Points are TW/sheet exports left unchanged. Reconstructing from type columns matches neither pure gross-all-bouts nor pure net-all-bouts (closer to net; values can be negative, e.g. 2024-25 Hoerst/Bradley). Likely dual-meet / TW scoring scope. Not silently converted.",
+    "other_seasons_jv_note": "2019-20 schedule marks 3 events jv:true. Capture bout JV lists for 2024-25 were empty. Sheet/CSV season stats may still include TW JV results — reported only, not changed."
+  },
+  "changed_records": [
+    {
+      "name": "Brian Reice",
+      "from_tw": "3-4",
+      "to_varsity": "2-3",
+      "jv_bouts_skipped": 3,
+      "team_points_net": -8
+    },
+    {
+      "name": "Brodie Regan",
+      "from_tw": "0-2",
+      "to_varsity": "0-1",
+      "jv_bouts_skipped": 4,
+      "team_points_net": -6
+    },
+    {
+      "name": "Eli Sauler",
+      "from_tw": "1-1",
+      "to_varsity": "1-0",
+      "jv_bouts_skipped": 2,
+      "team_points_net": 6
+    },
+    {
+      "name": "Gino Gonzalez",
+      "from_tw": "3-6",
+      "to_varsity": "1-5",
+      "jv_bouts_skipped": 4,
+      "team_points_net": -23
+    },
+    {
+      "name": "Jack Caldwell",
+      "from_tw": "2-7",
+      "to_varsity": "0-6",
+      "jv_bouts_skipped": 4,
+      "team_points_net": -33
+    },
+    {
+      "name": "Jacobs Rodriguez",
+      "from_tw": "4-4",
+      "to_varsity": "1-3",
+      "jv_bouts_skipped": 4,
+      "team_points_net": -9
+    },
+    {
+      "name": "Jadiel Esquivel",
+      "from_tw": "1-2",
+      "to_varsity": "0-1",
+      "jv_bouts_skipped": 3,
+      "team_points_net": -6
+    },
+    {
+      "name": "Kellan McDonough",
+      "from_tw": "2-2",
+      "to_varsity": "0-1",
+      "jv_bouts_skipped": 3,
+      "team_points_net": -6
+    },
+    {
+      "name": "Logan Cino",
+      "from_tw": "3-2",
+      "to_varsity": "0-1",
+      "jv_bouts_skipped": 4,
+      "team_points_net": -6
+    },
+    {
+      "name": "Logan Reice",
+      "from_tw": "1-3",
+      "to_varsity": "0-2",
+      "jv_bouts_skipped": 3,
+      "team_points_net": -12
+    },
+    {
+      "name": "Nathan Hunnewell",
+      "from_tw": "12-11",
+      "to_varsity": "8-10",
+      "jv_bouts_skipped": 6,
+      "team_points_net": 1
+    },
+    {
+      "name": "Owen Siena",
+      "from_tw": "2-5",
+      "to_varsity": "1-4",
+      "jv_bouts_skipped": 3,
+      "team_points_net": -18
+    },
+    {
+      "name": "Rowan Nix",
+      "from_tw": "13-14",
+      "to_varsity": "8-14",
+      "jv_bouts_skipped": 5,
+      "team_points_net": -27
+    }
+  ]
 }
