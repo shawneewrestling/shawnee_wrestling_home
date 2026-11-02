@@ -142,6 +142,14 @@ def _season_stats_block(season_rows: List[Dict[str, Any]]) -> str:
 
         tp = r.get("team_points")
         tp_cell = "—" if tp is None else esc(tp)
+        # Compact columns: Dec includes SV/TB; FF includes Inj/DQ (matches dual-scoring families)
+        def num_or_dash(*keys: str) -> str:
+            if not has_bd and all(r.get(k) is None for k in keys):
+                return "—"
+            if all(r.get(k) is None for k in keys):
+                return "—"
+            return esc(sum(int(r.get(k) or 0) for k in keys))
+
         body.append(
             "<tr>"
             f"<td>{esc(_season_title(r.get('season')))}</td>"
@@ -150,8 +158,8 @@ def _season_stats_block(season_rows: List[Dict[str, Any]]) -> str:
             f'<td class="num">{cell("w_fall")}</td>'
             f'<td class="num">{cell("w_tech")}</td>'
             f'<td class="num">{cell("w_maj")}</td>'
-            f'<td class="num">{cell("w_dec")}</td>'
-            f'<td class="num">{cell("w_ff")}</td>'
+            f'<td class="num">{num_or_dash("w_dec", "w_sv", "w_tb")}</td>'
+            f'<td class="num">{num_or_dash("w_ff", "w_inj", "w_dq")}</td>'
             f'<td class="num">{tp_cell}</td>'
             "</tr>"
         )
