@@ -1,12 +1,12 @@
 {
   "mode": "preseason",
   "season": "2026-27",
-  "roster": 50,
+  "roster": 51,
   "schedule_events": 15,
   "dual_record": "0-0",
   "ajax_counts": {
     "schedule_ajax": 15,
-    "wrestlers_ajax": 50
+    "wrestlers_ajax": 51
   },
   "dry_run": false,
   "out": "/workspace/shawnee/kickoff_test/data/seasons/2026-27/tw_pull"

@@ -27,7 +27,7 @@
       "applied_at": "2026-11-01T13:20:08-05:00",
       "prior_season_archived": "2025-26"
     },
-    "roster_count": 50
+    "roster_count": 51
   },
   "roster": [
     {
@@ -786,6 +786,21 @@
       "major_decisions": null,
       "decisions": null,
       "photo": "assets/img/roster/oleksandr-sasha-yurovskyi.jpg"
+    },
+    {
+      "wrestler_id": "44362641132",
+      "name": "Owen Cutler",
+      "first_name": "Owen",
+      "last_name": "Cutler",
+      "weight": null,
+      "grade": "Fr.",
+      "wins": 0,
+      "losses": 0,
+      "gender": "M",
+      "pins": null,
+      "tech_falls": null,
+      "major_decisions": null,
+      "decisions": null
     }
   ],
   "schedule": [
@@ -1716,7 +1731,7 @@
   ],
   "standings": {
     "season": "2026-2027",
-    "note": "Preseason \u2014 standings not yet available.",
+    "note": "Preseason — standings not yet available.",
     "teams": []
   },
   "tournament_results": {},
