@@ -5,7 +5,7 @@
   "generated_at": "2026-11-01T20:06:31-05:00",
   "source": "wrestling_data.json (preseason)",
   "has_breakdown": false,
-  "count": 50,
+  "count": 51,
   "wrestlers": [
     {
       "name": "Andrik Orenyo",
@@ -806,6 +806,22 @@
       "w_maj": null,
       "w_dec": null,
       "player_page": "players/william-mays-150132.html"
+    },
+    {
+      "name": "Owen Cutler",
+      "wrestler_id": "44362641132",
+      "weight": null,
+      "grade": "Fr.",
+      "win": 0,
+      "loss": 0,
+      "wins": 0,
+      "losses": 0,
+      "pins": null,
+      "w_fall": null,
+      "w_tech": null,
+      "w_maj": null,
+      "w_dec": null,
+      "player_page": "players/owen-cutler-641132.html"
     }
   ]
 }

@@ -883,6 +883,19 @@
       ],
       "has_prestige": true,
       "unknown_seasons": []
+    },
+    "44362641132": {
+      "wrestler_id": "44362641132",
+      "name": "Owen Cutler",
+      "prestige_points": 0,
+      "advancement": null,
+      "season": null,
+      "award_name": null,
+      "inferred": false,
+      "source": "career_best_njsiaa",
+      "recognitions": [],
+      "has_prestige": false,
+      "unknown_seasons": []
     }
   },
   "by_name": {

@@ -105,6 +105,21 @@
     "decisions": null
   },
   {
+    "wrestler_id": "44362641132",
+    "name": "Owen Cutler",
+    "first_name": "Owen",
+    "last_name": "Cutler",
+    "weight": null,
+    "grade": "Fr.",
+    "wins": 0,
+    "losses": 0,
+    "gender": "M",
+    "pins": null,
+    "tech_falls": null,
+    "major_decisions": null,
+    "decisions": null
+  },
+  {
     "wrestler_id": "41527114132",
     "name": "Jadiel Esquivel",
     "first_name": "Jadiel",

@@ -1,9 +1,9 @@
 {
   "schema_version": 2,
   "season": "2026-2027",
-  "updated_at": "2026-11-01T21:33:39-05:00",
-  "count": 181,
-  "current_count": 50,
+  "updated_at": "2026-11-20T19:43:24-05:00",
+  "count": 182,
+  "current_count": 51,
   "alumni_count": 131,
   "wrestlers": [
     {
@@ -1007,6 +1007,26 @@
       "seasons_on_record": 2,
       "status": "current",
       "search_text": "oleksandr `sasha` yurovskyi oleksandr `sasha` yurovskyi jr. 144"
+    },
+    {
+      "wrestler_id": "44362641132",
+      "name": "Owen Cutler",
+      "grade": "Fr.",
+      "roster_weight": null,
+      "assigned_weight": null,
+      "weights_wrestled": [],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/owen-cutler-641132.html",
+      "prestige_points": 0,
+      "has_prestige": false,
+      "show_career": false,
+      "career_wins": null,
+      "career_losses": null,
+      "seasons_on_record": 0,
+      "status": "current",
+      "search_text": "owen cutler owen cutler fr."
     },
     {
       "wrestler_id": "35008197132",

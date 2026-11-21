@@ -1,0 +1,919 @@
+{
+  "schema_version": 1,
+  "season": "2025-26",
+  "title": "2025-2026 Season",
+  "count": 58,
+  "graduated_count": 8,
+  "wrestlers": [
+    {
+      "wrestler_id": "35217300132",
+      "name": "Daniel Fitzpatrick",
+      "grade": "Fr.",
+      "roster_weight": "106",
+      "weights_wrestled": [
+        "106"
+      ],
+      "wins": 3,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/daniel-fitzpatrick-129132.html",
+      "graduated": false,
+      "search_text": "daniel fitzpatrick fr. 106"
+    },
+    {
+      "wrestler_id": "35217452132",
+      "name": "Logan Reice",
+      "grade": "Fr.",
+      "roster_weight": "106",
+      "weights_wrestled": [
+        "106",
+        "113",
+        "150"
+      ],
+      "wins": 0,
+      "losses": 2,
+      "photo": null,
+      "player_page": "players/logan-reice-138132.html",
+      "graduated": false,
+      "search_text": "logan reice fr. 106 113 150"
+    },
+    {
+      "wrestler_id": "35876936132",
+      "name": "Logan Sloan",
+      "grade": "Fr.",
+      "roster_weight": "106",
+      "weights_wrestled": [
+        "106"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/logan-sloan-153132.html",
+      "graduated": false,
+      "search_text": "logan sloan fr. 106"
+    },
+    {
+      "wrestler_id": "35008214132",
+      "name": "Jadiel Esquivel",
+      "grade": "So.",
+      "roster_weight": "113",
+      "weights_wrestled": [
+        "113"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/jadiel-esquivel-114132.html",
+      "graduated": false,
+      "search_text": "jadiel esquivel so. 113"
+    },
+    {
+      "wrestler_id": "35008235132",
+      "name": "Matt Hart",
+      "grade": "So.",
+      "roster_weight": "113",
+      "weights_wrestled": [
+        "106",
+        "113"
+      ],
+      "wins": 12,
+      "losses": 20,
+      "photo": null,
+      "player_page": "players/matt-hart-125132.html",
+      "graduated": false,
+      "search_text": "matt hart so. 106 113"
+    },
+    {
+      "wrestler_id": "35217444132",
+      "name": "Benjamin Pollock",
+      "grade": "Fr.",
+      "roster_weight": "113",
+      "weights_wrestled": [
+        "113"
+      ],
+      "wins": 1,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/benjamin-pollock-137132.html",
+      "graduated": false,
+      "search_text": "benjamin pollock fr. 113"
+    },
+    {
+      "wrestler_id": "35008213132",
+      "name": "Anthony Blahut",
+      "grade": "So.",
+      "roster_weight": "120",
+      "weights_wrestled": [
+        "113",
+        "120"
+      ],
+      "wins": 6,
+      "losses": 17,
+      "photo": null,
+      "player_page": "players/anthony-blahut-113132.html",
+      "graduated": false,
+      "search_text": "anthony blahut so. 113 120"
+    },
+    {
+      "wrestler_id": "35008197132",
+      "name": "Sean Bradley",
+      "grade": "Sr.",
+      "roster_weight": "120",
+      "weights_wrestled": [
+        "113",
+        "120"
+      ],
+      "wins": 21,
+      "losses": 16,
+      "photo": "assets/img/roster/sean-bradley.jpg",
+      "player_page": "players/sean-bradley-197132.html",
+      "graduated": true,
+      "search_text": "sean bradley sr. 113 120"
+    },
+    {
+      "wrestler_id": "35217751132",
+      "name": "Romeo Cline",
+      "grade": "So.",
+      "roster_weight": "120",
+      "weights_wrestled": [
+        "120"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/romeo-cline-144132.html",
+      "graduated": false,
+      "search_text": "romeo cline so. 120"
+    },
+    {
+      "wrestler_id": "35217521132",
+      "name": "Ranger Fest",
+      "grade": "So.",
+      "roster_weight": "120",
+      "weights_wrestled": [
+        "120"
+      ],
+      "wins": 1,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/ranger-fest-142132.html",
+      "graduated": false,
+      "search_text": "ranger fest so. 120"
+    },
+    {
+      "wrestler_id": "35217406132",
+      "name": "Noah Meisner",
+      "grade": "Fr.",
+      "roster_weight": "120",
+      "weights_wrestled": [
+        "120"
+      ],
+      "wins": 1,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/noah-meisner-136132.html",
+      "graduated": false,
+      "search_text": "noah meisner fr. 120"
+    },
+    {
+      "wrestler_id": "35217460132",
+      "name": "Luke Velasco",
+      "grade": "Fr.",
+      "roster_weight": "120",
+      "weights_wrestled": [
+        "120"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/luke-velasco-140132.html",
+      "graduated": false,
+      "search_text": "luke velasco fr. 120"
+    },
+    {
+      "wrestler_id": "35217363132",
+      "name": "Gino Gonzalez",
+      "grade": "Fr.",
+      "roster_weight": "126",
+      "weights_wrestled": [
+        "120",
+        "126"
+      ],
+      "wins": 1,
+      "losses": 5,
+      "photo": null,
+      "player_page": "players/gino-gonzalez-131132.html",
+      "graduated": false,
+      "search_text": "gino gonzalez fr. 120 126"
+    },
+    {
+      "wrestler_id": "35008201132",
+      "name": "Jordan Segal",
+      "grade": "Sr.",
+      "roster_weight": "126",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
+      "wins": 29,
+      "losses": 7,
+      "photo": "assets/img/roster/jordan-segal.jpg",
+      "player_page": "players/jordan-segal-201132.html",
+      "graduated": true,
+      "search_text": "jordan segal sr. 126 132 138 144"
+    },
+    {
+      "wrestler_id": "35497376132",
+      "name": "Logan Curiale",
+      "grade": "Fr.",
+      "roster_weight": "132",
+      "weights_wrestled": [
+        "132"
+      ],
+      "wins": 1,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/logan-curiale-146132.html",
+      "graduated": false,
+      "search_text": "logan curiale fr. 132"
+    },
+    {
+      "wrestler_id": "35217370132",
+      "name": "Cole Hoguet",
+      "grade": "Fr.",
+      "roster_weight": "132",
+      "weights_wrestled": [
+        "132"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/cole-hoguet-132132.html",
+      "graduated": false,
+      "search_text": "cole hoguet fr. 132"
+    },
+    {
+      "wrestler_id": "35008210132",
+      "name": "Nathan Hunnewell",
+      "grade": "Jr.",
+      "roster_weight": "132",
+      "weights_wrestled": [
+        "120",
+        "126",
+        "132"
+      ],
+      "wins": 8,
+      "losses": 10,
+      "photo": null,
+      "player_page": "players/nathan-hunnewell-111132.html",
+      "graduated": false,
+      "search_text": "nathan hunnewell jr. 120 126 132"
+    },
+    {
+      "wrestler_id": "35217388132",
+      "name": "Brayden Inman",
+      "grade": "Fr.",
+      "roster_weight": "132",
+      "weights_wrestled": [
+        "126",
+        "132"
+      ],
+      "wins": 14,
+      "losses": 12,
+      "photo": null,
+      "player_page": "players/brayden-inman-134132.html",
+      "graduated": false,
+      "search_text": "brayden inman fr. 126 132"
+    },
+    {
+      "wrestler_id": "35497452132",
+      "name": "Charles Pulaski",
+      "grade": "Fr.",
+      "roster_weight": "132",
+      "weights_wrestled": [
+        "132"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/charles-pulaski-148132.html",
+      "graduated": false,
+      "search_text": "charles pulaski fr. 132"
+    },
+    {
+      "wrestler_id": "35008225132",
+      "name": "Leeland Rogers",
+      "grade": "So.",
+      "roster_weight": "132",
+      "weights_wrestled": [
+        "132",
+        "138",
+        "144"
+      ],
+      "wins": 11,
+      "losses": 6,
+      "photo": "assets/img/roster/leeland-rogers.jpg",
+      "player_page": "players/leeland-rogers-121132.html",
+      "graduated": false,
+      "search_text": "leeland rogers so. 132 138 144"
+    },
+    {
+      "wrestler_id": "35008238132",
+      "name": "Cooper Stauss",
+      "grade": "So.",
+      "roster_weight": "132",
+      "weights_wrestled": [
+        "132"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/cooper-stauss-128132.html",
+      "graduated": false,
+      "search_text": "cooper stauss so. 132"
+    },
+    {
+      "wrestler_id": "35008199132",
+      "name": "Garrett Borlaug",
+      "grade": "Sr.",
+      "roster_weight": "138",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
+      "wins": 4,
+      "losses": 11,
+      "photo": "assets/img/roster/garrett-borlaug.jpg",
+      "player_page": "players/garrett-borlaug-199132.html",
+      "graduated": true,
+      "search_text": "garrett borlaug sr. 126 132 138 144"
+    },
+    {
+      "wrestler_id": "35008236132",
+      "name": "Landon Caffery",
+      "grade": "So.",
+      "roster_weight": "138",
+      "weights_wrestled": [
+        "138"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/landon-caffery-126132.html",
+      "graduated": false,
+      "search_text": "landon caffery so. 138"
+    },
+    {
+      "wrestler_id": "35008203132",
+      "name": "Michael Hart",
+      "grade": "Jr.",
+      "roster_weight": "138",
+      "weights_wrestled": [
+        "126",
+        "132",
+        "138",
+        "144"
+      ],
+      "wins": 6,
+      "losses": 5,
+      "photo": null,
+      "player_page": "players/michael-hart-105132.html",
+      "graduated": false,
+      "search_text": "michael hart jr. 126 132 138 144"
+    },
+    {
+      "wrestler_id": "35008223132",
+      "name": "Owen Siena",
+      "grade": "So.",
+      "roster_weight": "138",
+      "weights_wrestled": [
+        "132",
+        "138"
+      ],
+      "wins": 1,
+      "losses": 4,
+      "photo": null,
+      "player_page": "players/owen-siena-120132.html",
+      "graduated": false,
+      "search_text": "owen siena so. 132 138"
+    },
+    {
+      "wrestler_id": "35008237132",
+      "name": "Jack Caldwell",
+      "grade": "So.",
+      "roster_weight": "144",
+      "weights_wrestled": [
+        "144",
+        "150"
+      ],
+      "wins": 0,
+      "losses": 6,
+      "photo": null,
+      "player_page": "players/jack-caldwell-127132.html",
+      "graduated": false,
+      "search_text": "jack caldwell so. 144 150"
+    },
+    {
+      "wrestler_id": "35008209132",
+      "name": "Ryan Hoerst",
+      "grade": "Jr.",
+      "roster_weight": "144",
+      "weights_wrestled": [
+        "138",
+        "144",
+        "150"
+      ],
+      "wins": 17,
+      "losses": 14,
+      "photo": "assets/img/roster/ryan-hoerst.jpg",
+      "player_page": "players/ryan-hoerst-110132.html",
+      "graduated": false,
+      "search_text": "ryan hoerst jr. 138 144 150"
+    },
+    {
+      "wrestler_id": "35557421132",
+      "name": "Walter Johnson",
+      "grade": "So.",
+      "roster_weight": "144",
+      "weights_wrestled": [
+        "144"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/walter-johnson-152132.html",
+      "graduated": false,
+      "search_text": "walter johnson so. 144"
+    },
+    {
+      "wrestler_id": "35008211132",
+      "name": "Rhys Pritchard",
+      "grade": "Jr.",
+      "roster_weight": "144",
+      "weights_wrestled": [
+        "144"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/rhys-pritchard-112132.html",
+      "graduated": false,
+      "search_text": "rhys pritchard jr. 144"
+    },
+    {
+      "wrestler_id": "35008220132",
+      "name": "Brian Reice",
+      "grade": "So.",
+      "roster_weight": "144",
+      "weights_wrestled": [
+        "144",
+        "150"
+      ],
+      "wins": 2,
+      "losses": 3,
+      "photo": null,
+      "player_page": "players/brian-reice-118132.html",
+      "graduated": false,
+      "search_text": "brian reice so. 144 150"
+    },
+    {
+      "wrestler_id": "35008200132",
+      "name": "Max Shectman",
+      "grade": "Sr.",
+      "roster_weight": "144",
+      "weights_wrestled": [
+        "144"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/max-shectman-200132.html",
+      "graduated": true,
+      "search_text": "max shectman sr. 144"
+    },
+    {
+      "wrestler_id": "35008221132",
+      "name": "Oleksandr `Sasha` Yurovskyi",
+      "grade": "So.",
+      "roster_weight": "144",
+      "weights_wrestled": [
+        "144",
+        "150",
+        "157"
+      ],
+      "wins": 21,
+      "losses": 14,
+      "photo": "assets/img/roster/oleksandr-sasha-yurovskyi.jpg",
+      "player_page": "players/oleksandr-sasha-yurovskyi-119132.html",
+      "graduated": false,
+      "search_text": "oleksandr `sasha` yurovskyi so. 144 150 157"
+    },
+    {
+      "wrestler_id": "35008232132",
+      "name": "Colin Dowd",
+      "grade": "Sr.",
+      "roster_weight": "150",
+      "weights_wrestled": [
+        "150"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/colin-dowd-232132.html",
+      "graduated": true,
+      "search_text": "colin dowd sr. 150"
+    },
+    {
+      "wrestler_id": "35008228132",
+      "name": "Ashton Hayden",
+      "grade": "Jr.",
+      "roster_weight": "150",
+      "weights_wrestled": [
+        "150"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/ashton-hayden-123132.html",
+      "graduated": false,
+      "search_text": "ashton hayden jr. 150"
+    },
+    {
+      "wrestler_id": "35217378132",
+      "name": "Domenico Incollingo",
+      "grade": "Fr.",
+      "roster_weight": "150",
+      "weights_wrestled": [
+        "150"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/domenico-incollingo-133132.html",
+      "graduated": false,
+      "search_text": "domenico incollingo fr. 150"
+    },
+    {
+      "wrestler_id": "35497397132",
+      "name": "Kellan McDonough",
+      "grade": "Fr.",
+      "roster_weight": "150",
+      "weights_wrestled": [
+        "150",
+        "157"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/kellan-mcdonough-147132.html",
+      "graduated": false,
+      "search_text": "kellan mcdonough fr. 150 157"
+    },
+    {
+      "wrestler_id": "35217455132",
+      "name": "Arjun Shah",
+      "grade": "Fr.",
+      "roster_weight": "150",
+      "weights_wrestled": [
+        "150"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/arjun-shah-139132.html",
+      "graduated": false,
+      "search_text": "arjun shah fr. 150"
+    },
+    {
+      "wrestler_id": "35217512132",
+      "name": "Gabriel Evans",
+      "grade": "So.",
+      "roster_weight": "157",
+      "weights_wrestled": [
+        "157"
+      ],
+      "wins": 1,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/gabriel-evans-141132.html",
+      "graduated": false,
+      "search_text": "gabriel evans so. 157"
+    },
+    {
+      "wrestler_id": "36450248132",
+      "name": "Brandon Kelly",
+      "grade": "Fr.",
+      "roster_weight": "157",
+      "weights_wrestled": [
+        "157"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/brandon-kelly-154132.html",
+      "graduated": false,
+      "search_text": "brandon kelly fr. 157"
+    },
+    {
+      "wrestler_id": "35555998132",
+      "name": "William Mays",
+      "grade": "So.",
+      "roster_weight": "157",
+      "weights_wrestled": [
+        "157"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/william-mays-150132.html",
+      "graduated": false,
+      "search_text": "william mays so. 157"
+    },
+    {
+      "wrestler_id": "35497529132",
+      "name": "Jack Potter",
+      "grade": "Jr.",
+      "roster_weight": "157",
+      "weights_wrestled": [
+        "157"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/jack-potter-149132.html",
+      "graduated": false,
+      "search_text": "jack potter jr. 157"
+    },
+    {
+      "wrestler_id": "35008198132",
+      "name": "Tyler Davis",
+      "grade": "Sr.",
+      "roster_weight": "165",
+      "weights_wrestled": [
+        "165",
+        "175"
+      ],
+      "wins": 3,
+      "losses": 13,
+      "photo": null,
+      "player_page": "players/tyler-davis-198132.html",
+      "graduated": true,
+      "search_text": "tyler davis sr. 165 175"
+    },
+    {
+      "wrestler_id": "35217539132",
+      "name": "Brodie Regan",
+      "grade": "So.",
+      "roster_weight": "165",
+      "weights_wrestled": [
+        "165"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/brodie-regan-143132.html",
+      "graduated": false,
+      "search_text": "brodie regan so. 165"
+    },
+    {
+      "wrestler_id": "35008226132",
+      "name": "Eli Sauler",
+      "grade": "So.",
+      "roster_weight": "165",
+      "weights_wrestled": [
+        "165",
+        "175"
+      ],
+      "wins": 1,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/eli-sauler-122132.html",
+      "graduated": false,
+      "search_text": "eli sauler so. 165 175"
+    },
+    {
+      "wrestler_id": "35008207132",
+      "name": "Trevor Sieben",
+      "grade": "Jr.",
+      "roster_weight": "165",
+      "weights_wrestled": [
+        "157",
+        "165",
+        "175"
+      ],
+      "wins": 14,
+      "losses": 11,
+      "photo": "assets/img/roster/trevor-sieben.jpg",
+      "player_page": "players/trevor-sieben-108132.html",
+      "graduated": false,
+      "search_text": "trevor sieben jr. 157 165 175"
+    },
+    {
+      "wrestler_id": "35008208132",
+      "name": "Max Spitznas",
+      "grade": "Jr.",
+      "roster_weight": "165",
+      "weights_wrestled": [
+        "157",
+        "165",
+        "175"
+      ],
+      "wins": 27,
+      "losses": 6,
+      "photo": "assets/img/roster/max-spitznas.jpg",
+      "player_page": "players/max-spitznas-109132.html",
+      "graduated": false,
+      "search_text": "max spitznas jr. 157 165 175"
+    },
+    {
+      "wrestler_id": "35008202132",
+      "name": "Joseph Augusta",
+      "grade": "Sr.",
+      "roster_weight": "175",
+      "weights_wrestled": [
+        "165",
+        "175",
+        "190"
+      ],
+      "wins": 9,
+      "losses": 12,
+      "photo": "assets/img/roster/joseph-augusta.jpg",
+      "player_page": "players/joseph-augusta-202132.html",
+      "graduated": true,
+      "search_text": "joseph augusta sr. 165 175 190"
+    },
+    {
+      "wrestler_id": "35497540132",
+      "name": "Anthony Birney",
+      "grade": "Sr.",
+      "roster_weight": "175",
+      "weights_wrestled": [
+        "175"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/anthony-birney-540132.html",
+      "graduated": true,
+      "search_text": "anthony birney sr. 175"
+    },
+    {
+      "wrestler_id": "35497360132",
+      "name": "Logan Cino",
+      "grade": "Fr.",
+      "roster_weight": "175",
+      "weights_wrestled": [
+        "175"
+      ],
+      "wins": 0,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/logan-cino-145132.html",
+      "graduated": false,
+      "search_text": "logan cino fr. 175"
+    },
+    {
+      "wrestler_id": "35217400132",
+      "name": "Giovanni Lopez",
+      "grade": "Fr.",
+      "roster_weight": "190",
+      "weights_wrestled": [
+        "190"
+      ],
+      "wins": 1,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/giovanni-lopez-135132.html",
+      "graduated": false,
+      "search_text": "giovanni lopez fr. 190"
+    },
+    {
+      "wrestler_id": "35008215132",
+      "name": "Andrik Orenyo",
+      "grade": "So.",
+      "roster_weight": "190",
+      "weights_wrestled": [
+        "190"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/andrik-orenyo-115132.html",
+      "graduated": false,
+      "search_text": "andrik orenyo so. 190"
+    },
+    {
+      "wrestler_id": "35008217132",
+      "name": "Jacobs Rodriguez",
+      "grade": "So.",
+      "roster_weight": "190",
+      "weights_wrestled": [
+        "190"
+      ],
+      "wins": 1,
+      "losses": 3,
+      "photo": null,
+      "player_page": "players/jacobs-rodriguez-116132.html",
+      "graduated": false,
+      "search_text": "jacobs rodriguez so. 190"
+    },
+    {
+      "wrestler_id": "35217322132",
+      "name": "Jack Gleeson",
+      "grade": "Fr.",
+      "roster_weight": "215",
+      "weights_wrestled": [
+        "215"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/jack-gleeson-130132.html",
+      "graduated": false,
+      "search_text": "jack gleeson fr. 215"
+    },
+    {
+      "wrestler_id": "35008204132",
+      "name": "Robert Lane",
+      "grade": "Jr.",
+      "roster_weight": "215",
+      "weights_wrestled": [
+        "190",
+        "215"
+      ],
+      "wins": 3,
+      "losses": 1,
+      "photo": null,
+      "player_page": "players/robert-lane-106132.html",
+      "graduated": false,
+      "search_text": "robert lane jr. 190 215"
+    },
+    {
+      "wrestler_id": "35008205132",
+      "name": "William (Liam) McSorley",
+      "grade": "Jr.",
+      "roster_weight": "215",
+      "weights_wrestled": [
+        "215",
+        "285"
+      ],
+      "wins": 15,
+      "losses": 15,
+      "photo": "assets/img/roster/william-liam-mcsorley.jpg",
+      "player_page": "players/william-liam-mcsorley-107132.html",
+      "graduated": false,
+      "search_text": "william (liam) mcsorley jr. 215 285"
+    },
+    {
+      "wrestler_id": "35008219132",
+      "name": "Rowan Nix",
+      "grade": "So.",
+      "roster_weight": "215",
+      "weights_wrestled": [
+        "190",
+        "215"
+      ],
+      "wins": 8,
+      "losses": 14,
+      "photo": null,
+      "player_page": "players/rowan-nix-117132.html",
+      "graduated": false,
+      "search_text": "rowan nix so. 190 215"
+    },
+    {
+      "wrestler_id": "35556025132",
+      "name": "Veliz-Velasquez Carlos",
+      "grade": "Fr.",
+      "roster_weight": "285",
+      "weights_wrestled": [
+        "285"
+      ],
+      "wins": 0,
+      "losses": 0,
+      "photo": null,
+      "player_page": "players/veliz-velasquez-carlos-151132.html",
+      "graduated": false,
+      "search_text": "veliz-velasquez carlos fr. 285"
+    },
+    {
+      "wrestler_id": "35008230132",
+      "name": "Collin McHugh",
+      "grade": "Jr.",
+      "roster_weight": "285",
+      "weights_wrestled": [
+        "215",
+        "285"
+      ],
+      "wins": 22,
+      "losses": 14,
+      "photo": "assets/img/roster/collin-mchugh.jpg",
+      "player_page": "players/collin-mchugh-124132.html",
+      "graduated": false,
+      "search_text": "collin mchugh jr. 215 285"
+    }
+  ]
+}

@@ -212,6 +212,34 @@
       return;
     }
     if (page === 'Full Roster') {
+      // Season dropdown: current season (live TW roster) + archived full rosters from data/history/index.json
+      const histIndex = await loadJson('data/history/index.json').catch(() => null);
+      const histSeasons = ((histIndex && histIndex.seasons) || []);
+      const currentFullId = (histIndex && histIndex.default) || '2026-27';
+      const archived = histSeasons.filter((s) => s.full_roster && s.full_roster_path && s.id !== currentFullId);
+      const requested = seasonIdFromLocation();
+      const archiveHit = archived.find((s) => s.id === requested) || null;
+      const selectEl = document.getElementById('seasonSelect');
+      if (selectEl) {
+        const opts = [{ id: currentFullId, label: seasonLabel(currentFullId, histSeasons) }]
+          .concat(archived.map((s) => ({ id: s.id, label: s.label || seasonLabel(s.id, histSeasons) })));
+        const selId = archiveHit ? archiveHit.id : currentFullId;
+        selectEl.innerHTML = opts.map((o) =>
+          `<option value="${esc(o.id)}"${o.id === selId ? ' selected' : ''}>${esc(o.label)}</option>`).join('');
+        selectEl.addEventListener('change', () => {
+          const v = selectEl.value;
+          location.assign(v === currentFullId ? 'full-roster.html' : `full-roster.html?season=${encodeURIComponent(v)}`);
+        });
+      }
+      if (archiveHit) {
+        const doc = await loadJson(archiveHit.full_roster_path);
+        const label = archiveHit.label || seasonLabel(archiveHit.id, histSeasons);
+        updateSeasonChrome(archiveHit.id, label);
+        const title = document.querySelector('main h1.page-title');
+        if (title) title.textContent = `${label.replace(/ Season$/, '')} Full Roster`;
+        renderFullRosterSearchable({ roster: [] }, { wrestlers: doc.wrestlers || [] }, { archived: true });
+        return;
+      }
       const [data, index] = await Promise.all([loadJson(DATA_URL), loadJson(PLAYERS_INDEX_URL).catch(() => null)]);
       renderFullRosterSearchable(data, index);
       return;
@@ -630,7 +658,8 @@
     }).join('') || '<p>No assignments</p>';
   }
 
-  function renderFullRosterSearchable(data, index) {
+  function renderFullRosterSearchable(data, index, opts) {
+    const archivedView = !!(opts && opts.archived);
     // Roster cards: current wrestlers only (current-season weights). Alumni live on player pages.
     const fromIndex = ((index && index.wrestlers) || []).filter((w) => w.status !== 'alumni');
     const rows = (fromIndex.length ? fromIndex : null) || (data.roster || []).map((w) => ({
@@ -706,6 +735,7 @@
         const metaParts = [];
         if (r.grade) metaParts.push(esc(r.grade));
         if (r.wins != null && r.losses != null) metaParts.push(esc(`${r.wins ?? 0}-${r.losses ?? 0}`));
+        if (archivedView && r.graduated) metaParts.push('Graduated');
         const meta = metaParts.length ? `<div class="meta">${metaParts.join(' · ')}</div>` : '';
         return `<${tag} class="wrestler-tile"${hrefAttr}>
           <div class="photo-wrap">
