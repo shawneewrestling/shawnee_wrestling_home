@@ -10,8 +10,15 @@
   const page = document.body && document.querySelector('.nav a.active')?.textContent?.trim();
   if (page !== 'Roster' && page !== 'Stats') return;
 
+  const DATA_VERSION = 'r2627g';
+  function dataUrl(u) {
+    // Cache-bust data JSON so browsers/CDN never serve a prior season's roster
+    if (!u || !/\.json(\?|$)/i.test(u)) return u;
+    return u + (u.includes('?') ? '&' : '?') + 'v=' + DATA_VERSION;
+  }
+
   async function loadJson(url) {
-    const r = await fetch(prefixUrl(url));
+    const r = await fetch(dataUrl(prefixUrl(url)));
     if (!r.ok) throw new Error('Failed to load ' + url);
     return r.json();
   }

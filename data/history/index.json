@@ -24,7 +24,8 @@
       "bouts_path": "data/history/2025-26_bouts.json",
       "page_path": "stats/2025-26/",
       "full_roster": true,
-      "full_roster_path": "data/history/2025-26_full_roster.json"
+      "full_roster_path": "data/history/2025-26_full_roster.json",
+      "varsity_path": "data/history/2025-26_varsity.json"
     },
     {
       "id": "2024-25",

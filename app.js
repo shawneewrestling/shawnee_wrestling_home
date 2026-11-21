@@ -12,8 +12,15 @@
   const SEASONS_INDEX_URL = 'data/seasons/index.json';
   const PLACEHOLDER_PHOTO = 'assets/img/wrestler-silhouette.svg';
 
+  const DATA_VERSION = 'r2627g';
+  function dataUrl(u) {
+    // Cache-bust data JSON so browsers/CDN never serve a prior season's roster
+    if (!u || !/\.json(\?|$)/i.test(u)) return u;
+    return u + (u.includes('?') ? '&' : '?') + 'v=' + DATA_VERSION;
+  }
+
   async function loadJson(url) {
-    const r = await fetch(url);
+    const r = await fetch(dataUrl(url));
     if (!r.ok) throw new Error('Failed to load ' + url);
     return r.json();
   }
